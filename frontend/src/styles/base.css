@@ -2,35 +2,35 @@
 
 :root {
   color-scheme: dark;
-  --ci-bg: #050914;
-  --ci-bg-2: #0a1020;
-  --ci-bg-3: #10172a;
-  --ci-grid: rgba(96, 165, 250, 0.07);
-  --ci-surface: #101827;
-  --ci-surface-2: #141e31;
-  --ci-surface-3: #1c2840;
-  --ci-surface-glass: rgba(16, 24, 39, 0.88);
-  --ci-border: rgba(135, 161, 205, 0.20);
-  --ci-border-strong: rgba(96, 165, 250, 0.62);
-  --ci-text: #f4f7ff;
-  --ci-muted: #91a4c0;
-  --ci-muted-2: #637694;
-  --ci-accent: #60a5fa;
-  --ci-accent-2: #f59e0b;
-  --ci-accent-3: #a855f7;
-  --ci-accent-4: #67e8f9;
-  --ci-panel-glow: rgba(96, 165, 250, 0.14);
-  --ci-danger: #fb7185;
-  --ci-warning: #fbbf24;
-  --ci-success: #34d399;
+  --ci-bg: #070b12;
+  --ci-bg-2: #0c1320;
+  --ci-bg-3: #141b2b;
+  --ci-grid: rgba(138, 159, 188, 0.06);
+  --ci-surface: #111827;
+  --ci-surface-2: #172033;
+  --ci-surface-3: #202b42;
+  --ci-surface-glass: rgba(17, 24, 39, 0.90);
+  --ci-border: rgba(145, 164, 192, 0.18);
+  --ci-border-strong: rgba(102, 153, 232, 0.58);
+  --ci-text: #f3f6fb;
+  --ci-muted: #9aa8bb;
+  --ci-muted-2: #6f7d90;
+  --ci-accent: #6699e8;
+  --ci-accent-2: #f07b53;
+  --ci-accent-3: #c763a4;
+  --ci-accent-4: #8aa7ff;
+  --ci-panel-glow: rgba(102, 153, 232, 0.12);
+  --ci-danger: #f06f7e;
+  --ci-warning: #e6b450;
+  --ci-success: #4ac18e;
   --ci-shadow: 0 28px 90px rgba(0, 0, 0, 0.46);
   --ci-shadow-soft: 0 16px 46px rgba(0, 0, 0, 0.30);
   --ci-page-bg:
-    radial-gradient(circle at 12% 10%, rgba(37, 99, 235, 0.18), transparent 26%),
-    radial-gradient(circle at 88% 4%, rgba(168, 85, 247, 0.14), transparent 28%),
-    linear-gradient(135deg, #050914 0%, #0a1020 52%, #060813 100%);
+    radial-gradient(circle at 10% 8%, rgba(102, 153, 232, 0.14), transparent 28%),
+    radial-gradient(circle at 88% 6%, rgba(199, 99, 164, 0.12), transparent 28%),
+    linear-gradient(135deg, #070b12 0%, #0c1320 54%, #080910 100%);
   --ci-app-sheen:
-    linear-gradient(90deg, rgba(37, 99, 235, 0.10), transparent 32%, transparent 68%, rgba(168, 85, 247, 0.09));
+    linear-gradient(90deg, rgba(102, 153, 232, 0.08), transparent 32%, transparent 68%, rgba(199, 99, 164, 0.08));
   --ci-control-bg:
     linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent),
     color-mix(in srgb, var(--ci-surface-2) 86%, transparent);
@@ -47,37 +47,37 @@
 
 html[data-theme="light"] {
   color-scheme: light;
-  --ci-bg: #dce5f1;
-  --ci-bg-2: #e8eef7;
-  --ci-bg-3: #d3deec;
-  --ci-grid: rgba(48, 93, 163, 0.060);
-  --ci-surface: #edf3f9;
-  --ci-surface-2: #e4ebf5;
-  --ci-surface-3: #d7e1ef;
-  --ci-surface-glass: rgba(235, 241, 248, 0.88);
-  --ci-border: rgba(50, 71, 108, 0.18);
-  --ci-border-strong: rgba(37, 99, 235, 0.48);
-  --ci-text: #101b2d;
-  --ci-muted: #5d6d86;
-  --ci-muted-2: #7b8aa3;
-  --ci-accent: #2f6edb;
-  --ci-accent-2: #b86a11;
-  --ci-accent-3: #7c3aed;
-  --ci-accent-4: #2563eb;
-  --ci-panel-glow: rgba(47, 110, 219, 0.11);
-  --ci-danger: #dc2626;
-  --ci-warning: #ca8a04;
-  --ci-success: #047857;
-  --ci-shadow: 0 28px 80px rgba(23, 37, 61, 0.16);
-  --ci-shadow-soft: 0 16px 42px rgba(23, 37, 61, 0.10);
+  --ci-bg: #9ca8b7;
+  --ci-bg-2: #aeb9c7;
+  --ci-bg-3: #8795a7;
+  --ci-grid: rgba(27, 42, 64, 0.10);
+  --ci-surface: #bac4d0;
+  --ci-surface-2: #aeb9c7;
+  --ci-surface-3: #9daaba;
+  --ci-surface-glass: rgba(174, 185, 199, 0.92);
+  --ci-border: rgba(22, 35, 56, 0.28);
+  --ci-border-strong: rgba(50, 91, 154, 0.58);
+  --ci-text: #0d1828;
+  --ci-muted: #405066;
+  --ci-muted-2: #5d6b80;
+  --ci-accent: #325b9a;
+  --ci-accent-2: #a9472f;
+  --ci-accent-3: #873c69;
+  --ci-accent-4: #264574;
+  --ci-panel-glow: rgba(50, 91, 154, 0.13);
+  --ci-danger: #b83242;
+  --ci-warning: #a36a13;
+  --ci-success: #15775b;
+  --ci-shadow: 0 24px 70px rgba(13, 24, 40, 0.24);
+  --ci-shadow-soft: 0 14px 36px rgba(13, 24, 40, 0.16);
   --ci-page-bg:
-    radial-gradient(circle at 8% 10%, rgba(47, 110, 219, 0.13), transparent 28%),
-    radial-gradient(circle at 88% 7%, rgba(124, 58, 237, 0.10), transparent 26%),
-    linear-gradient(135deg, #dce5f1 0%, #eef3f9 52%, #d6e0ed 100%);
+    radial-gradient(circle at 8% 10%, rgba(50, 91, 154, 0.14), transparent 29%),
+    radial-gradient(circle at 88% 7%, rgba(135, 60, 105, 0.12), transparent 28%),
+    linear-gradient(135deg, #909dac 0%, #b2bdca 48%, #8997a8 100%);
   --ci-app-sheen:
-    linear-gradient(90deg, rgba(47, 110, 219, 0.07), transparent 32%, transparent 68%, rgba(124, 58, 237, 0.06));
+    linear-gradient(90deg, rgba(50, 91, 154, 0.08), transparent 32%, transparent 68%, rgba(135, 60, 105, 0.07));
   --ci-control-bg:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.48), transparent),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.16), transparent),
     color-mix(in srgb, var(--ci-surface-2) 94%, transparent);
 }
 

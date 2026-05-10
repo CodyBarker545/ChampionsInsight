@@ -61,26 +61,21 @@ function CameraCapturePage() {
     setStatus("Uploading photo and starting backend detection...");
 
     try {
-      const result = await uploadOpponentImageFile(selectedFile, {
-        source: "native-phone-camera",
-        skipQualityGate: true,
-        runDetection: true,
-      });
+      const result = await uploadOpponentImageFile(selectedFile);
 
       console.log("[CameraCapturePage] upload/detection result:", result);
 
       if (result.status === "needs_retake") {
         console.warn(
-          "[CameraCapturePage] Backend requested retake, but continuing to result page anyway.",
+          "[CameraCapturePage] Backend requested retake; staying on camera page.",
           result,
         );
+        setError(result.detectionError || "Photo needs to be retaken.");
+        setStatus(result.message || "Photo needs to be retaken.");
+        return;
       }
 
-      setStatus("Photo uploaded. Returning to battle page...");
-
-      setTimeout(() => {
-        window.location.href = "/";
-      }, 700);
+      setStatus("Photo uploaded. Detection started. You can return to the battle page.");
     } catch (err) {
       console.error("[CameraCapturePage] Upload/detection failed:", err);
       setError(err.message || "Upload failed.");

@@ -73,6 +73,11 @@ const terrainOptions = [
   ["misty", "Misty"],
 ];
 
+const statusOptions = [
+  ["burn", "Burn"],
+  ["paralysis", "Para"],
+];
+
 const natures = [
   "hardy",
   "lonely",
@@ -189,7 +194,19 @@ function applyStage(stat, stage = 0) {
   return Math.max(1, Math.floor((safeStat * 2) / (2 - safeStage)));
 }
 
-function toCalculatorPokemon(pokemon, boosts = {}) {
+function applyLocalStatusSpeed(speed, status = "", ability = "") {
+  if (!speed) {
+    return speed;
+  }
+
+  if (status === "paralysis" && String(ability).toLowerCase() !== "quick feet") {
+    return Math.floor(speed * 0.5);
+  }
+
+  return speed;
+}
+
+function toCalculatorPokemon(pokemon, boosts = {}, status = "") {
   return {
     name: pokemon?.name || "Unknown Pokemon",
     level: 50,
@@ -198,6 +215,7 @@ function toCalculatorPokemon(pokemon, boosts = {}) {
     maxHp: Number(pokemon?.stats?.hp ?? 1),
     ability: pokemon?.ability ?? "",
     item: pokemon?.item ?? "",
+    status,
     nature: pokemon?.nature ?? "",
     baseStats: toCalculatorStats(pokemon?.baseStats),
     boosts,
@@ -412,13 +430,23 @@ function MatchupStage({
   const [isCalculatingDamage, setIsCalculatingDamage] = useState(false);
   const [fieldEffects, setFieldEffects] = useState(defaultFieldEffects);
   const [opponentMoveDrafts, setOpponentMoveDrafts] = useState({});
+  const [userStatus, setUserStatus] = useState("");
+  const [opponentStatus, setOpponentStatus] = useState("");
   const [userBoosts, setUserBoosts] = useState(emptyBoosts);
   const [opponentBoosts, setOpponentBoosts] = useState(emptyBoosts);
 
   const userSpeed = Number(userPokemon?.stats?.speed ?? 0);
   const opponentSpeed = Number(opponentPokemon?.stats?.speed ?? 0);
-  const displayedUserSpeed = applyStage(userSpeed, userBoosts.speed);
-  const displayedOpponentSpeed = applyStage(opponentSpeed, opponentBoosts.speed);
+  const displayedUserSpeed = applyLocalStatusSpeed(
+    applyStage(userSpeed, userBoosts.speed),
+    userStatus,
+    userPokemon?.ability
+  );
+  const displayedOpponentSpeed = applyLocalStatusSpeed(
+    applyStage(opponentSpeed, opponentBoosts.speed),
+    opponentStatus,
+    opponentPokemon?.ability
+  );
   const opponentAbilities = opponentPokemon?.abilities ?? [];
   const activeAttacker = selectedMoveSource === "opponent" ? opponentPokemon : userPokemon;
   const activeDefender = selectedMoveSource === "opponent" ? userPokemon : opponentPokemon;
@@ -426,6 +454,10 @@ function MatchupStage({
     selectedMoveSource === "opponent" ? opponentBoosts : userBoosts;
   const activeDefenderBoosts =
     selectedMoveSource === "opponent" ? userBoosts : opponentBoosts;
+  const activeAttackerStatus =
+    selectedMoveSource === "opponent" ? opponentStatus : userStatus;
+  const activeDefenderStatus =
+    selectedMoveSource === "opponent" ? userStatus : opponentStatus;
   const calculatorField = useMemo(
     () => buildCalculatorField(fieldEffects, selectedMoveSource),
     [fieldEffects, selectedMoveSource]
@@ -503,8 +535,16 @@ function MatchupStage({
     setDamageError("");
 
     calculateDamage({
-      attacker: toCalculatorPokemon(activeAttacker, activeAttackerBoosts),
-      defender: toCalculatorPokemon(activeDefender, activeDefenderBoosts),
+      attacker: toCalculatorPokemon(
+        activeAttacker,
+        activeAttackerBoosts,
+        activeAttackerStatus
+      ),
+      defender: toCalculatorPokemon(
+        activeDefender,
+        activeDefenderBoosts,
+        activeDefenderStatus
+      ),
       move: { name: selectedMove },
       field: calculatorField,
     }, controller.signal)
@@ -533,8 +573,10 @@ function MatchupStage({
   }, [
     activeAttacker,
     activeAttackerBoosts,
+    activeAttackerStatus,
     activeDefender,
     activeDefenderBoosts,
+    activeDefenderStatus,
     calculatorField,
     selectedMove,
   ]);
@@ -545,10 +587,12 @@ function MatchupStage({
 
   useEffect(() => {
     setUserBoosts(emptyBoosts());
+    setUserStatus("");
   }, [userPokemon?.name]);
 
   useEffect(() => {
     setOpponentBoosts(emptyBoosts());
+    setOpponentStatus("");
   }, [opponentPokemon?.name]);
 
   function updateFieldEffect(key, value) {
@@ -556,6 +600,11 @@ function MatchupStage({
       ...currentEffects,
       [key]: value,
     }));
+  }
+
+  function toggleStatus(side, status) {
+    const updateStatus = side === "user" ? setUserStatus : setOpponentStatus;
+    updateStatus((currentStatus) => (currentStatus === status ? "" : status));
   }
 
   return (
@@ -575,6 +624,11 @@ function MatchupStage({
               alt={`${userPokemon?.name || "Your Pokemon"} sprite`}
             />
           )}
+          <StatusControls
+            label="Your Pokemon status"
+            selectedStatus={userStatus}
+            onToggle={(status) => toggleStatus("user", status)}
+          />
         </div>
 
         <div className="combatant-title-row">
@@ -705,6 +759,11 @@ function MatchupStage({
               alt={`${opponentPokemon?.name || "Opponent Pokemon"} sprite`}
             />
           )}
+          <StatusControls
+            label="Opponent Pokemon status"
+            selectedStatus={opponentStatus}
+            onToggle={(status) => toggleStatus("opponent", status)}
+          />
         </div>
 
         <div className="combatant-title-row">
@@ -873,6 +932,30 @@ function MatchupStage({
         />
       </div>
     </section>
+  );
+}
+
+function StatusControls({ label, onToggle, selectedStatus }) {
+  return (
+    <div className="status-controls" role="group" aria-label={label}>
+      {statusOptions.map(([status, statusLabel]) => (
+        <label
+          className={
+            selectedStatus === status
+              ? `status-toggle active ${status}`
+              : `status-toggle ${status}`
+          }
+          key={status}
+        >
+          <input
+            type="checkbox"
+            checked={selectedStatus === status}
+            onChange={() => onToggle(status)}
+          />
+          <span>{statusLabel}</span>
+        </label>
+      ))}
+    </div>
   );
 }
 

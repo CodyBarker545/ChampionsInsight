@@ -7,6 +7,7 @@ import {
   calculateDamage,
   detectOpponentTeam,
   fetchHealthStatus,
+  fetchLatestOpponentPrediction,
   fetchLatestOpponentUpload,
   fetchPokemonDetails,
   fetchPokemonLevel50Stats,
@@ -69,7 +70,6 @@ const statKeys = [
 
 const MAX_STAT_POINTS = 32;
 const MAX_TOTAL_STAT_POINTS = 66;
-const RECENT_PHONE_UPLOAD_WINDOW_MS = 5 * 60 * 1000;
 
 const natureEffects = {
   lonely: ["attack", "defense"],
@@ -320,7 +320,6 @@ function BattlePrepPage({
   const opponentSpriteHydrationRequestRef = useRef(0);
   const latestOpponentUploadRef = useRef("");
   const latestOpponentPredictionRef = useRef("");
-  const isAutoDetectingUploadRef = useRef(false);
 
   const [apiStatus, setApiStatus] = useState("checking");
 
@@ -404,18 +403,27 @@ function BattlePrepPage({
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
+    const shouldRestorePrediction = params.get("opponentPrediction") === "1";
     const shouldAutoDetect = params.get("autoDetect") === "1";
     const uploadedFilename = params.get("opponentUpload");
 
-    if (!shouldAutoDetect || !uploadedFilename) {
+    if (!shouldRestorePrediction && (!shouldAutoDetect || !uploadedFilename)) {
       return;
     }
 
-    void loadDetectedOpponentTeam(uploadedFilename, {
-      loadingMessage: "Loading opponent team from guided camera...",
-      successMessage: "Guided camera opponent team loaded.",
-    });
+    if (shouldRestorePrediction) {
+      void restoreLatestOpponentPrediction({
+        loadingMessage: "Loading phone camera opponent team...",
+        successMessage: "Phone camera opponent team loaded.",
+      });
+    } else {
+      void loadDetectedOpponentTeam(uploadedFilename, {
+        loadingMessage: "Loading opponent team from guided camera...",
+        successMessage: "Guided camera opponent team loaded.",
+      });
+    }
 
+    params.delete("opponentPrediction");
     params.delete("autoDetect");
     params.delete("opponentUpload");
     const nextQuery = params.toString();
@@ -423,53 +431,6 @@ function BattlePrepPage({
     window.history.replaceState({}, "", nextUrl);
   }, []);
 
-  useEffect(() => {
-    let isMounted = true;
-
-    async function pollLatestOpponentUpload() {
-      if (isAutoDetectingUploadRef.current) {
-        return;
-      }
-
-      try {
-        const latestUpload = await fetchLatestOpponentUpload();
-        const filename = latestUpload.filename ?? "";
-
-        console.log("LATEST UPLOAD POLL:", latestUpload);
-
-        if (!isMounted || !filename) {
-          return;
-        }
-
-        if (filename === latestOpponentUploadRef.current) {
-          return;
-        }
-
-        latestOpponentUploadRef.current = filename;
-        isAutoDetectingUploadRef.current = true;
-
-        console.log("RUNNING DETECTION FOR:", filename);
-
-        await loadDetectedOpponentTeam(filename, {
-          loadingMessage: "Loading new guided camera opponent team...",
-          successMessage: "New guided camera opponent team loaded.",
-          emptyMessage: "Detection finished, but no Pokemon were found.",
-        });
-      } catch (error) {
-        console.error("Latest upload polling failed:", error);
-      } finally {
-        isAutoDetectingUploadRef.current = false;
-      }
-    }
-
-    void pollLatestOpponentUpload();
-    const intervalId = window.setInterval(pollLatestOpponentUpload, 3000);
-
-    return () => {
-      isMounted = false;
-      window.clearInterval(intervalId);
-    };
-  }, []);
   useEffect(() => {
     const selectedOpponent = opponentTeam[selectedOpponentIndex];
     const selectedName = selectedOpponent?.name?.trim();
@@ -1200,6 +1161,34 @@ function BattlePrepPage({
         requestError.message || "Could not retry the last uploaded image.";
       setError(message);
       setImageStatus(message);
+    } finally {
+      setIsUploadingImage(false);
+    }
+  }
+
+  async function restoreLatestOpponentPrediction(messages = {}) {
+    setError("");
+    setImageStatus(messages.loadingMessage ?? "Loading latest opponent prediction...");
+    setIsUploadingImage(true);
+
+    try {
+      const prediction = await fetchLatestOpponentPrediction();
+
+      if (prediction.detectedTeam?.length) {
+        const detectedMembers = prediction.detectedTeam.map(buildOpponentMember);
+        latestOpponentPredictionRef.current =
+          prediction.filename ?? latestOpponentPredictionRef.current;
+        latestOpponentUploadRef.current =
+          prediction.filename ?? latestOpponentUploadRef.current;
+        setOpponentTeam(detectedMembers);
+        setSelectedOpponentIndex(0);
+        void hydrateDetectedOpponentSprites(detectedMembers);
+        setImageStatus(messages.successMessage ?? "Latest opponent prediction loaded.");
+      } else {
+        setImageStatus("No latest opponent prediction is ready yet.");
+      }
+    } catch (requestError) {
+      setError(requestError.message || "Could not load latest opponent prediction.");
     } finally {
       setIsUploadingImage(false);
     }

@@ -50,6 +50,7 @@ PARTIAL_MATCH_SCALES = (0.42, 0.56, 0.70)
 MIN_DETECTION_CONFIDENCE = 0.40
 TYPE_CONFIRMED_CONFIDENCE = 0.75
 TYPE_SUPPORTED_CONFIDENCE = 0.55
+TYPE_COMBO_TRUST_THRESHOLD = 0.74
 COLOR_RERANK_LIMIT = 24
 FEATURE_RERANK_LIMIT = 16
 FEATURE_SCORE_WEIGHT = 1.15
@@ -187,7 +188,605 @@ def expand_box(box, padding, image_width, image_height):
         image_width,
         image_height,
     )
+# Normalized team-column size expected by the backend slot detector.
+NORMALIZED_TEAM_COLUMN_WIDTH = 1215
+NORMALIZED_TEAM_COLUMN_HEIGHT = 2160
 
+
+def prepare_opponent_team_column_image(
+    image_path,
+    debug_dir=OPPONENT_DEBUG_CROP_DIR,
+    save_debug=False,
+):
+    """
+    Converts a raw full phone photo into a normalized opponent team-column image.
+
+    This lets users upload/take a normal full-screen photo instead of perfectly
+    matching the frontend guide box.
+
+    Flow:
+    1. Read raw photo.
+    2. Find red opponent card regions anywhere in the image.
+    3. Build one bounding box around the best vertical group of red cards.
+    4. Crop that team column with padding.
+    5. Resize to 1215x2160 so the existing slot detector can run normally.
+    """
+    cv2, np = load_cv_dependencies()
+    image_path = Path(image_path)
+    image = read_cv_image(image_path)
+
+    if is_empty_image(image):
+        return {
+            "imagePath": str(image_path),
+            "usedRawPhotoColumnDetection": False,
+            "reason": "empty-image",
+            "teamColumnBox": None,
+            "rawCardBoxes": [],
+        }
+
+    image_height, image_width = image.shape[:2]
+
+    guided_boxes = detect_opponent_card_boxes(image)
+    if image_already_matches_guided_team_column(image_width, image_height, guided_boxes):
+        return {
+            "imagePath": str(image_path),
+            "usedRawPhotoColumnDetection": False,
+            "reason": "already-guided-team-column",
+            "teamColumnBox": None,
+            "rawCardBoxes": guided_boxes,
+            "normalizedSize": {
+                "width": image_width,
+                "height": image_height,
+            },
+        }
+
+    raw_card_boxes = detect_raw_photo_red_card_boxes(image)
+
+    if len(raw_card_boxes) >= 3:
+        team_column_box = build_team_column_box_from_card_boxes(
+            raw_card_boxes,
+            image_width=image_width,
+            image_height=image_height,
+        )
+        reason = "red-card-column"
+    else:
+        team_column_box = None
+        reason = "not-enough-red-card-rows"
+
+    if not team_column_box:
+        return {
+            "imagePath": str(image_path),
+            "usedRawPhotoColumnDetection": False,
+            "reason": "no-team-column-found",
+            "teamColumnBox": None,
+            "rawCardBoxes": raw_card_boxes,
+        }
+
+    team_column_crop = crop_image_box(image, team_column_box)
+
+    if is_empty_image(team_column_crop):
+        return {
+            "imagePath": str(image_path),
+            "usedRawPhotoColumnDetection": False,
+            "reason": "empty-team-column-crop",
+            "teamColumnBox": team_column_box,
+            "rawCardBoxes": raw_card_boxes,
+        }
+
+    normalized = cv2.resize(
+        team_column_crop,
+        (NORMALIZED_TEAM_COLUMN_WIDTH, NORMALIZED_TEAM_COLUMN_HEIGHT),
+        interpolation=cv2.INTER_CUBIC,
+    )
+
+    image_debug_dir = Path(debug_dir) / image_path.stem
+    normalized_path = image_debug_dir / "normalized-team-column.jpg"
+
+    if save_debug:
+        image_debug_dir.mkdir(parents=True, exist_ok=True)
+        overlay = image.copy()
+        draw_debug_raw_team_column_overlay(
+            overlay,
+            team_column_box=team_column_box,
+            raw_card_boxes=raw_card_boxes,
+        )
+
+        overlay_path = image_debug_dir / "raw-team-column-detection.jpg"
+
+        cv2.imwrite(str(overlay_path), overlay)
+        cv2.imwrite(str(normalized_path), normalized)
+
+        output_path = normalized_path
+    else:
+        image_debug_dir.mkdir(parents=True, exist_ok=True)
+        cv2.imwrite(str(normalized_path), normalized)
+        output_path = normalized_path
+
+    return {
+        "imagePath": str(output_path),
+        "usedRawPhotoColumnDetection": True,
+        "reason": reason,
+        "teamColumnBox": team_column_box,
+        "rawCardBoxes": raw_card_boxes,
+        "normalizedSize": {
+            "width": NORMALIZED_TEAM_COLUMN_WIDTH,
+            "height": NORMALIZED_TEAM_COLUMN_HEIGHT,
+        },
+    }
+
+
+def image_already_matches_guided_team_column(image_width, image_height, card_boxes):
+    if image_width <= 0 or image_height <= 0:
+        return False
+
+    if len(card_boxes) != EXPECTED_OPPONENT_TEAM_SIZE:
+        return False
+
+    aspect = image_width / max(1, image_height)
+    expected_aspect = NORMALIZED_TEAM_COLUMN_WIDTH / NORMALIZED_TEAM_COLUMN_HEIGHT
+    if abs(aspect - expected_aspect) > 0.10:
+        return False
+
+    center_drift_ratio = calculate_card_center_drift_ratio(card_boxes, image_width)
+    spacing_variation_ratio = calculate_card_spacing_variation_ratio(card_boxes)
+    if center_drift_ratio > MAX_ACCEPTABLE_CARD_CENTER_DRIFT_RATIO:
+        return False
+    if spacing_variation_ratio > MAX_ACCEPTABLE_SPACING_VARIATION_RATIO:
+        return False
+
+    return True
+
+
+def detect_raw_photo_red_card_boxes(image):
+    """
+    Finds the six horizontal red opponent cards in a raw full phone photo.
+
+    This version uses row projection instead of relying mainly on contours.
+    It is better for phone photos where glare/background connects red areas.
+    """
+    if is_empty_image(image):
+        return []
+
+    cv2, np = load_cv_dependencies()
+    image_height, image_width = image.shape[:2]
+
+    hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+
+    lower_red_1 = cv2.inRange(
+        hsv,
+        np.array([0, 55, 45]),
+        np.array([14, 255, 255]),
+    )
+    lower_red_2 = cv2.inRange(
+        hsv,
+        np.array([145, 55, 45]),
+        np.array([179, 255, 255]),
+    )
+
+    red_mask = lower_red_1 | lower_red_2
+
+    # Remove tiny noise, but do not connect separate cards too aggressively.
+    red_mask = cv2.morphologyEx(
+        red_mask,
+        cv2.MORPH_OPEN,
+        np.ones((3, 3), np.uint8),
+    )
+    red_mask = cv2.morphologyEx(
+        red_mask,
+        cv2.MORPH_CLOSE,
+        np.ones((9, 5), np.uint8),
+    )
+
+    # Focus on the middle/right part where the opponent cards normally sit.
+    # This avoids left-side screen background/glare influencing the row detector.
+    search_left = int(image_width * 0.12)
+    search_right = int(image_width * 0.98)
+    search_mask = red_mask[:, search_left:search_right]
+
+    search_width = search_right - search_left
+
+    # Count red pixels per row.
+    row_counts = (search_mask > 0).sum(axis=1)
+
+    # A red card row usually has a strong horizontal red band.
+    # Use a relaxed threshold because glare and sprites break the red area.
+    row_threshold = max(12, int(search_width * 0.16))
+
+    raw_runs = build_mask_runs(
+        row_counts,
+        row_threshold,
+        min_length=max(8, int(image_height * 0.018)),
+    )
+
+    # Merge split pieces of the same card row.
+    merged_runs = merge_raw_photo_card_row_runs(
+        raw_runs,
+        image_height=image_height,
+    )
+
+    boxes = []
+
+    for run_start, run_end in merged_runs:
+        run_height = run_end - run_start + 1
+
+        # Filter out tiny red UI fragments.
+        if run_height < image_height * 0.035:
+            continue
+
+        if run_height > image_height * 0.22:
+            continue
+
+        band_mask = search_mask[run_start:run_end + 1]
+        column_counts = (band_mask > 0).sum(axis=0)
+
+        # Find x range for this row.
+        column_threshold = max(3, int(run_height * 0.12))
+        column_runs = build_mask_runs(
+            column_counts,
+            column_threshold,
+            min_length=max(12, int(search_width * 0.08)),
+        )
+
+        if not column_runs:
+            continue
+
+        # Use the widest red region in that row.
+        best_column_run = max(
+            column_runs,
+            key=lambda run: run[1] - run[0] + 1,
+        )
+
+        x1 = search_left + best_column_run[0]
+        x2 = search_left + best_column_run[1]
+
+        width = x2 - x1 + 1
+        height = run_height
+
+        if width < image_width * 0.22:
+            continue
+
+        aspect = width / max(1, height)
+
+        # Cards are horizontal bars.
+        if aspect < 1.4:
+            continue
+
+        # Add small padding around each detected card.
+        x_padding = int(width * 0.04)
+        y_padding = int(height * 0.08)
+
+        box = clamp_box_to_image(
+            {
+                "x": x1 - x_padding,
+                "y": run_start - y_padding,
+                "width": width + x_padding * 2,
+                "height": height + y_padding * 2,
+            },
+            image_width,
+            image_height,
+        )
+
+        boxes.append({
+            **box,
+            "area": int(box["width"] * box["height"]),
+            "aspect": round(float(box["width"] / max(1, box["height"])), 4),
+        })
+
+    boxes = remove_duplicate_raw_card_boxes(boxes)
+    boxes = filter_best_vertical_card_group(
+        boxes,
+        image_width=image_width,
+        image_height=image_height,
+    )
+
+    return sorted(boxes, key=lambda box: box["y"])[:EXPECTED_OPPONENT_TEAM_SIZE]
+
+
+
+def merge_nearby_raw_red_boxes(boxes, image_width, image_height):
+    """
+    Merges red fragments that belong to the same card.
+    Glare/text/sprite overlays can split one red card into several contours.
+    """
+    if not boxes:
+        return []
+
+    sorted_boxes = sorted(boxes, key=lambda box: (box["y"], box["x"]))
+    merged = []
+
+    for box in sorted_boxes:
+        did_merge = False
+
+        for index, existing in enumerate(merged):
+            if raw_boxes_should_merge(existing, box, image_width, image_height):
+                x1 = min(existing["x"], box["x"])
+                y1 = min(existing["y"], box["y"])
+                x2 = max(existing["x"] + existing["width"], box["x"] + box["width"])
+                y2 = max(existing["y"] + existing["height"], box["y"] + box["height"])
+
+                merged[index] = {
+                    "x": int(x1),
+                    "y": int(y1),
+                    "width": int(x2 - x1),
+                    "height": int(y2 - y1),
+                    "area": int((x2 - x1) * (y2 - y1)),
+                    "aspect": round(float((x2 - x1) / max(1, y2 - y1)), 4),
+                }
+                did_merge = True
+                break
+
+        if not did_merge:
+            merged.append(box)
+
+    return merged
+
+
+def raw_boxes_should_merge(first, second, image_width, image_height):
+    first_center_y = first["y"] + first["height"] / 2
+    second_center_y = second["y"] + second["height"] / 2
+
+    vertical_distance = abs(first_center_y - second_center_y)
+
+    first_x2 = first["x"] + first["width"]
+    second_x2 = second["x"] + second["width"]
+
+    horizontal_overlap = max(
+        0,
+        min(first_x2, second_x2) - max(first["x"], second["x"]),
+    )
+
+    smaller_width = max(1, min(first["width"], second["width"]))
+    overlap_ratio = horizontal_overlap / smaller_width
+
+    same_row = vertical_distance <= max(first["height"], second["height"]) * 0.65
+    strong_x_overlap = overlap_ratio >= 0.35
+
+    return same_row and strong_x_overlap
+
+
+def filter_best_vertical_card_group(boxes, image_width, image_height):
+    """
+    Keeps the most likely vertical team column group.
+
+    Raw photos may contain other red UI elements. This keeps the group with
+    similar x-position, similar width, and vertical stacking.
+    """
+    if len(boxes) <= 1:
+        return boxes
+
+    candidates = sorted(boxes, key=lambda box: box["area"], reverse=True)[:18]
+    best_group = []
+
+    for seed in candidates:
+        seed_center_x = seed["x"] + seed["width"] / 2
+        seed_width = seed["width"]
+
+        group = []
+
+        for box in candidates:
+            center_x = box["x"] + box["width"] / 2
+            width_ratio = box["width"] / max(1, seed_width)
+            center_drift = abs(center_x - seed_center_x) / max(1, image_width)
+
+            if center_drift <= 0.18 and 0.45 <= width_ratio <= 1.85:
+                group.append(box)
+
+        group = sorted(group, key=lambda box: box["y"])
+
+        if len(group) > len(best_group):
+            best_group = group
+        elif len(group) == len(best_group):
+            old_area = sum(box["area"] for box in best_group)
+            new_area = sum(box["area"] for box in group)
+            if new_area > old_area:
+                best_group = group
+
+    return best_group[:EXPECTED_OPPONENT_TEAM_SIZE]
+
+
+def build_team_column_box_from_card_boxes(card_boxes, image_width, image_height):
+    if not card_boxes:
+        return None
+
+    sorted_boxes = sorted(card_boxes, key=lambda box: box["y"])
+
+    x1 = min(box["x"] for box in sorted_boxes)
+    y1 = min(box["y"] for box in sorted_boxes)
+    x2 = max(box["x"] + box["width"] for box in sorted_boxes)
+    y2 = max(box["y"] + box["height"] for box in sorted_boxes)
+
+    column_width = x2 - x1
+    column_height = y2 - y1
+
+    x_padding = int(column_width * 0.18)
+    y_padding = int(column_height * 0.08)
+
+    return clamp_box_to_image(
+        {
+            "x": x1 - x_padding,
+            "y": y1 - y_padding,
+            "width": column_width + x_padding * 2,
+            "height": column_height + y_padding * 2,
+        },
+        image_width,
+        image_height,
+    )
+
+
+def detect_raw_photo_red_column_box(image):
+    """
+    Fallback when individual card boxes cannot be separated.
+    Finds the largest red-heavy area and crops around it.
+    """
+    if is_empty_image(image):
+        return None
+
+    cv2, np = load_cv_dependencies()
+    image_height, image_width = image.shape[:2]
+    image_area = max(1, image_width * image_height)
+
+    hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+    lower_red_1 = cv2.inRange(hsv, np.array([0, 55, 45]), np.array([12, 255, 255]))
+    lower_red_2 = cv2.inRange(hsv, np.array([145, 55, 45]), np.array([179, 255, 255]))
+    red_mask = lower_red_1 | lower_red_2
+
+    kernel = np.ones((25, 25), np.uint8)
+    red_mask = cv2.morphologyEx(red_mask, cv2.MORPH_CLOSE, kernel)
+
+    contours, _hierarchy = cv2.findContours(
+        red_mask,
+        cv2.RETR_EXTERNAL,
+        cv2.CHAIN_APPROX_SIMPLE,
+    )
+
+    if not contours:
+        return None
+
+    valid_boxes = []
+
+    for contour in contours:
+        area = cv2.contourArea(contour)
+        if area < image_area * 0.002:
+            continue
+
+        x, y, width, height = cv2.boundingRect(contour)
+
+        if width <= 0 or height <= 0:
+            continue
+
+        aspect = width / max(1, height)
+
+        # A full six-slot column is usually taller than it is wide.
+        # But allow some flexibility for angled photos.
+        if aspect > 1.7:
+            continue
+
+        valid_boxes.append({
+            "x": x,
+            "y": y,
+            "width": width,
+            "height": height,
+            "area": width * height,
+        })
+
+    if not valid_boxes:
+        return None
+
+    best_box = max(valid_boxes, key=lambda box: box["area"])
+
+    return expand_box_xy(
+        best_box,
+        x_padding=int(best_box["width"] * 0.22),
+        y_padding=int(best_box["height"] * 0.10),
+        image_width=image_width,
+        image_height=image_height,
+    )
+
+
+def draw_debug_raw_team_column_overlay(image, team_column_box, raw_card_boxes):
+    if is_empty_image(image):
+        return image
+
+    cv2, _np = load_cv_dependencies()
+
+    for index, box in enumerate(raw_card_boxes, start=1):
+        x1 = int(box["x"])
+        y1 = int(box["y"])
+        x2 = x1 + int(box["width"])
+        y2 = y1 + int(box["height"])
+
+        cv2.rectangle(image, (x1, y1), (x2, y2), (0, 255, 255), 3)
+        cv2.putText(
+            image,
+            f"card {index}",
+            (x1, max(24, y1 - 8)),
+            cv2.FONT_HERSHEY_SIMPLEX,
+            0.75,
+            (0, 255, 255),
+            2,
+            cv2.LINE_AA,
+        )
+
+    if team_column_box:
+        x1 = int(team_column_box["x"])
+        y1 = int(team_column_box["y"])
+        x2 = x1 + int(team_column_box["width"])
+        y2 = y1 + int(team_column_box["height"])
+
+        cv2.rectangle(image, (x1, y1), (x2, y2), (255, 0, 255), 5)
+        cv2.putText(
+            image,
+            "team column",
+            (x1, max(32, y1 - 12)),
+            cv2.FONT_HERSHEY_SIMPLEX,
+            0.95,
+            (255, 0, 255),
+            3,
+            cv2.LINE_AA,
+        )
+
+    return image
+
+def merge_raw_photo_card_row_runs(runs, image_height):
+    """
+    Merges row runs that are probably pieces of the same red card.
+    Avoids merging separate team slots.
+    """
+    if not runs:
+        return []
+
+    merged = []
+    index = 0
+
+    max_same_card_gap = max(4, int(image_height * 0.018))
+    max_card_height = int(image_height * 0.18)
+
+    while index < len(runs):
+        start, end = runs[index]
+
+        while index + 1 < len(runs):
+            next_start, next_end = runs[index + 1]
+            gap = next_start - end
+            combined_height = next_end - start + 1
+
+            if gap <= max_same_card_gap and combined_height <= max_card_height:
+                end = next_end
+                index += 1
+            else:
+                break
+
+        merged.append([start, end])
+        index += 1
+
+    return merged
+
+
+def remove_duplicate_raw_card_boxes(boxes):
+    """
+    Removes duplicate boxes caused by glare splitting/rejoining the same card.
+    """
+    if not boxes:
+        return []
+
+    boxes = sorted(boxes, key=lambda box: (box["y"], -box["area"]))
+    kept = []
+
+    for box in boxes:
+        box_center_y = box["y"] + box["height"] / 2
+
+        duplicate = False
+        for kept_box in kept:
+            kept_center_y = kept_box["y"] + kept_box["height"] / 2
+            center_gap = abs(box_center_y - kept_center_y)
+
+            if center_gap < max(box["height"], kept_box["height"]) * 0.55:
+                duplicate = True
+                break
+
+        if not duplicate:
+            kept.append(box)
+
+    return kept
 
 def expand_box_xy(box, x_padding, y_padding, image_width, image_height):
     return clamp_box_to_image(
@@ -485,8 +1084,12 @@ def detect_opponent_card_boxes(image):
             continue
 
         _rows, cols = points[:, 0], points[:, 1]
-        x_min = max(0, search_left + int(cols.min()) - 20)
-        x_max = min(image_width - 1, search_left + int(cols.max()) + 20)
+        column_counts = (run_mask > 0).sum(axis=0)
+        strong_column_threshold = max(4, int(height * 0.22))
+        strong_cols = np.where(column_counts >= strong_column_threshold)[0]
+        edge_cols = strong_cols if strong_cols.size else cols
+        x_min = max(0, search_left + int(edge_cols.min()) - 20)
+        x_max = min(image_width - 1, search_left + int(edge_cols.max()) + 20)
 
         boxes.append({
             "x": int(x_min),
@@ -1611,8 +2214,8 @@ def trim_sprite_candidate_to_foreground(slot_image, box, sprite_region):
     if content_width < crop_width * 0.08 or content_height < crop_height * 0.14:
         return box, sprite_region
 
-    pad_x = max(10, int(content_width * 0.22))
-    pad_y = max(10, int(content_height * 0.20))
+    pad_x = max(10, int(content_width * 0.18))
+    pad_y = max(10, int(content_height * 0.15))
     trim_x1 = max(0, int(x_min) - pad_x)
     trim_y1 = max(0, int(y_min) - pad_y)
     trim_x2 = min(crop_width, int(x_max) + 1 + pad_x)
@@ -1692,7 +2295,11 @@ def dedupe_box_candidates(candidates):
     )
 
     for candidate in sorted_candidates:
-        if any(box_iou(candidate["box"], old["box"]) > 0.82 for old in selected):
+        if any(
+            box_iou(candidate["box"], old["box"]) > 0.82
+            and candidate.get("source") == old.get("source")
+            for old in selected
+        ):
             continue
         selected.append(candidate)
 
@@ -1818,8 +2425,8 @@ def detect_pokemon_sprite_box_by_foreground(slot_image):
     if content_width < width * 0.06 or content_height < height * 0.18:
         return None
 
-    pad_x = max(10, int(content_width * 0.22))
-    pad_y = max(10, int(content_height * 0.18))
+    pad_x = max(10, int(content_width * 0.18))
+    pad_y = max(10, int(content_height * 0.15))
 
     return clamp_box_to_image(
         {
@@ -2050,7 +2657,27 @@ def build_type_combo_candidate_crop(slot_image, type_icon_crops=None):
         return None
 
     if len(usable_crops) >= 2:
-        cluster_box = extract_detected_type_icon_cluster_box(slot_image)
+        height, width = slot_image.shape[:2]
+        source_boxes = [
+            {
+                "x": icon_crop.get("x", 0),
+                "y": icon_crop.get("y", 0),
+                "width": icon_crop.get("width", 1),
+                "height": icon_crop.get("height", 1),
+            }
+            for icon_crop in usable_crops
+        ]
+        cluster_box = combine_boxes(source_boxes, width, height)
+        if cluster_box:
+            cluster_box = expand_box_xy(
+                cluster_box,
+                max(2, int(width * 0.004)),
+                max(2, int(height * 0.008)),
+                width,
+                height,
+            )
+        if not cluster_box:
+            cluster_box = extract_detected_type_icon_cluster_box(slot_image)
         cluster_image = crop_image_box(slot_image, cluster_box) if cluster_box else None
 
         if not is_empty_image(cluster_image):
@@ -2211,7 +2838,7 @@ def classify_type_combo_by_template(combo_crop, type_combo_references, expected_
     return {
         **best_result,
         "predictionSource": "type_combo_template",
-        "needsReview": best_result["score"] < 0.62,
+        "needsReview": best_result["score"] < TYPE_COMBO_TRUST_THRESHOLD,
     }
 
 

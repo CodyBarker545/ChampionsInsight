@@ -1,0 +1,21 @@
+{
+  "settings_version": "0.0.6",
+  "datasets_dir": "D:\\SoftwareEng\\datasets",
+  "weights_dir": "D:\\SoftwareEng\\ChampionsInsight\\weights",
+  "runs_dir": "D:\\SoftwareEng\\ChampionsInsight\\runs",
+  "uuid": "a57458c9c1eb65dad9b9fe17361f4a77677c31601d7bdcd43fcce26438061e0b",
+  "sync": true,
+  "api_key": "",
+  "openai_api_key": "",
+  "clearml": true,
+  "comet": true,
+  "dvc": true,
+  "hub": true,
+  "mlflow": true,
+  "neptune": true,
+  "raytune": true,
+  "tensorboard": false,
+  "wandb": false,
+  "vscode_msg": true,
+  "openvino_msg": true
+}

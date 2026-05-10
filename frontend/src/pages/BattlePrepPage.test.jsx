@@ -44,6 +44,8 @@ describe("BattlePrepPage", () => {
   });
 
   beforeEach(() => {
+    vi.clearAllMocks();
+    window.history.pushState({}, "", "/");
     fetchHealthStatus.mockResolvedValue({ status: "ok" });
     fetchLatestOpponentPrediction.mockResolvedValue({
       hasPrediction: false,
@@ -139,10 +141,12 @@ describe("BattlePrepPage", () => {
     });
   });
 
-  it("shows API online after health check", async () => {
+  it("checks backend health on load", async () => {
     render(<BattlePrepPage />);
 
-    expect(await screen.findByText("API online")).toBeInTheDocument();
+    await waitFor(() => {
+      expect(fetchHealthStatus).toHaveBeenCalled();
+    });
   });
 
   it("does not show the old analyze matchup button", async () => {
@@ -281,7 +285,7 @@ describe("BattlePrepPage", () => {
     const user = userEvent.setup();
     render(<BattlePrepPage />);
 
-    await user.click(screen.getByRole("button", { name: "Detect Existing Uploaded Opponent" }));
+    await user.click(screen.getByRole("button", { name: "Retry Last Uploaded Image" }));
 
     await waitFor(() => {
       expect(detectOpponentTeam).toHaveBeenCalled();
@@ -289,11 +293,19 @@ describe("BattlePrepPage", () => {
     expect(await screen.findByText("Charizard")).toBeInTheDocument();
   });
 
-  it("restores the latest stored opponent prediction on refresh", async () => {
+  it("does not poll latest uploads on load", async () => {
+    render(<BattlePrepPage />);
+
+    await screen.findByRole("button", { name: /Aegis/ });
+    expect(fetchLatestOpponentUpload).not.toHaveBeenCalled();
+    expect(detectOpponentTeam).not.toHaveBeenCalled();
+  });
+
+  it("restores the saved phone camera prediction from the URL flag", async () => {
+    window.history.pushState({}, "", "/?opponentPrediction=1");
     fetchLatestOpponentPrediction.mockResolvedValue({
       hasPrediction: true,
-      filename: "stored-opponent.jpg",
-      quality: { canAnalyze: true },
+      filename: "phone-opponent.jpg",
       detectedTeam: [
         {
           name: "Charizard",
@@ -309,7 +321,10 @@ describe("BattlePrepPage", () => {
     render(<BattlePrepPage />);
 
     expect(await screen.findByText("Charizard")).toBeInTheDocument();
-    expect(await screen.findByText("Restored latest opponent prediction from stored-opponent.jpg.")).toBeInTheDocument();
+    expect(await screen.findByText("Phone camera opponent team loaded.")).toBeInTheDocument();
+    expect(fetchLatestOpponentPrediction).toHaveBeenCalled();
+    expect(detectOpponentTeam).not.toHaveBeenCalled();
+    expect(window.location.search).toBe("");
   });
 
   it("loads detected opponent sprites without clicking each Pokemon", async () => {
@@ -339,7 +354,7 @@ describe("BattlePrepPage", () => {
 
     render(<BattlePrepPage />);
 
-    await user.click(screen.getByRole("button", { name: "Detect Existing Uploaded Opponent" }));
+    await user.click(screen.getByRole("button", { name: "Retry Last Uploaded Image" }));
 
     expect(await screen.findByAltText("Venusaur sprite")).toHaveAttribute(
       "src",

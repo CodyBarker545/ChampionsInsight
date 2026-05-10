@@ -160,6 +160,13 @@ def test_get_pokedex_entry_detail_by_name_includes_moves_and_usage():
     assert "moves" in pokemon
     assert isinstance(pokemon["moves"], list)
     assert len(pokemon["moves"]) > 0
+    assert {
+        "name",
+        "displayName",
+        "type",
+        "category",
+        "effect",
+    }.issubset(pokemon["moves"][0])
 
     assert "usage" in pokemon
 

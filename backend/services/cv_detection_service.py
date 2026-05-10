@@ -8,6 +8,24 @@ from services.cv_spirit_service import PokemonSpiritDetectionService
 from services.cv_type_service import PokemonTypeDetectionService
 
 
+def get_trusted_detected_types(type_method_results):
+    selected_types = type_method_results.get("selected", []) or []
+    prediction_source = type_method_results.get("typePredictionSource", "")
+    combo_details = type_method_results.get("typeComboDetails", {}) or {}
+
+    if not selected_types:
+        return []
+
+    if prediction_source.startswith("type_combo_template"):
+        if combo_details.get("needsReview", True):
+            return []
+        if float(combo_details.get("score", 0) or 0) < cv_service.TYPE_COMBO_TRUST_THRESHOLD:
+            return []
+        return selected_types
+
+    return []
+
+
 class OpponentDetectionService:
     """Runs the full opponent detection pipeline using focused CV services."""
 
@@ -26,10 +44,76 @@ class OpponentDetectionService:
             card_service=self.card_service,
         )
         self.spirit_service = spirit_service or PokemonSpiritDetectionService()
+    def prepare_detection_image(self, image_path, save_debug=True):
+        """
+        Converts raw full-phone photos into a normalized opponent team-column image.
+        If no team column is found, returns the original image path.
+        """
+        prepared = cv_service.prepare_opponent_team_column_image(
+            image_path,
+            debug_dir=self.debug_dir,
+            save_debug=save_debug,
+        )
 
+        prepared_path = Path(prepared.get("imagePath") or image_path)
+
+        return prepared_path, prepared
+
+    def reject_type_mismatch_match(self, match, detected_types):
+        detected_types = [
+            str(type_name).strip().lower()
+            for type_name in detected_types or []
+            if str(type_name).strip()
+        ]
+
+        reference_types = [
+            str(type_name).strip().lower()
+            for type_name in match.get("referenceTypes", []) or []
+            if str(type_name).strip()
+        ]
+
+        if not detected_types or not reference_types:
+            return {
+                **match,
+                "needsReview": True,
+                "typeGuardReason": "missing-types",
+            }
+
+        detected_set = set(detected_types)
+        reference_set = set(reference_types)
+
+        if detected_set.intersection(reference_set):
+            return match
+
+        confidence = float(match.get("confidence", 0) or 0)
+
+        if confidence >= 0.97:
+            return {
+                **match,
+                "needsReview": True,
+                "typeMismatchWarning": True,
+                "typeGuardReason": "near-exact-visual-type-mismatch",
+            }
+
+        return {
+            **match,
+            "pokemonName": "unknown",
+            "confidence": 0.0,
+            "needsReview": True,
+            "typeMismatchWarning": True,
+            "typeGuardReason": "rejected-zero-type-overlap",
+            "rejectedPokemonName": match.get("pokemonName", "unknown"),
+            "rejectedConfidence": match.get("confidence", 0.0),
+            "rejectedReferenceTypes": reference_types,
+        }
+    
     # Checks whether an opponent image is good enough for detection.
     def assess_quality(self, image_path):
-        return self.card_service.assess_quality(image_path)
+        prepared_path, _prepared = self.prepare_detection_image(
+            image_path,
+            save_debug=False,
+        )
+        return self.card_service.assess_quality(prepared_path)
 
     # Detects only the type icons from an uploaded opponent team image.
     def detect_team_types(self, image_path, save_debug=True):
@@ -40,36 +124,69 @@ class OpponentDetectionService:
     def detect_team(self, image_path, save_debug=True):
         image_path = Path(image_path)
 
-        quality = self.assess_quality(image_path)
+        detection_image_path, preprocessing = self.prepare_detection_image(
+            image_path,
+            save_debug=save_debug,
+        )
+
+        quality = self.assess_quality(detection_image_path)
 
         if not quality.get("canAnalyze", True):
+            debug_original_path = ""
+            debug_crop_paths = []
+            if save_debug:
+                debug_original_path = self.write_debug_original_image(image_path)
+                try:
+                    debug_crop_paths = [
+                        crop.get("debugCropPath", "")
+                        for crop in self.card_service.crop_team_slots(
+                            detection_image_path,
+                            save_debug=True,
+                        )
+                    ]
+                except cv_service.ComputerVisionError:
+                    debug_crop_paths = []
+
             return {
-            "image": str(image_path),
-            "referenceCount": len(self.spirit_service.references),
-            "quality": quality,
-            "debugOriginalPath": "",
-            "detectedTeam": [],
-            "skippedReason": "bad_quality",
-        }
+                "image": str(image_path),
+                "detectionImage": str(detection_image_path),
+                "referenceCount": len(self.spirit_service.references),
+                "quality": quality,
+                "preprocessing": preprocessing,
+                "debugOriginalPath": debug_original_path,
+                "debugCropPaths": [path for path in debug_crop_paths if path],
+                "detectedTeam": [],
+                "skippedReason": "bad_quality",
+            }
 
         debug_original_path = ""
         if save_debug:
             debug_original_path = self.write_debug_original_image(image_path)
 
-        card_crops = self.card_service.crop_team_slots(image_path, save_debug=save_debug)
+        card_crops = self.card_service.crop_team_slots(
+            detection_image_path,
+            save_debug=save_debug,
+        )
         detected_team = []
 
         for card_crop in card_crops:
-            slot_detection = self.detect_slot(image_path, card_crop, save_debug=save_debug)
+            slot_detection = self.detect_slot(
+                detection_image_path,
+                card_crop,
+                save_debug=save_debug,
+            )
             detected_team.append(slot_detection)
 
         return {
-        "image": str(image_path),
-        "referenceCount": len(self.spirit_service.references),
-        "quality": quality,
-        "debugOriginalPath": debug_original_path,
-        "detectedTeam": detected_team,
-    }
+            "image": str(image_path),
+            "detectionImage": str(detection_image_path),
+            "referenceCount": len(self.spirit_service.references),
+            "quality": quality,
+            "preprocessing": preprocessing,
+            "debugOriginalPath": debug_original_path,
+            "detectedTeam": detected_team,
+        }    
+    
     # Detects one opponent slot using type filtering before spirit matching.
     def detect_slot(self, image_path, card_crop, save_debug=True):
         slot_image = card_crop["image"]
@@ -82,6 +199,7 @@ class OpponentDetectionService:
             type_icon_crops=type_icon_crops,
         )
         detected_types = type_method_results["selected"]
+        trusted_detected_types = get_trusted_detected_types(type_method_results)
         object_detections = [
             cv_service.strip_object_image(detected_object)
             for detected_object in cv_service.detect_slot_objects_from_layer(object_layer)
@@ -129,8 +247,15 @@ class OpponentDetectionService:
 
         match = self.spirit_service.detect_spirit(
             pokemon_region,
-            detected_types=detected_types,
+            detected_types=trusted_detected_types,
         )
+
+        match = self.reject_type_mismatch_match(
+            match=match,
+            detected_types=trusted_detected_types,
+        )
+
+        fixed_match = None
 
         fixed_match = None
 
@@ -138,14 +263,14 @@ class OpponentDetectionService:
         should_try_fixed_visual_rescue = (
             match.get("pokemonName") == "unknown"
             or match_confidence < 0.55
-            or (len(detected_types or []) <= 1 and match_confidence < 0.72)
+            or (len(trusted_detected_types or []) <= 1 and match_confidence < 0.72)
         )
 
         if should_try_fixed_visual_rescue:
             fixed_pokemon_region = cv_service.extract_fixed_opponent_pokemon_region(slot_image)
             fixed_match = self.detect_fixed_visual_match(fixed_pokemon_region)
 
-            if self.should_use_fixed_visual_match(match, fixed_match, detected_types):
+            if self.should_use_fixed_visual_match(match, fixed_match, trusted_detected_types):
                 match = {
                     **fixed_match,
                     "matchReason": "fixed-visual-rescue",
@@ -182,6 +307,13 @@ class OpponentDetectionService:
             "pokemonName": match.get("pokemonName", "unknown"),
             "confidence": match.get("confidence", 0.0),
 
+            # Type guard/debug fields.
+            "typeMismatchWarning": match.get("typeMismatchWarning", False),
+            "typeGuardReason": match.get("typeGuardReason"),
+            "rejectedPokemonName": match.get("rejectedPokemonName"),
+            "rejectedConfidence": match.get("rejectedConfidence"),
+            "rejectedReferenceTypes": match.get("rejectedReferenceTypes"),
+
             # New embedding/debug fields.
             "distance": match.get("distance"),
             "similarity": match.get("similarity"),
@@ -202,6 +334,7 @@ class OpponentDetectionService:
 
             # Existing fields.
             "detectedTypes": detected_types,
+            "trustedDetectedTypes": trusted_detected_types,
             "referenceTypes": match.get("referenceTypes", []),
             "typeMethodResults": type_method_results,
             "objectDetections": object_detections,

@@ -49,11 +49,15 @@ class PokemonTypeDetectionService:
             type_icon_crops=type_icon_crops,
         )
 
-        if cv_results.get("typeComboDetails", {}).get("predictionSource", "").startswith("type_combo_template"):
+        combo_details = cv_results.get("typeComboDetails", {})
+        if (
+            combo_details.get("predictionSource", "").startswith("type_combo_template")
+            and not combo_details.get("needsReview", True)
+        ):
             return {
                 **cv_results,
                 "allSelectedTypes": cv_results.get("selected", []),
-                "typePredictionSource": cv_results["typeComboDetails"].get("predictionSource"),
+                "typePredictionSource": combo_details.get("predictionSource"),
                 "embeddingSelected": [],
                 "embeddingDetails": [],
                 "cvSelected": cv_results.get("selected", []),

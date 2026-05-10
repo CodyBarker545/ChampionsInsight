@@ -24,6 +24,7 @@ from services.cv_service import (
     should_accept_type_icon_crop,
 )
 from services.cv_card_service import OpponentCardService
+from services.cv_detection_service import get_trusted_detected_types
 from services.cv_spirit_service import PokemonSpiritDetectionService
 from services.cv_type_service import (
     PokemonTypeDetectionService,
@@ -55,6 +56,23 @@ def test_detect_opponent_card_boxes_keeps_right_type_panel():
     assert len(boxes) == 6
     assert boxes[0]["x"] <= 120
     assert boxes[0]["x"] + boxes[0]["width"] >= 540
+
+
+# Tests that sparse red background artifacts do not widen lower slot crops.
+def test_detect_opponent_card_boxes_ignores_sparse_right_red_noise():
+    cv2, _np = load_cv_dependencies()
+    image = np.zeros((900, 700, 3), dtype=np.uint8)
+
+    for top in (30, 170, 310, 450, 590, 730):
+        cv2.rectangle(image, (120, top), (540, top + 95), (10, 0, 210), -1)
+
+    for y in range(450, 825, 8):
+        cv2.line(image, (560, y), (680, min(899, y + 34)), (10, 0, 190), 1)
+
+    boxes = detect_opponent_card_boxes(image)
+
+    assert len(boxes) == 6
+    assert max(box["width"] for box in boxes) < 470
 
 
 # Tests that missing references return an unknown Pokemon result.
@@ -124,6 +142,32 @@ def test_should_trust_cv_pair_over_weak_embedding_for_bad_fallback_icon():
     )
 
     assert result is True
+
+
+# Tests that uncertain type reads do not become hard Pokemon filters.
+def test_get_trusted_detected_types_only_trusts_confident_combo():
+    weak_combo_with_embedding = {
+        "selected": ["ice"],
+        "typePredictionSource": "type_embedding",
+        "embeddingSelected": ["ice"],
+        "typeComboDetails": {
+            "predictionSource": "type_combo_template",
+            "score": 0.70,
+            "needsReview": True,
+        },
+    }
+    confident_combo = {
+        "selected": ["grass", "fire"],
+        "typePredictionSource": "type_combo_template",
+        "typeComboDetails": {
+            "predictionSource": "type_combo_template",
+            "score": 0.78,
+            "needsReview": False,
+        },
+    }
+
+    assert get_trusted_detected_types(weak_combo_with_embedding) == []
+    assert get_trusted_detected_types(confident_combo) == ["grass", "fire"]
 
 
 # Tests that red-card-heavy fallback crops are not treated as real type icons.

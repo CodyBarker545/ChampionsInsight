@@ -89,7 +89,24 @@ def save_opponent_image(image, run_detection=True):
             "metrics": {},
         }
 
+    debug_crops_generated = False
+    detection_error = ""
     if not quality["canAnalyze"]:
+        try:
+            logger.info(
+                "Running debug crop generation for low-quality uploaded image %s",
+                filename,
+            )
+            detect_opponent_team(saved_path)
+            debug_crops_generated = True
+        except ComputerVisionError as error:
+            logger.warning(
+                "Debug crop generation failed for low-quality uploaded image %s: %s",
+                filename,
+                error,
+            )
+            detection_error = str(error)
+
         return {
             "status": "needs_retake",
             "filename": filename,
@@ -99,19 +116,23 @@ def save_opponent_image(image, run_detection=True):
             "message": "Image received, but the photo needs to be retaken before detection.",
             "quality": quality,
             "detectedTeam": [],
-            "detectionError": "Photo quality is too low for reliable detection.",
+            "detectionError": detection_error or "Photo quality is too low for reliable detection.",
+            "debugCropsGenerated": debug_crops_generated,
         }
 
     detected_team = []
-    detection_error = ""
-    if run_detection:
-        try:
-            logger.info("Running opponent detection for uploaded image %s", filename)
-            detection = detect_opponent_team(saved_path)
+    try:
+        logger.info(
+            "Running opponent detection debug crop generation for uploaded image %s",
+            filename,
+        )
+        detection = detect_opponent_team(saved_path)
+        debug_crops_generated = True
+        if run_detection:
             detected_team = enrich_detected_team(detection["detectedTeam"])
-        except ComputerVisionError as error:
-            logger.warning("Opponent detection failed for uploaded image %s: %s", filename, error)
-            detection_error = str(error)
+    except ComputerVisionError as error:
+        logger.warning("Opponent detection failed for uploaded image %s: %s", filename, error)
+        detection_error = str(error)
 
     return {
         "status": "received",
@@ -120,11 +141,12 @@ def save_opponent_image(image, run_detection=True):
         "contentType": image.mimetype,
         "sizeBytes": image_size,
         "message": (
-            "Image received."
+            "Image received. Debug crops generated."
             if not run_detection
             else "Image received. Computer vision detection completed."
         ),
         "quality": quality,
         "detectedTeam": detected_team,
         "detectionError": detection_error,
+        "debugCropsGenerated": debug_crops_generated,
     }

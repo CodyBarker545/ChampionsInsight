@@ -43,6 +43,69 @@ def test_save_opponent_image_stores_valid_file(upload_dir, monkeypatch):
     assert result["sizeBytes"] == len(VALID_JPEG)
     assert result["filename"].endswith(".jpg")
     assert (upload_dir / result["filename"]).exists()
+    assert result["debugCropsGenerated"] is True
+
+
+# Tests that uploads still create debug crops when prediction is skipped.
+def test_save_opponent_image_generates_debug_crops_when_detection_skipped(upload_dir, monkeypatch):
+    calls = []
+
+    monkeypatch.setattr(image_service, "UPLOAD_DIR", upload_dir)
+    monkeypatch.setattr(
+        image_service,
+        "assess_opponent_image_quality",
+        lambda _path: {"canAnalyze": True, "qualityLevel": "good", "issues": [], "warnings": [], "metrics": {}},
+    )
+
+    def fake_detect_opponent_team(path):
+        calls.append(path)
+        return {"detectedTeam": [{"pokemonName": "Debugmon"}]}
+
+    monkeypatch.setattr(image_service, "detect_opponent_team", fake_detect_opponent_team)
+
+    result = save_opponent_image(make_file_storage(), run_detection=False)
+
+    assert len(calls) == 1
+    assert calls[0] == upload_dir / result["filename"]
+    assert result["status"] == "received"
+    assert result["debugCropsGenerated"] is True
+    assert result["detectedTeam"] == []
+    assert result["message"] == "Image received. Debug crops generated."
+
+
+# Tests that rejected photos still run debug crop generation.
+def test_save_opponent_image_generates_debug_crops_for_low_quality_photo(upload_dir, monkeypatch):
+    calls = []
+
+    monkeypatch.setattr(image_service, "UPLOAD_DIR", upload_dir)
+    monkeypatch.setattr(
+        image_service,
+        "assess_opponent_image_quality",
+        lambda _path: {
+            "canAnalyze": False,
+            "qualityLevel": "bad",
+            "issues": ["Found 4 of 6 opponent cards."],
+            "warnings": [],
+            "metrics": {},
+        },
+    )
+
+    def fake_detect_opponent_team(path):
+        calls.append(path)
+        return {
+            "detectedTeam": [],
+            "skippedReason": "bad_quality",
+            "debugCropPaths": [str(upload_dir / "debug" / "opponent-slot-1.jpg")],
+        }
+
+    monkeypatch.setattr(image_service, "detect_opponent_team", fake_detect_opponent_team)
+
+    result = save_opponent_image(make_file_storage(), run_detection=False)
+
+    assert len(calls) == 1
+    assert result["status"] == "needs_retake"
+    assert result["debugCropsGenerated"] is True
+    assert result["detectedTeam"] == []
 
 
 # Tests that PNG signatures are accepted.

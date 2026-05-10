@@ -138,6 +138,44 @@ function formatName(value) {
     .replace(/\b\w/g, (letter) => letter.toUpperCase());
 }
 
+function normalizeMoveDetail(move) {
+  if (typeof move === "string") {
+    return {
+      name: move,
+      displayName: formatName(move),
+      type: "",
+      category: "",
+      effect: "Move details unavailable.",
+    };
+  }
+
+  return {
+    name: move?.name || move?.displayName || "",
+    displayName: move?.displayName || formatName(move?.name),
+    type: move?.type || "",
+    category: move?.category || "",
+    effect: move?.effect || "Move details unavailable.",
+  };
+}
+
+function formatMoveCategory(category) {
+  const normalized = String(category || "").toLowerCase();
+
+  if (normalized === "physical") {
+    return "Attack";
+  }
+
+  if (normalized === "special") {
+    return "Special";
+  }
+
+  if (normalized === "status") {
+    return "Status";
+  }
+
+  return "Unknown";
+}
+
 function PokedexPage({ onBack }) {
   const [entries, setEntries] = useState([]);
   const [selectedPokemon, setSelectedPokemon] = useState(null);
@@ -364,11 +402,49 @@ function PokemonDetailModal({
   onClose,
   onSelectForm,
 }) {
+  const [moveSearch, setMoveSearch] = useState("");
   const imageSource = resolveApiUrl(pokemon.spriteUrl || pokemon.image || "");
   const baseStats = pokemon.baseStats || {};
   const usage = pokemon.usage || {};
   const statTotal = getStatTotal(baseStats);
   const tabs = ["stats", "moves", "abilities", "usage", "teams"];
+  const activeFormIndex = Math.max(
+    0,
+    forms.findIndex((form) => form.name === pokemon.name),
+  );
+  const activeFormLabel = getFormLabel(pokemon);
+  const filteredMoves = useMemo(() => {
+    const search = moveSearch.trim().toLowerCase();
+    const moves = (pokemon.moves || []).map(normalizeMoveDetail);
+
+    if (!search) {
+      return moves;
+    }
+
+    return moves.filter((move) => {
+      const category = formatMoveCategory(move.category);
+      const searchable = [
+        move.displayName,
+        move.name,
+        move.type,
+        category,
+        move.effect,
+      ]
+        .join(" ")
+        .toLowerCase();
+
+      return searchable.includes(search);
+    });
+  }, [pokemon.moves, moveSearch]);
+
+  function selectNextForm() {
+    if (forms.length <= 1) {
+      return;
+    }
+
+    const nextForm = forms[(activeFormIndex + 1) % forms.length];
+    onSelectForm(nextForm);
+  }
 
   return (
     <div className="pokedex-modal-backdrop" onClick={onClose}>
@@ -405,24 +481,18 @@ function PokemonDetailModal({
             <h2>{pokemon.name}</h2>
 
             {forms.length > 1 && (
-              <div className="pokedex-form-switcher">
-                {forms.map((form) => {
-                  const isActive = form.name === pokemon.name;
-
-                  return (
-                    <button
-                      key={`${form.id}-${form.name}-${form.spriteFilename || ""}`}
-                      type="button"
-                      className={`form-toggle pokedex-form-toggle ${
-                        isActive ? "active" : ""
-                      }`}
-                      onClick={() => onSelectForm(form)}
-                    >
-                      {getFormLabel(form)}
-                    </button>
-                  );
-                })}
-              </div>
+              <button
+                type="button"
+                className="pokedex-form-cycle-button"
+                onClick={selectNextForm}
+                aria-label={`Current form ${activeFormLabel}. Switch to next form.`}
+              >
+                <span>Form</span>
+                <strong>{activeFormLabel}</strong>
+                <small>
+                  {activeFormIndex + 1}/{forms.length}
+                </small>
+              </button>
             )}
 
             <div className="pokedex-type-row">
@@ -483,11 +553,35 @@ function PokemonDetailModal({
           )}
 
           {activeTab === "moves" && (
-            <div className="pokedex-chip-grid">
-              {(pokemon.moves || []).length ? (
-                pokemon.moves.map((move) => <span key={move}>{formatName(move)}</span>)
+            <div className="pokedex-moves-panel">
+              <label className="pokedex-move-search">
+                <span>Search Moves</span>
+                <input
+                  value={moveSearch}
+                  placeholder="Search by move, type, attack kind, or effect"
+                  onChange={(event) => setMoveSearch(event.target.value)}
+                />
+              </label>
+
+              {filteredMoves.length ? (
+                <div className="pokedex-move-list">
+                  {filteredMoves.map((move) => (
+                    <article key={move.name || move.displayName}>
+                      <strong>{move.displayName}</strong>
+                      <span
+                        className={`pokedex-type-pill type-${normalizeType(move.type)}`}
+                      >
+                        {move.type ? formatType(move.type) : "Unknown"}
+                      </span>
+                      <span className={`pokedex-move-category category-${normalizeType(move.category)}`}>
+                        {formatMoveCategory(move.category)}
+                      </span>
+                      <p>{move.effect}</p>
+                    </article>
+                  ))}
+                </div>
               ) : (
-                <p>No move data available.</p>
+                <p>No moves match that search.</p>
               )}
             </div>
           )}

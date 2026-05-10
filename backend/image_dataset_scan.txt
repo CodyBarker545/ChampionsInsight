@@ -1,0 +1,1364 @@
+IMAGE DATASET SCAN
+================================================================================
+Backend: D:\SoftwareEng\ChampionsInsight\backend
+Synthetic images ignored: 71301
+Folders with non-synthetic images: 271
+
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\review\unsorted_single_type_icons
+Non-synthetic images: 2505
+First image: data\training_dataset\review\unsorted_single_type_icons\single_type__1000009557__opponent-type-icon-2-1__20260510_014853__46fab03a4d.jpg
+Guess: Type icon/type combo images
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\review\unsorted_type_combos
+Non-synthetic images: 1303
+First image: data\training_dataset\review\unsorted_type_combos\type_combo__1000009575__opponent-type-cluster-4__20260510_014854__389e8def64.jpg
+Guess: Type icon/type combo images
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\review\unsorted_slots
+Non-synthetic images: 588
+First image: data\training_dataset\review\unsorted_slots\slot__2026-05-1003.44.002233358681074163662-38908785__opponent-slot-1__20260510_045541__d9d53074e7.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\review\unsorted_pokemon
+Non-synthetic images: 540
+First image: data\training_dataset\review\unsorted_pokemon\pokemon__2026-05-1003.51.281920048151656874176-807e3ad3__opponent-pokemon-1__20260510_045541__4dd1965132.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\pokemon\champions_sprites\normal
+Non-synthetic images: 320
+First image: data\pokemon\champions_sprites\normal\Menu_CP_0003-Mega.png
+Guess: Clean Champions sprite references
+--------------------------------------------------------------------------------
+Folder: data\pokemon\champions_sprites\shiny
+Non-synthetic images: 320
+First image: data\pokemon\champions_sprites\shiny\Menu_CP_0003-Mega_shiny.png
+Guess: Clean Champions sprite references
+--------------------------------------------------------------------------------
+Folder: data\cv\references\types\type_combo_icons
+Non-synthetic images: 113
+First image: data\cv\references\types\type_combo_icons\bug.png
+Guess: Type icon/type combo images
+--------------------------------------------------------------------------------
+Folder: data\cv\references\pokemon
+Non-synthetic images: 101
+First image: data\cv\references\pokemon\aegislash__camera-1.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\sneasler
+Non-synthetic images: 44
+First image: data\training_dataset\slot_pokemon_real\sneasler\pokemon__2026-05-1003.55.218204888821785164579-b29bda20__opponent-pokemon-4__20260510_045547__2acca37cd1.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\sneasler
+Non-synthetic images: 44
+First image: data\training_dataset\slot_pokemon_backup\sneasler\pokemon__2026-05-1003.55.218204888821785164579-b29bda20__opponent-pokemon-4__20260510_045547__2acca37cd1.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\sneasler
+Non-synthetic images: 44
+First image: data\training_dataset\slot_pokemon\sneasler\pokemon__2026-05-1003.55.218204888821785164579-b29bda20__opponent-pokemon-4__20260510_045547__2acca37cd1.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\garchomp
+Non-synthetic images: 43
+First image: data\training_dataset\slot_pokemon_real\garchomp\pokemon__2026-05-1003.51.281920048151656874176-807e3ad3__opponent-pokemon-2__20260510_045541__939b2e412a.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\garchomp
+Non-synthetic images: 43
+First image: data\training_dataset\slot_pokemon_backup\garchomp\pokemon__2026-05-1003.51.281920048151656874176-807e3ad3__opponent-pokemon-2__20260510_045541__939b2e412a.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\garchomp
+Non-synthetic images: 43
+First image: data\training_dataset\slot_pokemon\garchomp\pokemon__2026-05-1003.51.281920048151656874176-807e3ad3__opponent-pokemon-2__20260510_045541__939b2e412a.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1003.57.348043961090820363248-7313b55e
+Non-synthetic images: 43
+First image: data\cv\debug\crops\2026-05-1003.57.348043961090820363248-7313b55e\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1003.59.321336048943851848144-78dfb8af
+Non-synthetic images: 43
+First image: data\cv\debug\crops\2026-05-1003.59.321336048943851848144-78dfb8af\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1004.10.16100901817648704072-38108dab
+Non-synthetic images: 43
+First image: data\cv\debug\crops\2026-05-1004.10.16100901817648704072-38108dab\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1004.12.005586908615364962928-8cbee51f
+Non-synthetic images: 43
+First image: data\cv\debug\crops\2026-05-1004.12.005586908615364962928-8cbee51f\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1004.12.169163041002906255771-d41c2539
+Non-synthetic images: 43
+First image: data\cv\debug\crops\2026-05-1004.12.169163041002906255771-d41c2539\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1004.14.23767493403397163775-066f5d37
+Non-synthetic images: 43
+First image: data\cv\debug\crops\2026-05-1004.14.23767493403397163775-066f5d37\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1004.16.398454763890159349788-62fc5b3d
+Non-synthetic images: 43
+First image: data\cv\debug\crops\2026-05-1004.16.398454763890159349788-62fc5b3d\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044050
+Non-synthetic images: 43
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044050\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044053
+Non-synthetic images: 43
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044053\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044057
+Non-synthetic images: 43
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044057\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044100
+Non-synthetic images: 43
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044100\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044104
+Non-synthetic images: 43
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044104\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044237
+Non-synthetic images: 43
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044237\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044241
+Non-synthetic images: 43
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044241\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044243
+Non-synthetic images: 43
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044243\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044251
+Non-synthetic images: 43
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044251\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044254
+Non-synthetic images: 43
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044254\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044257
+Non-synthetic images: 43
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044257\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044259
+Non-synthetic images: 43
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044259\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044309
+Non-synthetic images: 43
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044309\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044313
+Non-synthetic images: 43
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044313\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044316
+Non-synthetic images: 43
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044316\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044333
+Non-synthetic images: 43
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044333\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044342
+Non-synthetic images: 43
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044342\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044358
+Non-synthetic images: 43
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044358\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044404
+Non-synthetic images: 43
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044404\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044526
+Non-synthetic images: 43
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044526\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1003.51.281920048151656874176-807e3ad3
+Non-synthetic images: 42
+First image: data\cv\debug\crops\2026-05-1003.51.281920048151656874176-807e3ad3\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1003.55.218204888821785164579-b29bda20
+Non-synthetic images: 42
+First image: data\cv\debug\crops\2026-05-1003.55.218204888821785164579-b29bda20\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1003.56.265209192959158153225-8a719e0d
+Non-synthetic images: 42
+First image: data\cv\debug\crops\2026-05-1003.56.265209192959158153225-8a719e0d\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1004.00.257248896820442285253-ec4d446f
+Non-synthetic images: 42
+First image: data\cv\debug\crops\2026-05-1004.00.257248896820442285253-ec4d446f\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1004.02.001412921874112631768-150f1db5
+Non-synthetic images: 42
+First image: data\cv\debug\crops\2026-05-1004.02.001412921874112631768-150f1db5\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1004.02.458270850770936963653-8bb86000
+Non-synthetic images: 42
+First image: data\cv\debug\crops\2026-05-1004.02.458270850770936963653-8bb86000\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1004.04.0255805391873015953-4d9be81d
+Non-synthetic images: 42
+First image: data\cv\debug\crops\2026-05-1004.04.0255805391873015953-4d9be81d\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1004.08.096989943643096808723-c1570ef9
+Non-synthetic images: 42
+First image: data\cv\debug\crops\2026-05-1004.08.096989943643096808723-c1570ef9\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1004.22.369084808676864386359-db61ba3c
+Non-synthetic images: 42
+First image: data\cv\debug\crops\2026-05-1004.22.369084808676864386359-db61ba3c\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\normalized-team-column
+Non-synthetic images: 42
+First image: data\cv\debug\crops\normalized-team-column\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 042629
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 042629\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044112
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044112\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044131
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044131\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044149
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044149\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044153
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044153\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044156
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044156\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044158
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044158\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044201
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044201\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044203
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044203\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044208
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044208\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044210
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044210\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044214
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044214\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044216
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044216\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044219
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044219\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044222
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044222\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044224
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044224\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044227
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044227\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044336
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044336\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044345
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044345\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044347
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044347\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044351
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044351\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044354
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044354\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044418
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044418\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044422
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044422\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044426
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044426\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044429
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044429\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044431
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044431\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044438
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044438\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044442
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044442\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044445
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044445\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044447
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044447\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044450
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044450\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044453
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044453\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044455
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044455\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044458
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044458\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044512
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044512\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044515
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044515\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044517
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044517\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044520
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044520\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044523
+Non-synthetic images: 42
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044523\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1004.03.384169336671773699083-e3dd4ff5
+Non-synthetic images: 41
+First image: data\cv\debug\crops\2026-05-1004.03.384169336671773699083-e3dd4ff5\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1004.06.045975953053953197562-5330fd26
+Non-synthetic images: 41
+First image: data\cv\debug\crops\2026-05-1004.06.045975953053953197562-5330fd26\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1004.07.329035209836889705129-95c71bd3
+Non-synthetic images: 41
+First image: data\cv\debug\crops\2026-05-1004.07.329035209836889705129-95c71bd3\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044114
+Non-synthetic images: 41
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044114\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044117
+Non-synthetic images: 41
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044117\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044120
+Non-synthetic images: 41
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044120\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044123
+Non-synthetic images: 41
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044123\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044126
+Non-synthetic images: 41
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044126\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044129
+Non-synthetic images: 41
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044129\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044134
+Non-synthetic images: 41
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044134\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044137
+Non-synthetic images: 41
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044137\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044414
+Non-synthetic images: 41
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044414\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044435
+Non-synthetic images: 41
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044435\opponent-objects-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\kingambit
+Non-synthetic images: 34
+First image: data\training_dataset\slot_pokemon_real\kingambit\pokemon__2026-05-1003.57.348043961090820363248-7313b55e__opponent-pokemon-5__20260510_045549__e4d835f695.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\kingambit
+Non-synthetic images: 34
+First image: data\training_dataset\slot_pokemon_backup\kingambit\pokemon__2026-05-1003.57.348043961090820363248-7313b55e__opponent-pokemon-5__20260510_045549__e4d835f695.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\kingambit
+Non-synthetic images: 34
+First image: data\training_dataset\slot_pokemon\kingambit\pokemon__2026-05-1003.57.348043961090820363248-7313b55e__opponent-pokemon-5__20260510_045549__e4d835f695.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\sinistcha
+Non-synthetic images: 33
+First image: data\training_dataset\slot_pokemon_real\sinistcha\pokemon__2026-05-1004.00.257248896820442285253-ec4d446f__opponent-pokemon-4__20260510_045549__44c9712b43.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\sinistcha
+Non-synthetic images: 33
+First image: data\training_dataset\slot_pokemon_backup\sinistcha\pokemon__2026-05-1004.00.257248896820442285253-ec4d446f__opponent-pokemon-4__20260510_045549__44c9712b43.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\sinistcha
+Non-synthetic images: 33
+First image: data\training_dataset\slot_pokemon\sinistcha\pokemon__2026-05-1004.00.257248896820442285253-ec4d446f__opponent-pokemon-4__20260510_045549__44c9712b43.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\sylveon
+Non-synthetic images: 31
+First image: data\training_dataset\slot_pokemon_real\sylveon\pokemon__2026-05-1003.51.281920048151656874176-807e3ad3__opponent-pokemon-3__20260510_045541__abe89d18f3.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\sylveon
+Non-synthetic images: 31
+First image: data\training_dataset\slot_pokemon_backup\sylveon\pokemon__2026-05-1003.51.281920048151656874176-807e3ad3__opponent-pokemon-3__20260510_045541__abe89d18f3.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\sylveon
+Non-synthetic images: 31
+First image: data\training_dataset\slot_pokemon\sylveon\pokemon__2026-05-1003.51.281920048151656874176-807e3ad3__opponent-pokemon-3__20260510_045541__abe89d18f3.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\drampa
+Non-synthetic images: 28
+First image: data\training_dataset\slot_pokemon_real\drampa\pokemon__2026-05-1004.16.398454763890159349788-62fc5b3d__opponent-pokemon-1__20260510_045600__20fb931594.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\oranguru
+Non-synthetic images: 28
+First image: data\training_dataset\slot_pokemon_real\oranguru\pokemon__2026-05-1004.16.398454763890159349788-62fc5b3d__opponent-pokemon-2__20260510_045600__0af4c7c3f4.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\torkoal
+Non-synthetic images: 28
+First image: data\training_dataset\slot_pokemon_real\torkoal\pokemon__2026-05-1004.16.398454763890159349788-62fc5b3d__opponent-pokemon-5__20260510_045601__610e96a02c.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\drampa
+Non-synthetic images: 28
+First image: data\training_dataset\slot_pokemon_backup\drampa\pokemon__2026-05-1004.16.398454763890159349788-62fc5b3d__opponent-pokemon-1__20260510_045600__20fb931594.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\oranguru
+Non-synthetic images: 28
+First image: data\training_dataset\slot_pokemon_backup\oranguru\pokemon__2026-05-1004.16.398454763890159349788-62fc5b3d__opponent-pokemon-2__20260510_045600__0af4c7c3f4.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\torkoal
+Non-synthetic images: 28
+First image: data\training_dataset\slot_pokemon_backup\torkoal\pokemon__2026-05-1004.16.398454763890159349788-62fc5b3d__opponent-pokemon-5__20260510_045601__610e96a02c.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\drampa
+Non-synthetic images: 28
+First image: data\training_dataset\slot_pokemon\drampa\pokemon__2026-05-1004.16.398454763890159349788-62fc5b3d__opponent-pokemon-1__20260510_045600__20fb931594.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\oranguru
+Non-synthetic images: 28
+First image: data\training_dataset\slot_pokemon\oranguru\pokemon__2026-05-1004.16.398454763890159349788-62fc5b3d__opponent-pokemon-2__20260510_045600__0af4c7c3f4.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\torkoal
+Non-synthetic images: 28
+First image: data\training_dataset\slot_pokemon\torkoal\pokemon__2026-05-1004.16.398454763890159349788-62fc5b3d__opponent-pokemon-5__20260510_045601__610e96a02c.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\basculegion
+Non-synthetic images: 21
+First image: data\training_dataset\slot_pokemon_real\basculegion\pokemon__2026-05-1003.55.218204888821785164579-b29bda20__opponent-pokemon-5__20260510_045547__5bb6854866.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\basculegion
+Non-synthetic images: 21
+First image: data\training_dataset\slot_pokemon_backup\basculegion\pokemon__2026-05-1003.55.218204888821785164579-b29bda20__opponent-pokemon-5__20260510_045547__5bb6854866.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\basculegion
+Non-synthetic images: 21
+First image: data\training_dataset\slot_pokemon\basculegion\pokemon__2026-05-1003.55.218204888821785164579-b29bda20__opponent-pokemon-5__20260510_045547__5bb6854866.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\cv\references\types\type_icons
+Non-synthetic images: 18
+First image: data\cv\references\types\type_icons\bug.png
+Guess: Type icon/type combo images
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\aerodactyl
+Non-synthetic images: 17
+First image: data\training_dataset\slot_pokemon_real\aerodactyl\pokemon__2026-05-1003.55.218204888821785164579-b29bda20__opponent-pokemon-3__20260510_045547__a48ca9275b.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\charizard
+Non-synthetic images: 17
+First image: data\training_dataset\slot_pokemon_real\charizard\pokemon__2026-05-1003.51.281920048151656874176-807e3ad3__opponent-pokemon-1__20260510_045541__4dd1965132.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\aerodactyl
+Non-synthetic images: 17
+First image: data\training_dataset\slot_pokemon_backup\aerodactyl\pokemon__2026-05-1003.55.218204888821785164579-b29bda20__opponent-pokemon-3__20260510_045547__a48ca9275b.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\charizard
+Non-synthetic images: 17
+First image: data\training_dataset\slot_pokemon_backup\charizard\pokemon__2026-05-1003.51.281920048151656874176-807e3ad3__opponent-pokemon-1__20260510_045541__4dd1965132.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\aerodactyl
+Non-synthetic images: 17
+First image: data\training_dataset\slot_pokemon\aerodactyl\pokemon__2026-05-1003.55.218204888821785164579-b29bda20__opponent-pokemon-3__20260510_045547__a48ca9275b.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\charizard
+Non-synthetic images: 17
+First image: data\training_dataset\slot_pokemon\charizard\pokemon__2026-05-1003.51.281920048151656874176-807e3ad3__opponent-pokemon-1__20260510_045541__4dd1965132.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\dragonite
+Non-synthetic images: 16
+First image: data\training_dataset\slot_pokemon_real\dragonite\pokemon__2026-05-1003.57.348043961090820363248-7313b55e__opponent-pokemon-6__20260510_045549__cdd3b54c3b.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\talonflame
+Non-synthetic images: 16
+First image: data\training_dataset\slot_pokemon_real\talonflame\pokemon__2026-05-1004.07.329035209836889705129-95c71bd3__opponent-pokemon-1__20260510_045558__fbe448b485.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\venusaur
+Non-synthetic images: 16
+First image: data\training_dataset\slot_pokemon_real\venusaur\pokemon__Screenshot 2026-05-10 044237__opponent-pokemon-6__20260510_045606__c2d89d03ab.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\dragonite
+Non-synthetic images: 16
+First image: data\training_dataset\slot_pokemon_backup\dragonite\pokemon__2026-05-1003.57.348043961090820363248-7313b55e__opponent-pokemon-6__20260510_045549__cdd3b54c3b.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\talonflame
+Non-synthetic images: 16
+First image: data\training_dataset\slot_pokemon_backup\talonflame\pokemon__2026-05-1004.07.329035209836889705129-95c71bd3__opponent-pokemon-1__20260510_045558__fbe448b485.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\venusaur
+Non-synthetic images: 16
+First image: data\training_dataset\slot_pokemon_backup\venusaur\pokemon__Screenshot 2026-05-10 044237__opponent-pokemon-6__20260510_045606__c2d89d03ab.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\dragonite
+Non-synthetic images: 16
+First image: data\training_dataset\slot_pokemon\dragonite\pokemon__2026-05-1003.57.348043961090820363248-7313b55e__opponent-pokemon-6__20260510_045549__cdd3b54c3b.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\talonflame
+Non-synthetic images: 16
+First image: data\training_dataset\slot_pokemon\talonflame\pokemon__2026-05-1004.07.329035209836889705129-95c71bd3__opponent-pokemon-1__20260510_045558__fbe448b485.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\venusaur
+Non-synthetic images: 16
+First image: data\training_dataset\slot_pokemon\venusaur\pokemon__Screenshot 2026-05-10 044237__opponent-pokemon-6__20260510_045606__c2d89d03ab.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\pelipper
+Non-synthetic images: 14
+First image: data\training_dataset\slot_pokemon_real\pelipper\pokemon__2026-05-1003.56.265209192959158153225-8a719e0d__opponent-pokemon-6__20260510_045548__1010617190.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\tinkaton
+Non-synthetic images: 14
+First image: data\training_dataset\slot_pokemon_real\tinkaton\pokemon__Screenshot 2026-05-10 044149__opponent-pokemon-4__20260510_045605__996b24fadc.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\pelipper
+Non-synthetic images: 14
+First image: data\training_dataset\slot_pokemon_backup\pelipper\pokemon__2026-05-1003.56.265209192959158153225-8a719e0d__opponent-pokemon-6__20260510_045548__1010617190.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\tinkaton
+Non-synthetic images: 14
+First image: data\training_dataset\slot_pokemon_backup\tinkaton\pokemon__Screenshot 2026-05-10 044149__opponent-pokemon-4__20260510_045605__996b24fadc.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\pelipper
+Non-synthetic images: 14
+First image: data\training_dataset\slot_pokemon\pelipper\pokemon__2026-05-1003.56.265209192959158153225-8a719e0d__opponent-pokemon-6__20260510_045548__1010617190.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\tinkaton
+Non-synthetic images: 14
+First image: data\training_dataset\slot_pokemon\tinkaton\pokemon__Screenshot 2026-05-10 044149__opponent-pokemon-4__20260510_045605__996b24fadc.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\archaludon
+Non-synthetic images: 13
+First image: data\training_dataset\slot_pokemon_real\archaludon\pokemon__2026-05-1004.06.045975953053953197562-5330fd26__opponent-pokemon-4__20260510_045557__2b23b10456.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\lucario
+Non-synthetic images: 13
+First image: data\training_dataset\slot_pokemon_real\lucario\pokemon__2026-05-1004.16.398454763890159349788-62fc5b3d__opponent-pokemon-6__20260510_045601__a27798fb18.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\archaludon
+Non-synthetic images: 13
+First image: data\training_dataset\slot_pokemon_backup\archaludon\pokemon__2026-05-1004.06.045975953053953197562-5330fd26__opponent-pokemon-4__20260510_045557__2b23b10456.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\lucario
+Non-synthetic images: 13
+First image: data\training_dataset\slot_pokemon_backup\lucario\pokemon__2026-05-1004.16.398454763890159349788-62fc5b3d__opponent-pokemon-6__20260510_045601__a27798fb18.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\archaludon
+Non-synthetic images: 13
+First image: data\training_dataset\slot_pokemon\archaludon\pokemon__2026-05-1004.06.045975953053953197562-5330fd26__opponent-pokemon-4__20260510_045557__2b23b10456.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\lucario
+Non-synthetic images: 13
+First image: data\training_dataset\slot_pokemon\lucario\pokemon__2026-05-1004.16.398454763890159349788-62fc5b3d__opponent-pokemon-6__20260510_045601__a27798fb18.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\dragapult
+Non-synthetic images: 10
+First image: data\training_dataset\slot_pokemon_real\dragapult\pokemon__Screenshot 2026-05-10 044237__opponent-pokemon-1__20260510_045606__8bc877f1fb.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\heliolisk
+Non-synthetic images: 10
+First image: data\training_dataset\slot_pokemon_real\heliolisk\pokemon__Screenshot 2026-05-10 044237__opponent-pokemon-4__20260510_045606__82debe340d.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\dragapult
+Non-synthetic images: 10
+First image: data\training_dataset\slot_pokemon_backup\dragapult\pokemon__Screenshot 2026-05-10 044237__opponent-pokemon-1__20260510_045606__8bc877f1fb.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\heliolisk
+Non-synthetic images: 10
+First image: data\training_dataset\slot_pokemon_backup\heliolisk\pokemon__Screenshot 2026-05-10 044237__opponent-pokemon-4__20260510_045606__82debe340d.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\dragapult
+Non-synthetic images: 10
+First image: data\training_dataset\slot_pokemon\dragapult\pokemon__Screenshot 2026-05-10 044237__opponent-pokemon-1__20260510_045606__8bc877f1fb.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\heliolisk
+Non-synthetic images: 10
+First image: data\training_dataset\slot_pokemon\heliolisk\pokemon__Screenshot 2026-05-10 044237__opponent-pokemon-4__20260510_045606__82debe340d.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\kangaskhan
+Non-synthetic images: 9
+First image: data\training_dataset\slot_pokemon_real\kangaskhan\pokemon__Screenshot 2026-05-10 044333__opponent-pokemon-6__20260510_045607__147ad91e92.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\rotom_wash
+Non-synthetic images: 9
+First image: data\training_dataset\slot_pokemon_real\rotom_wash\pokemon__Screenshot 2026-05-10 044333__opponent-pokemon-5__20260510_045607__901542419a.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\tyranitar
+Non-synthetic images: 9
+First image: data\training_dataset\slot_pokemon_real\tyranitar\pokemon__Screenshot 2026-05-10 044333__opponent-pokemon-1__20260510_045607__7b1466b950.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\whimsicott
+Non-synthetic images: 9
+First image: data\training_dataset\slot_pokemon_real\whimsicott\slot__1000009579__opponent-slot-6__20260510_014854__199cee1117.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\kangaskhan
+Non-synthetic images: 9
+First image: data\training_dataset\slot_pokemon_backup\kangaskhan\pokemon__Screenshot 2026-05-10 044333__opponent-pokemon-6__20260510_045607__147ad91e92.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\rotom_wash
+Non-synthetic images: 9
+First image: data\training_dataset\slot_pokemon_backup\rotom_wash\pokemon__Screenshot 2026-05-10 044333__opponent-pokemon-5__20260510_045607__901542419a.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\tyranitar
+Non-synthetic images: 9
+First image: data\training_dataset\slot_pokemon_backup\tyranitar\pokemon__Screenshot 2026-05-10 044333__opponent-pokemon-1__20260510_045607__7b1466b950.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\whimsicott
+Non-synthetic images: 9
+First image: data\training_dataset\slot_pokemon_backup\whimsicott\slot__1000009579__opponent-slot-6__20260510_014854__199cee1117.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\kangaskhan
+Non-synthetic images: 9
+First image: data\training_dataset\slot_pokemon\kangaskhan\pokemon__Screenshot 2026-05-10 044333__opponent-pokemon-6__20260510_045607__147ad91e92.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\rotom_wash
+Non-synthetic images: 9
+First image: data\training_dataset\slot_pokemon\rotom_wash\pokemon__Screenshot 2026-05-10 044333__opponent-pokemon-5__20260510_045607__901542419a.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\tyranitar
+Non-synthetic images: 9
+First image: data\training_dataset\slot_pokemon\tyranitar\pokemon__Screenshot 2026-05-10 044333__opponent-pokemon-1__20260510_045607__7b1466b950.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\whimsicott
+Non-synthetic images: 9
+First image: data\training_dataset\slot_pokemon\whimsicott\slot__1000009579__opponent-slot-6__20260510_014854__199cee1117.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\incineroar
+Non-synthetic images: 8
+First image: data\training_dataset\slot_pokemon_real\incineroar\pokemon__2026-05-1003.51.281920048151656874176-807e3ad3__opponent-pokemon-4__20260510_045541__3a5da5b3c7.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\incineroar
+Non-synthetic images: 8
+First image: data\training_dataset\slot_pokemon_backup\incineroar\pokemon__2026-05-1003.51.281920048151656874176-807e3ad3__opponent-pokemon-4__20260510_045541__3a5da5b3c7.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\incineroar
+Non-synthetic images: 8
+First image: data\training_dataset\slot_pokemon\incineroar\pokemon__2026-05-1003.51.281920048151656874176-807e3ad3__opponent-pokemon-4__20260510_045541__3a5da5b3c7.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\competitive\diagrams
+Non-synthetic images: 8
+First image: data\competitive\diagrams\pokemon_usage_vs_win_rate.png
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1003.44.002233358681074163662-38908785
+Non-synthetic images: 7
+First image: data\cv\debug\crops\2026-05-1003.44.002233358681074163662-38908785\opponent-slot-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1003.48.201782836879732887447-d55d4daf
+Non-synthetic images: 7
+First image: data\cv\debug\crops\2026-05-1003.48.201782836879732887447-d55d4daf\opponent-slot-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1003.54.332260755546130236364-43be3ab5
+Non-synthetic images: 7
+First image: data\cv\debug\crops\2026-05-1003.54.332260755546130236364-43be3ab5\opponent-slot-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1003.54.332260755546130236364-77c6bec5
+Non-synthetic images: 7
+First image: data\cv\debug\crops\2026-05-1003.54.332260755546130236364-77c6bec5\opponent-slot-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1004.15.161631871043380983368-2bb081d1
+Non-synthetic images: 7
+First image: data\cv\debug\crops\2026-05-1004.15.161631871043380983368-2bb081d1\opponent-slot-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1004.15.437534410542374198569-0525ee94
+Non-synthetic images: 7
+First image: data\cv\debug\crops\2026-05-1004.15.437534410542374198569-0525ee94\opponent-slot-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1004.17.145934422551444633054-998ff6fe
+Non-synthetic images: 7
+First image: data\cv\debug\crops\2026-05-1004.17.145934422551444633054-998ff6fe\opponent-slot-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1004.17.253088954467004614488-3c78a6f1
+Non-synthetic images: 7
+First image: data\cv\debug\crops\2026-05-1004.17.253088954467004614488-3c78a6f1\opponent-slot-1.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\scovillain
+Non-synthetic images: 6
+First image: data\training_dataset\slot_pokemon_real\scovillain\pokemon__2026-05-1004.14.23767493403397163775-066f5d37__opponent-pokemon-5__20260510_045600__ef80b106ac.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\scovillain
+Non-synthetic images: 6
+First image: data\training_dataset\slot_pokemon_backup\scovillain\pokemon__2026-05-1004.14.23767493403397163775-066f5d37__opponent-pokemon-5__20260510_045600__ef80b106ac.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\scovillain
+Non-synthetic images: 6
+First image: data\training_dataset\slot_pokemon\scovillain\pokemon__2026-05-1004.14.23767493403397163775-066f5d37__opponent-pokemon-5__20260510_045600__ef80b106ac.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\type_combos\fighting_poison
+Non-synthetic images: 5
+First image: data\training_dataset\type_combos\fighting_poison\opponent-type-cluster-3.jpg
+Guess: Type icon/type combo images
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\gengar
+Non-synthetic images: 5
+First image: data\training_dataset\slot_pokemon_real\gengar\pokemon__2026-05-1003.57.348043961090820363248-7313b55e__opponent-pokemon-3__20260510_045548__59989dd560.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\scizor
+Non-synthetic images: 5
+First image: data\training_dataset\slot_pokemon_real\scizor\pokemon__2026-05-1004.00.257248896820442285253-ec4d446f__opponent-pokemon-2__20260510_045549__7d6d0e3a2b.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\gengar
+Non-synthetic images: 5
+First image: data\training_dataset\slot_pokemon_backup\gengar\pokemon__2026-05-1003.57.348043961090820363248-7313b55e__opponent-pokemon-3__20260510_045548__59989dd560.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\scizor
+Non-synthetic images: 5
+First image: data\training_dataset\slot_pokemon_backup\scizor\pokemon__2026-05-1004.00.257248896820442285253-ec4d446f__opponent-pokemon-2__20260510_045549__7d6d0e3a2b.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\gengar
+Non-synthetic images: 5
+First image: data\training_dataset\slot_pokemon\gengar\pokemon__2026-05-1003.57.348043961090820363248-7313b55e__opponent-pokemon-3__20260510_045548__59989dd560.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\scizor
+Non-synthetic images: 5
+First image: data\training_dataset\slot_pokemon\scizor\pokemon__2026-05-1004.00.257248896820442285253-ec4d446f__opponent-pokemon-2__20260510_045549__7d6d0e3a2b.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\arcanine_hisui
+Non-synthetic images: 4
+First image: data\training_dataset\slot_pokemon_real\arcanine_hisui\slot__1000009579__opponent-slot-4__20260510_014854__80066b0ace.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\floette_eternal
+Non-synthetic images: 4
+First image: data\training_dataset\slot_pokemon_real\floette_eternal\pokemon__2026-05-1004.02.001412921874112631768-150f1db5__opponent-pokemon-1__20260510_045550__600d8d9c44.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\froslass
+Non-synthetic images: 4
+First image: data\training_dataset\slot_pokemon_real\froslass\pokemon__2026-05-1004.10.16100901817648704072-38108dab__opponent-pokemon-2__20260510_045559__ac8c86577e.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\greninja
+Non-synthetic images: 4
+First image: data\training_dataset\slot_pokemon_real\greninja\slot__1000009579__opponent-slot-1__20260510_014854__d2d264a695.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\samurott_hisui
+Non-synthetic images: 4
+First image: data\training_dataset\slot_pokemon_real\samurott_hisui\slot__1000009579__opponent-slot-3__20260510_014854__ef0a4bdf3b.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\arcanine_hisui
+Non-synthetic images: 4
+First image: data\training_dataset\slot_pokemon_backup\arcanine_hisui\slot__1000009579__opponent-slot-4__20260510_014854__80066b0ace.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\floette_eternal
+Non-synthetic images: 4
+First image: data\training_dataset\slot_pokemon_backup\floette_eternal\pokemon__2026-05-1004.02.001412921874112631768-150f1db5__opponent-pokemon-1__20260510_045550__600d8d9c44.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\froslass
+Non-synthetic images: 4
+First image: data\training_dataset\slot_pokemon_backup\froslass\pokemon__2026-05-1004.10.16100901817648704072-38108dab__opponent-pokemon-2__20260510_045559__ac8c86577e.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\greninja
+Non-synthetic images: 4
+First image: data\training_dataset\slot_pokemon_backup\greninja\slot__1000009579__opponent-slot-1__20260510_014854__d2d264a695.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\samurott_hisui
+Non-synthetic images: 4
+First image: data\training_dataset\slot_pokemon_backup\samurott_hisui\slot__1000009579__opponent-slot-3__20260510_014854__ef0a4bdf3b.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\arcanine_hisui
+Non-synthetic images: 4
+First image: data\training_dataset\slot_pokemon\arcanine_hisui\slot__1000009579__opponent-slot-4__20260510_014854__80066b0ace.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\floette_eternal
+Non-synthetic images: 4
+First image: data\training_dataset\slot_pokemon\floette_eternal\pokemon__2026-05-1004.02.001412921874112631768-150f1db5__opponent-pokemon-1__20260510_045550__600d8d9c44.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\froslass
+Non-synthetic images: 4
+First image: data\training_dataset\slot_pokemon\froslass\pokemon__2026-05-1004.10.16100901817648704072-38108dab__opponent-pokemon-2__20260510_045559__ac8c86577e.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\greninja
+Non-synthetic images: 4
+First image: data\training_dataset\slot_pokemon\greninja\slot__1000009579__opponent-slot-1__20260510_014854__d2d264a695.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\samurott_hisui
+Non-synthetic images: 4
+First image: data\training_dataset\slot_pokemon\samurott_hisui\slot__1000009579__opponent-slot-3__20260510_014854__ef0a4bdf3b.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\type_combos\fire_flying
+Non-synthetic images: 3
+First image: data\training_dataset\type_combos\fire_flying\opponent-type-cluster-1.jpg
+Guess: Type icon/type combo images
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\type_combos\grass_dark
+Non-synthetic images: 3
+First image: data\training_dataset\type_combos\grass_dark\opponent-type-cluster-2.jpg
+Guess: Type icon/type combo images
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\blastoise
+Non-synthetic images: 3
+First image: data\training_dataset\slot_pokemon_real\blastoise\pokemon__2026-05-1004.06.045975953053953197562-5330fd26__opponent-pokemon-3__20260510_045557__41c7bedd2a.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\hawlucha
+Non-synthetic images: 3
+First image: data\training_dataset\slot_pokemon_real\hawlucha\slot__1000009579__opponent-slot-2__20260510_014854__6e58f7193c.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\blastoise
+Non-synthetic images: 3
+First image: data\training_dataset\slot_pokemon_backup\blastoise\pokemon__2026-05-1004.06.045975953053953197562-5330fd26__opponent-pokemon-3__20260510_045557__41c7bedd2a.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\hawlucha
+Non-synthetic images: 3
+First image: data\training_dataset\slot_pokemon_backup\hawlucha\slot__1000009579__opponent-slot-2__20260510_014854__6e58f7193c.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\blastoise
+Non-synthetic images: 3
+First image: data\training_dataset\slot_pokemon\blastoise\pokemon__2026-05-1004.06.045975953053953197562-5330fd26__opponent-pokemon-3__20260510_045557__41c7bedd2a.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\hawlucha
+Non-synthetic images: 3
+First image: data\training_dataset\slot_pokemon\hawlucha\slot__1000009579__opponent-slot-2__20260510_014854__6e58f7193c.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1003.57.498104675782527871031-9e0d7714
+Non-synthetic images: 3
+First image: data\cv\debug\crops\2026-05-1003.57.498104675782527871031-9e0d7714\normalized-team-column.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1003.58.447178017794705252032-ccaae32f
+Non-synthetic images: 3
+First image: data\cv\debug\crops\2026-05-1003.58.447178017794705252032-ccaae32f\normalized-team-column.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1004.00.484182219674761363024-a06289bd
+Non-synthetic images: 3
+First image: data\cv\debug\crops\2026-05-1004.00.484182219674761363024-a06289bd\normalized-team-column.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1004.04.361492408857569733938-833716f1
+Non-synthetic images: 3
+First image: data\cv\debug\crops\2026-05-1004.04.361492408857569733938-833716f1\normalized-team-column.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1004.05.158655862011436629369-86b0f9de
+Non-synthetic images: 3
+First image: data\cv\debug\crops\2026-05-1004.05.158655862011436629369-86b0f9de\normalized-team-column.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1004.06.463977719852244023189-a3971557
+Non-synthetic images: 3
+First image: data\cv\debug\crops\2026-05-1004.06.463977719852244023189-a3971557\normalized-team-column.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1004.08.477439367753163899469-97d48fdd
+Non-synthetic images: 3
+First image: data\cv\debug\crops\2026-05-1004.08.477439367753163899469-97d48fdd\normalized-team-column.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1004.09.119196109496680852718-14023c8f
+Non-synthetic images: 3
+First image: data\cv\debug\crops\2026-05-1004.09.119196109496680852718-14023c8f\normalized-team-column.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\2026-05-1004.11.395467416818201721828-cc71ac4d
+Non-synthetic images: 3
+First image: data\cv\debug\crops\2026-05-1004.11.395467416818201721828-cc71ac4d\normalized-team-column.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044302
+Non-synthetic images: 3
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044302\normalized-team-column.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044339
+Non-synthetic images: 3
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044339\normalized-team-column.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\cv\debug\crops\Screenshot 2026-05-10 044401
+Non-synthetic images: 3
+First image: data\cv\debug\crops\Screenshot 2026-05-10 044401\normalized-team-column.jpg
+Guess: Debug/crop images - may be useful after sorting
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\type_combos\ice
+Non-synthetic images: 2
+First image: data\training_dataset\type_combos\ice\type_combo__1000009574__opponent-type-cluster-2__20260510_014854__58ce2c68ab.jpg
+Guess: Type icon/type combo images
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\type_combos\rock_flying
+Non-synthetic images: 2
+First image: data\training_dataset\type_combos\rock_flying\opponent-type-cluster-4.jpg
+Guess: Type icon/type combo images
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\type_combos\rock_poison
+Non-synthetic images: 2
+First image: data\training_dataset\type_combos\rock_poison\type_combo__1000009571__opponent-type-cluster-1__20260510_014854__a0228bb793.jpg
+Guess: Type icon/type combo images
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\type_combos\water_ghost
+Non-synthetic images: 2
+First image: data\training_dataset\type_combos\water_ghost\opponent-type-cluster-5.jpg
+Guess: Type icon/type combo images
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\clefable
+Non-synthetic images: 2
+First image: data\training_dataset\slot_pokemon_real\clefable\slot__1000009574__opponent-slot-5__20260510_014854__0847fad508.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\kommo_o
+Non-synthetic images: 2
+First image: data\training_dataset\slot_pokemon_real\kommo_o\slot__1000009574__opponent-slot-6__20260510_014854__6e33fc5340.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\ninetales_alola
+Non-synthetic images: 2
+First image: data\training_dataset\slot_pokemon_real\ninetales_alola\pokemon__2026-05-1003.57.348043961090820363248-7313b55e__opponent-pokemon-1__20260510_045548__44ca3798f2.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\tsareena
+Non-synthetic images: 2
+First image: data\training_dataset\slot_pokemon_real\tsareena\pokemon__2026-05-1003.55.218204888821785164579-b29bda20__opponent-pokemon-1__20260510_045543__394bd92f70.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\vanilluxe
+Non-synthetic images: 2
+First image: data\training_dataset\slot_pokemon_real\vanilluxe\slot__1000009574__opponent-slot-2__20260510_014854__0d1115be7f.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\clefable
+Non-synthetic images: 2
+First image: data\training_dataset\slot_pokemon_backup\clefable\slot__1000009574__opponent-slot-5__20260510_014854__0847fad508.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\kommo_o
+Non-synthetic images: 2
+First image: data\training_dataset\slot_pokemon_backup\kommo_o\slot__1000009574__opponent-slot-6__20260510_014854__6e33fc5340.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\ninetales_alola
+Non-synthetic images: 2
+First image: data\training_dataset\slot_pokemon_backup\ninetales_alola\pokemon__2026-05-1003.57.348043961090820363248-7313b55e__opponent-pokemon-1__20260510_045548__44ca3798f2.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\tsareena
+Non-synthetic images: 2
+First image: data\training_dataset\slot_pokemon_backup\tsareena\pokemon__2026-05-1003.55.218204888821785164579-b29bda20__opponent-pokemon-1__20260510_045543__394bd92f70.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\vanilluxe
+Non-synthetic images: 2
+First image: data\training_dataset\slot_pokemon_backup\vanilluxe\slot__1000009574__opponent-slot-2__20260510_014854__0d1115be7f.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\clefable
+Non-synthetic images: 2
+First image: data\training_dataset\slot_pokemon\clefable\slot__1000009574__opponent-slot-5__20260510_014854__0847fad508.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\kommo_o
+Non-synthetic images: 2
+First image: data\training_dataset\slot_pokemon\kommo_o\slot__1000009574__opponent-slot-6__20260510_014854__6e33fc5340.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\ninetales_alola
+Non-synthetic images: 2
+First image: data\training_dataset\slot_pokemon\ninetales_alola\pokemon__2026-05-1003.57.348043961090820363248-7313b55e__opponent-pokemon-1__20260510_045548__44ca3798f2.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\tsareena
+Non-synthetic images: 2
+First image: data\training_dataset\slot_pokemon\tsareena\pokemon__2026-05-1003.55.218204888821785164579-b29bda20__opponent-pokemon-1__20260510_045543__394bd92f70.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\vanilluxe
+Non-synthetic images: 2
+First image: data\training_dataset\slot_pokemon\vanilluxe\slot__1000009574__opponent-slot-2__20260510_014854__0d1115be7f.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\type_combos\dargon_ground
+Non-synthetic images: 1
+First image: data\training_dataset\type_combos\dargon_ground\opponent-type-cluster-6.jpg
+Guess: Type icon/type combo images
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\type_combos\dark_ice
+Non-synthetic images: 1
+First image: data\training_dataset\type_combos\dark_ice\type_combo__1000009571__opponent-type-cluster-3__20260510_014854__53a9f1c46e.jpg
+Guess: Type icon/type combo images
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\type_combos\fairy
+Non-synthetic images: 1
+First image: data\training_dataset\type_combos\fairy\type_combo__1000009571__opponent-type-cluster-2__20260510_014854__71d9d97196.jpg
+Guess: Type icon/type combo images
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\type_combos\fighting
+Non-synthetic images: 1
+First image: data\training_dataset\type_combos\fighting\opponent-type-icon-3-1.jpg
+Guess: Type icon/type combo images
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\type_combos\fire
+Non-synthetic images: 1
+First image: data\training_dataset\type_combos\fire\opponent-type-icon-1-1.jpg
+Guess: Type icon/type combo images
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\type_combos\flying
+Non-synthetic images: 1
+First image: data\training_dataset\type_combos\flying\opponent-type-icon-1-2.jpg
+Guess: Type icon/type combo images
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\type_combos\flying_steel
+Non-synthetic images: 1
+First image: data\training_dataset\type_combos\flying_steel\type_combo__1000009571__opponent-type-cluster-4__20260510_014854__aee7bf6b42.jpg
+Guess: Type icon/type combo images
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\type_combos\grass_ghost
+Non-synthetic images: 1
+First image: data\training_dataset\type_combos\grass_ghost\type_combo__1000009574__opponent-type-cluster-4__20260510_014854__d423ca63e1.jpg
+Guess: Type icon/type combo images
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\type_combos\poison
+Non-synthetic images: 1
+First image: data\training_dataset\type_combos\poison\opponent-type-icon-3-2.jpg
+Guess: Type icon/type combo images
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\type_combos\water
+Non-synthetic images: 1
+First image: data\training_dataset\type_combos\water\opponent-type-icon-5-1.jpg
+Guess: Type icon/type combo images
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\type_combos\water_flying
+Non-synthetic images: 1
+First image: data\training_dataset\type_combos\water_flying\type_combo__1000009571__opponent-type-cluster-5__20260510_014854__42a4713b93.jpg
+Guess: Type icon/type combo images
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\aegislash
+Non-synthetic images: 1
+First image: data\training_dataset\slot_pokemon_real\aegislash\pokemon__2026-05-1003.51.281920048151656874176-807e3ad3__opponent-pokemon-5__20260510_045541__125416aed6.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\basculegion_male
+Non-synthetic images: 1
+First image: data\training_dataset\slot_pokemon_real\basculegion_male\opponent-slot-5.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\corviknight
+Non-synthetic images: 1
+First image: data\training_dataset\slot_pokemon_real\corviknight\slot__1000009571__opponent-slot-4__20260510_014854__e74ee33ca3.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_real\weavile
+Non-synthetic images: 1
+First image: data\training_dataset\slot_pokemon_real\weavile\slot__1000009571__opponent-slot-3__20260510_014854__0f2d9d8a32.jpg
+Guess: Real sorted Pokémon classifier data
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\aegislash
+Non-synthetic images: 1
+First image: data\training_dataset\slot_pokemon_backup\aegislash\pokemon__2026-05-1003.51.281920048151656874176-807e3ad3__opponent-pokemon-5__20260510_045541__125416aed6.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\basculegion_male
+Non-synthetic images: 1
+First image: data\training_dataset\slot_pokemon_backup\basculegion_male\opponent-slot-5.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\corviknight
+Non-synthetic images: 1
+First image: data\training_dataset\slot_pokemon_backup\corviknight\slot__1000009571__opponent-slot-4__20260510_014854__e74ee33ca3.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon_backup\weavile
+Non-synthetic images: 1
+First image: data\training_dataset\slot_pokemon_backup\weavile\slot__1000009571__opponent-slot-3__20260510_014854__0f2d9d8a32.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\aegislash
+Non-synthetic images: 1
+First image: data\training_dataset\slot_pokemon\aegislash\pokemon__2026-05-1003.51.281920048151656874176-807e3ad3__opponent-pokemon-5__20260510_045541__125416aed6.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\basculegion_male
+Non-synthetic images: 1
+First image: data\training_dataset\slot_pokemon\basculegion_male\opponent-slot-5.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\corviknight
+Non-synthetic images: 1
+First image: data\training_dataset\slot_pokemon\corviknight\slot__1000009571__opponent-slot-4__20260510_014854__e74ee33ca3.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\training_dataset\slot_pokemon\weavile
+Non-synthetic images: 1
+First image: data\training_dataset\slot_pokemon\weavile\slot__1000009571__opponent-slot-3__20260510_014854__0f2d9d8a32.jpg
+Guess: Unknown image folder
+--------------------------------------------------------------------------------
+Folder: data\cv\references\types
+Non-synthetic images: 1
+First image: data\cv\references\types\types.png
+Guess: Type icon/type combo images
+
+================================================================================
+Done.

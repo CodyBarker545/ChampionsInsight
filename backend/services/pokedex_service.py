@@ -12,6 +12,7 @@ DATA_DIR = POKEMON_DATA_DIR
 CHAMPIONS_SPRITES_DIR = DATA_DIR / "champions_sprites" / "normal"
 POKEMON_LOOKUP_BY_DEX_PATH = DATA_DIR / "pokemon_lookup_by_dex.json"
 LEARNSET_PATH = DATA_DIR / "learnset.json"
+MOVE_DICTIONARY_PATH = DATA_DIR / "move_dictionary.json"
 
 
 STAT_KEY_MAP = {
@@ -127,8 +128,72 @@ def get_learnset_data():
     return data
 
 
+@lru_cache(maxsize=1)
+def get_move_dictionary():
+    data = load_json_file(MOVE_DICTIONARY_PATH)
+
+    if not isinstance(data, dict):
+        return {}
+
+    return data
+
+
 def normalize_api_name(value: str):
     return str(value or "").strip().lower().replace("_", "-")
+
+
+def format_move_effect(move_data):
+    parts = []
+
+    power = move_data.get("power")
+    accuracy = move_data.get("accuracy")
+    pp = move_data.get("pp")
+    priority = int(move_data.get("priority") or 0)
+
+    if power:
+        parts.append(f"{power} power")
+    else:
+        parts.append("No direct damage")
+
+    if accuracy:
+        parts.append(f"{accuracy}% accuracy")
+    else:
+        parts.append("Bypasses accuracy")
+
+    if pp:
+        parts.append(f"{pp} PP")
+
+    if priority:
+        parts.append(f"{priority:+d} priority")
+
+    return ", ".join(parts)
+
+
+def build_move_detail(move_name):
+    move_dictionary = get_move_dictionary()
+    move_key = normalize_api_name(move_name)
+    move_data = move_dictionary.get(move_key, {})
+    display_name = move_data.get("display_name") or move_name.replace("-", " ").title()
+    effect = "Move details unavailable."
+
+    if move_data:
+        effect = (
+            move_data.get("effect")
+            or move_data.get("short_effect")
+            or format_move_effect(move_data)
+        )
+
+    return {
+        "name": move_key,
+        "displayName": display_name,
+        "type": move_data.get("type", ""),
+        "category": move_data.get("category", ""),
+        "power": move_data.get("power"),
+        "accuracy": move_data.get("accuracy"),
+        "pp": move_data.get("pp"),
+        "priority": move_data.get("priority", 0),
+        "effect": effect,
+    }
 
 
 def choose_form_for_sprite(dex_entries: list, sprite_filename: str):
@@ -184,7 +249,10 @@ def get_moves_for_form(form_entry):
     if not isinstance(raw_learnset, dict):
         return []
 
-    return sorted(raw_learnset.keys())
+    return [
+        build_move_detail(move_name)
+        for move_name in sorted(raw_learnset.keys())
+    ]
 
 
 def normalize_abilities(abilities):
