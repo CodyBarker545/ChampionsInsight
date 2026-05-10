@@ -1,0 +1,46 @@
+/* Optional theme toggles for Champions Insight.
+   Import this after styles.css only if you want manual light/dark support.
+   Use <html data-theme="dark"> or <html data-theme="light">.
+*/
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --ci-bg: #050a12;
+  --ci-grid: rgba(148, 163, 184, 0.055);
+  --ci-surface: #101827;
+  --ci-surface-2: #121d30;
+  --ci-surface-3: #18263c;
+  --ci-border: rgba(148, 163, 184, 0.16);
+  --ci-border-strong: rgba(96, 165, 250, 0.45);
+  --ci-text: #eef5ff;
+  --ci-muted: #93a4bc;
+  --ci-muted-2: #64748b;
+  --ci-accent: #60a5fa;
+  --ci-accent-2: #00e0ad;
+  --ci-danger: #fb7185;
+  --ci-warning: #fbbf24;
+  --ci-success: #34d399;
+  --ci-shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+  --ci-shadow-soft: 0 14px 42px rgba(0, 0, 0, 0.28);
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
+  --ci-bg: #f4f7fb;
+  --ci-grid: rgba(20, 35, 60, 0.045);
+  --ci-surface: #ffffff;
+  --ci-surface-2: #f8fafc;
+  --ci-surface-3: #eef3fb;
+  --ci-border: rgba(25, 38, 66, 0.13);
+  --ci-border-strong: rgba(59, 130, 246, 0.4);
+  --ci-text: #102033;
+  --ci-muted: #64748b;
+  --ci-muted-2: #94a3b8;
+  --ci-accent: #2563eb;
+  --ci-accent-2: #00a884;
+  --ci-danger: #dc2626;
+  --ci-warning: #d97706;
+  --ci-success: #059669;
+  --ci-shadow: 0 24px 70px rgba(25, 38, 66, 0.14);
+  --ci-shadow-soft: 0 14px 40px rgba(25, 38, 66, 0.08);
+}

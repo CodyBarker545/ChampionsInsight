@@ -1,0 +1,113 @@
+Evolution Items Guide
+
+Evolution items are special items that cause Pokémon to evolve when used, held, or triggered under specific conditions. :contentReference[oaicite:0]{index=0}
+
+There are two main types:
+1. Items used directly on a Pokémon
+2. Items that must be held during trade or leveling
+
+--------------------------------------------------
+1. Evolution Stones (Used Directly)
+--------------------------------------------------
+
+Fire Stone:
+- Vulpix → Ninetales
+- Growlithe → Arcanine
+- Eevee → Flareon
+- Pansear → Simisear
+
+Water Stone:
+- Poliwhirl → Poliwrath
+- Shellder → Cloyster
+- Staryu → Starmie
+- Eevee → Vaporeon
+
+Thunder Stone:
+- Pikachu → Raichu
+- Eevee → Jolteon
+- Eelektrik → Eelektross
+
+Leaf Stone:
+- Gloom → Vileplume
+- Weepinbell → Victreebel
+- Exeggcute → Exeggutor
+
+Moon Stone:
+- Nidorino → Nidoking
+- Nidorina → Nidoqueen
+- Clefairy → Clefable
+- Jigglypuff → Wigglytuff
+
+Sun Stone:
+- Gloom → Bellossom
+- Sunkern → Sunflora
+- Cottonee → Whimsicott
+- Petilil → Lilligant
+
+Shiny Stone:
+- Togetic → Togekiss
+- Roselia → Roserade
+
+Dusk Stone:
+- Murkrow → Honchkrow
+- Misdreavus → Mismagius
+
+Dawn Stone:
+- Kirlia → Gallade
+- Snorunt → Froslass
+
+Ice Stone:
+- Alolan Vulpix → Alolan Ninetales
+- Eevee → Glaceon
+
+--------------------------------------------------
+2. Held Item Evolutions (Trade or Level Up)
+--------------------------------------------------
+
+These Pokémon evolve when holding an item and meeting a condition (trade or level up). :contentReference[oaicite:1]{index=1}
+
+Trade Evolutions with Items:
+- Onix + Metal Coat → Steelix
+- Scyther + Metal Coat → Scizor
+- Seadra + Dragon Scale → Kingdra
+- Slowpoke + King’s Rock → Slowking
+- Poliwhirl + King’s Rock → Politoed
+- Porygon + Upgrade → Porygon2
+- Porygon2 + Dubious Disc → Porygon-Z
+- Electabuzz + Electirizer → Electivire
+- Magmar + Magmarizer → Magmortar
+- Rhydon + Protector → Rhyperior
+
+Level-Up While Holding Item:
+- Gligar + Razor Fang (night) → Gliscor
+- Sneasel + Razor Claw (night) → Weavile
+- Happiny + Oval Stone (day) → Chansey
+
+--------------------------------------------------
+3. Special Evolution Items
+--------------------------------------------------
+
+These items trigger unique evolutions.
+
+Examples:
+- Applin + Sweet Apple → Appletun
+- Applin + Tart Apple → Flapple
+- Applin + Syrupy Apple → Dipplin
+- Gimmighoul + 999 coins → Gholdengo
+
+--------------------------------------------------
+Evolution Mechanics
+--------------------------------------------------
+
+- Some items are used directly (stones)
+- Some must be held during trade or level-up
+- Some evolutions depend on time of day or conditions
+- Items are consumed after use in most cases
+
+--------------------------------------------------
+Source
+--------------------------------------------------
+Bulbapedia. (n.d.). Evolution item. Retrieved from:
+https://bulbapedia.bulbagarden.net/wiki/Evolution_item
+
+This dataset was created using information from Bulbapedia, a community-driven Pokémon encyclopedia, selected for its structured explanation of evolution mechanics and item-based evolution conditions.

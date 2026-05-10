@@ -1,0 +1,288 @@
+Pokémon Type Effectiveness Guide
+
+This document describes how different Pokémon types interact in battle. 
+Each attacking type has strengths (super effective), weaknesses (not very effective), and immunities (no effect) against defending types.
+
+Effectiveness Multipliers:
+- 2×: Super effective (strong)
+- 0.5×: Not very effective (weak)
+- 0×: No effect (immune)
+- 1×: Neutral
+
+--------------------------------------------------
+NORMAL TYPE
+--------------------------------------------------
+Strong Against:
+- None
+
+Weak Against:
+- Rock (0.5×)
+- Steel (0.5×)
+
+No Effect:
+- Ghost (0×)
+
+--------------------------------------------------
+FIRE TYPE
+--------------------------------------------------
+Strong Against:
+- Grass (2×)
+- Ice (2×)
+- Bug (2×)
+- Steel (2×)
+
+Weak Against:
+- Fire (0.5×)
+- Water (0.5×)
+- Rock (0.5×)
+- Dragon (0.5×)
+
+--------------------------------------------------
+WATER TYPE
+--------------------------------------------------
+Strong Against:
+- Fire (2×)
+- Ground (2×)
+- Rock (2×)
+
+Weak Against:
+- Water (0.5×)
+- Grass (0.5×)
+- Dragon (0.5×)
+
+--------------------------------------------------
+ELECTRIC TYPE
+--------------------------------------------------
+Strong Against:
+- Water (2×)
+- Flying (2×)
+
+Weak Against:
+- Electric (0.5×)
+- Grass (0.5×)
+- Dragon (0.5×)
+
+No Effect:
+- Ground (0×)
+
+--------------------------------------------------
+GRASS TYPE
+--------------------------------------------------
+Strong Against:
+- Water (2×)
+- Ground (2×)
+- Rock (2×)
+
+Weak Against:
+- Fire (0.5×)
+- Grass (0.5×)
+- Poison (0.5×)
+- Flying (0.5×)
+- Bug (0.5×)
+- Dragon (0.5×)
+- Steel (0.5×)
+
+--------------------------------------------------
+ICE TYPE
+--------------------------------------------------
+Strong Against:
+- Grass (2×)
+- Ground (2×)
+- Flying (2×)
+- Dragon (2×)
+
+Weak Against:
+- Fire (0.5×)
+- Water (0.5×)
+- Ice (0.5×)
+- Steel (0.5×)
+
+--------------------------------------------------
+FIGHTING TYPE
+--------------------------------------------------
+Strong Against:
+- Normal (2×)
+- Ice (2×)
+- Rock (2×)
+- Dark (2×)
+- Steel (2×)
+
+Weak Against:
+- Poison (0.5×)
+- Flying (0.5×)
+- Psychic (0.5×)
+- Bug (0.5×)
+- Fairy (0.5×)
+
+No Effect:
+- Ghost (0×)
+
+--------------------------------------------------
+POISON TYPE
+--------------------------------------------------
+Strong Against:
+- Grass (2×)
+- Fairy (2×)
+
+Weak Against:
+- Poison (0.5×)
+- Ground (0.5×)
+- Rock (0.5×)
+- Ghost (0.5×)
+
+No Effect:
+- Steel (0×)
+
+--------------------------------------------------
+GROUND TYPE
+--------------------------------------------------
+Strong Against:
+- Fire (2×)
+- Electric (2×)
+- Poison (2×)
+- Rock (2×)
+- Steel (2×)
+
+Weak Against:
+- Grass (0.5×)
+- Bug (0.5×)
+
+No Effect:
+- Flying (0×)
+
+--------------------------------------------------
+FLYING TYPE
+--------------------------------------------------
+Strong Against:
+- Grass (2×)
+- Fighting (2×)
+- Bug (2×)
+
+Weak Against:
+- Electric (0.5×)
+- Rock (0.5×)
+- Steel (0.5×)
+
+--------------------------------------------------
+PSYCHIC TYPE
+--------------------------------------------------
+Strong Against:
+- Fighting (2×)
+- Poison (2×)
+
+Weak Against:
+- Psychic (0.5×)
+- Steel (0.5×)
+
+No Effect:
+- Dark (0×)
+
+--------------------------------------------------
+BUG TYPE
+--------------------------------------------------
+Strong Against:
+- Grass (2×)
+- Psychic (2×)
+- Dark (2×)
+
+Weak Against:
+- Fire (0.5×)
+- Fighting (0.5×)
+- Poison (0.5×)
+- Flying (0.5×)
+- Ghost (0.5×)
+- Steel (0.5×)
+- Fairy (0.5×)
+
+--------------------------------------------------
+ROCK TYPE
+--------------------------------------------------
+Strong Against:
+- Fire (2×)
+- Ice (2×)
+- Flying (2×)
+- Bug (2×)
+
+Weak Against:
+- Fighting (0.5×)
+- Ground (0.5×)
+- Steel (0.5×)
+
+--------------------------------------------------
+GHOST TYPE
+--------------------------------------------------
+Strong Against:
+- Psychic (2×)
+- Ghost (2×)
+
+Weak Against:
+- Dark (0.5×)
+
+No Effect:
+- Normal (0×)
+
+--------------------------------------------------
+DRAGON TYPE
+--------------------------------------------------
+Strong Against:
+- Dragon (2×)
+
+Weak Against:
+- Steel (0.5×)
+
+No Effect:
+- Fairy (0×)
+
+--------------------------------------------------
+DARK TYPE
+--------------------------------------------------
+Strong Against:
+- Psychic (2×)
+- Ghost (2×)
+
+Weak Against:
+- Fighting (0.5×)
+- Dark (0.5×)
+- Fairy (0.5×)
+
+--------------------------------------------------
+STEEL TYPE
+--------------------------------------------------
+Strong Against:
+- Ice (2×)
+- Rock (2×)
+- Fairy (2×)
+
+Weak Against:
+- Fire (0.5×)
+- Water (0.5×)
+- Electric (0.5×)
+- Steel (0.5×)
+
+--------------------------------------------------
+FAIRY TYPE
+--------------------------------------------------
+Strong Against:
+- Fighting (2×)
+- Dragon (2×)
+- Dark (2×)
+
+Weak Against:
+- Fire (0.5×)
+- Poison (0.5×)
+- Steel (0.5×)
+
+Dual-Type Note:
+If a Pokémon has two types, multiply the effectiveness.
+Example:
+- 2× and 2× = 4× (very strong)
+- 2× and 0.5× = 1× (neutral)
+- 0× overrides everything (immune)
+
+--------------------------------------------------
+Source
+--------------------------------------------------
+Bulbapedia. (n.d.). Type. Retrieved from:
+https://bulbapedia.bulbagarden.net/wiki/Type
+
+This dataset was created using information from Bulbapedia, a community-driven Pokémon encyclopedia, selected for its structured and detailed explanation of Pokémon types.

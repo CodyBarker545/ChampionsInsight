@@ -1,0 +1,972 @@
+{
+  "Venusaur": [
+    "Chlorophyll",
+    "Overgrow",
+    "Thick Fat"
+  ],
+  "Charizard": [
+    "Blaze",
+    "Drought",
+    "Solar Power",
+    "Tough Claws"
+  ],
+  "Blastoise": [
+    "Mega Launcher",
+    "Rain Dish",
+    "Torrent"
+  ],
+  "Beedrill": [
+    "Adaptability",
+    "Sniper",
+    "Swarm"
+  ],
+  "Pidgeot": [
+    "Big Pecks",
+    "Keen Eye",
+    "No Guard",
+    "Tangled Feet"
+  ],
+  "Arbok": [
+    "Intimidate",
+    "Shed Skin",
+    "Unnerve"
+  ],
+  "Pikachu": [
+    "Lightning Rod",
+    "Static"
+  ],
+  "Raichu": [
+    "Lightning Rod",
+    "Static"
+  ],
+  "Machamp": [
+    "Guts",
+    "No Guard",
+    "Steadfast"
+  ],
+  "Ariados": [
+    "Insomnia",
+    "Sniper",
+    "Swarm"
+  ],
+  "Forretress": [
+    "Overcoat",
+    "Sturdy"
+  ],
+  "Medicham": [
+    "Pure Power",
+    "Telepathy"
+  ],
+  "Manectric": [
+    "Intimidate",
+    "Lightning Rod",
+    "Minus",
+    "Static"
+  ],
+  "Sharpedo": [
+    "Rough Skin",
+    "Speed Boost",
+    "Strong Jaw"
+  ],
+  "Camerupt": [
+    "Anger Point",
+    "Magma Armor",
+    "Sheer Force",
+    "Solid Rock"
+  ],
+  "Banette": [
+    "Cursed Body",
+    "Frisk",
+    "Insomnia",
+    "Prankster"
+  ],
+  "Chimecho": [
+    "Levitate"
+  ],
+  "Glalie": [
+    "Ice Body",
+    "Inner Focus",
+    "Moody",
+    "Refrigerate"
+  ],
+  "Luxray": [
+    "Guts",
+    "Intimidate",
+    "Rivalry"
+  ],
+  "Roserade": [
+    "Natural Cure",
+    "Poison Point",
+    "Technician"
+  ],
+  "Rampardos": [
+    "Mold Breaker",
+    "Sheer Force"
+  ],
+  "Bastiodon": [
+    "Soundproof",
+    "Sturdy"
+  ],
+  "Toxicroak": [
+    "Anticipation",
+    "Dry Skin",
+    "Poison Touch"
+  ],
+  "Watchog": [
+    "Analytic",
+    "Illuminate",
+    "Keen Eye"
+  ],
+  "Liepard": [
+    "Limber",
+    "Prankster",
+    "Unburden"
+  ],
+  "Simisage": [
+    "Gluttony",
+    "Overgrow"
+  ],
+  "Simisear": [
+    "Blaze",
+    "Gluttony"
+  ],
+  "Simipour": [
+    "Gluttony",
+    "Torrent"
+  ],
+  "Cofagrigus": [
+    "Mummy"
+  ],
+  "Reuniclus": [
+    "Magic Guard",
+    "Overcoat",
+    "Regenerator"
+  ],
+  "Beartic": [
+    "Slush Rush",
+    "Snow Cloak",
+    "Swift Swim"
+  ],
+  "Florges": [
+    "Flower Veil",
+    "Symbiosis"
+  ],
+  "Pangoro": [
+    "Iron Fist",
+    "Mold Breaker",
+    "Scrappy"
+  ],
+  "Aromatisse": [
+    "Aroma Veil",
+    "Healer"
+  ],
+  "Slurpuff": [
+    "Sweet Veil",
+    "Unburden"
+  ],
+  "Heliolisk": [
+    "Dry Skin",
+    "Sand Veil",
+    "Solar Power"
+  ],
+  "Dedenne": [
+    "Cheek Pouch",
+    "Pickup",
+    "Plus"
+  ],
+  "Avalugg": [
+    "Ice Body",
+    "Own Tempo",
+    "Sturdy"
+  ],
+  "Hisuian Avalugg": [
+    "Ice Body",
+    "Strong Jaw",
+    "Sturdy"
+  ],
+  "Salazzle": [
+    "Corrosion",
+    "Oblivious"
+  ],
+  "Passimian": [
+    "Defiant",
+    "Receiver"
+  ],
+  "Flapple": [
+    "Gluttony",
+    "Hustle",
+    "Ripen"
+  ],
+  "Wyrdeer": [
+    "Frisk",
+    "Intimidate",
+    "Sap Sipper"
+  ],
+  "Bellibolt": [
+    "Damp",
+    "Electromorphosis",
+    "Static"
+  ],
+  "Espathra": [
+    "Frisk",
+    "Opportunist",
+    "Speed Boost"
+  ],
+  "Alolan Raichu": [
+    "Surge Surfer"
+  ],
+  "Clefable": [
+    "Cute Charm",
+    "Magic Bounce",
+    "Magic Guard",
+    "Unaware"
+  ],
+  "Ninetales": [
+    "Drought",
+    "Flash Fire"
+  ],
+  "Alolan Ninetales": [
+    "Snow Cloak",
+    "Snow Warning"
+  ],
+  "Arcanine": [
+    "Flash Fire",
+    "Intimidate",
+    "Justified"
+  ],
+  "Hisuian Arcanine": [
+    "Flash Fire",
+    "Intimidate",
+    "Rock Head"
+  ],
+  "Alakazam": [
+    "Inner Focus",
+    "Magic Guard",
+    "Synchronize",
+    "Trace"
+  ],
+  "Victreebel": [
+    "Chlorophyll",
+    "Gluttony",
+    "Innards Out"
+  ],
+  "Slowbro": [
+    "Oblivious",
+    "Own Tempo",
+    "Regenerator",
+    "Shell Armor"
+  ],
+  "Galarian Slowbro": [
+    "Own Tempo",
+    "Quick Draw",
+    "Regenerator"
+  ],
+  "Gengar": [
+    "Cursed Body",
+    "Shadow Tag"
+  ],
+  "Kangaskhan": [
+    "Early Bird",
+    "Inner Focus",
+    "Parental Bond",
+    "Scrappy"
+  ],
+  "Starmie": [
+    "Analytic",
+    "Huge Power",
+    "Illuminate",
+    "Natural Cure"
+  ],
+  "Pinsir": [
+    "Aerilate",
+    "Hyper Cutter",
+    "Mold Breaker",
+    "Moxie"
+  ],
+  "Tauros": [
+    "Anger Point",
+    "Intimidate",
+    "Sheer Force"
+  ],
+  "Paldean Tauros": [
+    "Anger Point",
+    "Cud Chew",
+    "Intimidate"
+  ],
+  "Paldean Tauros (Blaze)": [
+    "Anger Point",
+    "Cud Chew",
+    "Intimidate"
+  ],
+  "Paldean Tauros (Aqua)": [
+    "Anger Point",
+    "Cud Chew",
+    "Intimidate"
+  ],
+  "Gyarados": [
+    "Intimidate",
+    "Mold Breaker",
+    "Moxie"
+  ],
+  "Ditto": [
+    "Imposter",
+    "Limber"
+  ],
+  "Vaporeon": [
+    "Hydration",
+    "Water Absorb"
+  ],
+  "Jolteon": [
+    "Quick Feet",
+    "Volt Absorb"
+  ],
+  "Flareon": [
+    "Flash Fire",
+    "Guts"
+  ],
+  "Aerodactyl": [
+    "Pressure",
+    "Rock Head",
+    "Tough Claws",
+    "Unnerve"
+  ],
+  "Snorlax": [
+    "Gluttony",
+    "Immunity",
+    "Thick Fat"
+  ],
+  "Dragonite": [
+    "Inner Focus",
+    "Multiscale"
+  ],
+  "Meganium": [
+    "Leaf Guard",
+    "Mega Sol",
+    "Overgrow"
+  ],
+  "Typhlosion": [
+    "Blaze",
+    "Flash Fire"
+  ],
+  "Hisuian Typhlosion": [
+    "Blaze",
+    "Frisk"
+  ],
+  "Feraligatr": [
+    "Dragonize",
+    "Sheer Force",
+    "Torrent"
+  ],
+  "Ampharos": [
+    "Mold Breaker",
+    "Plus",
+    "Static"
+  ],
+  "Azumarill": [
+    "Huge Power",
+    "Sap Sipper",
+    "Thick Fat"
+  ],
+  "Politoed": [
+    "Damp",
+    "Drizzle",
+    "Water Absorb"
+  ],
+  "Espeon": [
+    "Magic Bounce",
+    "Synchronize"
+  ],
+  "Umbreon": [
+    "Inner Focus",
+    "Synchronize"
+  ],
+  "Slowking": [
+    "Oblivious",
+    "Own Tempo",
+    "Regenerator"
+  ],
+  "Galarian Slowking": [
+    "Curious Medicine",
+    "Own Tempo",
+    "Regenerator"
+  ],
+  "Steelix": [
+    "Rock Head",
+    "Sand Force",
+    "Sheer Force",
+    "Sturdy"
+  ],
+  "Scizor": [
+    "Light Metal",
+    "Swarm",
+    "Technician"
+  ],
+  "Heracross": [
+    "Guts",
+    "Moxie",
+    "Skill Link",
+    "Swarm"
+  ],
+  "Skarmory": [
+    "Keen Eye",
+    "Stalwart",
+    "Sturdy",
+    "Weak Armor"
+  ],
+  "Houndoom": [
+    "Early Bird",
+    "Flash Fire",
+    "Solar Power",
+    "Unnerve"
+  ],
+  "Tyranitar": [
+    "Sand Stream",
+    "Unnerve"
+  ],
+  "Pelipper": [
+    "Drizzle",
+    "Keen Eye",
+    "Rain Dish"
+  ],
+  "Gardevoir": [
+    "Pixilate",
+    "Synchronize",
+    "Telepathy",
+    "Trace"
+  ],
+  "Sableye": [
+    "Keen Eye",
+    "Magic Bounce",
+    "Prankster",
+    "Stall"
+  ],
+  "Aggron": [
+    "Filter",
+    "Heavy Metal",
+    "Rock Head",
+    "Sturdy"
+  ],
+  "Torkoal": [
+    "Drought",
+    "Shell Armor",
+    "White Smoke"
+  ],
+  "Altaria": [
+    "Cloud Nine",
+    "Natural Cure",
+    "Pixilate"
+  ],
+  "Milotic": [
+    "Competitive",
+    "Cute Charm",
+    "Marvel Scale"
+  ],
+  "Castform": [
+    "Forecast"
+  ],
+  "Absol": [
+    "Justified",
+    "Magic Bounce",
+    "Pressure",
+    "Super Luck"
+  ],
+  "Torterra": [
+    "Overgrow",
+    "Shell Armor"
+  ],
+  "Infernape": [
+    "Blaze",
+    "Iron Fist"
+  ],
+  "Empoleon": [
+    "Competitive",
+    "Torrent"
+  ],
+  "Lopunny": [
+    "Cute Charm",
+    "Klutz",
+    "Limber",
+    "Scrappy"
+  ],
+  "Spiritomb": [
+    "Infiltrator",
+    "Pressure"
+  ],
+  "Garchomp": [
+    "Rough Skin",
+    "Sand Force",
+    "Sand Veil"
+  ],
+  "Lucario": [
+    "Adaptability",
+    "Inner Focus",
+    "Justified",
+    "Steadfast"
+  ],
+  "Hippowdon": [
+    "Sand Force",
+    "Sand Stream"
+  ],
+  "Abomasnow": [
+    "Snow Warning",
+    "Soundproof"
+  ],
+  "Weavile": [
+    "Pickpocket",
+    "Pressure"
+  ],
+  "Rhyperior": [
+    "Lightning Rod",
+    "Reckless",
+    "Solid Rock"
+  ],
+  "Leafeon": [
+    "Chlorophyll",
+    "Leaf Guard"
+  ],
+  "Glaceon": [
+    "Ice Body",
+    "Snow Cloak"
+  ],
+  "Gliscor": [
+    "Hyper Cutter",
+    "Poison Heal",
+    "Sand Veil"
+  ],
+  "Gallade": [
+    "Inner Focus",
+    "Justified",
+    "Sharpness",
+    "Steadfast"
+  ],
+  "Froslass": [
+    "Cursed Body",
+    "Snow Cloak",
+    "Snow Warning"
+  ],
+  "Rotom": [
+    "Levitate"
+  ],
+  "Heat Rotom": [
+    "Levitate"
+  ],
+  "Wash Rotom": [
+    "Levitate"
+  ],
+  "Frost Rotom": [
+    "Levitate"
+  ],
+  "Fan Rotom": [
+    "Levitate"
+  ],
+  "Mow Rotom": [
+    "Levitate"
+  ],
+  "Serperior": [
+    "Contrary",
+    "Overgrow"
+  ],
+  "Emboar": [
+    "Blaze",
+    "Mold Breaker",
+    "Reckless"
+  ],
+  "Samurott": [
+    "Shell Armor",
+    "Torrent"
+  ],
+  "Hisuian Samurott": [
+    "Sharpness",
+    "Shell Armor"
+  ],
+  "Excadrill": [
+    "Mold Breaker",
+    "Piercing Drill",
+    "Sand Force",
+    "Sand Rush"
+  ],
+  "Audino": [
+    "Healer",
+    "Klutz",
+    "Regenerator"
+  ],
+  "Conkeldurr": [
+    "Guts",
+    "Iron Fist",
+    "Sheer Force"
+  ],
+  "Whimsicott": [
+    "Chlorophyll",
+    "Infiltrator",
+    "Prankster"
+  ],
+  "Krookodile": [
+    "Anger Point",
+    "Intimidate",
+    "Moxie"
+  ],
+  "Garbodor": [
+    "Aftermath",
+    "Stench",
+    "Weak Armor"
+  ],
+  "Zoroark": [
+    "Illusion"
+  ],
+  "Hisuian Zoroark": [
+    "Illusion"
+  ],
+  "Vanilluxe": [
+    "Ice Body",
+    "Snow Warning",
+    "Weak Armor"
+  ],
+  "Emolga": [
+    "Motor Drive",
+    "Static"
+  ],
+  "Stunfisk": [
+    "Limber",
+    "Sand Veil",
+    "Static"
+  ],
+  "Galarian Stunfisk": [
+    "Mimicry"
+  ],
+  "Golurk": [
+    "Iron Fist",
+    "Klutz",
+    "No Guard",
+    "Unseen Fist"
+  ],
+  "Hydreigon": [
+    "Levitate"
+  ],
+  "Volcarona": [
+    "Flame Body",
+    "Swarm"
+  ],
+  "Chesnaught": [
+    "Bulletproof",
+    "Overgrow"
+  ],
+  "Delphox": [
+    "Blaze",
+    "Levitate",
+    "Magician"
+  ],
+  "Greninja": [
+    "Protean",
+    "Torrent"
+  ],
+  "Diggersby": [
+    "Cheek Pouch",
+    "Huge Power",
+    "Pickup"
+  ],
+  "Talonflame": [
+    "Flame Body",
+    "Gale Wings"
+  ],
+  "Vivillon": [
+    "Compound Eyes",
+    "Friend Guard",
+    "Shield Dust"
+  ],
+  "Furfrou": [
+    "Fur Coat"
+  ],
+  "Meowstic-M": [
+    "Infiltrator",
+    "Keen Eye",
+    "Prankster",
+    "Trace"
+  ],
+  "Meowstic-F": [
+    "Competitive",
+    "Infiltrator",
+    "Keen Eye",
+    "Trace"
+  ],
+  "Aegislash": [
+    "Stance Change"
+  ],
+  "Clawitzer": [
+    "Mega Launcher"
+  ],
+  "Tyrantrum": [
+    "Rock Head",
+    "Strong Jaw"
+  ],
+  "Aurorus": [
+    "Refrigerate",
+    "Snow Warning"
+  ],
+  "Sylveon": [
+    "Cute Charm",
+    "Pixilate"
+  ],
+  "Hawlucha": [
+    "Limber",
+    "Mold Breaker",
+    "No Guard",
+    "Unburden"
+  ],
+  "Klefki": [
+    "Magician",
+    "Prankster"
+  ],
+  "Gourgeist": [
+    "Frisk",
+    "Insomnia",
+    "Pickup"
+  ],
+  "Noivern": [
+    "Frisk",
+    "Infiltrator",
+    "Telepathy"
+  ],
+  "Decidueye": [
+    "Long Reach",
+    "Overgrow"
+  ],
+  "Hisuian Decidueye": [
+    "Long Reach",
+    "Scrappy"
+  ],
+  "Incineroar": [
+    "Blaze",
+    "Intimidate"
+  ],
+  "Primarina": [
+    "Liquid Voice",
+    "Torrent"
+  ],
+  "Toucannon": [
+    "Keen Eye",
+    "Sheer Force",
+    "Skill Link"
+  ],
+  "Crabominable": [
+    "Anger Point",
+    "Hyper Cutter",
+    "Iron Fist"
+  ],
+  "Lycanroc": [
+    "Keen Eye",
+    "Sand Rush",
+    "Steadfast"
+  ],
+  "Toxapex": [
+    "Limber",
+    "Merciless",
+    "Regenerator"
+  ],
+  "Mudsdale": [
+    "Inner Focus",
+    "Own Tempo",
+    "Stamina"
+  ],
+  "Araquanid": [
+    "Water Absorb",
+    "Water Bubble"
+  ],
+  "Tsareena": [
+    "Leaf Guard",
+    "Queenly Majesty",
+    "Sweet Veil"
+  ],
+  "Oranguru": [
+    "Inner Focus",
+    "Symbiosis",
+    "Telepathy"
+  ],
+  "Mimikyu": [
+    "Disguise"
+  ],
+  "Drampa": [
+    "Berserk",
+    "Cloud Nine",
+    "Sap Sipper"
+  ],
+  "Kommo-o": [
+    "Bulletproof",
+    "Overcoat",
+    "Soundproof"
+  ],
+  "Corviknight": [
+    "Mirror Armor",
+    "Pressure",
+    "Unnerve"
+  ],
+  "Sandaconda": [
+    "Sand Spit",
+    "Sand Veil",
+    "Shed Skin"
+  ],
+  "Polteageist": [
+    "Cursed Body",
+    "Weak Armor"
+  ],
+  "Hatterene": [
+    "Anticipation",
+    "Healer",
+    "Magic Bounce"
+  ],
+  "Mr. Rime": [
+    "Ice Body",
+    "Screen Cleaner",
+    "Tangled Feet"
+  ],
+  "Runerigus": [
+    "Wandering Spirit"
+  ],
+  "Alcremie": [
+    "Aroma Veil",
+    "Sweet Veil"
+  ],
+  "Morpeko": [
+    "Hunger Switch"
+  ],
+  "Dragapult": [
+    "Clear Body",
+    "Cursed Body",
+    "Infiltrator"
+  ],
+  "Kleavor": [
+    "Sharpness",
+    "Sheer Force",
+    "Swarm"
+  ],
+  "Basculegion-M": [
+    "Adaptability",
+    "Mold Breaker",
+    "Swift Swim"
+  ],
+  "Basculegion-F": [
+    "Adaptability",
+    "Mold Breaker",
+    "Swift Swim"
+  ],
+  "Sneasler": [
+    "Poison Touch",
+    "Pressure",
+    "Unburden"
+  ],
+  "Meowscarada": [
+    "Overgrow",
+    "Protean"
+  ],
+  "Quaquaval": [
+    "Moxie",
+    "Torrent"
+  ],
+  "Maushold": [
+    "Cheek Pouch",
+    "Friend Guard",
+    "Technician"
+  ],
+  "Garganacl": [
+    "Clear Body",
+    "Purifying Salt",
+    "Sturdy"
+  ],
+  "Armarouge": [
+    "Flash Fire",
+    "Weak Armor"
+  ],
+  "Ceruledge": [
+    "Flash Fire",
+    "Weak Armor"
+  ],
+  "Scovillain": [
+    "Chlorophyll",
+    "Insomnia",
+    "Moody",
+    "Spicy Spray"
+  ],
+  "Tinkaton": [
+    "Mold Breaker",
+    "Own Tempo",
+    "Pickpocket"
+  ],
+  "Palafin": [
+    "Zero To Hero"
+  ],
+  "Orthworm": [
+    "Earth Eater",
+    "Sand Veil"
+  ],
+  "Glimmora": [
+    "Adaptability",
+    "Corrosion",
+    "Toxic Debris"
+  ],
+  "Farigiraf": [
+    "Armor Tail",
+    "Cud Chew",
+    "Sap Sipper"
+  ],
+  "Kingambit": [
+    "Defiant",
+    "Pressure",
+    "Supreme Overlord"
+  ],
+  "Sinistcha": [
+    "Heatproof",
+    "Hospitality"
+  ],
+  "Archaludon": [
+    "Stalwart",
+    "Stamina",
+    "Sturdy"
+  ],
+  "Hydrapple": [
+    "Regenerator",
+    "Sticky Hold",
+    "Supersweet Syrup"
+  ],
+  "Mamoswine": [
+    "Oblivious",
+    "Snow Cloak",
+    "Thick Fat"
+  ],
+  "Chandelure": [
+    "Flame Body",
+    "Flash Fire",
+    "Infiltrator"
+  ],
+  "Floette": [
+    "Flower Veil",
+    "Symbiosis"
+  ],
+  "Eternal Floette": [
+    "Fairy Aura",
+    "Flower Veil",
+    "Symbiosis"
+  ],
+  "Goodra": [
+    "Gooey",
+    "Hydration",
+    "Sap Sipper"
+  ],
+  "Hisuian Goodra": [
+    "Gooey",
+    "Sap Sipper",
+    "Shell Armor"
+  ],
+  "Trevenant": [
+    "Frisk",
+    "Harvest",
+    "Natural Cure"
+  ],
+  "Appletun": [
+    "Gluttony",
+    "Ripen",
+    "Thick Fat"
+  ],
+  "Skeledirge": [
+    "Blaze",
+    "Unaware"
+  ]
+}

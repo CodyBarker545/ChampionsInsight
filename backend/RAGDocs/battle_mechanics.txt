@@ -1,0 +1,66 @@
+Battle Mechanics Guide
+
+This document describes core mechanics that determine how damage and turn order work in Pokémon battles.
+
+--------------------------------------------------
+Same-Type Attack Bonus (STAB)
+--------------------------------------------------
+
+- If a Pokémon uses a move that matches its type, the move’s damage is increased
+- Standard STAB multiplier: 1.5×
+- Some abilities (e.g., Adaptability) increase STAB to 2×
+
+--------------------------------------------------
+Critical Hits
+--------------------------------------------------
+
+- Critical hits deal increased damage (1.5×)
+- Ignore negative stat changes on the attacker
+- Ignore positive stat boosts on the defender
+- Occur randomly, with increased chance for certain moves and abilities
+
+--------------------------------------------------
+Turn Order and Speed
+--------------------------------------------------
+
+- Pokémon act in order of Speed stat (higher Speed moves first)
+- Priority moves can override Speed (e.g., Quick Attack)
+- Status conditions like Paralysis reduce Speed and affect turn order
+
+--------------------------------------------------
+Accuracy and Evasion
+--------------------------------------------------
+
+- Moves have an accuracy percentage that determines if they hit
+- Accuracy and evasion can be modified by moves and abilities
+- Some moves never miss under certain conditions
+
+--------------------------------------------------
+Damage Basics
+--------------------------------------------------
+
+Damage depends on:
+- Attacking stat (Attack or Special Attack)
+- Defending stat (Defense or Special Defense)
+- Move power
+- Type effectiveness
+- STAB bonus
+- Random variation
+
+--------------------------------------------------
+Key Rules
+--------------------------------------------------
+
+- Type effectiveness and STAB stack together
+- Critical hits are calculated after most modifiers
+- Only one Pokémon acts at a time per turn
+- Battle outcomes depend on combining multiple mechanics
+
+--------------------------------------------------
+Source
+--------------------------------------------------
+Bulbapedia. (n.d.). Same-type attack bonus; Critical hit. Retrieved from:
+https://bulbapedia.bulbagarden.net/wiki/Same-type_attack_bonus
+https://bulbapedia.bulbagarden.net/wiki/Critical_hit
+
+This dataset was created using information from Bulbapedia, a community-driven Pokémon encyclopedia, selected for its structured explanation of core battle mechanics.

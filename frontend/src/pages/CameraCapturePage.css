@@ -1,0 +1,470 @@
+.ci-camera-page {
+  min-height: 100vh;
+  width: 100%;
+  background: var(--ci-page-bg);
+  color: var(--ci-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  overflow: hidden;
+}
+
+.ci-camera-shell {
+  width: min(100%, 460px);
+  height: calc(100vh - 28px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ci-camera-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 4px 2px;
+}
+
+.ci-camera-kicker {
+  margin: 0;
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9fb1ff;
+}
+
+.ci-camera-header h1 {
+  margin: 2px 0 0;
+  font-size: 1.2rem;
+  line-height: 1.1;
+}
+
+.ci-camera-close {
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--ci-border);
+  border-radius: 14px;
+  background: var(--ci-control-bg);
+  color: var(--ci-text);
+  display: grid;
+  place-items: center;
+}
+
+.ci-camera-stage {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #05070d;
+  border: 1px solid var(--ci-border);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.42);
+}
+
+.ci-camera-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #05070d;
+}
+
+/*
+  Important:
+  The overlay is transparent and thin.
+  Do not use filled boxes here because bright overlays make alignment harder.
+*/
+.ci-camera-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.ci-camera-guide-box {
+  position: absolute;
+  border: 2px solid rgba(89, 190, 255, 0.95);
+  border-radius: 14px;
+  background: transparent;
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.35),
+    0 0 12px rgba(89, 190, 255, 0.35);
+}
+
+.ci-camera-guide-box span {
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: rgba(9, 13, 25, 0.88);
+  border: 1px solid rgba(89, 190, 255, 0.85);
+  color: var(--ci-text);
+  display: grid;
+  place-items: center;
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.ci-camera-type-target {
+  position: absolute;
+  left: 62%;
+  top: 8%;
+  width: 35%;
+  height: 48%;
+  border: 2px solid rgba(255, 206, 76, 0.92);
+  border-radius: 8px;
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.28),
+    0 0 12px rgba(255, 206, 76, 0.32);
+}
+
+.ci-camera-type-target::before,
+.ci-camera-type-target::after {
+  content: "";
+  position: absolute;
+  top: 16%;
+  width: 34%;
+  height: 68%;
+  border: 1px solid rgba(255, 255, 255, 0.76);
+  border-radius: 5px;
+}
+
+.ci-camera-type-target::before {
+  left: 7%;
+}
+
+.ci-camera-type-target::after {
+  right: 7%;
+}
+
+.ci-camera-center-line {
+  position: absolute;
+  left: 50%;
+  top: 4%;
+  bottom: 4%;
+  width: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(255, 255, 255, 0.32),
+    transparent
+  );
+  opacity: 0.45;
+}
+
+.ci-camera-loading {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 10px;
+  background: rgba(5, 7, 13, 0.76);
+  color: #ffffff;
+  text-align: center;
+}
+
+.ci-camera-loading p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.ci-camera-canvas {
+  display: none;
+}
+
+.ci-camera-instructions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.ci-camera-instruction-card {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 38px;
+  padding: 8px 10px;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--ci-surface-glass) 86%, transparent);
+  border: 1px solid var(--ci-border);
+  color: var(--ci-text);
+  font-size: 0.82rem;
+}
+
+.ci-camera-instruction-card svg {
+  flex: 0 0 auto;
+  color: var(--ci-accent);
+}
+
+.ci-camera-status,
+.ci-camera-error {
+  margin: 0;
+  min-height: 18px;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.ci-camera-status {
+  color: var(--ci-muted);
+}
+
+.ci-camera-error {
+  color: var(--ci-danger);
+}
+
+.ci-camera-capture-button {
+  width: 100%;
+  min-height: 52px;
+  border: 0;
+  border-radius: 18px;
+  background: linear-gradient(135deg, var(--ci-accent), var(--ci-accent-3));
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  box-shadow: 0 14px 32px rgba(66, 103, 255, 0.32);
+}
+
+.ci-camera-capture-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.58;
+  box-shadow: none;
+}
+
+@media (max-width: 420px) {
+  .ci-camera-page {
+    padding: 10px;
+  }
+
+  .ci-camera-shell {
+    height: calc(100vh - 20px);
+  }
+
+  .ci-camera-header h1 {
+    font-size: 1.05rem;
+  }
+
+  .ci-camera-instruction-card {
+    font-size: 0.78rem;
+  }
+
+  .ci-camera-capture-button {
+    min-height: 50px;
+  }
+}
+.ci-camera-stage {
+  position: relative;
+  width: min(100%, 430px);
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #020617;
+  margin: 0 auto;
+}
+
+.ci-camera-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ci-camera-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.ci-camera-team-crop-box {
+  position: absolute;
+  border: 4px solid rgba(250, 204, 21, 0.98);
+  border-radius: 24px;
+  box-shadow:
+    0 0 0 999px rgba(2, 6, 23, 0.28),
+    0 0 24px rgba(250, 204, 21, 0.38);
+  z-index: 8;
+}
+
+.ci-camera-team-crop-label {
+  position: absolute;
+  left: 50%;
+  top: -38px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(250, 204, 21, 0.98);
+  color: #111827;
+  font-size: 0.74rem;
+  font-weight: 800;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.24);
+}
+
+.ci-camera-canvas {
+  display: none;
+}
+
+/* GuidedCamera.jsx shared styles */
+
+.camera-frame {
+  position: relative;
+  width: min(430px, 100%);
+  aspect-ratio: 9 / 16;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 24px;
+  background: #000;
+}
+
+.camera-frame video,
+.guided-camera-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.alignment-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.alignment-team-crop-box {
+  position: absolute;
+  border: 4px solid rgba(250, 204, 21, 0.98);
+  border-radius: 24px;
+  box-shadow:
+    0 0 0 999px rgba(2, 6, 23, 0.28),
+    0 0 24px rgba(250, 204, 21, 0.38);
+  z-index: 8;
+}
+
+.alignment-team-crop-label {
+  position: absolute;
+  left: 50%;
+  top: -38px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(250, 204, 21, 0.98);
+  color: #111827;
+  font-size: 0.74rem;
+  font-weight: 800;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.24);
+}
+
+.alignment-bottom-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 2%;
+  transform: translateX(-50%);
+  width: min(74%, 300px);
+  padding: 8px 12px;
+  border: 1px solid rgba(250, 204, 21, 0.38);
+  border-radius: 12px;
+  color: #fef3c7;
+  background: rgba(3, 7, 18, 0.72);
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.camera-guide-notes {
+  display: grid;
+  gap: 10px;
+}
+
+.camera-guide-note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(15, 23, 42, 0.58);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+.capture-canvas {
+  display: none;
+}
+.ci-native-camera-input {
+  display: none;
+}
+
+.ci-native-photo-stage {
+  width: min(100%, 430px);
+  aspect-ratio: 9 / 16;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  background: #020617;
+}
+
+.ci-native-photo-preview {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  background: #020617;
+}
+
+.ci-native-photo-placeholder {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 14px;
+  padding: 24px;
+  color: #cbd5e1;
+  text-align: center;
+}
+
+.ci-native-photo-placeholder p {
+  max-width: 280px;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.ci-two-button-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.ci-camera-start-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 58px;
+  width: 100%;
+  padding: 14px 18px;
+  border: 0;
+  border-radius: 999px;
+  color: #06111f;
+  background: linear-gradient(135deg, #5eead4, #22c55e);
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+}
+
+.ci-camera-start-button:disabled,
+.ci-camera-capture-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}

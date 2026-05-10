@@ -1,0 +1,153 @@
+.camera-capture-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: var(--ci-bg);
+}
+
+.camera-capture-card {
+  width: min(720px, 100%);
+  display: grid;
+  gap: 16px;
+  padding: 18px;
+  border: 1px solid var(--ci-border);
+  border-radius: 24px;
+  background: var(--ci-surface);
+}
+
+.camera-capture-card h1 {
+  margin: 0;
+  text-align: center;
+}
+
+.camera-capture-instructions {
+  margin: 0;
+  color: var(--ci-muted);
+  text-align: center;
+}
+
+.camera-upload-fallback {
+  min-height: 46px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--ci-border);
+  border-radius: 12px;
+  background: var(--ci-surface-2);
+  font-weight: 900;
+}
+
+.camera-upload-fallback input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.camera-detected-team {
+  display: grid;
+  gap: 10px;
+}
+
+.camera-detected-team h2 {
+  margin: 0;
+  text-align: center;
+}
+
+.camera-detected-list {
+  display: grid;
+  gap: 8px;
+}
+
+.camera-detected-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--ci-border);
+  border-radius: 12px;
+  background: var(--ci-surface-2);
+}
+
+.camera-detected-card span {
+  color: var(--ci-muted);
+}
+
+.phone-camera-qr-wrapper {
+  display: inline-flex;
+}
+
+.phone-camera-qr-button {
+  height: 36px;
+  padding: 0 12px;
+  border: 1px solid var(--ci-border);
+  border-radius: 8px;
+  background: var(--ci-control-bg);
+  color: var(--ci-text);
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: var(--ci-shadow-soft);
+}
+
+.phone-camera-qr-button:hover {
+  border-color: var(--ci-border-strong);
+  box-shadow:
+    var(--ci-shadow-soft),
+    0 0 0 3px color-mix(in srgb, var(--ci-accent) 12%, transparent);
+}
+
+.phone-camera-qr-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: color-mix(in srgb, var(--ci-bg) 76%, transparent);
+  display: grid;
+  place-items: center;
+}
+
+.phone-camera-qr-popup {
+  position: relative;
+  width: min(360px, calc(100vw - 32px));
+  padding: 24px;
+  border: 1px solid var(--ci-border);
+  border-radius: 18px;
+  background: var(--ci-surface-glass);
+  color: var(--ci-text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55);
+}
+
+.phone-camera-qr-popup h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.phone-camera-qr-popup p {
+  margin: 0;
+  color: var(--ci-muted);
+  text-align: center;
+  font-size: 14px;
+}
+
+.phone-camera-qr-popup small {
+  color: var(--ci-muted);
+  font-size: 11px;
+  text-align: center;
+  word-break: break-all;
+}
+
+.phone-camera-qr-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: 0;
+  background: transparent;
+  color: var(--ci-text);
+  font-size: 26px;
+  cursor: pointer;
+}

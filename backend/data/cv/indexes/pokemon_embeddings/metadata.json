@@ -1,0 +1,6626 @@
+[
+  {
+    "name": "Venusaur",
+    "species": "Venusaur",
+    "form": "Venusaur",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0003.png",
+    "isShiny": false
+  },
+  {
+    "name": "Charizard",
+    "species": "Charizard",
+    "form": "Charizard",
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0006.png",
+    "isShiny": false
+  },
+  {
+    "name": "Blastoise",
+    "species": "Blastoise",
+    "form": "Blastoise",
+    "types": [
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0009.png",
+    "isShiny": false
+  },
+  {
+    "name": "Beedrill",
+    "species": "Beedrill",
+    "form": "Beedrill",
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0015.png",
+    "isShiny": false
+  },
+  {
+    "name": "Pidgeot",
+    "species": "Pidgeot",
+    "form": "Pidgeot",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0018.png",
+    "isShiny": false
+  },
+  {
+    "name": "Arbok",
+    "species": "Arbok",
+    "form": "Arbok",
+    "types": [
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0024.png",
+    "isShiny": false
+  },
+  {
+    "name": "Pikachu",
+    "species": "Pikachu",
+    "form": "Pikachu",
+    "types": [
+      "electric"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0025.png",
+    "isShiny": false
+  },
+  {
+    "name": "Raichu Alola",
+    "species": "Raichu",
+    "form": "Raichu Alola",
+    "types": [
+      "electric",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0026-Alola.png",
+    "isShiny": false
+  },
+  {
+    "name": "Raichu",
+    "species": "Raichu",
+    "form": "Raichu",
+    "types": [
+      "electric"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0026.png",
+    "isShiny": false
+  },
+  {
+    "name": "Clefable",
+    "species": "Clefable",
+    "form": "Clefable",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0036.png",
+    "isShiny": false
+  },
+  {
+    "name": "Ninetales Alola",
+    "species": "Ninetales",
+    "form": "Ninetales Alola",
+    "types": [
+      "ice",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0038-Alola.png",
+    "isShiny": false
+  },
+  {
+    "name": "Ninetales",
+    "species": "Ninetales",
+    "form": "Ninetales",
+    "types": [
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0038.png",
+    "isShiny": false
+  },
+  {
+    "name": "Arcanine Hisui",
+    "species": "Arcanine",
+    "form": "Arcanine Hisui",
+    "types": [
+      "fire",
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0059-Hisui.png",
+    "isShiny": false
+  },
+  {
+    "name": "Arcanine",
+    "species": "Arcanine",
+    "form": "Arcanine",
+    "types": [
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0059.png",
+    "isShiny": false
+  },
+  {
+    "name": "Alakazam",
+    "species": "Alakazam",
+    "form": "Alakazam",
+    "types": [
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0065.png",
+    "isShiny": false
+  },
+  {
+    "name": "Machamp",
+    "species": "Machamp",
+    "form": "Machamp",
+    "types": [
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0068.png",
+    "isShiny": false
+  },
+  {
+    "name": "Victreebel",
+    "species": "Victreebel",
+    "form": "Victreebel",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0071.png",
+    "isShiny": false
+  },
+  {
+    "name": "Slowbro Galar",
+    "species": "Slowbro",
+    "form": "Slowbro Galar",
+    "types": [
+      "poison",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0080-Galar.png",
+    "isShiny": false
+  },
+  {
+    "name": "Slowbro",
+    "species": "Slowbro",
+    "form": "Slowbro",
+    "types": [
+      "water",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0080.png",
+    "isShiny": false
+  },
+  {
+    "name": "Gengar",
+    "species": "Gengar",
+    "form": "Gengar",
+    "types": [
+      "ghost",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0094.png",
+    "isShiny": false
+  },
+  {
+    "name": "Kangaskhan",
+    "species": "Kangaskhan",
+    "form": "Kangaskhan",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0115.png",
+    "isShiny": false
+  },
+  {
+    "name": "Starmie",
+    "species": "Starmie",
+    "form": "Starmie",
+    "types": [
+      "water",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0121.png",
+    "isShiny": false
+  },
+  {
+    "name": "Pinsir",
+    "species": "Pinsir",
+    "form": "Pinsir",
+    "types": [
+      "bug"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0127.png",
+    "isShiny": false
+  },
+  {
+    "name": "Tauros Paldea Aqua Breed",
+    "species": "Tauros",
+    "form": "Tauros Paldea Aqua Breed",
+    "types": [
+      "fighting",
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0128-Paldea_Aqua.png",
+    "isShiny": false
+  },
+  {
+    "name": "Tauros Paldea Blaze Breed",
+    "species": "Tauros",
+    "form": "Tauros Paldea Blaze Breed",
+    "types": [
+      "fighting",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0128-Paldea_Blaze.png",
+    "isShiny": false
+  },
+  {
+    "name": "Tauros Paldea Combat Breed",
+    "species": "Tauros",
+    "form": "Tauros Paldea Combat Breed",
+    "types": [
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0128-Paldea_Combat.png",
+    "isShiny": false
+  },
+  {
+    "name": "Tauros",
+    "species": "Tauros",
+    "form": "Tauros",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0128.png",
+    "isShiny": false
+  },
+  {
+    "name": "Gyarados",
+    "species": "Gyarados",
+    "form": "Gyarados",
+    "types": [
+      "water",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0130.png",
+    "isShiny": false
+  },
+  {
+    "name": "Ditto",
+    "species": "Ditto",
+    "form": "Ditto",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0132.png",
+    "isShiny": false
+  },
+  {
+    "name": "Vaporeon",
+    "species": "Vaporeon",
+    "form": "Vaporeon",
+    "types": [
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0134.png",
+    "isShiny": false
+  },
+  {
+    "name": "Jolteon",
+    "species": "Jolteon",
+    "form": "Jolteon",
+    "types": [
+      "electric"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0135.png",
+    "isShiny": false
+  },
+  {
+    "name": "Flareon",
+    "species": "Flareon",
+    "form": "Flareon",
+    "types": [
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0136.png",
+    "isShiny": false
+  },
+  {
+    "name": "Aerodactyl",
+    "species": "Aerodactyl",
+    "form": "Aerodactyl",
+    "types": [
+      "rock",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0142.png",
+    "isShiny": false
+  },
+  {
+    "name": "Snorlax",
+    "species": "Snorlax",
+    "form": "Snorlax",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0143.png",
+    "isShiny": false
+  },
+  {
+    "name": "Dragonite",
+    "species": "Dragonite",
+    "form": "Dragonite",
+    "types": [
+      "dragon",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0149.png",
+    "isShiny": false
+  },
+  {
+    "name": "Meganium",
+    "species": "Meganium",
+    "form": "Meganium",
+    "types": [
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0154.png",
+    "isShiny": false
+  },
+  {
+    "name": "Typhlosion Hisui",
+    "species": "Typhlosion",
+    "form": "Typhlosion Hisui",
+    "types": [
+      "fire",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0157-Hisui.png",
+    "isShiny": false
+  },
+  {
+    "name": "Typhlosion",
+    "species": "Typhlosion",
+    "form": "Typhlosion",
+    "types": [
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0157.png",
+    "isShiny": false
+  },
+  {
+    "name": "Feraligatr",
+    "species": "Feraligatr",
+    "form": "Feraligatr",
+    "types": [
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0160.png",
+    "isShiny": false
+  },
+  {
+    "name": "Ariados",
+    "species": "Ariados",
+    "form": "Ariados",
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0168.png",
+    "isShiny": false
+  },
+  {
+    "name": "Ampharos",
+    "species": "Ampharos",
+    "form": "Ampharos",
+    "types": [
+      "electric"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0181.png",
+    "isShiny": false
+  },
+  {
+    "name": "Azumarill",
+    "species": "Azumarill",
+    "form": "Azumarill",
+    "types": [
+      "water",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0184.png",
+    "isShiny": false
+  },
+  {
+    "name": "Politoed",
+    "species": "Politoed",
+    "form": "Politoed",
+    "types": [
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0186.png",
+    "isShiny": false
+  },
+  {
+    "name": "Espeon",
+    "species": "Espeon",
+    "form": "Espeon",
+    "types": [
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0196.png",
+    "isShiny": false
+  },
+  {
+    "name": "Umbreon",
+    "species": "Umbreon",
+    "form": "Umbreon",
+    "types": [
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0197.png",
+    "isShiny": false
+  },
+  {
+    "name": "Slowking Galar",
+    "species": "Slowking",
+    "form": "Slowking Galar",
+    "types": [
+      "poison",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0199-Galar.png",
+    "isShiny": false
+  },
+  {
+    "name": "Slowking",
+    "species": "Slowking",
+    "form": "Slowking",
+    "types": [
+      "water",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0199.png",
+    "isShiny": false
+  },
+  {
+    "name": "Forretress",
+    "species": "Forretress",
+    "form": "Forretress",
+    "types": [
+      "bug",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0205.png",
+    "isShiny": false
+  },
+  {
+    "name": "Steelix",
+    "species": "Steelix",
+    "form": "Steelix",
+    "types": [
+      "steel",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0208.png",
+    "isShiny": false
+  },
+  {
+    "name": "Scizor",
+    "species": "Scizor",
+    "form": "Scizor",
+    "types": [
+      "bug",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0212.png",
+    "isShiny": false
+  },
+  {
+    "name": "Heracross",
+    "species": "Heracross",
+    "form": "Heracross",
+    "types": [
+      "bug",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0214.png",
+    "isShiny": false
+  },
+  {
+    "name": "Skarmory",
+    "species": "Skarmory",
+    "form": "Skarmory",
+    "types": [
+      "steel",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0227.png",
+    "isShiny": false
+  },
+  {
+    "name": "Houndoom",
+    "species": "Houndoom",
+    "form": "Houndoom",
+    "types": [
+      "dark",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0229.png",
+    "isShiny": false
+  },
+  {
+    "name": "Tyranitar",
+    "species": "Tyranitar",
+    "form": "Tyranitar",
+    "types": [
+      "rock",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0248.png",
+    "isShiny": false
+  },
+  {
+    "name": "Pelipper",
+    "species": "Pelipper",
+    "form": "Pelipper",
+    "types": [
+      "water",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0279.png",
+    "isShiny": false
+  },
+  {
+    "name": "Gardevoir",
+    "species": "Gardevoir",
+    "form": "Gardevoir",
+    "types": [
+      "psychic",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0282.png",
+    "isShiny": false
+  },
+  {
+    "name": "Sableye",
+    "species": "Sableye",
+    "form": "Sableye",
+    "types": [
+      "dark",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0302.png",
+    "isShiny": false
+  },
+  {
+    "name": "Aggron",
+    "species": "Aggron",
+    "form": "Aggron",
+    "types": [
+      "steel",
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0306.png",
+    "isShiny": false
+  },
+  {
+    "name": "Medicham",
+    "species": "Medicham",
+    "form": "Medicham",
+    "types": [
+      "fighting",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0308.png",
+    "isShiny": false
+  },
+  {
+    "name": "Manectric",
+    "species": "Manectric",
+    "form": "Manectric",
+    "types": [
+      "electric"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0310.png",
+    "isShiny": false
+  },
+  {
+    "name": "Sharpedo",
+    "species": "Sharpedo",
+    "form": "Sharpedo",
+    "types": [
+      "water",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0319.png",
+    "isShiny": false
+  },
+  {
+    "name": "Camerupt",
+    "species": "Camerupt",
+    "form": "Camerupt",
+    "types": [
+      "fire",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0323.png",
+    "isShiny": false
+  },
+  {
+    "name": "Torkoal",
+    "species": "Torkoal",
+    "form": "Torkoal",
+    "types": [
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0324.png",
+    "isShiny": false
+  },
+  {
+    "name": "Altaria",
+    "species": "Altaria",
+    "form": "Altaria",
+    "types": [
+      "dragon",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0334.png",
+    "isShiny": false
+  },
+  {
+    "name": "Milotic",
+    "species": "Milotic",
+    "form": "Milotic",
+    "types": [
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0350.png",
+    "isShiny": false
+  },
+  {
+    "name": "Castform Rainy",
+    "species": "Castform",
+    "form": "Castform Rainy",
+    "types": [
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0351-Rainy.png",
+    "isShiny": false
+  },
+  {
+    "name": "Castform Snowy",
+    "species": "Castform",
+    "form": "Castform Snowy",
+    "types": [
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0351-Snowy.png",
+    "isShiny": false
+  },
+  {
+    "name": "Castform Sunny",
+    "species": "Castform",
+    "form": "Castform Sunny",
+    "types": [
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0351-Sunny.png",
+    "isShiny": false
+  },
+  {
+    "name": "Castform",
+    "species": "Castform",
+    "form": "Castform",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0351.png",
+    "isShiny": false
+  },
+  {
+    "name": "Banette",
+    "species": "Banette",
+    "form": "Banette",
+    "types": [
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0354.png",
+    "isShiny": false
+  },
+  {
+    "name": "Chimecho",
+    "species": "Chimecho",
+    "form": "Chimecho",
+    "types": [
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0358.png",
+    "isShiny": false
+  },
+  {
+    "name": "Absol",
+    "species": "Absol",
+    "form": "Absol",
+    "types": [
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0359.png",
+    "isShiny": false
+  },
+  {
+    "name": "Glalie",
+    "species": "Glalie",
+    "form": "Glalie",
+    "types": [
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0362.png",
+    "isShiny": false
+  },
+  {
+    "name": "Torterra",
+    "species": "Torterra",
+    "form": "Torterra",
+    "types": [
+      "grass",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0389.png",
+    "isShiny": false
+  },
+  {
+    "name": "Infernape",
+    "species": "Infernape",
+    "form": "Infernape",
+    "types": [
+      "fire",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0392.png",
+    "isShiny": false
+  },
+  {
+    "name": "Empoleon",
+    "species": "Empoleon",
+    "form": "Empoleon",
+    "types": [
+      "water",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0395.png",
+    "isShiny": false
+  },
+  {
+    "name": "Luxray",
+    "species": "Luxray",
+    "form": "Luxray",
+    "types": [
+      "electric"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0405.png",
+    "isShiny": false
+  },
+  {
+    "name": "Roserade",
+    "species": "Roserade",
+    "form": "Roserade",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0407.png",
+    "isShiny": false
+  },
+  {
+    "name": "Rampardos",
+    "species": "Rampardos",
+    "form": "Rampardos",
+    "types": [
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0409.png",
+    "isShiny": false
+  },
+  {
+    "name": "Bastiodon",
+    "species": "Bastiodon",
+    "form": "Bastiodon",
+    "types": [
+      "rock",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0411.png",
+    "isShiny": false
+  },
+  {
+    "name": "Lopunny",
+    "species": "Lopunny",
+    "form": "Lopunny",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0428.png",
+    "isShiny": false
+  },
+  {
+    "name": "Spiritomb",
+    "species": "Spiritomb",
+    "form": "Spiritomb",
+    "types": [
+      "ghost",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0442.png",
+    "isShiny": false
+  },
+  {
+    "name": "Garchomp",
+    "species": "Garchomp",
+    "form": "Garchomp",
+    "types": [
+      "dragon",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0445.png",
+    "isShiny": false
+  },
+  {
+    "name": "Lucario",
+    "species": "Lucario",
+    "form": "Lucario",
+    "types": [
+      "fighting",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0448.png",
+    "isShiny": false
+  },
+  {
+    "name": "Hippowdon",
+    "species": "Hippowdon",
+    "form": "Hippowdon",
+    "types": [
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0450.png",
+    "isShiny": false
+  },
+  {
+    "name": "Toxicroak",
+    "species": "Toxicroak",
+    "form": "Toxicroak",
+    "types": [
+      "poison",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0454.png",
+    "isShiny": false
+  },
+  {
+    "name": "Abomasnow",
+    "species": "Abomasnow",
+    "form": "Abomasnow",
+    "types": [
+      "grass",
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0460.png",
+    "isShiny": false
+  },
+  {
+    "name": "Weavile",
+    "species": "Weavile",
+    "form": "Weavile",
+    "types": [
+      "dark",
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0461.png",
+    "isShiny": false
+  },
+  {
+    "name": "Rhyperior",
+    "species": "Rhyperior",
+    "form": "Rhyperior",
+    "types": [
+      "ground",
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0464.png",
+    "isShiny": false
+  },
+  {
+    "name": "Leafeon",
+    "species": "Leafeon",
+    "form": "Leafeon",
+    "types": [
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0470.png",
+    "isShiny": false
+  },
+  {
+    "name": "Glaceon",
+    "species": "Glaceon",
+    "form": "Glaceon",
+    "types": [
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0471.png",
+    "isShiny": false
+  },
+  {
+    "name": "Gliscor",
+    "species": "Gliscor",
+    "form": "Gliscor",
+    "types": [
+      "ground",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0472.png",
+    "isShiny": false
+  },
+  {
+    "name": "Mamoswine",
+    "species": "Mamoswine",
+    "form": "Mamoswine",
+    "types": [
+      "ice",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0473.png",
+    "isShiny": false
+  },
+  {
+    "name": "Gallade",
+    "species": "Gallade",
+    "form": "Gallade",
+    "types": [
+      "psychic",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0475.png",
+    "isShiny": false
+  },
+  {
+    "name": "Froslass",
+    "species": "Froslass",
+    "form": "Froslass",
+    "types": [
+      "ice",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0478.png",
+    "isShiny": false
+  },
+  {
+    "name": "Rotom Fan",
+    "species": "Rotom",
+    "form": "Rotom Fan",
+    "types": [
+      "electric",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0479-Fan.png",
+    "isShiny": false
+  },
+  {
+    "name": "Rotom Frost",
+    "species": "Rotom",
+    "form": "Rotom Frost",
+    "types": [
+      "electric",
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0479-Frost.png",
+    "isShiny": false
+  },
+  {
+    "name": "Rotom Heat",
+    "species": "Rotom",
+    "form": "Rotom Heat",
+    "types": [
+      "electric",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0479-Heat.png",
+    "isShiny": false
+  },
+  {
+    "name": "Rotom Mow",
+    "species": "Rotom",
+    "form": "Rotom Mow",
+    "types": [
+      "electric",
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0479-Mow.png",
+    "isShiny": false
+  },
+  {
+    "name": "Rotom Wash",
+    "species": "Rotom",
+    "form": "Rotom Wash",
+    "types": [
+      "electric",
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0479-Wash.png",
+    "isShiny": false
+  },
+  {
+    "name": "Rotom",
+    "species": "Rotom",
+    "form": "Rotom",
+    "types": [
+      "electric",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0479.png",
+    "isShiny": false
+  },
+  {
+    "name": "Serperior",
+    "species": "Serperior",
+    "form": "Serperior",
+    "types": [
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0497.png",
+    "isShiny": false
+  },
+  {
+    "name": "Emboar",
+    "species": "Emboar",
+    "form": "Emboar",
+    "types": [
+      "fire",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0500.png",
+    "isShiny": false
+  },
+  {
+    "name": "Samurott Hisui",
+    "species": "Samurott",
+    "form": "Samurott Hisui",
+    "types": [
+      "water",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0503-Hisui.png",
+    "isShiny": false
+  },
+  {
+    "name": "Samurott",
+    "species": "Samurott",
+    "form": "Samurott",
+    "types": [
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0503.png",
+    "isShiny": false
+  },
+  {
+    "name": "Watchog",
+    "species": "Watchog",
+    "form": "Watchog",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0505.png",
+    "isShiny": false
+  },
+  {
+    "name": "Liepard",
+    "species": "Liepard",
+    "form": "Liepard",
+    "types": [
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0510.png",
+    "isShiny": false
+  },
+  {
+    "name": "Simisage",
+    "species": "Simisage",
+    "form": "Simisage",
+    "types": [
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0512.png",
+    "isShiny": false
+  },
+  {
+    "name": "Simisear",
+    "species": "Simisear",
+    "form": "Simisear",
+    "types": [
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0514.png",
+    "isShiny": false
+  },
+  {
+    "name": "Simipour",
+    "species": "Simipour",
+    "form": "Simipour",
+    "types": [
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0516.png",
+    "isShiny": false
+  },
+  {
+    "name": "Excadrill",
+    "species": "Excadrill",
+    "form": "Excadrill",
+    "types": [
+      "ground",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0530.png",
+    "isShiny": false
+  },
+  {
+    "name": "Audino",
+    "species": "Audino",
+    "form": "Audino",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0531.png",
+    "isShiny": false
+  },
+  {
+    "name": "Conkeldurr",
+    "species": "Conkeldurr",
+    "form": "Conkeldurr",
+    "types": [
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0534.png",
+    "isShiny": false
+  },
+  {
+    "name": "Whimsicott",
+    "species": "Whimsicott",
+    "form": "Whimsicott",
+    "types": [
+      "grass",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0547.png",
+    "isShiny": false
+  },
+  {
+    "name": "Krookodile",
+    "species": "Krookodile",
+    "form": "Krookodile",
+    "types": [
+      "ground",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0553.png",
+    "isShiny": false
+  },
+  {
+    "name": "Cofagrigus",
+    "species": "Cofagrigus",
+    "form": "Cofagrigus",
+    "types": [
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0563.png",
+    "isShiny": false
+  },
+  {
+    "name": "Garbodor",
+    "species": "Garbodor",
+    "form": "Garbodor",
+    "types": [
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0569.png",
+    "isShiny": false
+  },
+  {
+    "name": "Zoroark Hisui",
+    "species": "Zoroark",
+    "form": "Zoroark Hisui",
+    "types": [
+      "normal",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0571-Hisui.png",
+    "isShiny": false
+  },
+  {
+    "name": "Zoroark",
+    "species": "Zoroark",
+    "form": "Zoroark",
+    "types": [
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0571.png",
+    "isShiny": false
+  },
+  {
+    "name": "Reuniclus",
+    "species": "Reuniclus",
+    "form": "Reuniclus",
+    "types": [
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0579.png",
+    "isShiny": false
+  },
+  {
+    "name": "Vanilluxe",
+    "species": "Vanilluxe",
+    "form": "Vanilluxe",
+    "types": [
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0584.png",
+    "isShiny": false
+  },
+  {
+    "name": "Emolga",
+    "species": "Emolga",
+    "form": "Emolga",
+    "types": [
+      "electric",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0587.png",
+    "isShiny": false
+  },
+  {
+    "name": "Chandelure",
+    "species": "Chandelure",
+    "form": "Chandelure",
+    "types": [
+      "ghost",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0609.png",
+    "isShiny": false
+  },
+  {
+    "name": "Beartic",
+    "species": "Beartic",
+    "form": "Beartic",
+    "types": [
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0614.png",
+    "isShiny": false
+  },
+  {
+    "name": "Stunfisk Galar",
+    "species": "Stunfisk",
+    "form": "Stunfisk Galar",
+    "types": [
+      "ground",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0618-Galar.png",
+    "isShiny": false
+  },
+  {
+    "name": "Stunfisk",
+    "species": "Stunfisk",
+    "form": "Stunfisk",
+    "types": [
+      "ground",
+      "electric"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0618.png",
+    "isShiny": false
+  },
+  {
+    "name": "Golurk",
+    "species": "Golurk",
+    "form": "Golurk",
+    "types": [
+      "ground",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0623.png",
+    "isShiny": false
+  },
+  {
+    "name": "Hydreigon",
+    "species": "Hydreigon",
+    "form": "Hydreigon",
+    "types": [
+      "dark",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0635.png",
+    "isShiny": false
+  },
+  {
+    "name": "Volcarona",
+    "species": "Volcarona",
+    "form": "Volcarona",
+    "types": [
+      "bug",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0637.png",
+    "isShiny": false
+  },
+  {
+    "name": "Chesnaught",
+    "species": "Chesnaught",
+    "form": "Chesnaught",
+    "types": [
+      "grass",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0652.png",
+    "isShiny": false
+  },
+  {
+    "name": "Delphox",
+    "species": "Delphox",
+    "form": "Delphox",
+    "types": [
+      "fire",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0655.png",
+    "isShiny": false
+  },
+  {
+    "name": "Greninja",
+    "species": "Greninja",
+    "form": "Greninja",
+    "types": [
+      "water",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0658.png",
+    "isShiny": false
+  },
+  {
+    "name": "Diggersby",
+    "species": "Diggersby",
+    "form": "Diggersby",
+    "types": [
+      "normal",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0660.png",
+    "isShiny": false
+  },
+  {
+    "name": "Talonflame",
+    "species": "Talonflame",
+    "form": "Talonflame",
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0663.png",
+    "isShiny": false
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0666-Archipelago.png",
+    "isShiny": false
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0666-Continental.png",
+    "isShiny": false
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0666-Elegant.png",
+    "isShiny": false
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0666-Fancy.png",
+    "isShiny": false
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0666-Garden.png",
+    "isShiny": false
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0666-High_Plains.png",
+    "isShiny": false
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0666-Icy_Snow.png",
+    "isShiny": false
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0666-Jungle.png",
+    "isShiny": false
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0666-Marine.png",
+    "isShiny": false
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0666-Modern.png",
+    "isShiny": false
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0666-Monsoon.png",
+    "isShiny": false
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0666-Ocean.png",
+    "isShiny": false
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0666-Pok%C3%A9_Ball.png",
+    "isShiny": false
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0666-Polar.png",
+    "isShiny": false
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0666-River.png",
+    "isShiny": false
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0666-Sandstorm.png",
+    "isShiny": false
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0666-Savanna.png",
+    "isShiny": false
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0666-Sun.png",
+    "isShiny": false
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0666-Tundra.png",
+    "isShiny": false
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0666.png",
+    "isShiny": false
+  },
+  {
+    "name": "Floette Eternal",
+    "species": "Floette",
+    "form": "Floette Eternal",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0670-Eternal.png",
+    "isShiny": false
+  },
+  {
+    "name": "Florges",
+    "species": "Florges",
+    "form": "Florges",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0671-Blue.png",
+    "isShiny": false
+  },
+  {
+    "name": "Florges",
+    "species": "Florges",
+    "form": "Florges",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0671-Orange.png",
+    "isShiny": false
+  },
+  {
+    "name": "Florges",
+    "species": "Florges",
+    "form": "Florges",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0671-White.png",
+    "isShiny": false
+  },
+  {
+    "name": "Florges",
+    "species": "Florges",
+    "form": "Florges",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0671-Yellow.png",
+    "isShiny": false
+  },
+  {
+    "name": "Florges",
+    "species": "Florges",
+    "form": "Florges",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0671.png",
+    "isShiny": false
+  },
+  {
+    "name": "Pangoro",
+    "species": "Pangoro",
+    "form": "Pangoro",
+    "types": [
+      "fighting",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0675.png",
+    "isShiny": false
+  },
+  {
+    "name": "Furfrou",
+    "species": "Furfrou",
+    "form": "Furfrou",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0676-Dandy.png",
+    "isShiny": false
+  },
+  {
+    "name": "Furfrou",
+    "species": "Furfrou",
+    "form": "Furfrou",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0676-Debutante.png",
+    "isShiny": false
+  },
+  {
+    "name": "Furfrou",
+    "species": "Furfrou",
+    "form": "Furfrou",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0676-Diamond.png",
+    "isShiny": false
+  },
+  {
+    "name": "Furfrou",
+    "species": "Furfrou",
+    "form": "Furfrou",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0676-Heart.png",
+    "isShiny": false
+  },
+  {
+    "name": "Furfrou",
+    "species": "Furfrou",
+    "form": "Furfrou",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0676-Kabuki.png",
+    "isShiny": false
+  },
+  {
+    "name": "Furfrou",
+    "species": "Furfrou",
+    "form": "Furfrou",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0676-La_Reine.png",
+    "isShiny": false
+  },
+  {
+    "name": "Furfrou",
+    "species": "Furfrou",
+    "form": "Furfrou",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0676-Matron.png",
+    "isShiny": false
+  },
+  {
+    "name": "Furfrou",
+    "species": "Furfrou",
+    "form": "Furfrou",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0676-Pharaoh.png",
+    "isShiny": false
+  },
+  {
+    "name": "Furfrou",
+    "species": "Furfrou",
+    "form": "Furfrou",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0676-Star.png",
+    "isShiny": false
+  },
+  {
+    "name": "Furfrou",
+    "species": "Furfrou",
+    "form": "Furfrou",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0676.png",
+    "isShiny": false
+  },
+  {
+    "name": "Meowstic Female",
+    "species": "Meowstic",
+    "form": "Meowstic Female",
+    "types": [
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0678-Female.png",
+    "isShiny": false
+  },
+  {
+    "name": "Meowstic Male",
+    "species": "Meowstic",
+    "form": "Meowstic Male",
+    "types": [
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0678.png",
+    "isShiny": false
+  },
+  {
+    "name": "Aegislash Blade",
+    "species": "Aegislash",
+    "form": "Aegislash Blade",
+    "types": [
+      "steel",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0681-Blade.png",
+    "isShiny": false
+  },
+  {
+    "name": "Aegislash Shield",
+    "species": "Aegislash",
+    "form": "Aegislash Shield",
+    "types": [
+      "steel",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0681.png",
+    "isShiny": false
+  },
+  {
+    "name": "Aromatisse",
+    "species": "Aromatisse",
+    "form": "Aromatisse",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0683.png",
+    "isShiny": false
+  },
+  {
+    "name": "Slurpuff",
+    "species": "Slurpuff",
+    "form": "Slurpuff",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0685.png",
+    "isShiny": false
+  },
+  {
+    "name": "Clawitzer",
+    "species": "Clawitzer",
+    "form": "Clawitzer",
+    "types": [
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0693.png",
+    "isShiny": false
+  },
+  {
+    "name": "Heliolisk",
+    "species": "Heliolisk",
+    "form": "Heliolisk",
+    "types": [
+      "electric",
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0695.png",
+    "isShiny": false
+  },
+  {
+    "name": "Tyrantrum",
+    "species": "Tyrantrum",
+    "form": "Tyrantrum",
+    "types": [
+      "rock",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0697.png",
+    "isShiny": false
+  },
+  {
+    "name": "Aurorus",
+    "species": "Aurorus",
+    "form": "Aurorus",
+    "types": [
+      "rock",
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0699.png",
+    "isShiny": false
+  },
+  {
+    "name": "Sylveon",
+    "species": "Sylveon",
+    "form": "Sylveon",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0700.png",
+    "isShiny": false
+  },
+  {
+    "name": "Hawlucha",
+    "species": "Hawlucha",
+    "form": "Hawlucha",
+    "types": [
+      "fighting",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0701.png",
+    "isShiny": false
+  },
+  {
+    "name": "Dedenne",
+    "species": "Dedenne",
+    "form": "Dedenne",
+    "types": [
+      "electric",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0702.png",
+    "isShiny": false
+  },
+  {
+    "name": "Goodra Hisui",
+    "species": "Goodra",
+    "form": "Goodra Hisui",
+    "types": [
+      "steel",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0706-Hisui.png",
+    "isShiny": false
+  },
+  {
+    "name": "Goodra",
+    "species": "Goodra",
+    "form": "Goodra",
+    "types": [
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0706.png",
+    "isShiny": false
+  },
+  {
+    "name": "Klefki",
+    "species": "Klefki",
+    "form": "Klefki",
+    "types": [
+      "steel",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0707.png",
+    "isShiny": false
+  },
+  {
+    "name": "Trevenant",
+    "species": "Trevenant",
+    "form": "Trevenant",
+    "types": [
+      "ghost",
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0709.png",
+    "isShiny": false
+  },
+  {
+    "name": "Gourgeist Average",
+    "species": "Gourgeist",
+    "form": "Gourgeist Average",
+    "types": [
+      "ghost",
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0711-Jumbo.png",
+    "isShiny": false
+  },
+  {
+    "name": "Gourgeist Large",
+    "species": "Gourgeist",
+    "form": "Gourgeist Large",
+    "types": [
+      "ghost",
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0711-Large.png",
+    "isShiny": false
+  },
+  {
+    "name": "Gourgeist Small",
+    "species": "Gourgeist",
+    "form": "Gourgeist Small",
+    "types": [
+      "ghost",
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0711-Small.png",
+    "isShiny": false
+  },
+  {
+    "name": "Gourgeist Average",
+    "species": "Gourgeist",
+    "form": "Gourgeist Average",
+    "types": [
+      "ghost",
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0711.png",
+    "isShiny": false
+  },
+  {
+    "name": "Avalugg Hisui",
+    "species": "Avalugg",
+    "form": "Avalugg Hisui",
+    "types": [
+      "ice",
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0713-Hisui.png",
+    "isShiny": false
+  },
+  {
+    "name": "Avalugg",
+    "species": "Avalugg",
+    "form": "Avalugg",
+    "types": [
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0713.png",
+    "isShiny": false
+  },
+  {
+    "name": "Noivern",
+    "species": "Noivern",
+    "form": "Noivern",
+    "types": [
+      "flying",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0715.png",
+    "isShiny": false
+  },
+  {
+    "name": "Decidueye Hisui",
+    "species": "Decidueye",
+    "form": "Decidueye Hisui",
+    "types": [
+      "grass",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0724-Hisui.png",
+    "isShiny": false
+  },
+  {
+    "name": "Decidueye",
+    "species": "Decidueye",
+    "form": "Decidueye",
+    "types": [
+      "grass",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0724.png",
+    "isShiny": false
+  },
+  {
+    "name": "Incineroar",
+    "species": "Incineroar",
+    "form": "Incineroar",
+    "types": [
+      "fire",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0727.png",
+    "isShiny": false
+  },
+  {
+    "name": "Primarina",
+    "species": "Primarina",
+    "form": "Primarina",
+    "types": [
+      "water",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0730.png",
+    "isShiny": false
+  },
+  {
+    "name": "Toucannon",
+    "species": "Toucannon",
+    "form": "Toucannon",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0733.png",
+    "isShiny": false
+  },
+  {
+    "name": "Crabominable",
+    "species": "Crabominable",
+    "form": "Crabominable",
+    "types": [
+      "fighting",
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0740.png",
+    "isShiny": false
+  },
+  {
+    "name": "Lycanroc Dusk",
+    "species": "Lycanroc",
+    "form": "Lycanroc Dusk",
+    "types": [
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0745-Dusk.png",
+    "isShiny": false
+  },
+  {
+    "name": "Lycanroc Midnight",
+    "species": "Lycanroc",
+    "form": "Lycanroc Midnight",
+    "types": [
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0745-Midnight.png",
+    "isShiny": false
+  },
+  {
+    "name": "Lycanroc Midday",
+    "species": "Lycanroc",
+    "form": "Lycanroc Midday",
+    "types": [
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0745.png",
+    "isShiny": false
+  },
+  {
+    "name": "Toxapex",
+    "species": "Toxapex",
+    "form": "Toxapex",
+    "types": [
+      "poison",
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0748.png",
+    "isShiny": false
+  },
+  {
+    "name": "Mudsdale",
+    "species": "Mudsdale",
+    "form": "Mudsdale",
+    "types": [
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0750.png",
+    "isShiny": false
+  },
+  {
+    "name": "Araquanid",
+    "species": "Araquanid",
+    "form": "Araquanid",
+    "types": [
+      "water",
+      "bug"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0752.png",
+    "isShiny": false
+  },
+  {
+    "name": "Salazzle",
+    "species": "Salazzle",
+    "form": "Salazzle",
+    "types": [
+      "poison",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0758.png",
+    "isShiny": false
+  },
+  {
+    "name": "Tsareena",
+    "species": "Tsareena",
+    "form": "Tsareena",
+    "types": [
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0763.png",
+    "isShiny": false
+  },
+  {
+    "name": "Oranguru",
+    "species": "Oranguru",
+    "form": "Oranguru",
+    "types": [
+      "normal",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0765.png",
+    "isShiny": false
+  },
+  {
+    "name": "Passimian",
+    "species": "Passimian",
+    "form": "Passimian",
+    "types": [
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0766.png",
+    "isShiny": false
+  },
+  {
+    "name": "Mimikyu Disguised",
+    "species": "Mimikyu",
+    "form": "Mimikyu Disguised",
+    "types": [
+      "ghost",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0778.png",
+    "isShiny": false
+  },
+  {
+    "name": "Drampa",
+    "species": "Drampa",
+    "form": "Drampa",
+    "types": [
+      "normal",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0780.png",
+    "isShiny": false
+  },
+  {
+    "name": "Kommo-o",
+    "species": "Kommo-o",
+    "form": "Kommo-o",
+    "types": [
+      "dragon",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0784.png",
+    "isShiny": false
+  },
+  {
+    "name": "Corviknight",
+    "species": "Corviknight",
+    "form": "Corviknight",
+    "types": [
+      "flying",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0823.png",
+    "isShiny": false
+  },
+  {
+    "name": "Flapple",
+    "species": "Flapple",
+    "form": "Flapple",
+    "types": [
+      "grass",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0841.png",
+    "isShiny": false
+  },
+  {
+    "name": "Appletun",
+    "species": "Appletun",
+    "form": "Appletun",
+    "types": [
+      "grass",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0842.png",
+    "isShiny": false
+  },
+  {
+    "name": "Sandaconda",
+    "species": "Sandaconda",
+    "form": "Sandaconda",
+    "types": [
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0844.png",
+    "isShiny": false
+  },
+  {
+    "name": "Polteageist",
+    "species": "Polteageist",
+    "form": "Polteageist",
+    "types": [
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0855.png",
+    "isShiny": false
+  },
+  {
+    "name": "Hatterene",
+    "species": "Hatterene",
+    "form": "Hatterene",
+    "types": [
+      "psychic",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0858.png",
+    "isShiny": false
+  },
+  {
+    "name": "Mr Rime",
+    "species": "Mr Rime",
+    "form": "Mr Rime",
+    "types": [
+      "ice",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0866.png",
+    "isShiny": false
+  },
+  {
+    "name": "Runerigus",
+    "species": "Runerigus",
+    "form": "Runerigus",
+    "types": [
+      "ground",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0867.png",
+    "isShiny": false
+  },
+  {
+    "name": "Alcremie",
+    "species": "Alcremie",
+    "form": "Alcremie",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0869-Caramel_Swirl.png",
+    "isShiny": false
+  },
+  {
+    "name": "Alcremie",
+    "species": "Alcremie",
+    "form": "Alcremie",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0869-Lemon_Cream.png",
+    "isShiny": false
+  },
+  {
+    "name": "Alcremie",
+    "species": "Alcremie",
+    "form": "Alcremie",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0869-Matcha_Cream.png",
+    "isShiny": false
+  },
+  {
+    "name": "Alcremie",
+    "species": "Alcremie",
+    "form": "Alcremie",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0869-Mint_Cream.png",
+    "isShiny": false
+  },
+  {
+    "name": "Alcremie",
+    "species": "Alcremie",
+    "form": "Alcremie",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0869-Rainbow_Swirl.png",
+    "isShiny": false
+  },
+  {
+    "name": "Alcremie",
+    "species": "Alcremie",
+    "form": "Alcremie",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0869-Ruby_Cream.png",
+    "isShiny": false
+  },
+  {
+    "name": "Alcremie",
+    "species": "Alcremie",
+    "form": "Alcremie",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0869-Ruby_Swirl.png",
+    "isShiny": false
+  },
+  {
+    "name": "Alcremie",
+    "species": "Alcremie",
+    "form": "Alcremie",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0869-Salted_Cream.png",
+    "isShiny": false
+  },
+  {
+    "name": "Alcremie",
+    "species": "Alcremie",
+    "form": "Alcremie",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0869.png",
+    "isShiny": false
+  },
+  {
+    "name": "Morpeko Hangry",
+    "species": "Morpeko",
+    "form": "Morpeko Hangry",
+    "types": [
+      "electric",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0877-Hangry.png",
+    "isShiny": false
+  },
+  {
+    "name": "Morpeko Full Belly",
+    "species": "Morpeko",
+    "form": "Morpeko Full Belly",
+    "types": [
+      "electric",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0877.png",
+    "isShiny": false
+  },
+  {
+    "name": "Dragapult",
+    "species": "Dragapult",
+    "form": "Dragapult",
+    "types": [
+      "dragon",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0887.png",
+    "isShiny": false
+  },
+  {
+    "name": "Wyrdeer",
+    "species": "Wyrdeer",
+    "form": "Wyrdeer",
+    "types": [
+      "normal",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0899.png",
+    "isShiny": false
+  },
+  {
+    "name": "Kleavor",
+    "species": "Kleavor",
+    "form": "Kleavor",
+    "types": [
+      "bug",
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0900.png",
+    "isShiny": false
+  },
+  {
+    "name": "Basculegion Female",
+    "species": "Basculegion",
+    "form": "Basculegion Female",
+    "types": [
+      "water",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0902-Female.png",
+    "isShiny": false
+  },
+  {
+    "name": "Basculegion Male",
+    "species": "Basculegion",
+    "form": "Basculegion Male",
+    "types": [
+      "water",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0902.png",
+    "isShiny": false
+  },
+  {
+    "name": "Sneasler",
+    "species": "Sneasler",
+    "form": "Sneasler",
+    "types": [
+      "fighting",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0903.png",
+    "isShiny": false
+  },
+  {
+    "name": "Meowscarada",
+    "species": "Meowscarada",
+    "form": "Meowscarada",
+    "types": [
+      "grass",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0908.png",
+    "isShiny": false
+  },
+  {
+    "name": "Skeledirge",
+    "species": "Skeledirge",
+    "form": "Skeledirge",
+    "types": [
+      "fire",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0911.png",
+    "isShiny": false
+  },
+  {
+    "name": "Quaquaval",
+    "species": "Quaquaval",
+    "form": "Quaquaval",
+    "types": [
+      "water",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0914.png",
+    "isShiny": false
+  },
+  {
+    "name": "Pawmot",
+    "species": "Pawmot",
+    "form": "Pawmot",
+    "types": [
+      "electric",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0923.png",
+    "isShiny": false
+  },
+  {
+    "name": "Maushold Family Of Three",
+    "species": "Maushold",
+    "form": "Maushold Family Of Three",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0925-Three.png",
+    "isShiny": false
+  },
+  {
+    "name": "Maushold Family Of Four",
+    "species": "Maushold",
+    "form": "Maushold Family Of Four",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0925.png",
+    "isShiny": false
+  },
+  {
+    "name": "Garganacl",
+    "species": "Garganacl",
+    "form": "Garganacl",
+    "types": [
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0934.png",
+    "isShiny": false
+  },
+  {
+    "name": "Armarouge",
+    "species": "Armarouge",
+    "form": "Armarouge",
+    "types": [
+      "fire",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0936.png",
+    "isShiny": false
+  },
+  {
+    "name": "Ceruledge",
+    "species": "Ceruledge",
+    "form": "Ceruledge",
+    "types": [
+      "fire",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0937.png",
+    "isShiny": false
+  },
+  {
+    "name": "Bellibolt",
+    "species": "Bellibolt",
+    "form": "Bellibolt",
+    "types": [
+      "electric"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0939.png",
+    "isShiny": false
+  },
+  {
+    "name": "Scovillain",
+    "species": "Scovillain",
+    "form": "Scovillain",
+    "types": [
+      "grass",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0952.png",
+    "isShiny": false
+  },
+  {
+    "name": "Espathra",
+    "species": "Espathra",
+    "form": "Espathra",
+    "types": [
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0956.png",
+    "isShiny": false
+  },
+  {
+    "name": "Tinkaton",
+    "species": "Tinkaton",
+    "form": "Tinkaton",
+    "types": [
+      "fairy",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0959.png",
+    "isShiny": false
+  },
+  {
+    "name": "Palafin Hero",
+    "species": "Palafin",
+    "form": "Palafin Hero",
+    "types": [
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0964-Hero.png",
+    "isShiny": false
+  },
+  {
+    "name": "Palafin Zero",
+    "species": "Palafin",
+    "form": "Palafin Zero",
+    "types": [
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0964.png",
+    "isShiny": false
+  },
+  {
+    "name": "Orthworm",
+    "species": "Orthworm",
+    "form": "Orthworm",
+    "types": [
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0968.png",
+    "isShiny": false
+  },
+  {
+    "name": "Glimmora",
+    "species": "Glimmora",
+    "form": "Glimmora",
+    "types": [
+      "rock",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0970.png",
+    "isShiny": false
+  },
+  {
+    "name": "Farigiraf",
+    "species": "Farigiraf",
+    "form": "Farigiraf",
+    "types": [
+      "normal",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0981.png",
+    "isShiny": false
+  },
+  {
+    "name": "Kingambit",
+    "species": "Kingambit",
+    "form": "Kingambit",
+    "types": [
+      "dark",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_0983.png",
+    "isShiny": false
+  },
+  {
+    "name": "Sinistcha",
+    "species": "Sinistcha",
+    "form": "Sinistcha",
+    "types": [
+      "grass",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_1013.png",
+    "isShiny": false
+  },
+  {
+    "name": "Archaludon",
+    "species": "Archaludon",
+    "form": "Archaludon",
+    "types": [
+      "steel",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_1018.png",
+    "isShiny": false
+  },
+  {
+    "name": "Hydrapple",
+    "species": "Hydrapple",
+    "form": "Hydrapple",
+    "types": [
+      "grass",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\normal\\Menu_CP_1019.png",
+    "isShiny": false
+  },
+  {
+    "name": "Venusaur",
+    "species": "Venusaur",
+    "form": "Venusaur",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0003_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Charizard",
+    "species": "Charizard",
+    "form": "Charizard",
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0006_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Blastoise",
+    "species": "Blastoise",
+    "form": "Blastoise",
+    "types": [
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0009_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Beedrill",
+    "species": "Beedrill",
+    "form": "Beedrill",
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0015_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Pidgeot",
+    "species": "Pidgeot",
+    "form": "Pidgeot",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0018_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Arbok",
+    "species": "Arbok",
+    "form": "Arbok",
+    "types": [
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0024_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Pikachu",
+    "species": "Pikachu",
+    "form": "Pikachu",
+    "types": [
+      "electric"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0025_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Raichu Alola",
+    "species": "Raichu",
+    "form": "Raichu Alola",
+    "types": [
+      "electric",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0026-Alola_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Raichu",
+    "species": "Raichu",
+    "form": "Raichu",
+    "types": [
+      "electric"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0026_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Clefable",
+    "species": "Clefable",
+    "form": "Clefable",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0036_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Ninetales Alola",
+    "species": "Ninetales",
+    "form": "Ninetales Alola",
+    "types": [
+      "ice",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0038-Alola_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Ninetales",
+    "species": "Ninetales",
+    "form": "Ninetales",
+    "types": [
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0038_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Arcanine Hisui",
+    "species": "Arcanine",
+    "form": "Arcanine Hisui",
+    "types": [
+      "fire",
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0059-Hisui_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Arcanine",
+    "species": "Arcanine",
+    "form": "Arcanine",
+    "types": [
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0059_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Alakazam",
+    "species": "Alakazam",
+    "form": "Alakazam",
+    "types": [
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0065_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Machamp",
+    "species": "Machamp",
+    "form": "Machamp",
+    "types": [
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0068_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Victreebel",
+    "species": "Victreebel",
+    "form": "Victreebel",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0071_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Slowbro Galar",
+    "species": "Slowbro",
+    "form": "Slowbro Galar",
+    "types": [
+      "poison",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0080-Galar_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Slowbro",
+    "species": "Slowbro",
+    "form": "Slowbro",
+    "types": [
+      "water",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0080_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Gengar",
+    "species": "Gengar",
+    "form": "Gengar",
+    "types": [
+      "ghost",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0094_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Kangaskhan",
+    "species": "Kangaskhan",
+    "form": "Kangaskhan",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0115_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Starmie",
+    "species": "Starmie",
+    "form": "Starmie",
+    "types": [
+      "water",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0121_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Pinsir",
+    "species": "Pinsir",
+    "form": "Pinsir",
+    "types": [
+      "bug"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0127_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Tauros Paldea Aqua Breed",
+    "species": "Tauros",
+    "form": "Tauros Paldea Aqua Breed",
+    "types": [
+      "fighting",
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0128-Paldea_Aqua_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Tauros Paldea Blaze Breed",
+    "species": "Tauros",
+    "form": "Tauros Paldea Blaze Breed",
+    "types": [
+      "fighting",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0128-Paldea_Blaze_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Tauros Paldea Combat Breed",
+    "species": "Tauros",
+    "form": "Tauros Paldea Combat Breed",
+    "types": [
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0128-Paldea_Combat_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Tauros",
+    "species": "Tauros",
+    "form": "Tauros",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0128_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Gyarados",
+    "species": "Gyarados",
+    "form": "Gyarados",
+    "types": [
+      "water",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0130_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Ditto",
+    "species": "Ditto",
+    "form": "Ditto",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0132_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Vaporeon",
+    "species": "Vaporeon",
+    "form": "Vaporeon",
+    "types": [
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0134_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Jolteon",
+    "species": "Jolteon",
+    "form": "Jolteon",
+    "types": [
+      "electric"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0135_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Flareon",
+    "species": "Flareon",
+    "form": "Flareon",
+    "types": [
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0136_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Aerodactyl",
+    "species": "Aerodactyl",
+    "form": "Aerodactyl",
+    "types": [
+      "rock",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0142_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Snorlax",
+    "species": "Snorlax",
+    "form": "Snorlax",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0143_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Dragonite",
+    "species": "Dragonite",
+    "form": "Dragonite",
+    "types": [
+      "dragon",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0149_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Meganium",
+    "species": "Meganium",
+    "form": "Meganium",
+    "types": [
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0154_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Typhlosion Hisui",
+    "species": "Typhlosion",
+    "form": "Typhlosion Hisui",
+    "types": [
+      "fire",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0157-Hisui_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Typhlosion",
+    "species": "Typhlosion",
+    "form": "Typhlosion",
+    "types": [
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0157_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Feraligatr",
+    "species": "Feraligatr",
+    "form": "Feraligatr",
+    "types": [
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0160_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Ariados",
+    "species": "Ariados",
+    "form": "Ariados",
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0168_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Ampharos",
+    "species": "Ampharos",
+    "form": "Ampharos",
+    "types": [
+      "electric"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0181_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Azumarill",
+    "species": "Azumarill",
+    "form": "Azumarill",
+    "types": [
+      "water",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0184_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Politoed",
+    "species": "Politoed",
+    "form": "Politoed",
+    "types": [
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0186_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Espeon",
+    "species": "Espeon",
+    "form": "Espeon",
+    "types": [
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0196_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Umbreon",
+    "species": "Umbreon",
+    "form": "Umbreon",
+    "types": [
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0197_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Slowking Galar",
+    "species": "Slowking",
+    "form": "Slowking Galar",
+    "types": [
+      "poison",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0199-Galar_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Slowking",
+    "species": "Slowking",
+    "form": "Slowking",
+    "types": [
+      "water",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0199_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Forretress",
+    "species": "Forretress",
+    "form": "Forretress",
+    "types": [
+      "bug",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0205_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Steelix",
+    "species": "Steelix",
+    "form": "Steelix",
+    "types": [
+      "steel",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0208_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Scizor",
+    "species": "Scizor",
+    "form": "Scizor",
+    "types": [
+      "bug",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0212_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Heracross",
+    "species": "Heracross",
+    "form": "Heracross",
+    "types": [
+      "bug",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0214_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Skarmory",
+    "species": "Skarmory",
+    "form": "Skarmory",
+    "types": [
+      "steel",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0227_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Houndoom",
+    "species": "Houndoom",
+    "form": "Houndoom",
+    "types": [
+      "dark",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0229_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Tyranitar",
+    "species": "Tyranitar",
+    "form": "Tyranitar",
+    "types": [
+      "rock",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0248_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Pelipper",
+    "species": "Pelipper",
+    "form": "Pelipper",
+    "types": [
+      "water",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0279_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Gardevoir",
+    "species": "Gardevoir",
+    "form": "Gardevoir",
+    "types": [
+      "psychic",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0282_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Sableye",
+    "species": "Sableye",
+    "form": "Sableye",
+    "types": [
+      "dark",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0302_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Aggron",
+    "species": "Aggron",
+    "form": "Aggron",
+    "types": [
+      "steel",
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0306_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Medicham",
+    "species": "Medicham",
+    "form": "Medicham",
+    "types": [
+      "fighting",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0308_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Manectric",
+    "species": "Manectric",
+    "form": "Manectric",
+    "types": [
+      "electric"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0310_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Sharpedo",
+    "species": "Sharpedo",
+    "form": "Sharpedo",
+    "types": [
+      "water",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0319_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Camerupt",
+    "species": "Camerupt",
+    "form": "Camerupt",
+    "types": [
+      "fire",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0323_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Torkoal",
+    "species": "Torkoal",
+    "form": "Torkoal",
+    "types": [
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0324_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Altaria",
+    "species": "Altaria",
+    "form": "Altaria",
+    "types": [
+      "dragon",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0334_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Milotic",
+    "species": "Milotic",
+    "form": "Milotic",
+    "types": [
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0350_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Castform Rainy",
+    "species": "Castform",
+    "form": "Castform Rainy",
+    "types": [
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0351-Rainy_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Castform Snowy",
+    "species": "Castform",
+    "form": "Castform Snowy",
+    "types": [
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0351-Snowy_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Castform Sunny",
+    "species": "Castform",
+    "form": "Castform Sunny",
+    "types": [
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0351-Sunny_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Castform",
+    "species": "Castform",
+    "form": "Castform",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0351_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Banette",
+    "species": "Banette",
+    "form": "Banette",
+    "types": [
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0354_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Chimecho",
+    "species": "Chimecho",
+    "form": "Chimecho",
+    "types": [
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0358_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Absol",
+    "species": "Absol",
+    "form": "Absol",
+    "types": [
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0359_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Glalie",
+    "species": "Glalie",
+    "form": "Glalie",
+    "types": [
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0362_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Torterra",
+    "species": "Torterra",
+    "form": "Torterra",
+    "types": [
+      "grass",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0389_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Infernape",
+    "species": "Infernape",
+    "form": "Infernape",
+    "types": [
+      "fire",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0392_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Empoleon",
+    "species": "Empoleon",
+    "form": "Empoleon",
+    "types": [
+      "water",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0395_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Luxray",
+    "species": "Luxray",
+    "form": "Luxray",
+    "types": [
+      "electric"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0405_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Roserade",
+    "species": "Roserade",
+    "form": "Roserade",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0407_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Rampardos",
+    "species": "Rampardos",
+    "form": "Rampardos",
+    "types": [
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0409_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Bastiodon",
+    "species": "Bastiodon",
+    "form": "Bastiodon",
+    "types": [
+      "rock",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0411_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Lopunny",
+    "species": "Lopunny",
+    "form": "Lopunny",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0428_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Spiritomb",
+    "species": "Spiritomb",
+    "form": "Spiritomb",
+    "types": [
+      "ghost",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0442_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Garchomp",
+    "species": "Garchomp",
+    "form": "Garchomp",
+    "types": [
+      "dragon",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0445_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Lucario",
+    "species": "Lucario",
+    "form": "Lucario",
+    "types": [
+      "fighting",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0448_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Hippowdon",
+    "species": "Hippowdon",
+    "form": "Hippowdon",
+    "types": [
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0450_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Toxicroak",
+    "species": "Toxicroak",
+    "form": "Toxicroak",
+    "types": [
+      "poison",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0454_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Abomasnow",
+    "species": "Abomasnow",
+    "form": "Abomasnow",
+    "types": [
+      "grass",
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0460_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Weavile",
+    "species": "Weavile",
+    "form": "Weavile",
+    "types": [
+      "dark",
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0461_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Rhyperior",
+    "species": "Rhyperior",
+    "form": "Rhyperior",
+    "types": [
+      "ground",
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0464_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Leafeon",
+    "species": "Leafeon",
+    "form": "Leafeon",
+    "types": [
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0470_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Glaceon",
+    "species": "Glaceon",
+    "form": "Glaceon",
+    "types": [
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0471_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Gliscor",
+    "species": "Gliscor",
+    "form": "Gliscor",
+    "types": [
+      "ground",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0472_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Mamoswine",
+    "species": "Mamoswine",
+    "form": "Mamoswine",
+    "types": [
+      "ice",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0473_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Gallade",
+    "species": "Gallade",
+    "form": "Gallade",
+    "types": [
+      "psychic",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0475_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Froslass",
+    "species": "Froslass",
+    "form": "Froslass",
+    "types": [
+      "ice",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0478_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Rotom Fan",
+    "species": "Rotom",
+    "form": "Rotom Fan",
+    "types": [
+      "electric",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0479-Fan_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Rotom Frost",
+    "species": "Rotom",
+    "form": "Rotom Frost",
+    "types": [
+      "electric",
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0479-Frost_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Rotom Heat",
+    "species": "Rotom",
+    "form": "Rotom Heat",
+    "types": [
+      "electric",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0479-Heat_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Rotom Mow",
+    "species": "Rotom",
+    "form": "Rotom Mow",
+    "types": [
+      "electric",
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0479-Mow_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Rotom Wash",
+    "species": "Rotom",
+    "form": "Rotom Wash",
+    "types": [
+      "electric",
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0479-Wash_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Rotom",
+    "species": "Rotom",
+    "form": "Rotom",
+    "types": [
+      "electric",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0479_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Serperior",
+    "species": "Serperior",
+    "form": "Serperior",
+    "types": [
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0497_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Emboar",
+    "species": "Emboar",
+    "form": "Emboar",
+    "types": [
+      "fire",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0500_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Samurott Hisui",
+    "species": "Samurott",
+    "form": "Samurott Hisui",
+    "types": [
+      "water",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0503-Hisui_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Samurott",
+    "species": "Samurott",
+    "form": "Samurott",
+    "types": [
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0503_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Watchog",
+    "species": "Watchog",
+    "form": "Watchog",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0505_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Liepard",
+    "species": "Liepard",
+    "form": "Liepard",
+    "types": [
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0510_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Simisage",
+    "species": "Simisage",
+    "form": "Simisage",
+    "types": [
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0512_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Simisear",
+    "species": "Simisear",
+    "form": "Simisear",
+    "types": [
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0514_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Simipour",
+    "species": "Simipour",
+    "form": "Simipour",
+    "types": [
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0516_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Excadrill",
+    "species": "Excadrill",
+    "form": "Excadrill",
+    "types": [
+      "ground",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0530_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Audino",
+    "species": "Audino",
+    "form": "Audino",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0531_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Conkeldurr",
+    "species": "Conkeldurr",
+    "form": "Conkeldurr",
+    "types": [
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0534_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Whimsicott",
+    "species": "Whimsicott",
+    "form": "Whimsicott",
+    "types": [
+      "grass",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0547_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Krookodile",
+    "species": "Krookodile",
+    "form": "Krookodile",
+    "types": [
+      "ground",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0553_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Cofagrigus",
+    "species": "Cofagrigus",
+    "form": "Cofagrigus",
+    "types": [
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0563_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Garbodor",
+    "species": "Garbodor",
+    "form": "Garbodor",
+    "types": [
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0569_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Zoroark Hisui",
+    "species": "Zoroark",
+    "form": "Zoroark Hisui",
+    "types": [
+      "normal",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0571-Hisui_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Zoroark",
+    "species": "Zoroark",
+    "form": "Zoroark",
+    "types": [
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0571_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Reuniclus",
+    "species": "Reuniclus",
+    "form": "Reuniclus",
+    "types": [
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0579_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Vanilluxe",
+    "species": "Vanilluxe",
+    "form": "Vanilluxe",
+    "types": [
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0584_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Emolga",
+    "species": "Emolga",
+    "form": "Emolga",
+    "types": [
+      "electric",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0587_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Chandelure",
+    "species": "Chandelure",
+    "form": "Chandelure",
+    "types": [
+      "ghost",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0609_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Beartic",
+    "species": "Beartic",
+    "form": "Beartic",
+    "types": [
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0614_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Stunfisk Galar",
+    "species": "Stunfisk",
+    "form": "Stunfisk Galar",
+    "types": [
+      "ground",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0618-Galar_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Stunfisk",
+    "species": "Stunfisk",
+    "form": "Stunfisk",
+    "types": [
+      "ground",
+      "electric"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0618_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Golurk",
+    "species": "Golurk",
+    "form": "Golurk",
+    "types": [
+      "ground",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0623_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Hydreigon",
+    "species": "Hydreigon",
+    "form": "Hydreigon",
+    "types": [
+      "dark",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0635_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Volcarona",
+    "species": "Volcarona",
+    "form": "Volcarona",
+    "types": [
+      "bug",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0637_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Chesnaught",
+    "species": "Chesnaught",
+    "form": "Chesnaught",
+    "types": [
+      "grass",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0652_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Delphox",
+    "species": "Delphox",
+    "form": "Delphox",
+    "types": [
+      "fire",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0655_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Greninja",
+    "species": "Greninja",
+    "form": "Greninja",
+    "types": [
+      "water",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0658_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Diggersby",
+    "species": "Diggersby",
+    "form": "Diggersby",
+    "types": [
+      "normal",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0660_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Talonflame",
+    "species": "Talonflame",
+    "form": "Talonflame",
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0663_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0666-Archipelago_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0666-Continental_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0666-Elegant_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0666-Fancy_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0666-Garden_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0666-High_Plains_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0666-Icy_Snow_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0666-Jungle_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0666-Marine_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0666-Modern_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0666-Monsoon_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0666-Ocean_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0666-Pok%C3%A9_Ball_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0666-Polar_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0666-River_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0666-Sandstorm_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0666-Savanna_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0666-Sun_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0666-Tundra_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Vivillon",
+    "species": "Vivillon",
+    "form": "Vivillon",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0666_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Floette Eternal",
+    "species": "Floette",
+    "form": "Floette Eternal",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0670-Eternal_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Florges",
+    "species": "Florges",
+    "form": "Florges",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0671-Blue_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Florges",
+    "species": "Florges",
+    "form": "Florges",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0671-Orange_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Florges",
+    "species": "Florges",
+    "form": "Florges",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0671-White_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Florges",
+    "species": "Florges",
+    "form": "Florges",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0671-Yellow_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Florges",
+    "species": "Florges",
+    "form": "Florges",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0671_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Pangoro",
+    "species": "Pangoro",
+    "form": "Pangoro",
+    "types": [
+      "fighting",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0675_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Furfrou",
+    "species": "Furfrou",
+    "form": "Furfrou",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0676-Dandy_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Furfrou",
+    "species": "Furfrou",
+    "form": "Furfrou",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0676-Debutante_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Furfrou",
+    "species": "Furfrou",
+    "form": "Furfrou",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0676-Diamond_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Furfrou",
+    "species": "Furfrou",
+    "form": "Furfrou",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0676-Heart_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Furfrou",
+    "species": "Furfrou",
+    "form": "Furfrou",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0676-Kabuki_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Furfrou",
+    "species": "Furfrou",
+    "form": "Furfrou",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0676-La_Reine_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Furfrou",
+    "species": "Furfrou",
+    "form": "Furfrou",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0676-Matron_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Furfrou",
+    "species": "Furfrou",
+    "form": "Furfrou",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0676-Pharaoh_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Furfrou",
+    "species": "Furfrou",
+    "form": "Furfrou",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0676-Star_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Furfrou",
+    "species": "Furfrou",
+    "form": "Furfrou",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0676_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Meowstic Female",
+    "species": "Meowstic",
+    "form": "Meowstic Female",
+    "types": [
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0678-Female_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Meowstic Male",
+    "species": "Meowstic",
+    "form": "Meowstic Male",
+    "types": [
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0678_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Aegislash Blade",
+    "species": "Aegislash",
+    "form": "Aegislash Blade",
+    "types": [
+      "steel",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0681-Blade_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Aegislash Shield",
+    "species": "Aegislash",
+    "form": "Aegislash Shield",
+    "types": [
+      "steel",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0681_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Aromatisse",
+    "species": "Aromatisse",
+    "form": "Aromatisse",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0683_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Slurpuff",
+    "species": "Slurpuff",
+    "form": "Slurpuff",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0685_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Clawitzer",
+    "species": "Clawitzer",
+    "form": "Clawitzer",
+    "types": [
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0693_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Heliolisk",
+    "species": "Heliolisk",
+    "form": "Heliolisk",
+    "types": [
+      "electric",
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0695_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Tyrantrum",
+    "species": "Tyrantrum",
+    "form": "Tyrantrum",
+    "types": [
+      "rock",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0697_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Aurorus",
+    "species": "Aurorus",
+    "form": "Aurorus",
+    "types": [
+      "rock",
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0699_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Sylveon",
+    "species": "Sylveon",
+    "form": "Sylveon",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0700_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Hawlucha",
+    "species": "Hawlucha",
+    "form": "Hawlucha",
+    "types": [
+      "fighting",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0701_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Dedenne",
+    "species": "Dedenne",
+    "form": "Dedenne",
+    "types": [
+      "electric",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0702_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Goodra Hisui",
+    "species": "Goodra",
+    "form": "Goodra Hisui",
+    "types": [
+      "steel",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0706-Hisui_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Goodra",
+    "species": "Goodra",
+    "form": "Goodra",
+    "types": [
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0706_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Klefki",
+    "species": "Klefki",
+    "form": "Klefki",
+    "types": [
+      "steel",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0707_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Trevenant",
+    "species": "Trevenant",
+    "form": "Trevenant",
+    "types": [
+      "ghost",
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0709_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Gourgeist Average",
+    "species": "Gourgeist",
+    "form": "Gourgeist Average",
+    "types": [
+      "ghost",
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0711-Jumbo_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Gourgeist Large",
+    "species": "Gourgeist",
+    "form": "Gourgeist Large",
+    "types": [
+      "ghost",
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0711-Large_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Gourgeist Small",
+    "species": "Gourgeist",
+    "form": "Gourgeist Small",
+    "types": [
+      "ghost",
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0711-Small_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Gourgeist Average",
+    "species": "Gourgeist",
+    "form": "Gourgeist Average",
+    "types": [
+      "ghost",
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0711_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Avalugg Hisui",
+    "species": "Avalugg",
+    "form": "Avalugg Hisui",
+    "types": [
+      "ice",
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0713-Hisui_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Avalugg",
+    "species": "Avalugg",
+    "form": "Avalugg",
+    "types": [
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0713_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Noivern",
+    "species": "Noivern",
+    "form": "Noivern",
+    "types": [
+      "flying",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0715_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Decidueye Hisui",
+    "species": "Decidueye",
+    "form": "Decidueye Hisui",
+    "types": [
+      "grass",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0724-Hisui_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Decidueye",
+    "species": "Decidueye",
+    "form": "Decidueye",
+    "types": [
+      "grass",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0724_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Incineroar",
+    "species": "Incineroar",
+    "form": "Incineroar",
+    "types": [
+      "fire",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0727_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Primarina",
+    "species": "Primarina",
+    "form": "Primarina",
+    "types": [
+      "water",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0730_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Toucannon",
+    "species": "Toucannon",
+    "form": "Toucannon",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0733_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Crabominable",
+    "species": "Crabominable",
+    "form": "Crabominable",
+    "types": [
+      "fighting",
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0740_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Lycanroc Dusk",
+    "species": "Lycanroc",
+    "form": "Lycanroc Dusk",
+    "types": [
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0745-Dusk_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Lycanroc Midnight",
+    "species": "Lycanroc",
+    "form": "Lycanroc Midnight",
+    "types": [
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0745-Midnight_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Lycanroc Midday",
+    "species": "Lycanroc",
+    "form": "Lycanroc Midday",
+    "types": [
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0745_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Toxapex",
+    "species": "Toxapex",
+    "form": "Toxapex",
+    "types": [
+      "poison",
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0748_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Mudsdale",
+    "species": "Mudsdale",
+    "form": "Mudsdale",
+    "types": [
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0750_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Araquanid",
+    "species": "Araquanid",
+    "form": "Araquanid",
+    "types": [
+      "water",
+      "bug"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0752_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Salazzle",
+    "species": "Salazzle",
+    "form": "Salazzle",
+    "types": [
+      "poison",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0758_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Tsareena",
+    "species": "Tsareena",
+    "form": "Tsareena",
+    "types": [
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0763_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Oranguru",
+    "species": "Oranguru",
+    "form": "Oranguru",
+    "types": [
+      "normal",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0765_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Passimian",
+    "species": "Passimian",
+    "form": "Passimian",
+    "types": [
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0766_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Mimikyu Disguised",
+    "species": "Mimikyu",
+    "form": "Mimikyu Disguised",
+    "types": [
+      "ghost",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0778_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Drampa",
+    "species": "Drampa",
+    "form": "Drampa",
+    "types": [
+      "normal",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0780_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Kommo-o",
+    "species": "Kommo-o",
+    "form": "Kommo-o",
+    "types": [
+      "dragon",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0784_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Corviknight",
+    "species": "Corviknight",
+    "form": "Corviknight",
+    "types": [
+      "flying",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0823_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Flapple",
+    "species": "Flapple",
+    "form": "Flapple",
+    "types": [
+      "grass",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0841_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Appletun",
+    "species": "Appletun",
+    "form": "Appletun",
+    "types": [
+      "grass",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0842_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Sandaconda",
+    "species": "Sandaconda",
+    "form": "Sandaconda",
+    "types": [
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0844_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Polteageist",
+    "species": "Polteageist",
+    "form": "Polteageist",
+    "types": [
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0855_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Hatterene",
+    "species": "Hatterene",
+    "form": "Hatterene",
+    "types": [
+      "psychic",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0858_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Mr Rime",
+    "species": "Mr Rime",
+    "form": "Mr Rime",
+    "types": [
+      "ice",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0866_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Runerigus",
+    "species": "Runerigus",
+    "form": "Runerigus",
+    "types": [
+      "ground",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0867_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Alcremie",
+    "species": "Alcremie",
+    "form": "Alcremie",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0869-Caramel_Swirl_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Alcremie",
+    "species": "Alcremie",
+    "form": "Alcremie",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0869-Lemon_Cream_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Alcremie",
+    "species": "Alcremie",
+    "form": "Alcremie",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0869-Matcha_Cream_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Alcremie",
+    "species": "Alcremie",
+    "form": "Alcremie",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0869-Mint_Cream_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Alcremie",
+    "species": "Alcremie",
+    "form": "Alcremie",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0869-Rainbow_Swirl_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Alcremie",
+    "species": "Alcremie",
+    "form": "Alcremie",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0869-Ruby_Cream_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Alcremie",
+    "species": "Alcremie",
+    "form": "Alcremie",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0869-Ruby_Swirl_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Alcremie",
+    "species": "Alcremie",
+    "form": "Alcremie",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0869-Salted_Cream_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Alcremie",
+    "species": "Alcremie",
+    "form": "Alcremie",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0869_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Morpeko Hangry",
+    "species": "Morpeko",
+    "form": "Morpeko Hangry",
+    "types": [
+      "electric",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0877-Hangry_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Morpeko Full Belly",
+    "species": "Morpeko",
+    "form": "Morpeko Full Belly",
+    "types": [
+      "electric",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0877_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Dragapult",
+    "species": "Dragapult",
+    "form": "Dragapult",
+    "types": [
+      "dragon",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0887_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Wyrdeer",
+    "species": "Wyrdeer",
+    "form": "Wyrdeer",
+    "types": [
+      "normal",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0899_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Kleavor",
+    "species": "Kleavor",
+    "form": "Kleavor",
+    "types": [
+      "bug",
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0900_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Basculegion Female",
+    "species": "Basculegion",
+    "form": "Basculegion Female",
+    "types": [
+      "water",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0902-Female_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Basculegion Male",
+    "species": "Basculegion",
+    "form": "Basculegion Male",
+    "types": [
+      "water",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0902_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Sneasler",
+    "species": "Sneasler",
+    "form": "Sneasler",
+    "types": [
+      "fighting",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0903_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Meowscarada",
+    "species": "Meowscarada",
+    "form": "Meowscarada",
+    "types": [
+      "grass",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0908_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Skeledirge",
+    "species": "Skeledirge",
+    "form": "Skeledirge",
+    "types": [
+      "fire",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0911_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Quaquaval",
+    "species": "Quaquaval",
+    "form": "Quaquaval",
+    "types": [
+      "water",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0914_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Pawmot",
+    "species": "Pawmot",
+    "form": "Pawmot",
+    "types": [
+      "electric",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0923_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Maushold Family Of Three",
+    "species": "Maushold",
+    "form": "Maushold Family Of Three",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0925-Three_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Maushold Family Of Four",
+    "species": "Maushold",
+    "form": "Maushold Family Of Four",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0925_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Garganacl",
+    "species": "Garganacl",
+    "form": "Garganacl",
+    "types": [
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0934_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Armarouge",
+    "species": "Armarouge",
+    "form": "Armarouge",
+    "types": [
+      "fire",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0936_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Ceruledge",
+    "species": "Ceruledge",
+    "form": "Ceruledge",
+    "types": [
+      "fire",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0937_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Bellibolt",
+    "species": "Bellibolt",
+    "form": "Bellibolt",
+    "types": [
+      "electric"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0939_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Scovillain",
+    "species": "Scovillain",
+    "form": "Scovillain",
+    "types": [
+      "grass",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0952_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Espathra",
+    "species": "Espathra",
+    "form": "Espathra",
+    "types": [
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0956_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Tinkaton",
+    "species": "Tinkaton",
+    "form": "Tinkaton",
+    "types": [
+      "fairy",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0959_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Palafin Hero",
+    "species": "Palafin",
+    "form": "Palafin Hero",
+    "types": [
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0964-Hero_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Palafin Zero",
+    "species": "Palafin",
+    "form": "Palafin Zero",
+    "types": [
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0964_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Orthworm",
+    "species": "Orthworm",
+    "form": "Orthworm",
+    "types": [
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0968_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Glimmora",
+    "species": "Glimmora",
+    "form": "Glimmora",
+    "types": [
+      "rock",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0970_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Farigiraf",
+    "species": "Farigiraf",
+    "form": "Farigiraf",
+    "types": [
+      "normal",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0981_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Kingambit",
+    "species": "Kingambit",
+    "form": "Kingambit",
+    "types": [
+      "dark",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_0983_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Sinistcha",
+    "species": "Sinistcha",
+    "form": "Sinistcha",
+    "types": [
+      "grass",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_1013_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Archaludon",
+    "species": "Archaludon",
+    "form": "Archaludon",
+    "types": [
+      "steel",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_1018_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Hydrapple",
+    "species": "Hydrapple",
+    "form": "Hydrapple",
+    "types": [
+      "grass",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\pokemon\\champions_sprites\\shiny\\Menu_CP_1019_shiny.png",
+    "isShiny": true
+  },
+  {
+    "name": "Aegislash Blade",
+    "species": "Aegislash",
+    "form": "Aegislash Blade",
+    "types": [
+      "steel",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\aegislash__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Aegislash Blade",
+    "species": "Aegislash",
+    "form": "Aegislash Blade",
+    "types": [
+      "steel",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\aegislash__camera-2.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Aegislash Blade",
+    "species": "Aegislash",
+    "form": "Aegislash Blade",
+    "types": [
+      "steel",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\aegislash__camera-3.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Aegislash Blade",
+    "species": "Aegislash",
+    "form": "Aegislash Blade",
+    "types": [
+      "steel",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\aegislash__camera-5.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Aerodactyl",
+    "species": "Aerodactyl",
+    "form": "Aerodactyl",
+    "types": [
+      "rock",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\aerodactyl__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Aerodactyl",
+    "species": "Aerodactyl",
+    "form": "Aerodactyl",
+    "types": [
+      "rock",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\aerodactyl__camera-2.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Aerodactyl",
+    "species": "Aerodactyl",
+    "form": "Aerodactyl",
+    "types": [
+      "rock",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\aerodactyl__camera-3.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Aerodactyl",
+    "species": "Aerodactyl",
+    "form": "Aerodactyl",
+    "types": [
+      "rock",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\aerodactyl__camera-6.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Aggron",
+    "species": "Aggron",
+    "form": "Aggron",
+    "types": [
+      "steel",
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\aggron__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Aggron",
+    "species": "Aggron",
+    "form": "Aggron",
+    "types": [
+      "steel",
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\aggron__camera-2.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Arcanine Hisui",
+    "species": "Arcanine",
+    "form": "Arcanine Hisui",
+    "types": [
+      "fire",
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\arcanine-hisui__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Arcanine Hisui",
+    "species": "Arcanine",
+    "form": "Arcanine Hisui",
+    "types": [
+      "fire",
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\arcanine-hisui__camera-2.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Arcanine",
+    "species": "Arcanine",
+    "form": "Arcanine",
+    "types": [
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\arcanine__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Arcanine",
+    "species": "Arcanine",
+    "form": "Arcanine",
+    "types": [
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\arcanine__camera-2.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Archaludon",
+    "species": "Archaludon",
+    "form": "Archaludon",
+    "types": [
+      "steel",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\archaludon__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Archaludon",
+    "species": "Archaludon",
+    "form": "Archaludon",
+    "types": [
+      "steel",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\archaludon__camera-2.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Archaludon",
+    "species": "Archaludon",
+    "form": "Archaludon",
+    "types": [
+      "steel",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\archaludon__camera-3.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Aromatisse",
+    "species": "Aromatisse",
+    "form": "Aromatisse",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\aromatisse__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Basculegion Male",
+    "species": "Basculegion",
+    "form": "Basculegion Male",
+    "types": [
+      "water",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\basculegion-male__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Basculegion Male",
+    "species": "Basculegion",
+    "form": "Basculegion Male",
+    "types": [
+      "water",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\basculegion-male__camera-2.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Basculegion Male",
+    "species": "Basculegion",
+    "form": "Basculegion Male",
+    "types": [
+      "water",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\basculegion-male__camera-3.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Camerupt",
+    "species": "Camerupt",
+    "form": "Camerupt",
+    "types": [
+      "fire",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\camerupt__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Camerupt",
+    "species": "Camerupt",
+    "form": "Camerupt",
+    "types": [
+      "fire",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\camerupt__camera-2.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Ceruledge",
+    "species": "Ceruledge",
+    "form": "Ceruledge",
+    "types": [
+      "fire",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\ceruledge__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Charizard",
+    "species": "Charizard",
+    "form": "Charizard",
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\charizard__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Charizard",
+    "species": "Charizard",
+    "form": "Charizard",
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\charizard__camera-2.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Charizard",
+    "species": "Charizard",
+    "form": "Charizard",
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\charizard__camera-3.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Charizard",
+    "species": "Charizard",
+    "form": "Charizard",
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\charizard__camera-4.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Charizard",
+    "species": "Charizard",
+    "form": "Charizard",
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\charizard__camera-5.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Dragapult",
+    "species": "Dragapult",
+    "form": "Dragapult",
+    "types": [
+      "dragon",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\dragapult__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Dragapult",
+    "species": "Dragapult",
+    "form": "Dragapult",
+    "types": [
+      "dragon",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\dragapult__camera-2.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Dragapult",
+    "species": "Dragapult",
+    "form": "Dragapult",
+    "types": [
+      "dragon",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\dragapult__camera-3.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Dragonite",
+    "species": "Dragonite",
+    "form": "Dragonite",
+    "types": [
+      "dragon",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\dragonite__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Emboar",
+    "species": "Emboar",
+    "form": "Emboar",
+    "types": [
+      "fire",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\emboar__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Emboar",
+    "species": "Emboar",
+    "form": "Emboar",
+    "types": [
+      "fire",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\emboar__camera-2.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Farigiraf",
+    "species": "Farigiraf",
+    "form": "Farigiraf",
+    "types": [
+      "normal",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\farigiraf__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Farigiraf",
+    "species": "Farigiraf",
+    "form": "Farigiraf",
+    "types": [
+      "normal",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\farigiraf__camera-2.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Floette Eternal",
+    "species": "Floette",
+    "form": "Floette Eternal",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\floette-eternal__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Floette Eternal",
+    "species": "Floette",
+    "form": "Floette Eternal",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\floette-eternal__camera-2.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Froslass",
+    "species": "Froslass",
+    "form": "Froslass",
+    "types": [
+      "ice",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\froslass__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Froslass",
+    "species": "Froslass",
+    "form": "Froslass",
+    "types": [
+      "ice",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\froslass__camera-2.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Froslass",
+    "species": "Froslass",
+    "form": "Froslass",
+    "types": [
+      "ice",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\froslass__camera-3.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Froslass",
+    "species": "Froslass",
+    "form": "Froslass",
+    "types": [
+      "ice",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\froslass__camera-4.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Garchomp",
+    "species": "Garchomp",
+    "form": "Garchomp",
+    "types": [
+      "dragon",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\garchomp__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Garchomp",
+    "species": "Garchomp",
+    "form": "Garchomp",
+    "types": [
+      "dragon",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\garchomp__camera-2.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Garchomp",
+    "species": "Garchomp",
+    "form": "Garchomp",
+    "types": [
+      "dragon",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\garchomp__camera-3.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Garchomp",
+    "species": "Garchomp",
+    "form": "Garchomp",
+    "types": [
+      "dragon",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\garchomp__camera-4.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Gardevoir",
+    "species": "Gardevoir",
+    "form": "Gardevoir",
+    "types": [
+      "psychic",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\gardevoir__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Gardevoir",
+    "species": "Gardevoir",
+    "form": "Gardevoir",
+    "types": [
+      "psychic",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\gardevoir__camera-2.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Gardevoir",
+    "species": "Gardevoir",
+    "form": "Gardevoir",
+    "types": [
+      "psychic",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\gardevoir__camera-3.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Gyarados",
+    "species": "Gyarados",
+    "form": "Gyarados",
+    "types": [
+      "water",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\gyarados__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Gyarados",
+    "species": "Gyarados",
+    "form": "Gyarados",
+    "types": [
+      "water",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\gyarados__camera-2.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Heliolisk",
+    "species": "Heliolisk",
+    "form": "Heliolisk",
+    "types": [
+      "electric",
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\heliolisk__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Houndoom",
+    "species": "Houndoom",
+    "form": "Houndoom",
+    "types": [
+      "dark",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\houndoom__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Houndoom",
+    "species": "Houndoom",
+    "form": "Houndoom",
+    "types": [
+      "dark",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\houndoom__camera-2.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Incineroar",
+    "species": "Incineroar",
+    "form": "Incineroar",
+    "types": [
+      "fire",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\incineroar__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Incineroar",
+    "species": "Incineroar",
+    "form": "Incineroar",
+    "types": [
+      "fire",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\incineroar__camera-2.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Incineroar",
+    "species": "Incineroar",
+    "form": "Incineroar",
+    "types": [
+      "fire",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\incineroar__camera-3.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Incineroar",
+    "species": "Incineroar",
+    "form": "Incineroar",
+    "types": [
+      "fire",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\incineroar__camera-4.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Kangaskhan",
+    "species": "Kangaskhan",
+    "form": "Kangaskhan",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\kangaskhan__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Kingambit",
+    "species": "Kingambit",
+    "form": "Kingambit",
+    "types": [
+      "dark",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\kingambit__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Kingambit",
+    "species": "Kingambit",
+    "form": "Kingambit",
+    "types": [
+      "dark",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\kingambit__camera-2.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Kingambit",
+    "species": "Kingambit",
+    "form": "Kingambit",
+    "types": [
+      "dark",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\kingambit__camera-3.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Kingambit",
+    "species": "Kingambit",
+    "form": "Kingambit",
+    "types": [
+      "dark",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\kingambit__camera-4.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Maushold Family Of Three",
+    "species": "Maushold",
+    "form": "Maushold Family Of Three",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\maushold__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Meganium",
+    "species": "Meganium",
+    "form": "Meganium",
+    "types": [
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\meganium__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Meowscarada",
+    "species": "Meowscarada",
+    "form": "Meowscarada",
+    "types": [
+      "grass",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\meowscarada__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Milotic",
+    "species": "Milotic",
+    "form": "Milotic",
+    "types": [
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\milotic__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Milotic",
+    "species": "Milotic",
+    "form": "Milotic",
+    "types": [
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\milotic__camera-2.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Milotic",
+    "species": "Milotic",
+    "form": "Milotic",
+    "types": [
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\milotic__camera-3.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Ninetales Alola",
+    "species": "Ninetales",
+    "form": "Ninetales Alola",
+    "types": [
+      "ice",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\ninetales-alola__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Ninetales Alola",
+    "species": "Ninetales",
+    "form": "Ninetales Alola",
+    "types": [
+      "ice",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\ninetales-alola__camera-2.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Pelipper",
+    "species": "Pelipper",
+    "form": "Pelipper",
+    "types": [
+      "water",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\pelipper__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Pelipper",
+    "species": "Pelipper",
+    "form": "Pelipper",
+    "types": [
+      "water",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\pelipper__camera-2.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Primarina",
+    "species": "Primarina",
+    "form": "Primarina",
+    "types": [
+      "water",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\primarina__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Rotom Wash",
+    "species": "Rotom",
+    "form": "Rotom Wash",
+    "types": [
+      "electric",
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\rotom-wash__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Rotom Wash",
+    "species": "Rotom",
+    "form": "Rotom Wash",
+    "types": [
+      "electric",
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\rotom-wash__camera-3.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Rotom Wash",
+    "species": "Rotom",
+    "form": "Rotom Wash",
+    "types": [
+      "electric",
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\rotom-wash__camera-4.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Sableye",
+    "species": "Sableye",
+    "form": "Sableye",
+    "types": [
+      "dark",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\sableye__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Sableye",
+    "species": "Sableye",
+    "form": "Sableye",
+    "types": [
+      "dark",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\sableye__camera-2.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Sableye",
+    "species": "Sableye",
+    "form": "Sableye",
+    "types": [
+      "dark",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\sableye__camera-3.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Sableye",
+    "species": "Sableye",
+    "form": "Sableye",
+    "types": [
+      "dark",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\sableye__camera-4.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Sableye",
+    "species": "Sableye",
+    "form": "Sableye",
+    "types": [
+      "dark",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\sableye__camera-5.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Scovillain",
+    "species": "Scovillain",
+    "form": "Scovillain",
+    "types": [
+      "grass",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\scovillain__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Sinistcha",
+    "species": "Sinistcha",
+    "form": "Sinistcha",
+    "types": [
+      "grass",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\sinistcha__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Sinistcha",
+    "species": "Sinistcha",
+    "form": "Sinistcha",
+    "types": [
+      "grass",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\sinistcha__camera-2.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Sinistcha",
+    "species": "Sinistcha",
+    "form": "Sinistcha",
+    "types": [
+      "grass",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\sinistcha__camera-3.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Sinistcha",
+    "species": "Sinistcha",
+    "form": "Sinistcha",
+    "types": [
+      "grass",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\sinistcha__camera-4.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Sneasler",
+    "species": "Sneasler",
+    "form": "Sneasler",
+    "types": [
+      "fighting",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\sneasler__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Sneasler",
+    "species": "Sneasler",
+    "form": "Sneasler",
+    "types": [
+      "fighting",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\sneasler__camera-2.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Sneasler",
+    "species": "Sneasler",
+    "form": "Sneasler",
+    "types": [
+      "fighting",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\sneasler__camera-3.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Steelix",
+    "species": "Steelix",
+    "form": "Steelix",
+    "types": [
+      "steel",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\steelix__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Sylveon",
+    "species": "Sylveon",
+    "form": "Sylveon",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\sylveon__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Sylveon",
+    "species": "Sylveon",
+    "form": "Sylveon",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\sylveon__camera-2.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Torkoal",
+    "species": "Torkoal",
+    "form": "Torkoal",
+    "types": [
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\torkoal__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Torkoal",
+    "species": "Torkoal",
+    "form": "Torkoal",
+    "types": [
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\torkoal__camera-2.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Torkoal",
+    "species": "Torkoal",
+    "form": "Torkoal",
+    "types": [
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\torkoal__camera-4.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Tsareena",
+    "species": "Tsareena",
+    "form": "Tsareena",
+    "types": [
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\tsareena__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Tyranitar",
+    "species": "Tyranitar",
+    "form": "Tyranitar",
+    "types": [
+      "rock",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\tyranitar__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Venusaur",
+    "species": "Venusaur",
+    "form": "Venusaur",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\venusaur__camera-1.jpg",
+    "isShiny": false
+  },
+  {
+    "name": "Venusaur",
+    "species": "Venusaur",
+    "form": "Venusaur",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\pokemon\\venusaur__camera-2.jpg",
+    "isShiny": false
+  }
+]

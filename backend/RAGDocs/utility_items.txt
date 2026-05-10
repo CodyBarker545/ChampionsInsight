@@ -1,0 +1,65 @@
+Utility and Offensive Items Guide
+
+Utility and offensive items are held items that provide unique effects, boost damage, or trigger under specific conditions. 
+These items are commonly used in competitive play to gain strategic advantages.
+
+--------------------------------------------------
+Main Utility and Offensive Items
+--------------------------------------------------
+
+Life Orb:
+- Increases damage by 30%
+- User loses 10% of max HP after each damaging attack
+
+Focus Sash:
+- If the Pokémon is at full HP, it survives a hit with 1 HP
+- Only activates once per battle
+
+Weakness Policy:
+- Raises Attack and Special Attack by 2 stages when hit by a super-effective move
+
+Expert Belt:
+- Boosts damage of super-effective moves by 20%
+
+Choice Lock Reminder:
+- Some offensive strategies combine with Choice Items for maximum damage output
+
+--------------------------------------------------
+Utility-Based Items
+--------------------------------------------------
+
+Rocky Helmet:
+- Damages attackers on contact (1/6 of their max HP)
+
+Air Balloon:
+- Grants temporary immunity to Ground-type moves
+- Pops after taking damage
+
+Heavy-Duty Boots:
+- Prevents damage and effects from entry hazards
+
+--------------------------------------------------
+Trigger-Based Mechanics
+--------------------------------------------------
+
+- Many utility items activate only under certain conditions
+- Some items are consumed after activation (e.g., Focus Sash)
+- Some provide permanent effects while held (e.g., Expert Belt)
+
+--------------------------------------------------
+Competitive Use
+--------------------------------------------------
+
+- Life Orb is used for maximum damage output at the cost of HP
+- Focus Sash ensures survival for fragile Pokémon
+- Weakness Policy is used to turn defense into offense
+- Expert Belt rewards targeting weaknesses
+- Utility items help control hazards, positioning, and matchups
+
+--------------------------------------------------
+Source
+--------------------------------------------------
+Bulbapedia. (n.d.). Held item. Retrieved from:
+https://bulbapedia.bulbagarden.net/wiki/Held_item
+
+This dataset was created using information from Bulbapedia, a community-driven Pokémon encyclopedia, selected for its structured explanation of utility and offensive held item effects in competitive gameplay.

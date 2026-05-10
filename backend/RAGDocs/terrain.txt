@@ -1,0 +1,56 @@
+Terrain Effects Guide
+
+Terrain conditions are battlefield effects that influence grounded Pokémon. 
+Only Pokémon that are touching the ground are affected by terrain effects.
+
+Terrain typically lasts for several turns and can be set by moves or abilities.
+
+--------------------------------------------------
+Types of Terrain
+--------------------------------------------------
+
+Electric Terrain:
+- Boosts Electric-type move damage by 30%
+- Prevents grounded Pokémon from falling asleep
+- Activates abilities such as Surge Surfer
+
+Grassy Terrain:
+- Restores 1/16 of max HP each turn for grounded Pokémon
+- Boosts Grass-type move damage by 30%
+- Reduces damage from certain ground-based moves (e.g., Earthquake)
+
+Misty Terrain:
+- Reduces Dragon-type move damage by 50% on grounded targets
+- Prevents status conditions on grounded Pokémon
+
+Psychic Terrain:
+- Boosts Psychic-type move damage by 30%
+- Prevents priority moves from hitting grounded Pokémon
+
+--------------------------------------------------
+Terrain Mechanics
+--------------------------------------------------
+
+- Terrain effects last 5 turns
+- Duration can be extended to 8 turns with held items (e.g., Terrain Extender)
+- Only one terrain can be active at a time
+- Flying-type Pokémon and those with Levitate are not affected
+
+--------------------------------------------------
+Ability Interaction
+--------------------------------------------------
+
+Some abilities activate or benefit from terrain effects.
+
+Examples:
+- Electric Surge: Sets Electric Terrain on entry
+- Grassy Surge: Sets Grassy Terrain on entry
+- Psychic Surge: Sets Psychic Terrain on entry
+- Misty Surge: Sets Misty Terrain on entry
+
+--------------------------------------------------
+Source
+--------------------------------------------------
+Bulbapedia. (n.d.). Terrain. Retrieved from: https://bulbapedia.bulbagarden.net/wiki/Terrain
+
+This dataset was created using information from Bulbapedia, a community-driven Pokémon encyclopedia, selected for its structured explanation of terrain mechanics and their impact on battle strategies.

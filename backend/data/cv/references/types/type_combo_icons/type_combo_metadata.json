@@ -1,0 +1,3942 @@
+{
+  "sourceDatabase": "data/pokemon/champions_sprites/champions_sprite_database.csv",
+  "sourceTypeIconDir": "data/cv/references/types/type_icons",
+  "comboCount": 111,
+  "typeCombos": [
+    {
+      "types": [
+        "bug"
+      ],
+      "typeKey": "bug",
+      "unorderedKey": "bug",
+      "imagePath": "data/cv/references/types/type_combo_icons/bug.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Pinsir",
+          "formApiName": "pinsir",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Pinsir",
+          "formApiName": "pinsir",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "dark"
+      ],
+      "typeKey": "dark",
+      "unorderedKey": "dark",
+      "imagePath": "data/cv/references/types/type_combo_icons/dark.png",
+      "pokemonCount": 10,
+      "examples": [
+        {
+          "displayName": "Umbreon",
+          "formApiName": "umbreon",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Absol Mega",
+          "formApiName": "absol-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Absol",
+          "formApiName": "absol",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Liepard",
+          "formApiName": "liepard",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Zoroark",
+          "formApiName": "zoroark",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Umbreon",
+          "formApiName": "umbreon",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Absol",
+          "formApiName": "absol",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Absol Mega",
+          "formApiName": "absol-mega",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Liepard",
+          "formApiName": "liepard",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Zoroark",
+          "formApiName": "zoroark",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "dragon"
+      ],
+      "typeKey": "dragon",
+      "unorderedKey": "dragon",
+      "imagePath": "data/cv/references/types/type_combo_icons/dragon.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Goodra",
+          "formApiName": "goodra",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Goodra",
+          "formApiName": "goodra",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "electric"
+      ],
+      "typeKey": "electric",
+      "unorderedKey": "electric",
+      "imagePath": "data/cv/references/types/type_combo_icons/electric.png",
+      "pokemonCount": 16,
+      "examples": [
+        {
+          "displayName": "Pikachu",
+          "formApiName": "pikachu",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Raichu",
+          "formApiName": "raichu",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Jolteon",
+          "formApiName": "jolteon",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Ampharos",
+          "formApiName": "ampharos",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Manectric Mega",
+          "formApiName": "manectric-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Manectric",
+          "formApiName": "manectric",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Luxray",
+          "formApiName": "luxray",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Bellibolt",
+          "formApiName": "bellibolt",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Pikachu",
+          "formApiName": "pikachu",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Raichu",
+          "formApiName": "raichu",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Jolteon",
+          "formApiName": "jolteon",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Ampharos",
+          "formApiName": "ampharos",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "fairy"
+      ],
+      "typeKey": "fairy",
+      "unorderedKey": "fairy",
+      "imagePath": "data/cv/references/types/type_combo_icons/fairy.png",
+      "pokemonCount": 40,
+      "examples": [
+        {
+          "displayName": "Clefable",
+          "formApiName": "clefable",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Floette Eternal",
+          "formApiName": "floette-eternal",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Floette Mega",
+          "formApiName": "floette-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Florges",
+          "formApiName": "florges",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Florges",
+          "formApiName": "florges",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Florges",
+          "formApiName": "florges",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Florges",
+          "formApiName": "florges",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Florges",
+          "formApiName": "florges",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Aromatisse",
+          "formApiName": "aromatisse",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Slurpuff",
+          "formApiName": "slurpuff",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Sylveon",
+          "formApiName": "sylveon",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Alcremie",
+          "formApiName": "alcremie",
+          "spriteType": "normal"
+        }
+      ]
+    },
+    {
+      "types": [
+        "fighting"
+      ],
+      "typeKey": "fighting",
+      "unorderedKey": "fighting",
+      "imagePath": "data/cv/references/types/type_combo_icons/fighting.png",
+      "pokemonCount": 8,
+      "examples": [
+        {
+          "displayName": "Machamp",
+          "formApiName": "machamp",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Tauros Paldea Combat Breed",
+          "formApiName": "tauros-paldea-combat-breed",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Conkeldurr",
+          "formApiName": "conkeldurr",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Passimian",
+          "formApiName": "passimian",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Machamp",
+          "formApiName": "machamp",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Tauros Paldea Combat Breed",
+          "formApiName": "tauros-paldea-combat-breed",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Conkeldurr",
+          "formApiName": "conkeldurr",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Passimian",
+          "formApiName": "passimian",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "fire"
+      ],
+      "typeKey": "fire",
+      "unorderedKey": "fire",
+      "imagePath": "data/cv/references/types/type_combo_icons/fire.png",
+      "pokemonCount": 14,
+      "examples": [
+        {
+          "displayName": "Ninetales",
+          "formApiName": "ninetales",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Arcanine",
+          "formApiName": "arcanine",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Flareon",
+          "formApiName": "flareon",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Typhlosion",
+          "formApiName": "typhlosion",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Torkoal",
+          "formApiName": "torkoal",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Castform Sunny",
+          "formApiName": "castform-sunny",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Simisear",
+          "formApiName": "simisear",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Ninetales",
+          "formApiName": "ninetales",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Arcanine",
+          "formApiName": "arcanine",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Flareon",
+          "formApiName": "flareon",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Typhlosion",
+          "formApiName": "typhlosion",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Torkoal",
+          "formApiName": "torkoal",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "ghost"
+      ],
+      "typeKey": "ghost",
+      "unorderedKey": "ghost",
+      "imagePath": "data/cv/references/types/type_combo_icons/ghost.png",
+      "pokemonCount": 8,
+      "examples": [
+        {
+          "displayName": "Banette Mega",
+          "formApiName": "banette-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Banette",
+          "formApiName": "banette",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Cofagrigus",
+          "formApiName": "cofagrigus",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Polteageist",
+          "formApiName": "polteageist",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Banette",
+          "formApiName": "banette",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Banette Mega",
+          "formApiName": "banette-mega",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Cofagrigus",
+          "formApiName": "cofagrigus",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Polteageist",
+          "formApiName": "polteageist",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "grass"
+      ],
+      "typeKey": "grass",
+      "unorderedKey": "grass",
+      "imagePath": "data/cv/references/types/type_combo_icons/grass.png",
+      "pokemonCount": 12,
+      "examples": [
+        {
+          "displayName": "Meganium",
+          "formApiName": "meganium",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Meganium",
+          "formApiName": "meganium",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Leafeon",
+          "formApiName": "leafeon",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Serperior",
+          "formApiName": "serperior",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Simisage",
+          "formApiName": "simisage",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Tsareena",
+          "formApiName": "tsareena",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Meganium",
+          "formApiName": "meganium",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Meganium",
+          "formApiName": "meganium",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Leafeon",
+          "formApiName": "leafeon",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Serperior",
+          "formApiName": "serperior",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Simisage",
+          "formApiName": "simisage",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Tsareena",
+          "formApiName": "tsareena",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "ground"
+      ],
+      "typeKey": "ground",
+      "unorderedKey": "ground",
+      "imagePath": "data/cv/references/types/type_combo_icons/ground.png",
+      "pokemonCount": 6,
+      "examples": [
+        {
+          "displayName": "Hippowdon",
+          "formApiName": "hippowdon",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Mudsdale",
+          "formApiName": "mudsdale",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Sandaconda",
+          "formApiName": "sandaconda",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Hippowdon",
+          "formApiName": "hippowdon",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Mudsdale",
+          "formApiName": "mudsdale",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Sandaconda",
+          "formApiName": "sandaconda",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "ice"
+      ],
+      "typeKey": "ice",
+      "unorderedKey": "ice",
+      "imagePath": "data/cv/references/types/type_combo_icons/ice.png",
+      "pokemonCount": 14,
+      "examples": [
+        {
+          "displayName": "Castform Snowy",
+          "formApiName": "castform-snowy",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Glalie Mega",
+          "formApiName": "glalie-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Glalie",
+          "formApiName": "glalie",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Glaceon",
+          "formApiName": "glaceon",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Vanilluxe",
+          "formApiName": "vanilluxe",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Beartic",
+          "formApiName": "beartic",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Avalugg",
+          "formApiName": "avalugg",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Castform Snowy",
+          "formApiName": "castform-snowy",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Glalie",
+          "formApiName": "glalie",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Glalie Mega",
+          "formApiName": "glalie-mega",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Glaceon",
+          "formApiName": "glaceon",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Vanilluxe",
+          "formApiName": "vanilluxe",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "normal"
+      ],
+      "typeKey": "normal",
+      "unorderedKey": "normal",
+      "imagePath": "data/cv/references/types/type_combo_icons/normal.png",
+      "pokemonCount": 42,
+      "examples": [
+        {
+          "displayName": "Kangaskhan Mega",
+          "formApiName": "kangaskhan-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Kangaskhan",
+          "formApiName": "kangaskhan",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Tauros",
+          "formApiName": "tauros",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Ditto",
+          "formApiName": "ditto",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Snorlax",
+          "formApiName": "snorlax",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Castform",
+          "formApiName": "castform",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Lopunny",
+          "formApiName": "lopunny",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Watchog",
+          "formApiName": "watchog",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Audino",
+          "formApiName": "audino",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Furfrou",
+          "formApiName": "furfrou",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Furfrou",
+          "formApiName": "furfrou",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Furfrou",
+          "formApiName": "furfrou",
+          "spriteType": "normal"
+        }
+      ]
+    },
+    {
+      "types": [
+        "poison"
+      ],
+      "typeKey": "poison",
+      "unorderedKey": "poison",
+      "imagePath": "data/cv/references/types/type_combo_icons/poison.png",
+      "pokemonCount": 4,
+      "examples": [
+        {
+          "displayName": "Arbok",
+          "formApiName": "arbok",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Garbodor",
+          "formApiName": "garbodor",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Arbok",
+          "formApiName": "arbok",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Garbodor",
+          "formApiName": "garbodor",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "psychic"
+      ],
+      "typeKey": "psychic",
+      "unorderedKey": "psychic",
+      "imagePath": "data/cv/references/types/type_combo_icons/psychic.png",
+      "pokemonCount": 18,
+      "examples": [
+        {
+          "displayName": "Alakazam Mega",
+          "formApiName": "alakazam-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Alakazam",
+          "formApiName": "alakazam",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Espeon",
+          "formApiName": "espeon",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Chimecho",
+          "formApiName": "chimecho",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Reuniclus",
+          "formApiName": "reuniclus",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Meowstic Female",
+          "formApiName": "meowstic-female",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Meowstic Mega",
+          "formApiName": "meowstic-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Meowstic Male",
+          "formApiName": "meowstic-male",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Espathra",
+          "formApiName": "espathra",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Alakazam",
+          "formApiName": "alakazam",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Alakazam Mega",
+          "formApiName": "alakazam-mega",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Espeon",
+          "formApiName": "espeon",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "rock"
+      ],
+      "typeKey": "rock",
+      "unorderedKey": "rock",
+      "imagePath": "data/cv/references/types/type_combo_icons/rock.png",
+      "pokemonCount": 10,
+      "examples": [
+        {
+          "displayName": "Rampardos",
+          "formApiName": "rampardos",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Lycanroc Dusk",
+          "formApiName": "lycanroc-dusk",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Lycanroc Midnight",
+          "formApiName": "lycanroc-midnight",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Lycanroc Midday",
+          "formApiName": "lycanroc-midday",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Garganacl",
+          "formApiName": "garganacl",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Rampardos",
+          "formApiName": "rampardos",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Lycanroc Midday",
+          "formApiName": "lycanroc-midday",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Lycanroc Dusk",
+          "formApiName": "lycanroc-dusk",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Lycanroc Midnight",
+          "formApiName": "lycanroc-midnight",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Garganacl",
+          "formApiName": "garganacl",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "steel"
+      ],
+      "typeKey": "steel",
+      "unorderedKey": "steel",
+      "imagePath": "data/cv/references/types/type_combo_icons/steel.png",
+      "pokemonCount": 4,
+      "examples": [
+        {
+          "displayName": "Aggron Mega",
+          "formApiName": "aggron-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Orthworm",
+          "formApiName": "orthworm",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Aggron Mega",
+          "formApiName": "aggron-mega",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Orthworm",
+          "formApiName": "orthworm",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "water"
+      ],
+      "typeKey": "water",
+      "unorderedKey": "water",
+      "imagePath": "data/cv/references/types/type_combo_icons/water.png",
+      "pokemonCount": 24,
+      "examples": [
+        {
+          "displayName": "Blastoise Mega",
+          "formApiName": "blastoise-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Blastoise",
+          "formApiName": "blastoise",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Vaporeon",
+          "formApiName": "vaporeon",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Feraligatr",
+          "formApiName": "feraligatr",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Politoed",
+          "formApiName": "politoed",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Milotic",
+          "formApiName": "milotic",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Castform Rainy",
+          "formApiName": "castform-rainy",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Samurott",
+          "formApiName": "samurott",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Simipour",
+          "formApiName": "simipour",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Clawitzer",
+          "formApiName": "clawitzer",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Palafin Hero",
+          "formApiName": "palafin-hero",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Palafin Zero",
+          "formApiName": "palafin-zero",
+          "spriteType": "normal"
+        }
+      ]
+    },
+    {
+      "types": [
+        "bug",
+        "fighting"
+      ],
+      "typeKey": "bug_fighting",
+      "unorderedKey": "bug_fighting",
+      "imagePath": "data/cv/references/types/type_combo_icons/bug_fighting.png",
+      "pokemonCount": 4,
+      "examples": [
+        {
+          "displayName": "Heracross Mega",
+          "formApiName": "heracross-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Heracross",
+          "formApiName": "heracross",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Heracross",
+          "formApiName": "heracross",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Heracross Mega",
+          "formApiName": "heracross-mega",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "bug",
+        "fire"
+      ],
+      "typeKey": "bug_fire",
+      "unorderedKey": "bug_fire",
+      "imagePath": "data/cv/references/types/type_combo_icons/bug_fire.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Volcarona",
+          "formApiName": "volcarona",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Volcarona",
+          "formApiName": "volcarona",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "bug",
+        "flying"
+      ],
+      "typeKey": "bug_flying",
+      "unorderedKey": "bug_flying",
+      "imagePath": "data/cv/references/types/type_combo_icons/bug_flying.png",
+      "pokemonCount": 42,
+      "examples": [
+        {
+          "displayName": "Pinsir Mega",
+          "formApiName": "pinsir-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Vivillon",
+          "formApiName": "vivillon",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Vivillon",
+          "formApiName": "vivillon",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Vivillon",
+          "formApiName": "vivillon",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Vivillon",
+          "formApiName": "vivillon",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Vivillon",
+          "formApiName": "vivillon",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Vivillon",
+          "formApiName": "vivillon",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Vivillon",
+          "formApiName": "vivillon",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Vivillon",
+          "formApiName": "vivillon",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Vivillon",
+          "formApiName": "vivillon",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Vivillon",
+          "formApiName": "vivillon",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Vivillon",
+          "formApiName": "vivillon",
+          "spriteType": "normal"
+        }
+      ]
+    },
+    {
+      "types": [
+        "bug",
+        "poison"
+      ],
+      "typeKey": "bug_poison",
+      "unorderedKey": "bug_poison",
+      "imagePath": "data/cv/references/types/type_combo_icons/bug_poison.png",
+      "pokemonCount": 6,
+      "examples": [
+        {
+          "displayName": "Beedrill Mega",
+          "formApiName": "beedrill-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Beedrill",
+          "formApiName": "beedrill",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Ariados",
+          "formApiName": "ariados",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Beedrill",
+          "formApiName": "beedrill",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Beedrill Mega",
+          "formApiName": "beedrill-mega",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Ariados",
+          "formApiName": "ariados",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "bug",
+        "rock"
+      ],
+      "typeKey": "bug_rock",
+      "unorderedKey": "bug_rock",
+      "imagePath": "data/cv/references/types/type_combo_icons/bug_rock.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Kleavor",
+          "formApiName": "kleavor",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Kleavor",
+          "formApiName": "kleavor",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "bug",
+        "steel"
+      ],
+      "typeKey": "bug_steel",
+      "unorderedKey": "bug_steel",
+      "imagePath": "data/cv/references/types/type_combo_icons/bug_steel.png",
+      "pokemonCount": 6,
+      "examples": [
+        {
+          "displayName": "Forretress",
+          "formApiName": "forretress",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Scizor Mega",
+          "formApiName": "scizor-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Scizor",
+          "formApiName": "scizor",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Forretress",
+          "formApiName": "forretress",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Scizor",
+          "formApiName": "scizor",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Scizor Mega",
+          "formApiName": "scizor-mega",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "dark",
+        "dragon"
+      ],
+      "typeKey": "dark_dragon",
+      "unorderedKey": "dark_dragon",
+      "imagePath": "data/cv/references/types/type_combo_icons/dark_dragon.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Hydreigon",
+          "formApiName": "hydreigon",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Hydreigon",
+          "formApiName": "hydreigon",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "dark",
+        "fire"
+      ],
+      "typeKey": "dark_fire",
+      "unorderedKey": "dark_fire",
+      "imagePath": "data/cv/references/types/type_combo_icons/dark_fire.png",
+      "pokemonCount": 6,
+      "examples": [
+        {
+          "displayName": "Houndoom Mega",
+          "formApiName": "houndoom-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Houndoom",
+          "formApiName": "houndoom",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Incineroar",
+          "formApiName": "incineroar",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Houndoom",
+          "formApiName": "houndoom",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Houndoom Mega",
+          "formApiName": "houndoom-mega",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Incineroar",
+          "formApiName": "incineroar",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "dark",
+        "ghost"
+      ],
+      "typeKey": "dark_ghost",
+      "unorderedKey": "dark_ghost",
+      "imagePath": "data/cv/references/types/type_combo_icons/dark_ghost.png",
+      "pokemonCount": 6,
+      "examples": [
+        {
+          "displayName": "Sableye Mega",
+          "formApiName": "sableye-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Sableye",
+          "formApiName": "sableye",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Spiritomb",
+          "formApiName": "spiritomb",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Sableye",
+          "formApiName": "sableye",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Sableye Mega",
+          "formApiName": "sableye-mega",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Spiritomb",
+          "formApiName": "spiritomb",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "dark",
+        "ice"
+      ],
+      "typeKey": "dark_ice",
+      "unorderedKey": "dark_ice",
+      "imagePath": "data/cv/references/types/type_combo_icons/dark_ice.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Weavile",
+          "formApiName": "weavile",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Weavile",
+          "formApiName": "weavile",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "dark",
+        "steel"
+      ],
+      "typeKey": "dark_steel",
+      "unorderedKey": "dark_steel",
+      "imagePath": "data/cv/references/types/type_combo_icons/dark_steel.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Kingambit",
+          "formApiName": "kingambit",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Kingambit",
+          "formApiName": "kingambit",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "dragon",
+        "fairy"
+      ],
+      "typeKey": "dragon_fairy",
+      "unorderedKey": "dragon_fairy",
+      "imagePath": "data/cv/references/types/type_combo_icons/dragon_fairy.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Altaria Mega",
+          "formApiName": "altaria-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Altaria Mega",
+          "formApiName": "altaria-mega",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "dragon",
+        "fighting"
+      ],
+      "typeKey": "dragon_fighting",
+      "unorderedKey": "dragon_fighting",
+      "imagePath": "data/cv/references/types/type_combo_icons/dragon_fighting.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Kommo-o",
+          "formApiName": "kommo-o",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Kommo-o",
+          "formApiName": "kommo-o",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "dragon",
+        "flying"
+      ],
+      "typeKey": "dragon_flying",
+      "unorderedKey": "dragon_flying",
+      "imagePath": "data/cv/references/types/type_combo_icons/dragon_flying.png",
+      "pokemonCount": 8,
+      "examples": [
+        {
+          "displayName": "Dragonite Mega",
+          "formApiName": "dragonite-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Dragonite",
+          "formApiName": "dragonite",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Altaria",
+          "formApiName": "altaria",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Noivern",
+          "formApiName": "noivern",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Dragonite",
+          "formApiName": "dragonite",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Dragonite Mega",
+          "formApiName": "dragonite-mega",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Altaria",
+          "formApiName": "altaria",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Noivern",
+          "formApiName": "noivern",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "dragon",
+        "ghost"
+      ],
+      "typeKey": "dragon_ghost",
+      "unorderedKey": "dragon_ghost",
+      "imagePath": "data/cv/references/types/type_combo_icons/dragon_ghost.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Dragapult",
+          "formApiName": "dragapult",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Dragapult",
+          "formApiName": "dragapult",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "dragon",
+        "ground"
+      ],
+      "typeKey": "dragon_ground",
+      "unorderedKey": "dragon_ground",
+      "imagePath": "data/cv/references/types/type_combo_icons/dragon_ground.png",
+      "pokemonCount": 4,
+      "examples": [
+        {
+          "displayName": "Garchomp Mega",
+          "formApiName": "garchomp-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Garchomp",
+          "formApiName": "garchomp",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Garchomp",
+          "formApiName": "garchomp",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Garchomp Mega",
+          "formApiName": "garchomp-mega",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "electric",
+        "dark"
+      ],
+      "typeKey": "electric_dark",
+      "unorderedKey": "dark_electric",
+      "imagePath": "data/cv/references/types/type_combo_icons/electric_dark.png",
+      "pokemonCount": 4,
+      "examples": [
+        {
+          "displayName": "Morpeko Hangry",
+          "formApiName": "morpeko-hangry",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Morpeko Full Belly",
+          "formApiName": "morpeko-full-belly",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Morpeko Full Belly",
+          "formApiName": "morpeko-full-belly",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Morpeko Hangry",
+          "formApiName": "morpeko-hangry",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "electric",
+        "dragon"
+      ],
+      "typeKey": "electric_dragon",
+      "unorderedKey": "dragon_electric",
+      "imagePath": "data/cv/references/types/type_combo_icons/electric_dragon.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Ampharos Mega",
+          "formApiName": "ampharos-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Ampharos Mega",
+          "formApiName": "ampharos-mega",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "electric",
+        "fairy"
+      ],
+      "typeKey": "electric_fairy",
+      "unorderedKey": "electric_fairy",
+      "imagePath": "data/cv/references/types/type_combo_icons/electric_fairy.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Dedenne",
+          "formApiName": "dedenne",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Dedenne",
+          "formApiName": "dedenne",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "electric",
+        "fighting"
+      ],
+      "typeKey": "electric_fighting",
+      "unorderedKey": "electric_fighting",
+      "imagePath": "data/cv/references/types/type_combo_icons/electric_fighting.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Pawmot",
+          "formApiName": "pawmot",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Pawmot",
+          "formApiName": "pawmot",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "electric",
+        "fire"
+      ],
+      "typeKey": "electric_fire",
+      "unorderedKey": "electric_fire",
+      "imagePath": "data/cv/references/types/type_combo_icons/electric_fire.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Rotom Heat",
+          "formApiName": "rotom-heat",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Rotom Heat",
+          "formApiName": "rotom-heat",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "electric",
+        "flying"
+      ],
+      "typeKey": "electric_flying",
+      "unorderedKey": "electric_flying",
+      "imagePath": "data/cv/references/types/type_combo_icons/electric_flying.png",
+      "pokemonCount": 4,
+      "examples": [
+        {
+          "displayName": "Rotom Fan",
+          "formApiName": "rotom-fan",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Emolga",
+          "formApiName": "emolga",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Rotom Fan",
+          "formApiName": "rotom-fan",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Emolga",
+          "formApiName": "emolga",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "electric",
+        "ghost"
+      ],
+      "typeKey": "electric_ghost",
+      "unorderedKey": "electric_ghost",
+      "imagePath": "data/cv/references/types/type_combo_icons/electric_ghost.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Rotom",
+          "formApiName": "rotom",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Rotom",
+          "formApiName": "rotom",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "electric",
+        "grass"
+      ],
+      "typeKey": "electric_grass",
+      "unorderedKey": "electric_grass",
+      "imagePath": "data/cv/references/types/type_combo_icons/electric_grass.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Rotom Mow",
+          "formApiName": "rotom-mow",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Rotom Mow",
+          "formApiName": "rotom-mow",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "electric",
+        "ice"
+      ],
+      "typeKey": "electric_ice",
+      "unorderedKey": "electric_ice",
+      "imagePath": "data/cv/references/types/type_combo_icons/electric_ice.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Rotom Frost",
+          "formApiName": "rotom-frost",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Rotom Frost",
+          "formApiName": "rotom-frost",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "electric",
+        "normal"
+      ],
+      "typeKey": "electric_normal",
+      "unorderedKey": "electric_normal",
+      "imagePath": "data/cv/references/types/type_combo_icons/electric_normal.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Heliolisk",
+          "formApiName": "heliolisk",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Heliolisk",
+          "formApiName": "heliolisk",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "electric",
+        "psychic"
+      ],
+      "typeKey": "electric_psychic",
+      "unorderedKey": "electric_psychic",
+      "imagePath": "data/cv/references/types/type_combo_icons/electric_psychic.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Raichu Alola",
+          "formApiName": "raichu-alola",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Raichu Alola",
+          "formApiName": "raichu-alola",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "electric",
+        "water"
+      ],
+      "typeKey": "electric_water",
+      "unorderedKey": "electric_water",
+      "imagePath": "data/cv/references/types/type_combo_icons/electric_water.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Rotom Wash",
+          "formApiName": "rotom-wash",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Rotom Wash",
+          "formApiName": "rotom-wash",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "fairy",
+        "flying"
+      ],
+      "typeKey": "fairy_flying",
+      "unorderedKey": "fairy_flying",
+      "imagePath": "data/cv/references/types/type_combo_icons/fairy_flying.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Clefable Mega",
+          "formApiName": "clefable-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Clefable Mega",
+          "formApiName": "clefable-mega",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "fighting",
+        "dark"
+      ],
+      "typeKey": "fighting_dark",
+      "unorderedKey": "dark_fighting",
+      "imagePath": "data/cv/references/types/type_combo_icons/fighting_dark.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Pangoro",
+          "formApiName": "pangoro",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Pangoro",
+          "formApiName": "pangoro",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "fighting",
+        "fire"
+      ],
+      "typeKey": "fighting_fire",
+      "unorderedKey": "fighting_fire",
+      "imagePath": "data/cv/references/types/type_combo_icons/fighting_fire.png",
+      "pokemonCount": 8,
+      "examples": [
+        {
+          "displayName": "Tauros Paldea Blaze Breed",
+          "formApiName": "tauros-paldea-blaze-breed",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Infernape",
+          "formApiName": "infernape",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Emboar Mega",
+          "formApiName": "emboar-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Emboar",
+          "formApiName": "emboar",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Tauros Paldea Blaze Breed",
+          "formApiName": "tauros-paldea-blaze-breed",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Infernape",
+          "formApiName": "infernape",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Emboar",
+          "formApiName": "emboar",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Emboar Mega",
+          "formApiName": "emboar-mega",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "fighting",
+        "flying"
+      ],
+      "typeKey": "fighting_flying",
+      "unorderedKey": "fighting_flying",
+      "imagePath": "data/cv/references/types/type_combo_icons/fighting_flying.png",
+      "pokemonCount": 4,
+      "examples": [
+        {
+          "displayName": "Hawlucha Mega",
+          "formApiName": "hawlucha-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Hawlucha",
+          "formApiName": "hawlucha",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Hawlucha",
+          "formApiName": "hawlucha",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Hawlucha Mega",
+          "formApiName": "hawlucha-mega",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "fighting",
+        "ice"
+      ],
+      "typeKey": "fighting_ice",
+      "unorderedKey": "fighting_ice",
+      "imagePath": "data/cv/references/types/type_combo_icons/fighting_ice.png",
+      "pokemonCount": 4,
+      "examples": [
+        {
+          "displayName": "Crabominable Mega",
+          "formApiName": "crabominable-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Crabominable",
+          "formApiName": "crabominable",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Crabominable",
+          "formApiName": "crabominable",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Crabominable Mega",
+          "formApiName": "crabominable-mega",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "fighting",
+        "psychic"
+      ],
+      "typeKey": "fighting_psychic",
+      "unorderedKey": "fighting_psychic",
+      "imagePath": "data/cv/references/types/type_combo_icons/fighting_psychic.png",
+      "pokemonCount": 8,
+      "examples": [
+        {
+          "displayName": "Medicham Mega",
+          "formApiName": "medicham-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Medicham",
+          "formApiName": "medicham",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Gallade Mega",
+          "formApiName": "gallade-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Gallade",
+          "formApiName": "gallade",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Medicham",
+          "formApiName": "medicham",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Medicham Mega",
+          "formApiName": "medicham-mega",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Gallade",
+          "formApiName": "gallade",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Gallade Mega",
+          "formApiName": "gallade-mega",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "fighting",
+        "steel"
+      ],
+      "typeKey": "fighting_steel",
+      "unorderedKey": "fighting_steel",
+      "imagePath": "data/cv/references/types/type_combo_icons/fighting_steel.png",
+      "pokemonCount": 4,
+      "examples": [
+        {
+          "displayName": "Lucario Mega",
+          "formApiName": "lucario-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Lucario",
+          "formApiName": "lucario",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Lucario",
+          "formApiName": "lucario",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Lucario Mega",
+          "formApiName": "lucario-mega",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "fighting",
+        "water"
+      ],
+      "typeKey": "fighting_water",
+      "unorderedKey": "fighting_water",
+      "imagePath": "data/cv/references/types/type_combo_icons/fighting_water.png",
+      "pokemonCount": 4,
+      "examples": [
+        {
+          "displayName": "Tauros Paldea Aqua Breed",
+          "formApiName": "tauros-paldea-aqua-breed",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Quaquaval",
+          "formApiName": "quaquaval",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Tauros Paldea Aqua Breed",
+          "formApiName": "tauros-paldea-aqua-breed",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Quaquaval",
+          "formApiName": "quaquaval",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "fire",
+        "dragon"
+      ],
+      "typeKey": "fire_dragon",
+      "unorderedKey": "dragon_fire",
+      "imagePath": "data/cv/references/types/type_combo_icons/fire_dragon.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Charizard Mega X",
+          "formApiName": "charizard-mega-x",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Charizard Mega X",
+          "formApiName": "charizard-mega-x",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "fire",
+        "flying"
+      ],
+      "typeKey": "fire_flying",
+      "unorderedKey": "fire_flying",
+      "imagePath": "data/cv/references/types/type_combo_icons/fire_flying.png",
+      "pokemonCount": 6,
+      "examples": [
+        {
+          "displayName": "Charizard Mega Y",
+          "formApiName": "charizard-mega-y",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Charizard",
+          "formApiName": "charizard",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Talonflame",
+          "formApiName": "talonflame",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Charizard",
+          "formApiName": "charizard",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Charizard Mega Y",
+          "formApiName": "charizard-mega-y",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Talonflame",
+          "formApiName": "talonflame",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "fire",
+        "ghost"
+      ],
+      "typeKey": "fire_ghost",
+      "unorderedKey": "fire_ghost",
+      "imagePath": "data/cv/references/types/type_combo_icons/fire_ghost.png",
+      "pokemonCount": 10,
+      "examples": [
+        {
+          "displayName": "Typhlosion Hisui",
+          "formApiName": "typhlosion-hisui",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Chandelure Mega",
+          "formApiName": "chandelure-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Chandelure",
+          "formApiName": "chandelure",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Skeledirge",
+          "formApiName": "skeledirge",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Ceruledge",
+          "formApiName": "ceruledge",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Typhlosion Hisui",
+          "formApiName": "typhlosion-hisui",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Chandelure",
+          "formApiName": "chandelure",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Chandelure Mega",
+          "formApiName": "chandelure-mega",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Skeledirge",
+          "formApiName": "skeledirge",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Ceruledge",
+          "formApiName": "ceruledge",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "fire",
+        "ground"
+      ],
+      "typeKey": "fire_ground",
+      "unorderedKey": "fire_ground",
+      "imagePath": "data/cv/references/types/type_combo_icons/fire_ground.png",
+      "pokemonCount": 4,
+      "examples": [
+        {
+          "displayName": "Camerupt Mega",
+          "formApiName": "camerupt-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Camerupt",
+          "formApiName": "camerupt",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Camerupt",
+          "formApiName": "camerupt",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Camerupt Mega",
+          "formApiName": "camerupt-mega",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "fire",
+        "psychic"
+      ],
+      "typeKey": "fire_psychic",
+      "unorderedKey": "fire_psychic",
+      "imagePath": "data/cv/references/types/type_combo_icons/fire_psychic.png",
+      "pokemonCount": 6,
+      "examples": [
+        {
+          "displayName": "Delphox Mega",
+          "formApiName": "delphox-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Delphox",
+          "formApiName": "delphox",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Armarouge",
+          "formApiName": "armarouge",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Delphox",
+          "formApiName": "delphox",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Delphox Mega",
+          "formApiName": "delphox-mega",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Armarouge",
+          "formApiName": "armarouge",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "fire",
+        "rock"
+      ],
+      "typeKey": "fire_rock",
+      "unorderedKey": "fire_rock",
+      "imagePath": "data/cv/references/types/type_combo_icons/fire_rock.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Arcanine Hisui",
+          "formApiName": "arcanine-hisui",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Arcanine Hisui",
+          "formApiName": "arcanine-hisui",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "ghost",
+        "fairy"
+      ],
+      "typeKey": "ghost_fairy",
+      "unorderedKey": "fairy_ghost",
+      "imagePath": "data/cv/references/types/type_combo_icons/ghost_fairy.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Mimikyu Disguised",
+          "formApiName": "mimikyu-disguised",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Mimikyu Disguised",
+          "formApiName": "mimikyu-disguised",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "ghost",
+        "grass"
+      ],
+      "typeKey": "ghost_grass",
+      "unorderedKey": "ghost_grass",
+      "imagePath": "data/cv/references/types/type_combo_icons/ghost_grass.png",
+      "pokemonCount": 14,
+      "examples": [
+        {
+          "displayName": "Trevenant",
+          "formApiName": "trevenant",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Gourgeist Average",
+          "formApiName": "gourgeist-average",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Gourgeist Large",
+          "formApiName": "gourgeist-large",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Gourgeist Small",
+          "formApiName": "gourgeist-small",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Gourgeist Average",
+          "formApiName": "gourgeist-average",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Decidueye",
+          "formApiName": "decidueye",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Sinistcha",
+          "formApiName": "sinistcha",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Trevenant",
+          "formApiName": "trevenant",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Gourgeist Average",
+          "formApiName": "gourgeist-average",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Gourgeist Average",
+          "formApiName": "gourgeist-average",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Gourgeist Large",
+          "formApiName": "gourgeist-large",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Gourgeist Small",
+          "formApiName": "gourgeist-small",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "ghost",
+        "poison"
+      ],
+      "typeKey": "ghost_poison",
+      "unorderedKey": "ghost_poison",
+      "imagePath": "data/cv/references/types/type_combo_icons/ghost_poison.png",
+      "pokemonCount": 4,
+      "examples": [
+        {
+          "displayName": "Gengar Mega",
+          "formApiName": "gengar-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Gengar",
+          "formApiName": "gengar",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Gengar",
+          "formApiName": "gengar",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Gengar Mega",
+          "formApiName": "gengar-mega",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "grass",
+        "dark"
+      ],
+      "typeKey": "grass_dark",
+      "unorderedKey": "dark_grass",
+      "imagePath": "data/cv/references/types/type_combo_icons/grass_dark.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Meowscarada",
+          "formApiName": "meowscarada",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Meowscarada",
+          "formApiName": "meowscarada",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "grass",
+        "dragon"
+      ],
+      "typeKey": "grass_dragon",
+      "unorderedKey": "dragon_grass",
+      "imagePath": "data/cv/references/types/type_combo_icons/grass_dragon.png",
+      "pokemonCount": 6,
+      "examples": [
+        {
+          "displayName": "Flapple",
+          "formApiName": "flapple",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Appletun",
+          "formApiName": "appletun",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Hydrapple",
+          "formApiName": "hydrapple",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Flapple",
+          "formApiName": "flapple",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Appletun",
+          "formApiName": "appletun",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Hydrapple",
+          "formApiName": "hydrapple",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "grass",
+        "fairy"
+      ],
+      "typeKey": "grass_fairy",
+      "unorderedKey": "fairy_grass",
+      "imagePath": "data/cv/references/types/type_combo_icons/grass_fairy.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Whimsicott",
+          "formApiName": "whimsicott",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Whimsicott",
+          "formApiName": "whimsicott",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "grass",
+        "fighting"
+      ],
+      "typeKey": "grass_fighting",
+      "unorderedKey": "fighting_grass",
+      "imagePath": "data/cv/references/types/type_combo_icons/grass_fighting.png",
+      "pokemonCount": 6,
+      "examples": [
+        {
+          "displayName": "Chesnaught Mega",
+          "formApiName": "chesnaught-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Chesnaught",
+          "formApiName": "chesnaught",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Decidueye Hisui",
+          "formApiName": "decidueye-hisui",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Chesnaught",
+          "formApiName": "chesnaught",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Chesnaught Mega",
+          "formApiName": "chesnaught-mega",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Decidueye Hisui",
+          "formApiName": "decidueye-hisui",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "grass",
+        "fire"
+      ],
+      "typeKey": "grass_fire",
+      "unorderedKey": "fire_grass",
+      "imagePath": "data/cv/references/types/type_combo_icons/grass_fire.png",
+      "pokemonCount": 4,
+      "examples": [
+        {
+          "displayName": "Scovillain Mega",
+          "formApiName": "scovillain-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Scovillain",
+          "formApiName": "scovillain",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Scovillain",
+          "formApiName": "scovillain",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Scovillain Mega",
+          "formApiName": "scovillain-mega",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "grass",
+        "ground"
+      ],
+      "typeKey": "grass_ground",
+      "unorderedKey": "grass_ground",
+      "imagePath": "data/cv/references/types/type_combo_icons/grass_ground.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Torterra",
+          "formApiName": "torterra",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Torterra",
+          "formApiName": "torterra",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "grass",
+        "ice"
+      ],
+      "typeKey": "grass_ice",
+      "unorderedKey": "grass_ice",
+      "imagePath": "data/cv/references/types/type_combo_icons/grass_ice.png",
+      "pokemonCount": 4,
+      "examples": [
+        {
+          "displayName": "Abomasnow Mega",
+          "formApiName": "abomasnow-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Abomasnow",
+          "formApiName": "abomasnow",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Abomasnow",
+          "formApiName": "abomasnow",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Abomasnow Mega",
+          "formApiName": "abomasnow-mega",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "grass",
+        "poison"
+      ],
+      "typeKey": "grass_poison",
+      "unorderedKey": "grass_poison",
+      "imagePath": "data/cv/references/types/type_combo_icons/grass_poison.png",
+      "pokemonCount": 10,
+      "examples": [
+        {
+          "displayName": "Venusaur Mega",
+          "formApiName": "venusaur-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Venusaur",
+          "formApiName": "venusaur",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Victreebel Mega",
+          "formApiName": "victreebel-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Victreebel",
+          "formApiName": "victreebel",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Roserade",
+          "formApiName": "roserade",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Venusaur",
+          "formApiName": "venusaur",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Venusaur Mega",
+          "formApiName": "venusaur-mega",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Victreebel",
+          "formApiName": "victreebel",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Victreebel Mega",
+          "formApiName": "victreebel-mega",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Roserade",
+          "formApiName": "roserade",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "ground",
+        "dark"
+      ],
+      "typeKey": "ground_dark",
+      "unorderedKey": "dark_ground",
+      "imagePath": "data/cv/references/types/type_combo_icons/ground_dark.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Krookodile",
+          "formApiName": "krookodile",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Krookodile",
+          "formApiName": "krookodile",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "ground",
+        "electric"
+      ],
+      "typeKey": "ground_electric",
+      "unorderedKey": "electric_ground",
+      "imagePath": "data/cv/references/types/type_combo_icons/ground_electric.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Stunfisk",
+          "formApiName": "stunfisk",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Stunfisk",
+          "formApiName": "stunfisk",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "ground",
+        "flying"
+      ],
+      "typeKey": "ground_flying",
+      "unorderedKey": "flying_ground",
+      "imagePath": "data/cv/references/types/type_combo_icons/ground_flying.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Gliscor",
+          "formApiName": "gliscor",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Gliscor",
+          "formApiName": "gliscor",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "ground",
+        "ghost"
+      ],
+      "typeKey": "ground_ghost",
+      "unorderedKey": "ghost_ground",
+      "imagePath": "data/cv/references/types/type_combo_icons/ground_ghost.png",
+      "pokemonCount": 6,
+      "examples": [
+        {
+          "displayName": "Golurk Mega",
+          "formApiName": "golurk-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Golurk",
+          "formApiName": "golurk",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Runerigus",
+          "formApiName": "runerigus",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Golurk",
+          "formApiName": "golurk",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Golurk Mega",
+          "formApiName": "golurk-mega",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Runerigus",
+          "formApiName": "runerigus",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "ground",
+        "rock"
+      ],
+      "typeKey": "ground_rock",
+      "unorderedKey": "ground_rock",
+      "imagePath": "data/cv/references/types/type_combo_icons/ground_rock.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Rhyperior",
+          "formApiName": "rhyperior",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Rhyperior",
+          "formApiName": "rhyperior",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "ice",
+        "fairy"
+      ],
+      "typeKey": "ice_fairy",
+      "unorderedKey": "fairy_ice",
+      "imagePath": "data/cv/references/types/type_combo_icons/ice_fairy.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Ninetales Alola",
+          "formApiName": "ninetales-alola",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Ninetales Alola",
+          "formApiName": "ninetales-alola",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "ice",
+        "ghost"
+      ],
+      "typeKey": "ice_ghost",
+      "unorderedKey": "ghost_ice",
+      "imagePath": "data/cv/references/types/type_combo_icons/ice_ghost.png",
+      "pokemonCount": 4,
+      "examples": [
+        {
+          "displayName": "Froslass Mega",
+          "formApiName": "froslass-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Froslass",
+          "formApiName": "froslass",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Froslass",
+          "formApiName": "froslass",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Froslass Mega",
+          "formApiName": "froslass-mega",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "ice",
+        "ground"
+      ],
+      "typeKey": "ice_ground",
+      "unorderedKey": "ground_ice",
+      "imagePath": "data/cv/references/types/type_combo_icons/ice_ground.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Mamoswine",
+          "formApiName": "mamoswine",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Mamoswine",
+          "formApiName": "mamoswine",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "ice",
+        "psychic"
+      ],
+      "typeKey": "ice_psychic",
+      "unorderedKey": "ice_psychic",
+      "imagePath": "data/cv/references/types/type_combo_icons/ice_psychic.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Mr Rime",
+          "formApiName": "mr-rime",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Mr Rime",
+          "formApiName": "mr-rime",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "normal",
+        "dragon"
+      ],
+      "typeKey": "normal_dragon",
+      "unorderedKey": "dragon_normal",
+      "imagePath": "data/cv/references/types/type_combo_icons/normal_dragon.png",
+      "pokemonCount": 4,
+      "examples": [
+        {
+          "displayName": "Drampa Mega",
+          "formApiName": "drampa-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Drampa",
+          "formApiName": "drampa",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Drampa",
+          "formApiName": "drampa",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Drampa Mega",
+          "formApiName": "drampa-mega",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "normal",
+        "fairy"
+      ],
+      "typeKey": "normal_fairy",
+      "unorderedKey": "fairy_normal",
+      "imagePath": "data/cv/references/types/type_combo_icons/normal_fairy.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Audino Mega",
+          "formApiName": "audino-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Audino Mega",
+          "formApiName": "audino-mega",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "normal",
+        "fighting"
+      ],
+      "typeKey": "normal_fighting",
+      "unorderedKey": "fighting_normal",
+      "imagePath": "data/cv/references/types/type_combo_icons/normal_fighting.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Lopunny Mega",
+          "formApiName": "lopunny-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Lopunny Mega",
+          "formApiName": "lopunny-mega",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "normal",
+        "flying"
+      ],
+      "typeKey": "normal_flying",
+      "unorderedKey": "flying_normal",
+      "imagePath": "data/cv/references/types/type_combo_icons/normal_flying.png",
+      "pokemonCount": 6,
+      "examples": [
+        {
+          "displayName": "Pidgeot Mega",
+          "formApiName": "pidgeot-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Pidgeot",
+          "formApiName": "pidgeot",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Toucannon",
+          "formApiName": "toucannon",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Pidgeot",
+          "formApiName": "pidgeot",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Pidgeot Mega",
+          "formApiName": "pidgeot-mega",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Toucannon",
+          "formApiName": "toucannon",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "normal",
+        "ghost"
+      ],
+      "typeKey": "normal_ghost",
+      "unorderedKey": "ghost_normal",
+      "imagePath": "data/cv/references/types/type_combo_icons/normal_ghost.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Zoroark Hisui",
+          "formApiName": "zoroark-hisui",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Zoroark Hisui",
+          "formApiName": "zoroark-hisui",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "normal",
+        "ground"
+      ],
+      "typeKey": "normal_ground",
+      "unorderedKey": "ground_normal",
+      "imagePath": "data/cv/references/types/type_combo_icons/normal_ground.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Diggersby",
+          "formApiName": "diggersby",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Diggersby",
+          "formApiName": "diggersby",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "normal",
+        "psychic"
+      ],
+      "typeKey": "normal_psychic",
+      "unorderedKey": "normal_psychic",
+      "imagePath": "data/cv/references/types/type_combo_icons/normal_psychic.png",
+      "pokemonCount": 6,
+      "examples": [
+        {
+          "displayName": "Oranguru",
+          "formApiName": "oranguru",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Wyrdeer",
+          "formApiName": "wyrdeer",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Farigiraf",
+          "formApiName": "farigiraf",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Oranguru",
+          "formApiName": "oranguru",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Wyrdeer",
+          "formApiName": "wyrdeer",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Farigiraf",
+          "formApiName": "farigiraf",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "poison",
+        "fighting"
+      ],
+      "typeKey": "poison_fighting",
+      "unorderedKey": "fighting_poison",
+      "imagePath": "data/cv/references/types/type_combo_icons/poison_fighting.png",
+      "pokemonCount": 4,
+      "examples": [
+        {
+          "displayName": "Toxicroak",
+          "formApiName": "toxicroak",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Sneasler",
+          "formApiName": "sneasler",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Toxicroak",
+          "formApiName": "toxicroak",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Sneasler",
+          "formApiName": "sneasler",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "poison",
+        "fire"
+      ],
+      "typeKey": "poison_fire",
+      "unorderedKey": "fire_poison",
+      "imagePath": "data/cv/references/types/type_combo_icons/poison_fire.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Salazzle",
+          "formApiName": "salazzle",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Salazzle",
+          "formApiName": "salazzle",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "poison",
+        "psychic"
+      ],
+      "typeKey": "poison_psychic",
+      "unorderedKey": "poison_psychic",
+      "imagePath": "data/cv/references/types/type_combo_icons/poison_psychic.png",
+      "pokemonCount": 4,
+      "examples": [
+        {
+          "displayName": "Slowbro Galar",
+          "formApiName": "slowbro-galar",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Slowking Galar",
+          "formApiName": "slowking-galar",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Slowbro Galar",
+          "formApiName": "slowbro-galar",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Slowking Galar",
+          "formApiName": "slowking-galar",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "poison",
+        "water"
+      ],
+      "typeKey": "poison_water",
+      "unorderedKey": "poison_water",
+      "imagePath": "data/cv/references/types/type_combo_icons/poison_water.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Toxapex",
+          "formApiName": "toxapex",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Toxapex",
+          "formApiName": "toxapex",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "psychic",
+        "fairy"
+      ],
+      "typeKey": "psychic_fairy",
+      "unorderedKey": "fairy_psychic",
+      "imagePath": "data/cv/references/types/type_combo_icons/psychic_fairy.png",
+      "pokemonCount": 6,
+      "examples": [
+        {
+          "displayName": "Gardevoir Mega",
+          "formApiName": "gardevoir-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Gardevoir",
+          "formApiName": "gardevoir",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Hatterene",
+          "formApiName": "hatterene",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Gardevoir",
+          "formApiName": "gardevoir",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Gardevoir Mega",
+          "formApiName": "gardevoir-mega",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Hatterene",
+          "formApiName": "hatterene",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "psychic",
+        "steel"
+      ],
+      "typeKey": "psychic_steel",
+      "unorderedKey": "psychic_steel",
+      "imagePath": "data/cv/references/types/type_combo_icons/psychic_steel.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Chimecho Mega",
+          "formApiName": "chimecho-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Chimecho Mega",
+          "formApiName": "chimecho-mega",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "rock",
+        "dark"
+      ],
+      "typeKey": "rock_dark",
+      "unorderedKey": "dark_rock",
+      "imagePath": "data/cv/references/types/type_combo_icons/rock_dark.png",
+      "pokemonCount": 4,
+      "examples": [
+        {
+          "displayName": "Tyranitar Mega",
+          "formApiName": "tyranitar-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Tyranitar",
+          "formApiName": "tyranitar",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Tyranitar",
+          "formApiName": "tyranitar",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Tyranitar Mega",
+          "formApiName": "tyranitar-mega",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "rock",
+        "dragon"
+      ],
+      "typeKey": "rock_dragon",
+      "unorderedKey": "dragon_rock",
+      "imagePath": "data/cv/references/types/type_combo_icons/rock_dragon.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Tyrantrum",
+          "formApiName": "tyrantrum",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Tyrantrum",
+          "formApiName": "tyrantrum",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "rock",
+        "flying"
+      ],
+      "typeKey": "rock_flying",
+      "unorderedKey": "flying_rock",
+      "imagePath": "data/cv/references/types/type_combo_icons/rock_flying.png",
+      "pokemonCount": 4,
+      "examples": [
+        {
+          "displayName": "Aerodactyl Mega",
+          "formApiName": "aerodactyl-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Aerodactyl",
+          "formApiName": "aerodactyl",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Aerodactyl",
+          "formApiName": "aerodactyl",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Aerodactyl Mega",
+          "formApiName": "aerodactyl-mega",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "rock",
+        "ice"
+      ],
+      "typeKey": "rock_ice",
+      "unorderedKey": "ice_rock",
+      "imagePath": "data/cv/references/types/type_combo_icons/rock_ice.png",
+      "pokemonCount": 4,
+      "examples": [
+        {
+          "displayName": "Aurorus",
+          "formApiName": "aurorus",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Avalugg Hisui",
+          "formApiName": "avalugg-hisui",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Aurorus",
+          "formApiName": "aurorus",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Avalugg Hisui",
+          "formApiName": "avalugg-hisui",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "rock",
+        "poison"
+      ],
+      "typeKey": "rock_poison",
+      "unorderedKey": "poison_rock",
+      "imagePath": "data/cv/references/types/type_combo_icons/rock_poison.png",
+      "pokemonCount": 4,
+      "examples": [
+        {
+          "displayName": "Glimmora Mega",
+          "formApiName": "glimmora-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Glimmora",
+          "formApiName": "glimmora",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Glimmora",
+          "formApiName": "glimmora",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Glimmora Mega",
+          "formApiName": "glimmora-mega",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "steel",
+        "dragon"
+      ],
+      "typeKey": "steel_dragon",
+      "unorderedKey": "dragon_steel",
+      "imagePath": "data/cv/references/types/type_combo_icons/steel_dragon.png",
+      "pokemonCount": 4,
+      "examples": [
+        {
+          "displayName": "Goodra Hisui",
+          "formApiName": "goodra-hisui",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Archaludon",
+          "formApiName": "archaludon",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Goodra Hisui",
+          "formApiName": "goodra-hisui",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Archaludon",
+          "formApiName": "archaludon",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "steel",
+        "fairy"
+      ],
+      "typeKey": "steel_fairy",
+      "unorderedKey": "fairy_steel",
+      "imagePath": "data/cv/references/types/type_combo_icons/steel_fairy.png",
+      "pokemonCount": 4,
+      "examples": [
+        {
+          "displayName": "Klefki",
+          "formApiName": "klefki",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Tinkaton",
+          "formApiName": "tinkaton",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Klefki",
+          "formApiName": "klefki",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Tinkaton",
+          "formApiName": "tinkaton",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "steel",
+        "flying"
+      ],
+      "typeKey": "steel_flying",
+      "unorderedKey": "flying_steel",
+      "imagePath": "data/cv/references/types/type_combo_icons/steel_flying.png",
+      "pokemonCount": 6,
+      "examples": [
+        {
+          "displayName": "Skarmory Mega",
+          "formApiName": "skarmory-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Skarmory",
+          "formApiName": "skarmory",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Corviknight",
+          "formApiName": "corviknight",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Skarmory",
+          "formApiName": "skarmory",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Skarmory Mega",
+          "formApiName": "skarmory-mega",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Corviknight",
+          "formApiName": "corviknight",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "steel",
+        "ghost"
+      ],
+      "typeKey": "steel_ghost",
+      "unorderedKey": "ghost_steel",
+      "imagePath": "data/cv/references/types/type_combo_icons/steel_ghost.png",
+      "pokemonCount": 4,
+      "examples": [
+        {
+          "displayName": "Aegislash Blade",
+          "formApiName": "aegislash-blade",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Aegislash Shield",
+          "formApiName": "aegislash-shield",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Aegislash Shield",
+          "formApiName": "aegislash-shield",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Aegislash Blade",
+          "formApiName": "aegislash-blade",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "steel",
+        "ground"
+      ],
+      "typeKey": "steel_ground",
+      "unorderedKey": "ground_steel",
+      "imagePath": "data/cv/references/types/type_combo_icons/steel_ground.png",
+      "pokemonCount": 10,
+      "examples": [
+        {
+          "displayName": "Steelix Mega",
+          "formApiName": "steelix-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Steelix",
+          "formApiName": "steelix",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Excadrill Mega",
+          "formApiName": "excadrill-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Excadrill",
+          "formApiName": "excadrill",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Stunfisk Galar",
+          "formApiName": "stunfisk-galar",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Steelix",
+          "formApiName": "steelix",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Steelix Mega",
+          "formApiName": "steelix-mega",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Excadrill",
+          "formApiName": "excadrill",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Excadrill Mega",
+          "formApiName": "excadrill-mega",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Stunfisk Galar",
+          "formApiName": "stunfisk-galar",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "steel",
+        "rock"
+      ],
+      "typeKey": "steel_rock",
+      "unorderedKey": "rock_steel",
+      "imagePath": "data/cv/references/types/type_combo_icons/steel_rock.png",
+      "pokemonCount": 4,
+      "examples": [
+        {
+          "displayName": "Aggron",
+          "formApiName": "aggron",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Bastiodon",
+          "formApiName": "bastiodon",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Aggron",
+          "formApiName": "aggron",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Bastiodon",
+          "formApiName": "bastiodon",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "water",
+        "bug"
+      ],
+      "typeKey": "water_bug",
+      "unorderedKey": "bug_water",
+      "imagePath": "data/cv/references/types/type_combo_icons/water_bug.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Araquanid",
+          "formApiName": "araquanid",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Araquanid",
+          "formApiName": "araquanid",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "water",
+        "dark"
+      ],
+      "typeKey": "water_dark",
+      "unorderedKey": "dark_water",
+      "imagePath": "data/cv/references/types/type_combo_icons/water_dark.png",
+      "pokemonCount": 12,
+      "examples": [
+        {
+          "displayName": "Gyarados Mega",
+          "formApiName": "gyarados-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Sharpedo Mega",
+          "formApiName": "sharpedo-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Sharpedo",
+          "formApiName": "sharpedo",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Samurott Hisui",
+          "formApiName": "samurott-hisui",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Greninja Mega",
+          "formApiName": "greninja-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Greninja",
+          "formApiName": "greninja",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Gyarados Mega",
+          "formApiName": "gyarados-mega",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Sharpedo",
+          "formApiName": "sharpedo",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Sharpedo Mega",
+          "formApiName": "sharpedo-mega",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Samurott Hisui",
+          "formApiName": "samurott-hisui",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Greninja",
+          "formApiName": "greninja",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Greninja Mega",
+          "formApiName": "greninja-mega",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "water",
+        "dragon"
+      ],
+      "typeKey": "water_dragon",
+      "unorderedKey": "dragon_water",
+      "imagePath": "data/cv/references/types/type_combo_icons/water_dragon.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Feraligatr Mega",
+          "formApiName": "feraligatr-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Feraligatr Mega",
+          "formApiName": "feraligatr-mega",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "water",
+        "fairy"
+      ],
+      "typeKey": "water_fairy",
+      "unorderedKey": "fairy_water",
+      "imagePath": "data/cv/references/types/type_combo_icons/water_fairy.png",
+      "pokemonCount": 4,
+      "examples": [
+        {
+          "displayName": "Azumarill",
+          "formApiName": "azumarill",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Primarina",
+          "formApiName": "primarina",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Azumarill",
+          "formApiName": "azumarill",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Primarina",
+          "formApiName": "primarina",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "water",
+        "flying"
+      ],
+      "typeKey": "water_flying",
+      "unorderedKey": "flying_water",
+      "imagePath": "data/cv/references/types/type_combo_icons/water_flying.png",
+      "pokemonCount": 4,
+      "examples": [
+        {
+          "displayName": "Gyarados",
+          "formApiName": "gyarados",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Pelipper",
+          "formApiName": "pelipper",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Gyarados",
+          "formApiName": "gyarados",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Pelipper",
+          "formApiName": "pelipper",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "water",
+        "ghost"
+      ],
+      "typeKey": "water_ghost",
+      "unorderedKey": "ghost_water",
+      "imagePath": "data/cv/references/types/type_combo_icons/water_ghost.png",
+      "pokemonCount": 4,
+      "examples": [
+        {
+          "displayName": "Basculegion Female",
+          "formApiName": "basculegion-female",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Basculegion Male",
+          "formApiName": "basculegion-male",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Basculegion Male",
+          "formApiName": "basculegion-male",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Basculegion Female",
+          "formApiName": "basculegion-female",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "water",
+        "psychic"
+      ],
+      "typeKey": "water_psychic",
+      "unorderedKey": "psychic_water",
+      "imagePath": "data/cv/references/types/type_combo_icons/water_psychic.png",
+      "pokemonCount": 10,
+      "examples": [
+        {
+          "displayName": "Slowbro Mega",
+          "formApiName": "slowbro-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Slowbro",
+          "formApiName": "slowbro",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Starmie Mega",
+          "formApiName": "starmie-mega",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Starmie",
+          "formApiName": "starmie",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Slowking",
+          "formApiName": "slowking",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Slowbro",
+          "formApiName": "slowbro",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Slowbro Mega",
+          "formApiName": "slowbro-mega",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Starmie",
+          "formApiName": "starmie",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Starmie Mega",
+          "formApiName": "starmie-mega",
+          "spriteType": "shiny"
+        },
+        {
+          "displayName": "Slowking",
+          "formApiName": "slowking",
+          "spriteType": "shiny"
+        }
+      ]
+    },
+    {
+      "types": [
+        "water",
+        "steel"
+      ],
+      "typeKey": "water_steel",
+      "unorderedKey": "steel_water",
+      "imagePath": "data/cv/references/types/type_combo_icons/water_steel.png",
+      "pokemonCount": 2,
+      "examples": [
+        {
+          "displayName": "Empoleon",
+          "formApiName": "empoleon",
+          "spriteType": "normal"
+        },
+        {
+          "displayName": "Empoleon",
+          "formApiName": "empoleon",
+          "spriteType": "shiny"
+        }
+      ]
+    }
+  ]
+}

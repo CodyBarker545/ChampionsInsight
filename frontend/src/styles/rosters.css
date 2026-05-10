@@ -1,0 +1,405 @@
+/* ---------- LEFT / RIGHT ROSTERS ---------- */
+
+.roster-column,
+.opponent-column {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.upload-action {
+  width: 100%;
+  min-height: 40px;
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--ci-border);
+  border-radius: var(--ci-radius-sm);
+  color: var(--ci-accent-2);
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--ci-accent-2) 14%, transparent), transparent 45%),
+    color-mix(in srgb, var(--ci-surface-2) 86%, transparent);
+  font-weight: 900;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.upload-action:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--ci-accent-2) 64%, var(--ci-border));
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28);
+}
+
+.roster-panel {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  border-radius: var(--ci-radius-lg);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.055), transparent 24%),
+    linear-gradient(135deg, color-mix(in srgb, var(--ci-accent) 8%, transparent), transparent 38%, color-mix(in srgb, var(--ci-accent-2) 8%, transparent)),
+    var(--ci-surface-glass);
+  border: 1px solid color-mix(in srgb, var(--ci-border) 88%, white);
+  box-shadow:
+    var(--ci-shadow-soft),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.035);
+  overflow: hidden;
+}
+
+.roster-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+  transform: translateX(-130%);
+  transition: transform 700ms ease;
+}
+
+.roster-panel:hover::before {
+  transform: translateX(130%);
+}
+
+.roster-list {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  gap: 10px;
+  isolation: isolate;
+}
+
+.team-slot {
+  position: relative;
+  height: 100%;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 28px 48px minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: var(--ci-radius-sm);
+  border: 1px solid rgba(120, 190, 220, 0.2);
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--ci-accent) 8%, transparent), transparent 46%),
+    color-mix(in srgb, var(--ci-surface) 84%, transparent);
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.team-slot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--ci-accent-2) 18%, transparent), transparent 36%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent);
+  opacity: 0;
+  transition: opacity 160ms ease;
+}
+
+.team-slot:hover {
+  transform: translateY(-2px);
+  border-color: var(--ci-border-strong);
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--ci-accent) 14%, transparent), transparent 52%),
+    color-mix(in srgb, var(--ci-surface-3) 82%, transparent);
+  box-shadow:
+    0 16px 34px rgba(0, 0, 0, 0.28),
+    0 0 0 3px color-mix(in srgb, var(--ci-accent) 10%, transparent);
+}
+
+.team-slot:hover::after {
+  opacity: 1;
+}
+
+.team-slot.selected {
+  border-color: var(--ci-accent);
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--ci-accent) 22%, transparent), transparent 50%),
+    color-mix(in srgb, var(--ci-accent) 14%, var(--ci-surface-2));
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--ci-accent) 34%, transparent),
+    0 0 0 3px color-mix(in srgb, var(--ci-accent) 14%, transparent),
+    0 12px 30px rgba(0, 0, 0, 0.28);
+}
+
+.opponent-panel .team-slot {
+  grid-template-columns: 52px 1fr;
+}
+
+.team-panel .team-slot {
+  grid-template-columns: 28px 48px minmax(0, 1fr);
+}
+
+.slot-index {
+  color: color-mix(in srgb, var(--ci-accent-2) 78%, white);
+  font-size: 0.68rem;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+}
+
+.slot-copy {
+  min-width: 0;
+  display: grid;
+  gap: 2px;
+  text-align: left;
+}
+
+.slot-name {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--ci-text);
+  font-size: 0.88rem;
+  font-weight: 950;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.slot-subtitle {
+  color: var(--ci-muted);
+  font-size: 0.66rem;
+  font-weight: 850;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.opponent-panel .opponent-team-slot {
+  position: relative;
+  overflow: visible;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.opponent-panel .opponent-team-slot.selected {
+  z-index: 20;
+}
+
+.opponent-slot-summary {
+  min-width: 0;
+  display: contents;
+  color: inherit;
+}
+
+.opponent-slot-summary .slot-copy {
+  min-width: 0;
+  overflow: hidden;
+  text-align: left;
+}
+
+.opponent-slot-clear {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 3;
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--ci-border);
+  border-radius: 999px;
+  color: var(--ci-muted);
+  background: rgba(9, 17, 31, 0.86);
+  font-size: 0.72rem;
+  line-height: 1;
+}
+
+.opponent-slot-clear:hover {
+  border-color: color-mix(in srgb, var(--ci-danger) 64%, var(--ci-border));
+  color: var(--ci-danger);
+}
+
+.opponent-slot-search {
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  z-index: 30;
+}
+
+.opponent-slot-search input {
+  width: 100%;
+  min-height: 28px;
+  border: 1px solid var(--ci-border);
+  border-radius: var(--ci-radius-sm);
+  padding: 0 9px;
+  color: var(--ci-text);
+  background:
+    linear-gradient(90deg, rgba(255, 204, 77, 0.08), transparent 40%),
+    rgba(8, 17, 31, 0.96);
+}
+
+.opponent-slot-results {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% + 6px);
+  z-index: 40;
+  max-height: 220px;
+  display: grid;
+  gap: 6px;
+  overflow: auto;
+  padding: 6px;
+  border: 1px solid var(--ci-border);
+  border-radius: var(--ci-radius-sm);
+  background: rgba(8, 17, 31, 0.98);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.45);
+}
+
+.opponent-slot-results > span {
+  color: var(--ci-muted);
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.opponent-result {
+  min-height: 42px;
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 8px;
+  border: 1px solid var(--ci-border);
+  border-radius: var(--ci-radius-sm);
+  color: var(--ci-text);
+  background:
+    linear-gradient(90deg, rgba(77, 208, 225, 0.08), transparent),
+    rgba(15, 27, 45, 0.92);
+  text-align: left;
+  transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+.opponent-result:hover {
+  transform: translateX(2px);
+  border-color: var(--ci-border-strong);
+  background: color-mix(in srgb, var(--ci-accent) 14%, var(--ci-surface-2));
+}
+
+.opponent-result-image,
+.opponent-result-image img {
+  width: 30px;
+  height: 30px;
+}
+
+.opponent-result-image {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  color: var(--ci-muted);
+  font-size: 0.68rem;
+}
+
+.opponent-result-image img {
+  object-fit: contain;
+}
+
+.opponent-panel .slot-image {
+  width: 52px;
+  height: 52px;
+}
+
+.slot-image {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  color: var(--ci-text);
+  font-size: 0.78rem;
+  border: 1px solid rgba(125, 211, 252, 0.18);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent),
+    rgba(5, 10, 18, 0.5);
+  box-shadow: inset 0 0 18px rgba(77, 208, 225, 0.08);
+}
+
+.slot-image img,
+.opponent-slot-sprite {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.32));
+}
+
+.roster-label {
+  flex: 0 0 auto;
+  margin: 12px 0 0;
+  text-align: center;
+  color: color-mix(in srgb, var(--ci-accent-2) 72%, white);
+  font-size: 0.72rem;
+  font-weight: 950;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* ---------- SCOUT TOOLS ---------- */
+
+.scout-tools {
+  flex: 0 0 auto;
+  display: grid;
+  gap: 8px;
+}
+
+.upload-dropzone {
+  min-height: 90px;
+  display: grid;
+  place-items: center;
+  gap: 8px;
+  border: 1px dashed var(--ci-border);
+  border-radius: var(--ci-radius-sm);
+  padding: 12px;
+  color: var(--ci-muted);
+  background: color-mix(in srgb, var(--ci-surface-2) 76%, transparent);
+  text-align: center;
+  overflow: hidden;
+}
+
+.upload-dropzone img {
+  width: 100%;
+  max-height: 120px;
+  object-fit: contain;
+  border-radius: var(--ci-radius-sm);
+}
+
+.file-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.helper-text {
+  margin: 0;
+  color: var(--ci-muted);
+  font-size: 0.78rem;
+  line-height: 1.3;
+}
+
+.helper-text.success {
+  color: var(--ci-success);
+}
+
+.helper-text.warning {
+  color: var(--ci-warning);
+}
+
+.helper-text.error {
+  color: var(--ci-danger);
+}
+

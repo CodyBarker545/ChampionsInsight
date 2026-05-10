@@ -1,0 +1,67 @@
+Berry Guide
+
+Berries are consumable held items that activate automatically under specific conditions in battle. 
+They can restore HP, cure status conditions, boost stats, reduce damage, or provide other one-time effects.
+
+Berries were introduced early in the Pokémon series and later became an important part of held item strategy. Many Berries are used in competitive play because they can improve survivability or activate at key moments. :contentReference[oaicite:1]{index=1}
+
+--------------------------------------------------
+Main Types of Berries
+--------------------------------------------------
+
+HP Recovery Berries:
+- Restore HP when the holder falls below a certain threshold
+- Example: Sitrus Berry restores HP when the Pokémon is low on health
+
+Status-Healing Berries:
+- Cure a specific status condition automatically
+- Examples:
+  - Cheri Berry cures paralysis
+  - Chesto Berry cures sleep
+  - Pecha Berry cures poison
+  - Rawst Berry cures burn
+  - Aspear Berry cures freeze
+
+PP Recovery Berries:
+- Restore PP for a move under certain conditions
+
+Confusion-Healing Berries:
+- Cure confusion when triggered
+
+All-Purpose Healing Berries:
+- Cure multiple major conditions or provide broader recovery effects
+
+Damage-Reducing Berries:
+- Reduce damage from a specific type of attack once
+- These are useful for surviving super-effective hits
+
+Stat-Boosting Berries:
+- Raise a stat when HP is low
+- Examples include Berries that can boost Speed, Attack, or other stats
+
+--------------------------------------------------
+Berry Mechanics
+--------------------------------------------------
+
+- Berries are usually consumed after activation
+- A Pokémon can hold only one item at a time
+- Berry activation often depends on HP thresholds or battle conditions
+- Some abilities and moves can interact with Berries
+- Berries are widely used as held items for recovery, utility, and defensive planning :contentReference[oaicite:2]{index=2}
+
+--------------------------------------------------
+Competitive Use
+--------------------------------------------------
+
+- HP recovery Berries improve survivability
+- Status-healing Berries reduce disruption from burn, sleep, poison, and paralysis
+- Damage-reducing Berries help a Pokémon survive key matchups
+- Stat-boosting Berries can create sweep opportunities late in battle
+
+--------------------------------------------------
+Source
+--------------------------------------------------
+Bulbapedia. (n.d.). Berry. Retrieved from:
+https://bulbapedia.bulbagarden.net/wiki/Berry
+
+This dataset was created using information from Bulbapedia, a community-driven Pokémon encyclopedia, selected for its structured explanation of Berry effects and their role as held items in battle.

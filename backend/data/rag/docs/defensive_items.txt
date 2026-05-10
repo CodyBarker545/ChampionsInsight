@@ -1,0 +1,56 @@
+Defensive Items Guide
+
+Defensive items are held items that reduce damage taken, improve defenses, or increase survivability in battle. 
+They are commonly used to make Pokémon harder to defeat or to survive key attacks.
+
+--------------------------------------------------
+Main Defensive Items
+--------------------------------------------------
+
+Assault Vest:
+- Increases Special Defense by 50%
+- Prevents the use of status moves
+
+Eviolite:
+- Increases Defense and Special Defense by 50%
+- Only works if the Pokémon can still evolve
+
+Rocky Helmet:
+- Deals damage to attackers when they make contact (1/6 of their max HP)
+
+Air Balloon:
+- Grants immunity to Ground-type moves
+- Pops after the Pokémon is hit
+
+Heavy-Duty Boots:
+- Prevents damage and effects from entry hazards
+
+Focus Band:
+- Has a chance to survive a hit with 1 HP
+
+--------------------------------------------------
+Defensive Mechanics
+--------------------------------------------------
+
+- Defensive items do not usually increase damage output
+- Many activate automatically without conditions
+- Some items provide immunity to specific mechanics (e.g., hazards, Ground moves)
+- Effects remain active as long as the item is held (unless consumed or removed)
+
+--------------------------------------------------
+Competitive Use
+--------------------------------------------------
+
+- Assault Vest is used to tank special attacks
+- Eviolite is used on unevolved Pokémon to make them extremely bulky
+- Heavy-Duty Boots are used to avoid hazard damage
+- Air Balloon is used to temporarily remove Ground-type weaknesses
+- Rocky Helmet punishes physical attackers
+
+--------------------------------------------------
+Source
+--------------------------------------------------
+Bulbapedia. (n.d.). Held item. Retrieved from:
+https://bulbapedia.bulbagarden.net/wiki/Held_item
+
+This dataset was created using information from Bulbapedia, a community-driven Pokémon encyclopedia, selected for its structured explanation of defensive item effects and their role in competitive gameplay.

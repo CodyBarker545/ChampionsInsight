@@ -1,0 +1,51 @@
+Choice Items Guide
+
+Choice Items are held items that boost one stat by 50% but lock the Pokémon into the first move it uses until it switches out.
+
+These items are widely used in competitive play because they provide a strong immediate advantage in power or speed.
+
+--------------------------------------------------
+Main Choice Items
+--------------------------------------------------
+
+Choice Band:
+- Increases Attack by 50%
+- Locks the user into the first move selected
+- Best used on physical attackers
+
+Choice Specs:
+- Increases Special Attack by 50%
+- Locks the user into the first move selected
+- Best used on special attackers
+
+Choice Scarf:
+- Increases Speed by 50%
+- Locks the user into the first move selected
+- Best used to outspeed opponents
+
+--------------------------------------------------
+Choice Item Mechanics
+--------------------------------------------------
+
+- The held Pokémon can only use the first move it selects
+- The move lock remains until the Pokémon switches out
+- Status moves can also cause the user to become locked
+- Switching resets the lock
+- Choice Items are not consumed after use
+
+--------------------------------------------------
+Competitive Use
+--------------------------------------------------
+
+- Choice Band is used to maximize physical damage output
+- Choice Specs is used to maximize special damage output
+- Choice Scarf is used to gain speed control and revenge kill faster threats
+- These items are strong but require prediction because the move lock can be exploited
+
+--------------------------------------------------
+Source
+--------------------------------------------------
+Bulbapedia. (n.d.). Held item. Retrieved from:
+https://bulbapedia.bulbagarden.net/wiki/Held_item
+
+This dataset was created using information from Bulbapedia, a community-driven Pokémon encyclopedia, selected for its structured explanation of Choice Item effects and their role in competitive gameplay.

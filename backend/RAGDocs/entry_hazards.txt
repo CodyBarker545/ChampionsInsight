@@ -1,0 +1,64 @@
+Entry Hazards Guide
+
+Entry hazards are battlefield effects that damage or affect Pokémon when they switch into battle. 
+They remain on the field until removed and primarily impact grounded Pokémon.
+
+--------------------------------------------------
+Types of Entry Hazards
+--------------------------------------------------
+
+Stealth Rock:
+- Deals damage based on the Pokémon’s weakness or resistance to Rock-type moves
+- Damage ranges from 1/32 (resisted) up to 1/2 (4× weakness) of max HP
+
+Spikes:
+- Damages grounded Pokémon when they switch in
+- 1 layer: 1/8 of max HP
+- 2 layers: 1/6 of max HP
+- 3 layers: 1/4 of max HP
+
+Toxic Spikes:
+- Poisons grounded Pokémon when they switch in
+- 1 layer: regular poison
+- 2 layers: badly poisoned (increasing damage each turn)
+
+Sticky Web:
+- Lowers Speed of grounded Pokémon upon switch-in
+
+--------------------------------------------------
+Hazard Mechanics
+--------------------------------------------------
+
+- Only affect Pokémon when they enter the field
+- Flying-type Pokémon and those with Levitate are immune to ground-based hazards (Spikes, Toxic Spikes, Sticky Web)
+- Stealth Rock affects all Pokémon regardless of grounding
+- Multiple hazards can be active at the same time
+- Hazards can be removed by moves such as Rapid Spin or Defog
+
+--------------------------------------------------
+Competitive Impact
+--------------------------------------------------
+
+- Hazards apply constant pressure by dealing damage over time
+- They punish frequent switching
+- They can break Focus Sash and reduce survivability
+- Often used in competitive play to control the pace of battle
+
+--------------------------------------------------
+Ability Interaction
+--------------------------------------------------
+
+Some abilities interact with entry hazards.
+
+Examples:
+- Magic Guard: Prevents damage from hazards
+- Levitate: Grants immunity to ground-based hazards
+- Overcoat: Prevents damage from certain indirect effects
+
+--------------------------------------------------
+Source
+--------------------------------------------------
+Bulbapedia. (n.d.). Entry hazards. Retrieved from:
+https://bulbapedia.bulbagarden.net/wiki/List_of_moves_that_cause_entry_hazards
+
+This dataset was created using information from Bulbapedia, a community-driven Pokémon encyclopedia, selected for its structured explanation of entry hazards and their role in competitive gameplay.

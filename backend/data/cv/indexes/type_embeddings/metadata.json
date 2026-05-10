@@ -1,0 +1,3080 @@
+[
+  {
+    "type": "bug",
+    "types": [
+      "bug"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\bug.png",
+    "variant": "original"
+  },
+  {
+    "type": "bug",
+    "types": [
+      "bug"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\bug.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "bug",
+    "types": [
+      "bug"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\bug.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "bug",
+    "types": [
+      "bug",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\bug_fighting.png",
+    "variant": "original"
+  },
+  {
+    "type": "bug",
+    "types": [
+      "bug",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\bug_fighting.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "bug",
+    "types": [
+      "bug",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\bug_fighting.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "bug",
+    "types": [
+      "bug",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\bug_fire.png",
+    "variant": "original"
+  },
+  {
+    "type": "bug",
+    "types": [
+      "bug",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\bug_fire.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "bug",
+    "types": [
+      "bug",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\bug_fire.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "bug",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\bug_flying.png",
+    "variant": "original"
+  },
+  {
+    "type": "bug",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\bug_flying.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "bug",
+    "types": [
+      "bug",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\bug_flying.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "bug",
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\bug_poison.png",
+    "variant": "original"
+  },
+  {
+    "type": "bug",
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\bug_poison.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "bug",
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\bug_poison.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "bug",
+    "types": [
+      "bug",
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\bug_rock.png",
+    "variant": "original"
+  },
+  {
+    "type": "bug",
+    "types": [
+      "bug",
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\bug_rock.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "bug",
+    "types": [
+      "bug",
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\bug_rock.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "bug",
+    "types": [
+      "bug",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\bug_steel.png",
+    "variant": "original"
+  },
+  {
+    "type": "bug",
+    "types": [
+      "bug",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\bug_steel.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "bug",
+    "types": [
+      "bug",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\bug_steel.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "dark",
+    "types": [
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dark.png",
+    "variant": "original"
+  },
+  {
+    "type": "dark",
+    "types": [
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dark.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "dark",
+    "types": [
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dark.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "dark",
+    "types": [
+      "dark",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dark_dragon.png",
+    "variant": "original"
+  },
+  {
+    "type": "dark",
+    "types": [
+      "dark",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dark_dragon.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "dark",
+    "types": [
+      "dark",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dark_dragon.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "dark",
+    "types": [
+      "dark",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dark_fire.png",
+    "variant": "original"
+  },
+  {
+    "type": "dark",
+    "types": [
+      "dark",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dark_fire.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "dark",
+    "types": [
+      "dark",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dark_fire.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "dark",
+    "types": [
+      "dark",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dark_ghost.png",
+    "variant": "original"
+  },
+  {
+    "type": "dark",
+    "types": [
+      "dark",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dark_ghost.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "dark",
+    "types": [
+      "dark",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dark_ghost.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "dark",
+    "types": [
+      "dark",
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dark_ice.png",
+    "variant": "original"
+  },
+  {
+    "type": "dark",
+    "types": [
+      "dark",
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dark_ice.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "dark",
+    "types": [
+      "dark",
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dark_ice.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "dark",
+    "types": [
+      "dark",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dark_steel.png",
+    "variant": "original"
+  },
+  {
+    "type": "dark",
+    "types": [
+      "dark",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dark_steel.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "dark",
+    "types": [
+      "dark",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dark_steel.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "dragon",
+    "types": [
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dragon.png",
+    "variant": "original"
+  },
+  {
+    "type": "dragon",
+    "types": [
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dragon.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "dragon",
+    "types": [
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dragon.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "dragon",
+    "types": [
+      "dragon",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dragon_fairy.png",
+    "variant": "original"
+  },
+  {
+    "type": "dragon",
+    "types": [
+      "dragon",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dragon_fairy.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "dragon",
+    "types": [
+      "dragon",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dragon_fairy.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "dragon",
+    "types": [
+      "dragon",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dragon_fighting.png",
+    "variant": "original"
+  },
+  {
+    "type": "dragon",
+    "types": [
+      "dragon",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dragon_fighting.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "dragon",
+    "types": [
+      "dragon",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dragon_fighting.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "dragon",
+    "types": [
+      "dragon",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dragon_flying.png",
+    "variant": "original"
+  },
+  {
+    "type": "dragon",
+    "types": [
+      "dragon",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dragon_flying.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "dragon",
+    "types": [
+      "dragon",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dragon_flying.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "dragon",
+    "types": [
+      "dragon",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dragon_flying__camera-1.jpg",
+    "variant": "original"
+  },
+  {
+    "type": "dragon",
+    "types": [
+      "dragon",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dragon_flying__camera-1.jpg",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "dragon",
+    "types": [
+      "dragon",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dragon_flying__camera-1.jpg",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "dragon",
+    "types": [
+      "dragon",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dragon_ghost.png",
+    "variant": "original"
+  },
+  {
+    "type": "dragon",
+    "types": [
+      "dragon",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dragon_ghost.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "dragon",
+    "types": [
+      "dragon",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dragon_ghost.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "dragon",
+    "types": [
+      "dragon",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dragon_ground.png",
+    "variant": "original"
+  },
+  {
+    "type": "dragon",
+    "types": [
+      "dragon",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dragon_ground.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "dragon",
+    "types": [
+      "dragon",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dragon_ground.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "dragon",
+    "types": [
+      "dragon",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dragon_ground__camera-1.jpg",
+    "variant": "original"
+  },
+  {
+    "type": "dragon",
+    "types": [
+      "dragon",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dragon_ground__camera-1.jpg",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "dragon",
+    "types": [
+      "dragon",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\dragon_ground__camera-1.jpg",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric.png",
+    "variant": "original"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_dark.png",
+    "variant": "original"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_dark.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_dark.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_dragon.png",
+    "variant": "original"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_dragon.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_dragon.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_fairy.png",
+    "variant": "original"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_fairy.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_fairy.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_fighting.png",
+    "variant": "original"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_fighting.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_fighting.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_fire.png",
+    "variant": "original"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_fire.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_fire.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_flying.png",
+    "variant": "original"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_flying.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_flying.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_ghost.png",
+    "variant": "original"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_ghost.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_ghost.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_grass.png",
+    "variant": "original"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_grass.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_grass.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_ice.png",
+    "variant": "original"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_ice.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_ice.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_normal.png",
+    "variant": "original"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_normal.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_normal.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_psychic.png",
+    "variant": "original"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_psychic.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_psychic.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_water.png",
+    "variant": "original"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_water.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "electric",
+    "types": [
+      "electric",
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\electric_water.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "fairy",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fairy.png",
+    "variant": "original"
+  },
+  {
+    "type": "fairy",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fairy.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "fairy",
+    "types": [
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fairy.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "fairy",
+    "types": [
+      "fairy",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fairy_flying.png",
+    "variant": "original"
+  },
+  {
+    "type": "fairy",
+    "types": [
+      "fairy",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fairy_flying.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "fairy",
+    "types": [
+      "fairy",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fairy_flying.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "fighting",
+    "types": [
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fighting.png",
+    "variant": "original"
+  },
+  {
+    "type": "fighting",
+    "types": [
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fighting.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "fighting",
+    "types": [
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fighting.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "fighting",
+    "types": [
+      "fighting",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fighting_dark.png",
+    "variant": "original"
+  },
+  {
+    "type": "fighting",
+    "types": [
+      "fighting",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fighting_dark.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "fighting",
+    "types": [
+      "fighting",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fighting_dark.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "fighting",
+    "types": [
+      "fighting",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fighting_fire.png",
+    "variant": "original"
+  },
+  {
+    "type": "fighting",
+    "types": [
+      "fighting",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fighting_fire.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "fighting",
+    "types": [
+      "fighting",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fighting_fire.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "fighting",
+    "types": [
+      "fighting",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fighting_flying.png",
+    "variant": "original"
+  },
+  {
+    "type": "fighting",
+    "types": [
+      "fighting",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fighting_flying.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "fighting",
+    "types": [
+      "fighting",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fighting_flying.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "fighting",
+    "types": [
+      "fighting",
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fighting_ice.png",
+    "variant": "original"
+  },
+  {
+    "type": "fighting",
+    "types": [
+      "fighting",
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fighting_ice.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "fighting",
+    "types": [
+      "fighting",
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fighting_ice.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "fighting",
+    "types": [
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fighting_posion__camera-__camera-1.jpg",
+    "variant": "original"
+  },
+  {
+    "type": "fighting",
+    "types": [
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fighting_posion__camera-__camera-1.jpg",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "fighting",
+    "types": [
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fighting_posion__camera-__camera-1.jpg",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "fighting",
+    "types": [
+      "fighting",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fighting_psychic.png",
+    "variant": "original"
+  },
+  {
+    "type": "fighting",
+    "types": [
+      "fighting",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fighting_psychic.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "fighting",
+    "types": [
+      "fighting",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fighting_psychic.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "fighting",
+    "types": [
+      "fighting",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fighting_steel.png",
+    "variant": "original"
+  },
+  {
+    "type": "fighting",
+    "types": [
+      "fighting",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fighting_steel.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "fighting",
+    "types": [
+      "fighting",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fighting_steel.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "fighting",
+    "types": [
+      "fighting",
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fighting_water.png",
+    "variant": "original"
+  },
+  {
+    "type": "fighting",
+    "types": [
+      "fighting",
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fighting_water.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "fighting",
+    "types": [
+      "fighting",
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fighting_water.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "fire",
+    "types": [
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fire.png",
+    "variant": "original"
+  },
+  {
+    "type": "fire",
+    "types": [
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fire.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "fire",
+    "types": [
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fire.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "fire",
+    "types": [
+      "fire",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fire_dragon.png",
+    "variant": "original"
+  },
+  {
+    "type": "fire",
+    "types": [
+      "fire",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fire_dragon.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "fire",
+    "types": [
+      "fire",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fire_dragon.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "fire",
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fire_flying.png",
+    "variant": "original"
+  },
+  {
+    "type": "fire",
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fire_flying.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "fire",
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fire_flying.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "fire",
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fire_flying__camera-1.jpg",
+    "variant": "original"
+  },
+  {
+    "type": "fire",
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fire_flying__camera-1.jpg",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "fire",
+    "types": [
+      "fire",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fire_flying__camera-1.jpg",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "fire",
+    "types": [
+      "fire",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fire_ghost.png",
+    "variant": "original"
+  },
+  {
+    "type": "fire",
+    "types": [
+      "fire",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fire_ghost.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "fire",
+    "types": [
+      "fire",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fire_ghost.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "fire",
+    "types": [
+      "fire",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fire_ground.png",
+    "variant": "original"
+  },
+  {
+    "type": "fire",
+    "types": [
+      "fire",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fire_ground.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "fire",
+    "types": [
+      "fire",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fire_ground.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "fire",
+    "types": [
+      "fire",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fire_psychic.png",
+    "variant": "original"
+  },
+  {
+    "type": "fire",
+    "types": [
+      "fire",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fire_psychic.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "fire",
+    "types": [
+      "fire",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fire_psychic.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "fire",
+    "types": [
+      "fire",
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fire_rock.png",
+    "variant": "original"
+  },
+  {
+    "type": "fire",
+    "types": [
+      "fire",
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fire_rock.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "fire",
+    "types": [
+      "fire",
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\fire_rock.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "ghost",
+    "types": [
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ghost.png",
+    "variant": "original"
+  },
+  {
+    "type": "ghost",
+    "types": [
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ghost.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "ghost",
+    "types": [
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ghost.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "ghost",
+    "types": [
+      "ghost",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ghost_fairy.png",
+    "variant": "original"
+  },
+  {
+    "type": "ghost",
+    "types": [
+      "ghost",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ghost_fairy.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "ghost",
+    "types": [
+      "ghost",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ghost_fairy.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "ghost",
+    "types": [
+      "ghost",
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ghost_grass.png",
+    "variant": "original"
+  },
+  {
+    "type": "ghost",
+    "types": [
+      "ghost",
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ghost_grass.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "ghost",
+    "types": [
+      "ghost",
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ghost_grass.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "ghost",
+    "types": [
+      "ghost",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ghost_poison.png",
+    "variant": "original"
+  },
+  {
+    "type": "ghost",
+    "types": [
+      "ghost",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ghost_poison.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "ghost",
+    "types": [
+      "ghost",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ghost_poison.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "grass",
+    "types": [
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\grass.png",
+    "variant": "original"
+  },
+  {
+    "type": "grass",
+    "types": [
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\grass.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "grass",
+    "types": [
+      "grass"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\grass.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "grass",
+    "types": [
+      "grass",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\grass_dark.png",
+    "variant": "original"
+  },
+  {
+    "type": "grass",
+    "types": [
+      "grass",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\grass_dark.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "grass",
+    "types": [
+      "grass",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\grass_dark.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "grass",
+    "types": [
+      "grass",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\grass_dragon.png",
+    "variant": "original"
+  },
+  {
+    "type": "grass",
+    "types": [
+      "grass",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\grass_dragon.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "grass",
+    "types": [
+      "grass",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\grass_dragon.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "grass",
+    "types": [
+      "grass",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\grass_fairy.png",
+    "variant": "original"
+  },
+  {
+    "type": "grass",
+    "types": [
+      "grass",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\grass_fairy.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "grass",
+    "types": [
+      "grass",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\grass_fairy.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "grass",
+    "types": [
+      "grass",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\grass_fighting.png",
+    "variant": "original"
+  },
+  {
+    "type": "grass",
+    "types": [
+      "grass",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\grass_fighting.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "grass",
+    "types": [
+      "grass",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\grass_fighting.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "grass",
+    "types": [
+      "grass",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\grass_fire.png",
+    "variant": "original"
+  },
+  {
+    "type": "grass",
+    "types": [
+      "grass",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\grass_fire.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "grass",
+    "types": [
+      "grass",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\grass_fire.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "grass",
+    "types": [
+      "grass",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\grass_ground.png",
+    "variant": "original"
+  },
+  {
+    "type": "grass",
+    "types": [
+      "grass",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\grass_ground.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "grass",
+    "types": [
+      "grass",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\grass_ground.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "grass",
+    "types": [
+      "grass",
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\grass_ice.png",
+    "variant": "original"
+  },
+  {
+    "type": "grass",
+    "types": [
+      "grass",
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\grass_ice.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "grass",
+    "types": [
+      "grass",
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\grass_ice.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "grass",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\grass_poison.png",
+    "variant": "original"
+  },
+  {
+    "type": "grass",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\grass_poison.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "grass",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\grass_poison.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "ground",
+    "types": [
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ground.png",
+    "variant": "original"
+  },
+  {
+    "type": "ground",
+    "types": [
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ground.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "ground",
+    "types": [
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ground.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "ground",
+    "types": [
+      "ground",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ground_dark.png",
+    "variant": "original"
+  },
+  {
+    "type": "ground",
+    "types": [
+      "ground",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ground_dark.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "ground",
+    "types": [
+      "ground",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ground_dark.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "ground",
+    "types": [
+      "ground",
+      "electric"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ground_electric.png",
+    "variant": "original"
+  },
+  {
+    "type": "ground",
+    "types": [
+      "ground",
+      "electric"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ground_electric.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "ground",
+    "types": [
+      "ground",
+      "electric"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ground_electric.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "ground",
+    "types": [
+      "ground",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ground_flying.png",
+    "variant": "original"
+  },
+  {
+    "type": "ground",
+    "types": [
+      "ground",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ground_flying.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "ground",
+    "types": [
+      "ground",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ground_flying.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "ground",
+    "types": [
+      "ground",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ground_ghost.png",
+    "variant": "original"
+  },
+  {
+    "type": "ground",
+    "types": [
+      "ground",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ground_ghost.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "ground",
+    "types": [
+      "ground",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ground_ghost.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "ground",
+    "types": [
+      "ground",
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ground_rock.png",
+    "variant": "original"
+  },
+  {
+    "type": "ground",
+    "types": [
+      "ground",
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ground_rock.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "ground",
+    "types": [
+      "ground",
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ground_rock.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "ice",
+    "types": [
+      "ice",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ice-ghost__camera-1.jpg",
+    "variant": "original"
+  },
+  {
+    "type": "ice",
+    "types": [
+      "ice",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ice-ghost__camera-1.jpg",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "ice",
+    "types": [
+      "ice",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ice-ghost__camera-1.jpg",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "ice",
+    "types": [
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ice.png",
+    "variant": "original"
+  },
+  {
+    "type": "ice",
+    "types": [
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ice.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "ice",
+    "types": [
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ice.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "ice",
+    "types": [
+      "ice",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ice_fairy.png",
+    "variant": "original"
+  },
+  {
+    "type": "ice",
+    "types": [
+      "ice",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ice_fairy.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "ice",
+    "types": [
+      "ice",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ice_fairy.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "ice",
+    "types": [
+      "ice",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ice_ghost.png",
+    "variant": "original"
+  },
+  {
+    "type": "ice",
+    "types": [
+      "ice",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ice_ghost.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "ice",
+    "types": [
+      "ice",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ice_ghost.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "ice",
+    "types": [
+      "ice",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ice_ground.png",
+    "variant": "original"
+  },
+  {
+    "type": "ice",
+    "types": [
+      "ice",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ice_ground.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "ice",
+    "types": [
+      "ice",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ice_ground.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "ice",
+    "types": [
+      "ice",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ice_psychic.png",
+    "variant": "original"
+  },
+  {
+    "type": "ice",
+    "types": [
+      "ice",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ice_psychic.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "ice",
+    "types": [
+      "ice",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\ice_psychic.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "normal",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\normal.png",
+    "variant": "original"
+  },
+  {
+    "type": "normal",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\normal.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "normal",
+    "types": [
+      "normal"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\normal.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "normal",
+    "types": [
+      "normal",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\normal_dragon.png",
+    "variant": "original"
+  },
+  {
+    "type": "normal",
+    "types": [
+      "normal",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\normal_dragon.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "normal",
+    "types": [
+      "normal",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\normal_dragon.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "normal",
+    "types": [
+      "normal",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\normal_fairy.png",
+    "variant": "original"
+  },
+  {
+    "type": "normal",
+    "types": [
+      "normal",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\normal_fairy.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "normal",
+    "types": [
+      "normal",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\normal_fairy.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "normal",
+    "types": [
+      "normal",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\normal_fighting.png",
+    "variant": "original"
+  },
+  {
+    "type": "normal",
+    "types": [
+      "normal",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\normal_fighting.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "normal",
+    "types": [
+      "normal",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\normal_fighting.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "normal",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\normal_flying.png",
+    "variant": "original"
+  },
+  {
+    "type": "normal",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\normal_flying.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "normal",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\normal_flying.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "normal",
+    "types": [
+      "normal",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\normal_ghost.png",
+    "variant": "original"
+  },
+  {
+    "type": "normal",
+    "types": [
+      "normal",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\normal_ghost.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "normal",
+    "types": [
+      "normal",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\normal_ghost.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "normal",
+    "types": [
+      "normal",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\normal_ground.png",
+    "variant": "original"
+  },
+  {
+    "type": "normal",
+    "types": [
+      "normal",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\normal_ground.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "normal",
+    "types": [
+      "normal",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\normal_ground.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "normal",
+    "types": [
+      "normal",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\normal_psychic.png",
+    "variant": "original"
+  },
+  {
+    "type": "normal",
+    "types": [
+      "normal",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\normal_psychic.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "normal",
+    "types": [
+      "normal",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\normal_psychic.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "poison",
+    "types": [
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\poison.png",
+    "variant": "original"
+  },
+  {
+    "type": "poison",
+    "types": [
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\poison.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "poison",
+    "types": [
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\poison.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "poison",
+    "types": [
+      "poison",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\poison_fighting.png",
+    "variant": "original"
+  },
+  {
+    "type": "poison",
+    "types": [
+      "poison",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\poison_fighting.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "poison",
+    "types": [
+      "poison",
+      "fighting"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\poison_fighting.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "poison",
+    "types": [
+      "poison",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\poison_fire.png",
+    "variant": "original"
+  },
+  {
+    "type": "poison",
+    "types": [
+      "poison",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\poison_fire.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "poison",
+    "types": [
+      "poison",
+      "fire"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\poison_fire.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "poison",
+    "types": [
+      "poison",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\poison_psychic.png",
+    "variant": "original"
+  },
+  {
+    "type": "poison",
+    "types": [
+      "poison",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\poison_psychic.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "poison",
+    "types": [
+      "poison",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\poison_psychic.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "poison",
+    "types": [
+      "poison",
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\poison_water.png",
+    "variant": "original"
+  },
+  {
+    "type": "poison",
+    "types": [
+      "poison",
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\poison_water.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "poison",
+    "types": [
+      "poison",
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\poison_water.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "psychic",
+    "types": [
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\psychic.png",
+    "variant": "original"
+  },
+  {
+    "type": "psychic",
+    "types": [
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\psychic.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "psychic",
+    "types": [
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\psychic.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "psychic",
+    "types": [
+      "psychic",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\psychic_fairy.png",
+    "variant": "original"
+  },
+  {
+    "type": "psychic",
+    "types": [
+      "psychic",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\psychic_fairy.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "psychic",
+    "types": [
+      "psychic",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\psychic_fairy.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "psychic",
+    "types": [
+      "psychic",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\psychic_steel.png",
+    "variant": "original"
+  },
+  {
+    "type": "psychic",
+    "types": [
+      "psychic",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\psychic_steel.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "psychic",
+    "types": [
+      "psychic",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\psychic_steel.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "rock",
+    "types": [
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\rock.png",
+    "variant": "original"
+  },
+  {
+    "type": "rock",
+    "types": [
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\rock.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "rock",
+    "types": [
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\rock.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "rock",
+    "types": [
+      "rock",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\rock_dark.png",
+    "variant": "original"
+  },
+  {
+    "type": "rock",
+    "types": [
+      "rock",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\rock_dark.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "rock",
+    "types": [
+      "rock",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\rock_dark.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "rock",
+    "types": [
+      "rock",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\rock_dragon.png",
+    "variant": "original"
+  },
+  {
+    "type": "rock",
+    "types": [
+      "rock",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\rock_dragon.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "rock",
+    "types": [
+      "rock",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\rock_dragon.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "rock",
+    "types": [
+      "rock",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\rock_flying.png",
+    "variant": "original"
+  },
+  {
+    "type": "rock",
+    "types": [
+      "rock",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\rock_flying.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "rock",
+    "types": [
+      "rock",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\rock_flying.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "rock",
+    "types": [
+      "rock",
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\rock_ice.png",
+    "variant": "original"
+  },
+  {
+    "type": "rock",
+    "types": [
+      "rock",
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\rock_ice.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "rock",
+    "types": [
+      "rock",
+      "ice"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\rock_ice.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "rock",
+    "types": [
+      "rock",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\rock_poison.png",
+    "variant": "original"
+  },
+  {
+    "type": "rock",
+    "types": [
+      "rock",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\rock_poison.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "rock",
+    "types": [
+      "rock",
+      "poison"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\rock_poison.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "steel",
+    "types": [
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\steel.png",
+    "variant": "original"
+  },
+  {
+    "type": "steel",
+    "types": [
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\steel.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "steel",
+    "types": [
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\steel.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "steel",
+    "types": [
+      "steel",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\steel_dragon.png",
+    "variant": "original"
+  },
+  {
+    "type": "steel",
+    "types": [
+      "steel",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\steel_dragon.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "steel",
+    "types": [
+      "steel",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\steel_dragon.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "steel",
+    "types": [
+      "steel",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\steel_fairy.png",
+    "variant": "original"
+  },
+  {
+    "type": "steel",
+    "types": [
+      "steel",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\steel_fairy.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "steel",
+    "types": [
+      "steel",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\steel_fairy.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "steel",
+    "types": [
+      "steel",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\steel_flying.png",
+    "variant": "original"
+  },
+  {
+    "type": "steel",
+    "types": [
+      "steel",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\steel_flying.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "steel",
+    "types": [
+      "steel",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\steel_flying.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "steel",
+    "types": [
+      "steel",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\steel_ghost.png",
+    "variant": "original"
+  },
+  {
+    "type": "steel",
+    "types": [
+      "steel",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\steel_ghost.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "steel",
+    "types": [
+      "steel",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\steel_ghost.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "steel",
+    "types": [
+      "steel",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\steel_ground.png",
+    "variant": "original"
+  },
+  {
+    "type": "steel",
+    "types": [
+      "steel",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\steel_ground.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "steel",
+    "types": [
+      "steel",
+      "ground"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\steel_ground.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "steel",
+    "types": [
+      "steel",
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\steel_rock.png",
+    "variant": "original"
+  },
+  {
+    "type": "steel",
+    "types": [
+      "steel",
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\steel_rock.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "steel",
+    "types": [
+      "steel",
+      "rock"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\steel_rock.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "water",
+    "types": [
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\water.png",
+    "variant": "original"
+  },
+  {
+    "type": "water",
+    "types": [
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\water.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "water",
+    "types": [
+      "water"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\water.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "water",
+    "types": [
+      "water",
+      "bug"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\water_bug.png",
+    "variant": "original"
+  },
+  {
+    "type": "water",
+    "types": [
+      "water",
+      "bug"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\water_bug.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "water",
+    "types": [
+      "water",
+      "bug"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\water_bug.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "water",
+    "types": [
+      "water",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\water_dark.png",
+    "variant": "original"
+  },
+  {
+    "type": "water",
+    "types": [
+      "water",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\water_dark.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "water",
+    "types": [
+      "water",
+      "dark"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\water_dark.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "water",
+    "types": [
+      "water",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\water_dragon.png",
+    "variant": "original"
+  },
+  {
+    "type": "water",
+    "types": [
+      "water",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\water_dragon.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "water",
+    "types": [
+      "water",
+      "dragon"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\water_dragon.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "water",
+    "types": [
+      "water",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\water_fairy.png",
+    "variant": "original"
+  },
+  {
+    "type": "water",
+    "types": [
+      "water",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\water_fairy.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "water",
+    "types": [
+      "water",
+      "fairy"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\water_fairy.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "water",
+    "types": [
+      "water",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\water_flying.png",
+    "variant": "original"
+  },
+  {
+    "type": "water",
+    "types": [
+      "water",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\water_flying.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "water",
+    "types": [
+      "water",
+      "flying"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\water_flying.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "water",
+    "types": [
+      "water",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\water_ghost.png",
+    "variant": "original"
+  },
+  {
+    "type": "water",
+    "types": [
+      "water",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\water_ghost.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "water",
+    "types": [
+      "water",
+      "ghost"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\water_ghost.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "water",
+    "types": [
+      "water",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\water_psychic.png",
+    "variant": "original"
+  },
+  {
+    "type": "water",
+    "types": [
+      "water",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\water_psychic.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "water",
+    "types": [
+      "water",
+      "psychic"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\water_psychic.png",
+    "variant": "glare_reduced"
+  },
+  {
+    "type": "water",
+    "types": [
+      "water",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\water_steel.png",
+    "variant": "original"
+  },
+  {
+    "type": "water",
+    "types": [
+      "water",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\water_steel.png",
+    "variant": "lab_normalized"
+  },
+  {
+    "type": "water",
+    "types": [
+      "water",
+      "steel"
+    ],
+    "path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\data\\cv\\references\\types\\type_combo_icons\\water_steel.png",
+    "variant": "glare_reduced"
+  }
+]

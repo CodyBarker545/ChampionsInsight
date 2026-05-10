@@ -1,0 +1,4202 @@
+{
+  "Abomasnow": [
+    {
+      "item": "Abomasite",
+      "count": 44
+    },
+    {
+      "item": "Focus Sash",
+      "count": 3
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 2
+    }
+  ],
+  "Absol": [
+    {
+      "item": "Absolite",
+      "count": 7
+    },
+    {
+      "item": "Scope Lens",
+      "count": 5
+    },
+    {
+      "item": "Focus Sash",
+      "count": 1
+    }
+  ],
+  "Aegislash": [
+    {
+      "item": "Spell Tag",
+      "count": 799
+    },
+    {
+      "item": "Leftovers",
+      "count": 173
+    },
+    {
+      "item": "Focus Sash",
+      "count": 68
+    }
+  ],
+  "Aegislash Blade Forme": [
+    {
+      "item": "Spell Tag",
+      "count": 3
+    },
+    {
+      "item": "Leftovers",
+      "count": 3
+    },
+    {
+      "item": "Colbur Berry",
+      "count": 1
+    }
+  ],
+  "Aerodactyl": [
+    {
+      "item": "Focus Sash",
+      "count": 2884
+    },
+    {
+      "item": "Aerodactylite",
+      "count": 746
+    },
+    {
+      "item": "Lum Berry",
+      "count": 54
+    }
+  ],
+  "Aggron": [
+    {
+      "item": "Aggronite",
+      "count": 275
+    },
+    {
+      "item": "Leftovers",
+      "count": 4
+    },
+    {
+      "item": "Shell Bell",
+      "count": 3
+    }
+  ],
+  "Alakazam": [
+    {
+      "item": "Alakazite",
+      "count": 39
+    },
+    {
+      "item": "Focus Sash",
+      "count": 15
+    },
+    {
+      "item": "Colbur Berry",
+      "count": 4
+    }
+  ],
+  "Alcremie": [
+    {
+      "item": "Sitrus Berry",
+      "count": 7
+    },
+    {
+      "item": "Leftovers",
+      "count": 5
+    },
+    {
+      "item": "Babiri Berry",
+      "count": 3
+    }
+  ],
+  "Alolan Ninetales": [
+    {
+      "item": "Focus Sash",
+      "count": 390
+    },
+    {
+      "item": "Never-Melt Ice",
+      "count": 100
+    },
+    {
+      "item": "Choice Scarf",
+      "count": 38
+    }
+  ],
+  "Alolan Raichu": [
+    {
+      "item": "Magnet",
+      "count": 4
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 2
+    },
+    {
+      "item": "Focus Sash",
+      "count": 2
+    }
+  ],
+  "Altaria": [
+    {
+      "item": "Altarianite",
+      "count": 29
+    },
+    {
+      "item": "Leftovers",
+      "count": 14
+    },
+    {
+      "item": "Haban Berry",
+      "count": 6
+    }
+  ],
+  "Amoonguss": [
+    {
+      "item": "Rocky Helmet",
+      "count": 103
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 5
+    }
+  ],
+  "Ampharos": [
+    {
+      "item": "Ampharosite",
+      "count": 63
+    },
+    {
+      "item": "Life Orb",
+      "count": 4
+    },
+    {
+      "item": "Bright Powder",
+      "count": 1
+    }
+  ],
+  "Annihilape": [
+    {
+      "item": "Choice Scarf",
+      "count": 3
+    }
+  ],
+  "Appletun": [
+    {
+      "item": "Leftovers",
+      "count": 5
+    }
+  ],
+  "Araquanid": [
+    {
+      "item": "Mystic Water",
+      "count": 87
+    },
+    {
+      "item": "Leftovers",
+      "count": 34
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 7
+    }
+  ],
+  "Arbok": [
+    {
+      "item": "Hard Stone",
+      "count": 5
+    },
+    {
+      "item": "Shuca Berry",
+      "count": 2
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 1
+    }
+  ],
+  "Arcanine": [
+    {
+      "item": "Sitrus Berry",
+      "count": 82
+    },
+    {
+      "item": "Leftovers",
+      "count": 20
+    },
+    {
+      "item": "Lum Berry",
+      "count": 6
+    }
+  ],
+  "Arceus": [
+    {
+      "item": "Sky Plate",
+      "count": 1
+    },
+    {
+      "item": "Flame Plate",
+      "count": 1
+    },
+    {
+      "item": "Bottle Cap",
+      "count": 1
+    }
+  ],
+  "Archaludon": [
+    {
+      "item": "Leftovers",
+      "count": 1154
+    },
+    {
+      "item": "Chople Berry",
+      "count": 215
+    },
+    {
+      "item": "Magnet",
+      "count": 143
+    }
+  ],
+  "Ariados": [
+    {
+      "item": "Sitrus Berry",
+      "count": 4
+    },
+    {
+      "item": "Bright Powder",
+      "count": 4
+    },
+    {
+      "item": "Focus Sash",
+      "count": 3
+    }
+  ],
+  "Armarouge": [
+    {
+      "item": "Sitrus Berry",
+      "count": 14
+    },
+    {
+      "item": "Twisted Spoon",
+      "count": 13
+    },
+    {
+      "item": "White Herb",
+      "count": 12
+    }
+  ],
+  "Aromatisse": [
+    {
+      "item": "Sitrus Berry",
+      "count": 3
+    },
+    {
+      "item": "Leftovers",
+      "count": 3
+    },
+    {
+      "item": "Kebia Berry",
+      "count": 2
+    }
+  ],
+  "Articuno": [
+    {
+      "item": "Leftovers",
+      "count": 1
+    }
+  ],
+  "Audino": [
+    {
+      "item": "Audinite",
+      "count": 7
+    },
+    {
+      "item": "Leftovers",
+      "count": 2
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 1
+    }
+  ],
+  "Aurorus": [
+    {
+      "item": "Focus Sash",
+      "count": 6
+    },
+    {
+      "item": "Leftovers",
+      "count": 4
+    },
+    {
+      "item": "Never-Melt Ice",
+      "count": 2
+    }
+  ],
+  "Avalugg": [
+    {
+      "item": "Leftovers",
+      "count": 3
+    }
+  ],
+  "Azumarill": [
+    {
+      "item": "Sitrus Berry",
+      "count": 121
+    },
+    {
+      "item": "Mystic Water",
+      "count": 16
+    },
+    {
+      "item": "Leftovers",
+      "count": 5
+    }
+  ],
+  "Banette": [
+    {
+      "item": "Banettite",
+      "count": 16
+    },
+    {
+      "item": "Bright Powder",
+      "count": 1
+    }
+  ],
+  "Basculegion": [
+    {
+      "item": "Choice Scarf",
+      "count": 3217
+    },
+    {
+      "item": "Mystic Water",
+      "count": 652
+    },
+    {
+      "item": "Focus Sash",
+      "count": 468
+    }
+  ],
+  "Basculegion ♀": [
+    {
+      "item": "Choice Scarf",
+      "count": 16
+    },
+    {
+      "item": "Mystic Water",
+      "count": 8
+    },
+    {
+      "item": "Focus Sash",
+      "count": 5
+    }
+  ],
+  "Bastiodon": [
+    {
+      "item": "Leftovers",
+      "count": 8
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 2
+    },
+    {
+      "item": "Mental Herb",
+      "count": 1
+    }
+  ],
+  "Baxcalibur": [
+    {
+      "item": "Leftovers",
+      "count": 1
+    },
+    {
+      "item": "Life Orb",
+      "count": 1
+    }
+  ],
+  "Beartic": [
+    {
+      "item": "Focus Sash",
+      "count": 3
+    },
+    {
+      "item": "King",
+      "count": 2
+    },
+    {
+      "item": "Hard Stone",
+      "count": 1
+    }
+  ],
+  "Beedrill": [
+    {
+      "item": "Beedrillite",
+      "count": 15
+    },
+    {
+      "item": "White Herb",
+      "count": 1
+    }
+  ],
+  "Bellibolt": [
+    {
+      "item": "Leftovers",
+      "count": 19
+    },
+    {
+      "item": "Magnet",
+      "count": 11
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 8
+    }
+  ],
+  "Bisharp": [
+    {
+      "item": "Eviolite",
+      "count": 3
+    }
+  ],
+  "Black Kyurem": [
+    {
+      "item": "Leftovers",
+      "count": 1
+    }
+  ],
+  "Blastoise": [
+    {
+      "item": "Blastoisinite",
+      "count": 321
+    },
+    {
+      "item": "Leftovers",
+      "count": 19
+    },
+    {
+      "item": "Mystic Water",
+      "count": 9
+    }
+  ],
+  "Blissey": [
+    {
+      "item": "Leftovers",
+      "count": 1
+    }
+  ],
+  "Bloodmoon Ursaluna": [
+    {
+      "item": "Life Orb",
+      "count": 8
+    },
+    {
+      "item": "Silk Scarf",
+      "count": 5
+    },
+    {
+      "item": "Throat Spray",
+      "count": 1
+    }
+  ],
+  "Brambleghast": [
+    {
+      "item": "Life Orb",
+      "count": 1
+    }
+  ],
+  "Breloom": [
+    {
+      "item": "Grassy Seed",
+      "count": 1
+    },
+    {
+      "item": "Covert Cloak",
+      "count": 1
+    }
+  ],
+  "Brute Bonnet": [
+    {
+      "item": "Sitrus Berry",
+      "count": 23
+    },
+    {
+      "item": "Covert Cloak",
+      "count": 19
+    },
+    {
+      "item": "Mental Herb",
+      "count": 2
+    }
+  ],
+  "Camerupt": [
+    {
+      "item": "Cameruptite",
+      "count": 124
+    },
+    {
+      "item": "Leftovers",
+      "count": 2
+    },
+    {
+      "item": "oran berry",
+      "count": 1
+    }
+  ],
+  "Castform": [
+    {
+      "item": "Bright Powder",
+      "count": 2
+    },
+    {
+      "item": "Focus Sash",
+      "count": 2
+    },
+    {
+      "item": "Scope Lens",
+      "count": 1
+    }
+  ],
+  "Ceruledge": [
+    {
+      "item": "Colbur Berry",
+      "count": 47
+    },
+    {
+      "item": "Focus Sash",
+      "count": 27
+    },
+    {
+      "item": "Lum Berry",
+      "count": 16
+    }
+  ],
+  "Cetitan": [
+    {
+      "item": "Sitrus Berry",
+      "count": 1
+    }
+  ],
+  "Chandelure": [
+    {
+      "item": "Chandelurite",
+      "count": 74
+    },
+    {
+      "item": "Focus Sash",
+      "count": 23
+    },
+    {
+      "item": "Choice Scarf",
+      "count": 12
+    }
+  ],
+  "Charizard": [
+    {
+      "item": "Charizardite Y",
+      "count": 2502
+    },
+    {
+      "item": "Charizardite X",
+      "count": 440
+    },
+    {
+      "item": "Charcoal",
+      "count": 7
+    }
+  ],
+  "Chesnaught": [
+    {
+      "item": "Chesnaughtite",
+      "count": 60
+    },
+    {
+      "item": "Leftovers",
+      "count": 6
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 3
+    }
+  ],
+  "Chi-Yu": [
+    {
+      "item": "Choice Scarf",
+      "count": 67
+    },
+    {
+      "item": "Focus Sash",
+      "count": 2
+    },
+    {
+      "item": "Choice Specs",
+      "count": 1
+    }
+  ],
+  "Chien-Pao": [
+    {
+      "item": "Focus Sash",
+      "count": 66
+    },
+    {
+      "item": "Assault Vest",
+      "count": 49
+    },
+    {
+      "item": "Life Orb",
+      "count": 14
+    }
+  ],
+  "Chimecho": [
+    {
+      "item": "Chimechite",
+      "count": 33
+    },
+    {
+      "item": "King's Rock",
+      "count": 1
+    }
+  ],
+  "Clawitzer": [
+    {
+      "item": "Mystic Water",
+      "count": 4
+    },
+    {
+      "item": "Leftovers",
+      "count": 2
+    },
+    {
+      "item": "Focus Sash",
+      "count": 2
+    }
+  ],
+  "Clefable": [
+    {
+      "item": "Sitrus Berry",
+      "count": 314
+    },
+    {
+      "item": "Leftovers",
+      "count": 47
+    },
+    {
+      "item": "Clefablite",
+      "count": 47
+    }
+  ],
+  "Clefairy": [
+    {
+      "item": "Eviolite",
+      "count": 28
+    }
+  ],
+  "Cofagrigus": [
+    {
+      "item": "Leftovers",
+      "count": 18
+    },
+    {
+      "item": "Mental Herb",
+      "count": 10
+    },
+    {
+      "item": "Colbur Berry",
+      "count": 10
+    }
+  ],
+  "Comfey": [
+    {
+      "item": "Leftovers",
+      "count": 1
+    },
+    {
+      "item": "Covert Cloak",
+      "count": 1
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 1
+    }
+  ],
+  "Conkeldurr": [
+    {
+      "item": "Black Belt",
+      "count": 44
+    },
+    {
+      "item": "Leftovers",
+      "count": 17
+    },
+    {
+      "item": "White Herb",
+      "count": 16
+    }
+  ],
+  "Cornerstone Mask Ogerpon": [
+    {
+      "item": "Cornerstone Mask",
+      "count": 59
+    }
+  ],
+  "Corviknight": [
+    {
+      "item": "Leftovers",
+      "count": 999
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 163
+    },
+    {
+      "item": "Occa Berry",
+      "count": 101
+    }
+  ],
+  "Crabominable": [
+    {
+      "item": "Crabominite",
+      "count": 193
+    },
+    {
+      "item": "Focus Sash",
+      "count": 2
+    },
+    {
+      "item": "Leftovers",
+      "count": 1
+    }
+  ],
+  "Dawn Wings Necrozma": [
+    {
+      "item": "Power Herb",
+      "count": 3
+    },
+    {
+      "item": "Life Orb",
+      "count": 1
+    }
+  ],
+  "Decidueye": [
+    {
+      "item": "Quick Claw",
+      "count": 3
+    },
+    {
+      "item": "Spell Tag",
+      "count": 2
+    },
+    {
+      "item": "Miracle Seed",
+      "count": 2
+    }
+  ],
+  "Dedenne": [
+    {
+      "item": "Choice Scarf",
+      "count": 1
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 1
+    }
+  ],
+  "Delphox": [
+    {
+      "item": "Delphoxite",
+      "count": 1090
+    },
+    {
+      "item": "Focus Sash",
+      "count": 5
+    },
+    {
+      "item": "Leftovers",
+      "count": 3
+    }
+  ],
+  "Diggersby": [
+    {
+      "item": "Choice Scarf",
+      "count": 5
+    },
+    {
+      "item": "Soft Sand",
+      "count": 1
+    },
+    {
+      "item": "White Herb",
+      "count": 1
+    }
+  ],
+  "Ditto": [
+    {
+      "item": "Choice Scarf",
+      "count": 20
+    },
+    {
+      "item": "Focus Sash",
+      "count": 11
+    },
+    {
+      "item": "Quick Claw",
+      "count": 4
+    }
+  ],
+  "Dondozo": [
+    {
+      "item": "Leftovers",
+      "count": 8
+    },
+    {
+      "item": "Lum Berry",
+      "count": 1
+    }
+  ],
+  "Donphan": [
+    {
+      "item": "Leftovers",
+      "count": 4
+    }
+  ],
+  "Dragapult": [
+    {
+      "item": "Focus Sash",
+      "count": 128
+    },
+    {
+      "item": "Dragon Fang",
+      "count": 96
+    },
+    {
+      "item": "Colbur Berry",
+      "count": 53
+    }
+  ],
+  "Dragonite": [
+    {
+      "item": "Dragoninite",
+      "count": 952
+    },
+    {
+      "item": "Lum Berry",
+      "count": 187
+    },
+    {
+      "item": "Dragon Fang",
+      "count": 161
+    }
+  ],
+  "Drampa": [
+    {
+      "item": "Drampanite",
+      "count": 133
+    },
+    {
+      "item": "Silk Scarf",
+      "count": 8
+    },
+    {
+      "item": "Quick Claw",
+      "count": 7
+    }
+  ],
+  "Dusclops": [
+    {
+      "item": "Eviolite",
+      "count": 1
+    }
+  ],
+  "Dusk Mane Necrozma": [
+    {
+      "item": "Rocky Helmet",
+      "count": 1
+    },
+    {
+      "item": "Clear Amulet",
+      "count": 1
+    }
+  ],
+  "Electivire": [
+    {
+      "item": "Life Orb",
+      "count": 1
+    }
+  ],
+  "Emboar": [
+    {
+      "item": "Emboarite",
+      "count": 15
+    },
+    {
+      "item": "Quick Claw",
+      "count": 2
+    },
+    {
+      "item": "Leftovers",
+      "count": 1
+    }
+  ],
+  "Emolga": [
+    {
+      "item": "Magnet",
+      "count": 1
+    },
+    {
+      "item": "Charti Berry",
+      "count": 1
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 1
+    }
+  ],
+  "Empoleon": [
+    {
+      "item": "Leftovers",
+      "count": 62
+    },
+    {
+      "item": "Chople Berry",
+      "count": 19
+    },
+    {
+      "item": "Shuca Berry",
+      "count": 17
+    }
+  ],
+  "Entei": [
+    {
+      "item": "Life Orb",
+      "count": 2
+    },
+    {
+      "item": "Choice Band",
+      "count": 2
+    },
+    {
+      "item": "Assault Vest",
+      "count": 1
+    }
+  ],
+  "Espathra": [
+    {
+      "item": "Focus Sash",
+      "count": 32
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 9
+    },
+    {
+      "item": "Colbur Berry",
+      "count": 6
+    }
+  ],
+  "Espeon": [
+    {
+      "item": "Focus Sash",
+      "count": 5
+    },
+    {
+      "item": "Twisted Spoon",
+      "count": 3
+    },
+    {
+      "item": "Choice Scarf",
+      "count": 2
+    }
+  ],
+  "Eternal Flower Floette": [
+    {
+      "item": "Floettite",
+      "count": 1208
+    },
+    {
+      "item": "Choice Scarf",
+      "count": 6
+    },
+    {
+      "item": "Fairy Feather",
+      "count": 3
+    }
+  ],
+  "Excadrill": [
+    {
+      "item": "Focus Sash",
+      "count": 925
+    },
+    {
+      "item": "Excadrite",
+      "count": 50
+    },
+    {
+      "item": "White Herb",
+      "count": 42
+    }
+  ],
+  "Fan Rotom": [
+    {
+      "item": "Magnet",
+      "count": 2
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 1
+    }
+  ],
+  "Farigiraf": [
+    {
+      "item": "Sitrus Berry",
+      "count": 1180
+    },
+    {
+      "item": "Colbur Berry",
+      "count": 504
+    },
+    {
+      "item": "Mental Herb",
+      "count": 275
+    }
+  ],
+  "Feraligatr": [
+    {
+      "item": "Feraligite",
+      "count": 108
+    },
+    {
+      "item": "Feraligatrite",
+      "count": 3
+    },
+    {
+      "item": "Rawst Berry",
+      "count": 1
+    }
+  ],
+  "Flapple": [
+    {
+      "item": "Choice Scarf",
+      "count": 2
+    },
+    {
+      "item": "Focus Sash",
+      "count": 1
+    },
+    {
+      "item": "Leftovers",
+      "count": 1
+    }
+  ],
+  "Flareon": [
+    {
+      "item": "White Herb",
+      "count": 2
+    }
+  ],
+  "Fletchinder": [
+    {
+      "item": "No Item",
+      "count": 1
+    }
+  ],
+  "Floette": [
+    {
+      "item": "Floettite",
+      "count": 994
+    },
+    {
+      "item": "floettite",
+      "count": 9
+    },
+    {
+      "item": "Choice Scarf",
+      "count": 6
+    }
+  ],
+  "Florges": [
+    {
+      "item": "Bright Powder",
+      "count": 1
+    },
+    {
+      "item": "Ring Target",
+      "count": 1
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 1
+    }
+  ],
+  "Flutter Mane": [
+    {
+      "item": "Focus Sash",
+      "count": 79
+    },
+    {
+      "item": "Booster Energy",
+      "count": 8
+    },
+    {
+      "item": "Choice Specs",
+      "count": 5
+    }
+  ],
+  "Forretress": [
+    {
+      "item": "Leftovers",
+      "count": 1
+    }
+  ],
+  "Froslass": [
+    {
+      "item": "Froslassite",
+      "count": 1482
+    },
+    {
+      "item": "Focus Sash",
+      "count": 10
+    },
+    {
+      "item": "froslassite",
+      "count": 8
+    }
+  ],
+  "Frosmoth": [
+    {
+      "item": "Leftovers",
+      "count": 1
+    }
+  ],
+  "Frost Rotom": [
+    {
+      "item": "Choice Scarf",
+      "count": 85
+    },
+    {
+      "item": "Never-Melt Ice",
+      "count": 44
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 7
+    }
+  ],
+  "Furfrou": [
+    {
+      "item": "Leftovers",
+      "count": 1
+    }
+  ],
+  "Galarian Moltres": [
+    {
+      "item": "Sitrus Berry",
+      "count": 1
+    }
+  ],
+  "Galarian Slowbro": [
+    {
+      "item": "Quick Claw",
+      "count": 16
+    },
+    {
+      "item": "Leftovers",
+      "count": 3
+    },
+    {
+      "item": "Mental Herb",
+      "count": 3
+    }
+  ],
+  "Galarian Slowking": [
+    {
+      "item": "Colbur Berry",
+      "count": 20
+    },
+    {
+      "item": "Leftovers",
+      "count": 10
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 7
+    }
+  ],
+  "Galarian Stunfisk": [
+    {
+      "item": "Bright Powder",
+      "count": 1
+    }
+  ],
+  "Galarian Weezing": [
+    {
+      "item": "Covert Cloak",
+      "count": 7
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 5
+    }
+  ],
+  "Galarian Zapdos": [
+    {
+      "item": "Choice Scarf",
+      "count": 3
+    }
+  ],
+  "Gallade": [
+    {
+      "item": "Galladite",
+      "count": 65
+    },
+    {
+      "item": "White Herb",
+      "count": 38
+    },
+    {
+      "item": "Scope Lens",
+      "count": 27
+    }
+  ],
+  "Garbodor": [
+    {
+      "item": "Leftovers",
+      "count": 6
+    }
+  ],
+  "Garchomp": [
+    {
+      "item": "Choice Scarf",
+      "count": 1683
+    },
+    {
+      "item": "White Herb",
+      "count": 958
+    },
+    {
+      "item": "Soft Sand",
+      "count": 946
+    }
+  ],
+  "Gardevoir": [
+    {
+      "item": "Gardevoirite",
+      "count": 714
+    },
+    {
+      "item": "Choice Scarf",
+      "count": 161
+    },
+    {
+      "item": "Focus Sash",
+      "count": 11
+    }
+  ],
+  "Garganacl": [
+    {
+      "item": "Leftovers",
+      "count": 33
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 8
+    },
+    {
+      "item": "Black Belt",
+      "count": 2
+    }
+  ],
+  "Gastrodon": [
+    {
+      "item": "Leftovers",
+      "count": 1
+    }
+  ],
+  "Gengar": [
+    {
+      "item": "Gengarite",
+      "count": 1048
+    },
+    {
+      "item": "Focus Sash",
+      "count": 77
+    },
+    {
+      "item": "Choice Scarf",
+      "count": 12
+    }
+  ],
+  "Gholdengo": [
+    {
+      "item": "Heavy-Duty Boots",
+      "count": 1
+    },
+    {
+      "item": "Choice Specs",
+      "count": 1
+    }
+  ],
+  "Glaceon": [
+    {
+      "item": "Never-Melt Ice",
+      "count": 21
+    },
+    {
+      "item": "Bright Powder",
+      "count": 21
+    },
+    {
+      "item": "Occa Berry",
+      "count": 2
+    }
+  ],
+  "Glalie": [
+    {
+      "item": "Glalitite",
+      "count": 2
+    },
+    {
+      "item": "Never-Melt Ice",
+      "count": 2
+    },
+    {
+      "item": "Leftovers",
+      "count": 1
+    }
+  ],
+  "Glimmora": [
+    {
+      "item": "Glimmoranite",
+      "count": 432
+    },
+    {
+      "item": "Focus Sash",
+      "count": 61
+    },
+    {
+      "item": "Choice Scarf",
+      "count": 7
+    }
+  ],
+  "Gliscor": [
+    {
+      "item": "Leftovers",
+      "count": 5
+    },
+    {
+      "item": "Passho Berry",
+      "count": 4
+    },
+    {
+      "item": "Lum Berry",
+      "count": 4
+    }
+  ],
+  "Golurk": [
+    {
+      "item": "Golurkite",
+      "count": 301
+    },
+    {
+      "item": "Meganiumite",
+      "count": 2
+    },
+    {
+      "item": "Black Belt",
+      "count": 2
+    }
+  ],
+  "Goodra": [
+    {
+      "item": "Leftovers",
+      "count": 5
+    },
+    {
+      "item": "Haban Berry",
+      "count": 2
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 2
+    }
+  ],
+  "Gothitelle": [
+    {
+      "item": "Sitrus Berry",
+      "count": 2
+    }
+  ],
+  "Gouging Fire": [
+    {
+      "item": "Clear Amulet",
+      "count": 3
+    },
+    {
+      "item": "Safety Goggles",
+      "count": 1
+    }
+  ],
+  "Gourgeist": [
+    {
+      "item": "Mental Herb",
+      "count": 4
+    },
+    {
+      "item": "Leftovers",
+      "count": 2
+    },
+    {
+      "item": "Occa Berry",
+      "count": 2
+    }
+  ],
+  "Grafaiai": [
+    {
+      "item": "Focus Sash",
+      "count": 1
+    }
+  ],
+  "Greninja": [
+    {
+      "item": "Greninjite",
+      "count": 74
+    },
+    {
+      "item": "Choice Scarf",
+      "count": 16
+    },
+    {
+      "item": "Focus Sash",
+      "count": 8
+    }
+  ],
+  "Grimmsnarl": [
+    {
+      "item": "Light Clay",
+      "count": 48
+    },
+    {
+      "item": "Covert Cloak",
+      "count": 8
+    },
+    {
+      "item": "Safety Goggles",
+      "count": 1
+    }
+  ],
+  "Groudon": [
+    {
+      "item": "Assault Vest",
+      "count": 8
+    },
+    {
+      "item": "Clear Amulet",
+      "count": 7
+    },
+    {
+      "item": "Choice Band",
+      "count": 1
+    }
+  ],
+  "Grumpig": [
+    {
+      "item": "Sitrus Berry",
+      "count": 1
+    }
+  ],
+  "Gyarados": [
+    {
+      "item": "Gyaradosite",
+      "count": 197
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 82
+    },
+    {
+      "item": "Leftovers",
+      "count": 69
+    }
+  ],
+  "Hariyama": [
+    {
+      "item": "Rocky Helmet",
+      "count": 1
+    },
+    {
+      "item": "Assault Vest",
+      "count": 1
+    }
+  ],
+  "Hatterene": [
+    {
+      "item": "Fairy Feather",
+      "count": 152
+    },
+    {
+      "item": "Focus Sash",
+      "count": 44
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 16
+    }
+  ],
+  "Hawlucha": [
+    {
+      "item": "Hawluchanite",
+      "count": 57
+    },
+    {
+      "item": "White Herb",
+      "count": 9
+    },
+    {
+      "item": "Focus Sash",
+      "count": 4
+    }
+  ],
+  "Hearthflame Mask Ogerpon": [
+    {
+      "item": "Hearthflame Mask",
+      "count": 24
+    }
+  ],
+  "Heat Rotom": [
+    {
+      "item": "Choice Scarf",
+      "count": 282
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 89
+    },
+    {
+      "item": "Leftovers",
+      "count": 48
+    }
+  ],
+  "Heatran": [
+    {
+      "item": "Zoom Lens",
+      "count": 1
+    }
+  ],
+  "Heliolisk": [
+    {
+      "item": "Choice Scarf",
+      "count": 40
+    },
+    {
+      "item": "Focus Sash",
+      "count": 27
+    },
+    {
+      "item": "Magnet",
+      "count": 11
+    }
+  ],
+  "Heracross": [
+    {
+      "item": "Heracronite",
+      "count": 25
+    },
+    {
+      "item": "Choice Scarf",
+      "count": 1
+    },
+    {
+      "item": "Black Belt",
+      "count": 1
+    }
+  ],
+  "Hippowdon": [
+    {
+      "item": "Leftovers",
+      "count": 8
+    },
+    {
+      "item": "Soft Sand",
+      "count": 3
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 3
+    }
+  ],
+  "Hisuian Arcanine": [
+    {
+      "item": "Focus Sash",
+      "count": 130
+    },
+    {
+      "item": "Choice Scarf",
+      "count": 92
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 48
+    }
+  ],
+  "Hisuian Avalugg": [
+    {
+      "item": "White Herb",
+      "count": 1
+    },
+    {
+      "item": "Leftovers",
+      "count": 1
+    },
+    {
+      "item": "King's Rock",
+      "count": 1
+    }
+  ],
+  "Hisuian Decidueye": [
+    {
+      "item": "Scope Lens",
+      "count": 33
+    },
+    {
+      "item": "Focus Sash",
+      "count": 7
+    },
+    {
+      "item": "Sharp Beak",
+      "count": 3
+    }
+  ],
+  "Hisuian Goodra": [
+    {
+      "item": "Leftovers",
+      "count": 45
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 6
+    },
+    {
+      "item": "Chople Berry",
+      "count": 4
+    }
+  ],
+  "Hisuian Lilligant": [
+    {
+      "item": "Focus Sash",
+      "count": 3
+    }
+  ],
+  "Hisuian Samurott": [
+    {
+      "item": "Scope Lens",
+      "count": 16
+    },
+    {
+      "item": "Choice Scarf",
+      "count": 14
+    },
+    {
+      "item": "Chople Berry",
+      "count": 8
+    }
+  ],
+  "Hisuian Sneasel": [
+    {
+      "item": "White Herb",
+      "count": 4
+    },
+    {
+      "item": "Eviolite",
+      "count": 1
+    },
+    {
+      "item": "Focus Sash",
+      "count": 1
+    }
+  ],
+  "Hisuian Typhlosion": [
+    {
+      "item": "Choice Scarf",
+      "count": 330
+    },
+    {
+      "item": "Charcoal",
+      "count": 28
+    },
+    {
+      "item": "Focus Sash",
+      "count": 2
+    }
+  ],
+  "Hisuian Zoroark": [
+    {
+      "item": "Choice Scarf",
+      "count": 102
+    },
+    {
+      "item": "Focus Sash",
+      "count": 101
+    },
+    {
+      "item": "Silk Scarf",
+      "count": 24
+    }
+  ],
+  "Hitmontop": [
+    {
+      "item": "Eject Button",
+      "count": 1
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 1
+    },
+    {
+      "item": "Covert Cloak",
+      "count": 1
+    }
+  ],
+  "Ho-Oh": [
+    {
+      "item": "Clear Amulet",
+      "count": 11
+    },
+    {
+      "item": "Covert Cloak",
+      "count": 1
+    },
+    {
+      "item": "Leftovers",
+      "count": 1
+    }
+  ],
+  "Houndoom": [
+    {
+      "item": "Houndoominite",
+      "count": 9
+    }
+  ],
+  "Hydrapple": [
+    {
+      "item": "Leftovers",
+      "count": 12
+    },
+    {
+      "item": "Yache Berry",
+      "count": 4
+    },
+    {
+      "item": "White Herb",
+      "count": 4
+    }
+  ],
+  "Hydreigon": [
+    {
+      "item": "Choice Scarf",
+      "count": 265
+    },
+    {
+      "item": "Focus Sash",
+      "count": 32
+    },
+    {
+      "item": "Haban Berry",
+      "count": 29
+    }
+  ],
+  "Ice Rider Calyrex": [
+    {
+      "item": "Clear Amulet",
+      "count": 52
+    },
+    {
+      "item": "Leftovers",
+      "count": 52
+    },
+    {
+      "item": "Never-Melt Ice",
+      "count": 3
+    }
+  ],
+  "Incineroar": [
+    {
+      "item": "Sitrus Berry",
+      "count": 3784
+    },
+    {
+      "item": "Chople Berry",
+      "count": 1536
+    },
+    {
+      "item": "Shuca Berry",
+      "count": 801
+    }
+  ],
+  "Indeedee": [
+    {
+      "item": "Sitrus Berry",
+      "count": 2
+    },
+    {
+      "item": "Focus Sash",
+      "count": 1
+    }
+  ],
+  "Indeedee ♀": [
+    {
+      "item": "Psychic Seed",
+      "count": 6
+    },
+    {
+      "item": "Rocky Helmet",
+      "count": 5
+    },
+    {
+      "item": "Safety Goggles",
+      "count": 3
+    }
+  ],
+  "Infernape": [
+    {
+      "item": "Focus Sash",
+      "count": 8
+    },
+    {
+      "item": "White Herb",
+      "count": 3
+    },
+    {
+      "item": "Choice Scarf",
+      "count": 1
+    }
+  ],
+  "Iron Boulder": [
+    {
+      "item": "Clear Amulet",
+      "count": 1
+    }
+  ],
+  "Iron Bundle": [
+    {
+      "item": "Focus Sash",
+      "count": 20
+    },
+    {
+      "item": "Booster Energy",
+      "count": 4
+    }
+  ],
+  "Iron Hands": [
+    {
+      "item": "Assault Vest",
+      "count": 81
+    }
+  ],
+  "Iron Jugulis": [
+    {
+      "item": "Booster Energy",
+      "count": 5
+    }
+  ],
+  "Iron Treads": [
+    {
+      "item": "Life Orb",
+      "count": 16
+    },
+    {
+      "item": "Choice Band",
+      "count": 2
+    },
+    {
+      "item": "Booster Energy",
+      "count": 1
+    }
+  ],
+  "Iron Valiant": [
+    {
+      "item": "Booster Energy",
+      "count": 2
+    },
+    {
+      "item": "Focus Sash",
+      "count": 1
+    }
+  ],
+  "Jolteon": [
+    {
+      "item": "Focus Sash",
+      "count": 37
+    },
+    {
+      "item": "Magnet",
+      "count": 16
+    },
+    {
+      "item": "Shuca Berry",
+      "count": 9
+    }
+  ],
+  "Jumpluff": [
+    {
+      "item": "Covert Cloak",
+      "count": 10
+    },
+    {
+      "item": "Focus Sash",
+      "count": 1
+    }
+  ],
+  "Kangaskhan": [
+    {
+      "item": "Kangaskhanite",
+      "count": 593
+    },
+    {
+      "item": "Silk Scarf",
+      "count": 60
+    },
+    {
+      "item": "Chople Berry",
+      "count": 4
+    }
+  ],
+  "Kingambit": [
+    {
+      "item": "Black Glasses",
+      "count": 2801
+    },
+    {
+      "item": "Chople Berry",
+      "count": 2176
+    },
+    {
+      "item": "Focus Sash",
+      "count": 154
+    }
+  ],
+  "Kleavor": [
+    {
+      "item": "Choice Scarf",
+      "count": 39
+    },
+    {
+      "item": "Focus Sash",
+      "count": 14
+    },
+    {
+      "item": "White Herb",
+      "count": 4
+    }
+  ],
+  "Klefki": [
+    {
+      "item": "Mental Herb",
+      "count": 33
+    },
+    {
+      "item": "Shuca Berry",
+      "count": 14
+    },
+    {
+      "item": "Leftovers",
+      "count": 14
+    }
+  ],
+  "Kommo-o": [
+    {
+      "item": "Leftovers",
+      "count": 607
+    },
+    {
+      "item": "Dragon Fang",
+      "count": 185
+    },
+    {
+      "item": "Haban Berry",
+      "count": 49
+    }
+  ],
+  "Koraidon": [
+    {
+      "item": "Clear Amulet",
+      "count": 53
+    },
+    {
+      "item": "Life Orb",
+      "count": 40
+    },
+    {
+      "item": "Ability Shield",
+      "count": 9
+    }
+  ],
+  "Krookodile": [
+    {
+      "item": "Choice Scarf",
+      "count": 20
+    },
+    {
+      "item": "Focus Sash",
+      "count": 4
+    },
+    {
+      "item": "Soft Sand",
+      "count": 4
+    }
+  ],
+  "Kyogre": [
+    {
+      "item": "Mystic Water",
+      "count": 31
+    },
+    {
+      "item": "Splash Plate",
+      "count": 9
+    },
+    {
+      "item": "Assault Vest",
+      "count": 5
+    }
+  ],
+  "Landorus": [
+    {
+      "item": "Life Orb",
+      "count": 50
+    },
+    {
+      "item": "Choice Scarf",
+      "count": 2
+    }
+  ],
+  "Landorus Therian": [
+    {
+      "item": "Choice Band",
+      "count": 3
+    },
+    {
+      "item": "Choice Scarf",
+      "count": 1
+    },
+    {
+      "item": "Assault Vest",
+      "count": 1
+    }
+  ],
+  "Leafeon": [
+    {
+      "item": "Miracle Seed",
+      "count": 7
+    },
+    {
+      "item": "Scope Lens",
+      "count": 5
+    },
+    {
+      "item": "Leftovers",
+      "count": 5
+    }
+  ],
+  "Leavanny": [
+    {
+      "item": "Focus Sash",
+      "count": 2
+    }
+  ],
+  "Liepard": [
+    {
+      "item": "Focus Sash",
+      "count": 6
+    },
+    {
+      "item": "Bright Powder",
+      "count": 1
+    }
+  ],
+  "Lopunny": [
+    {
+      "item": "Lopunnite",
+      "count": 159
+    }
+  ],
+  "Low Key Toxtricity": [
+    {
+      "item": "Throat Spray",
+      "count": 1
+    }
+  ],
+  "Lucario": [
+    {
+      "item": "Lucarionite",
+      "count": 167
+    },
+    {
+      "item": "Choice Scarf",
+      "count": 16
+    },
+    {
+      "item": "Focus Sash",
+      "count": 12
+    }
+  ],
+  "Lugia": [
+    {
+      "item": "Covert Cloak",
+      "count": 1
+    },
+    {
+      "item": "Rocky Helmet",
+      "count": 1
+    }
+  ],
+  "Lunala": [
+    {
+      "item": "Electric Seed",
+      "count": 74
+    },
+    {
+      "item": "Power Herb",
+      "count": 29
+    },
+    {
+      "item": "Covert Cloak",
+      "count": 10
+    }
+  ],
+  "Luxray": [
+    {
+      "item": "Sitrus Berry",
+      "count": 10
+    },
+    {
+      "item": "Choice Scarf",
+      "count": 4
+    },
+    {
+      "item": "Magnet",
+      "count": 3
+    }
+  ],
+  "Lycanroc": [
+    {
+      "item": "Focus Sash",
+      "count": 39
+    },
+    {
+      "item": "Hard Stone",
+      "count": 2
+    },
+    {
+      "item": "King",
+      "count": 1
+    }
+  ],
+  "Lycanroc Dusk": [
+    {
+      "item": "Focus Sash",
+      "count": 16
+    },
+    {
+      "item": "Hard Stone",
+      "count": 7
+    },
+    {
+      "item": "Choice Scarf",
+      "count": 3
+    }
+  ],
+  "Machamp": [
+    {
+      "item": "Black Belt",
+      "count": 7
+    },
+    {
+      "item": "Quick Claw",
+      "count": 7
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 5
+    }
+  ],
+  "Magmar": [
+    {
+      "item": "Eviolite",
+      "count": 2
+    }
+  ],
+  "Magmortar": [
+    {
+      "item": "Sitrus Berry",
+      "count": 1
+    }
+  ],
+  "Magnezone": [
+    {
+      "item": "Choice Specs",
+      "count": 1
+    }
+  ],
+  "Mamoswine": [
+    {
+      "item": "Choice Scarf",
+      "count": 45
+    },
+    {
+      "item": "Focus Sash",
+      "count": 43
+    },
+    {
+      "item": "Never-Melt Ice",
+      "count": 18
+    }
+  ],
+  "Manectric": [
+    {
+      "item": "Manectite",
+      "count": 110
+    },
+    {
+      "item": "Magnet",
+      "count": 3
+    },
+    {
+      "item": "manectite",
+      "count": 3
+    }
+  ],
+  "Mareep": [
+    {
+      "item": "Eject Pack",
+      "count": 1
+    }
+  ],
+  "Maushold": [
+    {
+      "item": "Chople Berry",
+      "count": 540
+    },
+    {
+      "item": "Focus Sash",
+      "count": 387
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 90
+    }
+  ],
+  "Medicham": [
+    {
+      "item": "Medichamite",
+      "count": 16
+    },
+    {
+      "item": "Focus Sash",
+      "count": 7
+    },
+    {
+      "item": "White Herb",
+      "count": 1
+    }
+  ],
+  "Mega Abomasnow": [
+    {
+      "item": "Abomasite",
+      "count": 8
+    }
+  ],
+  "Mega Absol": [
+    {
+      "item": "Absolite",
+      "count": 1
+    }
+  ],
+  "Mega Aerodactyl": [
+    {
+      "item": "Aerodactylite",
+      "count": 55
+    },
+    {
+      "item": "Focus Sash",
+      "count": 2
+    },
+    {
+      "item": "Focus Slash",
+      "count": 1
+    }
+  ],
+  "Mega Aggron": [
+    {
+      "item": "Aggronite",
+      "count": 68
+    }
+  ],
+  "Mega Alakazam": [
+    {
+      "item": "Alakazite",
+      "count": 2
+    }
+  ],
+  "Mega Altaria": [
+    {
+      "item": "Altarianite",
+      "count": 3
+    }
+  ],
+  "Mega Ampharos": [
+    {
+      "item": "Ampharosite",
+      "count": 10
+    }
+  ],
+  "Mega Beedrill": [
+    {
+      "item": "Beedrillite",
+      "count": 1
+    }
+  ],
+  "Mega Blastoise": [
+    {
+      "item": "Blastoisinite",
+      "count": 32
+    }
+  ],
+  "Mega Camerupt": [
+    {
+      "item": "Cameruptite",
+      "count": 19
+    }
+  ],
+  "Mega Chandelure": [
+    {
+      "item": "Chandelurite",
+      "count": 5
+    }
+  ],
+  "Mega Charizard X": [
+    {
+      "item": "Charizardite X",
+      "count": 61
+    }
+  ],
+  "Mega Charizard Y": [
+    {
+      "item": "Charizardite Y",
+      "count": 342
+    }
+  ],
+  "Mega Chesnaught": [
+    {
+      "item": "Chesnaughtite",
+      "count": 23
+    }
+  ],
+  "Mega Chimecho": [
+    {
+      "item": "Chimechite",
+      "count": 8
+    },
+    {
+      "item": "Scizorite",
+      "count": 1
+    }
+  ],
+  "Mega Clefable": [
+    {
+      "item": "Clefablite",
+      "count": 7
+    }
+  ],
+  "Mega Crabominable": [
+    {
+      "item": "Crabominite",
+      "count": 36
+    }
+  ],
+  "Mega Delphox": [
+    {
+      "item": "Delphoxite",
+      "count": 213
+    }
+  ],
+  "Mega Dragonite": [
+    {
+      "item": "Dragoninite",
+      "count": 150
+    },
+    {
+      "item": "Dragonitite",
+      "count": 3
+    },
+    {
+      "item": "dragonitite",
+      "count": 3
+    }
+  ],
+  "Mega Drampa": [
+    {
+      "item": "Drampanite",
+      "count": 21
+    }
+  ],
+  "Mega Emboar": [
+    {
+      "item": "Emboarite",
+      "count": 5
+    }
+  ],
+  "Mega Excadrill": [
+    {
+      "item": "Excadrite",
+      "count": 6
+    }
+  ],
+  "Mega Feraligatr": [
+    {
+      "item": "Feraligite",
+      "count": 8
+    }
+  ],
+  "Mega Floette": [
+    {
+      "item": "Floettite",
+      "count": 766
+    }
+  ],
+  "Mega Froslass": [
+    {
+      "item": "Froslassite",
+      "count": 237
+    }
+  ],
+  "Mega Gallade": [
+    {
+      "item": "Galladite",
+      "count": 5
+    }
+  ],
+  "Mega Garchomp": [
+    {
+      "item": "Garchompite",
+      "count": 33
+    }
+  ],
+  "Mega Garchomp Z": [
+    {
+      "item": "Garchompite Z",
+      "count": 1
+    }
+  ],
+  "Mega Gardevoir": [
+    {
+      "item": "Gardevoirite",
+      "count": 108
+    }
+  ],
+  "Mega Gengar": [
+    {
+      "item": "Gengarite",
+      "count": 238
+    }
+  ],
+  "Mega Glalie": [
+    {
+      "item": "Glalitite",
+      "count": 1
+    }
+  ],
+  "Mega Glimmora": [
+    {
+      "item": "Glimmoranite",
+      "count": 78
+    },
+    {
+      "item": "Glimmorite",
+      "count": 2
+    }
+  ],
+  "Mega Golurk": [
+    {
+      "item": "Golurkite",
+      "count": 40
+    }
+  ],
+  "Mega Greninja": [
+    {
+      "item": "Greninjite",
+      "count": 12
+    }
+  ],
+  "Mega Gyarados": [
+    {
+      "item": "Gyaradosite",
+      "count": 21
+    }
+  ],
+  "Mega Hawlucha": [
+    {
+      "item": "Hawluchanite",
+      "count": 4
+    }
+  ],
+  "Mega Houndoom": [
+    {
+      "item": "Houndoominite",
+      "count": 3
+    }
+  ],
+  "Mega Kangaskhan": [
+    {
+      "item": "Kangaskhanite",
+      "count": 89
+    }
+  ],
+  "Mega Lopunny": [
+    {
+      "item": "Lopunnite",
+      "count": 27
+    }
+  ],
+  "Mega Lucario": [
+    {
+      "item": "Lucarionite",
+      "count": 25
+    }
+  ],
+  "Mega Manectric": [
+    {
+      "item": "Manectite",
+      "count": 21
+    }
+  ],
+  "Mega Medicham": [
+    {
+      "item": "Medichamite",
+      "count": 1
+    }
+  ],
+  "Mega Meganium": [
+    {
+      "item": "Meganiumite",
+      "count": 130
+    }
+  ],
+  "Mega Pinsir": [
+    {
+      "item": "Pinsirite",
+      "count": 1
+    }
+  ],
+  "Mega Sableye": [
+    {
+      "item": "Sablenite",
+      "count": 2
+    }
+  ],
+  "Mega Scizor": [
+    {
+      "item": "Scizorite",
+      "count": 98
+    }
+  ],
+  "Mega Scovillain": [
+    {
+      "item": "Scovillainite",
+      "count": 50
+    }
+  ],
+  "Mega Sharpedo": [
+    {
+      "item": "Sharpedonite",
+      "count": 2
+    }
+  ],
+  "Mega Skarmory": [
+    {
+      "item": "Skarmorite",
+      "count": 19
+    }
+  ],
+  "Mega Slowbro": [
+    {
+      "item": "Slowbronite",
+      "count": 5
+    }
+  ],
+  "Mega Starmie": [
+    {
+      "item": "Starminite",
+      "count": 49
+    }
+  ],
+  "Mega Tyranitar": [
+    {
+      "item": "Tyranitarite",
+      "count": 219
+    }
+  ],
+  "Mega Venusaur": [
+    {
+      "item": "Venusaurite",
+      "count": 56
+    }
+  ],
+  "Mega Victreebel": [
+    {
+      "item": "Victreebelite",
+      "count": 1
+    }
+  ],
+  "Meganium": [
+    {
+      "item": "Meganiumite",
+      "count": 1098
+    },
+    {
+      "item": "meganiumite",
+      "count": 8
+    },
+    {
+      "item": "Meganiumita",
+      "count": 5
+    }
+  ],
+  "Melmetal": [
+    {
+      "item": "Assault Vest",
+      "count": 1
+    }
+  ],
+  "Meowscarada": [
+    {
+      "item": "Choice Scarf",
+      "count": 123
+    },
+    {
+      "item": "Focus Sash",
+      "count": 104
+    },
+    {
+      "item": "Miracle Seed",
+      "count": 16
+    }
+  ],
+  "Meowstic": [
+    {
+      "item": "Focus Sash",
+      "count": 28
+    },
+    {
+      "item": "Meowsticite",
+      "count": 22
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 19
+    }
+  ],
+  "Meowstic ♀": [
+    {
+      "item": "Meowsticite",
+      "count": 12
+    },
+    {
+      "item": "White Herb",
+      "count": 1
+    },
+    {
+      "item": "Leftovers",
+      "count": 1
+    }
+  ],
+  "Mewtwo": [
+    {
+      "item": "Focus Sash",
+      "count": 1
+    }
+  ],
+  "Milotic": [
+    {
+      "item": "Leftovers",
+      "count": 2004
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 294
+    },
+    {
+      "item": "Mystic Water",
+      "count": 73
+    }
+  ],
+  "Mimikyu": [
+    {
+      "item": "White Herb",
+      "count": 108
+    },
+    {
+      "item": "Mental Herb",
+      "count": 77
+    },
+    {
+      "item": "Spell Tag",
+      "count": 32
+    }
+  ],
+  "Miraidon": [
+    {
+      "item": "Life Orb",
+      "count": 69
+    },
+    {
+      "item": "Choice Specs",
+      "count": 68
+    },
+    {
+      "item": "Choice Scarf",
+      "count": 37
+    }
+  ],
+  "Morpeko": [
+    {
+      "item": "Focus Sash",
+      "count": 6
+    },
+    {
+      "item": "Choice Scarf",
+      "count": 1
+    }
+  ],
+  "Mow Rotom": [
+    {
+      "item": "Choice Scarf",
+      "count": 44
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 17
+    },
+    {
+      "item": "Leftovers",
+      "count": 10
+    }
+  ],
+  "Mr. Rime": [
+    {
+      "item": "Sitrus Berry",
+      "count": 5
+    },
+    {
+      "item": "Focus Sash",
+      "count": 5
+    },
+    {
+      "item": "Leftovers",
+      "count": 3
+    }
+  ],
+  "Mudsdale": [
+    {
+      "item": "Leftovers",
+      "count": 13
+    },
+    {
+      "item": "Soft Sand",
+      "count": 6
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 4
+    }
+  ],
+  "Ninetales": [
+    {
+      "item": "Charcoal",
+      "count": 8
+    },
+    {
+      "item": "Focus Sash",
+      "count": 6
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 2
+    }
+  ],
+  "Noivern": [
+    {
+      "item": "Focus Sash",
+      "count": 17
+    },
+    {
+      "item": "Yache Berry",
+      "count": 3
+    },
+    {
+      "item": "Haban Berry",
+      "count": 2
+    }
+  ],
+  "Ogerpon": [
+    {
+      "item": "Covert Cloak",
+      "count": 1
+    },
+    {
+      "item": "Focus Sash",
+      "count": 1
+    },
+    {
+      "item": "Loaded Dice",
+      "count": 1
+    }
+  ],
+  "Oranguru": [
+    {
+      "item": "Mental Herb",
+      "count": 83
+    },
+    {
+      "item": "Colbur Berry",
+      "count": 32
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 27
+    }
+  ],
+  "Origin Forme Dialga": [
+    {
+      "item": "Adamant Crystal",
+      "count": 1
+    }
+  ],
+  "Origin Forme Palkia": [
+    {
+      "item": "Lustrous Globe",
+      "count": 1
+    }
+  ],
+  "Orthworm": [
+    {
+      "item": "Sitrus Berry",
+      "count": 164
+    },
+    {
+      "item": "Leftovers",
+      "count": 22
+    },
+    {
+      "item": "Chople Berry",
+      "count": 5
+    }
+  ],
+  "Overqwil": [
+    {
+      "item": "Black Sludge",
+      "count": 1
+    }
+  ],
+  "Palafin": [
+    {
+      "item": "Mystic Water",
+      "count": 423
+    },
+    {
+      "item": "Choice Scarf",
+      "count": 54
+    },
+    {
+      "item": "Leftovers",
+      "count": 16
+    }
+  ],
+  "Paldean Tauros": [
+    {
+      "item": "Lum Berry",
+      "count": 2
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 1
+    }
+  ],
+  "Paldean Tauros Aqua Breed": [
+    {
+      "item": "White Herb",
+      "count": 124
+    },
+    {
+      "item": "Mystic Water",
+      "count": 50
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 6
+    }
+  ],
+  "Paldean Tauros Blaze Breed": [
+    {
+      "item": "White Herb",
+      "count": 12
+    },
+    {
+      "item": "Charcoal",
+      "count": 3
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 1
+    }
+  ],
+  "Pangoro": [
+    {
+      "item": "Focus Sash",
+      "count": 2
+    },
+    {
+      "item": "Black Belt",
+      "count": 1
+    },
+    {
+      "item": "Chople Berry",
+      "count": 1
+    }
+  ],
+  "Passimian": [
+    {
+      "item": "Sitrus Berry",
+      "count": 2
+    },
+    {
+      "item": "Hard Stone",
+      "count": 2
+    },
+    {
+      "item": "White Herb",
+      "count": 1
+    }
+  ],
+  "Pawmot": [
+    {
+      "item": "Assault Vest",
+      "count": 1
+    },
+    {
+      "item": "Life Orb",
+      "count": 1
+    }
+  ],
+  "Pelipper": [
+    {
+      "item": "Focus Sash",
+      "count": 1636
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 375
+    },
+    {
+      "item": "Choice Scarf",
+      "count": 144
+    }
+  ],
+  "Pidgeot": [
+    {
+      "item": "Pidgeotite",
+      "count": 7
+    }
+  ],
+  "Pikachu": [
+    {
+      "item": "Light Ball",
+      "count": 40
+    },
+    {
+      "item": "Focus Sash",
+      "count": 5
+    },
+    {
+      "item": "Bright Powder",
+      "count": 1
+    }
+  ],
+  "Pinsir": [
+    {
+      "item": "Pinsirite",
+      "count": 9
+    }
+  ],
+  "Politoed": [
+    {
+      "item": "Leftovers",
+      "count": 285
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 215
+    },
+    {
+      "item": "Mystic Water",
+      "count": 64
+    }
+  ],
+  "Polteageist": [
+    {
+      "item": "White Herb",
+      "count": 1
+    },
+    {
+      "item": "Focus Sash",
+      "count": 1
+    },
+    {
+      "item": "Leftovers",
+      "count": 1
+    }
+  ],
+  "Porygon2": [
+    {
+      "item": "Eviolite",
+      "count": 2
+    }
+  ],
+  "Primarina": [
+    {
+      "item": "Leftovers",
+      "count": 355
+    },
+    {
+      "item": "Mystic Water",
+      "count": 240
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 206
+    }
+  ],
+  "Probopass": [
+    {
+      "item": "Sitrus Berry",
+      "count": 1
+    }
+  ],
+  "Pyroar": [
+    {
+      "item": "Covert Cloak",
+      "count": 1
+    }
+  ],
+  "Quaquaval": [
+    {
+      "item": "Focus Sash",
+      "count": 15
+    },
+    {
+      "item": "White Herb",
+      "count": 7
+    },
+    {
+      "item": "Mystic Water",
+      "count": 5
+    }
+  ],
+  "Raging Bolt": [
+    {
+      "item": "Booster Energy",
+      "count": 48
+    },
+    {
+      "item": "Assault Vest",
+      "count": 29
+    },
+    {
+      "item": "Life Orb",
+      "count": 19
+    }
+  ],
+  "Raichu": [
+    {
+      "item": "Focus Sash",
+      "count": 71
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 18
+    },
+    {
+      "item": "Shuca Berry",
+      "count": 16
+    }
+  ],
+  "Rampardos": [
+    {
+      "item": "Focus Sash",
+      "count": 2
+    },
+    {
+      "item": "Hard Stone",
+      "count": 1
+    },
+    {
+      "item": "White Herb",
+      "count": 1
+    }
+  ],
+  "Rapid Strike Urshifu": [
+    {
+      "item": "Choice Band",
+      "count": 60
+    },
+    {
+      "item": "Choice Scarf",
+      "count": 52
+    },
+    {
+      "item": "Focus Sash",
+      "count": 16
+    }
+  ],
+  "Rayquaza": [
+    {
+      "item": "Life Orb",
+      "count": 1
+    },
+    {
+      "item": "Covert Cloak",
+      "count": 1
+    },
+    {
+      "item": "Clear Amulet",
+      "count": 1
+    }
+  ],
+  "Regidrago": [
+    {
+      "item": "Life Orb",
+      "count": 1
+    }
+  ],
+  "Regieleki": [
+    {
+      "item": "Focus Sash",
+      "count": 3
+    },
+    {
+      "item": "Weakness Policy",
+      "count": 1
+    },
+    {
+      "item": "Life Orb",
+      "count": 1
+    }
+  ],
+  "Regigigas": [
+    {
+      "item": "Choice Scarf",
+      "count": 3
+    },
+    {
+      "item": "Life Orb",
+      "count": 2
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 1
+    }
+  ],
+  "Reuniclus": [
+    {
+      "item": "Sitrus Berry",
+      "count": 5
+    },
+    {
+      "item": "Leftovers",
+      "count": 2
+    },
+    {
+      "item": "Twisted Spoon",
+      "count": 2
+    }
+  ],
+  "Rhydon": [
+    {
+      "item": "Eviolite",
+      "count": 2
+    }
+  ],
+  "Rhyperior": [
+    {
+      "item": "White Herb",
+      "count": 10
+    },
+    {
+      "item": "Soft Sand",
+      "count": 9
+    },
+    {
+      "item": "Hard Stone",
+      "count": 7
+    }
+  ],
+  "Ribombee": [
+    {
+      "item": "Focus Sash",
+      "count": 1
+    }
+  ],
+  "Rillaboom": [
+    {
+      "item": "Assault Vest",
+      "count": 113
+    },
+    {
+      "item": "Meadow Plate",
+      "count": 1
+    },
+    {
+      "item": "Grassy Seed",
+      "count": 1
+    }
+  ],
+  "Roaring Moon": [
+    {
+      "item": "Booster Energy",
+      "count": 20
+    }
+  ],
+  "Roserade": [
+    {
+      "item": "Choice Scarf",
+      "count": 5
+    },
+    {
+      "item": "Focus Sash",
+      "count": 4
+    },
+    {
+      "item": "Leftovers",
+      "count": 1
+    }
+  ],
+  "Rotom": [
+    {
+      "item": "Sitrus Berry",
+      "count": 3
+    },
+    {
+      "item": "Choice Scarf",
+      "count": 2
+    },
+    {
+      "item": "Leftovers",
+      "count": 2
+    }
+  ],
+  "Runerigus": [
+    {
+      "item": "Leftovers",
+      "count": 4
+    },
+    {
+      "item": "Focus Sash",
+      "count": 2
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 2
+    }
+  ],
+  "Sableye": [
+    {
+      "item": "Roseli Berry",
+      "count": 216
+    },
+    {
+      "item": "Focus Sash",
+      "count": 75
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 73
+    }
+  ],
+  "Salazzle": [
+    {
+      "item": "Focus Sash",
+      "count": 7
+    },
+    {
+      "item": "Shuca Berry",
+      "count": 2
+    },
+    {
+      "item": "Charcoal",
+      "count": 1
+    }
+  ],
+  "Samurott": [
+    {
+      "item": "White Herb",
+      "count": 1
+    }
+  ],
+  "Sandaconda": [
+    {
+      "item": "Bright Powder",
+      "count": 7
+    },
+    {
+      "item": "Soft Sand",
+      "count": 1
+    },
+    {
+      "item": "Leftovers",
+      "count": 1
+    }
+  ],
+  "Scizor": [
+    {
+      "item": "Scizorite",
+      "count": 742
+    },
+    {
+      "item": "Metal Coat",
+      "count": 85
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 30
+    }
+  ],
+  "Scovillain": [
+    {
+      "item": "Scovillainite",
+      "count": 445
+    },
+    {
+      "item": "Miracle Seed",
+      "count": 2
+    },
+    {
+      "item": "Lum Berry",
+      "count": 1
+    }
+  ],
+  "Scrafty": [
+    {
+      "item": "Assault Vest",
+      "count": 1
+    }
+  ],
+  "Scraggy": [
+    {
+      "item": "Eviolite",
+      "count": 8
+    }
+  ],
+  "Scream Tail": [
+    {
+      "item": "Booster Energy",
+      "count": 3
+    }
+  ],
+  "Serperior": [
+    {
+      "item": "Miracle Seed",
+      "count": 7
+    },
+    {
+      "item": "Choice Scarf",
+      "count": 6
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 5
+    }
+  ],
+  "Shadow Rider Calyrex": [
+    {
+      "item": "Focus Sash",
+      "count": 95
+    },
+    {
+      "item": "Life Orb",
+      "count": 62
+    },
+    {
+      "item": "Choice Specs",
+      "count": 8
+    }
+  ],
+  "Sharpedo": [
+    {
+      "item": "Sharpedonite",
+      "count": 27
+    },
+    {
+      "item": "Focus Sash",
+      "count": 2
+    }
+  ],
+  "Shaymin Sky": [
+    {
+      "item": "Choice Specs",
+      "count": 1
+    }
+  ],
+  "Simipour": [
+    {
+      "item": "Focus Sash",
+      "count": 3
+    },
+    {
+      "item": "Mystic Water",
+      "count": 2
+    },
+    {
+      "item": "Bright Powder",
+      "count": 1
+    }
+  ],
+  "Simisage": [
+    {
+      "item": "Roccia di re",
+      "count": 1
+    },
+    {
+      "item": "King's Rock",
+      "count": 1
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 1
+    }
+  ],
+  "Simisear": [
+    {
+      "item": "Bright Powder",
+      "count": 2
+    },
+    {
+      "item": "White Herb",
+      "count": 1
+    },
+    {
+      "item": "Focus Sash",
+      "count": 1
+    }
+  ],
+  "Sinistcha": [
+    {
+      "item": "Sitrus Berry",
+      "count": 2483
+    },
+    {
+      "item": "Leftovers",
+      "count": 660
+    },
+    {
+      "item": "Occa Berry",
+      "count": 395
+    }
+  ],
+  "Skarmory": [
+    {
+      "item": "Skarmorite",
+      "count": 98
+    },
+    {
+      "item": "Quick Claw",
+      "count": 2
+    },
+    {
+      "item": "Focus Sash",
+      "count": 2
+    }
+  ],
+  "Skeledirge": [
+    {
+      "item": "Leftovers",
+      "count": 13
+    },
+    {
+      "item": "Charcoal",
+      "count": 12
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 8
+    }
+  ],
+  "Slowbro": [
+    {
+      "item": "Slowbronite",
+      "count": 34
+    },
+    {
+      "item": "Leftovers",
+      "count": 6
+    },
+    {
+      "item": "Mental Herb",
+      "count": 3
+    }
+  ],
+  "Slowking": [
+    {
+      "item": "Colbur Berry",
+      "count": 11
+    },
+    {
+      "item": "Leftovers",
+      "count": 8
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 3
+    }
+  ],
+  "Slurpuff": [
+    {
+      "item": "Sitrus Berry",
+      "count": 1
+    },
+    {
+      "item": "Leftovers",
+      "count": 1
+    }
+  ],
+  "Smeargle": [
+    {
+      "item": "Focus Sash",
+      "count": 37
+    },
+    {
+      "item": "Covert Cloak",
+      "count": 1
+    }
+  ],
+  "Sneasler": [
+    {
+      "item": "White Herb",
+      "count": 6742
+    },
+    {
+      "item": "Focus Sash",
+      "count": 1437
+    },
+    {
+      "item": "Mental Herb",
+      "count": 253
+    }
+  ],
+  "Snorlax": [
+    {
+      "item": "Sitrus Berry",
+      "count": 33
+    },
+    {
+      "item": "Leftovers",
+      "count": 28
+    },
+    {
+      "item": "Chople Berry",
+      "count": 6
+    }
+  ],
+  "Spiritomb": [
+    {
+      "item": "Sitrus Berry",
+      "count": 9
+    },
+    {
+      "item": "Leftovers",
+      "count": 5
+    },
+    {
+      "item": "BrightPowder",
+      "count": 2
+    }
+  ],
+  "Starmie": [
+    {
+      "item": "Starminite",
+      "count": 221
+    },
+    {
+      "item": "Starmite",
+      "count": 4
+    },
+    {
+      "item": "Choice Scarf",
+      "count": 2
+    }
+  ],
+  "Steelix": [
+    {
+      "item": "Steelixite",
+      "count": 17
+    },
+    {
+      "item": "Leftovers",
+      "count": 8
+    },
+    {
+      "item": "Quick Claw",
+      "count": 4
+    }
+  ],
+  "Stunfisk": [
+    {
+      "item": "Focus Sash",
+      "count": 1
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 1
+    },
+    {
+      "item": "Leftovers",
+      "count": 1
+    }
+  ],
+  "Sudowoodo": [
+    {
+      "item": "Life Orb",
+      "count": 1
+    }
+  ],
+  "Sylveon": [
+    {
+      "item": "Fairy Feather",
+      "count": 481
+    },
+    {
+      "item": "Leftovers",
+      "count": 60
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 28
+    }
+  ],
+  "Talonflame": [
+    {
+      "item": "Sharp Beak",
+      "count": 442
+    },
+    {
+      "item": "Focus Sash",
+      "count": 212
+    },
+    {
+      "item": "No Item",
+      "count": 160
+    }
+  ],
+  "Tatsugiri": [
+    {
+      "item": "Focus Sash",
+      "count": 1
+    }
+  ],
+  "Tatsugiri Droopy Form": [
+    {
+      "item": "Focus Sash",
+      "count": 7
+    },
+    {
+      "item": "Assault Vest",
+      "count": 1
+    }
+  ],
+  "Tauros": [
+    {
+      "item": "White Herb",
+      "count": 2
+    },
+    {
+      "item": "white herb",
+      "count": 1
+    },
+    {
+      "item": "Chople Berry",
+      "count": 1
+    }
+  ],
+  "Terapagos": [
+    {
+      "item": "Leftovers",
+      "count": 16
+    },
+    {
+      "item": "Choice Specs",
+      "count": 9
+    },
+    {
+      "item": "Electric Seed",
+      "count": 8
+    }
+  ],
+  "Thundurus": [
+    {
+      "item": "Covert Cloak",
+      "count": 1
+    }
+  ],
+  "Ting-Lu": [
+    {
+      "item": "Assault Vest",
+      "count": 3
+    },
+    {
+      "item": "Leftovers",
+      "count": 3
+    },
+    {
+      "item": "Rocky Helmet",
+      "count": 2
+    }
+  ],
+  "Tinkaton": [
+    {
+      "item": "Shuca Berry",
+      "count": 46
+    },
+    {
+      "item": "Metal Coat",
+      "count": 44
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 34
+    }
+  ],
+  "Torkoal": [
+    {
+      "item": "Charcoal",
+      "count": 724
+    },
+    {
+      "item": "Leftovers",
+      "count": 32
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 18
+    }
+  ],
+  "Tornadus": [
+    {
+      "item": "Covert Cloak",
+      "count": 26
+    },
+    {
+      "item": "Focus Sash",
+      "count": 5
+    },
+    {
+      "item": "Sharp Beak",
+      "count": 3
+    }
+  ],
+  "Torterra": [
+    {
+      "item": "White Herb",
+      "count": 9
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 5
+    },
+    {
+      "item": "Focus Sash",
+      "count": 3
+    }
+  ],
+  "Toucannon": [
+    {
+      "item": "Sharp Beak",
+      "count": 3
+    },
+    {
+      "item": "Focus Sash",
+      "count": 2
+    },
+    {
+      "item": "White Herb",
+      "count": 1
+    }
+  ],
+  "Toxapex": [
+    {
+      "item": "Leftovers",
+      "count": 20
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 7
+    },
+    {
+      "item": "Mental Herb",
+      "count": 2
+    }
+  ],
+  "Toxicroak": [
+    {
+      "item": "Focus Sash",
+      "count": 12
+    },
+    {
+      "item": "Black Belt",
+      "count": 3
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 3
+    }
+  ],
+  "Trevenant": [
+    {
+      "item": "Sitrus Berry",
+      "count": 6
+    },
+    {
+      "item": "Coba Berry",
+      "count": 1
+    },
+    {
+      "item": "Focus Sash",
+      "count": 1
+    }
+  ],
+  "Tsareena": [
+    {
+      "item": "Sitrus Berry",
+      "count": 113
+    },
+    {
+      "item": "Choice Scarf",
+      "count": 62
+    },
+    {
+      "item": "Miracle Seed",
+      "count": 33
+    }
+  ],
+  "Tynamo": [
+    {
+      "item": "Rocky Helmet",
+      "count": 1
+    }
+  ],
+  "Typhlosion": [
+    {
+      "item": "Choice Scarf",
+      "count": 8
+    },
+    {
+      "item": "Charcoal",
+      "count": 8
+    },
+    {
+      "item": "Choice Specs",
+      "count": 4
+    }
+  ],
+  "Tyranitar": [
+    {
+      "item": "Tyranitarite",
+      "count": 1542
+    },
+    {
+      "item": "Choice Scarf",
+      "count": 177
+    },
+    {
+      "item": "Focus Sash",
+      "count": 153
+    }
+  ],
+  "Tyrantrum": [
+    {
+      "item": "Focus Sash",
+      "count": 6
+    },
+    {
+      "item": "Choice Scarf",
+      "count": 3
+    },
+    {
+      "item": "King's Rock",
+      "count": 2
+    }
+  ],
+  "Umbreon": [
+    {
+      "item": "Leftovers",
+      "count": 46
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 14
+    },
+    {
+      "item": "Chople Berry",
+      "count": 6
+    }
+  ],
+  "Ursaluna": [
+    {
+      "item": "Flame Orb",
+      "count": 116
+    }
+  ],
+  "Urshifu": [
+    {
+      "item": "Focus Sash",
+      "count": 7
+    },
+    {
+      "item": "Choice Band",
+      "count": 2
+    },
+    {
+      "item": "Assault Vest",
+      "count": 1
+    }
+  ],
+  "Vanilluxe": [
+    {
+      "item": "Choice Scarf",
+      "count": 34
+    },
+    {
+      "item": "Leftovers",
+      "count": 10
+    },
+    {
+      "item": "Focus Sash",
+      "count": 7
+    }
+  ],
+  "Vaporeon": [
+    {
+      "item": "Leftovers",
+      "count": 12
+    },
+    {
+      "item": "Mystic Water",
+      "count": 6
+    },
+    {
+      "item": "Sitrus Berry",
+      "count": 2
+    }
+  ],
+  "Venusaur": [
+    {
+      "item": "Focus Sash",
+      "count": 967
+    },
+    {
+      "item": "Venusaurite",
+      "count": 576
+    },
+    {
+      "item": "Leftovers",
+      "count": 93
+    }
+  ],
+  "Victreebel": [
+    {
+      "item": "Victreebelite",
+      "count": 21
+    },
+    {
+      "item": "Focus Sash",
+      "count": 5
+    },
+    {
+      "item": "Occa Berry",
+      "count": 2
+    }
+  ],
+  "Vikavolt": [
+    {
+      "item": "Life Orb",
+      "count": 1
+    }
+  ],
+  "Vivillon": [
+    {
+      "item": "Focus Sash",
+      "count": 92
+    },
+    {
+      "item": "Choice Scarf",
+      "count": 2
+    },
+    {
+      "item": "Quick Claw",
+      "count": 2
+    }
+  ],
+  "Volcarona": [
+    {
+      "item": "Sitrus Berry",
+      "count": 142
+    },
+    {
+      "item": "Leftovers",
+      "count": 116
+    },
+    {
+      "item": "Charti Berry",
+      "count": 31
+    }
+  ],
+  "Walking Wake": [
+    {
+      "item": "Assault Vest",
+      "count": 6
+    },
+    {
+      "item": "Booster Energy",
+      "count": 3
+    },
+    {
+      "item": "Choice Specs",
+      "count": 1
+    }
+  ],
+  "Wash Rotom": [
+    {
+      "item": "Sitrus Berry",
+      "count": 1154
+    },
+    {
+      "item": "Choice Scarf",
+      "count": 949
+    },
+    {
+      "item": "Leftovers",
+      "count": 684
+    }
+  ],
+  "Watchog": [
+    {
+      "item": "Chople Berry",
+      "count": 2
+    }
+  ],
+  "Weavile": [
+    {
+      "item": "Focus Sash",
+      "count": 74
+    },
+    {
+      "item": "King's Rock",
+      "count": 5
+    },
+    {
+      "item": "Never-Melt Ice",
+      "count": 4
+    }
+  ],
+  "Weezing": [
+    {
+      "item": "Sitrus Berry",
+      "count": 1
+    }
+  ],
+  "Wellspring Mask Ogerpon": [
+    {
+      "item": "Wellspring Mask",
+      "count": 16
+    }
+  ],
+  "Whimsicott": [
+    {
+      "item": "Focus Sash",
+      "count": 1903
+    },
+    {
+      "item": "Mental Herb",
+      "count": 206
+    },
+    {
+      "item": "Covert Cloak",
+      "count": 103
+    }
+  ],
+  "White Kyurem": [
+    {
+      "item": "Choice Specs",
+      "count": 1
+    }
+  ],
+  "Wooper": [
+    {
+      "item": "Eviolite",
+      "count": 1
+    }
+  ],
+  "Wyrdeer": [
+    {
+      "item": "Leftovers",
+      "count": 5
+    },
+    {
+      "item": "BrightPowder",
+      "count": 2
+    },
+    {
+      "item": "Quick Claw",
+      "count": 1
+    }
+  ],
+  "Zacian": [
+    {
+      "item": "Rusted Sword",
+      "count": 36
+    },
+    {
+      "item": "Clear Amulet",
+      "count": 1
+    }
+  ],
+  "Zamazenta": [
+    {
+      "item": "Rusted Shield",
+      "count": 153
+    }
+  ],
+  "Zebstrika": [
+    {
+      "item": "Rocky Helmet",
+      "count": 1
+    }
+  ],
+  "Zekrom": [
+    {
+      "item": "Clear Amulet",
+      "count": 1
+    }
+  ],
+  "Zoroark": [
+    {
+      "item": "Focus Sash",
+      "count": 4
+    },
+    {
+      "item": "Quick Claw",
+      "count": 4
+    },
+    {
+      "item": "Black Glasses",
+      "count": 2
+    }
+  ]
+}

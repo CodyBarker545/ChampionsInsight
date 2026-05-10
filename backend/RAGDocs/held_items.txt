@@ -1,0 +1,145 @@
+Held Items Guide (Complete Categories)
+
+Held items are items a Pokémon can hold to gain passive effects in battle. These effects can increase stats, restore HP, modify moves, or trigger under specific conditions.
+
+Held items are divided into categories based on their effects.
+
+--------------------------------------------------
+1. Berries (Consumable Items)
+--------------------------------------------------
+
+Berries are one-time use items that activate automatically.
+
+Types of Berries:
+
+HP Recovery Berries:
+- Restore HP when below a threshold (e.g., Sitrus Berry restores ~25% HP)
+
+Status-Healing Berries:
+- Cure status conditions (e.g., Lum Berry cures any status)
+
+Damage-Reducing Berries:
+- Reduce damage from a specific type (e.g., Occa Berry reduces Fire damage)
+
+Stat-Boosting Berries:
+- Increase a stat when HP is low (e.g., Salac Berry boosts Speed)
+
+Berries are consumed after activation.
+
+--------------------------------------------------
+2. Choice Items
+--------------------------------------------------
+
+Choice items increase a stat but restrict move usage.
+
+Examples:
+- Choice Band: +50% Attack
+- Choice Specs: +50% Special Attack
+- Choice Scarf: +50% Speed
+
+Effect:
+- User is locked into one move until switching out
+
+--------------------------------------------------
+3. Type-Enhancing Items
+--------------------------------------------------
+
+These items boost moves of a specific type.
+
+Effect:
+- Increase damage of matching type moves by ~20%
+
+Examples:
+- Charcoal (Fire)
+- Mystic Water (Water)
+- Magnet (Electric)
+
+--------------------------------------------------
+4. Recovery Items
+--------------------------------------------------
+
+These provide healing over time or under conditions.
+
+Examples:
+- Leftovers: Restores 1/16 HP each turn
+- Black Sludge: Heals Poison-types, damages others
+
+--------------------------------------------------
+5. Damage-Boosting Items
+--------------------------------------------------
+
+Increase damage output with trade-offs.
+
+Examples:
+- Life Orb: +30% damage, loses 10% HP per attack
+- Expert Belt: Boosts super-effective moves
+
+--------------------------------------------------
+6. Defensive Items
+--------------------------------------------------
+
+Reduce damage or improve survivability.
+
+Examples:
+- Assault Vest: +50% Special Defense, cannot use status moves
+- Eviolite: Boosts Defense and Special Defense if the Pokémon can evolve
+
+--------------------------------------------------
+7. Trigger-Based Items
+--------------------------------------------------
+
+Activate under certain conditions.
+
+Examples:
+- Focus Sash: Survive with 1 HP from full health
+- Weakness Policy: Boosts Attack and Special Attack when hit by super-effective move
+
+--------------------------------------------------
+8. Utility Items
+--------------------------------------------------
+
+Provide unique effects not directly tied to damage.
+
+Examples:
+- Rocky Helmet: Damages attackers on contact
+- Air Balloon: Grants temporary Ground immunity
+- Heavy-Duty Boots: Prevents hazard damage
+
+--------------------------------------------------
+9. Form-Changing Items
+--------------------------------------------------
+
+Change a Pokémon’s form or typing.
+
+Examples:
+- Plates (Arceus type change)
+- Drives (Genesect move type)
+- Memories (Silvally type change)
+
+--------------------------------------------------
+10. Special Battle Mechanics Items
+--------------------------------------------------
+
+Items tied to special mechanics.
+
+Examples:
+- Mega Stones: Enable Mega Evolution
+- Z-Crystals: Enable Z-Moves
+- Gems: Boost a move once
+
+--------------------------------------------------
+Item Mechanics
+--------------------------------------------------
+
+- A Pokémon can hold only one item at a time
+- Some items are consumed after activation
+- Items can be removed or swapped
+- Many items activate automatically without input
+
+--------------------------------------------------
+Source
+--------------------------------------------------
+Bulbapedia. (n.d.). Held item. Retrieved from:
+https://bulbapedia.bulbagarden.net/wiki/Held_item
+
+This dataset was created using information from Bulbapedia, a community-driven Pokémon encyclopedia, selected for its structured categorization of held item mechanics and competitive applications.

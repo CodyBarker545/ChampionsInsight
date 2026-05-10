@@ -1,0 +1,94 @@
+Type-Enhancing Items Guide
+
+Type-enhancing items are held items that increase the power of moves of a specific type. 
+They provide a consistent damage boost without drawbacks.
+
+--------------------------------------------------
+Effect
+--------------------------------------------------
+
+- Boost the power of moves that match a specific type
+- Standard boost: 20% (1.2× damage)
+- No negative side effects
+- Always active while held
+
+--------------------------------------------------
+Common Type-Enhancing Items
+--------------------------------------------------
+
+Fire-Type:
+- Charcoal → boosts Fire-type moves
+
+Water-Type:
+- Mystic Water → boosts Water-type moves
+
+Electric-Type:
+- Magnet → boosts Electric-type moves
+
+Grass-Type:
+- Miracle Seed → boosts Grass-type moves
+
+Ice-Type:
+- Never-Melt Ice → boosts Ice-type moves
+
+Fighting-Type:
+- Black Belt → boosts Fighting-type moves
+
+Poison-Type:
+- Poison Barb → boosts Poison-type moves
+
+Ground-Type:
+- Soft Sand → boosts Ground-type moves
+
+Flying-Type:
+- Sharp Beak → boosts Flying-type moves
+
+Psychic-Type:
+- Twisted Spoon → boosts Psychic-type moves
+
+Bug-Type:
+- Silver Powder → boosts Bug-type moves
+
+Rock-Type:
+- Hard Stone → boosts Rock-type moves
+
+Ghost-Type:
+- Spell Tag → boosts Ghost-type moves
+
+Dragon-Type:
+- Dragon Fang → boosts Dragon-type moves
+
+Dark-Type:
+- Black Glasses → boosts Dark-type moves
+
+Steel-Type:
+- Metal Coat → boosts Steel-type moves
+
+Fairy-Type:
+- Pixie Plate → boosts Fairy-type moves
+
+--------------------------------------------------
+Mechanics
+--------------------------------------------------
+
+- Only affects moves of the matching type
+- Stacks with STAB (Same-Type Attack Bonus)
+- Does not lock the user into moves
+- Does not cause recoil or drawbacks
+
+--------------------------------------------------
+Competitive Use
+--------------------------------------------------
+
+- Provides a safe damage boost without restrictions
+- Often used when flexibility is more important than raw power
+- Useful for Pokémon that need to switch moves frequently
+- Alternative to Choice items when move locking is undesirable
+
+--------------------------------------------------
+Source
+--------------------------------------------------
+Bulbapedia. (n.d.). Held item. Retrieved from:
+https://bulbapedia.bulbagarden.net/wiki/Held_item
+
+This dataset was created using information from Bulbapedia, a community-driven Pokémon encyclopedia, selected for its structured explanation of type-enhancing item effects.

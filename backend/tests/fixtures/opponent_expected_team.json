@@ -1,0 +1,149 @@
+{
+  "imageFilename": "2026-05-0318.09.556603716296042018193-48279c5b.jpg",
+  "expectedTeam": [
+    {
+      "slot": 1,
+      "name": "Aerodactyl",
+      "types": ["rock", "flying"],
+      "neutralStats": {
+        "hp": 155,
+        "attack": 125,
+        "defense": 85,
+        "special_attack": 80,
+        "special_defense": 95,
+        "speed": 150
+      },
+      "natureTest": {
+        "nature": "jolly",
+        "expectedStats": {
+          "hp": 155,
+          "attack": 125,
+          "defense": 85,
+          "special_attack": 72,
+          "special_defense": 95,
+          "speed": 165
+        }
+      }
+    },
+    {
+      "slot": 2,
+      "name": "Meganium",
+      "types": ["grass"],
+      "neutralStats": {
+        "hp": 155,
+        "attack": 102,
+        "defense": 120,
+        "special_attack": 103,
+        "special_defense": 120,
+        "speed": 100
+      },
+      "natureTest": {
+        "nature": "bold",
+        "expectedStats": {
+          "hp": 155,
+          "attack": 91,
+          "defense": 132,
+          "special_attack": 103,
+          "special_defense": 120,
+          "speed": 100
+        }
+      }
+    },
+    {
+      "slot": 3,
+      "name": "Garchomp",
+      "types": ["dragon", "ground"],
+      "neutralStats": {
+        "hp": 183,
+        "attack": 150,
+        "defense": 115,
+        "special_attack": 100,
+        "special_defense": 105,
+        "speed": 122
+      },
+      "natureTest": {
+        "nature": "adamant",
+        "expectedStats": {
+          "hp": 183,
+          "attack": 165,
+          "defense": 115,
+          "special_attack": 90,
+          "special_defense": 105,
+          "speed": 122
+        }
+      }
+    },
+    {
+      "slot": 4,
+      "name": "Basculegion",
+      "types": ["water", "ghost"],
+      "neutralStats": {
+        "hp": 195,
+        "attack": 132,
+        "defense": 85,
+        "special_attack": 100,
+        "special_defense": 95,
+        "speed": 98
+      },
+      "natureTest": {
+        "nature": "adamant",
+        "expectedStats": {
+          "hp": 195,
+          "attack": 145,
+          "defense": 85,
+          "special_attack": 90,
+          "special_defense": 95,
+          "speed": 98
+        }
+      }
+    },
+    {
+      "slot": 5,
+      "name": "Tyranitar",
+      "types": ["rock", "dark"],
+      "neutralStats": {
+        "hp": 175,
+        "attack": 154,
+        "defense": 130,
+        "special_attack": 115,
+        "special_defense": 120,
+        "speed": 81
+      },
+      "natureTest": {
+        "nature": "careful",
+        "expectedStats": {
+          "hp": 175,
+          "attack": 154,
+          "defense": 130,
+          "special_attack": 103,
+          "special_defense": 132,
+          "speed": 81
+        }
+      }
+    },
+    {
+      "slot": 6,
+      "name": "Sneasler",
+      "types": ["fighting", "poison"],
+      "neutralStats": {
+        "hp": 155,
+        "attack": 150,
+        "defense": 80,
+        "special_attack": 60,
+        "special_defense": 100,
+        "speed": 140
+      },
+      "natureTest": {
+        "nature": "jolly",
+        "expectedStats": {
+          "hp": 155,
+          "attack": 150,
+          "defense": 80,
+          "special_attack": 54,
+          "special_defense": 100,
+          "speed": 154
+        }
+      }
+    }
+  ]
+}

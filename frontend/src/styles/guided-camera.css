@@ -1,0 +1,326 @@
+/* ---------- CAMERA ---------- */
+
+.camera-panel {
+  display: grid !important;
+  gap: 10px;
+}
+/* Add these rules to CameraCapturePage.css and to the stylesheet used by GuidedCamera. */
+
+.ci-camera-stage,
+.camera-frame {
+  position: relative;
+  width: min(100%, 430px);
+  aspect-ratio: 9 / 16;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #050816;
+}
+
+.ci-camera-video,
+.camera-frame > video,
+.guided-camera-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ci-camera-overlay,
+.alignment-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.ci-camera-canvas,
+.capture-canvas {
+  display: none;
+}
+
+.camera-frame {
+  position: relative;
+  width: min(430px, 100%);
+  aspect-ratio: 9 / 16;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid var(--ci-border);
+  border-radius: 18px;
+  background: #000;
+}
+
+.camera-frame video,
+.camera-frame img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+
+.alignment-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.alignment-column-guide {
+  position: absolute;
+  border: 2px solid rgba(34, 211, 238, 0.42);
+  border-radius: 18px;
+  background:
+    linear-gradient(90deg, rgba(34, 211, 238, 0.1), transparent 18%, transparent 82%, rgba(34, 211, 238, 0.1)),
+    rgba(3, 7, 18, 0.12);
+  box-shadow:
+    0 0 0 9999px rgba(0, 0, 0, 0.1),
+    inset 0 0 22px rgba(34, 211, 238, 0.12),
+    0 0 28px rgba(34, 211, 238, 0.18);
+}
+
+.alignment-corner {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-color: #22d3ee;
+}
+
+.alignment-corner.top-left {
+  top: -3px;
+  left: -3px;
+  border-top: 4px solid;
+  border-left: 4px solid;
+  border-top-left-radius: 20px;
+}
+
+.alignment-corner.top-right {
+  top: -3px;
+  right: -3px;
+  border-top: 4px solid;
+  border-right: 4px solid;
+  border-top-right-radius: 20px;
+}
+
+.alignment-corner.bottom-left {
+  bottom: -3px;
+  left: -3px;
+  border-bottom: 4px solid;
+  border-left: 4px solid;
+  border-bottom-left-radius: 20px;
+}
+
+.alignment-corner.bottom-right {
+  right: -3px;
+  bottom: -3px;
+  border-right: 4px solid;
+  border-bottom: 4px solid;
+  border-bottom-right-radius: 20px;
+}
+
+.alignment-guide-rail {
+  position: absolute;
+  width: 4px;
+  border-radius: 999px;
+  background: rgba(125, 211, 252, 0.86);
+  box-shadow:
+    0 0 0 1px rgba(15, 23, 42, 0.54),
+    0 0 18px rgba(34, 211, 238, 0.46);
+}
+
+.alignment-type-lane {
+  position: absolute;
+  border: 2px solid rgba(251, 191, 36, 0.86);
+  border-radius: 10px;
+  background:
+    linear-gradient(180deg, rgba(251, 191, 36, 0.14), transparent 12%, transparent 88%, rgba(251, 191, 36, 0.14)),
+    rgba(251, 191, 36, 0.06);
+  box-shadow:
+    inset 0 0 18px rgba(251, 191, 36, 0.1),
+    0 0 20px rgba(251, 191, 36, 0.22);
+}
+
+.alignment-sprite-lane {
+  position: absolute;
+  border: 2px dashed rgba(20, 184, 166, 0.58);
+  border-radius: 12px;
+  background: rgba(20, 184, 166, 0.035);
+  box-shadow: inset 0 0 16px rgba(20, 184, 166, 0.12);
+}
+
+/* Each guide box should match the in-game team slot shape */
+.alignment-box {
+  position: absolute;
+  border: 2px solid rgba(105, 169, 255, 0.82);
+  border-radius: 12px;
+  background: rgba(50, 120, 255, 0.035);
+  box-shadow:
+    0 0 0 1px rgba(160, 200, 255, 0.16) inset,
+    0 0 12px rgba(96, 165, 250, 0.24);
+  z-index: 9;
+}
+
+.alignment-sprite-target {
+  position: absolute;
+  left: 3%;
+  top: 6%;
+  width: 55%;
+  height: 88%;
+  border: 2px solid rgba(45, 212, 191, 0.58);
+  border-radius: 10px;
+  background: rgba(20, 184, 166, 0.035);
+}
+
+.alignment-type-target {
+  position: absolute;
+  left: 62%;
+  top: 8%;
+  width: 35%;
+  height: 48%;
+  border: 3px solid rgba(251, 191, 36, 0.94);
+  border-radius: 8px;
+  background: rgba(251, 191, 36, 0.11);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.16) inset,
+    0 0 16px rgba(251, 191, 36, 0.34);
+}
+
+.alignment-type-target::before,
+.alignment-type-target::after {
+  content: "";
+  position: absolute;
+  top: 14%;
+  width: 34%;
+  height: 72%;
+  border: 2px solid rgba(255, 255, 255, 0.72);
+  border-radius: 6px;
+  background: rgba(15, 23, 42, 0.08);
+}
+
+.alignment-type-target::before {
+  left: 6%;
+}
+
+.alignment-type-target::after {
+  right: 6%;
+}
+
+.alignment-row-center {
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  top: 50%;
+  height: 2px;
+  transform: translateY(-50%);
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    rgba(125, 211, 252, 0.18),
+    rgba(125, 211, 252, 0.76) 34%,
+    rgba(251, 191, 36, 0.9) 72%,
+    rgba(251, 191, 36, 0.18)
+  );
+}
+
+.alignment-slot-number {
+  position: absolute;
+  left: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+
+  border-radius: 999px;
+  background: rgba(93, 143, 255, 0.9);
+  color: white;
+  font-size: 0.82rem;
+  font-weight: 900;
+
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.28);
+}
+
+.alignment-quality-card {
+  position: absolute;
+  right: 2.4%;
+  top: 2.0%;
+  width: 126px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px 8px;
+  padding: 8px 10px;
+  border: 1px solid rgba(34, 211, 238, 0.46);
+  border-radius: 10px;
+  color: #dbeafe;
+  background: rgba(3, 7, 18, 0.74);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.34);
+}
+
+.alignment-quality-card strong {
+  font-size: 0.78rem;
+  line-height: 1;
+}
+
+.alignment-quality-card small {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #a7f3d0;
+  font-size: 0.64rem;
+  font-weight: 900;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.alignment-bottom-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 0.8%;
+  transform: translateX(-50%);
+  width: min(62%, 260px);
+  padding: 7px 10px;
+  border: 1px solid rgba(251, 191, 36, 0.44);
+  border-radius: 10px;
+  color: #fef3c7;
+  background: rgba(3, 7, 18, 0.72);
+  font-size: 0.68rem;
+  font-weight: 800;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.camera-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.capture-canvas {
+  display: none;
+}
+
+/* Yellow crop box: this is the exact region that gets cropped and uploaded */
+.alignment-team-crop-box {
+  position: absolute;
+  border: 3px solid rgba(250, 204, 21, 0.98);
+  border-radius: 18px;
+  box-shadow:
+    0 0 0 999px rgba(2, 6, 23, 0.32),
+    0 0 24px rgba(250, 204, 21, 0.45);
+  z-index: 8;
+}
+
+.alignment-team-crop-label {
+  position: absolute;
+  left: 50%;
+  top: -34px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(250, 204, 21, 0.98);
+  color: #111827;
+  font-size: 0.72rem;
+  font-weight: 800;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.24);
+}

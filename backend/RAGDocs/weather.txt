@@ -1,0 +1,57 @@
+Weather Effects Guide
+
+Weather conditions are battlefield effects that influence damage, abilities, and other battle mechanics. Weather typically lasts for several turns and can be extended by certain abilities or items.
+
+--------------------------------------------------
+Types of Weather
+--------------------------------------------------
+
+Rain:
+- Boosts Water-type moves by 50%
+- Reduces Fire-type move damage by 50%
+- Activates certain abilities (e.g., Swift Swim, Rain Dish)
+
+Sun (Harsh Sunlight):
+- Boosts Fire-type moves by 50%
+- Reduces Water-type move damage by 50%
+- Activates certain abilities (e.g., Chlorophyll, Solar Power)
+
+Sandstorm:
+- Damages most Pokémon each turn (1/16 of max HP)
+- Does not damage Rock, Ground, or Steel types
+- Boosts Special Defense of Rock-type Pokémon by 50%
+- Activates abilities such as Sand Rush and Sand Force
+
+Snow (Hail):
+- Damages most Pokémon each turn (1/16 of max HP)
+- Does not damage Ice-type Pokémon
+- May provide defensive boosts to Ice-types (depending on generation)
+- Activates abilities such as Slush Rush
+
+--------------------------------------------------
+Weather Mechanics
+--------------------------------------------------
+
+- Weather conditions typically last 5 turns
+- Duration can be extended to 8 turns with held items (e.g., Damp Rock, Heat Rock)
+- Weather can be changed by moves or abilities
+- Only one weather condition can be active at a time
+
+--------------------------------------------------
+Ability Interaction
+--------------------------------------------------
+
+Many abilities depend on weather conditions to activate or gain benefits.
+
+Examples:
+- Drizzle: Automatically sets rain
+- Drought: Automatically sets sunlight
+- Swift Swim: Doubles Speed in rain
+- Chlorophyll: Doubles Speed in sunlight
+
+--------------------------------------------------
+Source
+--------------------------------------------------
+Bulbapedia. (n.d.). Weather. Retrieved from: https://bulbapedia.bulbagarden.net/wiki/Weather
+
+This dataset was created using information from Bulbapedia, a community-driven Pokémon encyclopedia, selected for its structured explanation of weather mechanics and their impact on battle strategies.

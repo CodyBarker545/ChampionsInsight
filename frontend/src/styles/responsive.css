@@ -1,0 +1,92 @@
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 1280px) {
+  html,
+  body,
+  #root {
+    overflow: auto;
+  }
+
+  .app-shell {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+  }
+
+  .analysis-layout {
+    grid-template-columns: 1fr;
+    overflow: visible;
+  }
+
+  .roster-panel {
+    min-height: 420px;
+  }
+
+  .roster-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(2, 92px);
+  }
+
+  .team-slot {
+    min-height: 76px;
+  }
+
+  .matchup-stage {
+    min-height: 680px;
+    grid-template-rows: minmax(405px, 0.9fr) minmax(250px, 0.62fr);
+  }
+}
+
+@media (max-width: 820px) {
+  .app-shell {
+    padding: 14px 10px 22px;
+  }
+
+  .topbar {
+    height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .rag-top-form {
+    grid-column: 1;
+  }
+
+  .topbar-camera,
+  .topbar-actions {
+    justify-self: stretch;
+    justify-content: center;
+  }
+
+  .status-pill {
+    justify-self: stretch;
+  }
+
+  .roster-list {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 86px);
+  }
+
+  .move-list {
+    grid-template-columns: 1fr;
+  }
+.matchup-stage {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "user"
+    "opponent"
+    "calc";
+  min-height: auto;
+  overflow: visible;
+}
+
+  .combatant-card,
+  .calculation-lane {
+    min-height: 300px;
+  }
+
+  .calculator-sections,
+  .field-side-grid {
+    grid-template-columns: 1fr;
+  }
+}

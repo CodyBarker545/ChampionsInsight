@@ -1,0 +1,93 @@
+Pokémon Ability Guide
+
+This document describes Pokémon abilities, which are passive effects that influence battle mechanics. Each Pokémon can have one or more abilities that activate automatically under certain conditions.
+
+Abilities can affect damage, status conditions, weather, switching mechanics, and other battle interactions.
+
+--------------------------------------------------
+What is an Ability?
+--------------------------------------------------
+An ability is a passive trait assigned to a Pokémon that provides special effects in battle or in the overworld. Abilities do not require activation by the player and are always in effect unless suppressed.
+
+Each Pokémon species may have:
+- One or two standard abilities
+- One hidden ability (rarer, often obtained through special methods)
+
+--------------------------------------------------
+Ability Categories
+--------------------------------------------------
+
+1. Offensive Abilities
+These abilities increase damage output or apply pressure to opponents.
+
+Examples:
+- Huge Power: Doubles the Pokémon’s Attack stat
+- Blaze: Boosts Fire-type moves when HP is low
+- Adaptability: Increases same-type attack bonus (STAB)
+
+--------------------------------------------------
+
+2. Defensive Abilities
+These abilities reduce damage taken or provide immunity.
+
+Examples:
+- Levitate: Grants immunity to Ground-type moves
+- Thick Fat: Reduces damage from Fire and Ice moves
+- Sturdy: Prevents being knocked out in one hit from full HP
+
+--------------------------------------------------
+
+3. Status-Based Abilities
+These abilities interact with status conditions.
+
+Examples:
+- Guts: Increases Attack when affected by a status condition
+- Immunity: Prevents poisoning
+- Synchronize: Passes status conditions to the opponent
+
+--------------------------------------------------
+
+4. Weather-Based Abilities
+These abilities activate or benefit from weather conditions.
+
+Examples:
+- Drizzle: Summons rain when entering battle
+- Drought: Summons harsh sunlight
+- Swift Swim: Doubles Speed in rain
+
+--------------------------------------------------
+
+5. Utility Abilities
+These provide unique effects that influence gameplay.
+
+Examples:
+- Intimidate: Lowers opponent’s Attack upon entry
+- Pressure: Causes opponent to use more PP
+- Pickup: May obtain items after battle
+
+--------------------------------------------------
+Ability Mechanics
+--------------------------------------------------
+
+- Abilities activate automatically without player input
+- Some abilities trigger on entry into battle
+- Some abilities activate under specific conditions (e.g., low HP, weather)
+- Certain moves and abilities can suppress or ignore abilities
+
+--------------------------------------------------
+Hidden Abilities
+--------------------------------------------------
+
+Hidden abilities are special abilities that are less common and often provide competitive advantages.
+
+Examples:
+- Protean: Changes the Pokémon’s type to match its move
+- Magic Bounce: Reflects status moves back to the opponent
+
+--------------------------------------------------
+Source
+--------------------------------------------------
+Bulbapedia. (n.d.). Ability. Retrieved from:
+https://bulbapedia.bulbagarden.net/wiki/Ability
+
+This dataset was created using information from Bulbapedia, a community-driven Pokémon encyclopedia, selected for its structured and detailed explanation of Pokémon abilities.
