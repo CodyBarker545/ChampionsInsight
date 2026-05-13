@@ -131,34 +131,6 @@ class OpponentDetectionService:
 
         quality = self.assess_quality(detection_image_path)
 
-        if not quality.get("canAnalyze", True):
-            debug_original_path = ""
-            debug_crop_paths = []
-            if save_debug:
-                debug_original_path = self.write_debug_original_image(image_path)
-                try:
-                    debug_crop_paths = [
-                        crop.get("debugCropPath", "")
-                        for crop in self.card_service.crop_team_slots(
-                            detection_image_path,
-                            save_debug=True,
-                        )
-                    ]
-                except cv_service.ComputerVisionError:
-                    debug_crop_paths = []
-
-            return {
-                "image": str(image_path),
-                "detectionImage": str(detection_image_path),
-                "referenceCount": len(self.spirit_service.references),
-                "quality": quality,
-                "preprocessing": preprocessing,
-                "debugOriginalPath": debug_original_path,
-                "debugCropPaths": [path for path in debug_crop_paths if path],
-                "detectedTeam": [],
-                "skippedReason": "bad_quality",
-            }
-
         debug_original_path = ""
         if save_debug:
             debug_original_path = self.write_debug_original_image(image_path)

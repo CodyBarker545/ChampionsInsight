@@ -7,5 +7,7 @@ Pillow==11.2.1
 sentence-transformers
 torch
 torchvision
+transformers
+faiss-cpu
 scikit-learn
 ultralytics

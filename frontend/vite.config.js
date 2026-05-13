@@ -12,6 +12,15 @@ export default defineConfig({
     host: "0.0.0.0",
     port: 5173,
     https: true,
+    watch: {
+      ignored: [
+        "**/backend/data/**",
+        "**/backend/Ultralytics/**",
+        "**/backend/runs/**",
+        "**/backend/**/*.pt",
+        "**/backend/**/*.onnx",
+      ],
+    },
     proxy: {
       "/api": {
         target: "https://localhost:5000",

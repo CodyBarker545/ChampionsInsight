@@ -10,12 +10,14 @@ The trained model is written under:
 from __future__ import annotations
 
 import argparse
+import os
 from pathlib import Path
 
 
 BACKEND_DIR = Path(__file__).resolve().parents[1]
 DEFAULT_DATA_YAML = BACKEND_DIR / "data" / "training_dataset" / "yolo_slot_detector" / "data.yaml"
 DEFAULT_PROJECT_DIR = BACKEND_DIR / "data" / "cv" / "models" / "slot_detector"
+DEFAULT_YOLO_CONFIG_DIR = BACKEND_DIR / "Ultralytics"
 
 
 def parse_args() -> argparse.Namespace:
@@ -32,9 +34,19 @@ def parse_args() -> argparse.Namespace:
         help="Base YOLO weights, for example yolov8n.pt or a local .pt file.",
     )
     parser.add_argument("--epochs", type=int, default=60)
+    parser.add_argument(
+        "--patience",
+        type=int,
+        default=10,
+        help="Stop early if validation metrics do not improve for this many epochs.",
+    )
     parser.add_argument("--imgsz", type=int, default=960)
     parser.add_argument("--batch", type=int, default=8)
-    parser.add_argument("--device", default=None, help="Use cpu, 0, 0,1, etc.")
+    parser.add_argument(
+        "--device",
+        default="auto",
+        help="Use auto, cpu, 0, 0,1, etc. auto selects CUDA device 0 when available.",
+    )
     parser.add_argument(
         "--project",
         type=Path,
@@ -50,6 +62,7 @@ def main() -> None:
     args = parse_args()
     data_path = args.data if args.data.is_absolute() else BACKEND_DIR / args.data
     project_dir = args.project if args.project.is_absolute() else BACKEND_DIR / args.project
+    os.environ.setdefault("YOLO_CONFIG_DIR", str(DEFAULT_YOLO_CONFIG_DIR))
 
     if not data_path.exists():
         raise FileNotFoundError(
@@ -65,10 +78,25 @@ def main() -> None:
             "Install backend requirements first: pip install -r requirements.txt"
         ) from error
 
+    device = args.device
+    if device == "auto":
+        try:
+            import torch
+
+            device = "0" if torch.cuda.is_available() else "cpu"
+        except ImportError:
+            device = "cpu"
+
+    if device == "cpu":
+        print("WARNING: Training is using CPU. Install CUDA-enabled PyTorch or pass --device 0 for GPU.")
+    else:
+        print(f"Training device: {device}")
+
     model = YOLO(args.model)
     train_kwargs = {
         "data": str(data_path),
         "epochs": args.epochs,
+        "patience": args.patience,
         "imgsz": args.imgsz,
         "batch": args.batch,
         "project": str(project_dir),
@@ -77,8 +105,8 @@ def main() -> None:
         "exist_ok": True,
     }
 
-    if args.device is not None:
-        train_kwargs["device"] = args.device
+    if device is not None:
+        train_kwargs["device"] = device
 
     result = model.train(**train_kwargs)
 

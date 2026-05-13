@@ -1,13 +1,12 @@
 // Defines the single-page Champions Insight app shell.
 import React, { useEffect, useState } from "react";
-import { saveUserTeam } from "./api/championsInsightApi.js";
 import BattlePrepPage from "./pages/BattlePrepPage.jsx";
-import TeamBuilderPage from "./pages/TeamBuilderPage.jsx";
 import CameraCapturePage from "./pages/CameraCapturePage.jsx";
 import PokedexPage from "./pages/PokedexPage.jsx";
 
 function App() {
   const [view, setView] = useState("battle");
+  const [routePath, setRoutePath] = useState(() => window.location.pathname);
   const [builtTeam, setBuiltTeam] = useState(null);
   const [theme, setTheme] = useState(() => {
     const savedTheme = window.localStorage.getItem("champions-insight-theme");
@@ -25,23 +24,18 @@ function App() {
     window.localStorage.setItem("champions-insight-theme", theme);
   }, [theme]);
 
-  async function saveBuiltTeam(team) {
-    const savedTeam = await saveUserTeam(team);
-    setBuiltTeam(savedTeam.team);
+  function navigateToBattle(search = "") {
+    const nextUrl = `/${search}`;
+    window.history.pushState({}, "", nextUrl);
+    setRoutePath("/");
     setView("battle");
   }
 
   // Phone-only guided camera page.
-  if (window.location.pathname === "/camera") {
-    return <CameraCapturePage />;
-  }
-
-  if (view === "team-builder") {
+  if (routePath === "/camera") {
     return (
-      <TeamBuilderPage
-        initialTeam={builtTeam}
-        onCancel={() => setView("battle")}
-        onSave={saveBuiltTeam}
+      <CameraCapturePage
+        onClose={() => navigateToBattle()}
       />
     );
   }
@@ -53,8 +47,8 @@ function App() {
   return (
     <BattlePrepPage
       initialTeam={builtTeam}
-      onOpenTeamBuilder={() => setView("team-builder")}
       onOpenPokedex={() => setView("pokedex")}
+      onTeamSaved={setBuiltTeam}
       theme={theme}
       onToggleTheme={() => setTheme((currentTheme) => (
         currentTheme === "dark" ? "light" : "dark"

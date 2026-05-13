@@ -144,6 +144,39 @@
   grid-template-columns: 28px 48px minmax(0, 1fr);
 }
 
+.team-panel .user-team-slot {
+  cursor: pointer;
+  overflow: visible;
+}
+
+.team-slot-summary {
+  min-width: 0;
+  display: contents;
+  color: inherit;
+}
+
+.team-slot-clear {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 3;
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--ci-border);
+  border-radius: 999px;
+  color: var(--ci-muted);
+  background: rgba(9, 17, 31, 0.86);
+  font-size: 0.72rem;
+  line-height: 1;
+}
+
+.team-slot-clear:hover {
+  border-color: color-mix(in srgb, var(--ci-danger) 64%, var(--ci-border));
+  color: var(--ci-danger);
+}
+
 .slot-index {
   color: color-mix(in srgb, var(--ci-accent-2) 78%, white);
   font-size: 0.68rem;
@@ -256,6 +289,20 @@
   border-radius: var(--ci-radius-sm);
   background: rgba(8, 17, 31, 0.98);
   box-shadow: 0 18px 44px rgba(0, 0, 0, 0.45);
+}
+
+.opponent-panel {
+  overflow: visible;
+  z-index: 5;
+}
+
+.opponent-panel .roster-list {
+  overflow: visible;
+}
+
+.opponent-panel .opponent-team-slot:nth-last-child(-n + 2) .opponent-slot-results {
+  top: auto;
+  bottom: calc(100% + 6px);
 }
 
 .opponent-slot-results > span {

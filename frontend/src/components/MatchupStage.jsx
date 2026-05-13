@@ -1022,7 +1022,9 @@ function StatGrid({ baseStats = {}, points = {}, stats = {}, onUpdate }) {
               <input
                 className="stat-ev-input"
                 aria-label={`Opponent ${label} points`}
-                type="number"
+                type="text"
+                inputMode="numeric"
+                pattern="[0-9]*"
                 min="0"
                 max={maxStatInvestment}
                 value={points[key] ?? 0}

@@ -51,8 +51,10 @@ class PokemonTypeDetectionService:
 
         combo_details = cv_results.get("typeComboDetails", {})
         if (
-            combo_details.get("predictionSource", "").startswith("type_combo_template")
-            and not combo_details.get("needsReview", True)
+            cv_results.get("selected")
+            and combo_details.get("predictionSource", "").startswith(
+                ("type_combo_template", "single_type_template")
+            )
         ):
             return {
                 **cv_results,

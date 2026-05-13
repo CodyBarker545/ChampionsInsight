@@ -26,12 +26,12 @@ from api.pokemon_routes import pokemon_bp
 from api.rag_routes import rag_bp
 from api.user_team_routes import user_team_bp
 from pokemon_damage_calculator.calculator import analyze_battle
-from services.cv_detection_service import (
+from services.cv_detection_service import detect_opponent_team_types
+from services.cv_service import ComputerVisionError
+from services.dinov2_opponent_detection_service import (
     assess_opponent_image_quality,
     detect_opponent_team,
-    detect_opponent_team_types,
 )
-from services.cv_service import ComputerVisionError
 from services.image_service import ImageValidationError, UPLOAD_DIR, save_opponent_image
 from services.matchup_service import analyze_matchup
 from services.pokedex_service import (

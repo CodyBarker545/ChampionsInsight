@@ -40,7 +40,7 @@ function OpponentPanel({
                   <button
                     className="opponent-slot-clear"
                     type="button"
-                    aria-label={`Clear ${pokemonName}`}
+                    aria-label={`Clear opponent slot ${index + 1}`}
                     onClick={(event) => {
                       event.stopPropagation();
                       onClearOpponent?.(index);

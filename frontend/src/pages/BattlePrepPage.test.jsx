@@ -16,6 +16,7 @@ import {
   fetchPokemonLevel50Stats,
   fetchPokemonTopMoves,
   fetchUserTeam,
+  saveUserTeam,
   searchPokemon,
   uploadOpponentImageFile,
 } from "../api/championsInsightApi.js";
@@ -32,6 +33,7 @@ vi.mock("../api/championsInsightApi.js", () => ({
   fetchPokemonLevel50Stats: vi.fn(),
   fetchPokemonTopMoves: vi.fn(),
   fetchUserTeam: vi.fn(),
+  saveUserTeam: vi.fn(),
   searchPokemon: vi.fn(),
   uploadOpponentImageFile: vi.fn(),
   resolveApiUrl: vi.fn((pathOrUrl = "") => pathOrUrl),
@@ -82,6 +84,9 @@ describe("BattlePrepPage", () => {
         },
       ],
     });
+    saveUserTeam.mockImplementation((team) =>
+      Promise.resolve({ userId: "local-demo-user", team })
+    );
     fetchPokemonDetails.mockResolvedValue({
       name: "Charizard",
       image: "/api/pokemon/sprite/normal/charizard.png",
@@ -362,23 +367,11 @@ describe("BattlePrepPage", () => {
     );
   });
 
-  it("shows a message when guided camera is unavailable", async () => {
-    const user = userEvent.setup();
-    const originalMediaDevices = navigator.mediaDevices;
-    Object.defineProperty(navigator, "mediaDevices", {
-      configurable: true,
-      value: undefined,
-    });
-
+  it("uses the phone camera flow instead of the old guided camera control", () => {
     render(<BattlePrepPage />);
-    await user.click(screen.getByRole("button", { name: "Open guided camera" }));
 
-    expect(screen.getByText("Guided camera is not available in this browser. Use the file picker instead.")).toBeInTheDocument();
-
-    Object.defineProperty(navigator, "mediaDevices", {
-      configurable: true,
-      value: originalMediaDevices,
-    });
+    expect(screen.queryByRole("button", { name: "Open guided camera" })).not.toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Phone QR Camera" })).toBeInTheDocument();
   });
 
   it("asks a RAG question and displays the popup answer", async () => {

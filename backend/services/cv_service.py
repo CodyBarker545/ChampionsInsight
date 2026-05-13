@@ -2,6 +2,7 @@
 
 import json
 import logging
+import os
 from functools import lru_cache
 from pathlib import Path
 
@@ -55,10 +56,24 @@ COLOR_RERANK_LIMIT = 24
 FEATURE_RERANK_LIMIT = 16
 FEATURE_SCORE_WEIGHT = 1.15
 MIN_TYPE_ICON_REGION_HEIGHT = 180
+YOLO_SLOT_OBJECT_MODEL_PATH = (
+    BACKEND_DIR
+    / "data"
+    / "cv"
+    / "models"
+    / "slot_object_detector"
+    / "yolov8n_slot_objects_gpu"
+    / "weights"
+    / "best.pt"
+)
+YOLO_SLOT_OBJECT_CONFIDENCE = 0.30
+YOLO_SLOT_OBJECT_IMAGE_SIZE = 640
 
 
 logger = logging.getLogger(__name__)
 _DEFAULT_DETECTOR = None
+_YOLO_SLOT_OBJECT_MODEL = None
+_YOLO_SLOT_OBJECT_MODEL_LOAD_FAILED = False
 
 
 class ComputerVisionError(RuntimeError):
@@ -1496,6 +1511,10 @@ def detect_slot_object_layer(slot_image):
             },
         }
 
+    yolo_object_layer = detect_yolo_slot_object_layer(slot_image)
+    if yolo_object_layer:
+        return yolo_object_layer
+
     pokemon_candidates = generate_pokemon_sprite_candidates(slot_image)
     pokemon_object = select_pokemon_sprite_object(pokemon_candidates, slot_image)
 
@@ -1511,6 +1530,166 @@ def detect_slot_object_layer(slot_image):
             "type_icons": type_icon_candidates,
         },
     }
+
+
+def load_yolo_slot_object_model():
+    global _YOLO_SLOT_OBJECT_MODEL
+    global _YOLO_SLOT_OBJECT_MODEL_LOAD_FAILED
+
+    if _YOLO_SLOT_OBJECT_MODEL is not None:
+        return _YOLO_SLOT_OBJECT_MODEL
+
+    if _YOLO_SLOT_OBJECT_MODEL_LOAD_FAILED or not YOLO_SLOT_OBJECT_MODEL_PATH.exists():
+        return None
+
+    try:
+        os.environ.setdefault("YOLO_CONFIG_DIR", str(BACKEND_DIR / "Ultralytics"))
+        from ultralytics import YOLO
+
+        _YOLO_SLOT_OBJECT_MODEL = YOLO(str(YOLO_SLOT_OBJECT_MODEL_PATH))
+        return _YOLO_SLOT_OBJECT_MODEL
+    except Exception as error:
+        _YOLO_SLOT_OBJECT_MODEL_LOAD_FAILED = True
+        logger.warning("YOLO slot object model could not be loaded: %s", error)
+        return None
+
+
+def get_yolo_inference_device():
+    try:
+        import torch
+
+        return "0" if torch.cuda.is_available() else "cpu"
+    except Exception:
+        return "cpu"
+
+
+def detect_yolo_slot_object_layer(slot_image):
+    if is_empty_image(slot_image):
+        return None
+
+    model = load_yolo_slot_object_model()
+    if model is None:
+        return None
+
+    try:
+        results = model.predict(
+            source=slot_image,
+            conf=YOLO_SLOT_OBJECT_CONFIDENCE,
+            imgsz=YOLO_SLOT_OBJECT_IMAGE_SIZE,
+            device=get_yolo_inference_device(),
+            verbose=False,
+        )
+    except Exception as error:
+        logger.warning("YOLO slot object detection failed: %s", error)
+        return None
+
+    detections = yolo_slot_object_detections_from_results(results, slot_image)
+    if not detections:
+        return None
+
+    pokemon_candidates = [
+        detection for detection in detections
+        if detection.get("label") == "pokemon_sprite"
+    ]
+    type_icon_candidates = [
+        detection for detection in detections
+        if detection.get("label") == "type_icon"
+    ]
+
+    pokemon_object = select_pokemon_sprite_object(pokemon_candidates, slot_image)
+    if pokemon_object is None:
+        pokemon_candidates = generate_pokemon_sprite_candidates(slot_image)
+        pokemon_object = select_pokemon_sprite_object(pokemon_candidates, slot_image)
+
+    type_icon_objects = select_type_icon_objects(type_icon_candidates, slot_image)
+    if len(type_icon_objects) < 2:
+        fallback_type_icon_candidates = generate_type_icon_crop_candidates(slot_image)
+        merged_type_icon_candidates = type_icon_candidates + [
+            candidate for candidate in fallback_type_icon_candidates
+            if not any(
+                type_icon_boxes_overlap(candidate, old)
+                and effective_type_icon_crop_quality(old) >= 0.48
+                for old in type_icon_candidates
+            )
+        ]
+        type_icon_candidates = merged_type_icon_candidates
+        type_icon_objects = select_type_icon_objects(type_icon_candidates, slot_image)
+
+    if not pokemon_object and len(type_icon_objects) < 1:
+        return None
+
+    return {
+        "pokemon_sprite": pokemon_object,
+        "type_icon_1": type_icon_objects[0] if len(type_icon_objects) >= 1 else None,
+        "type_icon_2": type_icon_objects[1] if len(type_icon_objects) >= 2 else None,
+        "candidates": {
+            "pokemon_sprite": pokemon_candidates,
+            "type_icons": type_icon_candidates,
+        },
+        "source": "yolo_slot_object_detector",
+    }
+
+
+def yolo_slot_object_detections_from_results(results, slot_image):
+    detections = []
+    if not results:
+        return detections
+
+    result = results[0]
+    names = getattr(result, "names", {}) or {}
+    image_height, image_width = slot_image.shape[:2]
+
+    for yolo_box in getattr(result, "boxes", []) or []:
+        class_id = int(yolo_box.cls[0])
+        class_name = names.get(class_id, str(class_id))
+        confidence = float(yolo_box.conf[0])
+        x1, y1, x2, y2 = [
+            int(round(value))
+            for value in yolo_box.xyxy[0].tolist()
+        ]
+        box = clamp_box_to_image(
+            {
+                "x": x1,
+                "y": y1,
+                "width": max(1, x2 - x1),
+                "height": max(1, y2 - y1),
+            },
+            image_width,
+            image_height,
+        )
+
+        if class_name == "pokemon_sprite":
+            detections.append(
+                make_pokemon_sprite_candidate(
+                    slot_image,
+                    box,
+                    "yolo_slot_object_detector",
+                    confidence,
+                )
+            )
+            continue
+
+        if class_name == "type_icon":
+            crop = crop_image_box(slot_image, box)
+            detections.append({
+                "label": "type_icon",
+                "role": "type_icon",
+                "confidence": round(confidence, 4),
+                "box": box,
+                "rawBox": box,
+                "x": box["x"],
+                "y": box["y"],
+                "width": box["width"],
+                "height": box["height"],
+                "area": box["width"] * box["height"],
+                "image": crop,
+                "source": "yolo_slot_object_detector",
+                "cropSource": "yolo_slot_object_detector",
+                "hasSymbol": has_type_icon_symbol(crop),
+                "cropQuality": round(score_type_icon_crop_quality(crop), 4),
+            })
+
+    return detections
 
 
 def select_pokemon_sprite_object(candidates, slot_image):
@@ -1974,6 +2153,7 @@ def is_usable_type_icon_candidate(candidate):
         return True
 
     source = candidate.get("cropSource", candidate.get("source", ""))
+    confidence = float(candidate.get("confidence", 0) or 0)
     if (
         candidate.get("hasSymbol")
         and (
@@ -1981,6 +2161,7 @@ def is_usable_type_icon_candidate(candidate):
             or source.startswith("shifted_fixed_type_icon_")
             or source == "type_icon_cluster_split"
             or source == "type_icon_pair_separated"
+            or (source == "yolo_slot_object_detector" and confidence >= 0.55)
         )
     ):
         return True
@@ -2616,10 +2797,9 @@ def detect_type_method_results(slot_image, type_references=None, type_icon_crops
         else crop_adaptive_type_icons_from_slot(slot_image)
     )
     combo_crop = build_type_combo_candidate_crop(slot_image, icon_crops)
-    combo_result = classify_type_combo_by_template(
-        combo_crop["image"] if combo_crop else None,
-        load_type_combo_references(),
-        expected_type_count=combo_crop["typeCount"] if combo_crop else None,
+    combo_result = classify_type_crop(
+        combo_crop,
+        type_references=type_references or [],
     )
     detected_types = combo_result.get("types", [])
 
@@ -2633,6 +2813,62 @@ def detect_type_method_results(slot_image, type_references=None, type_icon_crops
             "typeCount": combo_crop.get("typeCount", 0) if combo_crop else 0,
         },
     }
+
+
+def classify_type_crop(combo_crop, type_references=None):
+    if not combo_crop:
+        return unknown_type_combo_result("empty-image")
+
+    type_count = combo_crop.get("typeCount")
+    crop_image = combo_crop.get("image")
+
+    if type_count == 1:
+        detected_type = classify_type_by_template(
+            crop_image,
+            type_references or load_type_icon_references(),
+        )
+        if not detected_type:
+            return unknown_type_combo_result("single-type-no-match")
+
+        return {
+            "types": [detected_type],
+            "typeKey": detected_type,
+            "referenceImage": "",
+            "score": 1.0,
+            "pixelScore": 1.0,
+            "colorScore": 1.0,
+            "orbScore": 1.0,
+            "predictionSource": "single_type_template",
+            "needsReview": False,
+        }
+
+    icon_crops = combo_crop.get("iconCrops") or []
+    if icon_crops:
+        references = type_references or load_type_icon_references()
+        icon_types = []
+        for icon_crop in icon_crops[:2]:
+            detected_type = classify_type_by_template(icon_crop.get("image"), references)
+            if detected_type and detected_type not in icon_types:
+                icon_types.append(detected_type)
+
+        if icon_types:
+            return {
+                "types": normalize_detected_type_pair(icon_types),
+                "typeKey": "_".join(icon_types),
+                "referenceImage": "",
+                "score": 1.0,
+                "pixelScore": 1.0,
+                "colorScore": 1.0,
+                "orbScore": 1.0,
+                "predictionSource": "individual_type_icon_template",
+                "needsReview": len(icon_types) < int(type_count or 0),
+            }
+
+    return classify_type_combo_by_template(
+        crop_image,
+        load_type_combo_references(),
+        expected_type_count=type_count,
+    )
 
 
 def build_type_combo_candidate_crop(slot_image, type_icon_crops=None):
@@ -2697,6 +2933,7 @@ def build_type_combo_candidate_crop(slot_image, type_icon_crops=None):
                     }
                     for icon_crop in usable_crops
                 ],
+                "iconCrops": usable_crops,
                 "clusterBox": cluster_box,
             }
 
@@ -2720,6 +2957,7 @@ def build_type_combo_candidate_crop(slot_image, type_icon_crops=None):
             }
             for icon_crop in usable_crops
         ],
+        "iconCrops": usable_crops,
     }
 
 
@@ -4326,6 +4564,70 @@ def classify_type_by_shape(icon_crop, color_group):
         hue = color_signature["hue"]
         saturation = color_signature["saturation"]
         value = color_signature["value"]
+
+        if (
+            38 <= hue <= 62
+            and saturation >= 70
+            and component_count <= 2
+            and 0.24 <= fill <= 0.52
+            and 18 <= horizontal_angle <= 62
+        ):
+            return "fire"
+
+        if (
+            42 <= hue <= 70
+            and saturation > 145
+            and component_count >= 3
+            and fill >= 0.54
+            and (abs(angle) >= 105 or horizontal_angle >= 35)
+        ):
+            return "bug"
+
+        if (
+            130 <= hue <= 158
+            and saturation > 85
+            and component_count >= 2
+            and fill >= 0.58
+            and 70 <= abs(angle) <= 112
+        ):
+            return "fairy"
+
+        if (
+            128 <= hue <= 150
+            and saturation > 95
+            and value > 150
+            and component_count >= 3
+            and 0.26 <= fill <= 0.48
+            and 58 <= abs(angle) <= 112
+        ):
+            return "psychic"
+
+        if (
+            "dark" in color_group
+            and component_count <= 2
+            and fill >= 0.70
+            and 18 <= horizontal_angle <= 62
+        ):
+            return "dark"
+
+        if (
+            136 <= hue <= 158
+            and saturation > 95
+            and component_count <= 2
+            and fill >= 0.50
+            and (58 <= abs(angle) <= 150)
+        ):
+            return "ghost"
+
+        if (
+            38 <= hue <= 65
+            and 80 <= saturation <= 175
+            and value >= 120
+            and component_count <= 2
+            and fill >= 0.72
+            and 20 <= horizontal_angle <= 58
+        ):
+            return "dark"
 
         if (
             95 <= hue <= 110

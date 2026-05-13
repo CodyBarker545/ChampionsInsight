@@ -32,8 +32,8 @@ class FakeSpiritService:
     references = ["one-reference"]
 
 
-# Tests that low-quality images still produce best-effort debug crops.
-def test_bad_quality_detection_still_writes_debug_crops(upload_dir):
+# Tests that low-quality images still attempt detection.
+def test_bad_quality_detection_still_attempts_detection(upload_dir):
     image_path = upload_dir / "upload.jpg"
     image_path.write_bytes(b"fake image")
     card_service = FakeCardService()
@@ -45,10 +45,14 @@ def test_bad_quality_detection_still_writes_debug_crops(upload_dir):
     )
     service.prepare_detection_image = lambda path, save_debug=True: (path, {"imagePath": str(path)})
     service.write_debug_original_image = lambda path: str(upload_dir / "debug" / path.name / "original.jpg")
+    service.detect_slot = lambda path, card_crop, save_debug=True: {
+        "position": card_crop["position"],
+        "pokemonName": "Best Effort",
+    }
 
     result = service.detect_team(image_path, save_debug=True)
 
-    assert result["skippedReason"] == "bad_quality"
+    assert "skippedReason" not in result
     assert result["debugOriginalPath"].endswith("original.jpg")
-    assert result["debugCropPaths"] == ["debug/opponent-slot-1.jpg"]
+    assert result["detectedTeam"] == [{"position": 1, "pokemonName": "Best Effort"}]
     assert card_service.crop_calls == [(image_path, True)]

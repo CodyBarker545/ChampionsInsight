@@ -106,6 +106,31 @@ function normalizeType(type) {
   return String(type || "").trim().toLowerCase();
 }
 
+const typeColors = {
+  bug: "#9fbe2c",
+  dark: "#4b5563",
+  dragon: "#7c5cff",
+  electric: "#f0c419",
+  fairy: "#f08bc3",
+  fighting: "#d94a4a",
+  fire: "#f27835",
+  flying: "#91a7ff",
+  ghost: "#7c62c8",
+  grass: "#62b35f",
+  ground: "#d0a152",
+  ice: "#75d8e8",
+  normal: "#a8afbd",
+  poison: "#aa66d9",
+  psychic: "#ec5aa6",
+  rock: "#aa9251",
+  steel: "#9aa8bd",
+  water: "#5393e8",
+};
+
+function getTypeColor(type) {
+  return typeColors[normalizeType(type)] || "#7dd3fc";
+}
+
 function formatType(type) {
   const value = String(type || "").trim();
 
@@ -138,6 +163,10 @@ function formatName(value) {
     .replace(/\b\w/g, (letter) => letter.toUpperCase());
 }
 
+function normalizeLookupName(value) {
+  return String(value || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+}
+
 function normalizeMoveDetail(move) {
   if (typeof move === "string") {
     return {
@@ -154,8 +183,32 @@ function normalizeMoveDetail(move) {
     displayName: move?.displayName || formatName(move?.name),
     type: move?.type || "",
     category: move?.category || "",
-    effect: move?.effect || "Move details unavailable.",
+    effect: move?.effect || formatMoveSummary(move),
   };
+}
+
+function formatMoveSummary(move) {
+  if (!move) {
+    return "Move details unavailable.";
+  }
+
+  const parts = [];
+  if (move.power) {
+    parts.push(`${move.power} power`);
+  } else if (move.category) {
+    parts.push("No direct damage");
+  }
+  if (move.accuracy) {
+    parts.push(`${move.accuracy}% accuracy`);
+  }
+  if (move.pp) {
+    parts.push(`${move.pp} PP`);
+  }
+  if (move.priority) {
+    parts.push(`${Number(move.priority) > 0 ? "+" : ""}${move.priority} priority`);
+  }
+
+  return parts.length ? parts.join(", ") : "Move details unavailable.";
 }
 
 function formatMoveCategory(category) {
@@ -335,6 +388,7 @@ function PokedexPage({ onBack }) {
               <button
                 className="pokedex-card"
                 key={`${pokemon.id}-${pokemon.name}-${pokemon.spriteFilename || ""}`}
+                style={{ "--pokemon-main-color": getTypeColor(pokemon.types?.[0]) }}
                 type="button"
                 onClick={() => openPokemon(pokemon)}
               >
@@ -384,6 +438,7 @@ function PokedexPage({ onBack }) {
         <PokemonDetailModal
           pokemon={selectedPokemon}
           forms={entries.filter((entry) => sameSpecies(entry, selectedPokemon))}
+          entries={entries}
           activeTab={activeTab}
           onChangeTab={setActiveTab}
           onClose={closePokemon}
@@ -397,6 +452,7 @@ function PokedexPage({ onBack }) {
 function PokemonDetailModal({
   pokemon,
   forms = [],
+  entries = [],
   activeTab,
   onChangeTab,
   onClose,
@@ -413,6 +469,24 @@ function PokemonDetailModal({
     forms.findIndex((form) => form.name === pokemon.name),
   );
   const activeFormLabel = getFormLabel(pokemon);
+  const pokemonLookup = useMemo(() => {
+    const lookup = new Map();
+    entries.forEach((entry) => {
+      const names = [
+        entry.name,
+        entry.speciesName,
+        entry.formApiName,
+        String(entry.name || "").replaceAll(" ", "-"),
+      ];
+      names.forEach((name) => {
+        const key = normalizeLookupName(name);
+        if (key && !lookup.has(key)) {
+          lookup.set(key, entry);
+        }
+      });
+    });
+    return lookup;
+  }, [entries]);
   const filteredMoves = useMemo(() => {
     const search = moveSearch.trim().toLowerCase();
     const moves = (pokemon.moves || []).map(normalizeMoveDetail);
@@ -464,7 +538,10 @@ function PokemonDetailModal({
         </button>
 
         <header className="pokedex-modal-header">
-          <div className="pokedex-modal-image">
+          <div
+            className="pokedex-modal-image"
+            style={{ "--pokemon-main-color": getTypeColor(pokemon.types?.[0]) }}
+          >
             {imageSource ? (
               <img src={imageSource} alt={`${pokemon.name} sprite`} />
             ) : (
@@ -669,10 +746,21 @@ function PokemonDetailModal({
                       <span>{team.tournament || "Unknown Tournament"}</span>
                     </header>
 
-                    <div>
-                      {(team.pokemon || []).map((name) => (
-                        <span key={name}>{name}</span>
-                      ))}
+                    <div className="pokedex-team-sprites">
+                      {(team.pokemon || []).map((name) => {
+                        const teamPokemon = pokemonLookup.get(normalizeLookupName(name));
+                        const teamImage = resolveApiUrl(teamPokemon?.spriteUrl || teamPokemon?.image || "");
+
+                        return (
+                          <span className="pokedex-team-sprite" key={name} title={formatName(name)}>
+                            {teamImage ? (
+                              <img src={teamImage} alt={formatName(name)} />
+                            ) : (
+                              formatName(name).slice(0, 2)
+                            )}
+                          </span>
+                        );
+                      })}
                     </div>
                   </article>
                 ))

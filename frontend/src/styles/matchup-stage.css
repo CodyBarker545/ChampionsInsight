@@ -389,6 +389,12 @@
   text-align: center;
 }
 
+.stat-cell .stat-ev-input::-webkit-outer-spin-button,
+.stat-cell .stat-ev-input::-webkit-inner-spin-button {
+  margin: 0;
+  appearance: none;
+}
+
 /* Moves */
 .move-list {
   min-height: 0;

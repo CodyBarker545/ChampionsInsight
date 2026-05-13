@@ -1,12 +1,16 @@
 // Tests user team roster rendering and selection.
-import { render, screen } from "@testing-library/react";
+import { cleanup, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { describe, expect, it, vi } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import TeamForm from "./TeamForm.jsx";
 
 
 describe("TeamForm", () => {
   const team = [{ id: "aegis", name: "Aegis", image: "", moves: ["Power Strike"], stats: { speed: 100 } }];
+
+  afterEach(() => {
+    cleanup();
+  });
 
   it("renders team member fields", () => {
     render(<TeamForm selectedIndex={0} team={team} onSelectMember={vi.fn()} />);

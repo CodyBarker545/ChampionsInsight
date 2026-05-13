@@ -10,6 +10,10 @@ export async function uploadOpponentImageFile(imageFile, options = {}) {
     formData.append("skipDetection", "1");
   }
 
+  if (options.backgroundDetection) {
+    formData.append("backgroundDetection", "1");
+  }
+
   const response = await fetch(resolveApiUrl("/api/opponent/image"), {
     method: "POST",
     body: formData,

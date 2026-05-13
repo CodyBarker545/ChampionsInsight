@@ -28,6 +28,12 @@ from PIL import Image, ImageEnhance, ImageFilter
 
 CARD_WIDTH = 128
 CARD_HEIGHT = 96
+WORK_CARD_WIDTH = 176
+WORK_CARD_HEIGHT = 144
+MIN_VISIBLE_SPRITE_PIXELS = 260
+MIN_VISIBLE_SPRITE_RATIO = 0.045
+MIN_VISIBLE_SPRITE_BBOX_SIZE = 14
+MAX_CROP_ATTEMPTS = 24
 
 RED_BACKGROUNDS = [
     (135, 0, 55),
@@ -35,6 +41,17 @@ RED_BACKGROUNDS = [
     (120, 0, 50),
     (170, 5, 75),
     (145, 10, 65),
+]
+
+REAL_LIKE_CROP_PROFILES = [
+    # Common tight portrait crops from real detector output.
+    {"width": (44, 72), "height": (72, 104), "weight": 0.28},
+    {"width": (60, 96), "height": (76, 112), "weight": 0.28},
+    {"width": (82, 132), "height": (82, 124), "weight": 0.24},
+    # Wider/looser crops, still plausible after red-card object detection.
+    {"width": (112, 172), "height": (82, 150), "weight": 0.14},
+    # Occasional messy crop that includes too much card/context.
+    {"width": (180, 320), "height": (120, 210), "weight": 0.06},
 ]
 
 
@@ -84,6 +101,185 @@ def make_red_background(width: int, height: int) -> Image.Image:
     return Image.fromarray(arr, "RGB")
 
 
+def choose_real_like_crop_size() -> tuple[int, int]:
+    profile = random.choices(
+        REAL_LIKE_CROP_PROFILES,
+        weights=[item["weight"] for item in REAL_LIKE_CROP_PROFILES],
+        k=1,
+    )[0]
+    return (
+        random.randint(*profile["width"]),
+        random.randint(*profile["height"]),
+    )
+
+
+def crop_region_with_padding(
+    img: Image.Image,
+    mask: Image.Image,
+    box: tuple[int, int, int, int],
+) -> tuple[Image.Image, Image.Image]:
+    left, top, right, bottom = box
+    target_width = right - left
+    target_height = bottom - top
+    card_width, card_height = img.size
+
+    padded = make_red_background(
+        card_width + target_width * 2,
+        card_height + target_height * 2,
+    )
+    padded_mask = Image.new("L", padded.size, 0)
+
+    padded.paste(img, (target_width, target_height))
+    padded_mask.paste(mask, (target_width, target_height))
+
+    shifted_box = (
+        left + target_width,
+        top + target_height,
+        right + target_width,
+        bottom + target_height,
+    )
+
+    return padded.crop(shifted_box), padded_mask.crop(shifted_box)
+
+
+def has_enough_visible_sprite(mask: Image.Image) -> bool:
+    arr = np.array(mask)
+    visible_pixels = int(np.count_nonzero(arr > 24))
+    if visible_pixels < MIN_VISIBLE_SPRITE_PIXELS:
+        return False
+
+    visible_ratio = visible_pixels / max(1, arr.shape[0] * arr.shape[1])
+    if visible_ratio < MIN_VISIBLE_SPRITE_RATIO:
+        return False
+
+    bbox = mask.getbbox()
+    if not bbox:
+        return False
+
+    left, top, right, bottom = bbox
+    return (
+        right - left >= MIN_VISIBLE_SPRITE_BBOX_SIZE
+        and bottom - top >= MIN_VISIBLE_SPRITE_BBOX_SIZE
+    )
+
+
+def mask_center_crop_box(
+    mask: Image.Image,
+    target_width: int,
+    target_height: int,
+) -> tuple[int, int, int, int]:
+    bbox = mask.getbbox()
+    if not bbox:
+        card_width, card_height = mask.size
+        center_x = card_width // 2
+        center_y = card_height // 2
+    else:
+        left, top, right, bottom = bbox
+        center_x = (left + right) // 2
+        center_y = (top + bottom) // 2
+
+    left = center_x - target_width // 2 + random.randint(
+        -max(2, target_width // 8),
+        max(2, target_width // 8),
+    )
+    top = center_y - target_height // 2 + random.randint(
+        -max(2, target_height // 8),
+        max(2, target_height // 8),
+    )
+
+    return (left, top, left + target_width, top + target_height)
+
+
+def crop_real_like_from_card(
+    img: Image.Image,
+    mask: Image.Image,
+) -> tuple[Image.Image, Image.Image]:
+    """
+    Make synthetic crops resemble detector output from real screenshots.
+
+    Real crops are often tight, portrait-ish, partially clipped, and not all
+    resized to one canonical dimension. This intentionally keeps variable
+    output sizes so the classifier sees the same rough distribution.
+    """
+
+    card_width, card_height = img.size
+    target_width, target_height = choose_real_like_crop_size()
+
+    for _ in range(MAX_CROP_ATTEMPTS):
+        # Anchor mostly on the actual sprite, with controlled drift to create
+        # cutoffs without producing blank red crops.
+        if random.random() < 0.82:
+            left, top, right, bottom = mask_center_crop_box(
+                mask,
+                target_width,
+                target_height,
+            )
+        else:
+            center_x = int(card_width * random.uniform(0.30, 0.52))
+            center_y = int(card_height * random.uniform(0.42, 0.58))
+            center_x += random.randint(
+                -int(target_width * 0.28),
+                int(target_width * 0.24),
+            )
+            center_y += random.randint(
+                -int(target_height * 0.22),
+                int(target_height * 0.22),
+            )
+            left = center_x - target_width // 2
+            top = center_y - target_height // 2
+            right = left + target_width
+            bottom = top + target_height
+
+        crop, crop_mask = crop_region_with_padding(img, mask, (left, top, right, bottom))
+        if has_enough_visible_sprite(crop_mask):
+            break
+    else:
+        box = mask_center_crop_box(mask, target_width, target_height)
+        crop, crop_mask = crop_region_with_padding(img, mask, box)
+
+    # Some real crops are small detector boxes that were saved directly; others
+    # are slightly scaled by processing. Keep both.
+    if random.random() < 0.28:
+        scale = random.uniform(0.75, 1.35)
+        size = (
+            max(24, int(round(crop.width * scale))),
+            max(32, int(round(crop.height * scale))),
+        )
+        crop = crop.resize(size, Image.Resampling.BICUBIC)
+        crop_mask = crop_mask.resize(
+            size,
+            Image.Resampling.BICUBIC,
+        )
+
+    return crop, crop_mask
+
+
+def crop_fixed_legacy_from_card(
+    img: Image.Image,
+    mask: Image.Image,
+) -> tuple[Image.Image, Image.Image]:
+    """Keep a slice of the old fixed-size behavior for backwards coverage."""
+
+    card_width, card_height = img.size
+
+    # Simulate imperfect crop boundaries from screenshots/phone captures.
+    if random.random() < 0.55:
+        left = random.randint(0, int(card_width * 0.12))
+        top = random.randint(0, int(card_height * 0.10))
+        right = card_width - random.randint(0, int(card_width * 0.12))
+        bottom = card_height - random.randint(0, int(card_height * 0.10))
+
+        if right > left + 20 and bottom > top + 20:
+            img = img.crop((left, top, right, bottom))
+            mask = mask.crop((left, top, right, bottom))
+
+    size = (CARD_WIDTH, CARD_HEIGHT)
+    return (
+        img.resize(size, Image.Resampling.BICUBIC),
+        mask.resize(size, Image.Resampling.BICUBIC),
+    )
+
+
 def add_camera_effects(img: Image.Image) -> Image.Image:
     """Apply camera-like effects to make synthetic images closer to phone/screenshot crops."""
 
@@ -104,11 +300,15 @@ def add_camera_effects(img: Image.Image) -> Image.Image:
         arr += noise
 
     if random.random() < 0.25:
-        glare_x = random.randint(0, CARD_WIDTH - 1)
-        glare_y = random.randint(0, CARD_HEIGHT - 1)
-        radius = random.randint(18, 55)
+        image_width, image_height = img.size
+        glare_x = random.randint(0, image_width - 1)
+        glare_y = random.randint(0, image_height - 1)
+        radius = random.randint(
+            max(8, int(min(image_width, image_height) * 0.18)),
+            max(16, int(max(image_width, image_height) * 0.48)),
+        )
 
-        yy, xx = np.ogrid[:CARD_HEIGHT, :CARD_WIDTH]
+        yy, xx = np.ogrid[:image_height, :image_width]
         dist = np.sqrt((xx - glare_x) ** 2 + (yy - glare_y) ** 2)
         mask = np.clip(1 - dist / radius, 0, 1)
 
@@ -147,12 +347,12 @@ def paste_sprite_on_card(sprite_path: Path) -> Image.Image:
     if bbox:
         sprite = sprite.crop(bbox)
 
-    bg = make_red_background(CARD_WIDTH, CARD_HEIGHT).convert("RGBA")
+    bg = make_red_background(WORK_CARD_WIDTH, WORK_CARD_HEIGHT).convert("RGBA")
 
     # Wide scale range.
     # This creates small, medium, large, and partially oversized examples.
-    max_sprite_w = int(CARD_WIDTH * random.uniform(0.50, 1.40))
-    max_sprite_h = int(CARD_HEIGHT * random.uniform(0.50, 1.40))
+    max_sprite_w = int(WORK_CARD_WIDTH * random.uniform(0.40, 1.65))
+    max_sprite_h = int(WORK_CARD_HEIGHT * random.uniform(0.42, 1.65))
 
     scale = min(max_sprite_w / sprite.width, max_sprite_h / sprite.height)
     scale *= random.uniform(0.80, 1.35)
@@ -170,11 +370,11 @@ def paste_sprite_on_card(sprite_path: Path) -> Image.Image:
 
     # Place sprite in a way that allows natural cutoff from any side.
     # The sprite can be partly outside the card boundaries.
-    min_x = -int(sprite.width * 0.45)
-    max_x = CARD_WIDTH - int(sprite.width * 0.55)
+    min_x = -int(sprite.width * 0.58)
+    max_x = WORK_CARD_WIDTH - int(sprite.width * 0.48)
 
-    min_y = -int(sprite.height * 0.45)
-    max_y = CARD_HEIGHT - int(sprite.height * 0.55)
+    min_y = -int(sprite.height * 0.55)
+    max_y = WORK_CARD_HEIGHT - int(sprite.height * 0.45)
 
     # Guard against invalid ranges for very large sprites.
     if min_x > max_x:
@@ -187,19 +387,15 @@ def paste_sprite_on_card(sprite_path: Path) -> Image.Image:
     y = random.randint(min_y, max_y)
 
     bg.alpha_composite(sprite, (x, y))
+    sprite_mask = Image.new("L", bg.size, 0)
+    sprite_mask.paste(sprite.getchannel("A"), (x, y), sprite.getchannel("A"))
 
     img = bg.convert("RGB")
 
-    # Simulate imperfect crop boundaries from screenshots/phone captures.
-    if random.random() < 0.45:
-        left = random.randint(0, 10)
-        top = random.randint(0, 8)
-        right = CARD_WIDTH - random.randint(0, 10)
-        bottom = CARD_HEIGHT - random.randint(0, 8)
-
-        if right > left + 20 and bottom > top + 20:
-            img = img.crop((left, top, right, bottom))
-            img = img.resize((CARD_WIDTH, CARD_HEIGHT), Image.Resampling.BICUBIC)
+    if random.random() < 0.72:
+        img, _ = crop_real_like_from_card(img, sprite_mask)
+    else:
+        img, _ = crop_fixed_legacy_from_card(img, sprite_mask)
 
     img = add_camera_effects(img)
 

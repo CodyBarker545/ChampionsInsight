@@ -46,8 +46,8 @@ def test_save_opponent_image_stores_valid_file(upload_dir, monkeypatch):
     assert result["debugCropsGenerated"] is True
 
 
-# Tests that uploads still create debug crops when prediction is skipped.
-def test_save_opponent_image_generates_debug_crops_when_detection_skipped(upload_dir, monkeypatch):
+# Tests that uploads can be saved without running immediate prediction.
+def test_save_opponent_image_skips_detection_when_requested(upload_dir, monkeypatch):
     calls = []
 
     monkeypatch.setattr(image_service, "UPLOAD_DIR", upload_dir)
@@ -65,16 +65,15 @@ def test_save_opponent_image_generates_debug_crops_when_detection_skipped(upload
 
     result = save_opponent_image(make_file_storage(), run_detection=False)
 
-    assert len(calls) == 1
-    assert calls[0] == upload_dir / result["filename"]
+    assert calls == []
     assert result["status"] == "received"
-    assert result["debugCropsGenerated"] is True
+    assert result["debugCropsGenerated"] is False
     assert result["detectedTeam"] == []
-    assert result["message"] == "Image received. Debug crops generated."
+    assert result["message"] == "Image received. Detection skipped."
 
 
-# Tests that rejected photos still run debug crop generation.
-def test_save_opponent_image_generates_debug_crops_for_low_quality_photo(upload_dir, monkeypatch):
+# Tests that low-quality photos still run detection instead of blocking upload.
+def test_save_opponent_image_attempts_detection_for_low_quality_photo(upload_dir, monkeypatch):
     calls = []
 
     monkeypatch.setattr(image_service, "UPLOAD_DIR", upload_dir)
@@ -100,10 +99,10 @@ def test_save_opponent_image_generates_debug_crops_for_low_quality_photo(upload_
 
     monkeypatch.setattr(image_service, "detect_opponent_team", fake_detect_opponent_team)
 
-    result = save_opponent_image(make_file_storage(), run_detection=False)
+    result = save_opponent_image(make_file_storage())
 
     assert len(calls) == 1
-    assert result["status"] == "needs_retake"
+    assert result["status"] == "received"
     assert result["debugCropsGenerated"] is True
     assert result["detectedTeam"] == []
 

@@ -7,8 +7,11 @@ from uuid import uuid4
 from werkzeug.utils import secure_filename
 
 from paths import UPLOAD_DIR
-from services.cv_detection_service import assess_opponent_image_quality, detect_opponent_team
 from services.cv_service import ComputerVisionError
+from services.dinov2_opponent_detection_service import (
+    assess_opponent_image_quality,
+    detect_opponent_team,
+)
 from services.pokemon_data_service import enrich_detected_team
 
 
@@ -89,50 +92,33 @@ def save_opponent_image(image, run_detection=True):
             "metrics": {},
         }
 
+    quality_warning = not quality.get("canAnalyze", True)
     debug_crops_generated = False
     detection_error = ""
-    if not quality["canAnalyze"]:
+    detected_team = []
+    if run_detection:
         try:
             logger.info(
-                "Running debug crop generation for low-quality uploaded image %s",
+                "Running opponent detection for uploaded image %s",
                 filename,
             )
-            detect_opponent_team(saved_path)
+            detection = detect_opponent_team(saved_path)
             debug_crops_generated = True
+            detected_team = enrich_detected_team(detection.get("detectedTeam", []))
         except ComputerVisionError as error:
-            logger.warning(
-                "Debug crop generation failed for low-quality uploaded image %s: %s",
-                filename,
-                error,
-            )
+            logger.warning("Opponent detection failed for uploaded image %s: %s", filename, error)
             detection_error = str(error)
 
-        return {
-            "status": "needs_retake",
-            "filename": filename,
-            "originalFilename": original_name,
-            "contentType": image.mimetype,
-            "sizeBytes": image_size,
-            "message": "Image received, but the photo needs to be retaken before detection.",
-            "quality": quality,
-            "detectedTeam": [],
-            "detectionError": detection_error or "Photo quality is too low for reliable detection.",
-            "debugCropsGenerated": debug_crops_generated,
-        }
-
-    detected_team = []
-    try:
-        logger.info(
-            "Running opponent detection debug crop generation for uploaded image %s",
-            filename,
+    if quality_warning:
+        message = (
+            "Image received. Detection was attempted despite photo quality warnings."
+            if run_detection
+            else "Image received. Detection will run despite photo quality warnings."
         )
-        detection = detect_opponent_team(saved_path)
-        debug_crops_generated = True
-        if run_detection:
-            detected_team = enrich_detected_team(detection["detectedTeam"])
-    except ComputerVisionError as error:
-        logger.warning("Opponent detection failed for uploaded image %s: %s", filename, error)
-        detection_error = str(error)
+    elif not run_detection:
+        message = "Image received. Detection skipped."
+    else:
+        message = "Image received. Computer vision detection completed."
 
     return {
         "status": "received",
@@ -140,11 +126,7 @@ def save_opponent_image(image, run_detection=True):
         "originalFilename": original_name,
         "contentType": image.mimetype,
         "sizeBytes": image_size,
-        "message": (
-            "Image received. Debug crops generated."
-            if not run_detection
-            else "Image received. Computer vision detection completed."
-        ),
+        "message": message,
         "quality": quality,
         "detectedTeam": detected_team,
         "detectionError": detection_error,

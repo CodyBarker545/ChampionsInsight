@@ -2,6 +2,7 @@
 
 import json
 import logging
+from threading import Thread
 
 from flask import Blueprint, jsonify, request
 
@@ -21,6 +22,22 @@ opponent_bp = Blueprint("opponent_routes", __name__)
 logger = logging.getLogger(__name__)
 
 
+def run_background_opponent_detection(filename):
+    deps = route_deps()
+    image_path = deps.UPLOAD_DIR / filename
+
+    try:
+        logger.info("Starting background opponent detection for %s", filename)
+        result = deps.detect_opponent_team(image_path)
+        result["detectedTeam"] = enrich_detected_opponent_team(
+            result.get("detectedTeam", [])
+        )
+        save_latest_opponent_prediction(result, filename)
+        logger.info("Background opponent detection finished for %s", filename)
+    except deps.ComputerVisionError as error:
+        logger.warning("Background opponent detection failed for %s: %s", filename, error)
+
+
 @opponent_bp.post("/opponent/image")
 def upload_opponent_image():
     logger.info("Upload files received: %s", list(request.files.keys()))
@@ -31,9 +48,25 @@ def upload_opponent_image():
     try:
         deps = route_deps()
         skip_detection = request.form.get("skipDetection") == "1"
-        result = deps.save_opponent_image(image, run_detection=not skip_detection)
+        background_detection = request.form.get("backgroundDetection") == "1"
+        result = deps.save_opponent_image(
+            image,
+            run_detection=not skip_detection and not background_detection,
+        )
         clear_latest_opponent_prediction()
-        if not skip_detection and result.get("status") == "received":
+        if background_detection and result.get("status") == "received":
+            Thread(
+                target=run_background_opponent_detection,
+                args=(result["filename"],),
+                daemon=True,
+            ).start()
+            result = {
+                **result,
+                "status": "queued",
+                "message": "Image received. Detection is running in the background.",
+                "backgroundDetection": True,
+            }
+        elif not skip_detection and result.get("status") == "received":
             result = save_latest_opponent_prediction(result, result["filename"])
     except route_deps().ImageValidationError as error:
         logger.warning("Opponent image upload failed: %s", error)
@@ -113,22 +146,19 @@ def enrich_detected_opponent_team(detected_team):
     for pokemon in detected_team:
         pokemon_name = pokemon.get("name") or pokemon.get("pokemonName")
         stats = deps.get_level_50_stats(pokemon_name, nature="hardy")
+        type_evidence = pokemon.get("typeEvidence") or {}
+        detected_type_evidence = pokemon.get("detectedTypes", [])
 
         if stats:
+            reference_types = stats.get("types", [])
             enriched_team.append({
                 **pokemon,
                 "name": pokemon_name,
                 "pokemonName": pokemon.get("pokemonName") or pokemon_name,
-                "types": (
-                    pokemon.get("types")
-                    or pokemon.get("detectedTypes")
-                    or stats.get("types", [])
-                ),
-                "detectedTypes": (
-                    pokemon.get("detectedTypes")
-                    or pokemon.get("types")
-                    or stats.get("types", [])
-                ),
+                "types": reference_types,
+                "referenceTypes": reference_types,
+                "detectedTypes": detected_type_evidence,
+                "typeEvidence": type_evidence,
                 "baseStats": stats.get("baseStats"),
                 "finalStats": stats.get("finalStats"),
                 "stats": stats,
@@ -142,7 +172,9 @@ def enrich_detected_opponent_team(detected_team):
                 "name": pokemon_name,
                 "pokemonName": pokemon.get("pokemonName") or pokemon_name,
                 "types": pokemon.get("types") or pokemon.get("detectedTypes", []),
-                "detectedTypes": pokemon.get("detectedTypes") or pokemon.get("types", []),
+                "referenceTypes": pokemon.get("referenceTypes", []),
+                "detectedTypes": detected_type_evidence,
+                "typeEvidence": type_evidence,
                 "stats": None,
                 "baseStats": None,
                 "finalStats": None,

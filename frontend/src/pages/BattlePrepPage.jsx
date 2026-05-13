@@ -13,6 +13,8 @@ import {
   fetchPokemonLevel50Stats,
   fetchPokemonTopMoves,
   fetchUserTeam,
+  resolveApiUrl,
+  saveUserTeam,
   searchPokemon,
   uploadOpponentImageFile,
 } from "../api/championsInsightApi.js";
@@ -22,7 +24,6 @@ import RagPopup from "../components/RagPopup.jsx";
 import ResultsGrid from "../components/ResultsGrid.jsx";
 import StatusPill from "../components/StatusPill.jsx";
 import TeamForm from "../components/TeamForm.jsx";
-import GuidedCamera from "../components/GuidedCamera.jsx";
 import { formatBytes } from "../utils/formatters.js";
 import {
   applyBestCameraTrackSettings,
@@ -68,8 +69,64 @@ const statKeys = [
   "speed",
 ];
 
+const statLabels = {
+  hp: "HP",
+  attack: "Atk",
+  defense: "Def",
+  specialAttack: "SpA",
+  specialDefense: "SpD",
+  speed: "Spe",
+};
+
+const statColors = {
+  hp: "#ff4d5a",
+  attack: "#ff7a22",
+  defense: "#facc15",
+  specialAttack: "#4f8fff",
+  specialDefense: "#22c55e",
+  speed: "#e879f9",
+};
+
+const statBarRanges = {
+  hp: { min: 110, max: 267 },
+  attack: { min: 61, max: 260 },
+  defense: { min: 54, max: 310 },
+  specialAttack: { min: 31, max: 249 },
+  specialDefense: { min: 50, max: 226 },
+  speed: { min: 36, max: 222 },
+};
+
 const MAX_STAT_POINTS = 32;
 const MAX_TOTAL_STAT_POINTS = 66;
+const MINIMUM_VISIBLE_STAT_BAR = 10;
+
+const natures = [
+  "hardy",
+  "lonely",
+  "brave",
+  "adamant",
+  "naughty",
+  "bold",
+  "docile",
+  "relaxed",
+  "impish",
+  "lax",
+  "timid",
+  "hasty",
+  "serious",
+  "jolly",
+  "naive",
+  "modest",
+  "mild",
+  "quiet",
+  "bashful",
+  "rash",
+  "calm",
+  "gentle",
+  "sassy",
+  "careful",
+  "quirky",
+];
 
 const natureEffects = {
   lonely: ["attack", "defense"],
@@ -109,6 +166,27 @@ function normalizeStats(stats = {}) {
     specialDefense: Number(stats.specialDefense ?? stats.special_defense ?? 0),
     speed: Number(stats.speed ?? 0),
   };
+}
+
+function ensureFourMoves(moves = []) {
+  return [...moves, "", "", "", ""].slice(0, 4);
+}
+
+function uniqueOptions(primaryOptions = [], fallbackOptions = []) {
+  return Array.from(
+    new Set([...(primaryOptions ?? []), ...(fallbackOptions ?? [])]),
+  ).filter(Boolean);
+}
+
+function formatNature(nature) {
+  const displayName = nature.charAt(0).toUpperCase() + nature.slice(1);
+  const effect = natureEffects[nature];
+
+  if (!effect) {
+    return `${displayName} (Neutral)`;
+  }
+
+  return `${displayName} (+${statLabels[effect[0]]} / -${statLabels[effect[1]]})`;
 }
 
 function clampStatPointInvestment(
@@ -173,6 +251,24 @@ function calculateInvestedStat(member, statName, points = 0) {
     (neutralLevel50Stat + points) *
       natureMultiplier(statName, member.nature || "hardy"),
   );
+}
+
+function calculateStatBarWidth(statName, statValue) {
+  const safeValue = Number(statValue ?? 0);
+  const range = statBarRanges[statName];
+
+  if (!safeValue || !range) {
+    return "0%";
+  }
+
+  const rangeSize = Math.max(1, range.max - range.min);
+  const scaledValue = (safeValue - range.min) / rangeSize;
+  const width =
+    MINIMUM_VISIBLE_STAT_BAR +
+    Math.max(0, Math.min(1, scaledValue)) *
+      (100 - MINIMUM_VISIBLE_STAT_BAR);
+
+  return `${width}%`;
 }
 
 function buildInvestedStats(member, statPoints = member.statPoints ?? {}) {
@@ -243,6 +339,10 @@ function buildOpponentMember(slot, index) {
       confidence: slot.confidence ?? 0,
       matchReason: slot.matchReason ?? "",
       detectedTypes: slot.detectedTypes ?? slot.types ?? [],
+      referenceTypes: slot.referenceTypes ?? slot.types ?? [],
+      typeEvidence: slot.typeEvidence ?? null,
+      typeMismatchWarning: slot.typeMismatchWarning ?? false,
+      pokemonTopCandidates: slot.pokemonTopCandidates ?? [],
       referenceImage: slot.referenceImage ?? "",
     },
   });
@@ -308,8 +408,8 @@ function mergePokemonDetails(
 // Renders the battle preparation workflow.
 function BattlePrepPage({
   initialTeam = null,
-  onOpenTeamBuilder,
   onOpenPokedex,
+  onTeamSaved,
   theme = "dark",
   onToggleTheme,
 }) {
@@ -320,6 +420,7 @@ function BattlePrepPage({
   const opponentSpriteHydrationRequestRef = useRef(0);
   const latestOpponentUploadRef = useRef("");
   const latestOpponentPredictionRef = useRef("");
+  const latestOpponentPredictionSavedAtRef = useRef(0);
 
   const [apiStatus, setApiStatus] = useState("checking");
 
@@ -348,6 +449,13 @@ function BattlePrepPage({
   const [isSearchingOpponent, setIsSearchingOpponent] = useState(false);
   const [isLoadingOpponentPokemon, setIsLoadingOpponentPokemon] =
     useState(false);
+  const [isUserTeamDialogOpen, setIsUserTeamDialogOpen] = useState(false);
+  const [userSearchQuery, setUserSearchQuery] = useState("");
+  const [userSearchResults, setUserSearchResults] = useState([]);
+  const [isSearchingUserPokemon, setIsSearchingUserPokemon] = useState(false);
+  const [isLoadingUserPokemon, setIsLoadingUserPokemon] = useState(false);
+  const [isSavingUserTeam, setIsSavingUserTeam] = useState(false);
+  const [focusedUserMoveIndex, setFocusedUserMoveIndex] = useState(null);
 
   const [isRagOpen, setIsRagOpen] = useState(false);
   const [ragQuestion, setRagQuestion] = useState("");
@@ -432,6 +540,14 @@ function BattlePrepPage({
   }, []);
 
   useEffect(() => {
+    const intervalId = window.setInterval(() => {
+      void refreshLatestOpponentPrediction();
+    }, 3000);
+
+    return () => window.clearInterval(intervalId);
+  }, []);
+
+  useEffect(() => {
     const selectedOpponent = opponentTeam[selectedOpponentIndex];
     const selectedName = selectedOpponent?.name?.trim();
 
@@ -481,14 +597,45 @@ function BattlePrepPage({
   }, [opponentSearchQuery]);
 
   useEffect(() => {
+    const trimmedQuery = userSearchQuery.trim();
+    if (trimmedQuery.length < 2) {
+      setUserSearchResults([]);
+      return undefined;
+    }
+
+    const timeoutId = window.setTimeout(async () => {
+      setIsSearchingUserPokemon(true);
+      setError("");
+
+      try {
+        const searchResult = await searchPokemon(trimmedQuery, 10);
+        setUserSearchResults(searchResult.results ?? []);
+      } catch (requestError) {
+        setError(requestError.message);
+      } finally {
+        setIsSearchingUserPokemon(false);
+      }
+    }, 250);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [userSearchQuery]);
+
+  useEffect(() => {
     const selectedMember = team[selectedUserIndex];
     const selectedName = selectedMember?.name?.trim();
 
     if (
       !selectedName ||
-      selectedName.toLowerCase().startsWith("pokemon") ||
-      selectedMember?.formOptions?.length
+      selectedName.toLowerCase().startsWith("pokemon")
     ) {
+      return undefined;
+    }
+
+    const hasFullEditorOptions =
+      selectedMember?.editorOptionsHydrated &&
+      selectedMember?.moveOptions?.length;
+
+    if (hasFullEditorOptions) {
       return undefined;
     }
 
@@ -517,6 +664,15 @@ function BattlePrepPage({
                   formOptions: details.formOptions ?? [],
                   image: member.image || details.image || "",
                   spriteUrl: member.spriteUrl || details.spriteUrl || "",
+                  abilities: details.abilities?.length
+                    ? details.abilities
+                    : member.abilities,
+                  ability:
+                    member.ability || details.abilities?.[0] || "",
+                  moveOptions: details.moves?.length
+                    ? uniqueOptions(details.moves, member.moves)
+                    : uniqueOptions(member.moveOptions, member.moves),
+                  editorOptionsHydrated: true,
                 }
               : member,
           ),
@@ -530,8 +686,241 @@ function BattlePrepPage({
   }, [
     selectedUserIndex,
     team[selectedUserIndex]?.name,
+    team[selectedUserIndex]?.abilities?.length,
     team[selectedUserIndex]?.formOptions?.length,
+    team[selectedUserIndex]?.moveOptions?.length,
   ]);
+
+  function openUserTeamDialog(index) {
+    setSelectedUserIndex(index);
+    setSelectedMove(team[index]?.moves?.[0] ?? "");
+    setSelectedMoveSource("user");
+    setUserSearchQuery("");
+    setUserSearchResults([]);
+    setFocusedUserMoveIndex(null);
+    setIsUserTeamDialogOpen(true);
+  }
+
+  function updateSelectedUser(field, value) {
+    if (field.startsWith("moves.")) {
+      const moveIndex = Number(field.replace("moves.", ""));
+      const replacedMove = team[selectedUserIndex]?.moves?.[moveIndex];
+
+      if (selectedMoveSource === "user" && selectedMove === replacedMove) {
+        setSelectedMove(value);
+      }
+    }
+
+    if (field === "nature") {
+      setTeam((currentTeam) =>
+        currentTeam.map((member, memberIndex) =>
+          memberIndex === selectedUserIndex
+            ? { ...member, nature: value || "hardy" }
+            : member,
+        ),
+      );
+
+      void updateUserNatureStats(selectedUserIndex, value || "hardy");
+      return;
+    }
+
+    if (field === "form") {
+      void loadUserPokemonForm(value);
+      return;
+    }
+
+    setTeam((currentTeam) =>
+      currentTeam.map((member, memberIndex) => {
+        if (memberIndex !== selectedUserIndex) {
+          return member;
+        }
+
+        if (field.startsWith("statPoints.")) {
+          const statName = field.replace("statPoints.", "");
+          const clampedValue = clampStatPointInvestment(
+            member.statPoints,
+            statName,
+            value,
+          );
+          const statPoints = {
+            ...emptyStatPoints(),
+            ...(member.statPoints ?? {}),
+            [statName]: clampedValue,
+          };
+
+          return {
+            ...member,
+            statPoints,
+            stats: buildInvestedStats(member, statPoints),
+          };
+        }
+
+        if (field.startsWith("moves.")) {
+          const moveIndex = Number(field.replace("moves.", ""));
+          const moves = ensureFourMoves(member.moves);
+          moves[moveIndex] = value;
+
+          return {
+            ...member,
+            moves,
+            moveOptions: member.moveOptions ?? [],
+          };
+        }
+
+        return { ...member, [field]: value };
+      }),
+    );
+  }
+
+  async function updateUserNatureStats(index, nature) {
+    const selectedMember = team[index];
+    const selectedName = selectedMember?.name?.trim();
+
+    if (!selectedName || selectedName.toLowerCase().startsWith("pokemon")) {
+      return;
+    }
+
+    setError("");
+
+    try {
+      const level50Stats = await fetchPokemonLevel50Stats(selectedName, nature);
+
+      setTeam((currentTeam) =>
+        currentTeam.map((member, memberIndex) => {
+          if (memberIndex !== index) {
+            return member;
+          }
+
+          const baseStats = normalizeStats(
+            level50Stats.baseStats ?? member.baseStats ?? {},
+          );
+          const finalStats = normalizeStats(level50Stats.finalStats ?? {});
+          const nextMember = {
+            ...member,
+            nature: level50Stats.nature ?? nature,
+            baseStats,
+            finalStats,
+          };
+
+          return {
+            ...nextMember,
+            stats: buildInvestedStats(nextMember),
+          };
+        }),
+      );
+    } catch (requestError) {
+      setError(requestError.message);
+    }
+  }
+
+  async function setUserPokemonFromSearch(index, pokemonName) {
+    setSelectedUserIndex(index);
+    setIsLoadingUserPokemon(true);
+    setError("");
+
+    try {
+      const [details, level50Stats, topMoves] = await Promise.all([
+        fetchPokemonDetails(pokemonName),
+        fetchPokemonLevel50Stats(pokemonName, "hardy"),
+        fetchPokemonTopMoves(pokemonName, 4),
+      ]);
+
+      const hydratedMember = mergePokemonDetails(
+        {
+          ...emptyMember,
+          id: `user-${index + 1}-${pokemonName}`,
+          nature: "hardy",
+          statPoints: emptyStatPoints(),
+          moves: [],
+          moveOptions: [],
+        },
+        details,
+        level50Stats,
+        topMoves,
+      );
+      hydratedMember.editorOptionsHydrated = true;
+
+      setTeam((currentTeam) =>
+        currentTeam.map((member, memberIndex) =>
+          memberIndex === index ? hydratedMember : member,
+        ),
+      );
+      setSelectedMove(hydratedMember.moves?.[0] ?? "");
+      setSelectedMoveSource("user");
+      setUserSearchQuery("");
+      setUserSearchResults([]);
+    } catch (requestError) {
+      setError(requestError.message);
+    } finally {
+      setIsLoadingUserPokemon(false);
+    }
+  }
+
+  function clearUserSlot(index) {
+    const clearedMoveWasSelected =
+      selectedMoveSource === "user" && team[index]?.moves?.includes(selectedMove);
+
+    setTeam((currentTeam) =>
+      currentTeam.map((member, memberIndex) =>
+        memberIndex === index
+          ? {
+              ...emptyMember,
+              id: `user-${index + 1}`,
+              name: "",
+              nature: "hardy",
+              statPoints: emptyStatPoints(),
+              moves: [],
+              moveOptions: [],
+            }
+          : member,
+      ),
+    );
+    setSelectedUserIndex(index);
+    setUserSearchQuery("");
+    setUserSearchResults([]);
+
+    if (clearedMoveWasSelected) {
+      setSelectedMove("");
+    }
+  }
+
+  async function saveCurrentUserTeam() {
+    setIsSavingUserTeam(true);
+    setError("");
+
+    try {
+      const savedTeam = await saveUserTeam(
+        team.map((member, index) => ({
+          ...member,
+          id: member.id || `user-${index + 1}`,
+          moves: ensureFourMoves(member.moves).filter(Boolean),
+        })),
+      );
+      const hydratedTeam = savedTeam.team.map(applyInvestedStats);
+      setTeam(hydratedTeam);
+      onTeamSaved?.(hydratedTeam);
+      setIsUserTeamDialogOpen(false);
+    } catch (requestError) {
+      setError(requestError.message);
+    } finally {
+      setIsSavingUserTeam(false);
+    }
+  }
+
+  function filteredUserMoveOptions(moveValue) {
+    const selectedMember = team[selectedUserIndex] ?? emptyMember;
+    const normalizedValue = String(moveValue ?? "").trim().toLowerCase();
+    const moveOptions = uniqueOptions(
+      selectedMember.moveOptions,
+      selectedMember.moves,
+    );
+
+    return moveOptions
+      .filter((moveOption) =>
+        moveOption.toLowerCase().includes(normalizedValue),
+      )
+      .slice(0, 8);
+  }
 
   // Updates the selected opponent details from manual inputs.
   function updateSelectedOpponent(field, value) {
@@ -690,9 +1079,12 @@ function BattlePrepPage({
       setTeam((currentTeam) =>
         currentTeam.map((member, memberIndex) =>
           memberIndex === selectedUserIndex
-            ? mergePokemonDetails(member, details, level50Stats, topMoves, {
-                preserveMoves: true,
-              })
+            ? {
+                ...mergePokemonDetails(member, details, level50Stats, topMoves, {
+                  preserveMoves: true,
+                }),
+                editorOptionsHydrated: true,
+              }
             : member,
         ),
       );
@@ -1176,6 +1568,7 @@ function BattlePrepPage({
 
       if (prediction.detectedTeam?.length) {
         const detectedMembers = prediction.detectedTeam.map(buildOpponentMember);
+        latestOpponentPredictionSavedAtRef.current = Number(prediction.savedAt ?? 0);
         latestOpponentPredictionRef.current =
           prediction.filename ?? latestOpponentPredictionRef.current;
         latestOpponentUploadRef.current =
@@ -1191,6 +1584,30 @@ function BattlePrepPage({
       setError(requestError.message || "Could not load latest opponent prediction.");
     } finally {
       setIsUploadingImage(false);
+    }
+  }
+
+  async function refreshLatestOpponentPrediction() {
+    try {
+      const prediction = await fetchLatestOpponentPrediction();
+      const savedAt = Number(prediction.savedAt ?? 0);
+
+      if (!prediction.detectedTeam?.length || savedAt <= latestOpponentPredictionSavedAtRef.current) {
+        return;
+      }
+
+      const detectedMembers = prediction.detectedTeam.map(buildOpponentMember);
+      latestOpponentPredictionSavedAtRef.current = savedAt;
+      latestOpponentPredictionRef.current =
+        prediction.filename ?? latestOpponentPredictionRef.current;
+      latestOpponentUploadRef.current =
+        prediction.filename ?? latestOpponentUploadRef.current;
+      setOpponentTeam(detectedMembers);
+      setSelectedOpponentIndex(0);
+      void hydrateDetectedOpponentSprites(detectedMembers);
+      setImageStatus("Phone camera opponent team loaded.");
+    } catch (_error) {
+      // Polling is best-effort so normal battle prep work is not interrupted.
     }
   }
 
@@ -1370,15 +1787,6 @@ function BattlePrepPage({
       latestOpponentPredictionRef.current =
         uploadResult.filename ?? latestOpponentPredictionRef.current;
 
-      if (uploadResult.status === "needs_retake") {
-        setImageStatus(uploadResult.message || "Photo needs to be retaken.");
-        setError(
-          uploadResult.detectionError ||
-            "Photo quality is too low for reliable detection.",
-        );
-        return;
-      }
-
       if (uploadResult.detectedTeam?.length) {
         const detectedMembers =
           uploadResult.detectedTeam.map(buildOpponentMember);
@@ -1430,33 +1838,24 @@ function BattlePrepPage({
     }
   }
 
+  const selectedUserMember = team[selectedUserIndex] ?? emptyMember;
+  const selectedUserPointsUsed = statKeys.reduce(
+    (total, statName) =>
+      total + Number(selectedUserMember.statPoints?.[statName] ?? 0),
+    0,
+  );
+  const selectedUserImage = selectedUserMember.spriteUrl || selectedUserMember.image || "";
+
   return (
     <main className="app-shell">
       <section className="workspace">
         <header className="topbar">
           <div className="topbar-camera">
-            {onOpenTeamBuilder && (
-              <button type="button" onClick={onOpenTeamBuilder}>
-                Build Team
-              </button>
-            )}
-
             {onOpenPokedex && (
               <button type="button" onClick={onOpenPokedex}>
                 Pokédex
               </button>
             )}
-
-            <GuidedCamera
-              cameraError={cameraError}
-              isCameraOpen={isCameraOpen}
-              onCapture={captureGuidedPhoto}
-              onClose={closeGuidedCamera}
-              onOpen={openGuidedCamera}
-              isUploading={isUploadingImage}
-              videoRef={videoRef}
-              canvasRef={canvasRef}
-            />
 
             <button
               type="button"
@@ -1497,6 +1896,8 @@ function BattlePrepPage({
 
         <form className="analysis-layout" onSubmit={analyzeTeam}>
           <TeamForm
+            onClearMember={clearUserSlot}
+            onEditMember={openUserTeamDialog}
             selectedIndex={selectedUserIndex}
             team={team}
             onSelectMember={(index) => {
@@ -1553,6 +1954,325 @@ function BattlePrepPage({
 
         <ResultsGrid analysis={analysis} error={error} />
       </section>
+
+      {isUserTeamDialogOpen && (
+        <div className="team-editor-backdrop" role="presentation">
+          <section
+            className="team-editor-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-label={`Edit team slot ${selectedUserIndex + 1}`}
+          >
+            <header className="team-editor-header">
+              <div>
+                <span>Team Slot {selectedUserIndex + 1}</span>
+                <h2>{selectedUserMember.name || "Build Pokemon"}</h2>
+              </div>
+
+              <div className="team-editor-actions">
+                <button
+                  className="secondary-button"
+                  type="button"
+                  onClick={() => setIsUserTeamDialogOpen(false)}
+                >
+                  Close
+                </button>
+                <button
+                  className="primary-button"
+                  type="button"
+                  disabled={isSavingUserTeam}
+                  onClick={saveCurrentUserTeam}
+                >
+                  {isSavingUserTeam ? "Saving" : "Save Team"}
+                </button>
+              </div>
+            </header>
+
+            <div className="team-editor-grid">
+              <aside className="team-editor-picker">
+                <label className="team-editor-field">
+                  <span>Pokemon</span>
+                  <input
+                    value={userSearchQuery}
+                    placeholder={
+                      selectedUserMember.name
+                        ? "Search replacement"
+                        : "Search Pokemon"
+                    }
+                    onChange={(event) => setUserSearchQuery(event.target.value)}
+                  />
+                </label>
+
+                {(isSearchingUserPokemon || userSearchResults.length > 0) && (
+                  <div className="team-editor-results">
+                    {isSearchingUserPokemon && <span>Searching...</span>}
+                    {userSearchResults.map((pokemon) => {
+                      const resultImageSource = resolveApiUrl(pokemon.image);
+
+                      return (
+                        <button
+                          className="team-editor-result"
+                          key={pokemon.name}
+                          type="button"
+                          disabled={isLoadingUserPokemon}
+                          onClick={() =>
+                            setUserPokemonFromSearch(
+                              selectedUserIndex,
+                              pokemon.name,
+                            )
+                          }
+                        >
+                          <span className="team-editor-result-image">
+                            {resultImageSource ? (
+                              <img src={resultImageSource} alt="" />
+                            ) : (
+                              "IMG"
+                            )}
+                          </span>
+                          <span>{pokemon.name}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                )}
+
+                <div className="team-editor-preview">
+                  <span className="team-editor-preview-image">
+                    {selectedUserImage ? (
+                      <img
+                        src={resolveApiUrl(selectedUserImage)}
+                        alt={`${selectedUserMember.name || "Pokemon"} sprite`}
+                      />
+                    ) : (
+                      "+"
+                    )}
+                  </span>
+                  <div>
+                    <strong>{selectedUserMember.name || "Empty slot"}</strong>
+                    <small>
+                      {selectedUserMember.types?.length
+                        ? selectedUserMember.types.join(" / ")
+                        : "Choose a Pokemon to fill this slot"}
+                    </small>
+                  </div>
+                </div>
+
+                <div className="team-editor-moves">
+                  {ensureFourMoves(selectedUserMember.moves).map(
+                    (move, moveIndex) => (
+                      <label
+                        className="team-editor-field builder-move-field"
+                        key={`user-move-${moveIndex}`}
+                      >
+                        <span>Move {moveIndex + 1}</span>
+                        <input
+                          value={move}
+                          disabled={!selectedUserMember.name}
+                          placeholder="Search moves"
+                          onFocus={() => setFocusedUserMoveIndex(moveIndex)}
+                          onClick={() => setFocusedUserMoveIndex(moveIndex)}
+                          onBlur={() => {
+                            window.setTimeout(
+                              () => setFocusedUserMoveIndex(null),
+                              120,
+                            );
+                          }}
+                          onChange={(event) => {
+                            setFocusedUserMoveIndex(moveIndex);
+                            updateSelectedUser(
+                              `moves.${moveIndex}`,
+                              event.target.value,
+                            );
+                          }}
+                        />
+
+                        {focusedUserMoveIndex === moveIndex &&
+                          selectedUserMember.name && (
+                            <div className="builder-move-suggestions">
+                              {filteredUserMoveOptions(move).map(
+                                (moveOption) => (
+                                  <button
+                                    key={moveOption}
+                                    type="button"
+                                    onMouseDown={(event) =>
+                                      event.preventDefault()
+                                    }
+                                    onClick={() => {
+                                      updateSelectedUser(
+                                        `moves.${moveIndex}`,
+                                        moveOption,
+                                      );
+                                      setFocusedUserMoveIndex(null);
+                                    }}
+                                  >
+                                    {moveOption}
+                                  </button>
+                                ),
+                              )}
+                            </div>
+                          )}
+                      </label>
+                    ),
+                  )}
+                </div>
+              </aside>
+
+              <section className="team-editor-form">
+                <div className="team-editor-row two-column">
+                  <label className="team-editor-field">
+                    <span>Form</span>
+                    <select
+                      value={
+                        selectedUserMember.form ||
+                        selectedUserMember.name ||
+                        ""
+                      }
+                      disabled={
+                        !selectedUserMember.name ||
+                        selectedUserMember.formOptions?.length <= 1
+                      }
+                      onChange={(event) =>
+                        updateSelectedUser("form", event.target.value)
+                      }
+                    >
+                      {(selectedUserMember.formOptions?.length
+                        ? selectedUserMember.formOptions
+                        : [
+                            {
+                              name: selectedUserMember.name || "",
+                              label: "Default",
+                            },
+                          ]
+                      ).map((formOption) => (
+                        <option key={formOption.name} value={formOption.name}>
+                          {formOption.label || formOption.name}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+
+                  <label className="team-editor-field">
+                    <span>Ability</span>
+                    {selectedUserMember.abilities?.length ? (
+                      <select
+                        value={
+                          selectedUserMember.ability ||
+                          selectedUserMember.abilities[0]
+                        }
+                        disabled={!selectedUserMember.name}
+                        onChange={(event) =>
+                          updateSelectedUser("ability", event.target.value)
+                        }
+                      >
+                        {selectedUserMember.abilities.map((ability) => (
+                          <option key={ability} value={ability}>
+                            {ability}
+                          </option>
+                        ))}
+                      </select>
+                    ) : (
+                      <input
+                        value={selectedUserMember.ability ?? ""}
+                        disabled={!selectedUserMember.name}
+                        placeholder="Ability"
+                        onChange={(event) =>
+                          updateSelectedUser("ability", event.target.value)
+                        }
+                      />
+                    )}
+                  </label>
+                </div>
+
+                <div className="team-editor-row two-column">
+                  <label className="team-editor-field">
+                    <span>Nature</span>
+                    <select
+                      value={selectedUserMember.nature || "hardy"}
+                      disabled={!selectedUserMember.name}
+                      onChange={(event) =>
+                        updateSelectedUser("nature", event.target.value)
+                      }
+                    >
+                      {natures.map((nature) => (
+                        <option key={nature} value={nature}>
+                          {formatNature(nature)}
+                        </option>
+                      ))}
+                    </select>
+                  </label>
+
+                  <label className="team-editor-field">
+                    <span>Item</span>
+                    <input
+                      value={selectedUserMember.item ?? ""}
+                      disabled={!selectedUserMember.name}
+                      placeholder="Item"
+                      onChange={(event) =>
+                        updateSelectedUser("item", event.target.value)
+                      }
+                    />
+                  </label>
+                </div>
+
+                <section className="builder-stat-investment">
+                  <div className="builder-stat-header">
+                    <span>Stat Points</span>
+                    <strong>
+                      {selectedUserPointsUsed} / {MAX_TOTAL_STAT_POINTS}
+                    </strong>
+                  </div>
+
+                  <div className="builder-stat-grid">
+                    {statKeys.map((statName) => (
+                      <label
+                        key={statName}
+                        style={{
+                          "--stat-color": statColors[statName],
+                          "--stat-bar-width": calculateStatBarWidth(
+                            statName,
+                            selectedUserMember.stats?.[statName],
+                          ),
+                        }}
+                      >
+                        <span>{statLabels[statName]}</span>
+                        <strong>
+                          {Number(
+                            selectedUserMember.stats?.[statName] ??
+                              calculateInvestedStat(
+                                selectedUserMember,
+                                statName,
+                              ) ??
+                              0,
+                          )}
+                        </strong>
+                        <i aria-hidden="true" />
+                        <input
+                          type="text"
+                          inputMode="numeric"
+                          pattern="[0-9]*"
+                          min="0"
+                          max={MAX_STAT_POINTS}
+                          value={Number(
+                            selectedUserMember.statPoints?.[statName] ?? 0,
+                          )}
+                          disabled={!selectedUserMember.name}
+                          onChange={(event) =>
+                            updateSelectedUser(
+                              `statPoints.${statName}`,
+                              event.target.value,
+                            )
+                          }
+                        />
+                      </label>
+                    ))}
+                  </div>
+                </section>
+
+              </section>
+            </div>
+          </section>
+        </div>
+      )}
 
       {isRagOpen && (
         <RagPopup

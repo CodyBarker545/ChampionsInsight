@@ -173,6 +173,13 @@ def build_move_detail(move_name):
     move_dictionary = get_move_dictionary()
     move_key = normalize_api_name(move_name)
     move_data = move_dictionary.get(move_key, {})
+    if not move_data:
+        compact_key = move_key.replace("-", "")
+        for dictionary_key, dictionary_move in move_dictionary.items():
+            if dictionary_key.replace("-", "") == compact_key:
+                move_key = dictionary_key
+                move_data = dictionary_move
+                break
     display_name = move_data.get("display_name") or move_name.replace("-", " ").title()
     effect = "Move details unavailable."
 
