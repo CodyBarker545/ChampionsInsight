@@ -15,6 +15,7 @@ function OpponentPanel({
   opponentTeam,
   opponentSearchQuery = "",
   opponentSearchResults = [],
+  renderOpponentSlotAction,
   selectedOpponentIndex,
 }) {
   return (
@@ -72,11 +73,13 @@ function OpponentPanel({
 
                   <span className="slot-copy">
                     <span className="slot-name">{hasPokemon ? pokemonName : `Slot ${index + 1}`}</span>
-                    <span className="slot-subtitle">
-                      {hasPokemon ? "Scouted target" : "Awaiting read"}
-                    </span>
+                    {!hasPokemon ? (
+                      <span className="slot-subtitle">Awaiting read</span>
+                    ) : null}
                   </span>
                 </button>
+
+                {hasPokemon && renderOpponentSlotAction?.(opponent, index)}
 
                 {isSelected && (
                   <div className="opponent-slot-search">

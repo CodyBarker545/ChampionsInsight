@@ -10,6 +10,14 @@ export {
   calculateDamage,
 } from "./battleApi.js";
 export {
+  classifyTournamentArchetype,
+  fetchTournamentArchetypeClusters,
+  fetchTournamentArchetypeRules,
+} from "./archetypeApi.js";
+export {
+  fetchTeamSetProbabilities,
+} from "./setProbabilityApi.js";
+export {
   askRagQuestion,
 } from "./ragApi.js";
 export {
@@ -21,6 +29,8 @@ export {
 export {
   fetchPokedexEntries,
   fetchPokedexEntry,
+  fetchPokemonRecommendedTeams,
+  fetchPokemonMetaIntelligence,
   fetchPokemonDetails,
   fetchPokemonLevel50Stats,
   fetchPokemonTopMoves,

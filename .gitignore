@@ -129,3 +129,6 @@ backend/data/pokemon/pokemon_battle_data.json
 backend/data/cv/indexes/
 *.npy
 *.faiss
+backend/data/competitive/analysis_json/archetype_team_classifications.json
+backend/data/competitive/analysis_json/team_archetype_cluster_assignments.csv
+backend/data/competitive/analysis_json/team_archetype_cluster_assignments_labeled.csv

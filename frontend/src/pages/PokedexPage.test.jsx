@@ -6,11 +6,13 @@ import PokedexPage from "./PokedexPage.jsx";
 import {
   fetchPokedexEntries,
   fetchPokedexEntry,
+  fetchPokemonMetaIntelligence,
 } from "../api/championsInsightApi.js";
 
 vi.mock("../api/championsInsightApi.js", () => ({
   fetchPokedexEntries: vi.fn(),
   fetchPokedexEntry: vi.fn(),
+  fetchPokemonMetaIntelligence: vi.fn(),
   resolveApiUrl: vi.fn((path = "") => path),
 }));
 
@@ -58,6 +60,27 @@ describe("PokedexPage", () => {
       ],
       abilities: [],
       usage: {},
+    });
+    fetchPokemonMetaIntelligence.mockResolvedValue({
+      pokemon: "Venusaur",
+      usageTrend: {
+        currentUsageRate: 0.1,
+        previousUsageRate: 0.08,
+        absoluteChange: 0.02,
+        percentageChange: 25,
+        trendDirection: "rising",
+        confidence: 0.7,
+        confidenceLabel: "High",
+        sampleSize: 20,
+        explanation: "Usage increased.",
+      },
+      moveTrends: [],
+      itemTrends: [],
+      archetypeTrends: [],
+      winRateTrend: {},
+      commonCores: [],
+      newCores: [],
+      dataQualityNotes: [],
     });
   });
 

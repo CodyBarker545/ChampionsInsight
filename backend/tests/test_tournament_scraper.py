@@ -1,4 +1,7 @@
+from pathlib import Path
+
 from scripts.data_build.tournament_scraper import (
+    load_existing_tournament_dates,
     pairing_result,
     select_new_tournaments,
 )
@@ -60,3 +63,12 @@ def test_pairing_result_handles_wins_losses_and_byes():
     assert pairing_result("alice", "bob") == "loss"
     assert pairing_result("alice", -1) == "tie/other"
     assert pairing_result(None, "alice") == "tie/other"
+
+
+def test_load_existing_tournament_dates_only_counts_allowed_formats():
+    assert load_existing_tournament_dates(
+        Path("backend/tests/fixtures/tournaments_mixed_formats.csv")
+    ) == {
+        "2026-05-17",
+        "2026-05-16",
+    }

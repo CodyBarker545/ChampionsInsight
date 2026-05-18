@@ -3,6 +3,9 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import {
   analyzeTeamMatchup,
   askRagQuestion,
+  fetchTeamSetProbabilities,
+  fetchTournamentArchetypeClusters,
+  fetchTournamentArchetypeRules,
   fetchPokemonLevel50Stats,
   fetchPokemonTopMoves,
   fetchHealthStatus,
@@ -141,6 +144,69 @@ describe("championsInsightApi", () => {
     expect(fetch).toHaveBeenCalledWith(
       "/api/pokemon/search?q=Aero&limit=12",
       expect.objectContaining({ signal: expect.any(AbortSignal) })
+    );
+  });
+
+  it("fetches tournament archetype rule summaries", async () => {
+    vi.spyOn(global, "fetch").mockResolvedValue({
+      ok: true,
+      json: vi.fn().mockResolvedValue({
+        totalTeamsAnalyzed: 25,
+        archetypeSummaries: [{ archetype: "Rain", teamCount: 4 }],
+      }),
+    });
+
+    await expect(fetchTournamentArchetypeRules()).resolves.toEqual({
+      totalTeamsAnalyzed: 25,
+      archetypeSummaries: [{ archetype: "Rain", teamCount: 4 }],
+    });
+    expect(fetch).toHaveBeenCalledWith(
+      "/api/tournament/archetypes/rules",
+      expect.objectContaining({ signal: expect.any(AbortSignal) })
+    );
+  });
+
+  it("fetches tournament archetype clusters", async () => {
+    vi.spyOn(global, "fetch").mockResolvedValue({
+      ok: true,
+      json: vi.fn().mockResolvedValue({
+        totalTeamsAnalyzed: 25,
+        totalClusters: 3,
+        clustersByParentArchetype: { Rain: [{ clusterId: "rain-1" }] },
+      }),
+    });
+
+    await expect(fetchTournamentArchetypeClusters()).resolves.toEqual({
+      totalTeamsAnalyzed: 25,
+      totalClusters: 3,
+      clustersByParentArchetype: { Rain: [{ clusterId: "rain-1" }] },
+    });
+    expect(fetch).toHaveBeenCalledWith(
+      "/api/tournament/archetypes/clusters",
+      expect.objectContaining({ signal: expect.any(AbortSignal) })
+    );
+  });
+
+  it("fetches team-level likely set probabilities", async () => {
+    vi.spyOn(global, "fetch").mockResolvedValue({
+      ok: true,
+      json: vi.fn().mockResolvedValue({
+        team: ["Sneasler", "Indeedee"],
+        predictions: {},
+        teamExplanations: [],
+        dataQualityNotes: [],
+      }),
+    });
+
+    await expect(fetchTeamSetProbabilities(["Sneasler", "Indeedee"])).resolves.toEqual({
+      team: ["Sneasler", "Indeedee"],
+      predictions: {},
+      teamExplanations: [],
+      dataQualityNotes: [],
+    });
+    expect(fetch).toHaveBeenCalledWith(
+      "/api/tournament/set-probabilities/team",
+      expect.objectContaining({ method: "POST" })
     );
   });
 

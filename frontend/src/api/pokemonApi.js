@@ -51,7 +51,7 @@ export async function fetchPokemonTopMoves(name, limit = 4) {
 
 export async function fetchPokedexEntries() {
   const response = await fetch(resolveApiUrl("/api/pokedex"), {
-    signal: AbortSignal.timeout(10000),
+    signal: AbortSignal.timeout(20000),
   });
 
   return readJsonResponse(response, "Failed to fetch Pokedex entries.");
@@ -61,8 +61,35 @@ export async function fetchPokedexEntries() {
 export async function fetchPokedexEntry(name) {
   const encodedName = encodeURIComponent(name);
   const response = await fetch(resolveApiUrl(`/api/pokedex/${encodedName}`), {
-    signal: AbortSignal.timeout(10000),
+    signal: AbortSignal.timeout(20000),
   });
 
   return readJsonResponse(response, `Failed to fetch Pokedex entry: ${name}`);
+}
+
+
+export async function fetchPokemonRecommendedTeams(name) {
+  const encodedName = encodeURIComponent(name);
+  const response = await fetch(
+    resolveApiUrl(`/api/pokedex/recommendations/${encodedName}`),
+    { signal: AbortSignal.timeout(25000) },
+  );
+
+  return readJsonResponse(
+    response,
+    `Failed to fetch Pokemon recommended teams: ${name}`,
+  );
+}
+
+
+export async function fetchPokemonMetaIntelligence(name) {
+  const encodedName = encodeURIComponent(name);
+  const response = await fetch(resolveApiUrl(`/api/pokedex/meta/${encodedName}`), {
+    signal: AbortSignal.timeout(20000),
+  });
+
+  return readJsonResponse(
+    response,
+    `Failed to fetch Pokemon meta intelligence: ${name}`,
+  );
 }

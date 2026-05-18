@@ -19,6 +19,8 @@ import {
   uploadOpponentImageFile,
 } from "../api/championsInsightApi.js";
 import MatchupStage from "../components/MatchupStage.jsx";
+import ArchetypeInsightCard from "../components/ArchetypeInsightCard.jsx";
+import LikelySetsCard from "../components/LikelySetsCard.jsx";
 import OpponentPanel from "../components/OpponentPanel.jsx";
 import RagPopup from "../components/RagPopup.jsx";
 import ResultsGrid from "../components/ResultsGrid.jsx";
@@ -297,6 +299,13 @@ function applyInvestedStats(member) {
   };
 }
 
+function hasRealTeamMembers(teamMembers = []) {
+  return (teamMembers ?? []).some((member) => {
+    const name = String(member?.name ?? "").trim();
+    return Boolean(name) && !/^Pokemon\s+\d+$/i.test(name);
+  });
+}
+
 // Builds a frontend opponent slot from backend detection data.
 function buildOpponentMember(slot, index) {
   const pokemon = slot.pokemon ?? {};
@@ -319,7 +328,7 @@ function buildOpponentMember(slot, index) {
     image: slot.image ?? pokemon.image ?? "",
     spriteUrl: slot.spriteUrl ?? pokemon.spriteUrl ?? "",
 
-    types: slot.types ?? slot.detectedTypes ?? pokemon.types ?? [],
+    types: [],
 
     ability: slot.abilities?.[0] ?? pokemon.abilities?.[0] ?? "",
     abilities: slot.abilities ?? pokemon.abilities ?? [],
@@ -338,10 +347,6 @@ function buildOpponentMember(slot, index) {
     detection: {
       confidence: slot.confidence ?? 0,
       matchReason: slot.matchReason ?? "",
-      detectedTypes: slot.detectedTypes ?? slot.types ?? [],
-      referenceTypes: slot.referenceTypes ?? slot.types ?? [],
-      typeEvidence: slot.typeEvidence ?? null,
-      typeMismatchWarning: slot.typeMismatchWarning ?? false,
       pokemonTopCandidates: slot.pokemonTopCandidates ?? [],
       referenceImage: slot.referenceImage ?? "",
     },
@@ -408,6 +413,7 @@ function mergePokemonDetails(
 // Renders the battle preparation workflow.
 function BattlePrepPage({
   initialTeam = null,
+  onOpenArchetypeDashboard,
   onOpenPokedex,
   onTeamSaved,
   theme = "dark",
@@ -490,7 +496,7 @@ function BattlePrepPage({
       .then(() => setApiStatus("online"))
       .catch(() => setApiStatus("offline"));
 
-    if (initialTeam?.length) {
+    if (initialTeam?.length && hasRealTeamMembers(initialTeam)) {
       const hydratedTeam = initialTeam.map(applyInvestedStats);
       setTeam(hydratedTeam);
       setSelectedUserIndex(0);
@@ -501,7 +507,7 @@ function BattlePrepPage({
 
     fetchUserTeam()
       .then((result) => {
-        const hydratedTeam = result.team.map(applyInvestedStats);
+        const hydratedTeam = (result.team ?? []).map(applyInvestedStats);
         setTeam(hydratedTeam);
         setSelectedMove(hydratedTeam[0]?.moves?.[0] ?? "");
         setSelectedMoveSource("user");
@@ -1857,6 +1863,12 @@ function BattlePrepPage({
               </button>
             )}
 
+            {onOpenArchetypeDashboard && (
+              <button type="button" onClick={onOpenArchetypeDashboard}>
+                Archetypes
+              </button>
+            )}
+
             <button
               type="button"
               onClick={detectExistingUploadedOpponentImage}
@@ -1895,17 +1907,26 @@ function BattlePrepPage({
         </header>
 
         <form className="analysis-layout" onSubmit={analyzeTeam}>
-          <TeamForm
-            onClearMember={clearUserSlot}
-            onEditMember={openUserTeamDialog}
-            selectedIndex={selectedUserIndex}
-            team={team}
-            onSelectMember={(index) => {
-              setSelectedUserIndex(index);
-              setSelectedMove(team[index]?.moves?.[0] ?? "");
-              setSelectedMoveSource("user");
-            }}
-          />
+          <div className="team-side-stack">
+            <TeamForm
+              onClearMember={clearUserSlot}
+              onEditMember={openUserTeamDialog}
+              selectedIndex={selectedUserIndex}
+              team={team}
+              onSelectMember={(index) => {
+                setSelectedUserIndex(index);
+                setSelectedMove(team[index]?.moves?.[0] ?? "");
+                setSelectedMoveSource("user");
+              }}
+            />
+
+            <ArchetypeInsightCard
+              team={team}
+              title="Your Team Archetype"
+              eyebrow="Team Identity"
+              emptyMessage="Build your team to see its tournament archetype context."
+            />
+          </div>
 
           <MatchupStage
             analysis={analysis}
@@ -1922,34 +1943,51 @@ function BattlePrepPage({
             userPokemon={team[selectedUserIndex]}
           />
 
-          <OpponentPanel
-            cameraError={cameraError}
-            imagePreview={imagePreview}
-            imageStatus={imageStatus}
-            isAnalyzing={isAnalyzing}
-            isCameraOpen={isCameraOpen}
-            isUploadingImage={isUploadingImage}
-            isLoadingOpponentPokemon={isLoadingOpponentPokemon}
-            isSearchingOpponent={isSearchingOpponent}
-            onClearOpponent={clearOpponentSlot}
-            onAnalyzeLabel={isAnalyzing ? "Analyzing" : "Analyze matchup"}
-            onCaptureGuidedPhoto={captureGuidedPhoto}
-            onCloseGuidedCamera={closeGuidedCamera}
-            onOpenGuidedCamera={openGuidedCamera}
-            onSelectOpponent={selectOpponentFromPanel}
-            onSelectOpponentImage={selectOpponentImage}
-            onSelectOpponentPokemon={setOpponentPokemonFromSearch}
-            onOpponentSearchChange={setOpponentSearchQuery}
-            onUploadOpponentImage={uploadOpponentImage}
-            opponentTeam={opponentTeam}
-            opponentSearchQuery={opponentSearchQuery}
-            opponentSearchResults={opponentSearchResults}
-            selectedImage={selectedImage}
-            selectedImageDetails={selectedImageDetails}
-            selectedOpponentIndex={selectedOpponentIndex}
-            videoRef={videoRef}
-            canvasRef={canvasRef}
-          />
+          <div className="opponent-side-stack">
+            <OpponentPanel
+              cameraError={cameraError}
+              imagePreview={imagePreview}
+              imageStatus={imageStatus}
+              isAnalyzing={isAnalyzing}
+              isCameraOpen={isCameraOpen}
+              isUploadingImage={isUploadingImage}
+              isLoadingOpponentPokemon={isLoadingOpponentPokemon}
+              isSearchingOpponent={isSearchingOpponent}
+              onClearOpponent={clearOpponentSlot}
+              onAnalyzeLabel={isAnalyzing ? "Analyzing" : "Analyze matchup"}
+              onCaptureGuidedPhoto={captureGuidedPhoto}
+              onCloseGuidedCamera={closeGuidedCamera}
+              onOpenGuidedCamera={openGuidedCamera}
+              onSelectOpponent={selectOpponentFromPanel}
+              onSelectOpponentImage={selectOpponentImage}
+              onSelectOpponentPokemon={setOpponentPokemonFromSearch}
+              onOpponentSearchChange={setOpponentSearchQuery}
+              onUploadOpponentImage={uploadOpponentImage}
+              opponentTeam={opponentTeam}
+              opponentSearchQuery={opponentSearchQuery}
+              opponentSearchResults={opponentSearchResults}
+              renderOpponentSlotAction={(opponent) => (
+                <LikelySetsCard
+                  opponentTeam={opponentTeam}
+                  focusPokemonName={opponent.name}
+                  triggerLabel="Likely Sets"
+                  triggerClassName="opponent-slot-likely-sets"
+                />
+              )}
+              selectedImage={selectedImage}
+              selectedImageDetails={selectedImageDetails}
+              selectedOpponentIndex={selectedOpponentIndex}
+              videoRef={videoRef}
+              canvasRef={canvasRef}
+            />
+
+            <ArchetypeInsightCard
+              team={opponentTeam}
+              title="Likely Opponent Archetype"
+              eyebrow="Tournament Insight"
+              emptyMessage="Detect or enter an opponent team to see archetype context."
+            />
+          </div>
         </form>
 
         <ResultsGrid analysis={analysis} error={error} />

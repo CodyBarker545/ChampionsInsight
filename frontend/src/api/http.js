@@ -15,11 +15,26 @@ export function resolveApiUrl(pathOrUrl = "") {
 }
 
 export async function readJsonResponse(response, fallbackMessage) {
-  const result = await response.json();
+  const responseText = await response.text();
+  let result = null;
 
-  if (!response.ok) {
-    throw new Error(result.error ?? fallbackMessage);
+  if (responseText) {
+    try {
+      result = JSON.parse(responseText);
+    } catch {
+      const isHtmlResponse = /^\s*</.test(responseText);
+      const message =
+        isHtmlResponse && response.status === 404
+          ? `${fallbackMessage} The backend route may be unavailable.`
+          : `${fallbackMessage} The server returned a non-JSON response.`;
+
+      throw new Error(message);
+    }
   }
 
-  return result;
+  if (!response.ok) {
+    throw new Error(result?.error ?? fallbackMessage);
+  }
+
+  return result ?? {};
 }

@@ -169,3 +169,23 @@ select:focus {
   overflow: visible;
 }
 
+.opponent-side-stack {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.team-side-stack {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.team-side-stack > .roster-column,
+.opponent-side-stack > .roster-column {
+  flex: 1;
+  min-height: 0;
+}
+

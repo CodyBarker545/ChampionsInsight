@@ -15,6 +15,7 @@ import {
   fetchPokemonDetails,
   fetchPokemonLevel50Stats,
   fetchPokemonTopMoves,
+  fetchTeamSetProbabilities,
   fetchUserTeam,
   saveUserTeam,
   searchPokemon,
@@ -32,6 +33,7 @@ vi.mock("../api/championsInsightApi.js", () => ({
   fetchPokemonDetails: vi.fn(),
   fetchPokemonLevel50Stats: vi.fn(),
   fetchPokemonTopMoves: vi.fn(),
+  fetchTeamSetProbabilities: vi.fn(),
   fetchUserTeam: vi.fn(),
   saveUserTeam: vi.fn(),
   searchPokemon: vi.fn(),
@@ -111,6 +113,29 @@ describe("BattlePrepPage", () => {
         { move: "Air Slash", count: 41 },
         { move: "Tailwind", count: 39 },
       ],
+    });
+    fetchTeamSetProbabilities.mockResolvedValue({
+      team: ["Charizard"],
+      predictions: {
+        Charizard: {
+          likelyMoves: [],
+          likelyItems: [],
+          likelyAbilities: [],
+          likelyNature: [],
+          predictedSet: {
+            item: "Safety Goggles",
+            ability: "Blaze",
+            nature: "",
+            moves: ["Protect", "Heat Wave", "Air Slash", "Tailwind"],
+          },
+          confidence: 0.8,
+          confidenceLabel: "High",
+          explanations: [],
+          dataQualityNotes: [],
+        },
+      },
+      teamExplanations: [],
+      dataQualityNotes: [],
     });
     analyzeTeamMatchup.mockResolvedValue({
       summary: "Aegis has a favorable opening into Volt.",
@@ -365,6 +390,15 @@ describe("BattlePrepPage", () => {
       "src",
       "/api/pokemon/sprite/normal/venusaur.png"
     );
+  });
+
+  it("shows a likely sets trigger for detected opponents", async () => {
+    const user = userEvent.setup();
+    render(<BattlePrepPage />);
+
+    await user.click(screen.getByRole("button", { name: "Retry Last Uploaded Image" }));
+
+    expect(await screen.findByRole("button", { name: "Likely Sets" })).toBeInTheDocument();
   });
 
   it("uses the phone camera flow instead of the old guided camera control", () => {

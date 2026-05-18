@@ -1,0 +1,224 @@
+.pokemon-meta-panel {
+  display: grid;
+  gap: 14px;
+  margin-top: 22px;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 18px;
+  padding: 18px;
+  background:
+    radial-gradient(circle at top right, rgba(77, 208, 225, 0.08), transparent 34%),
+    rgba(8, 13, 25, 0.34);
+}
+
+.pokemon-meta-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.pokemon-meta-kicker {
+  display: block;
+  color: var(--ci-muted);
+  font-size: 0.72rem;
+  font-weight: 950;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.pokemon-meta-header h3 {
+  margin: 6px 0 0;
+  font-size: 1.2rem;
+}
+
+.pokemon-meta-direction {
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0 12px;
+  font-size: 0.76rem;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pokemon-meta-direction.is-rising {
+  background: rgba(16, 185, 129, 0.14);
+  color: #6ee7b7;
+}
+
+.pokemon-meta-direction.is-falling {
+  background: rgba(248, 113, 113, 0.14);
+  color: #fca5a5;
+}
+
+.pokemon-meta-direction.is-stable {
+  background: rgba(96, 165, 250, 0.14);
+  color: #93c5fd;
+}
+
+.pokemon-meta-status,
+.pokemon-meta-summary,
+.pokemon-meta-empty {
+  margin: 0;
+  color: var(--ci-muted);
+}
+
+.pokemon-meta-status-error {
+  color: #fca5a5;
+}
+
+.pokemon-meta-usage-card,
+.pokemon-meta-winrate-card {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.pokemon-meta-usage-card > div,
+.pokemon-meta-winrate-card > div {
+  display: grid;
+  gap: 4px;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 14px;
+  padding: 14px;
+  background: rgba(15, 23, 42, 0.46);
+}
+
+.pokemon-meta-usage-card span,
+.pokemon-meta-winrate-card span {
+  color: var(--ci-muted);
+  font-size: 0.72rem;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pokemon-meta-usage-card strong,
+.pokemon-meta-winrate-card strong {
+  font-size: 1.18rem;
+}
+
+.pokemon-meta-winrate-card {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.pokemon-meta-winrate-card p {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--ci-muted);
+}
+
+.pokemon-meta-sections {
+  display: grid;
+  gap: 10px;
+}
+
+.pokemon-meta-section {
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 14px;
+  background: rgba(8, 13, 25, 0.3);
+  overflow: hidden;
+}
+
+.pokemon-meta-section summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 14px 16px;
+  font-weight: 900;
+}
+
+.pokemon-meta-section summary::-webkit-details-marker {
+  display: none;
+}
+
+.pokemon-meta-section[open] summary {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.pokemon-meta-list,
+.pokemon-meta-notes {
+  display: grid;
+  gap: 10px;
+  padding: 14px 16px 16px;
+}
+
+.pokemon-meta-list-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 12px;
+  padding: 12px;
+  background: rgba(15, 23, 42, 0.38);
+}
+
+.pokemon-meta-list-copy {
+  display: grid;
+  gap: 4px;
+}
+
+.pokemon-meta-list-copy p {
+  margin: 0;
+  color: var(--ci-muted);
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.pokemon-meta-list-metrics {
+  min-width: 112px;
+  display: grid;
+  gap: 4px;
+  justify-items: end;
+  color: var(--ci-muted);
+  font-size: 0.76rem;
+  font-weight: 850;
+}
+
+.pokemon-meta-change.is-rising {
+  color: #6ee7b7;
+}
+
+.pokemon-meta-change.is-falling {
+  color: #fca5a5;
+}
+
+.pokemon-meta-change.is-stable {
+  color: #93c5fd;
+}
+
+.pokemon-meta-notes {
+  margin: 0;
+  padding-left: 32px;
+}
+
+.pokemon-meta-notes li {
+  color: var(--ci-muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .pokemon-meta-usage-card,
+  .pokemon-meta-winrate-card {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .pokemon-meta-header,
+  .pokemon-meta-list-item {
+    flex-direction: column;
+  }
+
+  .pokemon-meta-usage-card,
+  .pokemon-meta-winrate-card {
+    grid-template-columns: 1fr;
+  }
+
+  .pokemon-meta-list-metrics {
+    min-width: 0;
+    justify-items: start;
+  }
+}

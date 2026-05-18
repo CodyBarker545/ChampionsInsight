@@ -433,18 +433,37 @@ function findKnownMove(moveOptions = [], value = "") {
   );
 }
 
+function normalizeFormLookup(value = "") {
+  return String(value)
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, "");
+}
+
 function getFormToggleState(pokemon) {
   const options = pokemon?.formOptions ?? [];
-  const defaultForm = options.find((formOption) => formOption.isDefault) ?? options[0];
-  const alternateForm =
-    options.find((formOption) => !formOption.isDefault) ?? options[1] ?? options[0];
   const currentFormName = pokemon?.form || pokemon?.name || "";
-  const isAlternateActive = currentFormName === alternateForm?.name;
+  const currentKey = normalizeFormLookup(currentFormName);
+  const currentIndex = Math.max(
+    0,
+    options.findIndex((formOption) => {
+      const optionNames = [formOption?.name, formOption?.label];
+      return optionNames.some(
+        (optionName) => normalizeFormLookup(optionName) === currentKey,
+      );
+    }),
+  );
+  const activeForm = options[currentIndex] ?? options[0];
+  const nextForm = options[(currentIndex + 1) % options.length] ?? activeForm;
+  const defaultForm = options.find((formOption) => formOption.isDefault) ?? options[0];
+  const isAlternateActive =
+    normalizeFormLookup(activeForm?.name || activeForm?.label) !==
+    normalizeFormLookup(defaultForm?.name || defaultForm?.label);
 
   return {
     isAlternateActive,
-    label: alternateForm?.label || alternateForm?.name || "Form",
-    targetForm: isAlternateActive ? defaultForm?.name : alternateForm?.name,
+    activeLabel: activeForm?.label || activeForm?.name || "Form",
+    nextLabel: nextForm?.label || nextForm?.name || "Form",
+    targetForm: nextForm?.name || nextForm?.label || "",
   };
 }
 
@@ -472,15 +491,20 @@ function FormToggle({ label, onToggle, pokemon }) {
     return null;
   }
 
+  const speciesPrefix = `${pokemon.species || ""} `;
+  const activeLabel = toggleState.activeLabel.replace(speciesPrefix, "");
+  const nextLabel = toggleState.nextLabel.replace(speciesPrefix, "");
+
   return (
     <button
       className={`form-toggle ${toggleState.isAlternateActive ? "active" : ""}`}
       type="button"
-      aria-label={label}
+      aria-label={`${label}. Current form ${activeLabel}. Switch to ${nextLabel}.`}
       aria-pressed={toggleState.isAlternateActive}
       onClick={() => onToggle?.(toggleState.targetForm)}
+      title={`Current: ${activeLabel} ? Next: ${nextLabel}`}
     >
-      {toggleState.label.replace(`${pokemon.species || ""} `, "")}
+      {activeLabel}
     </button>
   );
 }

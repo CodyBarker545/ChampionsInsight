@@ -1,9 +1,11 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import {
   fetchPokedexEntries,
   fetchPokedexEntry,
+  fetchPokemonRecommendedTeams,
   resolveApiUrl,
 } from "../api/championsInsightApi.js";
+import PokemonMetaIntelligencePanel from "../components/PokemonMetaIntelligencePanel.jsx";
 
 const statOrder = [
   "hp",
@@ -229,7 +231,29 @@ function formatMoveCategory(category) {
   return "Unknown";
 }
 
+function buildTeamSprite(name, pokemonLookup) {
+  const teamPokemon = pokemonLookup.get(normalizeLookupName(name));
+  const teamImage = resolveApiUrl(teamPokemon?.spriteUrl || teamPokemon?.image || "");
+
+  return {
+    displayName: formatName(name),
+    image: teamImage,
+  };
+}
+
+function buildImmediatePokemonDetail(pokemon) {
+  return {
+    ...pokemon,
+    abilities: pokemon?.abilities || [],
+    moves: pokemon?.moves || [],
+    usage: pokemon?.usage || {},
+    recommendedTeams: pokemon?.recommendedTeams || [],
+  };
+}
+
 function PokedexPage({ onBack }) {
+  const detailCacheRef = useRef(new Map());
+  const detailRequestRef = useRef(0);
   const [entries, setEntries] = useState([]);
   const [selectedPokemon, setSelectedPokemon] = useState(null);
   const [activeTab, setActiveTab] = useState("stats");
@@ -237,18 +261,19 @@ function PokedexPage({ onBack }) {
   const [selectedType, setSelectedType] = useState("all");
   const [isLoading, setIsLoading] = useState(true);
   const [isDetailLoading, setIsDetailLoading] = useState(false);
-  const [error, setError] = useState("");
+  const [pageError, setPageError] = useState("");
+  const [detailError, setDetailError] = useState("");
 
   useEffect(() => {
     async function loadEntries() {
       setIsLoading(true);
-      setError("");
+      setPageError("");
 
       try {
         const result = await fetchPokedexEntries();
         setEntries(result.pokemon || []);
       } catch (requestError) {
-        setError(requestError.message || "Could not load Pokédex.");
+        setPageError(requestError.message || "Could not load Pokédex.");
       } finally {
         setIsLoading(false);
       }
@@ -308,23 +333,46 @@ function PokedexPage({ onBack }) {
   }, [mainSpeciesEntries, entries, query, selectedType]);
 
   async function openPokemon(pokemon) {
-    setIsDetailLoading(true);
-    setError("");
+    setDetailError("");
     setActiveTab("stats");
+    setSelectedPokemon(buildImmediatePokemonDetail(pokemon));
+
+    const cacheKey = normalizeLookupName(pokemon.name);
+    const cachedDetail = detailCacheRef.current.get(cacheKey);
+    if (cachedDetail) {
+      setSelectedPokemon(cachedDetail);
+      setIsDetailLoading(false);
+      return;
+    }
+
+    const requestId = detailRequestRef.current + 1;
+    detailRequestRef.current = requestId;
+    setIsDetailLoading(true);
 
     try {
       const detail = await fetchPokedexEntry(pokemon.name);
+      if (detailRequestRef.current !== requestId) {
+        return;
+      }
+      detailCacheRef.current.set(cacheKey, detail);
       setSelectedPokemon(detail);
     } catch (requestError) {
-      setError(requestError.message || `Could not load ${pokemon.name}.`);
+      if (detailRequestRef.current !== requestId) {
+        return;
+      }
+      setDetailError(requestError.message || `Could not load ${pokemon.name}.`);
     } finally {
-      setIsDetailLoading(false);
+      if (detailRequestRef.current === requestId) {
+        setIsDetailLoading(false);
+      }
     }
   }
 
   function closePokemon() {
     setSelectedPokemon(null);
     setActiveTab("stats");
+    setDetailError("");
+    detailRequestRef.current += 1;
   }
 
   return (
@@ -373,7 +421,7 @@ function PokedexPage({ onBack }) {
         </div>
       </section>
 
-      {error && <p className="alert">{error}</p>}
+      {pageError ? <p className="alert">{pageError}</p> : null}
 
       {isLoading ? (
         <section className="pokedex-loading">Loading Pokédex...</section>
@@ -434,12 +482,17 @@ function PokedexPage({ onBack }) {
         <div className="pokedex-floating-status">Loading Pokémon details...</div>
       )}
 
+      {detailError && !selectedPokemon ? (
+        <div className="pokedex-floating-status">{detailError}</div>
+      ) : null}
+
       {selectedPokemon && (
         <PokemonDetailModal
           pokemon={selectedPokemon}
           forms={entries.filter((entry) => sameSpecies(entry, selectedPokemon))}
           entries={entries}
           activeTab={activeTab}
+          isHydratingDetail={isDetailLoading}
           onChangeTab={setActiveTab}
           onClose={closePokemon}
           onSelectForm={openPokemon}
@@ -454,11 +507,17 @@ function PokemonDetailModal({
   forms = [],
   entries = [],
   activeTab,
+  isHydratingDetail = false,
   onChangeTab,
   onClose,
   onSelectForm,
 }) {
   const [moveSearch, setMoveSearch] = useState("");
+  const [recommendedTeams, setRecommendedTeams] = useState(
+    pokemon?.recommendedTeams || [],
+  );
+  const [isLoadingRecommendedTeams, setIsLoadingRecommendedTeams] = useState(false);
+  const [recommendedTeamsError, setRecommendedTeamsError] = useState("");
   const imageSource = resolveApiUrl(pokemon.spriteUrl || pokemon.image || "");
   const baseStats = pokemon.baseStats || {};
   const usage = pokemon.usage || {};
@@ -510,6 +569,46 @@ function PokemonDetailModal({
       return searchable.includes(search);
     });
   }, [pokemon.moves, moveSearch]);
+
+  useEffect(() => {
+    setRecommendedTeams(pokemon?.recommendedTeams || []);
+    setRecommendedTeamsError("");
+  }, [pokemon?.name, pokemon?.recommendedTeams]);
+
+  useEffect(() => {
+    if (activeTab !== "teams" || !pokemon?.name || recommendedTeams.length > 0) {
+      return undefined;
+    }
+
+    let isActive = true;
+    setIsLoadingRecommendedTeams(true);
+    setRecommendedTeamsError("");
+
+    fetchPokemonRecommendedTeams(pokemon.name)
+      .then((result) => {
+        if (!isActive) {
+          return;
+        }
+        setRecommendedTeams(result.recommendedTeams || []);
+      })
+      .catch((requestError) => {
+        if (!isActive) {
+          return;
+        }
+        setRecommendedTeamsError(
+          requestError?.message || "Could not load recommended builds.",
+        );
+      })
+      .finally(() => {
+        if (isActive) {
+          setIsLoadingRecommendedTeams(false);
+        }
+      });
+
+    return () => {
+      isActive = false;
+    };
+  }, [activeTab, pokemon?.name, recommendedTeams.length]);
 
   function selectNextForm() {
     if (forms.length <= 1) {
@@ -605,6 +704,12 @@ function PokemonDetailModal({
         </nav>
 
         <section className="pokedex-modal-content">
+          {isHydratingDetail ? (
+            <div className="pokedex-inline-status">
+              Loading tournament-backed detail...
+            </div>
+          ) : null}
+
           {activeTab === "stats" && (
             <div className="pokedex-stats-panel">
               <div className="pokedex-bst-row">
@@ -626,6 +731,8 @@ function PokemonDetailModal({
                   </div>
                 );
               })}
+
+              <PokemonMetaIntelligencePanel pokemonName={pokemon.name} />
             </div>
           )}
 
@@ -657,6 +764,8 @@ function PokemonDetailModal({
                     </article>
                   ))}
                 </div>
+              ) : isHydratingDetail ? (
+                <p>Loading move data...</p>
               ) : (
                 <p>No moves match that search.</p>
               )}
@@ -738,37 +847,100 @@ function PokemonDetailModal({
 
           {activeTab === "teams" && (
             <div className="pokedex-team-panel">
-              {(usage.topTeams || []).length ? (
-                usage.topTeams.map((team, index) => (
-                  <article key={`${team.player}-${team.tournament}-${index}`}>
-                    <header>
-                      <strong>{team.player || "Unknown Player"}</strong>
-                      <span>{team.tournament || "Unknown Tournament"}</span>
-                    </header>
+              <section className="pokedex-team-column">
+                <div className="pokedex-team-column-header">
+                  <h3>Actual Tournament Teams</h3>
+                  <span>Recent lineups featuring {pokemon.speciesName || pokemon.name}</span>
+                </div>
 
-                    <div className="pokedex-team-sprites">
-                      {(team.pokemon || []).map((name) => {
-                        const teamPokemon = pokemonLookup.get(normalizeLookupName(name));
-                        const teamImage = resolveApiUrl(teamPokemon?.spriteUrl || teamPokemon?.image || "");
+                {(usage.topTeams || []).length ? (
+                  usage.topTeams.map((team, index) => (
+                    <article key={`${team.player}-${team.tournament}-${index}`}>
+                      <header>
+                        <strong>{team.player || "Unknown Player"}</strong>
+                        <span>{team.tournament || "Unknown Tournament"}</span>
+                      </header>
 
-                        return (
-                          <span className="pokedex-team-sprite" key={name} title={formatName(name)}>
-                            {teamImage ? (
-                              <img src={teamImage} alt={formatName(name)} />
-                            ) : (
-                              formatName(name).slice(0, 2)
-                            )}
+                      <div className="pokedex-team-sprites">
+                        {(team.pokemon || []).map((name) => {
+                          const teamSprite = buildTeamSprite(name, pokemonLookup);
+
+                          return (
+                            <span
+                              className="pokedex-team-sprite"
+                              key={name}
+                              title={teamSprite.displayName}
+                            >
+                              {teamSprite.image ? (
+                                <img src={teamSprite.image} alt={teamSprite.displayName} />
+                              ) : (
+                                teamSprite.displayName.slice(0, 2)
+                              )}
+                            </span>
+                          );
+                        })}
+                      </div>
+                    </article>
+                  ))
+                ) : (
+                  <p>No team data available.</p>
+                )}
+              </section>
+
+              <section className="pokedex-team-column">
+                <div className="pokedex-team-column-header">
+                  <h3>Recommended Builds</h3>
+                  <span>Generated from teammate synergy and tournament pairings</span>
+                </div>
+
+                {recommendedTeams.length ? (
+                  recommendedTeams.map((team, index) => (
+                    <article key={`${team.label}-${index}`}>
+                      <header>
+                        <strong>{team.label || `Recommended Team ${index + 1}`}</strong>
+                        <span>{team.sampleSize || 0} sample appearances</span>
+                      </header>
+
+                      <div className="pokedex-team-sprites pokedex-team-sprites-centered">
+                        {(team.pokemon || []).map((name) => {
+                          const teamSprite = buildTeamSprite(name, pokemonLookup);
+
+                          return (
+                            <span
+                              className="pokedex-team-sprite"
+                              key={name}
+                              title={teamSprite.displayName}
+                            >
+                              {teamSprite.image ? (
+                                <img src={teamSprite.image} alt={teamSprite.displayName} />
+                              ) : (
+                                teamSprite.displayName.slice(0, 2)
+                              )}
+                            </span>
+                          );
+                        })}
+                      </div>
+
+                      <div className="pokedex-team-recommendation-notes">
+                        {(team.signals || []).slice(0, 3).map((signal) => (
+                          <span key={`${team.label}-${signal.name}`}>
+                            {formatName(signal.name)} {Math.round(Number(signal.percentage || 0))}%
                           </span>
-                        );
-                      })}
-                    </div>
-                  </article>
-                ))
-              ) : (
-                <p>No team data available.</p>
-              )}
+                        ))}
+                      </div>
+                    </article>
+                  ))
+                ) : isLoadingRecommendedTeams ? (
+                  <p>Loading recommendation data...</p>
+                ) : recommendedTeamsError ? (
+                  <p>{recommendedTeamsError}</p>
+                ) : (
+                  <p>No recommendation data available.</p>
+                )}
+              </section>
             </div>
           )}
+
         </section>
       </section>
     </div>

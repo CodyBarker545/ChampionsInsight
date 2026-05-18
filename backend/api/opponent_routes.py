@@ -146,19 +146,12 @@ def enrich_detected_opponent_team(detected_team):
     for pokemon in detected_team:
         pokemon_name = pokemon.get("name") or pokemon.get("pokemonName")
         stats = deps.get_level_50_stats(pokemon_name, nature="hardy")
-        type_evidence = pokemon.get("typeEvidence") or {}
-        detected_type_evidence = pokemon.get("detectedTypes", [])
 
         if stats:
-            reference_types = stats.get("types", [])
             enriched_team.append({
                 **pokemon,
                 "name": pokemon_name,
                 "pokemonName": pokemon.get("pokemonName") or pokemon_name,
-                "types": reference_types,
-                "referenceTypes": reference_types,
-                "detectedTypes": detected_type_evidence,
-                "typeEvidence": type_evidence,
                 "baseStats": stats.get("baseStats"),
                 "finalStats": stats.get("finalStats"),
                 "stats": stats,
@@ -171,10 +164,6 @@ def enrich_detected_opponent_team(detected_team):
                 **pokemon,
                 "name": pokemon_name,
                 "pokemonName": pokemon.get("pokemonName") or pokemon_name,
-                "types": pokemon.get("types") or pokemon.get("detectedTypes", []),
-                "referenceTypes": pokemon.get("referenceTypes", []),
-                "detectedTypes": detected_type_evidence,
-                "typeEvidence": type_evidence,
                 "stats": None,
                 "baseStats": None,
                 "finalStats": None,

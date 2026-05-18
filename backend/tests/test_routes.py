@@ -233,6 +233,54 @@ def test_get_pokemon_top_tournament_moves_route(client):
     assert response.json["moves"][0]["move"] == "Rock Slide"
 
 
+def test_get_tournament_archetype_rules_route(client):
+    response = client.get("/api/tournament/archetypes/rules")
+
+    assert response.status_code == 200
+    assert "totalTeamsAnalyzed" in response.json
+    assert "archetypeSummaries" in response.json
+    assert isinstance(response.json["archetypeSummaries"], list)
+
+
+def test_get_tournament_archetype_clusters_route(client):
+    response = client.get("/api/tournament/archetypes/clusters")
+
+    assert response.status_code == 200
+    assert "totalTeamsAnalyzed" in response.json
+    assert "totalClusters" in response.json
+    assert "clustersByParentArchetype" in response.json
+    assert isinstance(response.json["clustersByParentArchetype"], dict)
+
+
+def test_post_tournament_archetype_classify_route(client):
+    response = client.post(
+        "/api/tournament/archetypes/classify",
+        json={
+            "pokemon": [
+                "Tyranitar",
+                "Garchomp",
+                "Sneasler",
+                "Meganium",
+                "Aerodactyl",
+                "Basculegion",
+            ],
+            "moves": [],
+            "items": [],
+            "abilities": [],
+        },
+    )
+
+    assert response.status_code == 200
+    assert response.json["primaryArchetype"]
+    assert response.json["displayLabel"]
+    assert response.json["shortExplanation"]
+    assert response.json["confidenceLabel"] in {"High", "Medium", "Low"}
+    assert "detailedReasons" in response.json
+    assert "scores" in response.json
+    assert "reasons" in response.json
+    assert "dataQualityNotes" in response.json
+
+
 # Tests that detection rejects unsafe filenames.
 def test_detect_uploaded_opponent_image_route_rejects_unsafe_filename(client, upload_dir, monkeypatch):
     monkeypatch.setattr(routes, "UPLOAD_DIR", upload_dir)

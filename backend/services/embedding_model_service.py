@@ -22,12 +22,14 @@ def load_embedding_model():
 
     weights = MobileNet_V3_Small_Weights.DEFAULT
     model = mobilenet_v3_small(weights=weights)
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     # Remove the classifier. Keep convolutional feature extractor + pooling.
     model.classifier = torch.nn.Identity()
+    model.to(device)
     model.eval()
 
-    return model, weights.transforms(), torch
+    return model, weights.transforms(), torch, device
 
 
 def convert_cv_image_to_pil(image):
@@ -75,11 +77,11 @@ def center_pad_square(pil_image, background=(16, 16, 16)):
 
 def embed_image(image):
     """Creates a normalized embedding vector for one image."""
-    model, transform, torch = load_embedding_model()
+    model, transform, torch, device = load_embedding_model()
 
     pil_image = convert_cv_image_to_pil(image)
     pil_image = center_pad_square(pil_image)
-    tensor = transform(pil_image).unsqueeze(0)
+    tensor = transform(pil_image).unsqueeze(0).to(device)
 
     with torch.no_grad():
         vector = model(tensor).detach().cpu().numpy()[0]

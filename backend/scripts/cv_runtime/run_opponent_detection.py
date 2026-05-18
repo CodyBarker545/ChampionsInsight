@@ -28,11 +28,7 @@ def build_position_output(detection_result: dict) -> dict:
                 "pokemonName": slot["pokemonName"],
                 "confidence": slot["confidence"],
                 "matchReason": slot.get("matchReason", ""),
-                "detectedTypes": slot.get("detectedTypes", []),
-                "typeMethodResults": slot.get("typeMethodResults", {}),
                 "pokemonCropPath": slot.get("debugPokemonCropPath", ""),
-                "typeIconCropPath": slot.get("debugTypeIconCropPath", ""),
-                "typeIconCropPaths": slot.get("debugTypeIconCropPaths", []),
             }
             for slot in detection_result["detectedTeam"]
         ],

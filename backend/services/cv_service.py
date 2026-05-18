@@ -2821,47 +2821,35 @@ def classify_type_crop(combo_crop, type_references=None):
 
     type_count = combo_crop.get("typeCount")
     crop_image = combo_crop.get("image")
+    references = type_references or load_type_icon_references()
 
     if type_count == 1:
-        detected_type = classify_type_by_template(
-            crop_image,
-            type_references or load_type_icon_references(),
+        single_result = classify_individual_type_icons(
+            [{"index": 1, "image": crop_image}],
+            references,
+            expected_type_count=1,
         )
-        if not detected_type:
+        if not single_result.get("types"):
             return unknown_type_combo_result("single-type-no-match")
 
         return {
-            "types": [detected_type],
-            "typeKey": detected_type,
+            **single_result,
             "referenceImage": "",
-            "score": 1.0,
-            "pixelScore": 1.0,
-            "colorScore": 1.0,
-            "orbScore": 1.0,
-            "predictionSource": "single_type_template",
-            "needsReview": False,
+            "predictionSource": "single_type_symbol_shape",
         }
 
     icon_crops = combo_crop.get("iconCrops") or []
     if icon_crops:
-        references = type_references or load_type_icon_references()
-        icon_types = []
-        for icon_crop in icon_crops[:2]:
-            detected_type = classify_type_by_template(icon_crop.get("image"), references)
-            if detected_type and detected_type not in icon_types:
-                icon_types.append(detected_type)
-
-        if icon_types:
+        icon_result = classify_individual_type_icons(
+            icon_crops[:2],
+            references,
+            expected_type_count=int(type_count or 0),
+        )
+        if icon_result.get("types"):
             return {
-                "types": normalize_detected_type_pair(icon_types),
-                "typeKey": "_".join(icon_types),
+                **icon_result,
                 "referenceImage": "",
-                "score": 1.0,
-                "pixelScore": 1.0,
-                "colorScore": 1.0,
-                "orbScore": 1.0,
-                "predictionSource": "individual_type_icon_template",
-                "needsReview": len(icon_types) < int(type_count or 0),
+                "predictionSource": "individual_type_icon_symbol_shape",
             }
 
     return classify_type_combo_by_template(
@@ -4437,6 +4425,110 @@ def classify_type_by_template(icon_crop, type_references):
         return result
 
     return classify_against_all_references(icon_crop, type_references)
+
+
+def score_type_icon_against_references(icon_crop, type_references):
+    if is_empty_image(icon_crop) or not type_references:
+        return []
+
+    cv2, np = load_cv_dependencies()
+    crop_mask = extract_white_symbol_mask(icon_crop)
+    crop_color = extract_type_color_signature(icon_crop)
+    crop_features = get_white_symbol_shape_features(icon_crop)
+
+    if crop_mask is None or crop_features is None:
+        return []
+
+    scored_hits = []
+    for reference in type_references:
+        ref_mask = reference.get("whiteMask")
+        ref_image = reference.get("image")
+        if ref_mask is None or ref_image is None:
+            continue
+
+        resized_ref_mask = cv2.resize(ref_mask, (96, 96), interpolation=cv2.INTER_AREA)
+        symbol_difference = cv2.absdiff(crop_mask, resized_ref_mask)
+        symbol_score = 1.0 - (
+            symbol_difference.sum() / (255.0 * symbol_difference.shape[0] * symbol_difference.shape[1])
+        )
+
+        ref_color = reference.get("colorSignature") or extract_type_color_signature(ref_image)
+        color_score = compare_type_color_signatures(crop_color, ref_color)
+
+        ref_features = get_white_symbol_shape_features(ref_image)
+        shape_score = 0.0
+        if ref_features:
+            angle_gap = abs(float(crop_features.get("angle", 0.0)) - float(ref_features.get("angle", 0.0)))
+            angle_gap = min(angle_gap, abs(180.0 - angle_gap))
+            fill_gap = abs(float(crop_features.get("fill", 0.0)) - float(ref_features.get("fill", 0.0)))
+            component_gap = abs(
+                int(crop_features.get("componentCount", 0)) - int(ref_features.get("componentCount", 0))
+            )
+            angle_score = max(0.0, 1.0 - (angle_gap / 60.0))
+            fill_score = max(0.0, 1.0 - (fill_gap / 0.22))
+            component_score = max(0.0, 1.0 - (component_gap / 4.0))
+            shape_score = (angle_score * 0.20) + (fill_score * 0.45) + (component_score * 0.35)
+
+        final_score = (symbol_score * 0.78) + (shape_score * 0.17) + (color_score * 0.05)
+        scored_hits.append(
+            {
+                "type": reference["type"],
+                "score": round(float(final_score), 4),
+                "symbolScore": round(float(symbol_score), 4),
+                "shapeScore": round(float(shape_score), 4),
+                "colorScore": round(float(color_score), 4),
+                "path": reference.get("path", ""),
+            }
+        )
+
+    scored_hits.sort(key=lambda hit: (hit["score"], hit["symbolScore"], hit["shapeScore"]), reverse=True)
+    return scored_hits
+
+
+def classify_individual_type_icons(icon_crops, type_references, expected_type_count=0):
+    icon_predictions = []
+    detected_types = []
+
+    for icon_crop in icon_crops:
+        icon_image = icon_crop.get("image") if isinstance(icon_crop, dict) else icon_crop
+        hits = score_type_icon_against_references(icon_image, type_references)
+        top_hit = hits[0] if hits else None
+        predicted_type = top_hit.get("type", "") if top_hit and top_hit.get("score", 0.0) >= 0.50 else ""
+        if predicted_type and predicted_type not in detected_types:
+            detected_types.append(predicted_type)
+        icon_predictions.append(
+            {
+                "index": icon_crop.get("index") if isinstance(icon_crop, dict) else None,
+                "prediction": predicted_type,
+                "topCandidates": hits[:5],
+            }
+        )
+
+    normalized_types = normalize_detected_type_pair(detected_types)
+    top_scores = [
+        prediction["topCandidates"][0]["score"]
+        for prediction in icon_predictions
+        if prediction.get("topCandidates")
+    ]
+    average_score = round(sum(top_scores) / max(1, len(top_scores)), 4) if top_scores else 0.0
+
+    return {
+        "types": normalized_types,
+        "typeKey": "_".join(normalized_types),
+        "score": average_score,
+        "pixelScore": average_score,
+        "colorScore": round(
+            sum(
+                prediction["topCandidates"][0]["colorScore"]
+                for prediction in icon_predictions
+                if prediction.get("topCandidates")
+            ) / max(1, len(top_scores)),
+            4,
+        ) if top_scores else 0.0,
+        "orbScore": 0.0,
+        "iconPredictions": icon_predictions,
+        "needsReview": len(normalized_types) < max(1, int(expected_type_count or 0)),
+    }
 
 def classify_against_all_references(icon_crop, type_references):
     if is_empty_image(icon_crop):

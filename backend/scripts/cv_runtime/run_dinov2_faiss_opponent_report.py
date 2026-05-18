@@ -59,7 +59,7 @@ def format_hits(hits: list[dict], title: str) -> str:
     return "\n".join(lines)
 
 
-def classify_slot(slot_image, pokemon_index: Dinov2FaissIndex, type_index: Dinov2FaissIndex) -> dict:
+def classify_slot(slot_image, pokemon_index: Dinov2FaissIndex) -> dict:
     object_layer = slot_object_detection_service.detect_slot_objects(slot_image)
     pokemon_object = object_layer.get("pokemon_sprite") or cv_service.detect_pokemon_sprite_object(slot_image)
     pokemon_crop = None
@@ -71,25 +71,16 @@ def classify_slot(slot_image, pokemon_index: Dinov2FaissIndex, type_index: Dinov
         if not cv_service.is_empty_image(fallback_crop):
             pokemon_crop = fallback_crop
 
-    type_icon_crops = slot_object_detection_service.get_type_icon_crops(object_layer)
-    type_crop = cv_service.build_type_combo_candidate_crop(slot_image, type_icon_crops=type_icon_crops)
-    if cv_service.is_empty_image(type_crop):
-        type_crop = cv_service.extract_type_icon_region(slot_image)
-
     pokemon_hits = []
-    type_hits = []
     if pokemon_crop is not None and not cv_service.is_empty_image(pokemon_crop):
         pokemon_hits = pokemon_index.search(cv_to_pil(pokemon_crop), top_k=5)
-    if type_crop is not None and not cv_service.is_empty_image(type_crop):
-        type_hits = type_index.search(cv_to_pil(type_crop), top_k=5)
+
+    pokemon_prediction = pokemon_hits[0]["label"] if pokemon_hits else "unknown"
 
     return {
         "pokemonCrop": pokemon_crop,
-        "typeCrop": type_crop,
         "pokemonHits": pokemon_hits,
-        "typeHits": type_hits,
-        "pokemonPrediction": pokemon_hits[0]["label"] if pokemon_hits else "unknown",
-        "typePrediction": type_hits[0]["label"] if type_hits else "unknown",
+        "pokemonPrediction": pokemon_prediction,
     }
 
 
@@ -149,11 +140,6 @@ def write_review_csv(json_results: list[dict], output_csv: Path) -> None:
         "pokemon_ok",
         "pokemon_crop_ok",
         "pokemon_top5",
-        "type_pred",
-        "type_similarity",
-        "type_ok",
-        "type_crop_ok",
-        "type_top5",
         "failure_cause",
         "notes",
     ]
@@ -171,11 +157,6 @@ def write_review_csv(json_results: list[dict], output_csv: Path) -> None:
                     "pokemon_ok": "",
                     "pokemon_crop_ok": "",
                     "pokemon_top5": top_hit_labels(slot["pokemonHits"]),
-                    "type_pred": slot["typePrediction"],
-                    "type_similarity": top_hit_similarity(slot["typeHits"]),
-                    "type_ok": "",
-                    "type_crop_ok": "",
-                    "type_top5": top_hit_labels(slot["typeHits"]),
                     "failure_cause": "",
                     "notes": "",
                 })
@@ -217,16 +198,9 @@ def build_report_page(image_path: Path, slots: list[dict]) -> Image.Image:
             page.paste(pokemon_thumb, (300, y + 52))
         draw.text((300, y + 258), "pokemon crop", font=small_font, fill=(70, 70, 70))
 
-        if slot["typeCrop"] is not None and not cv_service.is_empty_image(slot["typeCrop"]):
-            type_thumb = thumbnail(cv_to_pil(slot["typeCrop"]), (220, 120))
-            page.paste(type_thumb, (535, y + 88))
-        draw.text((535, y + 258), "type crop", font=small_font, fill=(70, 70, 70))
-
         prediction_text = (
             f"Pokemon: {slot['pokemonPrediction']}\n"
-            f"Type: {slot['typePrediction']}\n\n"
-            f"{format_hits(slot['pokemonHits'][:3], 'Pokemon top 3')}\n\n"
-            f"{format_hits(slot['typeHits'][:3], 'Type top 3')}"
+            f"\n{format_hits(slot['pokemonHits'][:3], 'Pokemon top 3')}"
         )
         draw_wrapped(draw, (805, y + 4), prediction_text, body_font, width=58)
         y += row_height
@@ -246,11 +220,6 @@ def run_report(
         DEFAULT_INDEX_ROOT / "pokemon" / "index.faiss",
         DEFAULT_INDEX_ROOT / "pokemon" / "metadata.json",
     )
-    type_index = Dinov2FaissIndex(
-        DEFAULT_INDEX_ROOT / "types" / "index.faiss",
-        DEFAULT_INDEX_ROOT / "types" / "metadata.json",
-    )
-
     image_paths = collect_input_images(input_dirs, limit)
     if not image_paths:
         raise FileNotFoundError(f"No images found in {input_dirs}")
@@ -264,7 +233,7 @@ def run_report(
 
         slots = []
         for crop in crops:
-            result = classify_slot(crop["image"], pokemon_index, type_index)
+            result = classify_slot(crop["image"], pokemon_index)
             slot_record = {
                 "position": crop["position"],
                 "slotImage": cv_to_pil(crop["image"]),
@@ -279,7 +248,6 @@ def run_report(
                 {
                     "position": slot["position"],
                     "pokemonPrediction": slot["pokemonPrediction"],
-                    "typePrediction": slot["typePrediction"],
                     "pokemonHits": [
                         {
                             "label": hit.get("label"),
@@ -287,14 +255,6 @@ def run_report(
                             "path": hit.get("path"),
                         }
                         for hit in slot["pokemonHits"][:5]
-                    ],
-                    "typeHits": [
-                        {
-                            "label": hit.get("label"),
-                            "similarity": round(float(hit.get("similarity", 0)), 4),
-                            "path": hit.get("path"),
-                        }
-                        for hit in slot["typeHits"][:5]
                     ],
                 }
                 for slot in slots

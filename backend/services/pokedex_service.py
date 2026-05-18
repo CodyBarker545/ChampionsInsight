@@ -4,6 +4,7 @@ from functools import lru_cache
 from pathlib import Path
 
 from paths import POKEMON_DATA_DIR
+from services.set_probability_service import calculate_basic_probabilities
 from services.tournament_usage_service import get_pokemon_usage_summary
 
 
@@ -413,6 +414,56 @@ def get_form_entry_for_pokemon(pokemon):
     return None
 
 
+@lru_cache(maxsize=256)
+def build_recommended_teams_for_pokemon(pokemon_name: str):
+    if not pokemon_name:
+        return []
+
+    probability_summary = calculate_basic_probabilities(pokemon_name, limit=18)
+    teammates = probability_summary.get("commonTeammates") or []
+    if not teammates:
+        return []
+
+    recommended_teams = []
+    for start_index in range(0, min(len(teammates), 15), 5):
+        chunk = teammates[start_index:start_index + 5]
+        if len(chunk) < 3:
+            continue
+
+        recommended_teams.append({
+            "label": f"Recommended Core {len(recommended_teams) + 1}",
+            "pokemon": [
+                pokemon_name,
+                *[entry.get("name") for entry in chunk if entry.get("name")],
+            ][:6],
+            "signals": [
+                {
+                    "name": entry.get("name"),
+                    "count": entry.get("count", 0),
+                    "percentage": entry.get("percentage", 0),
+                }
+                for entry in chunk
+                if entry.get("name")
+            ],
+            "sampleSize": probability_summary.get("sampleSize", 0),
+        })
+
+    return recommended_teams[:3]
+
+
+def get_pokemon_recommended_teams_by_name(name: str):
+    pokemon = get_pokedex_entry_by_name(name)
+
+    if pokemon is None:
+        return None
+
+    usage_name = pokemon.get("speciesName") or pokemon["name"]
+    return {
+        "pokemon": usage_name,
+        "recommendedTeams": build_recommended_teams_for_pokemon(usage_name),
+    }
+
+
 def get_pokedex_entry_detail_by_name(name: str):
     pokemon = get_pokedex_entry_by_name(name)
 
@@ -430,5 +481,6 @@ def get_pokedex_entry_detail_by_name(name: str):
 
     usage_name = pokemon_detail.get("speciesName") or pokemon_detail["name"]
     pokemon_detail["usage"] = get_pokemon_usage_summary(usage_name)
+    pokemon_detail["recommendedTeams"] = []
 
     return pokemon_detail

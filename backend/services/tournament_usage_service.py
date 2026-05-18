@@ -1,4 +1,5 @@
 import json
+from functools import lru_cache
 
 from paths import POKEDEX_USAGE_SUMMARY_PATH
 
@@ -15,6 +16,7 @@ EMPTY_USAGE_SUMMARY = {
 }
 
 
+@lru_cache(maxsize=1)
 def load_usage_summary_data():
     if not POKEDEX_USAGE_SUMMARY_PATH.exists():
         raise FileNotFoundError(

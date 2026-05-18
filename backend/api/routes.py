@@ -24,8 +24,19 @@ from api.opponent_routes import opponent_bp
 from api.pokedex_routes import pokedex_bp
 from api.pokemon_routes import pokemon_bp
 from api.rag_routes import rag_bp
+from api.set_probability_routes import set_probability_bp
+from api.tournament_routes import tournament_bp
 from api.user_team_routes import user_team_bp
-from backend.pokemon_damage_calculator.old.calculator import analyze_battle
+from services.archetype_cluster_service import (
+    find_matching_archetype_cluster,
+    get_archetype_cluster_summary,
+)
+from services.archetype_rule_service import (
+    classify_team_archetype,
+    get_archetype_rule_summary,
+)
+from services.archetype_feature_service import load_pokemon_stat_lookup, normalize_name
+from pokemon_damage_calculator.old.calculator import analyze_battle
 from services.cv_detection_service import detect_opponent_team_types
 from services.cv_service import ComputerVisionError
 from services.dinov2_opponent_detection_service import (
@@ -37,7 +48,9 @@ from services.matchup_service import analyze_matchup
 from services.pokedex_service import (
     get_pokedex_entry_detail_by_name,
     get_pokedex_grid_entries,
+    get_pokemon_recommended_teams_by_name,
 )
+from services.meta_trend_service import get_pokemon_meta_intelligence
 from services.pokemon_data_service import (
     SPRITE_ROOT,
     build_pokemon_summary,
@@ -58,3 +71,5 @@ api_bp.register_blueprint(opponent_bp)
 api_bp.register_blueprint(pokemon_bp)
 api_bp.register_blueprint(rag_bp)
 api_bp.register_blueprint(pokedex_bp)
+api_bp.register_blueprint(tournament_bp)
+api_bp.register_blueprint(set_probability_bp)

@@ -90,30 +90,42 @@ def type_overlap_score(reference_types, detected_types):
     return -0.08
 
 
-def select_type_guided_pokemon_hit(pokemon_hits, detected_types):
-    if not pokemon_hits:
-        return None, ""
+def normalize_type_list(type_names):
+    return [normalize_type_name(type_name) for type_name in (type_names or []) if normalize_type_name(type_name)]
+
+
+def validate_detected_types_with_pokemon(detected_types, pokemon_name, type_combo_details=None):
+    reference_types = normalize_type_list(get_reference_types(pokemon_name))
+    detected_types = normalize_type_list(detected_types)
+
+    if not reference_types:
+        return detected_types
 
     if not detected_types:
-        return pokemon_hits[0], "dinov2-faiss-pokemon"
+        return reference_types
 
-    scored_hits = []
-    for hit in pokemon_hits:
-        reference_types = get_reference_types(hit.get("label"))
-        base_similarity = float(hit.get("similarity", 0) or 0)
-        scored_hits.append((
-            base_similarity + type_overlap_score(reference_types, detected_types),
-            base_similarity,
-            hit,
-        ))
+    if set(detected_types).intersection(reference_types):
+        return detected_types
 
-    scored_hits.sort(key=lambda item: (item[0], item[1]), reverse=True)
-    selected_hit = scored_hits[0][2]
+    icon_predictions = (type_combo_details or {}).get("iconPredictions", [])
+    validated_types = []
+    for icon_prediction in icon_predictions:
+        for candidate in icon_prediction.get("topCandidates", []):
+            candidate_type = normalize_type_name(candidate.get("type"))
+            if candidate_type in reference_types and candidate_type not in validated_types:
+                validated_types.append(candidate_type)
+                break
 
-    if selected_hit is pokemon_hits[0]:
-        return selected_hit, "dinov2-faiss-pokemon"
+    if validated_types:
+        return validated_types[: len(reference_types)]
 
-    return selected_hit, "type-guided-dinov2-faiss-pokemon"
+    return reference_types
+
+
+def select_pokemon_hit(pokemon_hits):
+    if not pokemon_hits:
+        return None, ""
+    return pokemon_hits[0], "dinov2-faiss-pokemon"
 
 
 @lru_cache(maxsize=1)
@@ -229,15 +241,12 @@ class Dinov2OpponentDetectionService:
             slot_image = card_crop["image"]
             object_layer = slot_object_detection_service.detect_slot_objects(slot_image)
             pokemon_crop = self.extract_pokemon_crop(slot_image, object_layer)
-            type_crop_info = self.extract_type_crop(slot_image, object_layer)
             slot_records.append({
                 "cardCrop": card_crop,
                 "slotImage": slot_image,
                 "objectLayer": object_layer,
                 "pokemonCrop": pokemon_crop,
-                "typeCropInfo": type_crop_info,
                 "pokemonHits": [],
-                "typeHits": [],
             })
 
         self.add_batched_hits(slot_records)
@@ -266,51 +275,22 @@ class Dinov2OpponentDetectionService:
             for (slot_index, _image), hits in zip(pokemon_inputs, pokemon_hits):
                 slot_records[slot_index]["pokemonHits"] = hits
 
-        if not self.classify_type_evidence or self.type_index is None:
-            return
-
-        type_inputs = [
-            (index, cv_to_pil(slot_record["typeCropInfo"].get("image")))
-            for index, slot_record in enumerate(slot_records)
-            if not cv_service.is_empty_image(slot_record["typeCropInfo"].get("image"))
-        ]
-        if type_inputs:
-            type_hits = self.type_index.search_many(
-                [image for _index, image in type_inputs],
-                top_k=5,
-            )
-            for (slot_index, _image), hits in zip(type_inputs, type_hits):
-                slot_records[slot_index]["typeHits"] = hits
-
     def build_slot_result(self, image_path, slot_record, save_debug=True, save_review_crops=True):
         card_crop = slot_record["cardCrop"]
         slot_image = slot_record["slotImage"]
         object_layer = slot_record["objectLayer"]
         pokemon_crop = slot_record["pokemonCrop"]
-        type_crop_info = slot_record["typeCropInfo"]
-        type_crop = type_crop_info.get("image")
         position = card_crop["position"]
 
         pokemon_hits = slot_record["pokemonHits"]
-        type_hits = slot_record["typeHits"]
-
-        type_result = cv_service.classify_type_crop(type_crop_info)
-        type_label = type_result.get("typeKey") or best_label(type_hits)
-        detected_types = type_result.get("types") or split_type_combo_label(type_label)
-        selected_pokemon_hit, match_reason = select_type_guided_pokemon_hit(
-            pokemon_hits,
-            detected_types,
-        )
+        selected_pokemon_hit, match_reason = select_pokemon_hit(pokemon_hits)
         pokemon_name = (
             selected_pokemon_hit.get("label", "unknown")
             if selected_pokemon_hit
             else "unknown"
         )
-        reference_types = get_reference_types(pokemon_name)
-        type_mismatch = build_type_mismatch(reference_types, detected_types)
 
         debug_pokemon_crop_path = ""
-        debug_type_icon_crop_path = ""
         review_paths = {}
 
         if save_debug:
@@ -319,11 +299,6 @@ class Dinov2OpponentDetectionService:
                 position,
                 pokemon_crop,
             )
-            debug_type_icon_crop_path = self.write_debug_type_crop(
-                image_path,
-                position,
-                type_crop,
-            )
 
         if save_review_crops:
             review_paths = self.write_review_crops(
@@ -331,9 +306,7 @@ class Dinov2OpponentDetectionService:
                 position=position,
                 slot_image=slot_image,
                 pokemon_crop=pokemon_crop,
-                type_crop=type_crop,
                 pokemon_prediction=pokemon_name,
-                type_prediction=type_label,
             )
 
         return {
@@ -359,29 +332,10 @@ class Dinov2OpponentDetectionService:
                     and float(selected_pokemon_hit.get("similarity", 0) or 0) < 0.68
                 )
             ),
-            "types": reference_types,
-            "referenceTypes": reference_types,
-            "detectedTypes": detected_types,
-            "trustedDetectedTypes": reference_types,
-            "typeMismatchWarning": type_mismatch,
-            "typeGuardReason": "type-icon-disagrees-with-pokemon-reference" if type_mismatch else None,
-            "typeEvidence": {
-                "prediction": type_label,
-                "types": detected_types,
-                "similarity": type_result.get("score", best_similarity(type_hits)),
-                "confidence": type_result.get("score", best_confidence(type_hits)),
-                "topCandidates": format_top_hits(type_hits),
-                "cropSource": type_crop_info.get("cropSource", ""),
-                "typeCount": type_crop_info.get("typeCount"),
-                "classificationSkipped": False,
-                "predictionSource": type_result.get("predictionSource", ""),
-            },
             "pokemonTopCandidates": format_top_hits(pokemon_hits),
-            "typeTopCandidates": format_top_hits(type_hits),
             "box": card_crop.get("box"),
             "debugCropPath": card_crop.get("debugCropPath", ""),
             "debugPokemonCropPath": debug_pokemon_crop_path,
-            "debugTypeIconCropPath": debug_type_icon_crop_path,
             "reviewCropPaths": review_paths,
             "referenceImage": selected_pokemon_hit.get("path", "") if selected_pokemon_hit else "",
             "objectLayerSource": object_layer.get("source", "heuristic"),
@@ -432,9 +386,7 @@ class Dinov2OpponentDetectionService:
         position,
         slot_image,
         pokemon_crop,
-        type_crop,
         pokemon_prediction,
-        type_prediction,
     ):
         image_stem = Path(image_path).stem
         return {
@@ -453,14 +405,6 @@ class Dinov2OpponentDetectionService:
                 position,
                 pokemon_prediction,
                 pokemon_crop,
-            ),
-            "typeCombo": write_review_crop(
-                UNSORTED_TYPE_COMBO_DIR,
-                "type_combo",
-                image_stem,
-                position,
-                type_prediction,
-                type_crop,
             ),
         }
 

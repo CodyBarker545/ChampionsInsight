@@ -64,13 +64,9 @@ function TeamForm({
               </span>
               <span className="slot-copy">
                 <span className="slot-name">{member.name || `Pokemon ${index + 1}`}</span>
-                <span className="slot-subtitle">
-                  {hasPokemon
-                    ? selectedIndex === index
-                      ? "Active build"
-                      : "Ready slot"
-                    : "Click to build"}
-                </span>
+                {!hasPokemon ? (
+                  <span className="slot-subtitle">Click to build</span>
+                ) : null}
               </span>
               </button>
             </section>

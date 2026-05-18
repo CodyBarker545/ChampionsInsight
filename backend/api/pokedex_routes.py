@@ -1,6 +1,6 @@
 """Routes for the Pokedex browser."""
 
-from flask import Blueprint
+from flask import Blueprint, jsonify
 
 from api.common import route_deps
 
@@ -29,3 +29,32 @@ def get_pokedex_entry(name):
         }, 404
 
     return pokemon
+
+
+@pokedex_bp.get("/pokedex/recommendations/<name>")
+def get_pokedex_recommendations(name):
+    result = route_deps().get_pokemon_recommended_teams_by_name(name)
+
+    if result is None:
+        return {
+            "error": "Pokemon not found",
+            "name": name,
+        }, 404
+
+    return jsonify(result)
+
+
+@pokedex_bp.get("/pokedex/meta/<name>")
+def get_pokedex_meta(name):
+    try:
+        return jsonify(route_deps().get_pokemon_meta_intelligence(name))
+    except ValueError:
+        return jsonify({
+            "error": "Pokemon not found",
+            "name": name,
+        }), 404
+    except FileNotFoundError as error:
+        return jsonify({
+            "error": str(error),
+            "name": name,
+        }), 500
