@@ -87,3 +87,45 @@ backend/data/cv/indexes/
 # Generated CV indexes
 backend/data/cv/indexes/type_embeddings/
 *.npy
+
+# Python virtual environments
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# ChampionsInsight generated CV indexes and embeddings
+backend/data/cv/indexes/
+backend/data/cv/debug/
+backend/cv/debug/
+*.npy
+*.npz
+*.faiss
+*.index
+
+# Large generated data/uploads
+backend/data/uploads.zip
+backend/uploads/
+backend/data/uploads/
+backend/data/training_dataset/
+
+# Large generated Pokemon lookup files
+backend/data/pokemon/pokemon_lookup_by_form_name.json
+backend/data/pokemon/pokemon_battle_data.json
+
+# Model files
+*.pkl
+*.joblib
+*.pt
+*.pth
+*.onnx
+*.h5
+*.keras
+
+# Local environment
+.venv/
+
+# Generated embedding indexes
+backend/data/cv/indexes/
+*.npy
+*.faiss
