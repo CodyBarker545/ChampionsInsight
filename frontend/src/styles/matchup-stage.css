@@ -148,6 +148,32 @@
   backdrop-filter: blur(8px);
 }
 
+.ability-effect-list {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  z-index: 1;
+  display: grid;
+  gap: 6px;
+  transform: translateY(-50%);
+}
+
+.ability-effect-list .effect-toggle {
+  min-height: 28px;
+  justify-content: flex-start;
+  white-space: nowrap;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.07), transparent),
+    color-mix(in srgb, var(--ci-surface) 84%, transparent);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(8px);
+}
+
+.ability-effect-list .effect-toggle input {
+  width: 12px;
+  min-height: 12px;
+}
+
 .status-toggle {
   min-height: 24px;
   display: inline-flex;

@@ -47,14 +47,29 @@ const defaultFieldEffects = {
   weather: "",
   terrain: "",
   trickRoom: false,
+  gravity: false,
+  magicRoom: false,
+  wonderRoom: false,
   userTailwind: false,
   opponentTailwind: false,
   userReflect: false,
   userLightScreen: false,
   userAuroraVeil: false,
+  userHelpingHand: false,
+  userFriendGuard: false,
+  userBattery: false,
+  userPowerSpot: false,
+  userFlowerGift: false,
+  userSteelySpirit: false,
   opponentReflect: false,
   opponentLightScreen: false,
   opponentAuroraVeil: false,
+  opponentHelpingHand: false,
+  opponentFriendGuard: false,
+  opponentBattery: false,
+  opponentPowerSpot: false,
+  opponentFlowerGift: false,
+  opponentSteelySpirit: false,
 };
 
 const weatherOptions = [
@@ -206,14 +221,55 @@ function applyLocalStatusSpeed(speed, status = "", ability = "") {
   return speed;
 }
 
-function toCalculatorPokemon(pokemon, boosts = {}, status = "") {
+const fullHpAbilities = new Set(["multiscale", "shadow shield"]);
+const activeAbilityLabels = {
+  "flash fire": "Flash Fire active",
+  stakeout: "Stakeout active",
+  plus: "Plus active",
+  minus: "Minus active",
+};
+
+function normalizeAbilityName(ability = "") {
+  return String(ability).trim().toLowerCase();
+}
+
+function getAbilityEffectOptions(pokemon) {
+  const normalizedAbility = normalizeAbilityName(pokemon?.ability);
+  const options = [];
+
+  if (fullHpAbilities.has(normalizedAbility)) {
+    options.push({
+      key: "fullHp",
+      label: `${pokemon.ability} active`,
+    });
+  }
+
+  if (activeAbilityLabels[normalizedAbility]) {
+    options.push({
+      key: "abilityOn",
+      label: activeAbilityLabels[normalizedAbility],
+    });
+  }
+
+  return options;
+}
+
+function toCalculatorPokemon(pokemon, boosts = {}, status = "", abilityEffects = {}) {
+  const maxHp = Number(pokemon?.stats?.hp ?? 1);
+  const usesFullHpGate = fullHpAbilities.has(normalizeAbilityName(pokemon?.ability));
+
   return {
     name: pokemon?.name || "Unknown Pokemon",
     level: 50,
     types: pokemon?.types ?? [],
     stats: toCalculatorStats(pokemon?.stats),
-    maxHp: Number(pokemon?.stats?.hp ?? 1),
+    maxHp,
+    currentHp:
+      usesFullHpGate && abilityEffects.fullHp === false
+        ? Math.max(1, maxHp - 1)
+        : maxHp,
     ability: pokemon?.ability ?? "",
+    abilityOn: abilityEffects.abilityOn || undefined,
     item: pokemon?.item ?? "",
     status,
     nature: pokemon?.nature ?? "",
@@ -222,7 +278,11 @@ function toCalculatorPokemon(pokemon, boosts = {}, status = "") {
   };
 }
 
-function formatSpeedText(userPokemon, opponentPokemon, userSpeed, opponentSpeed) {
+function applyTailwind(speed, active) {
+  return active ? speed * 2 : speed;
+}
+
+function formatSpeedText(userPokemon, opponentPokemon, userSpeed, opponentSpeed, trickRoom = false) {
   const userName = userPokemon?.name || "Your Pokemon";
   const opponentName = opponentPokemon?.name || "Opponent Pokemon";
 
@@ -234,7 +294,9 @@ function formatSpeedText(userPokemon, opponentPokemon, userSpeed, opponentSpeed)
     return `${userName} speed ties ${opponentName}`;
   }
 
-  return userSpeed > opponentSpeed
+  const userMovesFirst = trickRoom ? userSpeed < opponentSpeed : userSpeed > opponentSpeed;
+
+  return userMovesFirst
     ? `${userName} is faster than ${opponentName}`
     : `${userName} is slower than ${opponentName}`;
 }
@@ -322,6 +384,12 @@ function buildSideEffects(fieldEffects, prefix) {
     reflect: fieldEffects[`${prefix}Reflect`],
     lightScreen: fieldEffects[`${prefix}LightScreen`],
     auroraVeil: fieldEffects[`${prefix}AuroraVeil`],
+    helpingHand: fieldEffects[`${prefix}HelpingHand`],
+    friendGuard: fieldEffects[`${prefix}FriendGuard`],
+    battery: fieldEffects[`${prefix}Battery`],
+    powerSpot: fieldEffects[`${prefix}PowerSpot`],
+    flowerGift: fieldEffects[`${prefix}FlowerGift`],
+    steelySpirit: fieldEffects[`${prefix}SteelySpirit`],
   };
 }
 
@@ -334,6 +402,9 @@ function buildCalculatorField(fieldEffects, selectedMoveSource) {
     weather: fieldEffects.weather,
     terrain: fieldEffects.terrain,
     trickRoom: fieldEffects.trickRoom,
+    gravity: fieldEffects.gravity,
+    magicRoom: fieldEffects.magicRoom,
+    wonderRoom: fieldEffects.wonderRoom,
     attackerSide: buildSideEffects(fieldEffects, attackerPrefix),
     defenderSide: buildSideEffects(fieldEffects, defenderPrefix),
   };
@@ -434,16 +505,18 @@ function MatchupStage({
   const [opponentStatus, setOpponentStatus] = useState("");
   const [userBoosts, setUserBoosts] = useState(emptyBoosts);
   const [opponentBoosts, setOpponentBoosts] = useState(emptyBoosts);
+  const [userAbilityEffects, setUserAbilityEffects] = useState({});
+  const [opponentAbilityEffects, setOpponentAbilityEffects] = useState({});
 
   const userSpeed = Number(userPokemon?.stats?.speed ?? 0);
   const opponentSpeed = Number(opponentPokemon?.stats?.speed ?? 0);
   const displayedUserSpeed = applyLocalStatusSpeed(
-    applyStage(userSpeed, userBoosts.speed),
+    applyTailwind(applyStage(userSpeed, userBoosts.speed), fieldEffects.userTailwind),
     userStatus,
     userPokemon?.ability
   );
   const displayedOpponentSpeed = applyLocalStatusSpeed(
-    applyStage(opponentSpeed, opponentBoosts.speed),
+    applyTailwind(applyStage(opponentSpeed, opponentBoosts.speed), fieldEffects.opponentTailwind),
     opponentStatus,
     opponentPokemon?.ability
   );
@@ -458,13 +531,23 @@ function MatchupStage({
     selectedMoveSource === "opponent" ? opponentStatus : userStatus;
   const activeDefenderStatus =
     selectedMoveSource === "opponent" ? userStatus : opponentStatus;
+  const activeAttackerAbilityEffects =
+    selectedMoveSource === "opponent" ? opponentAbilityEffects : userAbilityEffects;
+  const activeDefenderAbilityEffects =
+    selectedMoveSource === "opponent" ? userAbilityEffects : opponentAbilityEffects;
   const calculatorField = useMemo(
     () => buildCalculatorField(fieldEffects, selectedMoveSource),
     [fieldEffects, selectedMoveSource]
   );
   const speedText =
     damageResult?.speed?.result ??
-    formatSpeedText(userPokemon, opponentPokemon, displayedUserSpeed, displayedOpponentSpeed);
+    formatSpeedText(
+      userPokemon,
+      opponentPokemon,
+      displayedUserSpeed,
+      displayedOpponentSpeed,
+      fieldEffects.trickRoom
+    );
   const userSpeedStatus = getUserSpeedStatus(speedText, userPokemon, opponentPokemon);
 
   const userSpriteSource = getSpriteSource(userPokemon);
@@ -538,12 +621,14 @@ function MatchupStage({
       attacker: toCalculatorPokemon(
         activeAttacker,
         activeAttackerBoosts,
-        activeAttackerStatus
+        activeAttackerStatus,
+        activeAttackerAbilityEffects
       ),
       defender: toCalculatorPokemon(
         activeDefender,
         activeDefenderBoosts,
-        activeDefenderStatus
+        activeDefenderStatus,
+        activeDefenderAbilityEffects
       ),
       move: { name: selectedMove },
       field: calculatorField,
@@ -574,9 +659,11 @@ function MatchupStage({
     activeAttacker,
     activeAttackerBoosts,
     activeAttackerStatus,
+    activeAttackerAbilityEffects,
     activeDefender,
     activeDefenderBoosts,
     activeDefenderStatus,
+    activeDefenderAbilityEffects,
     calculatorField,
     selectedMove,
   ]);
@@ -588,12 +675,22 @@ function MatchupStage({
   useEffect(() => {
     setUserBoosts(emptyBoosts());
     setUserStatus("");
+    setUserAbilityEffects({});
   }, [userPokemon?.name]);
 
   useEffect(() => {
     setOpponentBoosts(emptyBoosts());
     setOpponentStatus("");
+    setOpponentAbilityEffects({});
   }, [opponentPokemon?.name]);
+
+  useEffect(() => {
+    setUserAbilityEffects({});
+  }, [userPokemon?.ability]);
+
+  useEffect(() => {
+    setOpponentAbilityEffects({});
+  }, [opponentPokemon?.ability]);
 
   function updateFieldEffect(key, value) {
     setFieldEffects((currentEffects) => ({
@@ -628,6 +725,16 @@ function MatchupStage({
             label="Your Pokemon status"
             selectedStatus={userStatus}
             onToggle={(status) => toggleStatus("user", status)}
+          />
+          <AbilityEffectControls
+            effects={userAbilityEffects}
+            pokemon={userPokemon}
+            onChange={(key, value) =>
+              setUserAbilityEffects((currentEffects) => ({
+                ...currentEffects,
+                [key]: value,
+              }))
+            }
           />
         </div>
 
@@ -720,6 +827,9 @@ function MatchupStage({
               </select>
 
               <EffectToggle label="Trick Room" checked={fieldEffects.trickRoom} onChange={(value) => updateFieldEffect("trickRoom", value)} />
+              <EffectToggle label="Gravity" checked={fieldEffects.gravity} onChange={(value) => updateFieldEffect("gravity", value)} />
+              <EffectToggle label="Magic Room" checked={fieldEffects.magicRoom} onChange={(value) => updateFieldEffect("magicRoom", value)} />
+              <EffectToggle label="Wonder Room" checked={fieldEffects.wonderRoom} onChange={(value) => updateFieldEffect("wonderRoom", value)} />
             </div>
 
             <div className="field-side-grid">
@@ -729,6 +839,12 @@ function MatchupStage({
                 <EffectToggle label="Reflect" checked={fieldEffects.userReflect} onChange={(value) => updateFieldEffect("userReflect", value)} />
                 <EffectToggle label="Light Screen" checked={fieldEffects.userLightScreen} onChange={(value) => updateFieldEffect("userLightScreen", value)} />
                 <EffectToggle label="Aurora Veil" checked={fieldEffects.userAuroraVeil} onChange={(value) => updateFieldEffect("userAuroraVeil", value)} />
+                <EffectToggle label="Helping Hand" checked={fieldEffects.userHelpingHand} onChange={(value) => updateFieldEffect("userHelpingHand", value)} />
+                <EffectToggle label="Friend Guard" checked={fieldEffects.userFriendGuard} onChange={(value) => updateFieldEffect("userFriendGuard", value)} />
+                <EffectToggle label="Battery" checked={fieldEffects.userBattery} onChange={(value) => updateFieldEffect("userBattery", value)} />
+                <EffectToggle label="Power Spot" checked={fieldEffects.userPowerSpot} onChange={(value) => updateFieldEffect("userPowerSpot", value)} />
+                <EffectToggle label="Flower Gift" checked={fieldEffects.userFlowerGift} onChange={(value) => updateFieldEffect("userFlowerGift", value)} />
+                <EffectToggle label="Steely Spirit" checked={fieldEffects.userSteelySpirit} onChange={(value) => updateFieldEffect("userSteelySpirit", value)} />
               </div>
 
               <div className="field-side-card">
@@ -737,6 +853,12 @@ function MatchupStage({
                 <EffectToggle label="Reflect" checked={fieldEffects.opponentReflect} onChange={(value) => updateFieldEffect("opponentReflect", value)} />
                 <EffectToggle label="Light Screen" checked={fieldEffects.opponentLightScreen} onChange={(value) => updateFieldEffect("opponentLightScreen", value)} />
                 <EffectToggle label="Aurora Veil" checked={fieldEffects.opponentAuroraVeil} onChange={(value) => updateFieldEffect("opponentAuroraVeil", value)} />
+                <EffectToggle label="Helping Hand" checked={fieldEffects.opponentHelpingHand} onChange={(value) => updateFieldEffect("opponentHelpingHand", value)} />
+                <EffectToggle label="Friend Guard" checked={fieldEffects.opponentFriendGuard} onChange={(value) => updateFieldEffect("opponentFriendGuard", value)} />
+                <EffectToggle label="Battery" checked={fieldEffects.opponentBattery} onChange={(value) => updateFieldEffect("opponentBattery", value)} />
+                <EffectToggle label="Power Spot" checked={fieldEffects.opponentPowerSpot} onChange={(value) => updateFieldEffect("opponentPowerSpot", value)} />
+                <EffectToggle label="Flower Gift" checked={fieldEffects.opponentFlowerGift} onChange={(value) => updateFieldEffect("opponentFlowerGift", value)} />
+                <EffectToggle label="Steely Spirit" checked={fieldEffects.opponentSteelySpirit} onChange={(value) => updateFieldEffect("opponentSteelySpirit", value)} />
               </div>
             </div>
           </section>
@@ -763,6 +885,16 @@ function MatchupStage({
             label="Opponent Pokemon status"
             selectedStatus={opponentStatus}
             onToggle={(status) => toggleStatus("opponent", status)}
+          />
+          <AbilityEffectControls
+            effects={opponentAbilityEffects}
+            pokemon={opponentPokemon}
+            onChange={(key, value) =>
+              setOpponentAbilityEffects((currentEffects) => ({
+                ...currentEffects,
+                [key]: value,
+              }))
+            }
           />
         </div>
 
@@ -969,6 +1101,27 @@ function EffectToggle({ checked, label, onChange }) {
       />
       <span>{label}</span>
     </label>
+  );
+}
+
+function AbilityEffectControls({ effects, onChange, pokemon }) {
+  const options = getAbilityEffectOptions(pokemon);
+
+  if (!options.length) {
+    return null;
+  }
+
+  return (
+    <div className="ability-effect-list" aria-label={`${pokemon.name} ability effects`}>
+      {options.map((option) => (
+        <EffectToggle
+          key={option.key}
+          label={option.label}
+          checked={effects[option.key] ?? true}
+          onChange={(value) => onChange(option.key, value)}
+        />
+      ))}
+    </div>
   );
 }
 

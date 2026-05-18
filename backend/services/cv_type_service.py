@@ -49,6 +49,31 @@ class PokemonTypeDetectionService:
             type_icon_crops=type_icon_crops,
         )
 
+        # When the object detector already found one or two individual type boxes,
+        # let the single-type embedding index speak first. This is the new live path:
+        # detect boxes -> classify each box -> use those types to guide Pokemon ID.
+        if self.type_embedding_available and self.type_embedding_service and type_icon_crops:
+            embedding_results = self.type_embedding_service.classify_slot_types(
+                slot_image,
+                type_icon_crops=type_icon_crops,
+            )
+            embedding_selected = embedding_results.get("selected", [])
+            embedding_details = embedding_results.get("embeddingDetails", [])
+
+            if embedding_selected:
+                return {
+                    **cv_results,
+                    **select_strongest_single_type_result(
+                        embedding_selected,
+                        embedding_details,
+                        fallback_source="type_embedding_object_layer",
+                    ),
+                    "allSelectedTypes": embedding_selected,
+                    "embeddingSelected": embedding_selected,
+                    "embeddingDetails": embedding_details,
+                    "cvSelected": cv_results.get("selected", []),
+                }
+
         combo_details = cv_results.get("typeComboDetails", {})
         if (
             cv_results.get("selected")

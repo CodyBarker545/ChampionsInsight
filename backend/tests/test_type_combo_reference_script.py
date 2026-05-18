@@ -3,7 +3,7 @@
 import csv
 import json
 
-from scripts.build_type_combo_references import (
+from scripts.data_build.build_type_combo_references import (
     DEFAULT_BACKGROUND_BGR,
     build_type_combo_references,
     replace_border_white_with_background,

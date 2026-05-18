@@ -36,3 +36,13 @@ The API runs at `https://localhost:5000`.
 - pruned Pokemon embedding metadata
 
 Use `--dry-run` to print the exact steps without running them.
+
+## Script Layout
+
+- `data_build/`: reference generation and embedding/index builders
+- `cv_datasets/`: YOLO dataset creation and cleanup
+- `cv_training/`: model training entrypoints
+- `cv_runtime/`: inference/debug runners
+- `review_tools/`: upload intake, crop harvesting, and clustering helpers
+- `synthetic_data/`: synthetic image generation and audits
+- `utilities/`: one-off inspection helpers

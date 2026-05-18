@@ -79,3 +79,11 @@ frontend/certs/
 frontend/*.log
 frontend/server*.log
 frontend/vite-dev*.log
+
+# Generated CV indexes
+backend/data/cv/indexes/
+*.npy
+
+# Generated CV indexes
+backend/data/cv/indexes/type_embeddings/
+*.npy

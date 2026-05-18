@@ -23,6 +23,7 @@ from services.cv_service import (
     select_type_confirmed_reference,
     should_accept_type_icon_crop,
 )
+from services.slot_object_detection_service import detect_slot_objects
 from services.cv_card_service import OpponentCardService
 from services.cv_detection_service import get_trusted_detected_types
 from services.cv_spirit_service import PokemonSpiritDetectionService
@@ -170,6 +171,49 @@ def test_get_trusted_detected_types_only_trusts_confident_combo():
     assert get_trusted_detected_types(confident_combo) == ["grass", "fire"]
 
 
+# Tests that strong object-layer type embeddings can now guide Pokemon matching.
+def test_get_trusted_detected_types_accepts_confident_object_layer_embeddings():
+    confident_embedding = {
+        "selected": ["water", "flying"],
+        "typePredictionSource": "type_embedding_object_layer_dual",
+        "embeddingDetails": [
+            {
+                "type": "water",
+                "confidence": 0.95,
+                "hasSymbol": True,
+                "cropAccepted": True,
+            },
+            {
+                "type": "flying",
+                "confidence": 0.91,
+                "hasSymbol": True,
+                "cropAccepted": True,
+            },
+        ],
+    }
+    weak_embedding = {
+        "selected": ["water", "flying"],
+        "typePredictionSource": "type_embedding_object_layer_dual",
+        "embeddingDetails": [
+            {
+                "type": "water",
+                "confidence": 0.95,
+                "hasSymbol": True,
+                "cropAccepted": True,
+            },
+            {
+                "type": "flying",
+                "confidence": 0.72,
+                "hasSymbol": True,
+                "cropAccepted": True,
+            },
+        ],
+    }
+
+    assert get_trusted_detected_types(confident_embedding) == ["water", "flying"]
+    assert get_trusted_detected_types(weak_embedding) == []
+
+
 # Tests that red-card-heavy fallback crops are not treated as real type icons.
 def test_should_accept_type_icon_crop_rejects_red_card_background():
     red_crop = np.full((80, 80, 3), (0, 0, 190), dtype=np.uint8)
@@ -237,7 +281,7 @@ def test_detect_slot_object_layer_selects_role_based_objects():
     slot[12:78, 318:384] = (20, 180, 90)
     slot[34:54, 341:361] = (245, 245, 245)
 
-    object_layer = detect_slot_object_layer(slot)
+    object_layer = detect_slot_objects(slot)
     selected_objects = detect_slot_objects_from_layer(object_layer)
 
     assert object_layer["pokemon_sprite"]["role"] == "pokemon_sprite"
@@ -259,7 +303,7 @@ def test_detect_slot_object_layer_keeps_red_type_icon_fallback():
     slot[23:91, 318:383] = (235, 210, 40)
     slot[38:70, 342:360] = (245, 245, 245)
 
-    object_layer = detect_slot_object_layer(slot)
+    object_layer = detect_slot_objects(slot)
     type_icon_1 = object_layer["type_icon_1"]
     type_icon_2 = object_layer["type_icon_2"]
 

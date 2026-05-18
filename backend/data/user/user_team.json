@@ -26,17 +26,17 @@
         "Flying"
       ],
       "item": "",
-      "ability": "Inner Focus",
+      "ability": "Multiscale",
       "abilities": [
         "Inner Focus",
         "Multiscale"
       ],
       "nature": "hardy",
       "stats": {
-        "hp": 198,
+        "hp": 166,
         "attack": 154,
-        "defense": 117,
-        "specialAttack": 152,
+        "defense": 115,
+        "specialAttack": 120,
         "specialDefense": 120,
         "speed": 100
       },
@@ -57,10 +57,10 @@
         "speed": 100
       },
       "statPoints": {
-        "hp": 32,
+        "hp": 0,
         "attack": 0,
-        "defense": 2,
-        "specialAttack": 32,
+        "defense": 0,
+        "specialAttack": 0,
         "specialDefense": 0,
         "speed": 0
       },
@@ -209,36 +209,16 @@
         "Snowscape",
         "Chilling Water",
         "Dragon Cheer"
-      ]
+      ],
+      "editorOptionsHydrated": true
     },
     {
-      "id": "user-2-Archaludon",
-      "name": "Archaludon",
-      "species": "",
-      "form": "",
-      "formOptions": [],
-      "image": "/api/pokemon/sprite/normal/Menu_CP_1018.png",
-      "spriteUrl": "",
-      "types": [
-        "Steel",
-        "Dragon"
-      ],
-      "item": "",
-      "ability": "Stalwart",
       "abilities": [
         "Stalwart",
         "Stamina",
         "Sturdy"
       ],
-      "nature": "modest",
-      "stats": {
-        "hp": 197,
-        "attack": 112,
-        "defense": 151,
-        "specialAttack": 165,
-        "specialDefense": 110,
-        "speed": 108
-      },
+      "ability": "Stalwart",
       "baseStats": {
         "attack": 105,
         "defense": 130,
@@ -255,20 +235,17 @@
         "specialDefense": 85,
         "speed": 105
       },
-      "statPoints": {
-        "hp": 32,
-        "attack": 0,
-        "defense": 1,
-        "specialAttack": 5,
-        "specialDefense": 25,
-        "speed": 3
-      },
-      "moves": [
-        "Electro Shot",
-        "Flash Cannon",
-        "Protect",
-        "Dragon Pulse"
+      "form": "Archaludon",
+      "formOptions": [
+        {
+          "isDefault": true,
+          "label": "Archaludon",
+          "name": "Archaludon"
+        }
       ],
+      "id": "user-2-Archaludon",
+      "image": "/api/pokemon/sprite/normal/Menu_CP_1018.png",
+      "item": "",
       "moveOptions": [
         "Swords Dance",
         "Body Slam",
@@ -328,35 +305,52 @@
         "Tera Blast",
         "Electro Shot",
         "Hard Press",
-        "Dragon Cheer",
-        "Draco Meteo",
-        "Draco Mete",
-        "Draco Met",
-        "Draco Me",
-        "Draco M",
-        "Draco ",
-        "Draco",
-        "Drac",
-        "Dra",
-        "Dr",
-        "D",
-        "d",
-        "dr",
-        "dra",
-        "drag",
-        "drago",
-        "dragon",
-        "dragon ",
-        "dragon p",
-        "dragon pl"
-      ]
+        "Dragon Cheer"
+      ],
+      "moves": [
+        "Electro Shot",
+        "Flash Cannon",
+        "Protect",
+        "Dragon Pulse"
+      ],
+      "name": "Archaludon",
+      "nature": "modest",
+      "species": "Archaludon",
+      "spriteUrl": "",
+      "statPoints": {
+        "hp": 32,
+        "attack": 0,
+        "defense": 1,
+        "specialAttack": 5,
+        "specialDefense": 25,
+        "speed": 3
+      },
+      "stats": {
+        "hp": 197,
+        "attack": 112,
+        "defense": 151,
+        "specialAttack": 165,
+        "specialDefense": 110,
+        "speed": 108
+      },
+      "types": [
+        "Steel",
+        "Dragon"
+      ],
+      "editorOptionsHydrated": true
     },
     {
       "id": "user-3-Pelipper",
       "name": "Pelipper",
-      "species": "",
-      "form": "",
-      "formOptions": [],
+      "species": "Pelipper",
+      "form": "Pelipper",
+      "formOptions": [
+        {
+          "isDefault": true,
+          "label": "Pelipper",
+          "name": "Pelipper"
+        }
+      ],
       "image": "/api/pokemon/sprite/normal/Menu_CP_0279.png",
       "spriteUrl": "",
       "types": [
@@ -372,7 +366,7 @@
       ],
       "nature": "modest",
       "stats": {
-        "hp": 137,
+        "hp": 135,
         "attack": 63,
         "defense": 120,
         "specialAttack": 161,
@@ -380,23 +374,23 @@
         "speed": 117
       },
       "baseStats": {
+        "hp": 60,
         "attack": 50,
         "defense": 100,
-        "hp": 60,
         "specialAttack": 95,
         "specialDefense": 70,
         "speed": 65
       },
       "finalStats": {
+        "hp": 135,
         "attack": 63,
         "defense": 120,
-        "hp": 135,
         "specialAttack": 126,
         "specialDefense": 90,
         "speed": 85
       },
       "statPoints": {
-        "hp": 2,
+        "hp": 0,
         "attack": 0,
         "defense": 0,
         "specialAttack": 32,
@@ -497,36 +491,16 @@
         "Tera Blast",
         "Snowscape",
         "Chilling Water"
-      ]
+      ],
+      "editorOptionsHydrated": true
     },
     {
-      "id": "user-4-Sneasler",
-      "name": "Sneasler",
-      "species": "",
-      "form": "",
-      "formOptions": [],
-      "image": "/api/pokemon/sprite/normal/Menu_CP_0903.png",
-      "spriteUrl": "",
-      "types": [
-        "Fighting",
-        "Poison"
-      ],
-      "item": "",
-      "ability": "Poison Touch",
       "abilities": [
         "Poison Touch",
         "Pressure",
         "Unburden"
       ],
-      "nature": "jolly",
-      "stats": {
-        "hp": 157,
-        "attack": 182,
-        "defense": 80,
-        "specialAttack": 54,
-        "specialDefense": 100,
-        "speed": 189
-      },
+      "ability": "Poison Touch",
       "baseStats": {
         "attack": 130,
         "defense": 60,
@@ -543,20 +517,17 @@
         "specialDefense": 100,
         "speed": 154
       },
-      "statPoints": {
-        "hp": 2,
-        "attack": 32,
-        "defense": 0,
-        "specialAttack": 0,
-        "specialDefense": 0,
-        "speed": 32
-      },
-      "moves": [
-        "Close Combat",
-        "Dire Claw",
-        "Fake Out",
-        "Protect"
+      "form": "Sneasler",
+      "formOptions": [
+        {
+          "isDefault": true,
+          "label": "Sneasler",
+          "name": "Sneasler"
+        }
       ],
+      "id": "user-4-Sneasler",
+      "image": "/api/pokemon/sprite/normal/Menu_CP_0903.png",
+      "item": "",
       "moveOptions": [
         "Fire Punch",
         "Scratch",
@@ -622,48 +593,48 @@
         "Dire Claw",
         "Tera Blast",
         "Trailblaze",
-        "Upper Hand"
-      ]
+        "Upper Hand",
+        "Fake Out"
+      ],
+      "moves": [
+        "Close Combat",
+        "Dire Claw",
+        "Fake Out",
+        "Protect"
+      ],
+      "name": "Sneasler",
+      "nature": "jolly",
+      "species": "Sneasler",
+      "spriteUrl": "",
+      "statPoints": {
+        "hp": 2,
+        "attack": 32,
+        "defense": 0,
+        "specialAttack": 0,
+        "specialDefense": 0,
+        "speed": 32
+      },
+      "stats": {
+        "hp": 157,
+        "attack": 182,
+        "defense": 80,
+        "specialAttack": 54,
+        "specialDefense": 100,
+        "speed": 189
+      },
+      "types": [
+        "Fighting",
+        "Poison"
+      ],
+      "editorOptionsHydrated": true
     },
     {
-      "id": "user-5-Scizor",
-      "name": "Scizor",
-      "species": "Scizor",
-      "form": "Scizor",
-      "formOptions": [
-        {
-          "isDefault": true,
-          "label": "Scizor",
-          "name": "Scizor"
-        },
-        {
-          "isDefault": false,
-          "label": "Scizor Mega",
-          "name": "Scizor Mega"
-        }
-      ],
-      "image": "/api/pokemon/sprite/normal/Menu_CP_0212.png",
-      "spriteUrl": "",
-      "types": [
-        "Bug",
-        "Steel"
-      ],
-      "item": "",
-      "ability": "Light Metal",
       "abilities": [
         "Light Metal",
         "Swarm",
         "Technician"
       ],
-      "nature": "adamant",
-      "stats": {
-        "hp": 177,
-        "attack": 165,
-        "defense": 152,
-        "specialAttack": 67,
-        "specialDefense": 100,
-        "speed": 85
-      },
+      "ability": "Light Metal",
       "baseStats": {
         "attack": 130,
         "defense": 100,
@@ -680,20 +651,22 @@
         "specialDefense": 100,
         "speed": 85
       },
-      "statPoints": {
-        "hp": 32,
-        "attack": 0,
-        "defense": 32,
-        "specialAttack": 0,
-        "specialDefense": 0,
-        "speed": 0
-      },
-      "moves": [
-        "Bullet Punch",
-        "Protect",
-        "Bug Bite",
-        "Swords Dance"
+      "form": "Scizor",
+      "formOptions": [
+        {
+          "isDefault": true,
+          "label": "Scizor",
+          "name": "Scizor"
+        },
+        {
+          "isDefault": false,
+          "label": "Scizor Mega",
+          "name": "Scizor Mega"
+        }
       ],
+      "id": "user-5-Scizor",
+      "image": "/api/pokemon/sprite/normal/Menu_CP_0212.png",
+      "item": "",
       "moveOptions": [
         "Razor Wind",
         "Swords Dance",
@@ -792,36 +765,45 @@
         "Pounce",
         "Trailblaze",
         "Hard Press"
+      ],
+      "moves": [
+        "Bullet Punch",
+        "Protect",
+        "Bug Bite",
+        "Swords Dance"
+      ],
+      "name": "Scizor",
+      "nature": "adamant",
+      "species": "Scizor",
+      "spriteUrl": "",
+      "statPoints": {
+        "hp": 32,
+        "attack": 0,
+        "defense": 32,
+        "specialAttack": 0,
+        "specialDefense": 0,
+        "speed": 0
+      },
+      "stats": {
+        "hp": 177,
+        "attack": 165,
+        "defense": 152,
+        "specialAttack": 67,
+        "specialDefense": 100,
+        "speed": 85
+      },
+      "types": [
+        "Bug",
+        "Steel"
       ]
     },
     {
-      "id": "user-6-Basculegion",
-      "name": "Basculegion",
-      "species": "",
-      "form": "",
-      "formOptions": [],
-      "image": "/api/pokemon/sprite/normal/Menu_CP_0902.png",
-      "spriteUrl": "",
-      "types": [
-        "Water",
-        "Ghost"
-      ],
-      "item": "",
-      "ability": "Swift Swim",
       "abilities": [
         "Swift Swim",
         "Adaptability",
         "Mold Breaker"
       ],
-      "nature": "jolly",
-      "stats": {
-        "hp": 197,
-        "attack": 164,
-        "defense": 85,
-        "specialAttack": 90,
-        "specialDefense": 95,
-        "speed": 143
-      },
+      "ability": "Swift Swim",
       "baseStats": {
         "attack": 112,
         "defense": 65,
@@ -838,20 +820,11 @@
         "specialDefense": 95,
         "speed": 107
       },
-      "statPoints": {
-        "hp": 2,
-        "attack": 32,
-        "defense": 0,
-        "specialAttack": 0,
-        "specialDefense": 0,
-        "speed": 32
-      },
-      "moves": [
-        "Wave Crash",
-        "Flip Turn",
-        "Aqua Jet",
-        "Last Respects"
-      ],
+      "form": "",
+      "formOptions": [],
+      "id": "user-6-Basculegion",
+      "image": "/api/pokemon/sprite/normal/Menu_CP_0902.png",
+      "item": "",
       "moveOptions": [
         "Headbutt",
         "Tackle",
@@ -949,6 +922,36 @@
         "last ",
         "last r",
         "last re"
+      ],
+      "moves": [
+        "Wave Crash",
+        "Flip Turn",
+        "Aqua Jet",
+        "Last Respects"
+      ],
+      "name": "Basculegion",
+      "nature": "jolly",
+      "species": "",
+      "spriteUrl": "",
+      "statPoints": {
+        "hp": 2,
+        "attack": 32,
+        "defense": 0,
+        "specialAttack": 0,
+        "specialDefense": 0,
+        "speed": 32
+      },
+      "stats": {
+        "hp": 197,
+        "attack": 164,
+        "defense": 85,
+        "specialAttack": 90,
+        "specialDefense": 95,
+        "speed": 143
+      },
+      "types": [
+        "Water",
+        "Ghost"
       ]
     }
   ]

@@ -19,5 +19,5 @@ $files = @(
 
 foreach ($file in $files) {
   $stem = [IO.Path]::GetFileNameWithoutExtension($file)
-  .\.venv\Scripts\python.exe .\backend\scripts\run_opponent_detection.py --image "uploads\$file" --output "cv\debug_reports\$stem.json"
+  .\.venv\Scripts\python.exe .\backend\scripts\cv_runtime\run_opponent_detection.py --image "uploads\$file" --output "cv\debug_reports\$stem.json"
 }

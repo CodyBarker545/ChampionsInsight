@@ -2,7 +2,7 @@
 
 from pathlib import Path
 
-from services import cv_service
+from services import cv_service, slot_object_detection_service
 from services.cv_card_service import OpponentCardService
 from services.cv_spirit_service import PokemonSpiritDetectionService
 from services.cv_type_service import PokemonTypeDetectionService
@@ -12,8 +12,23 @@ def get_trusted_detected_types(type_method_results):
     selected_types = type_method_results.get("selected", []) or []
     prediction_source = type_method_results.get("typePredictionSource", "")
     combo_details = type_method_results.get("typeComboDetails", {}) or {}
+    embedding_details = type_method_results.get("embeddingDetails", []) or []
 
     if not selected_types:
+        return []
+
+    if prediction_source.startswith("type_embedding_object_layer"):
+        selected_set = set(selected_types)
+        trusted_embedding_types = {
+            detail.get("type")
+            for detail in embedding_details
+            if detail.get("type") in selected_set
+            and detail.get("cropAccepted", True)
+            and detail.get("hasSymbol")
+            and float(detail.get("confidence", 0) or 0) >= 0.80
+        }
+        if selected_set and selected_set.issubset(trusted_embedding_types):
+            return selected_types
         return []
 
     if prediction_source.startswith("type_combo_template"):
@@ -164,8 +179,8 @@ class OpponentDetectionService:
         slot_image = card_crop["image"]
         position = card_crop["position"]
 
-        object_layer = cv_service.detect_slot_object_layer(slot_image)
-        type_icon_crops = cv_service.type_icon_crops_from_object_layer(object_layer)
+        object_layer = slot_object_detection_service.detect_slot_objects(slot_image)
+        type_icon_crops = slot_object_detection_service.get_type_icon_crops(object_layer)
         type_method_results = self.type_service.detect_slot_types(
             slot_image,
             type_icon_crops=type_icon_crops,

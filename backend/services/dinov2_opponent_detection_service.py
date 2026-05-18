@@ -10,7 +10,7 @@ from uuid import uuid4
 from PIL import Image
 
 from paths import CV_INDEX_DIR, DATA_DIR, OPPONENT_DEBUG_CROP_DIR
-from services import cv_service
+from services import cv_service, slot_object_detection_service
 from services.dinov2_faiss_service import Dinov2FaissIndex
 from services.pokemon_data_service import build_pokemon_summary
 
@@ -227,7 +227,7 @@ class Dinov2OpponentDetectionService:
 
         for card_crop in card_crops:
             slot_image = card_crop["image"]
-            object_layer = cv_service.detect_slot_object_layer(slot_image)
+            object_layer = slot_object_detection_service.detect_slot_objects(slot_image)
             pokemon_crop = self.extract_pokemon_crop(slot_image, object_layer)
             type_crop_info = self.extract_type_crop(slot_image, object_layer)
             slot_records.append({
@@ -398,7 +398,7 @@ class Dinov2OpponentDetectionService:
         return None
 
     def extract_type_crop(self, slot_image, object_layer):
-        type_icon_crops = cv_service.type_icon_crops_from_object_layer(object_layer)
+        type_icon_crops = slot_object_detection_service.get_type_icon_crops(object_layer)
         type_crop_info = cv_service.build_type_combo_candidate_crop(
             slot_image,
             type_icon_crops=type_icon_crops,

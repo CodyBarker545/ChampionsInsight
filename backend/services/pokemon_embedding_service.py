@@ -170,7 +170,7 @@ class PokemonEmbeddingService:
     def load_index(self):
         if not self.embeddings_path.exists() or not self.metadata_path.exists():
             raise PokemonEmbeddingIndexMissing(
-                "Pokémon embedding index was not found. Run: python scripts/build_pokemon_embedding_index.py"
+                "Pokémon embedding index was not found. Run: python scripts/data_build/build_pokemon_embedding_index.py"
             )
 
         embeddings = np.load(self.embeddings_path).astype("float32")

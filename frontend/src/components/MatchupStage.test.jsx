@@ -106,4 +106,57 @@ describe("MatchupStage status controls", () => {
       expect(calculateDamage.mock.calls.at(-1)?.[0].defender.status).toBe("burn");
     });
   });
+
+  it("sends expanded field effects to damage calculation", async () => {
+    const user = userEvent.setup();
+    render(
+      <MatchupStage
+        onOpponentUpdate={vi.fn()}
+        onSelectMove={vi.fn()}
+        onUserFormChange={vi.fn()}
+        opponentPokemon={opponentPokemon}
+        selectedMove="Dragon Claw"
+        selectedMoveSource="user"
+        userPokemon={userPokemon}
+      />
+    );
+
+    await user.click(screen.getAllByLabelText("Helping Hand")[0]);
+    await user.click(screen.getAllByLabelText("Friend Guard")[1]);
+    await user.click(screen.getByLabelText("Gravity"));
+
+    await waitFor(() => {
+      const payload = calculateDamage.mock.calls.at(-1)?.[0];
+      expect(payload.field.gravity).toBe(true);
+      expect(payload.field.attackerSide.helpingHand).toBe(true);
+      expect(payload.field.defenderSide.friendGuard).toBe(true);
+    });
+  });
+
+  it("shows conditional ability toggles and forwards their state", async () => {
+    const user = userEvent.setup();
+    render(
+      <MatchupStage
+        onOpponentUpdate={vi.fn()}
+        onSelectMove={vi.fn()}
+        onUserFormChange={vi.fn()}
+        opponentPokemon={{ ...opponentPokemon, ability: "Multiscale" }}
+        selectedMove="Dragon Claw"
+        selectedMoveSource="user"
+        userPokemon={{ ...userPokemon, ability: "Flash Fire" }}
+      />
+    );
+
+    expect(screen.getByLabelText("Flash Fire active")).toBeChecked();
+    expect(screen.getByLabelText("Multiscale active")).toBeChecked();
+
+    await user.click(screen.getByLabelText("Flash Fire active"));
+    await user.click(screen.getByLabelText("Multiscale active"));
+
+    await waitFor(() => {
+      const payload = calculateDamage.mock.calls.at(-1)?.[0];
+      expect(payload.attacker.abilityOn).toBeUndefined();
+      expect(payload.defender.currentHp).toBe(144);
+    });
+  });
 });

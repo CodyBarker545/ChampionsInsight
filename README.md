@@ -14,7 +14,7 @@ backend/
   api/        Flask route blueprints
   data/       Pokemon, competitive, CV, upload, and user data
   rag/        RAG preprocessing, vector indexing, and answer helpers
-  scripts/    Reproducible data/index build and CV debug scripts
+  scripts/    Purpose-grouped data, CV, review, synthetic, and utility scripts
   services/   Backend business logic
 frontend/
   src/        React app, pages, components, API helpers, styles
@@ -81,10 +81,10 @@ The data builder runs these steps in order:
 
 1. `python -m rag.preprocess`
 2. `python -m rag.build_faiss_index`
-3. `python scripts/build_type_combo_references.py`
-4. `python scripts/build_type_embedding_index.py`
-5. `python scripts/build_pokemon_embedding_index.py`
-6. `python scripts/prune_blocked_embedding_index.py`
+3. `python scripts/data_build/build_type_combo_references.py`
+4. `python scripts/data_build/build_type_embedding_index.py`
+5. `python scripts/data_build/build_pokemon_embedding_index.py`
+6. `python scripts/data_build/prune_blocked_embedding_index.py`
 
 Generated outputs include:
 

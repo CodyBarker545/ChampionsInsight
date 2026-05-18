@@ -7,6 +7,7 @@ from flask import Flask
 from flask_cors import CORS
 
 from api.routes import api_bp
+from pokemon_damage_calculator.backend_process import start_damage_calc_backend
 
 
 logger = logging.getLogger(__name__)
@@ -49,6 +50,7 @@ app = create_app()
 
 
 if __name__ == "__main__":
+    start_damage_calc_backend()
     app.run(
         debug=True,
         host="0.0.0.0",

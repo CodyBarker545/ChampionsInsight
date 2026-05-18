@@ -26,7 +26,9 @@ function TeamForm({
               key={member.id ?? index}
               onClick={() => {
                 onSelectMember(index);
-                onEditMember?.(index);
+                if (!hasPokemon) {
+                  onEditMember?.(index);
+                }
               }}
             >
               {hasPokemon && (
@@ -49,7 +51,9 @@ function TeamForm({
                 onClick={(event) => {
                   event.stopPropagation();
                   onSelectMember(index);
-                  onEditMember?.(index);
+                  if (!hasPokemon) {
+                    onEditMember?.(index);
+                  }
                 }}
               >
               <span className="slot-index" aria-hidden="true">

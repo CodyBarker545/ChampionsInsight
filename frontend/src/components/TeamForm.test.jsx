@@ -28,4 +28,38 @@ describe("TeamForm", () => {
 
     expect(onSelectMember).toHaveBeenCalledWith(0);
   });
+
+  it("does not open the builder when a filled slot is clicked", async () => {
+    const user = userEvent.setup();
+    const onEditMember = vi.fn();
+    render(
+      <TeamForm
+        selectedIndex={0}
+        team={team}
+        onEditMember={onEditMember}
+        onSelectMember={vi.fn()}
+      />,
+    );
+
+    await user.click(screen.getByRole("button", { name: /Aegis/ }));
+
+    expect(onEditMember).not.toHaveBeenCalled();
+  });
+
+  it("opens the builder when an empty slot is clicked", async () => {
+    const user = userEvent.setup();
+    const onEditMember = vi.fn();
+    render(
+      <TeamForm
+        selectedIndex={0}
+        team={[{ id: "empty", name: "", image: "" }]}
+        onEditMember={onEditMember}
+        onSelectMember={vi.fn()}
+      />,
+    );
+
+    await user.click(screen.getByRole("button", { name: /Pokemon 1/ }));
+
+    expect(onEditMember).toHaveBeenCalledWith(0);
+  });
 });

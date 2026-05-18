@@ -25,7 +25,7 @@ from api.pokedex_routes import pokedex_bp
 from api.pokemon_routes import pokemon_bp
 from api.rag_routes import rag_bp
 from api.user_team_routes import user_team_bp
-from pokemon_damage_calculator.calculator import analyze_battle
+from backend.pokemon_damage_calculator.old.calculator import analyze_battle
 from services.cv_detection_service import detect_opponent_team_types
 from services.cv_service import ComputerVisionError
 from services.dinov2_opponent_detection_service import (

@@ -41,7 +41,7 @@ def build_steps(include_debug_report: bool = False) -> list[BuildStep]:
         ),
         BuildStep(
             name="Build type combo reference images",
-            command=[sys.executable, "scripts/build_type_combo_references.py"],
+            command=[sys.executable, "scripts/data_build/build_type_combo_references.py"],
             outputs=[
                 BACKEND_DIR
                 / "data"
@@ -58,7 +58,7 @@ def build_steps(include_debug_report: bool = False) -> list[BuildStep]:
         ),
         BuildStep(
             name="Build type icon embedding index",
-            command=[sys.executable, "scripts/build_type_embedding_index.py"],
+            command=[sys.executable, "scripts/data_build/build_type_embedding_index.py"],
             outputs=[
                 BACKEND_DIR / "data" / "cv" / "indexes" / "type_embeddings" / "embeddings.npy",
                 BACKEND_DIR / "data" / "cv" / "indexes" / "type_embeddings" / "metadata.json",
@@ -67,7 +67,7 @@ def build_steps(include_debug_report: bool = False) -> list[BuildStep]:
         ),
         BuildStep(
             name="Build Pokemon sprite embedding index",
-            command=[sys.executable, "scripts/build_pokemon_embedding_index.py"],
+            command=[sys.executable, "scripts/data_build/build_pokemon_embedding_index.py"],
             outputs=[
                 BACKEND_DIR / "data" / "cv" / "indexes" / "pokemon_embeddings" / "embeddings.npy",
                 BACKEND_DIR / "data" / "cv" / "indexes" / "pokemon_embeddings" / "metadata.json",
@@ -79,7 +79,7 @@ def build_steps(include_debug_report: bool = False) -> list[BuildStep]:
         ),
         BuildStep(
             name="Prune blocked Pokemon embedding references",
-            command=[sys.executable, "scripts/prune_blocked_embedding_index.py"],
+            command=[sys.executable, "scripts/data_build/prune_blocked_embedding_index.py"],
             outputs=[
                 BACKEND_DIR / "data" / "cv" / "indexes" / "pokemon_embeddings" / "embeddings.npy",
                 BACKEND_DIR / "data" / "cv" / "indexes" / "pokemon_embeddings" / "metadata.json",
@@ -92,7 +92,7 @@ def build_steps(include_debug_report: bool = False) -> list[BuildStep]:
         steps.append(
             BuildStep(
                 name="Run uploaded opponent detection debug report",
-                command=[sys.executable, "scripts/test_uploaded_opponent_detections.py"],
+                command=[sys.executable, "scripts/cv_runtime/test_uploaded_opponent_detections.py"],
                 outputs=[
                     BACKEND_DIR
                     / "data"

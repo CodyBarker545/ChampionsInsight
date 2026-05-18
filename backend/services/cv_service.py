@@ -62,7 +62,7 @@ YOLO_SLOT_OBJECT_MODEL_PATH = (
     / "cv"
     / "models"
     / "slot_object_detector"
-    / "yolov8n_slot_objects_gpu"
+    / "yolov8n_slot_objects_padded_clean_types"
     / "weights"
     / "best.pt"
 )

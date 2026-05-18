@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pytest
 
-from pokemon_damage_calculator import analyze_battle
+from backend.pokemon_damage_calculator.old import analyze_battle
 
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
