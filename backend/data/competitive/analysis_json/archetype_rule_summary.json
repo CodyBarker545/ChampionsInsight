@@ -1,0 +1,3337 @@
+{
+  "totalTeamsAnalyzed": 18821,
+  "archetypeCount": 12,
+  "archetypes": [
+    {
+      "archetype": "Balance",
+      "teamCount": 7847,
+      "percentageOfTeams": 41.693,
+      "mostCommonPokemon": [
+        {
+          "name": "Incineroar",
+          "count": 3484
+        },
+        {
+          "name": "Sneasler",
+          "count": 3308
+        },
+        {
+          "name": "Garchomp",
+          "count": 3281
+        },
+        {
+          "name": "Kingambit",
+          "count": 1853
+        },
+        {
+          "name": "Wash Rotom",
+          "count": 1676
+        },
+        {
+          "name": "Basculegion",
+          "count": 1656
+        },
+        {
+          "name": "Sinistcha",
+          "count": 1625
+        },
+        {
+          "name": "Whimsicott",
+          "count": 1470
+        },
+        {
+          "name": "Charizard",
+          "count": 1363
+        },
+        {
+          "name": "Milotic",
+          "count": 1210
+        }
+      ],
+      "mostCommonMoves": [
+        {
+          "name": "Protect",
+          "count": 30545
+        },
+        {
+          "name": "Fake Out",
+          "count": 7701
+        },
+        {
+          "name": "Rock Slide",
+          "count": 5293
+        },
+        {
+          "name": "Tailwind",
+          "count": 4674
+        },
+        {
+          "name": "Close Combat",
+          "count": 4476
+        },
+        {
+          "name": "Flare Blitz",
+          "count": 3971
+        },
+        {
+          "name": "Earthquake",
+          "count": 3382
+        },
+        {
+          "name": "Moonblast",
+          "count": 3376
+        },
+        {
+          "name": "Parting Shot",
+          "count": 3307
+        },
+        {
+          "name": "Dire Claw",
+          "count": 3249
+        }
+      ],
+      "mostCommonItems": [
+        {
+          "name": "Focus Sash",
+          "count": 6154
+        },
+        {
+          "name": "Sitrus Berry",
+          "count": 5836
+        },
+        {
+          "name": "Leftovers",
+          "count": 4251
+        },
+        {
+          "name": "Choice Scarf",
+          "count": 3960
+        },
+        {
+          "name": "White Herb",
+          "count": 3719
+        },
+        {
+          "name": "Chople Berry",
+          "count": 2056
+        },
+        {
+          "name": "Charizardite Y",
+          "count": 1502
+        },
+        {
+          "name": "Floettite",
+          "count": 1246
+        },
+        {
+          "name": "Black Glasses",
+          "count": 952
+        },
+        {
+          "name": "Froslassite",
+          "count": 857
+        }
+      ],
+      "mostCommonAbilities": [
+        {
+          "name": "Intimidate",
+          "count": 4179
+        },
+        {
+          "name": "Rough Skin",
+          "count": 3127
+        },
+        {
+          "name": "Unburden",
+          "count": 3040
+        },
+        {
+          "name": "Levitate",
+          "count": 2385
+        },
+        {
+          "name": "Prankster",
+          "count": 1922
+        },
+        {
+          "name": "Defiant",
+          "count": 1812
+        },
+        {
+          "name": "Blaze",
+          "count": 1615
+        },
+        {
+          "name": "Hospitality",
+          "count": 1612
+        },
+        {
+          "name": "Adaptability",
+          "count": 1513
+        },
+        {
+          "name": "Cursed Body",
+          "count": 1260
+        }
+      ],
+      "averageSpeed": 86.776,
+      "averageAttack": 96.545,
+      "averageSpecialAttack": 83.185,
+      "averageBulk": 258.613,
+      "averageWinRate": 0.41,
+      "sampleTeams": [
+        {
+          "teamId": "69f0bf594f71d664893e651a::rickinch",
+          "playerName": "rickinch",
+          "tournamentName": "Pokepal Smackdown #139 (Champions) (Reg M-A)",
+          "pokemon": [
+            "Aegislash",
+            "Wash Rotom",
+            "Gengar",
+            "Garchomp",
+            "Alolan Ninetales",
+            "Incineroar"
+          ],
+          "wins": 4,
+          "losses": 1,
+          "placement": 3,
+          "confidence": 0.78,
+          "secondaryArchetype": "Stall or Control"
+        },
+        {
+          "teamId": "69f0bf594f71d664893e651a::iljone",
+          "playerName": "iljone",
+          "tournamentName": "Pokepal Smackdown #139 (Champions) (Reg M-A)",
+          "pokemon": [
+            "Altaria",
+            "Scizor",
+            "Pelipper",
+            "Hisuian Decidueye",
+            "Raichu",
+            "Hydreigon"
+          ],
+          "wins": 3,
+          "losses": 2,
+          "placement": 7,
+          "confidence": 0.558,
+          "secondaryArchetype": "Semi-Room"
+        },
+        {
+          "teamId": "69f0bf594f71d664893e651a::abomb251",
+          "playerName": "ABOMB251",
+          "tournamentName": "Pokepal Smackdown #139 (Champions) (Reg M-A)",
+          "pokemon": [
+            "Venusaur",
+            "Incineroar",
+            "Garchomp",
+            "Milotic",
+            "Sneasler",
+            "Eternal Flower Floette"
+          ],
+          "wins": 3,
+          "losses": 2,
+          "placement": 9,
+          "confidence": 0.545,
+          "secondaryArchetype": "Bulky Setup"
+        },
+        {
+          "teamId": "69f0bf594f71d664893e651a::rodjilius",
+          "playerName": "Rodjilius",
+          "tournamentName": "Pokepal Smackdown #139 (Champions) (Reg M-A)",
+          "pokemon": [
+            "Skarmory",
+            "Garchomp",
+            "Sneasler",
+            "Milotic",
+            "Hydreigon",
+            "Aegislash"
+          ],
+          "wins": 2,
+          "losses": 2,
+          "placement": 14,
+          "confidence": 0.78,
+          "secondaryArchetype": "Stall or Control"
+        },
+        {
+          "teamId": "69f0bf594f71d664893e651a::dajman27",
+          "playerName": "Jon V",
+          "tournamentName": "Pokepal Smackdown #139 (Champions) (Reg M-A)",
+          "pokemon": [
+            "Gengar",
+            "Sneasler",
+            "Incineroar",
+            "Kingambit",
+            "Alolan Ninetales",
+            "Dragonite"
+          ],
+          "wins": 2,
+          "losses": 2,
+          "placement": 16,
+          "confidence": 0.545,
+          "secondaryArchetype": "Bulky Setup"
+        }
+      ],
+      "commonDataQualityNotes": [
+        {
+          "note": "missing Pok\u00e9mon stats",
+          "count": 4766
+        },
+        {
+          "note": "missing win/loss data",
+          "count": 334
+        },
+        {
+          "note": "missing items",
+          "count": 76
+        }
+      ]
+    },
+    {
+      "archetype": "Tailwind Offense",
+      "teamCount": 3143,
+      "percentageOfTeams": 16.699,
+      "mostCommonPokemon": [
+        {
+          "name": "Sneasler",
+          "count": 2228
+        },
+        {
+          "name": "Garchomp",
+          "count": 1998
+        },
+        {
+          "name": "Aerodactyl",
+          "count": 1771
+        },
+        {
+          "name": "Kingambit",
+          "count": 1556
+        },
+        {
+          "name": "Basculegion",
+          "count": 1218
+        },
+        {
+          "name": "Charizard",
+          "count": 1009
+        },
+        {
+          "name": "Whimsicott",
+          "count": 815
+        },
+        {
+          "name": "Incineroar",
+          "count": 769
+        },
+        {
+          "name": "Wash Rotom",
+          "count": 470
+        },
+        {
+          "name": "Eternal Flower Floette",
+          "count": 465
+        }
+      ],
+      "mostCommonMoves": [
+        {
+          "name": "Protect",
+          "count": 13750
+        },
+        {
+          "name": "Rock Slide",
+          "count": 3481
+        },
+        {
+          "name": "Tailwind",
+          "count": 3275
+        },
+        {
+          "name": "Fake Out",
+          "count": 3075
+        },
+        {
+          "name": "Close Combat",
+          "count": 2449
+        },
+        {
+          "name": "Dire Claw",
+          "count": 2171
+        },
+        {
+          "name": "Earthquake",
+          "count": 1995
+        },
+        {
+          "name": "Dragon Claw",
+          "count": 1770
+        },
+        {
+          "name": "Sucker Punch",
+          "count": 1742
+        },
+        {
+          "name": "Moonblast",
+          "count": 1732
+        }
+      ],
+      "mostCommonItems": [
+        {
+          "name": "Focus Sash",
+          "count": 2881
+        },
+        {
+          "name": "White Herb",
+          "count": 2159
+        },
+        {
+          "name": "Sitrus Berry",
+          "count": 2054
+        },
+        {
+          "name": "Choice Scarf",
+          "count": 1700
+        },
+        {
+          "name": "Chople Berry",
+          "count": 1105
+        },
+        {
+          "name": "Charizardite Y",
+          "count": 1010
+        },
+        {
+          "name": "Leftovers",
+          "count": 843
+        },
+        {
+          "name": "Floettite",
+          "count": 800
+        },
+        {
+          "name": "Black Glasses",
+          "count": 674
+        },
+        {
+          "name": "Froslassite",
+          "count": 486
+        }
+      ],
+      "mostCommonAbilities": [
+        {
+          "name": "Unburden",
+          "count": 2086
+        },
+        {
+          "name": "Rough Skin",
+          "count": 1924
+        },
+        {
+          "name": "Unnerve",
+          "count": 1686
+        },
+        {
+          "name": "Defiant",
+          "count": 1543
+        },
+        {
+          "name": "Adaptability",
+          "count": 1199
+        },
+        {
+          "name": "Blaze",
+          "count": 953
+        },
+        {
+          "name": "Intimidate",
+          "count": 906
+        },
+        {
+          "name": "Prankster",
+          "count": 844
+        },
+        {
+          "name": "Flower Veil",
+          "count": 657
+        },
+        {
+          "name": "Levitate",
+          "count": 644
+        }
+      ],
+      "averageSpeed": 94.946,
+      "averageAttack": 105.282,
+      "averageSpecialAttack": 75.89,
+      "averageBulk": 252.639,
+      "averageWinRate": 0.436,
+      "sampleTeams": [
+        {
+          "teamId": "69f0bf594f71d664893e651a::cherryballad",
+          "playerName": "CherryBallad",
+          "tournamentName": "Pokepal Smackdown #139 (Champions) (Reg M-A)",
+          "pokemon": [
+            "Gardevoir",
+            "Aerodactyl",
+            "Volcarona",
+            "Sneasler",
+            "Tsareena",
+            "Basculegion"
+          ],
+          "wins": 3,
+          "losses": 2,
+          "placement": 10,
+          "confidence": 0.62,
+          "secondaryArchetype": "Bulky Setup"
+        },
+        {
+          "teamId": "69f0bf594f71d664893e651a::moonriver10",
+          "playerName": "MoonRiver10",
+          "tournamentName": "Pokepal Smackdown #139 (Champions) (Reg M-A)",
+          "pokemon": [
+            "Sylveon",
+            "Aegislash",
+            "Aerodactyl",
+            "Basculegion",
+            "Charizard",
+            "Garchomp"
+          ],
+          "wins": 3,
+          "losses": 2,
+          "placement": 12,
+          "confidence": 0.6,
+          "secondaryArchetype": "Balance"
+        },
+        {
+          "teamId": "69f0bf594f71d664893e651a::holasoy",
+          "playerName": "Holasoy",
+          "tournamentName": "Pokepal Smackdown #139 (Champions) (Reg M-A)",
+          "pokemon": [
+            "Charizard",
+            "Whimsicott",
+            "Basculegion",
+            "Garchomp",
+            "Kingambit",
+            "Sneasler"
+          ],
+          "wins": 2,
+          "losses": 1,
+          "placement": 15,
+          "confidence": 0.7,
+          "secondaryArchetype": "Balance"
+        },
+        {
+          "teamId": "69f785424f71d664893eb9bf::thalleszard",
+          "playerName": "Beijo do Sapo",
+          "tournamentName": "Intimidators Champions Challenge #6 - REG M-A",
+          "pokemon": [
+            "Charizard",
+            "Aerodactyl",
+            "Garchomp",
+            "Kingambit",
+            "Basculegion",
+            "Eternal Flower Floette"
+          ],
+          "wins": 1,
+          "losses": 2,
+          "placement": null,
+          "confidence": 0.7,
+          "secondaryArchetype": "Balance"
+        },
+        {
+          "teamId": "69f785424f71d664893eb9bf::pingouinpkmn",
+          "playerName": "PingouinPKMN",
+          "tournamentName": "Intimidators Champions Challenge #6 - REG M-A",
+          "pokemon": [
+            "Aerodactyl",
+            "Garchomp",
+            "Charizard",
+            "Eternal Flower Floette",
+            "Basculegion",
+            "Kingambit"
+          ],
+          "wins": 1,
+          "losses": 2,
+          "placement": null,
+          "confidence": 0.7,
+          "secondaryArchetype": "Balance"
+        }
+      ],
+      "commonDataQualityNotes": [
+        {
+          "note": "missing Pok\u00e9mon stats",
+          "count": 1376
+        },
+        {
+          "note": "missing win/loss data",
+          "count": 180
+        },
+        {
+          "note": "missing items",
+          "count": 19
+        }
+      ]
+    },
+    {
+      "archetype": "Semi-Room",
+      "teamCount": 2037,
+      "percentageOfTeams": 10.823,
+      "mostCommonPokemon": [
+        {
+          "name": "Sinistcha",
+          "count": 1338
+        },
+        {
+          "name": "Sneasler",
+          "count": 1252
+        },
+        {
+          "name": "Incineroar",
+          "count": 1004
+        },
+        {
+          "name": "Basculegion",
+          "count": 678
+        },
+        {
+          "name": "Farigiraf",
+          "count": 619
+        },
+        {
+          "name": "Aerodactyl",
+          "count": 607
+        },
+        {
+          "name": "Kingambit",
+          "count": 568
+        },
+        {
+          "name": "Pelipper",
+          "count": 438
+        },
+        {
+          "name": "Garchomp",
+          "count": 327
+        },
+        {
+          "name": "Charizard",
+          "count": 317
+        }
+      ],
+      "mostCommonMoves": [
+        {
+          "name": "Protect",
+          "count": 7209
+        },
+        {
+          "name": "Fake Out",
+          "count": 2398
+        },
+        {
+          "name": "Trick Room",
+          "count": 2141
+        },
+        {
+          "name": "Close Combat",
+          "count": 1483
+        },
+        {
+          "name": "Rage Powder",
+          "count": 1368
+        },
+        {
+          "name": "Matcha Gotcha",
+          "count": 1329
+        },
+        {
+          "name": "Tailwind",
+          "count": 1260
+        },
+        {
+          "name": "Dire Claw",
+          "count": 1236
+        },
+        {
+          "name": "Flare Blitz",
+          "count": 1160
+        },
+        {
+          "name": "Rock Slide",
+          "count": 1103
+        }
+      ],
+      "mostCommonItems": [
+        {
+          "name": "Sitrus Berry",
+          "count": 1695
+        },
+        {
+          "name": "Focus Sash",
+          "count": 1552
+        },
+        {
+          "name": "White Herb",
+          "count": 1116
+        },
+        {
+          "name": "Leftovers",
+          "count": 1020
+        },
+        {
+          "name": "Choice Scarf",
+          "count": 878
+        },
+        {
+          "name": "Chople Berry",
+          "count": 527
+        },
+        {
+          "name": "Floettite",
+          "count": 401
+        },
+        {
+          "name": "Black Glasses",
+          "count": 384
+        },
+        {
+          "name": "Colbur Berry",
+          "count": 359
+        },
+        {
+          "name": "Scizorite",
+          "count": 244
+        }
+      ],
+      "mostCommonAbilities": [
+        {
+          "name": "Hospitality",
+          "count": 1323
+        },
+        {
+          "name": "Unburden",
+          "count": 1132
+        },
+        {
+          "name": "Intimidate",
+          "count": 1107
+        },
+        {
+          "name": "Armor Tail",
+          "count": 614
+        },
+        {
+          "name": "Adaptability",
+          "count": 579
+        },
+        {
+          "name": "Unnerve",
+          "count": 575
+        },
+        {
+          "name": "Defiant",
+          "count": 566
+        },
+        {
+          "name": "Drizzle",
+          "count": 484
+        },
+        {
+          "name": "Blaze",
+          "count": 346
+        },
+        {
+          "name": "Flower Veil",
+          "count": 328
+        }
+      ],
+      "averageSpeed": 82.806,
+      "averageAttack": 96.486,
+      "averageSpecialAttack": 85.448,
+      "averageBulk": 255.553,
+      "averageWinRate": 0.43,
+      "sampleTeams": [
+        {
+          "teamId": "69f0bf594f71d664893e651a::parker",
+          "playerName": "Parker",
+          "tournamentName": "Pokepal Smackdown #139 (Champions) (Reg M-A)",
+          "pokemon": [
+            "Delphox",
+            "Farigiraf",
+            "Sinistcha",
+            "Azumarill",
+            "Garchomp",
+            "Sneasler"
+          ],
+          "wins": 3,
+          "losses": 2,
+          "placement": 5,
+          "confidence": 0.8,
+          "secondaryArchetype": "Balance"
+        },
+        {
+          "teamId": "69f0bf594f71d664893e651a::btemane",
+          "playerName": "BTEMane",
+          "tournamentName": "Pokepal Smackdown #139 (Champions) (Reg M-A)",
+          "pokemon": [
+            "Floette",
+            "Sinistcha",
+            "Kingambit",
+            "Garchomp",
+            "Sneasler",
+            "Basculegion"
+          ],
+          "wins": 3,
+          "losses": 2,
+          "placement": 11,
+          "confidence": 0.645,
+          "secondaryArchetype": "Trick Room"
+        },
+        {
+          "teamId": "69f0bf594f71d664893e651a::notwinning",
+          "playerName": "notwinning",
+          "tournamentName": "Pokepal Smackdown #139 (Champions) (Reg M-A)",
+          "pokemon": [
+            "Starmie",
+            "Sneasler",
+            "Pelipper",
+            "Incineroar",
+            "Farigiraf",
+            "Drampa"
+          ],
+          "wins": 1,
+          "losses": 2,
+          "placement": 22,
+          "confidence": 0.711,
+          "secondaryArchetype": "Trick Room"
+        },
+        {
+          "teamId": "69f0bf594f71d664893e651a::simpleriso",
+          "playerName": "SimpleRiso",
+          "tournamentName": "Pokepal Smackdown #139 (Champions) (Reg M-A)",
+          "pokemon": [
+            "Venusaur",
+            "Aerodactyl",
+            "Garchomp",
+            "Farigiraf",
+            "Azumarill",
+            "Sneasler"
+          ],
+          "wins": 1,
+          "losses": 4,
+          "placement": 27,
+          "confidence": 0.773,
+          "secondaryArchetype": "Tailwind Offense"
+        },
+        {
+          "teamId": "69f785424f71d664893eb9bf::eduardo_leite",
+          "playerName": "Eduardo_Leite",
+          "tournamentName": "Intimidators Champions Challenge #6 - REG M-A",
+          "pokemon": [
+            "Manectric",
+            "Pelipper",
+            "Archaludon",
+            "Scizor",
+            "Palafin",
+            "Sinistcha"
+          ],
+          "wins": 0,
+          "losses": 3,
+          "placement": null,
+          "confidence": 0.8,
+          "secondaryArchetype": "Balance"
+        }
+      ],
+      "commonDataQualityNotes": [
+        {
+          "note": "missing Pok\u00e9mon stats",
+          "count": 672
+        },
+        {
+          "note": "missing win/loss data",
+          "count": 89
+        },
+        {
+          "note": "missing items",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "archetype": "Bulky Setup",
+      "teamCount": 1932,
+      "percentageOfTeams": 10.265,
+      "mostCommonPokemon": [
+        {
+          "name": "Sneasler",
+          "count": 1181
+        },
+        {
+          "name": "Garchomp",
+          "count": 1029
+        },
+        {
+          "name": "Kingambit",
+          "count": 956
+        },
+        {
+          "name": "Basculegion",
+          "count": 649
+        },
+        {
+          "name": "Incineroar",
+          "count": 607
+        },
+        {
+          "name": "Sinistcha",
+          "count": 378
+        },
+        {
+          "name": "Milotic",
+          "count": 358
+        },
+        {
+          "name": "Dragonite",
+          "count": 350
+        },
+        {
+          "name": "Charizard",
+          "count": 327
+        },
+        {
+          "name": "Tyranitar",
+          "count": 319
+        }
+      ],
+      "mostCommonMoves": [
+        {
+          "name": "Protect",
+          "count": 7846
+        },
+        {
+          "name": "Fake Out",
+          "count": 1857
+        },
+        {
+          "name": "Rock Slide",
+          "count": 1531
+        },
+        {
+          "name": "Close Combat",
+          "count": 1329
+        },
+        {
+          "name": "Dire Claw",
+          "count": 1147
+        },
+        {
+          "name": "Dragon Claw",
+          "count": 1055
+        },
+        {
+          "name": "Sucker Punch",
+          "count": 1042
+        },
+        {
+          "name": "Earthquake",
+          "count": 967
+        },
+        {
+          "name": "Kowtow Cleave",
+          "count": 879
+        },
+        {
+          "name": "Flare Blitz",
+          "count": 867
+        }
+      ],
+      "mostCommonItems": [
+        {
+          "name": "Sitrus Berry",
+          "count": 1457
+        },
+        {
+          "name": "Focus Sash",
+          "count": 1370
+        },
+        {
+          "name": "Leftovers",
+          "count": 1019
+        },
+        {
+          "name": "Choice Scarf",
+          "count": 961
+        },
+        {
+          "name": "White Herb",
+          "count": 902
+        },
+        {
+          "name": "Chople Berry",
+          "count": 553
+        },
+        {
+          "name": "Black Glasses",
+          "count": 534
+        },
+        {
+          "name": "Floettite",
+          "count": 329
+        },
+        {
+          "name": "Lum Berry",
+          "count": 321
+        },
+        {
+          "name": "Delphoxite",
+          "count": 278
+        }
+      ],
+      "mostCommonAbilities": [
+        {
+          "name": "Unburden",
+          "count": 967
+        },
+        {
+          "name": "Rough Skin",
+          "count": 940
+        },
+        {
+          "name": "Defiant",
+          "count": 940
+        },
+        {
+          "name": "Intimidate",
+          "count": 759
+        },
+        {
+          "name": "Adaptability",
+          "count": 608
+        },
+        {
+          "name": "Blaze",
+          "count": 491
+        },
+        {
+          "name": "Levitate",
+          "count": 386
+        },
+        {
+          "name": "Hospitality",
+          "count": 376
+        },
+        {
+          "name": "Competitive",
+          "count": 359
+        },
+        {
+          "name": "Sand Stream",
+          "count": 330
+        }
+      ],
+      "averageSpeed": 84.779,
+      "averageAttack": 103.903,
+      "averageSpecialAttack": 79.927,
+      "averageBulk": 262.982,
+      "averageWinRate": 0.429,
+      "sampleTeams": [
+        {
+          "teamId": "69f0bf594f71d664893e651a::rycully",
+          "playerName": "rycully",
+          "tournamentName": "Pokepal Smackdown #139 (Champions) (Reg M-A)",
+          "pokemon": [
+            "Blastoise",
+            "Sinistcha",
+            "Aerodactyl",
+            "Sneasler",
+            "Garchomp",
+            "Sylveon"
+          ],
+          "wins": 4,
+          "losses": 1,
+          "placement": 2,
+          "confidence": 0.7,
+          "secondaryArchetype": "Semi-Room"
+        },
+        {
+          "teamId": "69f0bf594f71d664893e651a::mrcadetman",
+          "playerName": "Mrcadetman",
+          "tournamentName": "Pokepal Smackdown #139 (Champions) (Reg M-A)",
+          "pokemon": [
+            "Sneasler",
+            "Incineroar",
+            "Garchomp",
+            "Wash Rotom",
+            "Tyranitar",
+            "Scizor"
+          ],
+          "wins": 4,
+          "losses": 1,
+          "placement": 4,
+          "confidence": 0.809,
+          "secondaryArchetype": "Sand"
+        },
+        {
+          "teamId": "69f0bf594f71d664893e651a::bcjacobe",
+          "playerName": "BCJacobe",
+          "tournamentName": "Pokepal Smackdown #139 (Champions) (Reg M-A)",
+          "pokemon": [
+            "Pelipper",
+            "Dragonite",
+            "Paldean Tauros Aqua Breed",
+            "Tsareena",
+            "Kingambit",
+            "Sableye"
+          ],
+          "wins": 1,
+          "losses": 4,
+          "placement": 24,
+          "confidence": 0.8,
+          "secondaryArchetype": "Balance"
+        },
+        {
+          "teamId": "69f785424f71d664893eb9bf::puxcci",
+          "playerName": "Puxcci",
+          "tournamentName": "Intimidators Champions Challenge #6 - REG M-A",
+          "pokemon": [
+            "Scizor",
+            "Pelipper",
+            "Archaludon",
+            "Basculegion",
+            "Dragonite",
+            "Sneasler"
+          ],
+          "wins": 4,
+          "losses": 2,
+          "placement": 7,
+          "confidence": 0.8,
+          "secondaryArchetype": "Balance"
+        },
+        {
+          "teamId": "69f182e64f71d664893e6dfc::purple_meowstic",
+          "playerName": "Purple_Meowstic",
+          "tournamentName": "Devils Den Tournaments #76 - $100 For First",
+          "pokemon": [
+            "Aerodactyl",
+            "Garchomp",
+            "Aegislash",
+            "Eternal Flower Floette",
+            "Wash Rotom",
+            "Incineroar"
+          ],
+          "wins": 8,
+          "losses": 3,
+          "placement": 3,
+          "confidence": 0.8,
+          "secondaryArchetype": "Balance"
+        }
+      ],
+      "commonDataQualityNotes": [
+        {
+          "note": "missing Pok\u00e9mon stats",
+          "count": 711
+        },
+        {
+          "note": "missing win/loss data",
+          "count": 61
+        },
+        {
+          "note": "missing items",
+          "count": 12
+        }
+      ]
+    },
+    {
+      "archetype": "Trick Room",
+      "teamCount": 1618,
+      "percentageOfTeams": 8.597,
+      "mostCommonPokemon": [
+        {
+          "name": "Incineroar",
+          "count": 927
+        },
+        {
+          "name": "Farigiraf",
+          "count": 844
+        },
+        {
+          "name": "Sinistcha",
+          "count": 798
+        },
+        {
+          "name": "Kingambit",
+          "count": 574
+        },
+        {
+          "name": "Torkoal",
+          "count": 479
+        },
+        {
+          "name": "Basculegion",
+          "count": 350
+        },
+        {
+          "name": "Pelipper",
+          "count": 339
+        },
+        {
+          "name": "Hatterene",
+          "count": 225
+        },
+        {
+          "name": "Archaludon",
+          "count": 222
+        },
+        {
+          "name": "Tyranitar",
+          "count": 212
+        }
+      ],
+      "mostCommonMoves": [
+        {
+          "name": "Protect",
+          "count": 5383
+        },
+        {
+          "name": "Trick Room",
+          "count": 2299
+        },
+        {
+          "name": "Fake Out",
+          "count": 1321
+        },
+        {
+          "name": "Hyper Voice",
+          "count": 982
+        },
+        {
+          "name": "Psychic",
+          "count": 949
+        },
+        {
+          "name": "Flare Blitz",
+          "count": 898
+        },
+        {
+          "name": "Rage Powder",
+          "count": 846
+        },
+        {
+          "name": "Matcha Gotcha",
+          "count": 793
+        },
+        {
+          "name": "Parting Shot",
+          "count": 777
+        },
+        {
+          "name": "Weather Ball",
+          "count": 739
+        }
+      ],
+      "mostCommonItems": [
+        {
+          "name": "Sitrus Berry",
+          "count": 1360
+        },
+        {
+          "name": "Leftovers",
+          "count": 846
+        },
+        {
+          "name": "Focus Sash",
+          "count": 787
+        },
+        {
+          "name": "Choice Scarf",
+          "count": 508
+        },
+        {
+          "name": "Charcoal",
+          "count": 474
+        },
+        {
+          "name": "Chople Berry",
+          "count": 419
+        },
+        {
+          "name": "Black Glasses",
+          "count": 375
+        },
+        {
+          "name": "White Herb",
+          "count": 348
+        },
+        {
+          "name": "Colbur Berry",
+          "count": 332
+        },
+        {
+          "name": "Mental Herb",
+          "count": 323
+        }
+      ],
+      "mostCommonAbilities": [
+        {
+          "name": "Intimidate",
+          "count": 961
+        },
+        {
+          "name": "Armor Tail",
+          "count": 834
+        },
+        {
+          "name": "Hospitality",
+          "count": 775
+        },
+        {
+          "name": "Defiant",
+          "count": 557
+        },
+        {
+          "name": "Drought",
+          "count": 485
+        },
+        {
+          "name": "Drizzle",
+          "count": 380
+        },
+        {
+          "name": "Adaptability",
+          "count": 325
+        },
+        {
+          "name": "Sand Stream",
+          "count": 249
+        },
+        {
+          "name": "Inner Focus",
+          "count": 241
+        },
+        {
+          "name": "Magic Bounce",
+          "count": 218
+        }
+      ],
+      "averageSpeed": 63.645,
+      "averageAttack": 94.529,
+      "averageSpecialAttack": 90.035,
+      "averageBulk": 266.9,
+      "averageWinRate": 0.397,
+      "sampleTeams": [
+        {
+          "teamId": "69f0bf594f71d664893e651a::snorkelgg",
+          "playerName": "SnorkelGG",
+          "tournamentName": "Pokepal Smackdown #139 (Champions) (Reg M-A)",
+          "pokemon": [
+            "Drampa",
+            "Mimikyu",
+            "Camerupt",
+            "Farigiraf",
+            "Rhyperior",
+            "Torkoal"
+          ],
+          "wins": 5,
+          "losses": 0,
+          "placement": 1,
+          "confidence": 0.7,
+          "secondaryArchetype": "Balance"
+        },
+        {
+          "teamId": "69f0bf594f71d664893e651a::orttega15",
+          "playerName": "Orttega15",
+          "tournamentName": "Pokepal Smackdown #139 (Champions) (Reg M-A)",
+          "pokemon": [
+            "Incineroar",
+            "Hatterene",
+            "Farigiraf",
+            "Torkoal",
+            "Kingambit",
+            "Charizard"
+          ],
+          "wins": 3,
+          "losses": 2,
+          "placement": 6,
+          "confidence": 0.7,
+          "secondaryArchetype": "Bulky Setup"
+        },
+        {
+          "teamId": "69f0bf594f71d664893e651a::whiteboyvgc",
+          "playerName": "whiteboyVGC",
+          "tournamentName": "Pokepal Smackdown #139 (Champions) (Reg M-A)",
+          "pokemon": [
+            "Golurk",
+            "Kangaskhan",
+            "Farigiraf",
+            "Milotic",
+            "Basculegion",
+            "Torkoal"
+          ],
+          "wins": 2,
+          "losses": 3,
+          "placement": 13,
+          "confidence": 0.8,
+          "secondaryArchetype": "Balance"
+        },
+        {
+          "teamId": "69f0bf594f71d664893e651a::treybaybay",
+          "playerName": "TreyBayBay",
+          "tournamentName": "Pokepal Smackdown #139 (Champions) (Reg M-A)",
+          "pokemon": [
+            "Sinistcha",
+            "Tyranitar",
+            "Milotic",
+            "Skeledirge",
+            "Clefable",
+            "Aggron"
+          ],
+          "wins": 2,
+          "losses": 3,
+          "placement": 17,
+          "confidence": 0.7,
+          "secondaryArchetype": "Bulky Setup"
+        },
+        {
+          "teamId": "69f0bf594f71d664893e651a::sohai",
+          "playerName": "Sohai",
+          "tournamentName": "Pokepal Smackdown #139 (Champions) (Reg M-A)",
+          "pokemon": [
+            "Hydreigon",
+            "Kingambit",
+            "Sylveon",
+            "Feraligatr",
+            "Farigiraf",
+            "Incineroar"
+          ],
+          "wins": 1,
+          "losses": 4,
+          "placement": 23,
+          "confidence": 0.8,
+          "secondaryArchetype": "Balance"
+        }
+      ],
+      "commonDataQualityNotes": [
+        {
+          "note": "missing Pok\u00e9mon stats",
+          "count": 461
+        },
+        {
+          "note": "missing win/loss data",
+          "count": 82
+        },
+        {
+          "note": "missing items",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "archetype": "Sand",
+      "teamCount": 1144,
+      "percentageOfTeams": 6.078,
+      "mostCommonPokemon": [
+        {
+          "name": "Tyranitar",
+          "count": 1135
+        },
+        {
+          "name": "Excadrill",
+          "count": 949
+        },
+        {
+          "name": "Corviknight",
+          "count": 523
+        },
+        {
+          "name": "Sinistcha",
+          "count": 454
+        },
+        {
+          "name": "Wash Rotom",
+          "count": 438
+        },
+        {
+          "name": "Incineroar",
+          "count": 360
+        },
+        {
+          "name": "Garchomp",
+          "count": 255
+        },
+        {
+          "name": "Sneasler",
+          "count": 244
+        },
+        {
+          "name": "Heat Rotom",
+          "count": 184
+        },
+        {
+          "name": "Venusaur",
+          "count": 161
+        }
+      ],
+      "mostCommonMoves": [
+        {
+          "name": "Protect",
+          "count": 4575
+        },
+        {
+          "name": "Rock Slide",
+          "count": 2064
+        },
+        {
+          "name": "Iron Head",
+          "count": 1181
+        },
+        {
+          "name": "Knock Off",
+          "count": 977
+        },
+        {
+          "name": "Earthquake",
+          "count": 918
+        },
+        {
+          "name": "Low Kick",
+          "count": 764
+        },
+        {
+          "name": "Tailwind",
+          "count": 691
+        },
+        {
+          "name": "Fake Out",
+          "count": 616
+        },
+        {
+          "name": "Thunderbolt",
+          "count": 557
+        },
+        {
+          "name": "High Horsepower",
+          "count": 540
+        }
+      ],
+      "mostCommonItems": [
+        {
+          "name": "Focus Sash",
+          "count": 1071
+        },
+        {
+          "name": "Sitrus Berry",
+          "count": 1018
+        },
+        {
+          "name": "Tyranitarite",
+          "count": 877
+        },
+        {
+          "name": "Leftovers",
+          "count": 848
+        },
+        {
+          "name": "Choice Scarf",
+          "count": 588
+        },
+        {
+          "name": "White Herb",
+          "count": 411
+        },
+        {
+          "name": "Chople Berry",
+          "count": 208
+        },
+        {
+          "name": "Venusaurite",
+          "count": 154
+        },
+        {
+          "name": "Haban Berry",
+          "count": 127
+        },
+        {
+          "name": "Meganiumite",
+          "count": 111
+        }
+      ],
+      "mostCommonAbilities": [
+        {
+          "name": "Sand Stream",
+          "count": 1142
+        },
+        {
+          "name": "Sand Rush",
+          "count": 959
+        },
+        {
+          "name": "Levitate",
+          "count": 796
+        },
+        {
+          "name": "Mirror Armor",
+          "count": 503
+        },
+        {
+          "name": "Intimidate",
+          "count": 452
+        },
+        {
+          "name": "Hospitality",
+          "count": 449
+        },
+        {
+          "name": "Unburden",
+          "count": 228
+        },
+        {
+          "name": "Rough Skin",
+          "count": 175
+        },
+        {
+          "name": "Chlorophyll",
+          "count": 162
+        },
+        {
+          "name": "Liquid Voice",
+          "count": 148
+        }
+      ],
+      "averageSpeed": 79.121,
+      "averageAttack": 106.734,
+      "averageSpecialAttack": 81.646,
+      "averageBulk": 267.557,
+      "averageWinRate": 0.418,
+      "sampleTeams": [
+        {
+          "teamId": "69f0bf594f71d664893e651a::agpvgc",
+          "playerName": "AGPVGC",
+          "tournamentName": "Pokepal Smackdown #139 (Champions) (Reg M-A)",
+          "pokemon": [
+            "Tyranitar",
+            "Delphox",
+            "Excadrill",
+            "Garchomp",
+            "Sinistcha",
+            "Gyarados"
+          ],
+          "wins": 3,
+          "losses": 2,
+          "placement": 8,
+          "confidence": 0.7,
+          "secondaryArchetype": "Bulky Setup"
+        },
+        {
+          "teamId": "69f0bf594f71d664893e651a::heyoalex",
+          "playerName": "heyoalex",
+          "tournamentName": "Pokepal Smackdown #139 (Champions) (Reg M-A)",
+          "pokemon": [
+            "Excadrill",
+            "Tyranitar",
+            "Sylveon",
+            "Corviknight",
+            "Milotic",
+            "Venusaur"
+          ],
+          "wins": 2,
+          "losses": 3,
+          "placement": 19,
+          "confidence": 0.78,
+          "secondaryArchetype": "Bulky Setup"
+        },
+        {
+          "teamId": "69f0bf594f71d664893e651a::ttvizmatti",
+          "playerName": "TTVizMatti",
+          "tournamentName": "Pokepal Smackdown #139 (Champions) (Reg M-A)",
+          "pokemon": [
+            "Tyranitar",
+            "Kommo O",
+            "Excadrill",
+            "Talonflame",
+            "Sinistcha",
+            "Eternal Flower Floette"
+          ],
+          "wins": 0,
+          "losses": 2,
+          "placement": 28,
+          "confidence": 0.65,
+          "secondaryArchetype": "Balance"
+        },
+        {
+          "teamId": "69f785424f71d664893eb9bf::saintrez",
+          "playerName": "SaintRez",
+          "tournamentName": "Intimidators Champions Challenge #6 - REG M-A",
+          "pokemon": [
+            "Tyranitar",
+            "Excadrill",
+            "Corviknight",
+            "Basculegion",
+            "Meganium",
+            "Incineroar"
+          ],
+          "wins": 1,
+          "losses": 2,
+          "placement": null,
+          "confidence": 0.78,
+          "secondaryArchetype": "Weather Offense"
+        },
+        {
+          "teamId": "69f785424f71d664893eb9bf::kabal",
+          "playerName": "Kabal",
+          "tournamentName": "Intimidators Champions Challenge #6 - REG M-A",
+          "pokemon": [
+            "Venusaur",
+            "Tyranitar",
+            "Corviknight",
+            "Garchomp",
+            "Heat Rotom",
+            "Primarina"
+          ],
+          "wins": 4,
+          "losses": 2,
+          "placement": 6,
+          "confidence": 0.7,
+          "secondaryArchetype": "Balance"
+        }
+      ],
+      "commonDataQualityNotes": [
+        {
+          "note": "missing Pok\u00e9mon stats",
+          "count": 698
+        },
+        {
+          "note": "missing win/loss data",
+          "count": 43
+        },
+        {
+          "note": "missing items",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "archetype": "Rain",
+      "teamCount": 680,
+      "percentageOfTeams": 3.613,
+      "mostCommonPokemon": [
+        {
+          "name": "Basculegion",
+          "count": 621
+        },
+        {
+          "name": "Pelipper",
+          "count": 594
+        },
+        {
+          "name": "Archaludon",
+          "count": 456
+        },
+        {
+          "name": "Sneasler",
+          "count": 308
+        },
+        {
+          "name": "Incineroar",
+          "count": 233
+        },
+        {
+          "name": "Kingambit",
+          "count": 147
+        },
+        {
+          "name": "Dragonite",
+          "count": 147
+        },
+        {
+          "name": "Sinistcha",
+          "count": 121
+        },
+        {
+          "name": "Aerodactyl",
+          "count": 120
+        },
+        {
+          "name": "Meganium",
+          "count": 112
+        }
+      ],
+      "mostCommonMoves": [
+        {
+          "name": "Protect",
+          "count": 2669
+        },
+        {
+          "name": "Weather Ball",
+          "count": 745
+        },
+        {
+          "name": "Hurricane",
+          "count": 741
+        },
+        {
+          "name": "Tailwind",
+          "count": 648
+        },
+        {
+          "name": "Fake Out",
+          "count": 619
+        },
+        {
+          "name": "Last Respects",
+          "count": 596
+        },
+        {
+          "name": "Aqua Jet",
+          "count": 551
+        },
+        {
+          "name": "Wave Crash",
+          "count": 538
+        },
+        {
+          "name": "Electro Shot",
+          "count": 454
+        },
+        {
+          "name": "Flash Cannon",
+          "count": 434
+        }
+      ],
+      "mostCommonItems": [
+        {
+          "name": "Focus Sash",
+          "count": 606
+        },
+        {
+          "name": "Sitrus Berry",
+          "count": 523
+        },
+        {
+          "name": "Leftovers",
+          "count": 409
+        },
+        {
+          "name": "Choice Scarf",
+          "count": 345
+        },
+        {
+          "name": "Mystic Water",
+          "count": 332
+        },
+        {
+          "name": "White Herb",
+          "count": 300
+        },
+        {
+          "name": "Dragoninite",
+          "count": 159
+        },
+        {
+          "name": "Chople Berry",
+          "count": 124
+        },
+        {
+          "name": "Meganiumite",
+          "count": 123
+        },
+        {
+          "name": "Aerodactylite",
+          "count": 80
+        }
+      ],
+      "mostCommonAbilities": [
+        {
+          "name": "Drizzle",
+          "count": 682
+        },
+        {
+          "name": "Swift Swim",
+          "count": 498
+        },
+        {
+          "name": "Stamina",
+          "count": 345
+        },
+        {
+          "name": "Unburden",
+          "count": 282
+        },
+        {
+          "name": "Intimidate",
+          "count": 244
+        },
+        {
+          "name": "Prankster",
+          "count": 147
+        },
+        {
+          "name": "Defiant",
+          "count": 140
+        },
+        {
+          "name": "Adaptability",
+          "count": 126
+        },
+        {
+          "name": "Hospitality",
+          "count": 120
+        },
+        {
+          "name": "Unnerve",
+          "count": 116
+        }
+      ],
+      "averageSpeed": 80.333,
+      "averageAttack": 95.548,
+      "averageSpecialAttack": 86.803,
+      "averageBulk": 252.162,
+      "averageWinRate": 0.432,
+      "sampleTeams": [
+        {
+          "teamId": "69f785424f71d664893eb9bf::rredl",
+          "playerName": "rRedl",
+          "tournamentName": "Intimidators Champions Challenge #6 - REG M-A",
+          "pokemon": [
+            "Kangaskhan",
+            "Aegislash Blade Forme",
+            "Politoed",
+            "Basculegion",
+            "Incineroar",
+            "Ariados"
+          ],
+          "wins": 6,
+          "losses": 2,
+          "placement": 2,
+          "confidence": 0.476,
+          "secondaryArchetype": "Balance"
+        },
+        {
+          "teamId": "69f182e64f71d664893e6dfc::fluffy_m1n",
+          "playerName": "Fluffy_m1n",
+          "tournamentName": "Devils Den Tournaments #76 - $100 For First",
+          "pokemon": [
+            "Meganium",
+            "Aerodactyl",
+            "Politoed",
+            "Basculegion",
+            "Kingambit",
+            "Sneasler"
+          ],
+          "wins": 10,
+          "losses": 2,
+          "placement": 1,
+          "confidence": 0.611,
+          "secondaryArchetype": "Weather Offense"
+        },
+        {
+          "teamId": "69f182e64f71d664893e6dfc::kaige",
+          "playerName": "Kaige",
+          "tournamentName": "Devils Den Tournaments #76 - $100 For First",
+          "pokemon": [
+            "Meganium",
+            "Kingambit",
+            "Aerodactyl",
+            "Sneasler",
+            "Politoed",
+            "Basculegion"
+          ],
+          "wins": 4,
+          "losses": 3,
+          "placement": 32,
+          "confidence": 0.611,
+          "secondaryArchetype": "Weather Offense"
+        },
+        {
+          "teamId": "69f182e64f71d664893e6dfc::arkhept",
+          "playerName": "Arkhept",
+          "tournamentName": "Devils Den Tournaments #76 - $100 For First",
+          "pokemon": [
+            "Sneasler",
+            "Starmie",
+            "Sableye",
+            "Pelipper",
+            "Archaludon",
+            "Kingambit"
+          ],
+          "wins": 2,
+          "losses": 2,
+          "placement": 66,
+          "confidence": 0.546,
+          "secondaryArchetype": "Balance"
+        },
+        {
+          "teamId": "69f182e64f71d664893e6dfc::davidxrt",
+          "playerName": "DaviDXrt",
+          "tournamentName": "Devils Den Tournaments #76 - $100 For First",
+          "pokemon": [
+            "Pelipper",
+            "Archaludon",
+            "Basculegion",
+            "Goodra",
+            "Aerodactyl",
+            "Meganium"
+          ],
+          "wins": 2,
+          "losses": 1,
+          "placement": 81,
+          "confidence": 0.631,
+          "secondaryArchetype": "Balance"
+        }
+      ],
+      "commonDataQualityNotes": [
+        {
+          "note": "missing Pok\u00e9mon stats",
+          "count": 153
+        },
+        {
+          "note": "missing win/loss data",
+          "count": 37
+        }
+      ]
+    },
+    {
+      "archetype": "Hyper Offense",
+      "teamCount": 151,
+      "percentageOfTeams": 0.802,
+      "mostCommonPokemon": [
+        {
+          "name": "Sneasler",
+          "count": 97
+        },
+        {
+          "name": "Garchomp",
+          "count": 76
+        },
+        {
+          "name": "Basculegion",
+          "count": 63
+        },
+        {
+          "name": "Kingambit",
+          "count": 45
+        },
+        {
+          "name": "Incineroar",
+          "count": 41
+        },
+        {
+          "name": "Dragapult",
+          "count": 40
+        },
+        {
+          "name": "Froslass",
+          "count": 39
+        },
+        {
+          "name": "Orthworm",
+          "count": 37
+        },
+        {
+          "name": "Charizard",
+          "count": 28
+        },
+        {
+          "name": "Wash Rotom",
+          "count": 28
+        }
+      ],
+      "mostCommonMoves": [
+        {
+          "name": "Protect",
+          "count": 509
+        },
+        {
+          "name": "Fake Out",
+          "count": 153
+        },
+        {
+          "name": "Close Combat",
+          "count": 123
+        },
+        {
+          "name": "Rock Slide",
+          "count": 111
+        },
+        {
+          "name": "Dire Claw",
+          "count": 95
+        },
+        {
+          "name": "Blizzard",
+          "count": 82
+        },
+        {
+          "name": "Shadow Ball",
+          "count": 80
+        },
+        {
+          "name": "Dragon Claw",
+          "count": 73
+        },
+        {
+          "name": "Aqua Jet",
+          "count": 65
+        },
+        {
+          "name": "Earthquake",
+          "count": 64
+        }
+      ],
+      "mostCommonItems": [
+        {
+          "name": "Focus Sash",
+          "count": 152
+        },
+        {
+          "name": "Choice Scarf",
+          "count": 137
+        },
+        {
+          "name": "Sitrus Berry",
+          "count": 87
+        },
+        {
+          "name": "White Herb",
+          "count": 57
+        },
+        {
+          "name": "Froslassite",
+          "count": 40
+        },
+        {
+          "name": "Chople Berry",
+          "count": 40
+        },
+        {
+          "name": "Lum Berry",
+          "count": 37
+        },
+        {
+          "name": "Black Glasses",
+          "count": 36
+        },
+        {
+          "name": "Charizardite Y",
+          "count": 34
+        },
+        {
+          "name": "Leftovers",
+          "count": 29
+        }
+      ],
+      "mostCommonAbilities": [
+        {
+          "name": "Unburden",
+          "count": 86
+        },
+        {
+          "name": "Rough Skin",
+          "count": 73
+        },
+        {
+          "name": "Levitate",
+          "count": 66
+        },
+        {
+          "name": "Adaptability",
+          "count": 64
+        },
+        {
+          "name": "Intimidate",
+          "count": 62
+        },
+        {
+          "name": "Defiant",
+          "count": 44
+        },
+        {
+          "name": "Blaze",
+          "count": 40
+        },
+        {
+          "name": "Earth Eater",
+          "count": 37
+        },
+        {
+          "name": "Cursed Body",
+          "count": 33
+        },
+        {
+          "name": "Clear Body",
+          "count": 28
+        }
+      ],
+      "averageSpeed": 95.079,
+      "averageAttack": 107.022,
+      "averageSpecialAttack": 76.124,
+      "averageBulk": 251.297,
+      "averageWinRate": 0.386,
+      "sampleTeams": [
+        {
+          "teamId": "69efb723e23aab068aad3a71::desiresix",
+          "playerName": "desiresIX",
+          "tournamentName": "Road to Area 229 #2",
+          "pokemon": [
+            "Charizard",
+            "Venusaur",
+            "Incineroar",
+            "Garchomp",
+            "Greninja",
+            "Sneasler"
+          ],
+          "wins": 3,
+          "losses": 2,
+          "placement": 14,
+          "confidence": 0.525,
+          "secondaryArchetype": "Balance"
+        },
+        {
+          "teamId": "69efd51b4f71d664893e5db9::mastermason475",
+          "playerName": "MasterMason475",
+          "tournamentName": "ChampionMads Singles Battle Arena #1 - $50 USD",
+          "pokemon": [
+            "Gyarados",
+            "Spiritomb",
+            "Mow Rotom",
+            "Lucario",
+            "Alolan Ninetales",
+            "Lycanroc Dusk"
+          ],
+          "wins": 3,
+          "losses": 2,
+          "placement": 11,
+          "confidence": 0.487,
+          "secondaryArchetype": "Balance"
+        },
+        {
+          "teamId": "69efd51b4f71d664893e5db9::zelph",
+          "playerName": "Zelph",
+          "tournamentName": "ChampionMads Singles Battle Arena #1 - $50 USD",
+          "pokemon": [
+            "Espathra",
+            "Sneasler",
+            "Hisuian Arcanine",
+            "Eternal Flower Floette",
+            "Wash Rotom",
+            "Meowscarada"
+          ],
+          "wins": 0,
+          "losses": 4,
+          "placement": 31,
+          "confidence": 0.487,
+          "secondaryArchetype": "Balance"
+        },
+        {
+          "teamId": "69efd51b4f71d664893e5db9::b3cks",
+          "playerName": "b3cks",
+          "tournamentName": "ChampionMads Singles Battle Arena #1 - $50 USD",
+          "pokemon": [
+            "Basculegion",
+            "Kangaskhan",
+            "Sneasler",
+            "Scizor",
+            "Dragapult",
+            "Aerodactyl"
+          ],
+          "wins": 0,
+          "losses": 1,
+          "placement": 38,
+          "confidence": 0.607,
+          "secondaryArchetype": "Tailwind Offense"
+        },
+        {
+          "teamId": "69ee066cf9b24b9bd5b024d7::sparkelz",
+          "playerName": "Sparkelz",
+          "tournamentName": "\ud83d\udfca @AustinMcfraud's CHAMPIONS Showdown #2 \ud83d\udfca",
+          "pokemon": [
+            "Whimsicott",
+            "Scizor",
+            "Ceruledge",
+            "Dragapult",
+            "Wash Rotom",
+            "Gallade"
+          ],
+          "wins": 4,
+          "losses": 2,
+          "placement": 6,
+          "confidence": 0.809,
+          "secondaryArchetype": "Tailwind Offense"
+        }
+      ],
+      "commonDataQualityNotes": [
+        {
+          "note": "missing Pok\u00e9mon stats",
+          "count": 106
+        },
+        {
+          "note": "missing win/loss data",
+          "count": 5
+        }
+      ]
+    },
+    {
+      "archetype": "Sun",
+      "teamCount": 141,
+      "percentageOfTeams": 0.749,
+      "mostCommonPokemon": [
+        {
+          "name": "Torkoal",
+          "count": 130
+        },
+        {
+          "name": "Venusaur",
+          "count": 123
+        },
+        {
+          "name": "Incineroar",
+          "count": 104
+        },
+        {
+          "name": "Farigiraf",
+          "count": 99
+        },
+        {
+          "name": "Sneasler",
+          "count": 90
+        },
+        {
+          "name": "Golurk",
+          "count": 86
+        },
+        {
+          "name": "Charizard",
+          "count": 36
+        },
+        {
+          "name": "Whimsicott",
+          "count": 28
+        },
+        {
+          "name": "Milotic",
+          "count": 13
+        },
+        {
+          "name": "Ninetales",
+          "count": 10
+        }
+      ],
+      "mostCommonMoves": [
+        {
+          "name": "Protect",
+          "count": 511
+        },
+        {
+          "name": "Fake Out",
+          "count": 197
+        },
+        {
+          "name": "Heat Wave",
+          "count": 143
+        },
+        {
+          "name": "Sludge Bomb",
+          "count": 120
+        },
+        {
+          "name": "Trick Room",
+          "count": 115
+        },
+        {
+          "name": "Eruption",
+          "count": 115
+        },
+        {
+          "name": "Weather Ball",
+          "count": 114
+        },
+        {
+          "name": "Flare Blitz",
+          "count": 106
+        },
+        {
+          "name": "Sleep Powder",
+          "count": 106
+        },
+        {
+          "name": "Parting Shot",
+          "count": 101
+        }
+      ],
+      "mostCommonItems": [
+        {
+          "name": "Focus Sash",
+          "count": 126
+        },
+        {
+          "name": "Sitrus Berry",
+          "count": 124
+        },
+        {
+          "name": "Charcoal",
+          "count": 116
+        },
+        {
+          "name": "White Herb",
+          "count": 99
+        },
+        {
+          "name": "Golurkite",
+          "count": 84
+        },
+        {
+          "name": "Shuca Berry",
+          "count": 74
+        },
+        {
+          "name": "Charizardite Y",
+          "count": 33
+        },
+        {
+          "name": "Leftovers",
+          "count": 29
+        },
+        {
+          "name": "Mental Herb",
+          "count": 19
+        },
+        {
+          "name": "Choice Scarf",
+          "count": 15
+        }
+      ],
+      "mostCommonAbilities": [
+        {
+          "name": "Drought",
+          "count": 141
+        },
+        {
+          "name": "Chlorophyll",
+          "count": 136
+        },
+        {
+          "name": "Intimidate",
+          "count": 105
+        },
+        {
+          "name": "Armor Tail",
+          "count": 98
+        },
+        {
+          "name": "Unburden",
+          "count": 91
+        },
+        {
+          "name": "Iron Fist",
+          "count": 81
+        },
+        {
+          "name": "Solar Power",
+          "count": 32
+        },
+        {
+          "name": "Prankster",
+          "count": 27
+        },
+        {
+          "name": "Competitive",
+          "count": 13
+        },
+        {
+          "name": "Blaze",
+          "count": 11
+        }
+      ],
+      "averageSpeed": 70.466,
+      "averageAttack": 98.407,
+      "averageSpecialAttack": 83.02,
+      "averageBulk": 257.031,
+      "averageWinRate": 0.339,
+      "sampleTeams": [
+        {
+          "teamId": "69f182e64f71d664893e6dfc::lufeedutra",
+          "playerName": "Lufeedutra",
+          "tournamentName": "Devils Den Tournaments #76 - $100 For First",
+          "pokemon": [
+            "Farigiraf",
+            "Incineroar",
+            "Torkoal",
+            "Charizard",
+            "Golurk",
+            "Venusaur"
+          ],
+          "wins": 3,
+          "losses": 3,
+          "placement": 53,
+          "confidence": 0.597,
+          "secondaryArchetype": "Trick Room"
+        },
+        {
+          "teamId": "69f182e64f71d664893e6dfc::tannerg",
+          "playerName": "TannerG",
+          "tournamentName": "Devils Den Tournaments #76 - $100 For First",
+          "pokemon": [
+            "Farigiraf",
+            "Torkoal",
+            "Charizard",
+            "Incineroar",
+            "Golurk",
+            "Venusaur"
+          ],
+          "wins": 2,
+          "losses": 2,
+          "placement": 69,
+          "confidence": 0.597,
+          "secondaryArchetype": "Trick Room"
+        },
+        {
+          "teamId": "69f182e64f71d664893e6dfc::costraz",
+          "playerName": "Costraz",
+          "tournamentName": "Devils Den Tournaments #76 - $100 For First",
+          "pokemon": [
+            "Golurk",
+            "Farigiraf",
+            "Incineroar",
+            "Venusaur",
+            "Torkoal",
+            "Sneasler"
+          ],
+          "wins": 0,
+          "losses": 1,
+          "placement": 116,
+          "confidence": 0.597,
+          "secondaryArchetype": "Trick Room"
+        },
+        {
+          "teamId": "69eef9409d90c111990b8fa0::mythiclegqnd",
+          "playerName": "Mythiclegqnd",
+          "tournamentName": "Sketch Academy Champions Regulation M-A Tournament",
+          "pokemon": [
+            "Ceruledge",
+            "Torkoal",
+            "Venusaur",
+            "Gallade",
+            "Garchomp",
+            "Kangaskhan"
+          ],
+          "wins": 1,
+          "losses": 1,
+          "placement": null,
+          "confidence": 0.611,
+          "secondaryArchetype": "Weather Offense"
+        },
+        {
+          "teamId": "69ef9dd4e23aab068aad3843::udgxdragon",
+          "playerName": "UDGxDragon",
+          "tournamentName": "Chaos League Sunday Slam #99",
+          "pokemon": [
+            "Blastoise",
+            "Torkoal",
+            "Milotic",
+            "Vaporeon",
+            "Leafeon",
+            "Jolteon"
+          ],
+          "wins": 1,
+          "losses": 3,
+          "placement": 15,
+          "confidence": 0.78,
+          "secondaryArchetype": "Stall or Control"
+        }
+      ],
+      "commonDataQualityNotes": [
+        {
+          "note": "missing Pok\u00e9mon stats",
+          "count": 15
+        },
+        {
+          "note": "missing win/loss data",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "archetype": "Stall or Control",
+      "teamCount": 103,
+      "percentageOfTeams": 0.547,
+      "mostCommonPokemon": [
+        {
+          "name": "Incineroar",
+          "count": 55
+        },
+        {
+          "name": "Garchomp",
+          "count": 55
+        },
+        {
+          "name": "Milotic",
+          "count": 54
+        },
+        {
+          "name": "Aegislash",
+          "count": 52
+        },
+        {
+          "name": "Wash Rotom",
+          "count": 24
+        },
+        {
+          "name": "Aerodactyl",
+          "count": 23
+        },
+        {
+          "name": "Venusaur",
+          "count": 21
+        },
+        {
+          "name": "Tyranitar",
+          "count": 19
+        },
+        {
+          "name": "Talonflame",
+          "count": 17
+        },
+        {
+          "name": "Meganium",
+          "count": 17
+        }
+      ],
+      "mostCommonMoves": [
+        {
+          "name": "Protect",
+          "count": 376
+        },
+        {
+          "name": "Rock Slide",
+          "count": 93
+        },
+        {
+          "name": "Fake Out",
+          "count": 85
+        },
+        {
+          "name": "Flare Blitz",
+          "count": 62
+        },
+        {
+          "name": "Tailwind",
+          "count": 61
+        },
+        {
+          "name": "Parting Shot",
+          "count": 55
+        },
+        {
+          "name": "King's Shield",
+          "count": 52
+        },
+        {
+          "name": "Dragon Claw",
+          "count": 52
+        },
+        {
+          "name": "Icy Wind",
+          "count": 51
+        },
+        {
+          "name": "Earthquake",
+          "count": 49
+        }
+      ],
+      "mostCommonItems": [
+        {
+          "name": "Leftovers",
+          "count": 82
+        },
+        {
+          "name": "Sitrus Berry",
+          "count": 74
+        },
+        {
+          "name": "Focus Sash",
+          "count": 58
+        },
+        {
+          "name": "Choice Scarf",
+          "count": 45
+        },
+        {
+          "name": "Spell Tag",
+          "count": 42
+        },
+        {
+          "name": "White Herb",
+          "count": 23
+        },
+        {
+          "name": "Chople Berry",
+          "count": 23
+        },
+        {
+          "name": "Meganiumite",
+          "count": 19
+        },
+        {
+          "name": "Lum Berry",
+          "count": 19
+        },
+        {
+          "name": "Shuca Berry",
+          "count": 18
+        }
+      ],
+      "mostCommonAbilities": [
+        {
+          "name": "Intimidate",
+          "count": 62
+        },
+        {
+          "name": "Rough Skin",
+          "count": 53
+        },
+        {
+          "name": "Stance Change",
+          "count": 52
+        },
+        {
+          "name": "Competitive",
+          "count": 51
+        },
+        {
+          "name": "Levitate",
+          "count": 28
+        },
+        {
+          "name": "Unnerve",
+          "count": 23
+        },
+        {
+          "name": "Sand Stream",
+          "count": 19
+        },
+        {
+          "name": "Chlorophyll",
+          "count": 19
+        },
+        {
+          "name": "Gale Wings",
+          "count": 17
+        },
+        {
+          "name": "Hospitality",
+          "count": 17
+        }
+      ],
+      "averageSpeed": 81.462,
+      "averageAttack": 90.302,
+      "averageSpecialAttack": 81.165,
+      "averageBulk": 277.505,
+      "averageWinRate": 0.47,
+      "sampleTeams": [
+        {
+          "teamId": "69e3beca78b359b789d65f49::ugaitz",
+          "playerName": "Ugaitz",
+          "tournamentName": "Champions Collective #5",
+          "pokemon": [
+            "Eternal Flower Floette",
+            "Aegislash",
+            "Talonflame",
+            "Incineroar",
+            "Garchomp",
+            "Wash Rotom"
+          ],
+          "wins": 1,
+          "losses": 2,
+          "placement": 22,
+          "confidence": 0.58,
+          "secondaryArchetype": "Balance"
+        },
+        {
+          "teamId": "69ef338663e53b0bb0b702c4::pkmntrainerrod",
+          "playerName": "Pkmntrainerrod",
+          "tournamentName": "Champions Cup",
+          "pokemon": [
+            "Meganium",
+            "Aerodactyl",
+            "Garchomp",
+            "Milotic",
+            "Incineroar",
+            "Aegislash"
+          ],
+          "wins": 6,
+          "losses": 3,
+          "placement": 8,
+          "confidence": 0.58,
+          "secondaryArchetype": "Balance"
+        },
+        {
+          "teamId": "69ef338663e53b0bb0b702c4::paperdragon",
+          "playerName": "PaperDragon",
+          "tournamentName": "Champions Cup",
+          "pokemon": [
+            "Tyranitar",
+            "Meganium",
+            "Garchomp",
+            "Aerodactyl",
+            "Aegislash",
+            "Milotic"
+          ],
+          "wins": 3,
+          "losses": 4,
+          "placement": 60,
+          "confidence": 0.58,
+          "secondaryArchetype": "Balance"
+        },
+        {
+          "teamId": "69cd686036f5b5c303dc45b1::nenzlil",
+          "playerName": "Nenzlil",
+          "tournamentName": "SpearPillar Champions Tour #2 | Reg M-A $100 Prize",
+          "pokemon": [
+            "Incineroar",
+            "Aggron",
+            "Sinistcha",
+            "Kommo O",
+            "Bellibolt",
+            "Aerodactyl"
+          ],
+          "wins": 2,
+          "losses": 3,
+          "placement": 156,
+          "confidence": 0.56,
+          "secondaryArchetype": "Bulky Setup"
+        },
+        {
+          "teamId": "69cd686036f5b5c303dc45b1::ja54",
+          "playerName": "Ja54",
+          "tournamentName": "SpearPillar Champions Tour #2 | Reg M-A $100 Prize",
+          "pokemon": [
+            "Meganium",
+            "Gliscor",
+            "Farigiraf",
+            "Kangaskhan",
+            "Archaludon",
+            "Sinistcha"
+          ],
+          "wins": 1,
+          "losses": 3,
+          "placement": 168,
+          "confidence": 0.613,
+          "secondaryArchetype": "Trick Room"
+        }
+      ],
+      "commonDataQualityNotes": [
+        {
+          "note": "missing Pok\u00e9mon stats",
+          "count": 44
+        },
+        {
+          "note": "missing win/loss data",
+          "count": 2
+        },
+        {
+          "note": "missing items",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "archetype": "Weather Offense",
+      "teamCount": 23,
+      "percentageOfTeams": 0.122,
+      "mostCommonPokemon": [
+        {
+          "name": "Venusaur",
+          "count": 13
+        },
+        {
+          "name": "Incineroar",
+          "count": 13
+        },
+        {
+          "name": "Sneasler",
+          "count": 10
+        },
+        {
+          "name": "Charizard",
+          "count": 9
+        },
+        {
+          "name": "Garchomp",
+          "count": 8
+        },
+        {
+          "name": "Archaludon",
+          "count": 3
+        },
+        {
+          "name": "Gyarados",
+          "count": 3
+        },
+        {
+          "name": "Raging Bolt",
+          "count": 3
+        },
+        {
+          "name": "Zamazenta",
+          "count": 3
+        },
+        {
+          "name": "Kingambit",
+          "count": 3
+        }
+      ],
+      "mostCommonMoves": [
+        {
+          "name": "Protect",
+          "count": 87
+        },
+        {
+          "name": "Fake Out",
+          "count": 23
+        },
+        {
+          "name": "Sludge Bomb",
+          "count": 18
+        },
+        {
+          "name": "Rock Slide",
+          "count": 14
+        },
+        {
+          "name": "Flare Blitz",
+          "count": 13
+        },
+        {
+          "name": "Weather Ball",
+          "count": 12
+        },
+        {
+          "name": "Close Combat",
+          "count": 12
+        },
+        {
+          "name": "Parting Shot",
+          "count": 11
+        },
+        {
+          "name": "Tailwind",
+          "count": 10
+        },
+        {
+          "name": "Heat Wave",
+          "count": 10
+        }
+      ],
+      "mostCommonItems": [
+        {
+          "name": "Focus Sash",
+          "count": 18
+        },
+        {
+          "name": "Sitrus Berry",
+          "count": 16
+        },
+        {
+          "name": "Leftovers",
+          "count": 11
+        },
+        {
+          "name": "Choice Scarf",
+          "count": 9
+        },
+        {
+          "name": "Charizardite Y",
+          "count": 9
+        },
+        {
+          "name": "White Herb",
+          "count": 7
+        },
+        {
+          "name": "Chople Berry",
+          "count": 5
+        },
+        {
+          "name": "Venusaurite",
+          "count": 4
+        },
+        {
+          "name": "Assault Vest",
+          "count": 4
+        },
+        {
+          "name": "Booster Energy",
+          "count": 3
+        }
+      ],
+      "mostCommonAbilities": [
+        {
+          "name": "Chlorophyll",
+          "count": 18
+        },
+        {
+          "name": "Intimidate",
+          "count": 16
+        },
+        {
+          "name": "Drought",
+          "count": 12
+        },
+        {
+          "name": "Unburden",
+          "count": 9
+        },
+        {
+          "name": "Rough Skin",
+          "count": 8
+        },
+        {
+          "name": "Protosynthesis",
+          "count": 7
+        },
+        {
+          "name": "Drizzle",
+          "count": 6
+        },
+        {
+          "name": "Prankster",
+          "count": 5
+        },
+        {
+          "name": "Stamina",
+          "count": 3
+        },
+        {
+          "name": "Levitate",
+          "count": 3
+        }
+      ],
+      "averageSpeed": 88.549,
+      "averageAttack": 100.055,
+      "averageSpecialAttack": 90.199,
+      "averageBulk": 259.772,
+      "averageWinRate": 0.381,
+      "sampleTeams": [
+        {
+          "teamId": "69ef338663e53b0bb0b702c4::kohakuinu",
+          "playerName": "KohakuInu",
+          "tournamentName": "Champions Cup",
+          "pokemon": [
+            "Archaludon",
+            "Wash Rotom",
+            "Venusaur",
+            "Froslass",
+            "Pelipper",
+            "Hisuian Goodra"
+          ],
+          "wins": 0,
+          "losses": 4,
+          "placement": 122,
+          "confidence": 0.58,
+          "secondaryArchetype": "Balance"
+        },
+        {
+          "teamId": "69dd6d2e48d465883f712e47::rredl",
+          "playerName": "rRedl",
+          "tournamentName": "LIGA DA COMUNIDADE #4 (R$ 1.000 PRIZE POOL)",
+          "pokemon": [
+            "Charizard",
+            "Venusaur",
+            "Clefable",
+            "Gyarados",
+            "Sneasler",
+            "Garchomp"
+          ],
+          "wins": 5,
+          "losses": 3,
+          "placement": 29,
+          "confidence": 0.58,
+          "secondaryArchetype": "Balance"
+        },
+        {
+          "teamId": "69ef5c194f71d664893e562f::ryoshino",
+          "playerName": "ryoshino",
+          "tournamentName": "Pomini's cup #01- REG I",
+          "pokemon": [
+            "Zacian",
+            "Kyogre",
+            "Tornadus",
+            "Smeargle",
+            "Raging Bolt",
+            "Incineroar"
+          ],
+          "wins": 1,
+          "losses": 2,
+          "placement": null,
+          "confidence": 0.58,
+          "secondaryArchetype": "Balance"
+        },
+        {
+          "teamId": "69d581e30e548b5c2fbe5f34::ciovy",
+          "playerName": "Ciovy",
+          "tournamentName": "Copa Santa Fe 2026 - 2nda Fecha",
+          "pokemon": [
+            "Shadow Rider Calyrex",
+            "Zamazenta",
+            "Raging Bolt",
+            "Dragonite",
+            "Rillaboom",
+            "Torkoal"
+          ],
+          "wins": 3,
+          "losses": 3,
+          "placement": 2,
+          "confidence": 0.762,
+          "secondaryArchetype": "Sun"
+        },
+        {
+          "teamId": "69c30ae236f5b5c303dbce1c::kenzinn",
+          "playerName": "kenzinn",
+          "tournamentName": "The Grand Champions Festival",
+          "pokemon": [
+            "Mamoswine",
+            "Tyranitar",
+            "Venusaur",
+            "Gyarados",
+            "Gallade",
+            "Talonflame"
+          ],
+          "wins": 4,
+          "losses": 3,
+          "placement": 1756,
+          "confidence": 0.773,
+          "secondaryArchetype": "Sand"
+        }
+      ],
+      "commonDataQualityNotes": [
+        {
+          "note": "missing Pok\u00e9mon stats",
+          "count": 7
+        }
+      ]
+    },
+    {
+      "archetype": "Snow",
+      "teamCount": 2,
+      "percentageOfTeams": 0.011,
+      "mostCommonPokemon": [
+        {
+          "name": "Abomasnow",
+          "count": 2
+        },
+        {
+          "name": "Basculegion",
+          "count": 2
+        },
+        {
+          "name": "Smeargle",
+          "count": 1
+        },
+        {
+          "name": "Comfey",
+          "count": 1
+        },
+        {
+          "name": "Cetitan",
+          "count": 1
+        },
+        {
+          "name": "Baxcalibur",
+          "count": 1
+        },
+        {
+          "name": "Hawlucha",
+          "count": 1
+        },
+        {
+          "name": "Incineroar",
+          "count": 1
+        },
+        {
+          "name": "Pelipper",
+          "count": 1
+        },
+        {
+          "name": "Vanilluxe",
+          "count": 1
+        }
+      ],
+      "mostCommonMoves": [
+        {
+          "name": "Protect",
+          "count": 8
+        },
+        {
+          "name": "High Horsepower",
+          "count": 2
+        },
+        {
+          "name": "Aurora Veil",
+          "count": 2
+        },
+        {
+          "name": "Blizzard",
+          "count": 2
+        },
+        {
+          "name": "Wave Crash",
+          "count": 2
+        },
+        {
+          "name": "Last Respects",
+          "count": 2
+        },
+        {
+          "name": "Aqua Jet",
+          "count": 2
+        },
+        {
+          "name": "Brave Bird",
+          "count": 2
+        },
+        {
+          "name": "Fake Out",
+          "count": 1
+        },
+        {
+          "name": "Follow Me",
+          "count": 1
+        }
+      ],
+      "mostCommonItems": [
+        {
+          "name": "Focus Sash",
+          "count": 2
+        },
+        {
+          "name": "Sitrus Berry",
+          "count": 2
+        },
+        {
+          "name": "Choice Scarf",
+          "count": 2
+        },
+        {
+          "name": "Covert Cloak",
+          "count": 1
+        },
+        {
+          "name": "Light Clay",
+          "count": 1
+        },
+        {
+          "name": "Leftovers",
+          "count": 1
+        },
+        {
+          "name": "Hawluchanite",
+          "count": 1
+        },
+        {
+          "name": "Mystic Water",
+          "count": 1
+        },
+        {
+          "name": "Abomasite",
+          "count": 1
+        }
+      ],
+      "mostCommonAbilities": [
+        {
+          "name": "Snow Warning",
+          "count": 3
+        },
+        {
+          "name": "Moody",
+          "count": 1
+        },
+        {
+          "name": "Triage",
+          "count": 1
+        },
+        {
+          "name": "Slush Rush",
+          "count": 1
+        },
+        {
+          "name": "Ice Body",
+          "count": 1
+        },
+        {
+          "name": "Adaptability",
+          "count": 1
+        },
+        {
+          "name": "Mold Breaker",
+          "count": 1
+        },
+        {
+          "name": "Intimidate",
+          "count": 1
+        },
+        {
+          "name": "Drizzle",
+          "count": 1
+        },
+        {
+          "name": "Swift Swim",
+          "count": 1
+        }
+      ],
+      "averageSpeed": 77.75,
+      "averageAttack": 90.834,
+      "averageSpecialAttack": 77.084,
+      "averageBulk": 246.75,
+      "averageWinRate": 0.188,
+      "sampleTeams": [
+        {
+          "teamId": "69d03ff5800d329be2e7146d::sizzle_snom",
+          "playerName": "sizzle_snom",
+          "tournamentName": "VGC UU Classic #3: Regulation H",
+          "pokemon": [
+            "Smeargle",
+            "Comfey",
+            "Cetitan",
+            "Abomasnow",
+            "Baxcalibur",
+            "Basculegion"
+          ],
+          "wins": 1,
+          "losses": 3,
+          "placement": 8,
+          "confidence": 0.78,
+          "secondaryArchetype": "Bulky Setup"
+        },
+        {
+          "teamId": "69c6a52bd478313a15a33fd4::wolvenpanic",
+          "playerName": "wolvenPanic",
+          "tournamentName": "Pokemon Champions First Tour $500 Prize Pool",
+          "pokemon": [
+            "Hawlucha",
+            "Incineroar",
+            "Pelipper",
+            "Basculegion",
+            "Vanilluxe",
+            "Abomasnow"
+          ],
+          "wins": 1,
+          "losses": 7,
+          "placement": null,
+          "confidence": 0.762,
+          "secondaryArchetype": "Rain"
+        }
+      ],
+      "commonDataQualityNotes": []
+    }
+  ],
+  "missingDataWarnings": [
+    {
+      "note": "missing Pok\u00e9mon stats",
+      "count": 9009
+    },
+    {
+      "note": "missing win/loss data",
+      "count": 836
+    },
+    {
+      "note": "missing items",
+      "count": 116
+    }
+  ]
+}

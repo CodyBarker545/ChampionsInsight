@@ -1,0 +1,1147 @@
+{
+  "name": "ChampionsInsight Archetype Notes",
+  "version": "1.0.0",
+  "archetypes": {
+    "balance": {
+      "id": "balance",
+      "displayName": "Balance",
+      "category": "standard",
+      "shortDescription": "A flexible team that mixes offense, defense, utility, and speed control.",
+      "userNotes": [
+        "This team looks well-rounded rather than fully aggressive or fully defensive.",
+        "Balance teams can usually shift between offense and defense depending on the matchup.",
+        "Watch for pivoting, utility moves, speed control, and one or two strong breakers."
+      ],
+      "battleAdvice": [
+        "Avoid overcommitting early because balance teams often have defensive answers and pivots.",
+        "Identify the main breaker and the main wall first.",
+        "Force the opponent to reveal whether they are playing defensively or setting up an offensive endgame."
+      ],
+      "commonSignals": {
+        "pokemonRoles": [
+          "1-2 bulky defensive Pokémon",
+          "1-2 offensive threats or wallbreakers",
+          "speed control user",
+          "utility or pivot support"
+        ],
+        "moves": [
+          "Protect",
+          "Thunder Wave",
+          "Will-O-Wisp",
+          "U-turn",
+          "Volt Switch",
+          "Stealth Rock",
+          "Defog",
+          "Rapid Spin"
+        ],
+        "items": [
+          "Leftovers",
+          "Sitrus Berry",
+          "Choice Scarf",
+          "Heavy-Duty Boots",
+          "Assault Vest"
+        ],
+        "stats": {
+          "averageSpeed": "medium",
+          "averageBulk": "medium-to-high",
+          "offenseProfile": "mixed"
+        }
+      },
+      "ruleScoring": {
+        "positiveSignals": [
+          {
+            "feature": "bulky_pokemon_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": 2
+          },
+          {
+            "feature": "offensive_threat_count",
+            "operator": ">=",
+            "value": 2,
+            "weight": 2
+          },
+          {
+            "feature": "speed_control_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": 2
+          },
+          {
+            "feature": "utility_move_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": 1
+          },
+          {
+            "feature": "physical_attacker_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": 1
+          },
+          {
+            "feature": "special_attacker_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": 1
+          }
+        ],
+        "negativeSignals": [
+          {
+            "feature": "fast_pokemon_count",
+            "operator": ">=",
+            "value": 5,
+            "weight": -2
+          },
+          {
+            "feature": "recovery_move_count",
+            "operator": ">=",
+            "value": 5,
+            "weight": -1
+          },
+          {
+            "feature": "slow_pokemon_count",
+            "operator": ">=",
+            "value": 5,
+            "weight": -2
+          }
+        ],
+        "maxScore": 9
+      },
+      "weaknessNotes": [
+        "Can lose if its defensive answer is removed.",
+        "Can struggle against surprise sets.",
+        "May lack the raw pressure of hyper offense or the long-game strength of stall."
+      ],
+      "exampleExplanation": "The team has a mix of bulk, offensive pressure, and utility, so it looks like a Balance composition."
+    },
+    "hyper_offense": {
+      "id": "hyper_offense",
+      "displayName": "Hyper Offense",
+      "category": "standard",
+      "shortDescription": "An aggressive team built to pressure immediately with fast attackers and setup threats.",
+      "userNotes": [
+        "This team is likely trying to win quickly through momentum and offensive pressure.",
+        "Expect setup sweepers, strong attackers, and limited defensive switching.",
+        "If you stop the first wave of pressure, the team may become easier to control."
+      ],
+      "battleAdvice": [
+        "Preserve priority, speed control, and defensive checks.",
+        "Do not give free setup turns.",
+        "Trading one-for-one can be good if it stops their main sweeper."
+      ],
+      "commonSignals": {
+        "pokemonRoles": [
+          "suicide lead",
+          "multiple sweepers",
+          "wallbreakers",
+          "setup attackers"
+        ],
+        "moves": [
+          "Dragon Dance",
+          "Swords Dance",
+          "Nasty Plot",
+          "Shell Smash",
+          "Stealth Rock",
+          "Spikes",
+          "Taunt",
+          "Close Combat"
+        ],
+        "items": [
+          "Focus Sash",
+          "Life Orb",
+          "Choice Band",
+          "Choice Specs",
+          "Booster Energy"
+        ],
+        "stats": {
+          "averageSpeed": "high",
+          "averageOffense": "high",
+          "averageBulk": "low-to-medium"
+        }
+      },
+      "ruleScoring": {
+        "positiveSignals": [
+          {
+            "feature": "fast_pokemon_count",
+            "operator": ">=",
+            "value": 4,
+            "weight": 3
+          },
+          {
+            "feature": "offensive_threat_count",
+            "operator": ">=",
+            "value": 4,
+            "weight": 3
+          },
+          {
+            "feature": "setup_move_count",
+            "operator": ">=",
+            "value": 2,
+            "weight": 2
+          },
+          {
+            "feature": "focus_sash_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": 1
+          },
+          {
+            "feature": "choice_item_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": 1
+          }
+        ],
+        "negativeSignals": [
+          {
+            "feature": "bulky_pokemon_count",
+            "operator": ">=",
+            "value": 3,
+            "weight": -2
+          },
+          {
+            "feature": "recovery_move_count",
+            "operator": ">=",
+            "value": 3,
+            "weight": -2
+          },
+          {
+            "feature": "average_speed",
+            "operator": "<",
+            "value": 70,
+            "weight": -2
+          }
+        ],
+        "maxScore": 10
+      },
+      "weaknessNotes": [
+        "Can collapse if it loses momentum.",
+        "Often has limited defensive switching.",
+        "Can struggle against bulky teams with priority, status, or strong speed control."
+      ],
+      "exampleExplanation": "The team has many fast attackers and setup threats with few defensive signals, so it looks like Hyper Offense."
+    },
+    "stall_control": {
+      "id": "stall_control",
+      "displayName": "Stall / Control",
+      "category": "standard",
+      "shortDescription": "A slow defensive team that wins by draining resources, spreading status, and controlling the pace.",
+      "userNotes": [
+        "This team likely wants long games.",
+        "Expect status, recovery, hazards, Protect, and defensive switching.",
+        "You need a clear way to break through its defensive core."
+      ],
+      "battleAdvice": [
+        "Protect your wallbreakers.",
+        "Avoid letting hazards and status slowly remove your options.",
+        "Look for chances to overwhelm the recovery loop with setup, strong super-effective damage, or Taunt."
+      ],
+      "commonSignals": {
+        "pokemonRoles": [
+          "special wall",
+          "physical wall",
+          "status spreader",
+          "hazard setter",
+          "hazard remover",
+          "regenerator pivot"
+        ],
+        "moves": [
+          "Toxic",
+          "Leech Seed",
+          "Recover",
+          "Roost",
+          "Soft-Boiled",
+          "Protect",
+          "Wish",
+          "Will-O-Wisp",
+          "Stealth Rock",
+          "Spikes"
+        ],
+        "items": [
+          "Leftovers",
+          "Rocky Helmet",
+          "Heavy-Duty Boots",
+          "Black Sludge",
+          "Sitrus Berry"
+        ],
+        "stats": {
+          "averageSpeed": "low-to-medium",
+          "averageBulk": "high",
+          "offenseProfile": "low-to-medium"
+        }
+      },
+      "ruleScoring": {
+        "positiveSignals": [
+          {
+            "feature": "bulky_pokemon_count",
+            "operator": ">=",
+            "value": 4,
+            "weight": 3
+          },
+          {
+            "feature": "recovery_move_count",
+            "operator": ">=",
+            "value": 3,
+            "weight": 3
+          },
+          {
+            "feature": "status_move_count",
+            "operator": ">=",
+            "value": 3,
+            "weight": 2
+          },
+          {
+            "feature": "hazard_or_utility_count",
+            "operator": ">=",
+            "value": 2,
+            "weight": 1
+          },
+          {
+            "feature": "average_bulk",
+            "operator": ">=",
+            "value": 95,
+            "weight": 2
+          }
+        ],
+        "negativeSignals": [
+          {
+            "feature": "fast_pokemon_count",
+            "operator": ">=",
+            "value": 4,
+            "weight": -2
+          },
+          {
+            "feature": "offensive_threat_count",
+            "operator": ">=",
+            "value": 4,
+            "weight": -2
+          }
+        ],
+        "maxScore": 11
+      },
+      "weaknessNotes": [
+        "Requires precise defensive play.",
+        "Can lose if hazard control fails.",
+        "Can be broken by strong setup, Taunt, or overwhelming offensive pressure."
+      ],
+      "exampleExplanation": "The team has high bulk, recovery, and status/control tools, so it looks like a Stall or Control composition."
+    },
+    "rain": {
+      "id": "rain",
+      "displayName": "Rain",
+      "category": "weather",
+      "shortDescription": "A weather team that uses rain to boost Water pressure and enable Swift Swim attackers.",
+      "userNotes": [
+        "This team likely wants rain active as often as possible.",
+        "Expect fast Water attackers, Thunder, Hurricane, and rain-boosted damage.",
+        "Removing or pressuring the rain setter can weaken the whole structure."
+      ],
+      "battleAdvice": [
+        "Pressure the rain setter early.",
+        "Keep Water resists healthy.",
+        "Track rain turns carefully.",
+        "Use priority, weather control, or speed control to stop Swift Swim attackers."
+      ],
+      "commonSignals": {
+        "pokemonRoles": [
+          "rain setter",
+          "Swift Swim attacker",
+          "Water-type breaker",
+          "Electric or Flying attacker using perfect-accuracy moves"
+        ],
+        "moves": [
+          "Rain Dance",
+          "Thunder",
+          "Hurricane",
+          "Hydro Pump",
+          "Surf",
+          "Muddy Water",
+          "Weather Ball"
+        ],
+        "abilities": [
+          "Drizzle",
+          "Swift Swim",
+          "Rain Dish"
+        ],
+        "items": [
+          "Damp Rock",
+          "Choice Specs",
+          "Life Orb",
+          "Mystic Water",
+          "Focus Sash"
+        ],
+        "stats": {
+          "averageSpeed": "medium-to-high",
+          "averageOffense": "high",
+          "weatherDependency": "high"
+        }
+      },
+      "ruleScoring": {
+        "positiveSignals": [
+          {
+            "feature": "drizzle_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": 4
+          },
+          {
+            "feature": "rain_dance_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": 2
+          },
+          {
+            "feature": "swift_swim_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": 3
+          },
+          {
+            "feature": "water_type_count",
+            "operator": ">=",
+            "value": 2,
+            "weight": 2
+          },
+          {
+            "feature": "rain_compatible_move_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": 1
+          }
+        ],
+        "negativeSignals": [
+          {
+            "feature": "sun_setter_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": -2
+          },
+          {
+            "feature": "sand_setter_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": -2
+          }
+        ],
+        "maxScore": 12
+      },
+      "weaknessNotes": [
+        "Can fall apart if the weather setter is removed.",
+        "Can struggle against Water-resistant defensive cores.",
+        "Opposing weather can disrupt its speed and damage plan."
+      ],
+      "exampleExplanation": "The team has rain-setting or rain-abusing signals, so it looks like a Rain composition."
+    },
+    "sun": {
+      "id": "sun",
+      "displayName": "Sun",
+      "category": "weather",
+      "shortDescription": "A weather team that uses sun to boost Fire damage and enable Chlorophyll or sun-based attackers.",
+      "userNotes": [
+        "This team likely wants sun active to boost Fire attacks and enable fast Grass-type pressure.",
+        "Expect Torkoal, Drought, Chlorophyll, Solar Beam, and strong Fire-type offense.",
+        "Some Sun teams can overlap with Trick Room because slow sun setters and attackers work well there."
+      ],
+      "battleAdvice": [
+        "Pressure or remove the sun setter.",
+        "Track sun turns carefully.",
+        "Keep Fire resists healthy.",
+        "Watch for Chlorophyll speed spikes and strong spread damage."
+      ],
+      "commonSignals": {
+        "pokemonRoles": [
+          "sun setter",
+          "Chlorophyll attacker",
+          "Fire-type breaker",
+          "slow sun attacker",
+          "Grass-type coverage user"
+        ],
+        "moves": [
+          "Sunny Day",
+          "Solar Beam",
+          "Solar Blade",
+          "Heat Wave",
+          "Eruption",
+          "Flamethrower",
+          "Weather Ball"
+        ],
+        "abilities": [
+          "Drought",
+          "Chlorophyll",
+          "Solar Power",
+          "Protosynthesis"
+        ],
+        "items": [
+          "Heat Rock",
+          "Charcoal",
+          "Choice Specs",
+          "Life Orb",
+          "Focus Sash"
+        ],
+        "stats": {
+          "averageSpeed": "variable",
+          "averageOffense": "high",
+          "weatherDependency": "high"
+        }
+      },
+      "ruleScoring": {
+        "positiveSignals": [
+          {
+            "feature": "drought_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": 4
+          },
+          {
+            "feature": "sunny_day_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": 2
+          },
+          {
+            "feature": "chlorophyll_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": 3
+          },
+          {
+            "feature": "fire_type_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": 1
+          },
+          {
+            "feature": "sun_compatible_move_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": 1
+          }
+        ],
+        "negativeSignals": [
+          {
+            "feature": "rain_setter_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": -2
+          },
+          {
+            "feature": "snow_setter_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": -1
+          }
+        ],
+        "maxScore": 11
+      },
+      "weaknessNotes": [
+        "Can lose power if the sun setter is removed.",
+        "Opposing weather can disrupt the game plan.",
+        "Fire resists and strong special walls can slow it down."
+      ],
+      "exampleExplanation": "The team has sun-setting or sun-abusing signals, so it looks like a Sun composition."
+    },
+    "sand": {
+      "id": "sand",
+      "displayName": "Sand",
+      "category": "weather",
+      "shortDescription": "A weather team that uses sand for chip damage, Rock-type special defense boosts, and Sand Rush pressure.",
+      "userNotes": [
+        "This team likely uses sand to create passive pressure and improve certain matchups.",
+        "Expect Tyranitar, Hippowdon, Rock/Ground/Steel cores, or Sand Rush attackers.",
+        "Sand teams often overlap with balance or offense."
+      ],
+      "battleAdvice": [
+        "Pressure the sand setter.",
+        "Watch for Sand Rush speed changes.",
+        "Use Water, Grass, Fighting, Ground, or Steel coverage where appropriate.",
+        "Track chip damage because sand can put your team into KO range."
+      ],
+      "commonSignals": {
+        "pokemonRoles": [
+          "sand setter",
+          "Sand Rush attacker",
+          "Rock-type special bulk user",
+          "Ground or Steel partner",
+          "physical breaker"
+        ],
+        "moves": [
+          "Sandstorm",
+          "Stone Edge",
+          "Rock Slide",
+          "Earthquake",
+          "High Horsepower",
+          "Iron Head"
+        ],
+        "abilities": [
+          "Sand Stream",
+          "Sand Rush",
+          "Sand Force",
+          "Sand Veil"
+        ],
+        "items": [
+          "Smooth Rock",
+          "Choice Band",
+          "Assault Vest",
+          "Leftovers",
+          "Focus Sash",
+          "Clear Amulet"
+        ],
+        "stats": {
+          "averageSpeed": "medium",
+          "averagePhysicalAttack": "high",
+          "averageBulk": "medium-to-high"
+        }
+      },
+      "ruleScoring": {
+        "positiveSignals": [
+          {
+            "feature": "sand_stream_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": 4
+          },
+          {
+            "feature": "sandstorm_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": 2
+          },
+          {
+            "feature": "sand_rush_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": 3
+          },
+          {
+            "feature": "rock_type_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": 1
+          },
+          {
+            "feature": "ground_or_steel_count",
+            "operator": ">=",
+            "value": 2,
+            "weight": 1
+          }
+        ],
+        "negativeSignals": [
+          {
+            "feature": "rain_setter_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": -2
+          },
+          {
+            "feature": "sun_setter_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": -1
+          }
+        ],
+        "maxScore": 11
+      },
+      "weaknessNotes": [
+        "Can struggle if the sand setter is removed early.",
+        "Often has shared weaknesses to Water, Fighting, Ground, or Grass.",
+        "Opposing weather can disrupt the team."
+      ],
+      "exampleExplanation": "The team has sand-setting or sand-abusing signals, so it looks like a Sand composition."
+    },
+    "snow": {
+      "id": "snow",
+      "displayName": "Snow",
+      "category": "weather",
+      "shortDescription": "A weather team that uses snow to improve Ice-type physical bulk and enable Blizzard or veil strategies.",
+      "userNotes": [
+        "This team likely wants snow active to improve Ice-type durability or enable Blizzard pressure.",
+        "Expect Snow Warning, Aurora Veil, Blizzard, and Ice-type attackers.",
+        "Snow teams may try to set screens and create setup opportunities."
+      ],
+      "battleAdvice": [
+        "Pressure the snow setter before Aurora Veil goes up.",
+        "Bring strong Fire, Steel, Rock, or Fighting pressure where appropriate.",
+        "Track screen turns and avoid giving free setup."
+      ],
+      "commonSignals": {
+        "pokemonRoles": [
+          "snow setter",
+          "Aurora Veil support",
+          "Ice-type attacker",
+          "setup sweeper behind screens"
+        ],
+        "moves": [
+          "Snowscape",
+          "Aurora Veil",
+          "Blizzard",
+          "Freeze-Dry",
+          "Ice Beam",
+          "Icy Wind"
+        ],
+        "abilities": [
+          "Snow Warning",
+          "Slush Rush",
+          "Ice Body"
+        ],
+        "items": [
+          "Light Clay",
+          "Icy Rock",
+          "Focus Sash",
+          "Never-Melt Ice",
+          "Heavy-Duty Boots"
+        ],
+        "stats": {
+          "averageSpeed": "variable",
+          "averageBulk": "medium",
+          "weatherDependency": "medium-to-high"
+        }
+      },
+      "ruleScoring": {
+        "positiveSignals": [
+          {
+            "feature": "snow_warning_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": 4
+          },
+          {
+            "feature": "snowscape_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": 2
+          },
+          {
+            "feature": "aurora_veil_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": 3
+          },
+          {
+            "feature": "slush_rush_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": 2
+          },
+          {
+            "feature": "ice_type_count",
+            "operator": ">=",
+            "value": 2,
+            "weight": 1
+          }
+        ],
+        "negativeSignals": [
+          {
+            "feature": "sun_setter_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": -2
+          },
+          {
+            "feature": "rain_setter_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": -1
+          }
+        ],
+        "maxScore": 12
+      },
+      "weaknessNotes": [
+        "Can depend heavily on keeping snow or screens active.",
+        "Ice teams often have difficult defensive matchups.",
+        "If Aurora Veil is blocked or removed, the team may lose its setup window."
+      ],
+      "exampleExplanation": "The team has snow-setting, Ice-type, or Aurora Veil signals, so it looks like a Snow composition."
+    },
+    "trick_room": {
+      "id": "trick_room",
+      "displayName": "Trick Room",
+      "category": "speed_control",
+      "shortDescription": "A team that reverses Speed control so slower bulky attackers move first.",
+      "userNotes": [
+        "This team likely wants to set Trick Room and attack with slow, powerful Pokémon.",
+        "Expect bulky setters, slow sweepers, and tempo control.",
+        "The most important turns are the setup turn and the limited Trick Room turns afterward."
+      ],
+      "battleAdvice": [
+        "Stop Trick Room from going up if possible using Taunt, Fake Out, pressure, or double targeting.",
+        "If Trick Room goes up, protect, pivot, or stall out turns.",
+        "Remove the slow attackers before they get multiple turns under Trick Room."
+      ],
+      "commonSignals": {
+        "pokemonRoles": [
+          "Trick Room setter",
+          "slow bulky attacker",
+          "redirection support",
+          "anti-priority support",
+          "Fake Out support"
+        ],
+        "moves": [
+          "Trick Room",
+          "Protect",
+          "Helping Hand",
+          "Follow Me",
+          "Rage Powder",
+          "Fake Out",
+          "Eruption"
+        ],
+        "abilities": [
+          "Magic Bounce",
+          "Telepathy",
+          "Armor Tail",
+          "Queenly Majesty",
+          "Drought"
+        ],
+        "items": [
+          "Mental Herb",
+          "Eviolite",
+          "Sitrus Berry",
+          "Leftovers",
+          "Life Orb",
+          "Charcoal"
+        ],
+        "stats": {
+          "averageSpeed": "low",
+          "averageBulk": "high",
+          "averageOffense": "medium-to-high"
+        }
+      },
+      "ruleScoring": {
+        "positiveSignals": [
+          {
+            "feature": "trick_room_move_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": 5
+          },
+          {
+            "feature": "trick_room_setter_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": 3
+          },
+          {
+            "feature": "slow_pokemon_count",
+            "operator": ">=",
+            "value": 3,
+            "weight": 2
+          },
+          {
+            "feature": "average_speed",
+            "operator": "<=",
+            "value": 70,
+            "weight": 2
+          },
+          {
+            "feature": "bulky_pokemon_count",
+            "operator": ">=",
+            "value": 2,
+            "weight": 1
+          }
+        ],
+        "negativeSignals": [
+          {
+            "feature": "fast_pokemon_count",
+            "operator": ">=",
+            "value": 4,
+            "weight": -3
+          },
+          {
+            "feature": "average_speed",
+            "operator": ">=",
+            "value": 95,
+            "weight": -3
+          }
+        ],
+        "maxScore": 13
+      },
+      "weaknessNotes": [
+        "Trick Room has limited turns.",
+        "If the setup is stopped, the team can become slow and exposed.",
+        "Taunt, Fake Out, double targeting, phasing, and Protect can reduce its impact."
+      ],
+      "exampleExplanation": "The team has Trick Room setup signals and slow bulky attackers, so it looks like a Trick Room composition."
+    },
+    "semi_room": {
+      "id": "semi_room",
+      "displayName": "Semi-Room",
+      "category": "speed_control",
+      "shortDescription": "A team with both normal-speed mode and Trick Room mode.",
+      "userNotes": [
+        "This team may not fully depend on Trick Room.",
+        "It can play normally with faster Pokémon, then switch into Trick Room for specific matchups.",
+        "Expect flexible speed control rather than one fixed game plan."
+      ],
+      "battleAdvice": [
+        "Do not assume Trick Room is always the main plan.",
+        "Identify which Pokémon function outside Trick Room and which need it.",
+        "Force the opponent into the speed mode that is worse for your team."
+      ],
+      "commonSignals": {
+        "pokemonRoles": [
+          "one Trick Room setter",
+          "some slow attackers",
+          "some fast attackers",
+          "flexible support"
+        ],
+        "moves": [
+          "Trick Room",
+          "Tailwind",
+          "Icy Wind",
+          "Protect",
+          "Helping Hand"
+        ],
+        "items": [
+          "Sitrus Berry",
+          "Focus Sash",
+          "Life Orb",
+          "Choice Scarf"
+        ],
+        "stats": {
+          "averageSpeed": "mixed",
+          "speedSpread": "wide",
+          "averageBulk": "medium"
+        }
+      },
+      "ruleScoring": {
+        "positiveSignals": [
+          {
+            "feature": "trick_room_move_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": 3
+          },
+          {
+            "feature": "slow_pokemon_count",
+            "operator": ">=",
+            "value": 2,
+            "weight": 2
+          },
+          {
+            "feature": "fast_pokemon_count",
+            "operator": ">=",
+            "value": 2,
+            "weight": 2
+          },
+          {
+            "feature": "speed_control_count",
+            "operator": ">=",
+            "value": 2,
+            "weight": 1
+          }
+        ],
+        "negativeSignals": [
+          {
+            "feature": "slow_pokemon_count",
+            "operator": ">=",
+            "value": 5,
+            "weight": -2
+          },
+          {
+            "feature": "fast_pokemon_count",
+            "operator": ">=",
+            "value": 5,
+            "weight": -2
+          }
+        ],
+        "maxScore": 8
+      },
+      "weaknessNotes": [
+        "Can be less focused than hard Trick Room.",
+        "May struggle if the wrong speed mode is forced.",
+        "Can be hard to pilot if both modes are needed in one battle."
+      ],
+      "exampleExplanation": "The team has Trick Room signals but also enough fast Pokémon to play outside Trick Room, so it looks like Semi-Room."
+    },
+    "tailwind_offense": {
+      "id": "tailwind_offense",
+      "displayName": "Tailwind Offense",
+      "category": "speed_control",
+      "shortDescription": "An offensive team that uses Tailwind to outspeed and pressure the opponent.",
+      "userNotes": [
+        "This team likely wants to set Tailwind and use fast offensive pressure.",
+        "Expect speed control, strong attackers, and aggressive positioning.",
+        "Tailwind turns are limited, so the opponent may try to take KOs quickly."
+      ],
+      "battleAdvice": [
+        "Deny or stall Tailwind turns where possible.",
+        "Use Protect, priority, defensive pivots, or your own speed control.",
+        "Remove the Tailwind setter if it can reset speed control repeatedly."
+      ],
+      "commonSignals": {
+        "pokemonRoles": [
+          "Tailwind setter",
+          "fast attacker",
+          "spread damage attacker",
+          "pivot support"
+        ],
+        "moves": [
+          "Tailwind",
+          "Icy Wind",
+          "Protect",
+          "Heat Wave",
+          "Rock Slide",
+          "Make It Rain",
+          "Hurricane"
+        ],
+        "items": [
+          "Focus Sash",
+          "Covert Cloak",
+          "Choice Specs",
+          "Life Orb",
+          "Clear Amulet"
+        ],
+        "stats": {
+          "averageSpeed": "medium-to-high",
+          "averageOffense": "high",
+          "averageBulk": "medium"
+        }
+      },
+      "ruleScoring": {
+        "positiveSignals": [
+          {
+            "feature": "tailwind_move_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": 4
+          },
+          {
+            "feature": "fast_pokemon_count",
+            "operator": ">=",
+            "value": 3,
+            "weight": 2
+          },
+          {
+            "feature": "offensive_threat_count",
+            "operator": ">=",
+            "value": 3,
+            "weight": 2
+          },
+          {
+            "feature": "speed_control_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": 1
+          }
+        ],
+        "negativeSignals": [
+          {
+            "feature": "slow_pokemon_count",
+            "operator": ">=",
+            "value": 4,
+            "weight": -2
+          },
+          {
+            "feature": "recovery_move_count",
+            "operator": ">=",
+            "value": 4,
+            "weight": -1
+          }
+        ],
+        "maxScore": 9
+      },
+      "weaknessNotes": [
+        "Tailwind has limited turns.",
+        "Can be stalled out with Protect, redirection, and defensive switching.",
+        "May struggle if the setter is removed early."
+      ],
+      "exampleExplanation": "The team has Tailwind and strong offensive pressure, so it looks like Tailwind Offense."
+    },
+    "bulky_setup": {
+      "id": "bulky_setup",
+      "displayName": "Bulky Setup",
+      "category": "standard",
+      "shortDescription": "A team that uses durable Pokémon to set up and become difficult to remove.",
+      "userNotes": [
+        "This team likely tries to survive early pressure, set up, and win after boosting.",
+        "Expect Calm Mind, Bulk Up, Dragon Dance, Curse, or similar setup moves.",
+        "Removing setup opportunities is the key."
+      ],
+      "battleAdvice": [
+        "Do not give free setup turns.",
+        "Use Taunt, phasing, Haze, Encore, critical pressure, or immediate strong damage.",
+        "Track which Pokémon can become win conditions after one or two boosts."
+      ],
+      "commonSignals": {
+        "pokemonRoles": [
+          "bulky setup sweeper",
+          "screen support",
+          "redirection support",
+          "defensive pivot"
+        ],
+        "moves": [
+          "Calm Mind",
+          "Bulk Up",
+          "Dragon Dance",
+          "Curse",
+          "Iron Defense",
+          "Nasty Plot",
+          "Swords Dance",
+          "Recover",
+          "Protect"
+        ],
+        "items": [
+          "Leftovers",
+          "Sitrus Berry",
+          "Clear Amulet",
+          "Weakness Policy",
+          "Assault Vest"
+        ],
+        "stats": {
+          "averageBulk": "high",
+          "averageOffense": "medium-to-high",
+          "averageSpeed": "low-to-medium"
+        }
+      },
+      "ruleScoring": {
+        "positiveSignals": [
+          {
+            "feature": "bulky_pokemon_count",
+            "operator": ">=",
+            "value": 2,
+            "weight": 2
+          },
+          {
+            "feature": "setup_move_count",
+            "operator": ">=",
+            "value": 2,
+            "weight": 3
+          },
+          {
+            "feature": "recovery_move_count",
+            "operator": ">=",
+            "value": 1,
+            "weight": 1
+          },
+          {
+            "feature": "average_bulk",
+            "operator": ">=",
+            "value": 90,
+            "weight": 2
+          }
+        ],
+        "negativeSignals": [
+          {
+            "feature": "fast_pokemon_count",
+            "operator": ">=",
+            "value": 5,
+            "weight": -2
+          },
+          {
+            "feature": "setup_move_count",
+            "operator": "==",
+            "value": 0,
+            "weight": -4
+          }
+        ],
+        "maxScore": 8
+      },
+      "weaknessNotes": [
+        "Can be stopped by Taunt, Haze, Encore, phasing, or immediate pressure.",
+        "May be slow to start.",
+        "Can struggle against critical hits or strong super-effective damage."
+      ],
+      "exampleExplanation": "The team has bulky Pokémon and setup signals, so it looks like a Bulky Setup composition."
+    }
+  }
+}

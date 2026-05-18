@@ -1,0 +1,94 @@
+{
+  "0": {
+    "primary_label": "Tailwind",
+    "archetype_tags": [
+      "Tailwind"
+    ],
+    "notes": "Fast offense cluster. Mostly generic Tailwind-style teams with mixed secondary weather modes."
+  },
+  "1": {
+    "primary_label": "Tailwind",
+    "archetype_tags": [
+      "Tailwind",
+      "Rain"
+    ],
+    "notes": "Tailwind-forward cluster with noticeable Pelipper rain presence."
+  },
+  "2": {
+    "primary_label": "Tailwind",
+    "archetype_tags": [
+      "Tailwind",
+      "Trick Room"
+    ],
+    "notes": "Hybrid speed-control cluster. Tailwind is primary, with a meaningful Trick Room backup mode."
+  },
+  "3": {
+    "primary_label": "Tailwind",
+    "archetype_tags": [
+      "Tailwind",
+      "Trick Room"
+    ],
+    "notes": "Another hybrid control cluster with strong Tailwind presence and frequent Trick Room support."
+  },
+  "4": {
+    "primary_label": "Tailwind",
+    "archetype_tags": [
+      "Tailwind"
+    ],
+    "notes": "Small but fairly clean fast-mode cluster led by Tailwind-style teams."
+  },
+  "5": {
+    "primary_label": "Rain",
+    "archetype_tags": [
+      "Rain",
+      "Tailwind"
+    ],
+    "notes": "Rain-leaning cluster with Pelipper/Politoed style teams and common Tailwind support."
+  },
+  "6": {
+    "primary_label": "Snow",
+    "archetype_tags": [
+      "Snow"
+    ],
+    "notes": "Clear snow cluster built around Snow Warning and Blizzard/Aurora Veil patterns."
+  },
+  "7": {
+    "primary_label": "Tailwind",
+    "archetype_tags": [
+      "Tailwind"
+    ],
+    "notes": "Mixed offensive support cluster. Tailwind is the clearest common shared mode."
+  },
+  "8": {
+    "primary_label": "Sun",
+    "archetype_tags": [
+      "Sun",
+      "Tailwind"
+    ],
+    "notes": "Sun-leaning cluster, often with Charizard or Mega Charizard Y and fast support."
+  },
+  "9": {
+    "primary_label": "Tailwind",
+    "archetype_tags": [
+      "Tailwind",
+      "Sun"
+    ],
+    "notes": "Mostly Tailwind offense with some Charizard/Venusaur-style sun overlap."
+  },
+  "10": {
+    "primary_label": "Rain",
+    "archetype_tags": [
+      "Rain",
+      "Tailwind"
+    ],
+    "notes": "Rain-leaning cluster with Pelipper/Archaludon-style structures and Tailwind support."
+  },
+  "11": {
+    "primary_label": "Trick Room",
+    "archetype_tags": [
+      "Trick Room",
+      "Sun"
+    ],
+    "notes": "Tiny cluster, but the strongest signal is Trick Room with some sun overlap."
+  }
+}
