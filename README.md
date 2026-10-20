@@ -1,208 +1,207 @@
-# Champions Insight
+ChampionsInsight
+AI-assisted Pokémon Champions battle preparation and tournament intelligence.
 
-Champions Insight is a local Pokemon Champions battle-prep app. It combines a React frontend, a Flask API, a bundled Smogon damage calculator backend, local RAG over curated mechanics notes, tournament usage analysis, and computer-vision workflows for opponent team capture.
+ChampionsInsight is a full-stack application for analyzing competitive Pokémon teams. It combines deep-learning computer vision to identify an opponent's Pokémon from a photo with tournament statistics, unsupervised team clustering, damage calculations, and retrieval-based game-mechanics help.
 
-## What The App Does
+The aim is to turn a photo of a team-selection screen into actionable information: what Pokémon are present, which strategies might they represent, what sets appear in tournament data, and how might your own team match up?
+Project status: Active development. Built primarily as a local, Windows-first application and an applied AI/software-engineering portfolio project. Outputs are decision-support estimates, not guaranteed predictions.
 
-- build and save your own team locally
-- review matchup damage and speed interactions
-- inspect Pokedex details, common moves, and recommended teams
-- ask mechanics questions through the local RAG helper
-- estimate likely opponent sets from tournament data
-- classify team archetypes from tournament trends
-- capture or upload opponent photos and detect the opposing team
+What can ChampionsInsight be used for?
+For competitive players
+- Identify opposing teams: Take or upload a photo of a team-selection screen to detect cards, locate sprites, and identify Pokémon.
+- Prepare for matchups: View Pokémon details, level-50 stats, speed interactions, and calculated damage ranges.
+- Investigate likely sets: Examine common tournament moves, items, and conditional set probabilities to inform your preparation.
+- Understand team styles: Explore rule-defined strategies such as Rain or Trick Room, alongside groups of similar tournament teams discovered through clustering.
+- Research the metagame: Explore tournament usage, common team compositions, moves, items, and competitive trends.
+- Review mechanics: Ask questions about status effects, items, and other mechanics using locally indexed reference documents.
+- Build teams: Save and inspect your own roster and browse recommended builds derived from available tournament data.
+For developers and researchers
+ChampionsInsight is also a practical example of an end-to-end ML-enabled application: image acquisition, object detection, classification, model-confidence handling, data transformation, unsupervised learning, vector search, API integration, frontend presentation, and automated tests.
+How it works
+1. Computer vision: photo to Pokémon identities
+Camera photo or uploaded image
+              |
+              v
+       OpenCV / NumPy
+  preprocessing and quality checks
+              |
+              v
+     YOLOv8n card detector
+     locate opponent team cards
+              |
+              v
+      Second YOLO detector
+       locate Pokémon sprites
+              |
+              v
+       MobileNetV3 classifier
+   rank candidate Pokémon species
+              |
+              v
+    Confidence checks + recovery
+              |
+              v
+     Identified Pokémon + stats
+The active Pokémon identity pipeline uses two stages of YOLO object detection and MobileNetV3 image classification. It includes confidence-based checks (with an approximately 85% acceptance threshold in the current workflow), higher-resolution retries for missed cards, and wider-crop retries for uncertain classifications. Detection results can be flagged for review rather than treated as certain.
 
-## Project Layout
+Earlier DINOv2/FAISS image-embedding experiments remain in the codebase for research and comparison, but are not the active application identity predictor.
 
-```text
-backend/
-  api/        Flask route blueprints
-  data/       Source data, generated CV assets, uploads, and local user data
-  rag/        RAG preprocessing and FAISS index builders
-  scripts/    Data-build, CV, training, review, and utility workflows
-  services/   Backend business logic
-frontend/
-  src/        React app, pages, API clients, tests, and styles
-scripts/
-  setup.ps1   Windows bootstrap script for dependencies and derived data
-docs/         Product docs, mockups, and planning notes
-```
+Important: Recognition accuracy depends on the camera angle, screen glare, crop quality, sprite appearance, and training-data coverage. Identifying all six Pokémon reliably remains an area of ongoing improvement.
+2. Tournament intelligence: data analysis and machine learning
+Tournament records feed several distinct kinds of analysis:
+Capability	Method	What it provides
+Pokémon usage, moves, items, and trends	Descriptive statistical analysis	Evidence of what appears in recorded tournaments
+Likely sets and conditional probabilities	Frequency-based statistical estimates	Observed distributions given available conditions
+Rain, Trick Room, and other known styles	Handwritten rules	Interpretable strategy labels
+Similar tournament team discovery	K-means clustering	Data-driven team groupings and representative examples
+Mechanics document retrieval	Text embeddings + FAISS, with document fallback	Relevant reference passages for user questions
 
-## Prerequisites
 
-Champions Insight is currently set up as a Windows-first local project.
+The team-clustering implementation uses engineered team features, TF-IDF weighting, feature standardization, TruncatedSVD, and scikit-learn KMeans. Cluster summaries help expose common Pokémon, moves, items, abilities, and representative teams.
 
-- Python 3 with `venv`
-- Node.js and `npm`
+Scope clarification: Most metagame summaries are statistical analysis, not trained predictive models. ChampionsInsight does not currently train a model to predict future metagames or battle winners.
+3. Battle and knowledge tools
+- Damage calculations: Integrates the bundled @smogon/calc calculation service to evaluate battle scenarios.
+- Team and Pokédex views: Browse Pokémon information, builds, and relevant competitive summaries.
+- Mechanics Q&A: Retrieves information from curated local documents via embedding-based search or local-document fallback. Current answers are primarily document-grounded/extractive, not an always-on generative LLM.
+Technology stack
+Layer	Technologies
+Frontend	React, JavaScript, Vite, CSS
+API	Python, Flask, Flask-CORS
+Deep learning	PyTorch, Ultralytics YOLO, MobileNetV3
+Image processing	OpenCV, NumPy, Pillow
+Data analysis	pandas, NumPy
+Unsupervised learning	scikit-learn (K-means, TF-IDF, TruncatedSVD, scaling)
+Retrieval	Sentence Transformers, FAISS, curated local reference documents
+Battle calculations	@smogon/calc (Node.js service)
+Testing	pytest, Vitest, React Testing Library
+
+
+Project structure
+ChampionsInsight/
+├── backend/
+│   ├── api/               # Flask routes
+│   ├── services/          # CV, tournament, battle, and other application logic
+│   ├── rag/               # Document processing and retrieval
+│   ├── scripts/           # Data builds, ML/CV workflows, training, and reports
+│   ├── data/              # Pokémon, tournament, CV and derived datasets
+│   ├── app.py             # Backend application entry point
+│   ├── requirements.txt
+│   └── requirements-dev.txt
+├── frontend/
+│   ├── src/               # React pages, components, API clients, tests
+│   └── package.json
+├── scripts/
+│   └── setup.ps1          # Windows setup and data bootstrap
+├── docs/
+└── README.md
+Some model weights, generated indexes, datasets, and training artifacts may be large, generated locally, or excluded from Git. A clean checkout may require building data or supplying model artifacts before all features work.
+Getting started (Windows / PowerShell)
+Prerequisites
+- Python 3 with venv
+- Node.js and npm
 - PowerShell
-
-Node is required for two reasons:
-
-- the Vite frontend
-- the bundled Smogon damage calculator process that the Flask app starts automatically on port `3001`
-
-## Recommended Setup
-
+Node.js is used by both the React frontend and the bundled Smogon damage-calculation process.
+Option A: Automated setup
 From the repository root:
-
-```powershell
-cd D:\SoftwareEng\ChampionsInsight
+git clone https://github.com/CodyBarker545/ChampionsInsight.git
+cd ChampionsInsight
 .\scripts\setup.ps1
-```
-
-If local script execution is blocked:
-
-```powershell
+If PowerShell blocks the script:
 powershell -ExecutionPolicy Bypass -File .\scripts\setup.ps1
-```
+The setup script creates the Python virtual environment, installs backend and frontend dependencies, and builds derived data.
 
-The setup script will:
-
-- create `.venv` if it does not exist
-- upgrade `pip`
-- install `backend/requirements.txt`
-- run `npm install` in `frontend/`
-- build derived RAG and computer-vision data unless skipped
-
-Optional flags:
-
-```powershell
+Available setup options:
 .\scripts\setup.ps1 -SkipFrontend
 .\scripts\setup.ps1 -SkipData
 .\scripts\setup.ps1 -WithDebugReport
-```
+Building data can take time and may depend on datasets and artifacts available in your checkout. -SkipData skips those build steps when you want to install dependencies first.
 
-`-WithDebugReport` also runs the uploaded-opponent detection report against the current files in `backend/data/uploads/`.
-
-## Manual Setup
-
-If you want to do the steps yourself:
-
-```powershell
-cd D:\SoftwareEng\ChampionsInsight
+Option B: Manual setup
+From the repository root:
 python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install --upgrade pip
 .\.venv\Scripts\pip.exe install -r backend\requirements.txt
+
 cd frontend
 npm install
-```
-
-Then build derived data:
-
-```powershell
-cd D:\SoftwareEng\ChampionsInsight
+cd ..
+Build derived data:
 .\.venv\Scripts\python.exe backend\scripts\build_all_data.py
-```
-
-## Derived Data Build
-
-`backend/scripts/build_all_data.py` rebuilds the generated assets a fresh install needs:
-
-- RAG chunk previews and FAISS embeddings in `backend/vector_store/`
-- tournament usage, moves, items, set probabilities, archetypes, meta intelligence, and recommended builds
-- optional uploaded-opponent debug reports in `backend/data/cv/debug/reports/`
-
-Legacy CV reference/index builders are offline-only; enable them with `--with-legacy-cv`.
-
-Useful variants:
-
-```powershell
+Useful build options:
 .\.venv\Scripts\python.exe backend\scripts\build_all_data.py --dry-run
 .\.venv\Scripts\python.exe backend\scripts\build_all_data.py --skip-rag
 .\.venv\Scripts\python.exe backend\scripts\build_all_data.py --skip-cv
 .\.venv\Scripts\python.exe backend\scripts\build_all_data.py --with-debug-report
-```
-
-## Running The App
-
-Start the backend from the repo root:
-
-```powershell
-cd D:\SoftwareEng\ChampionsInsight
+Legacy image-embedding index builders are optional offline experiments (--with-legacy-cv).
+Run the application
+Terminal 1 — Flask backend (from repository root):
 .\.venv\Scripts\python.exe backend\app.py
-```
+Backend: https://localhost:5000
 
-Backend URL:
-
-```text
-https://localhost:5000
-```
-
-Start the frontend in a second terminal:
-
-```powershell
-cd D:\SoftwareEng\ChampionsInsight\frontend
+Terminal 2 — React frontend:
+cd frontend
 npm run dev
-```
+Frontend: https://127.0.0.1:5173
 
-Frontend URL:
+Vite uses local HTTPS and proxies /api requests to the Flask backend. Your browser may ask you to trust the development certificate.
+Use the camera from a phone
+With the phone and development computer on the same network, open:
+https://YOUR_COMPUTER_IPV4:5173/camera
+Find the development computer's IPv4 address with ipconfig. The local development certificate may need to be accepted on the phone.
+Key backend capabilities
+Area	Purpose
+Opponent detection	Image upload, quality assessment, YOLO/MobileNet prediction, result retrieval
+Tournament intelligence	Archetype summaries, clustering, team classification, usage trends
+Set probabilities	Common sets and conditional tournament frequencies
+Battle analysis	Damage and matchup calculation integration
+Pokémon/Pokédex	Pokémon information, stats, recommended builds
+Local mechanics Q&A	Document retrieval and source-grounded answers
+User team	Local team creation, saving, and review
 
-```text
-https://127.0.0.1:5173
-```
 
-Notes:
-
-- Vite serves HTTPS with `@vitejs/plugin-basic-ssl`.
-- `/api` requests are proxied to `https://localhost:5000`.
-- the camera flow needs HTTPS, which is why local dev runs over TLS.
-
-## Using The Camera From A Phone
-
-Make sure the phone and dev machine are on the same network, then open:
-
-```text
-https://YOUR_IPV4_ADDRESS:5173/camera
-```
-
-You can find the computer's IPv4 address with:
-
-```powershell
-ipconfig
-```
-
-Expect to accept the local certificate warning on the phone.
-
-## Main Backend Areas
-
-- `health_routes`: backend health checks
-- `user_team_routes`: load and save the local user team
-- `battle_routes`: matchup analysis and damage-calculator bridge
-- `pokemon_routes`: Pokemon search, stats, moves, and meta intelligence
-- `pokedex_routes`: Pokedex grid, details, and recommended teams
-- `rag_routes`: mechanics Q&A over local docs
-- `opponent_routes`: upload, quality-check, and opponent detection flows
-- `tournament_routes`: tournament usage and analysis data
-- `set_probability_routes`: likely set estimation for detected teams
-
-## Testing
-
-Backend tests:
-
-```powershell
-cd D:\SoftwareEng\ChampionsInsight
+Relevant API routes include:
+POST /api/opponent/image
+POST /api/opponent/detect-mobilenetv3
+GET  /api/opponent/prediction/latest
+GET  /api/tournament/archetypes/rules
+GET  /api/tournament/archetypes/clusters
+POST /api/tournament/archetypes/classify
+POST /api/rag/ask
+The legacy /api/opponent/detect embedding-based route is disabled in favor of MobileNetV3.
+Testing and validation
+Run backend tests from the repository root:
 .\.venv\Scripts\python.exe -m pytest
-```
-
-Frontend tests:
-
-```powershell
-cd D:\SoftwareEng\ChampionsInsight\frontend
+Run frontend tests:
+cd frontend
 npm test
-```
-
-Frontend production build:
-
-```powershell
-cd D:\SoftwareEng\ChampionsInsight\frontend
+Check the production frontend build:
 npm run build
-```
+For model assessment, useful evaluation artifacts include YOLO precision/recall/mAP, MobileNet accuracy and macro-F1, confusion matrices, and end-to-end six-Pokémon detection success on unseen real camera photos. Do not assume a classifier's validation accuracy is equal to complete pipeline accuracy.
+Current limitations
+- The image-recognition workflow is still being improved for glare, unusual framing, incomplete card detections, and uncertain Pokémon crops.
+- Tournament statistics reflect the coverage and quality of the collected dataset; observed frequencies are not certainty about a particular opponent.
+- K-means clusters identify similarity groups, but their strategic interpretation may require manual labeling or review.
+- The app is primarily designed for local development, not yet documented as a production-hosted service.
+- The current mechanics helper performs grounded retrieval/extraction; LLM-generated tactical advice is not presented as a fully implemented feature.
+Potential future work
+These are possible extensions, not claims about features already shipped:
+- More reliable layout-aware recovery of all six team cards.
+- A public, hosted demo with streamlined setup.
+- Confidence calibration and comprehensive real-photo evaluation reports.
+- Team recommendation and counter-team ranking evaluated on held-out tournament data.
+- Time-aware metagame forecasting and trend-change detection.
+- Retrieval-augmented, source-cited battle advice using an optional language model.
+- Additional monitoring, model-versioning, and deployment automation.
+Why this project exists
+ChampionsInsight explores how computer vision, unsupervised learning, and statistical analysis can operate together inside a real application. It is designed both as a useful competitive preparation tool and as an applied software-engineering/AI portfolio project involving:
+- Dataset preparation and model integration.
+- Multi-stage computer vision with fallbacks and confidence handling.
+- Clustering and feature engineering from structured tournament records.
+- Vector-based information retrieval.
+- Python API development and React user interfaces.
+- Testing, reproducibility, error analysis, and iterative improvement.
+Disclaimer
+ChampionsInsight is an independent fan-created project and is not affiliated with, endorsed by, or sponsored by Nintendo, The Pokémon Company, or GAME FREAK. Pokémon names, characters, and related marks belong to their respective owners.
 
-### Main-app dependencies
-
-`backend/requirements.txt` installs the app runtime. For tests, catalog scraping,
-and model-training reports, install `backend/requirements-dev.txt` instead.
-The app uses YOLO + MobileNetV3 for photo prediction. Type embedding experiments
-remain available offline and are excluded from the main app startup and release
-artifact requirements. Training data, reports, and
-tournament backups remain in the source workspace.
+Competitive recommendations and predicted identities are informational estimates and should be verified where accuracy matters.
