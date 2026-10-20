@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import os
+from functools import lru_cache
 from pathlib import Path
 
 os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "3")
@@ -39,6 +40,7 @@ def get_local_generation_model_path() -> Path | None:
     return snapshots[0] if snapshots else None
 
 
+@lru_cache(maxsize=1)
 def load_generation_model():
     """Load the local LLM used to write final answers from retrieved context."""
 

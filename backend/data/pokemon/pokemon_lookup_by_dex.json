@@ -31785,6 +31785,47 @@
         "speed": 126
       },
       "abilities": []
+    },
+    {
+      "species_display_name": "Pyroar",
+      "form_display_name": "Pyroar Female",
+      "form_api_name": "pyroar-female",
+      "is_default": false,
+      "types": [
+        "fire",
+        "normal"
+      ],
+      "base_stats": {
+        "hp": 86,
+        "attack": 68,
+        "defense": 72,
+        "special_attack": 109,
+        "special_defense": 66,
+        "speed": 106
+      },
+      "abilities": [
+        {
+          "name": "rivalry",
+          "display_name": "Rivalry",
+          "is_hidden": false,
+          "slot": 1,
+          "url": "https://pokeapi.co/api/v2/ability/79/"
+        },
+        {
+          "name": "unnerve",
+          "display_name": "Unnerve",
+          "is_hidden": false,
+          "slot": 2,
+          "url": "https://pokeapi.co/api/v2/ability/127/"
+        },
+        {
+          "name": "moxie",
+          "display_name": "Moxie",
+          "is_hidden": true,
+          "slot": 3,
+          "url": "https://pokeapi.co/api/v2/ability/153/"
+        }
+      ]
     }
   ],
   "0669": [

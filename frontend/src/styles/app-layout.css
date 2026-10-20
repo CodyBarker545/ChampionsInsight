@@ -43,12 +43,15 @@
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--ci-accent) 12%, transparent);
 }
 
-.rag-top-form {
+.ask-questions-form {
   grid-column: 2;
   width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  gap: 8px;
 }
 
-.rag-top-form input {
+.ask-questions-form input {
   width: 100%;
   min-height: 40px;
   border: 1px solid var(--ci-border);
@@ -66,9 +69,29 @@
   outline: none;
 }
 
-.rag-top-form input::placeholder {
+.ask-questions-form input::placeholder {
   color: var(--ci-text);
   opacity: 1;
+}
+
+.ask-questions-form button {
+  min-height: 40px;
+  border: 1px solid var(--ci-border);
+  border-radius: var(--ci-radius-sm);
+  padding: 0 14px;
+  color: var(--ci-text);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent),
+    color-mix(in srgb, var(--ci-surface-2) 88%, transparent);
+  font-weight: 800;
+  box-shadow: var(--ci-shadow-soft);
+}
+
+.ask-questions-info {
+  width: 40px;
+  display: inline-grid;
+  place-items: center;
+  padding: 0;
 }
 
 input:focus,
@@ -187,5 +210,33 @@ select:focus {
 .opponent-side-stack > .roster-column {
   flex: 1;
   min-height: 0;
+}
+
+html[data-theme="light"] .topbar {
+  border-color: rgba(67, 112, 179, 0.16);
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.92), rgba(236, 248, 255, 0.82) 50%, rgba(255, 255, 255, 0.92)),
+    linear-gradient(135deg, rgba(47, 125, 246, 0.10), rgba(0, 181, 159, 0.10));
+  box-shadow: 0 16px 36px rgba(63, 93, 137, 0.12);
+}
+
+html[data-theme="light"] .topbar-camera button,
+html[data-theme="light"] .theme-toggle,
+html[data-theme="light"] .ask-questions-form button,
+html[data-theme="light"] .status-pill {
+  border-color: rgba(64, 108, 172, 0.18);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(237, 247, 255, 0.96));
+  box-shadow: 0 8px 18px rgba(62, 88, 126, 0.10);
+}
+
+html[data-theme="light"] .ask-questions-form input {
+  border-color: rgba(47, 125, 246, 0.18);
+  background:
+    linear-gradient(90deg, rgba(47, 125, 246, 0.11), transparent 24%, transparent 74%, rgba(0, 181, 159, 0.10)),
+    rgba(255, 255, 255, 0.94);
+  box-shadow:
+    0 10px 24px rgba(62, 88, 126, 0.11),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96);
 }
 

@@ -1,10 +1,11 @@
 // API helpers for opponent image upload and detection.
 import { readJsonResponse, resolveApiUrl } from "./http.js";
+import { prepareOpponentPhotoForUpload } from "../utils/opponentPhoto.js";
 
 
 export async function uploadOpponentImageFile(imageFile, options = {}) {
   const formData = new FormData();
-  formData.append("image", imageFile);
+  formData.append("image", await prepareOpponentPhotoForUpload(imageFile));
 
   if (options.skipDetection) {
     formData.append("skipDetection", "1");
@@ -41,12 +42,22 @@ export async function fetchLatestOpponentPrediction(signal = AbortSignal.timeout
 
 export async function detectOpponentTeam(filename = null) {
   const body = filename ? { filename } : {};
-  const response = await fetch(resolveApiUrl("/api/opponent/detect"), {
+  const response = await fetch(resolveApiUrl("/api/opponent/detect-mobilenetv3"), {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     signal: AbortSignal.timeout(180000),
     body: JSON.stringify(body),
   });
 
-  return readJsonResponse(response, "Opponent detection failed.");
+  return readJsonResponse(response, "MobileNetV3 opponent detection failed.");
+}
+
+
+export async function detectOpponentTeamWithEmbedding(filename = null) {
+  // Temporarily disabled: MobileNetV3 is the only active opponent-image
+  // predictor while we validate the supervised classifier. Keep this helper as
+  // a reminder of the old fallback path without allowing the UI to call it.
+  throw new Error(
+    "Embedding opponent detection is disabled. Use MobileNetV3 detection.",
+  );
 }

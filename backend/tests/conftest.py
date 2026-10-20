@@ -2,10 +2,15 @@
 
 import sys
 import shutil
+import os
 from uuid import uuid4
 from pathlib import Path
 
 import pytest
+
+# Unit/API tests inject predictions; real model startup would add unrelated
+# background work and globally patch image decoding during those tests.
+os.environ.setdefault("CHAMPIONS_SKIP_WARMUP", "1")
 
 
 BACKEND_DIR = Path(__file__).resolve().parents[1]

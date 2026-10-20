@@ -6,6 +6,15 @@ They can restore HP, cure status conditions, boost stats, reduce damage, or prov
 Berries were introduced early in the Pokémon series and later became an important part of held item strategy. Many Berries are used in competitive play because they can improve survivability or activate at key moments. :contentReference[oaicite:1]{index=1}
 
 --------------------------------------------------
+Named Battle Berries (modern battles)
+--------------------------------------------------
+
+Sitrus Berry:
+- When the holder has 50% of its maximum HP or less, it automatically consumes the Berry if it can eat and heal
+- Restores 25% of the holder's maximum HP, rounded down
+- The Berry is consumed after activation
+
+--------------------------------------------------
 Main Types of Berries
 --------------------------------------------------
 
@@ -61,6 +70,9 @@ Competitive Use
 --------------------------------------------------
 Source
 --------------------------------------------------
+Sitrus Berry effect verified against Pokemon Showdown's battle engine item implementation:
+https://github.com/smogon/pokemon-showdown/blob/master/data/items.ts
+
 Bulbapedia. (n.d.). Berry. Retrieved from:
 https://bulbapedia.bulbagarden.net/wiki/Berry
 

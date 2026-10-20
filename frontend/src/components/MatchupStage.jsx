@@ -2,6 +2,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { ArrowDown, ArrowRight, ArrowUp } from "lucide-react";
 import { calculateDamage, resolveApiUrl } from "../api/championsInsightApi.js";
+import HeldItemInput from "./HeldItemInput.jsx";
 
 const statLabels = {
   hp: "HP",
@@ -859,30 +860,34 @@ function MatchupStage({
             <div className="field-side-grid">
               <div className="field-side-card">
                 <span>User Effects</span>
-                <EffectToggle label="Tailwind" checked={fieldEffects.userTailwind} onChange={(value) => updateFieldEffect("userTailwind", value)} />
-                <EffectToggle label="Reflect" checked={fieldEffects.userReflect} onChange={(value) => updateFieldEffect("userReflect", value)} />
-                <EffectToggle label="Light Screen" checked={fieldEffects.userLightScreen} onChange={(value) => updateFieldEffect("userLightScreen", value)} />
-                <EffectToggle label="Aurora Veil" checked={fieldEffects.userAuroraVeil} onChange={(value) => updateFieldEffect("userAuroraVeil", value)} />
-                <EffectToggle label="Helping Hand" checked={fieldEffects.userHelpingHand} onChange={(value) => updateFieldEffect("userHelpingHand", value)} />
-                <EffectToggle label="Friend Guard" checked={fieldEffects.userFriendGuard} onChange={(value) => updateFieldEffect("userFriendGuard", value)} />
-                <EffectToggle label="Battery" checked={fieldEffects.userBattery} onChange={(value) => updateFieldEffect("userBattery", value)} />
-                <EffectToggle label="Power Spot" checked={fieldEffects.userPowerSpot} onChange={(value) => updateFieldEffect("userPowerSpot", value)} />
-                <EffectToggle label="Flower Gift" checked={fieldEffects.userFlowerGift} onChange={(value) => updateFieldEffect("userFlowerGift", value)} />
-                <EffectToggle label="Steely Spirit" checked={fieldEffects.userSteelySpirit} onChange={(value) => updateFieldEffect("userSteelySpirit", value)} />
+                <div className="field-side-scroll" aria-label="Scrollable user effects">
+                  <EffectToggle label="Tailwind" checked={fieldEffects.userTailwind} onChange={(value) => updateFieldEffect("userTailwind", value)} />
+                  <EffectToggle label="Reflect" checked={fieldEffects.userReflect} onChange={(value) => updateFieldEffect("userReflect", value)} />
+                  <EffectToggle label="Light Screen" checked={fieldEffects.userLightScreen} onChange={(value) => updateFieldEffect("userLightScreen", value)} />
+                  <EffectToggle label="Aurora Veil" checked={fieldEffects.userAuroraVeil} onChange={(value) => updateFieldEffect("userAuroraVeil", value)} />
+                  <EffectToggle label="Helping Hand" checked={fieldEffects.userHelpingHand} onChange={(value) => updateFieldEffect("userHelpingHand", value)} />
+                  <EffectToggle label="Friend Guard" checked={fieldEffects.userFriendGuard} onChange={(value) => updateFieldEffect("userFriendGuard", value)} />
+                  <EffectToggle label="Battery" checked={fieldEffects.userBattery} onChange={(value) => updateFieldEffect("userBattery", value)} />
+                  <EffectToggle label="Power Spot" checked={fieldEffects.userPowerSpot} onChange={(value) => updateFieldEffect("userPowerSpot", value)} />
+                  <EffectToggle label="Flower Gift" checked={fieldEffects.userFlowerGift} onChange={(value) => updateFieldEffect("userFlowerGift", value)} />
+                  <EffectToggle label="Steely Spirit" checked={fieldEffects.userSteelySpirit} onChange={(value) => updateFieldEffect("userSteelySpirit", value)} />
+                </div>
               </div>
 
               <div className="field-side-card">
                 <span>Opponent Effects</span>
-                <EffectToggle label="Tailwind" checked={fieldEffects.opponentTailwind} onChange={(value) => updateFieldEffect("opponentTailwind", value)} />
-                <EffectToggle label="Reflect" checked={fieldEffects.opponentReflect} onChange={(value) => updateFieldEffect("opponentReflect", value)} />
-                <EffectToggle label="Light Screen" checked={fieldEffects.opponentLightScreen} onChange={(value) => updateFieldEffect("opponentLightScreen", value)} />
-                <EffectToggle label="Aurora Veil" checked={fieldEffects.opponentAuroraVeil} onChange={(value) => updateFieldEffect("opponentAuroraVeil", value)} />
-                <EffectToggle label="Helping Hand" checked={fieldEffects.opponentHelpingHand} onChange={(value) => updateFieldEffect("opponentHelpingHand", value)} />
-                <EffectToggle label="Friend Guard" checked={fieldEffects.opponentFriendGuard} onChange={(value) => updateFieldEffect("opponentFriendGuard", value)} />
-                <EffectToggle label="Battery" checked={fieldEffects.opponentBattery} onChange={(value) => updateFieldEffect("opponentBattery", value)} />
-                <EffectToggle label="Power Spot" checked={fieldEffects.opponentPowerSpot} onChange={(value) => updateFieldEffect("opponentPowerSpot", value)} />
-                <EffectToggle label="Flower Gift" checked={fieldEffects.opponentFlowerGift} onChange={(value) => updateFieldEffect("opponentFlowerGift", value)} />
-                <EffectToggle label="Steely Spirit" checked={fieldEffects.opponentSteelySpirit} onChange={(value) => updateFieldEffect("opponentSteelySpirit", value)} />
+                <div className="field-side-scroll" aria-label="Scrollable opponent effects">
+                  <EffectToggle label="Tailwind" checked={fieldEffects.opponentTailwind} onChange={(value) => updateFieldEffect("opponentTailwind", value)} />
+                  <EffectToggle label="Reflect" checked={fieldEffects.opponentReflect} onChange={(value) => updateFieldEffect("opponentReflect", value)} />
+                  <EffectToggle label="Light Screen" checked={fieldEffects.opponentLightScreen} onChange={(value) => updateFieldEffect("opponentLightScreen", value)} />
+                  <EffectToggle label="Aurora Veil" checked={fieldEffects.opponentAuroraVeil} onChange={(value) => updateFieldEffect("opponentAuroraVeil", value)} />
+                  <EffectToggle label="Helping Hand" checked={fieldEffects.opponentHelpingHand} onChange={(value) => updateFieldEffect("opponentHelpingHand", value)} />
+                  <EffectToggle label="Friend Guard" checked={fieldEffects.opponentFriendGuard} onChange={(value) => updateFieldEffect("opponentFriendGuard", value)} />
+                  <EffectToggle label="Battery" checked={fieldEffects.opponentBattery} onChange={(value) => updateFieldEffect("opponentBattery", value)} />
+                  <EffectToggle label="Power Spot" checked={fieldEffects.opponentPowerSpot} onChange={(value) => updateFieldEffect("opponentPowerSpot", value)} />
+                  <EffectToggle label="Flower Gift" checked={fieldEffects.opponentFlowerGift} onChange={(value) => updateFieldEffect("opponentFlowerGift", value)} />
+                  <EffectToggle label="Steely Spirit" checked={fieldEffects.opponentSteelySpirit} onChange={(value) => updateFieldEffect("opponentSteelySpirit", value)} />
+                </div>
               </div>
             </div>
           </section>
@@ -974,7 +979,7 @@ function MatchupStage({
             ))}
           </select>
 
-          <input
+          <HeldItemInput
             className="meta-control"
             aria-label="Opponent item"
             value={opponentPokemon?.item ?? ""}

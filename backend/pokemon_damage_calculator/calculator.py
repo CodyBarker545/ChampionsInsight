@@ -4,9 +4,9 @@ from __future__ import annotations
 
 import json
 from urllib.error import HTTPError, URLError
-from urllib.request import Request, urlopen
+from urllib.request import Request
 
-from .backend_process import DAMAGE_CALC_URL, start_damage_calc_backend
+from .backend_process import DAMAGE_CALC_URL, LOCAL_HTTP, start_damage_calc_backend
 
 
 def _validate_payload(payload: dict) -> None:
@@ -55,7 +55,7 @@ def _request_damage(payload: dict) -> dict:
     )
 
     try:
-        with urlopen(request, timeout=15) as response:
+        with LOCAL_HTTP.open(request, timeout=15) as response:
             return json.loads(response.read().decode("utf-8"))
     except HTTPError as error:
         body = error.read().decode("utf-8")

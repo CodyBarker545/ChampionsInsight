@@ -1,6 +1,6 @@
 param(
     [int]$BatchSize = 6,
-    [int]$TargetPerVariant = 1000,
+    [int]$TargetPerVariant = 125,
     [int]$PauseSeconds = 5
 )
 
@@ -8,7 +8,7 @@ $ErrorActionPreference = "Stop"
 
 $repoRoot = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 $python = Join-Path $repoRoot ".venv\Scripts\python.exe"
-$generator = Join-Path $PSScriptRoot "generate_synthetic_pokemon_cards.py"
+$generator = Join-Path $PSScriptRoot "synthetic_data\generate_synthetic_pokemon_cards.py"
 $inputDir = Join-Path $repoRoot "backend\data\pokemon\champions_sprites"
 $outputDir = Join-Path $repoRoot "backend\data\training_dataset\slot_pokemon_synthetic"
 $logDir = Join-Path $repoRoot "backend\test-output"
@@ -16,9 +16,9 @@ $logPath = Join-Path $logDir "synthetic_pokemon_batches.log"
 
 New-Item -ItemType Directory -Force -Path $logDir | Out-Null
 
-# The generator filters out Mega forms before slicing, leaving 522 source sprites:
-# 261 normal + 261 shiny.
-$totalSprites = 522
+# Discover the full current roster, including both archive pages and shiny variants.
+$totalSprites = @(Get-ChildItem -LiteralPath $inputDir -Recurse -Filter "*.png" |
+    Where-Object { $_.Name -notmatch 'Mega' }).Count
 
 for ($start = 0; $start -lt $totalSprites; $start += $BatchSize) {
     $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"

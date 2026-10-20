@@ -256,7 +256,7 @@ function CameraCapturePage({ onClose }) {
         );
       }
 
-      setStatus("Photo uploaded. Battle Prep will update when detection is ready.");
+      setStatus("Photo uploaded. Battle Prep will update when MobileNetV3 detection is ready.");
       void clearCameraDraft();
     } catch (err) {
       console.error("[CameraCapturePage] Upload/detection failed:", err);

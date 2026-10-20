@@ -8,6 +8,7 @@ export {
 export {
   analyzeTeamMatchup,
   calculateDamage,
+  fetchBattleAdviceChat,
 } from "./battleApi.js";
 export {
   classifyTournamentArchetype,
@@ -22,6 +23,7 @@ export {
 } from "./ragApi.js";
 export {
   detectOpponentTeam,
+  detectOpponentTeamWithEmbedding,
   fetchLatestOpponentPrediction,
   fetchLatestOpponentUpload,
   uploadOpponentImageFile,

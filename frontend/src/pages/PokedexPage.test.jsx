@@ -7,12 +7,14 @@ import {
   fetchPokedexEntries,
   fetchPokedexEntry,
   fetchPokemonMetaIntelligence,
+  fetchPokemonRecommendedTeams,
 } from "../api/championsInsightApi.js";
 
 vi.mock("../api/championsInsightApi.js", () => ({
   fetchPokedexEntries: vi.fn(),
   fetchPokedexEntry: vi.fn(),
   fetchPokemonMetaIntelligence: vi.fn(),
+  fetchPokemonRecommendedTeams: vi.fn(),
   resolveApiUrl: vi.fn((path = "") => path),
 }));
 
@@ -81,6 +83,28 @@ describe("PokedexPage", () => {
       commonCores: [],
       newCores: [],
       dataQualityNotes: [],
+    });
+    fetchPokemonRecommendedTeams.mockResolvedValue({
+      pokemon: "Venusaur",
+      recommendedTeams: [
+        {
+          label: "Most Proven Tournament Shell",
+          pokemon: ["Venusaur", "Pelipper", "Archaludon", "Sableye", "Scizor", "Incineroar"],
+          sampleSize: 2,
+          winRate: 0.667,
+          recommendedSet: {
+            item: "Venusaurite",
+            ability: "Overgrow",
+            nature: "Modest",
+            moves: ["Leaf Storm", "Sludge Bomb", "Protect", "Sleep Powder"],
+          },
+          summary: "Built around common partners like Pelipper, Archaludon, and Scizor.",
+          signals: [
+            { name: "Pelipper", percentage: 42 },
+            { name: "Archaludon", percentage: 38 },
+          ],
+        },
+      ],
     });
   });
 
@@ -168,5 +192,24 @@ describe("PokedexPage", () => {
     await waitFor(() => {
       expect(fetchPokedexEntry).toHaveBeenLastCalledWith("Mega Charizard X");
     });
+  });
+
+  it("shows tournament-backed recommended builds in the teams tab", async () => {
+    const user = userEvent.setup();
+
+    render(<PokedexPage onBack={() => {}} />);
+
+    await user.click(await screen.findByRole("button", { name: /Venusaur/i }));
+    await user.click(await screen.findByRole("button", { name: "teams" }));
+
+    const buildHeading = await screen.findByText("Most Proven Tournament Shell");
+    const buildCard = buildHeading.closest("article");
+
+    expect(buildCard).toBeInTheDocument();
+    expect(within(buildCard).getByText(/67%/)).toBeInTheDocument();
+    expect(within(buildCard).getByText("Item: Venusaurite")).toBeInTheDocument();
+    expect(within(buildCard).getByText("Ability: Overgrow")).toBeInTheDocument();
+    expect(within(buildCard).getByText("Leaf Storm")).toBeInTheDocument();
+    expect(within(buildCard).getByText(/Built around common partners/)).toBeInTheDocument();
   });
 });

@@ -389,15 +389,16 @@
 }
 
 .pokedex-form-cycle-button {
-  width: min(320px, 100%);
-  min-height: 38px;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 24px;
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
-  gap: 10px;
+  gap: 7px;
   border: 1px solid color-mix(in srgb, var(--ci-accent) 42%, var(--ci-border));
   border-radius: 999px;
-  padding: 0 12px;
+  padding: 0 9px;
   color: var(--ci-text);
   background:
     linear-gradient(90deg, color-mix(in srgb, var(--ci-accent) 12%, transparent), transparent),
@@ -415,16 +416,17 @@
 .pokedex-form-cycle-button span,
 .pokedex-form-cycle-button small {
   color: var(--ci-muted);
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 950;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .pokedex-form-cycle-button strong {
+  max-width: 140px;
   overflow: hidden;
   color: var(--ci-text);
-  font-size: 0.9rem;
+  font-size: 0.68rem;
   font-weight: 950;
   text-align: center;
   text-overflow: ellipsis;
@@ -711,6 +713,15 @@
   font-weight: 800;
 }
 
+.pokedex-list-panel article p {
+  margin: 2px 0 0;
+  max-width: 78ch;
+  color: #dbeafe;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
 .pokedex-usage-panel {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -829,6 +840,38 @@
   color: #dbeafe;
   font-size: 0.76rem;
   font-weight: 900;
+}
+
+.pokedex-team-build-summary,
+.pokedex-team-build-moves {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pokedex-team-build-summary span {
+  border-radius: 999px;
+  padding: 6px 10px;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  background: rgba(148, 163, 184, 0.08);
+  color: var(--ci-text);
+  font-size: 0.75rem;
+  font-weight: 900;
+}
+
+.pokedex-team-build-moves span {
+  border-radius: 10px;
+  padding: 6px 10px;
+  background: rgba(34, 197, 94, 0.12);
+  color: #dcfce7;
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.pokedex-team-build-copy {
+  margin: 0;
+  color: var(--ci-muted);
+  line-height: 1.45;
 }
 
 @media (max-width: 900px) {

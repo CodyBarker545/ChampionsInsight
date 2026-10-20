@@ -17,6 +17,18 @@ CHUNK_SIZE = 900
 CHUNK_OVERLAP = 150
 SAMPLE_CHUNKS_TO_PRINT = 5
 
+TOPIC_RULES = {
+    "status_conditions": ["status", "burn", "paralysis", "poison", "sleep", "freeze", "confusion"],
+    "held_items": ["item", "items", "held", "berry", "choice", "leftovers", "boots", "amulet", "policy", "vest", "sash"],
+    "berry": ["berry", "berries", "cheri", "chesto", "pecha", "rawst", "aspear", "sitrus"],
+    "weather": ["weather", "rain", "sun", "sand", "snow", "hail"],
+    "terrain": ["terrain", "electric terrain", "psychic terrain", "misty terrain", "grassy terrain"],
+    "battle_mechanics": ["mechanics", "damage", "stab", "critical", "priority", "accuracy", "evasion", "speed"],
+    "pokemon_types": ["type", "types", "matchup", "super effective", "resist", "immune"],
+    "pokemon_abilites": ["ability", "abilities", "intimidate", "levitate", "prankster"],
+    "utility_items": ["boots", "helmet", "balloon", "utility", "goggles"],
+}
+
 
 @dataclass
 class Document:
@@ -38,9 +50,35 @@ def clean_text(text: str) -> str:
     """Clean copied text so it is easier to chunk and search."""
     text = text.replace("\r\n", "\n").replace("\r", "\n")
     text = re.sub(r":contentReference\[[^\]]+\]\{[^}]+\}", "", text)
+    text = (
+        text.replace("Ã—", "x")
+        .replace("â€™", "'")
+        .replace("â€“", "-")
+        .replace("â€”", "-")
+        .replace("Ã©", "e")
+    )
     text = re.sub(r"[ \t]+", " ", text)
     text = re.sub(r"\n{3,}", "\n\n", text)
     return text.strip()
+
+
+def infer_document_topics(filename: str, text: str = "") -> tuple[str, list[str]]:
+    """Infer one primary topic and a topic tag list from filename and document text."""
+
+    lowered_filename = str(filename or "").lower()
+    lowered_text = str(text or "").lower()
+    haystack = f"{lowered_filename} {lowered_text[:800]}"
+
+    matching_topics: list[str] = []
+    for topic, keywords in TOPIC_RULES.items():
+        if topic in lowered_filename or any(keyword in haystack for keyword in keywords):
+            matching_topics.append(topic)
+
+    if not matching_topics:
+        stem = Path(filename).stem if filename else "unknown"
+        matching_topics.append(stem.lower())
+
+    return matching_topics[0], matching_topics
 
 
 def load_documents(data_dir: Path = DATA_DIR) -> list[Document]:
@@ -50,6 +88,7 @@ def load_documents(data_dir: Path = DATA_DIR) -> list[Document]:
 
     for file_path in sorted(data_dir.glob("*.txt")):
         text = clean_text(file_path.read_text(encoding="utf-8"))
+        primary_topic, topic_tags = infer_document_topics(file_path.name, text)
         documents.append(
             Document(
                 text=text,
@@ -57,6 +96,8 @@ def load_documents(data_dir: Path = DATA_DIR) -> list[Document]:
                     "source": str(file_path),
                     "filename": file_path.name,
                     "stem": file_path.stem,
+                    "primary_topic": primary_topic,
+                    "topic_tags": topic_tags,
                 },
             )
         )

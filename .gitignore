@@ -1,4 +1,3 @@
-@"
 # Python
 __pycache__/
 *.pyc
@@ -29,6 +28,17 @@ Thumbs.db
 *.avi
 *.mkv
 
+# Local/generated datasets and logs
+backend/data/training_dataset/
+backend/server*.log
+backend/*.log
+backend/test-output/
+backend/vector_store/
+frontend/certs/
+frontend/*.log
+frontend/server*.log
+frontend/vite-dev*.log
+
 # Large Pokemon data files
 backend/Pokemon_Data/data/pokemon_battle_data.json
 backend/Pokemon_Data/data/pokemon_lookup_by_form_name.json
@@ -40,7 +50,7 @@ backend/data/cv/models/
 backend/data/cv/indexes/
 backend/data/cv/reports/
 backend/data/cv/debug/
-backend/data/cv/debug/crops/
+backend/cv/debug/
 backend/data/uploads/
 backend/uploads/
 
@@ -49,11 +59,16 @@ backend/data/user/user_team.json
 
 # ML/generated artifacts
 *.npy
+*.npz
+*.faiss
+*.index
 *.pkl
 *.joblib
 *.pt
 *.pth
 *.onnx
+*.h5
+*.keras
 *.weights
 *.engine
 *_curve.png
@@ -68,67 +83,17 @@ args.yaml
 *.zip
 *.7z
 *.rar
-"@ | Set-Content .gitignore -Encoding utf8
-# Local generated datasets and logs
-backend/data/training_dataset/
-backend/server*.log
-backend/*.log
-backend/test-output/
-backend/vector_store/
-frontend/certs/
-frontend/*.log
-frontend/server*.log
-frontend/vite-dev*.log
 
-# Generated CV indexes
-backend/data/cv/indexes/
-*.npy
-
-# Generated CV indexes
-backend/data/cv/indexes/type_embeddings/
-*.npy
-
-# Python virtual environments
-.venv/
-venv/
-__pycache__/
-*.pyc
-
-# ChampionsInsight generated CV indexes and embeddings
-backend/data/cv/indexes/
-backend/data/cv/debug/
-backend/cv/debug/
-*.npy
-*.npz
-*.faiss
-*.index
-
-# Large generated data/uploads
-backend/data/uploads.zip
-backend/uploads/
-backend/data/uploads/
-backend/data/training_dataset/
-
-# Large generated Pokemon lookup files
-backend/data/pokemon/pokemon_lookup_by_form_name.json
-backend/data/pokemon/pokemon_battle_data.json
-
-# Model files
-*.pkl
-*.joblib
-*.pt
-*.pth
-*.onnx
-*.h5
-*.keras
-
-# Local environment
-.venv/
-
-# Generated embedding indexes
-backend/data/cv/indexes/
-*.npy
-*.faiss
+# Generated analysis files
 backend/data/competitive/analysis_json/archetype_team_classifications.json
 backend/data/competitive/analysis_json/team_archetype_cluster_assignments.csv
 backend/data/competitive/analysis_json/team_archetype_cluster_assignments_labeled.csv
+
+# Local working files and data-update backups
+.codex-remote-attachments/
+output/
+tmp/
+tests/tmp/
+backend/tests/_tmp_*
+backend/data/competitive/update_backups/
+backend/data/competitive/vgc_data/limitless_update_status.json

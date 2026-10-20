@@ -21,6 +21,7 @@ import argparse
 import json
 import random
 import re
+from concurrent.futures import ProcessPoolExecutor
 from io import BytesIO
 from pathlib import Path
 
@@ -103,6 +104,16 @@ def load_pokemon_mapping() -> tuple[dict[tuple[int, str | None], str], dict[int,
                 suffixes.add(form_api_name[len(species_api_name) + 1 :])
             for suffix in filter(None, suffixes):
                 mapping[(dex_number, normalize_label(suffix))] = form_api_name
+
+    # Archive suffixes (e.g. Squawkabilly-Blue) may differ from API form
+    # suffixes (blue-plumage). Prefer the verified sprite catalog mapping.
+    metadata_path = POKEMON_LOOKUP_BY_DEX.parent / "champions_sprites/champions_sprite_database.json"
+    if metadata_path.exists():
+        for record in json.loads(metadata_path.read_text(encoding="utf-8")):
+            label = normalize_label(record.get("form_api_name", ""))
+            dex, suffix = parse_menu_cp_from_name(record.get("local_filename", ""))
+            if dex is not None and label and "mega" not in label.split("_"):
+                mapping[(dex, suffix)] = label
 
     return mapping, base_by_dex
 
@@ -552,6 +563,10 @@ def collect_sprite_paths(input_dir: Path) -> list[Path]:
     )
 
 
+def generate_sprite_batch(arguments):
+    generate_dataset(**arguments)
+
+
 def generate_dataset(
     input_dir: Path,
     output_dir: Path,
@@ -560,11 +575,15 @@ def generate_dataset(
     seed: int,
     start_index: int,
     max_sprites: int | None,
+    manifest: Path | None = None,
+    workers: int = 1,
 ) -> None:
     """Generate the full synthetic dataset."""
 
     if target_per_variant is None and images_per_sprite is None:
         raise ValueError("Provide --images-per-sprite or --target-per-variant.")
+    if workers < 1 or start_index < 0 or (target_per_variant is not None and target_per_variant < 1):
+        raise ValueError("Workers/target must be positive and start-index nonnegative.")
 
     random.seed(seed)
     np.random.seed(seed)
@@ -574,6 +593,14 @@ def generate_dataset(
 
     sprite_paths = collect_sprite_paths(input_dir)
 
+    if manifest is not None:
+        records = json.loads(manifest.read_text(encoding="utf-8"))["added_sprites"]
+        filenames = {record["local_filename"] for record in records if "mega" not in record["local_filename"].lower()}
+        sprite_paths = [path for path in sprite_paths if path.name in filenames]
+        missing = filenames - {path.name for path in sprite_paths}
+        if missing:
+            raise FileNotFoundError(f"Manifest sprites missing: {sorted(missing)}")
+
     if not sprite_paths:
         raise FileNotFoundError(f"No PNG sprites found under: {input_dir}")
 
@@ -582,6 +609,7 @@ def generate_dataset(
     total_written = 0
     total_skipped_mega = 0
     total_used_sprites = 0
+    errors = []
 
     print(f"Input folder: {input_dir}")
     print(f"Output folder: {output_dir}")
@@ -595,6 +623,17 @@ def generate_dataset(
     else:
         print(f"Images per sprite: {images_per_sprite}")
     print()
+
+    if workers > 1:
+        batches = [dict(input_dir=input_dir, output_dir=output_dir,
+                        images_per_sprite=images_per_sprite, target_per_variant=target_per_variant,
+                        seed=seed + index, start_index=start_index + index, max_sprites=1,
+                        manifest=manifest) for index in range(len(sprite_paths))]
+        with ProcessPoolExecutor(max_workers=workers) as executor:
+            for _ in executor.map(generate_sprite_batch, batches):
+                pass
+        print(f"Completed {len(batches)} sprite variants with {workers} workers.")
+        return
 
     for index, sprite_path in enumerate(sprite_paths, start=1):
         label = parse_label(sprite_path)
@@ -611,7 +650,9 @@ def generate_dataset(
 
         print(f"[{index}/{len(sprite_paths)}] {sprite_path.name} -> {label}")
 
-        existing_variant_count = len(list(label_dir.glob(f"{sprite_path.stem}_synthetic_*.jpg")))
+        existing_paths = list(label_dir.glob(f"{sprite_path.stem}_synthetic_*.jpg"))
+        existing_variant_count = len(existing_paths)
+        next_index = max((int(path.stem.rsplit("_", 1)[1]) for path in existing_paths), default=-1) + 1
         images_to_write = (
             max(0, target_per_variant - existing_variant_count)
             if target_per_variant is not None
@@ -626,7 +667,7 @@ def generate_dataset(
             try:
                 img = paste_sprite_on_card(sprite_path)
 
-                i = existing_variant_count + offset
+                i = next_index + offset
                 out_name = f"{sprite_path.stem}_synthetic_{i:04d}.jpg"
                 out_path = label_dir / out_name
 
@@ -635,6 +676,7 @@ def generate_dataset(
 
             except Exception as exc:
                 print(f"  ERROR on {sprite_path}: {exc}")
+                errors.append(f"{sprite_path}: {exc}")
 
     print()
     print("Done.")
@@ -643,6 +685,8 @@ def generate_dataset(
     print(f"Mega sprites skipped: {total_skipped_mega}")
     print(f"Synthetic images written: {total_written}")
     print(f"Output: {output_dir}")
+    if errors:
+        raise RuntimeError(f"{len(errors)} images failed to generate; rerun to resume")
 
 
 def main() -> None:
@@ -692,6 +736,8 @@ def main() -> None:
         default=None,
         help="Process at most this many sprite files in this run.",
     )
+    parser.add_argument("--manifest", type=Path, help="Only generate added_sprites from a catalog update manifest.")
+    parser.add_argument("--workers", type=int, default=1, help="Number of independent sprite generation processes.")
 
     args = parser.parse_args()
 
@@ -703,6 +749,8 @@ def main() -> None:
         seed=args.seed,
         start_index=args.start_index,
         max_sprites=args.max_sprites,
+        manifest=args.manifest,
+        workers=args.workers,
     )
 
 

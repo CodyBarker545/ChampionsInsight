@@ -1,0 +1,169 @@
+Champions available held items and Mega Stones
+Sources: https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions); https://www.serebii.net/pokemonchampions/items.shtml
+This catalog describes game availability, not ranked regulation legality.
+
+Electric Seed: Held: Consumed on Electric Terrain and raises the holder’s Defense by one stage.
+Psychic Seed: Held: Consumed on Psychic Terrain and raises the holder’s Special Defense by one stage.
+Misty Seed: Held: Consumed on Misty Terrain and raises the holder’s Special Defense by one stage.
+Grassy Seed: Held: Consumed on Grassy Terrain and raises the holder’s Defense by one stage.
+Normal Gem: Held: When the holder uses a damaging Normal-type move, the move has 1.5× power and this item is consumed.
+Binding Band: Held: Doubles the per-turn damage of multi-turn trapping moves.
+Terrain Extender: Held: Extends the holder’s Terrain effects to 8 turns.
+Rocky Helmet: Held: When the holder is hit by a contact move, the attacking Pokémon takes 1/6 its max HP in damage.
+Air Balloon: Held: Grants immunity to Ground-type moves, Spikes, and Toxic Spikes. Consumed when the holder takes damage from a move.
+Red Card: Held: When the holder takes damage from a move, the opponent switches out for another random party Pokémon. Consumed after use.
+Eject Button: Held: When the holder takes damage from a move, it switches out for a party Pokémon of the Trainer’s choice.
+Leek: Raises the critical-hit ratio of Farfetch'd or Sirfetch'd by two stages.
+Muscle Band: Held: Boosts the damage of physical moves used by the holder by 10%.
+Wise Glasses: Held: Boosts the damage of special moves used by the holder by 1/10 (10%).
+Expert Belt: Held: Holder’s Super Effective moves do 20% extra damage.
+Life Orb: Held: Holder’s moves inflict 30% extra damage, but cost 10% max HP.
+Metronome: Held: Consectutive uses of the same attack have a cumulative damage boost of 10%. Maximum 100% boost.
+Big Root: Held: Increases HP recovered from draining moves, Ingrain, and Aqua Ring by 3/10 (30%).
+Light Clay: Held: Light Screen and Reflect used by the holder last 8 rounds instead of 5.
+Heat Rock: Held: Sunny Day by the holder lasts 8 rounds instead of 5.
+Icy Rock: Held: Hail by the holder lasts 8 rounds instead of 5.
+Smooth Rock: Held: Sandstorm by the holder lasts 8 rounds instead of 5.
+Damp Rock: Held: Rain Dance by the holder lasts 8 rounds instead of 5.
+Wide Lens: Held: Provides a 1/10 (10%) boost in accuracy to the holder.
+Zoom Lens: Held: Provides a 1/5 (20%) boost in accuracy if the holder moves after the target.
+Iron Ball: Held: Holder’s Speed is halved. Negates all Ground-type immunities, and makes Flying-types take neutral damage from Ground-type moves. Arena Trap. Spikes, and Toxic Spikes affect the holder.
+Shed Shell: Held: Holder can bypass all trapping effects and switch out. Multi-turn moves still cannot be switched out of.
+Silk Scarf: Held: Normal-Type moves from holder do 20% more damage.
+Miracle Seed: Held: Grass-Type moves from holder do 20% more damage.
+Charcoal: Held: Fire-Type moves from holder do 20% more damage.
+Mystic Water: Held: Water-Type moves from holder do 20% more damage.
+Magnet: Held: Electric-Type moves from holder do 20% more damage.
+Silver Powder: Held: Bug-Type moves from holder do 20% more damage.
+Sharp Beak: Held: Flying-Type moves from holder do 20% more damage.
+Hard Stone: Held: Rock-Type moves from holder do 20% more damage.
+Poison Barb: Held: Poison-Type moves from holder do 20% more damage.
+Soft Sand: Held: Ground-Type moves from holder do 20% more damage.
+Never-Melt Ice: Held: Ice-Type moves from holder do 20% more damage.
+Black Belt: Held: Fighting-Type moves from holder do 20% more damage.
+Twisted Spoon: Held: Psychic-Type moves from holder do 20% more damage.
+Spell Tag: Held: Ghost-Type moves from holder do 20% more damage.
+Dragon Fang: Held: Dragon-Type moves from holder do 20% more damage.
+Black Glasses: Held: Dark-Type moves from holder do 20% more damage.
+Metal Coat: Held: Steel-Type moves from holder do 20% more damage.
+Fairy Feather: 
+Mental Herb: Held: Consumed to cure infatuation. Gen V: Also removes Taunt, Encore, Torment, Disable, and Cursed Body.
+Shell Bell: Held: Holder receives 1/8 of the damage it deals when attacking.
+Cheri Berry: Held: Consumed when paralyzed to cure paralysis.
+Chesto Berry: Held: Consumed when asleep to cure sleep.
+Pecha Berry: Held: Consumed when poisoned to cure poison.
+Rawst Berry: Held: Consumed when burned to cure a burn.
+Aspear Berry: Held: Consumed when frozen to cure frozen.
+Persim Berry: Held: Consumed when confused to cure confusion.
+Leppa Berry: Held: Consumed when a move runs out of PP to restore its PP by 10.
+Oran Berry: Held: Consumed at 1/2 max HP to recover 10 HP.
+Chilan Berry: Held: Consumed when struck by a Normal-type attack to halve the damage.
+Rindo Berry: Held: Consumed when struck by a super-effective Grass-type attack to halve the damage.
+Occa Berry: Held: Consumed when struck by a super-effective Fire-type attack to halve the damage.
+Passho Berry: Held: Consumed when struck by a super-effective Water-type attack to halve the damage.
+Wacan Berry: Held: Consumed when struck by a super-effective Electric-type attack to halve the damage.
+Tanga Berry: Held: Consumed when struck by a super-effective Bug-type attack to halve the damage.
+Coba Berry: Held: Consumed when struck by a super-effective Flying-type attack to halve the damage.
+Charti Berry: Held: Consumed when struck by a super-effective Rock-type attack to halve the damage.
+Kebia Berry: Held: Consumed when struck by a super-effective Poison-type attack to halve the damage.
+Shuca Berry: Held: Consumed when struck by a super-effective Ground-type attack to halve the damage.
+Yache Berry: Held: Consumed when struck by a super-effective Ice-type attack to halve the damage.
+Chople Berry: Held: Consumed when struck by a super-effective Fighting-type attack to halve the damage.
+Payapa Berry: Held: Consumed when struck by a super-effective Psychic-type attack to halve the damage.
+Kasib Berry: Held: Consumed when struck by a super-effective Ghost-type attack to halve the damage.
+Haban Berry: Held: Consumed when struck by a super-effective Dragon-type attack to halve the damage.
+Colbur Berry: Held: Consumed when struck by a super-effective Dark-type attack to halve the damage.
+Babiri Berry: Held: Consumed when struck by a super-effective Steel-type attack to halve the damage.
+Roseli Berry: Held: Consumed when struck by a super-effective Fairy-type attack to halve the damage.
+Scope Lens: Held: Raises the holder’s critical hit ratio by one stage.
+Light Ball: Doubles Pikachu’s Attack and Special Attack. Breed on Pikachu or Raichu: Pichu Egg will have Volt Tackle.
+Absolite Z: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Salamencite: Held: Allows Salamence to Mega Evolve into Mega Salamence.
+Garchompite Z: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Lucarionite Z: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Golisopite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Baxcalibrite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Raichunite X: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Raichunite Y: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Sceptilite: Held: Allows Sceptile to Mega Evolve into Mega Sceptile.
+Blazikenite: Held: Allows Blaziken to Mega Evolve into Mega Blaziken.
+Swampertite: Held: Allows Swampert to Mega Evolve into Mega Swampert.
+Mawilite: Held: Allows Mawile to Mega Evolve into Mega Mawile.
+Metagrossite: Held: Allows Metagross to Mega Evolve into Mega Metagross.
+Staraptite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Scolipite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Scraftinite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Eelektrossite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Chesnaughtite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Delphoxite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Greninjite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Pyroarite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Malamarite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Barbaracite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Dragalgite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Falinksite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Venusaurite: Held: Allows Venusaur to Mega Evolve into Mega Venusaur.
+Charizardite X: Held: Allows Charizard to Mega Evolve into Mega Charizard X.
+Charizardite Y: Held: Allows Charizard to Mega Evolve into Mega Charizard Y.
+Blastoisinite: Held: Allows Blastoise to Mega Evolve into Mega Blastoise.
+Pidgeotite: Held: Allows Pidgeot to Mega Evolve into Mega Pidgeot.
+Clefablite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Alakazite: Held: Allows Alakazam to Mega Evolve into Mega Alakazam.
+Victreebelite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Slowbronite: Held: Allows Slowbro to Mega Evolve into Mega Slowbro.
+Gengarite: Held: Allows Gengar to Mega Evolve into Mega Gengar.
+Kangaskhanite: Held: Allows Kangaskhan to Mega Evolve into Mega Kangaskhan.
+Starminite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Pinsirite: Held: Allows Pinsir to Mega Evolve into Mega Pinsir.
+Aerodactylite: Held: Allows Aerodactyl to Mega Evolve into Mega Aerodactyl.
+Dragoninite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Meganiumite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Feraligite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Ampharosite: Held: Allows Ampharos to Mega Evolve into Mega Ampharos.
+Scizorite: Held: Allows Scizor to Mega Evolve into Mega Scizor.
+Skarmorite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Houndoominite: Held: Allows Houndoom to Mega Evolve into Mega Houndoom.
+Tyranitarite: Held: Allows Tyranitar to Mega Evolve into Mega Tyranitar.
+Gardevoirite: Held: Allows Gardevoir to Mega Evolve into Mega Gardevoir.
+Sablenite: Held: Allows Sableye to Mega Evolve into Mega Sableye.
+Medichamite: Held: Allows Medicham to Mega Evolve into Mega Medicham.
+Sharpedonite: Held: Allows Sharpedo to Mega Evolve into Mega Sharpedo.
+Cameruptite: Held: Allows Camerupt to Mega Evolve into Mega Camerupt.
+Altarianite: Held: Allows Altaria to Mega Evolve into Mega Altaria.
+Banettite: Held: Allows Banette to Mega Evolve into Mega Banette.
+Chimechite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Absolite: Held: Allows Absol to Mega Evolve into Mega Absol.
+Glalitite: Held: Allows Glalie to Mega Evolve into Mega Glalie.
+Lopunnite: Held: Allows Lopunny to Mega Evolve into Mega Lopunny.
+Lucarionite: Held: Allows Lucario to Mega Evolve into Mega Lucario.
+Galladite: Held: Allows Gallade to Mega Evolve into Mega Gallade.
+Froslassite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Emboarite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Excadrite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Audinite: Held: Allows Audino to Mega Evolve into Mega Audino.
+Chandelurite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Golurkite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Meowsticite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Hawluchanite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Crabominite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Drampanite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Scovillainite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Glimmoranite: Allows the corresponding Pokemon to Mega Evolve when held in battle.
+Bright Powder: Held: Increases the holder’s evasion by 1/9 (11 1/9%).
+Choice Scarf: Held: Increases Speed by 50%, but restricts the holder to only one move.
+Focus Band: Held: Holder has 10% chance to survive attacks or self-inflicted damage at 1 HP.
+Focus Sash: Held: Holder survives any single-hit attack at 1 HP if at max HP, then the item is consumed.
+King's Rock: Held: Damaging moves gain a 10% chance to make their target flinch. Traded on a Poliwhirl: Holder evolves into Politoed. Traded on a Slowpoke: Holder evolves into Slowking.
+Leftovers: Held: Restores 1/16 (6.25%) holder’s max HP at the end of each turn.
+Quick Claw: Held: Holder has a 3/16 (18.75%) chance to move first.
+White Herb: Held: Resets all lowered stats to normal at end of turn. Consumed after use.
+Abomasite: Held: Allows Abomasnow to Mega Evolve into Mega Abomasnow.
+Aggronite: Held: Allows Aggron to Mega Evolve into Mega Aggron.
+Beedrillite: Held: Allows Beedrill to Mega Evolve into Mega Beedrill.
+Garchompite: Held: Allows Garchomp to Mega Evolve into Mega Garchomp.
+Gyaradosite: Held: Allows Gyarados to Mega Evolve into Mega Gyarados.
+Heracronite: Held: Allows Heracross to Mega Evolve into Mega Heracross.
+Manectite: Held: Allows Manectric to Mega Evolve into Mega Manectric.
+Steelixite: Held: Allows Steelix to Mega Evolve into Mega Steelix.
+Lum Berry: Held: Consumed to cure any status condition or confusion.
+Sitrus Berry: Held: Consumed at 1/2 max HP to recover 1/4 max HP.

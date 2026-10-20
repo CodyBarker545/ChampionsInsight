@@ -16,7 +16,7 @@ class OpponentCardService:
     def assess_quality(self, image_path):
         return cv_service.assess_opponent_image_quality(image_path)
 
-    # Crops the six opponent card slots from an uploaded team image.
+    # Crops validated cards from an upload, returning partial teams when needed.
     def crop_team_slots(self, image_path, save_debug=False):
         return cv_service.crop_opponent_team_slots(image_path, save_debug=save_debug)
 

@@ -1,6 +1,6 @@
 """Shared API helpers for JSON safety, uploads, predictions, and sprites."""
 
-import json
+import copy
 import time
 
 import numpy as np
@@ -41,49 +41,51 @@ def make_json_safe(value):
     return value
 
 
+_LATEST_OPPONENT_PREDICTION = None
+
+
 def get_latest_prediction_path():
     deps = route_deps()
     return deps.UPLOAD_DIR / "latest_opponent_prediction.json"
 
 
+def delete_legacy_latest_prediction_file():
+    try:
+        prediction_path = get_latest_prediction_path()
+        if prediction_path.exists():
+            prediction_path.unlink()
+    except OSError:
+        pass
+
+
 def clear_latest_opponent_prediction():
-    deps = route_deps()
-    deps.UPLOAD_DIR.mkdir(exist_ok=True)
-    get_latest_prediction_path().write_text(
-        json.dumps({
-            "hasPrediction": False,
-            "detectedTeam": [],
-            "savedAt": time.time(),
-        }, indent=2, sort_keys=True),
-        encoding="utf-8",
-    )
+    global _LATEST_OPPONENT_PREDICTION
+    delete_legacy_latest_prediction_file()
+    _LATEST_OPPONENT_PREDICTION = {
+        "hasPrediction": False,
+        "detectedTeam": [],
+        "savedAt": time.time(),
+    }
 
 
 def save_latest_opponent_prediction(result, filename):
-    deps = route_deps()
-    deps.UPLOAD_DIR.mkdir(exist_ok=True)
+    global _LATEST_OPPONENT_PREDICTION
+    delete_legacy_latest_prediction_file()
     prediction = make_json_safe({
         **result,
         "filename": filename,
         "savedAt": time.time(),
     })
-    prediction_path = get_latest_prediction_path()
+    _LATEST_OPPONENT_PREDICTION = prediction
 
-    prediction_path.write_text(
-        json.dumps(prediction, indent=2, sort_keys=True),
-        encoding="utf-8",
-    )
-
-    return prediction
+    return copy.deepcopy(prediction)
 
 
 def load_latest_opponent_prediction():
-    prediction_path = get_latest_prediction_path()
-
-    if not prediction_path.exists():
+    if _LATEST_OPPONENT_PREDICTION is None:
         return None
 
-    return json.loads(prediction_path.read_text(encoding="utf-8"))
+    return copy.deepcopy(_LATEST_OPPONENT_PREDICTION)
 
 
 def is_valid_uploaded_filename(filename):

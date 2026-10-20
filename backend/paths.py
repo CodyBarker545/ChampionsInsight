@@ -20,7 +20,10 @@ COMPETITIVE_DIAGRAM_DIR = COMPETITIVE_DATA_DIR / "diagrams"
 COMPETITIVE_RAW_DIR = COMPETITIVE_DATA_DIR / "vgc_data"
 POKEDEX_USAGE_SUMMARY_PATH = COMPETITIVE_ANALYSIS_DIR / "pokedex_usage_summary.json"
 POKEDEX_META_INTELLIGENCE_PATH = COMPETITIVE_ANALYSIS_DIR / "pokedex_meta_intelligence.json"
+POKEMON_RECOMMENDED_BUILDS_PATH = COMPETITIVE_ANALYSIS_DIR / "pokemon_recommended_builds.json"
 TOP_MOVES_PATH = COMPETITIVE_ANALYSIS_DIR / "pokemon_top_6_moves.json"
+SET_PROBABILITY_SUMMARY_PATH = COMPETITIVE_ANALYSIS_DIR / "set_probability_summary.json"
+CONDITIONAL_SET_PROBABILITY_SUMMARY_PATH = COMPETITIVE_ANALYSIS_DIR / "conditional_set_probability_summary.json"
 ARCHETYPE_RULE_SUMMARY_PATH = COMPETITIVE_ANALYSIS_DIR / "archetype_rule_summary.json"
 ARCHETYPE_CLUSTER_SUMMARY_PATH = COMPETITIVE_ANALYSIS_DIR / "archetype_cluster_summary.json"
 ARCHETYPE_TEAM_CLASSIFICATIONS_PATH = COMPETITIVE_ANALYSIS_DIR / "archetype_team_classifications.json"
@@ -35,6 +38,7 @@ UPLOAD_DIR = DATA_DIR / "uploads"
 
 CV_DATA_DIR = DATA_DIR / "cv"
 CV_REFERENCE_DIR = CV_DATA_DIR / "references"
+CV_MODEL_DIR = CV_DATA_DIR / "models"
 POKEMON_REFERENCE_DIR = CV_REFERENCE_DIR / "pokemon"
 TYPE_REFERENCE_DIR = CV_REFERENCE_DIR / "types"
 TYPE_ICON_REFERENCE_DIR = TYPE_REFERENCE_DIR / "type_icons"
@@ -48,9 +52,11 @@ TYPE_EMBEDDING_INDEX_DIR = CV_INDEX_DIR / "type_embeddings"
 CV_DEBUG_DIR = CV_DATA_DIR / "debug"
 OPPONENT_DEBUG_CROP_DIR = CV_DEBUG_DIR / "crops"
 CV_DEBUG_REPORT_DIR = CV_DEBUG_DIR / "reports"
+POKEMON_MOBILENETV3_MODEL_DIR = CV_MODEL_DIR / "pokemon_mobilenetv3"
 
 # Ensure runtime directories exist.
 UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
 OPPONENT_DEBUG_CROP_DIR.mkdir(parents=True, exist_ok=True)
 CV_DEBUG_REPORT_DIR.mkdir(parents=True, exist_ok=True)
+CV_MODEL_DIR.mkdir(parents=True, exist_ok=True)
 USER_DATA_DIR.mkdir(parents=True, exist_ok=True)

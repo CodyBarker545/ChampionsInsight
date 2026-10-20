@@ -19,6 +19,7 @@ from services.cv_service import (
     is_usable_type_icon_candidate,
     load_cv_dependencies,
     rectify_opponent_card_crop,
+    select_pokemon_sprite_object,
     select_detected_types_from_methods,
     select_type_confirmed_reference,
     should_accept_type_icon_crop,
@@ -314,6 +315,35 @@ def test_detect_slot_object_layer_keeps_red_type_icon_fallback():
         "hasSymbol": True,
         "cropSource": "fixed_type_icon_fallback",
     })
+
+
+# Tests that lower-slot background fragments do not beat a centered sprite crop.
+def test_select_pokemon_sprite_object_penalizes_far_left_edge_fragments():
+    slot = np.full((300, 1000, 3), (0, 0, 190), dtype=np.uint8)
+    edge_fragment = np.full((300, 210, 3), (40, 40, 40), dtype=np.uint8)
+    centered_sprite = np.full((260, 520, 3), (190, 90, 20), dtype=np.uint8)
+
+    candidates = [
+        {
+            "box": {"x": 8, "y": 0, "width": 210, "height": 300},
+            "image": edge_fragment,
+            "source": "foreground_object_proposal",
+            "confidence": 0.98,
+            "cropQuality": 0.78,
+        },
+        {
+            "box": {"x": 70, "y": 11, "width": 520, "height": 260},
+            "image": centered_sprite,
+            "source": "expanded_fixed_sprite_fallback",
+            "confidence": 0.24,
+            "cropQuality": 0.79,
+        },
+    ]
+
+    result = select_pokemon_sprite_object(candidates, slot)
+
+    assert result["source"] == "expanded_fixed_sprite_fallback"
+    assert result["box"]["x"] == 70
 
 
 # Tests that a clear red card crop is rectified to the standard card size.

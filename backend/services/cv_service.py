@@ -816,26 +816,34 @@ def expand_box_xy(box, x_padding, y_padding, image_width, image_height):
     )
 
 
-# Crops all guided opponent team slots from an image.
+# Crops only validated opponent cards; unresolved positions remain absent.
 def crop_opponent_team_slots(image_path, save_debug=False):
-    cv2, _np = load_cv_dependencies()
     image = read_cv_image(image_path)
+    return crop_opponent_team_slots_from_image(
+        image,
+        image_stem=Path(image_path).stem,
+        save_debug=save_debug,
+    )
 
-    image_height, image_width = image.shape[:2]
-    crops = []
+
+def crop_opponent_team_slots_from_image(image, image_stem="in-memory", save_debug=False):
+    from services.card_detection_service import CardCrops, detect_cards, save_overlay
+    cv2, _np = load_cv_dependencies()
+
+    detection = detect_cards(image)
+    crops = CardCrops(detection)
 
     if save_debug:
         OPPONENT_DEBUG_CROP_DIR.mkdir(parents=True, exist_ok=True)
 
-    detected_boxes = detect_opponent_card_boxes(image)
-    crop_boxes = detected_boxes if len(detected_boxes) >= EXPECTED_OPPONENT_TEAM_SIZE else []
-    if not crop_boxes:
-        crop_boxes = [
-            box_to_pixels(box, image_width, image_height)
-            for box in OPPONENT_GUIDED_TEAM_BOXES
-        ]
+    crop_boxes = detection['boxes']
+    if save_debug:
+        overlay_path = OPPONENT_DEBUG_CROP_DIR / str(image_stem or "in-memory") / 'card-detections.jpg'
+        save_overlay(image, detection, overlay_path)
+        detection['debugOverlayPath'] = str(overlay_path)
 
-    for index, pixel_box in enumerate(crop_boxes[:EXPECTED_OPPONENT_TEAM_SIZE], start=1):
+    for pixel_box in crop_boxes:
+        index = pixel_box['position']
         x = pixel_box["x"]
         y = pixel_box["y"]
         width = pixel_box["width"]
@@ -848,7 +856,7 @@ def crop_opponent_team_slots(image_path, save_debug=False):
 
         debug_path = ""
         if save_debug:
-            image_debug_dir = OPPONENT_DEBUG_CROP_DIR / Path(image_path).stem
+            image_debug_dir = OPPONENT_DEBUG_CROP_DIR / str(image_stem or "in-memory")
             image_debug_dir.mkdir(parents=True, exist_ok=True)
 
             debug_path = str(image_debug_dir / f"opponent-slot-{index}.jpg")
@@ -860,6 +868,9 @@ def crop_opponent_team_slots(image_path, save_debug=False):
             "box": pixel_box,
             "image": crop,
             "debugCropPath": debug_path,
+            "validated": True,
+            "cardConfidence": pixel_box['confidence'],
+            "cardSource": pixel_box['source'],
         })
 
     return crops
@@ -935,7 +946,7 @@ def assess_opponent_image_quality(image_path):
 
 
 # Builds image quality metrics and user-facing capture guidance.
-def assess_opponent_image_quality_from_image(image):
+def assess_opponent_image_quality_from_image(image, card_boxes=None):
     if is_empty_image(image):
         return build_quality_result(
             image_width=0,
@@ -953,7 +964,9 @@ def assess_opponent_image_quality_from_image(image):
     hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
     value_channel = hsv_image[:, :, 2]
 
-    card_boxes = detect_opponent_card_boxes(image)
+    if card_boxes is None:
+        from services.card_detection_service import detect_cards
+        card_boxes = detect_cards(image)['boxes']
     sharpness_score = float(cv2.Laplacian(gray_image, cv2.CV_64F).var())
     average_brightness = float(value_channel.mean())
     overexposed_ratio = float((value_channel > 245).sum() / value_channel.size)
@@ -1706,6 +1719,29 @@ def select_pokemon_sprite_object(candidates, slot_image):
 
     slot_height, slot_width = slot_image.shape[:2]
 
+    def candidate_position_penalty(candidate):
+        box = candidate.get("box") or {}
+        x = float(box.get("x", 0) or 0)
+        width = float(box.get("width", 0) or 0)
+        center_ratio = (x + width / 2) / max(1, slot_width)
+        penalty = 0.0
+
+        # Real opponent sprites sit left-of-center in the red card. Camera
+        # captures can include unrelated background/mascot pieces along the
+        # extreme left edge, especially in the lower slots.
+        if center_ratio < 0.18:
+            penalty += 0.55
+        elif center_ratio < 0.25:
+            penalty += 0.20
+
+        if center_ratio > 0.62:
+            penalty += 0.12
+
+        if x <= slot_width * 0.015:
+            penalty += 0.18
+
+        return penalty
+
     def is_focused_candidate(candidate):
         if is_empty_image(candidate.get("image")):
             return False
@@ -1715,6 +1751,10 @@ def select_pokemon_sprite_object(candidates, slot_image):
         box = candidate.get("box") or {}
         width_ratio = box.get("width", 0) / max(1, slot_width)
         height_ratio = box.get("height", 0) / max(1, slot_height)
+        center_ratio = (box.get("x", 0) + box.get("width", 0) / 2) / max(1, slot_width)
+
+        if center_ratio < 0.14:
+            return False
 
         # The previous issue: fallback crops could span most of the card.
         # Keep those as emergency fallback only.
@@ -1742,7 +1782,8 @@ def select_pokemon_sprite_object(candidates, slot_image):
             key=lambda candidate: (
                 float(candidate.get("cropQuality", 0) or 0)
                 + float(candidate.get("confidence", 0) or 0) * 0.20
-                + source_priority.get(candidate.get("source", ""), 0.0),
+                + source_priority.get(candidate.get("source", ""), 0.0)
+                - candidate_position_penalty(candidate),
                 -((candidate.get("box") or {}).get("width", 0) / max(1, slot_width)),
             ),
         )
@@ -1760,7 +1801,8 @@ def select_pokemon_sprite_object(candidates, slot_image):
             usable_candidates,
             key=lambda candidate: (
                 float(candidate.get("cropQuality", 0) or 0)
-                - ((candidate.get("box") or {}).get("width", 0) / max(1, slot_width)) * 0.20,
+                - ((candidate.get("box") or {}).get("width", 0) / max(1, slot_width)) * 0.20
+                - candidate_position_penalty(candidate),
                 float(candidate.get("confidence", 0) or 0),
             ),
         )

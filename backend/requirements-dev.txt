@@ -1,0 +1,6 @@
+-r requirements.txt
+
+# Offline catalog imports, training plots, and tests.
+beautifulsoup4
+matplotlib
+pytest==9.0.3

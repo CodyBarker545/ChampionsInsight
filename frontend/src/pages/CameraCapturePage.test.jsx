@@ -51,7 +51,7 @@ describe("CameraCapturePage", () => {
     });
 
     expect(
-      await screen.findByText(/Battle Prep will update when detection is ready/i),
+      await screen.findByText(/Battle Prep will update when MobileNetV3 detection is ready/i),
     ).toBeInTheDocument();
   });
 
@@ -70,7 +70,7 @@ describe("CameraCapturePage", () => {
     await user.click(screen.getByRole("button", { name: /Start Detection System/i }));
 
     expect(
-      await screen.findByText(/Battle Prep will update when detection is ready/i),
+      await screen.findByText(/Battle Prep will update when MobileNetV3 detection is ready/i),
     ).toBeInTheDocument();
     expect(screen.queryByText(/Photo quality warning/i)).not.toBeInTheDocument();
   });

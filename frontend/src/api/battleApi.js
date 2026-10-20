@@ -24,3 +24,21 @@ export async function analyzeTeamMatchup(team, opponent) {
 
   return readJsonResponse(response, "Analysis failed.");
 }
+
+
+export async function fetchBattleAdviceChat(
+  payload,
+  signal = AbortSignal.timeout(30000),
+) {
+  const response = await fetch(resolveApiUrl("/api/battle/advice-chat"), {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    signal,
+    body: JSON.stringify(payload),
+  });
+
+  return readJsonResponse(
+    response,
+    "Could not load battle advice right now.",
+  );
+}

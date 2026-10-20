@@ -109,10 +109,7 @@ export function getVideoCropFromPreviewBox(
 
 /**
  * Captures ONLY the big guided team box.
- * Then resizes that crop to 1215x2160.
- *
- * Final backend upload is always:
- *   1215x2160
+ * Preserves the crop's native pixel dimensions unless explicitly overridden.
  */
 export async function captureGuidedCameraBlob(
   videoElement,
@@ -122,8 +119,8 @@ export async function captureGuidedCameraBlob(
   options = {},
 ) {
   const {
-    outputWidth = NORMALIZED_UPLOAD_WIDTH,
-    outputHeight = NORMALIZED_UPLOAD_HEIGHT,
+    outputWidth: requestedWidth,
+    outputHeight: requestedHeight,
     mimeType = "image/jpeg",
     quality = 0.95,
     debug = true,
@@ -148,6 +145,8 @@ export async function captureGuidedCameraBlob(
   );
 
   const canvas = canvasElement || document.createElement("canvas");
+  const outputWidth = requestedWidth ?? Math.max(1, Math.round(crop.sw));
+  const outputHeight = requestedHeight ?? Math.max(1, Math.round(crop.sh));
   canvas.width = outputWidth;
   canvas.height = outputHeight;
 

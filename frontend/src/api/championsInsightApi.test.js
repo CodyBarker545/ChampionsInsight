@@ -3,6 +3,8 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import {
   analyzeTeamMatchup,
   askRagQuestion,
+  detectOpponentTeam,
+  detectOpponentTeamWithEmbedding,
   fetchTeamSetProbabilities,
   fetchTournamentArchetypeClusters,
   fetchTournamentArchetypeRules,
@@ -16,6 +18,8 @@ import {
   uploadOpponentImageFile,
 } from "./championsInsightApi.js";
 
+
+const mockJson = (value) => vi.fn().mockResolvedValue(JSON.stringify(value));
 
 describe("championsInsightApi", () => {
   afterEach(() => {
@@ -34,7 +38,7 @@ describe("championsInsightApi", () => {
   it("fetches the local user team", async () => {
     vi.spyOn(global, "fetch").mockResolvedValue({
       ok: true,
-      json: vi.fn().mockResolvedValue({ userId: "local-demo-user", team: [{ name: "Aegis" }] }),
+      text: mockJson({ userId: "local-demo-user", team: [{ name: "Aegis" }] }),
     });
 
     await expect(fetchUserTeam()).resolves.toEqual({ userId: "local-demo-user", team: [{ name: "Aegis" }] });
@@ -44,7 +48,7 @@ describe("championsInsightApi", () => {
   it("saves the user team", async () => {
     vi.spyOn(global, "fetch").mockResolvedValue({
       ok: true,
-      json: vi.fn().mockResolvedValue({
+      text: mockJson({
         userId: "local-demo-user",
         teamName: "Saved Battle Team",
         team: [{ name: "Dragonite" }],
@@ -65,7 +69,7 @@ describe("championsInsightApi", () => {
   it("returns matchup analysis when the backend succeeds", async () => {
     vi.spyOn(global, "fetch").mockResolvedValue({
       ok: true,
-      json: vi.fn().mockResolvedValue({ summary: "Aegis has a favorable opening into Volt." }),
+      text: mockJson({ summary: "Aegis has a favorable opening into Volt." }),
     });
 
     await expect(analyzeTeamMatchup([{ name: "Aegis" }], "Volt")).resolves.toEqual({
@@ -76,7 +80,7 @@ describe("championsInsightApi", () => {
   it("asks the backend RAG system a question", async () => {
     vi.spyOn(global, "fetch").mockResolvedValue({
       ok: true,
-      json: vi.fn().mockResolvedValue({ question: "What does burn do?", answer: "Burn reduces damage." }),
+      text: mockJson({ question: "What does burn do?", answer: "Burn reduces damage." }),
     });
 
     await expect(askRagQuestion("What does burn do?")).resolves.toEqual({
@@ -89,7 +93,7 @@ describe("championsInsightApi", () => {
   it("fetches level 50 Pokemon stats", async () => {
     vi.spyOn(global, "fetch").mockResolvedValue({
       ok: true,
-      json: vi.fn().mockResolvedValue({
+      text: mockJson({
         name: "Charizard",
         level: 50,
         finalStats: { hp: 153, speed: 120 },
@@ -110,7 +114,7 @@ describe("championsInsightApi", () => {
   it("fetches top tournament moves", async () => {
     vi.spyOn(global, "fetch").mockResolvedValue({
       ok: true,
-      json: vi.fn().mockResolvedValue({
+      text: mockJson({
         name: "Aerodactyl",
         matchedName: "Aerodactyl",
         moves: [{ move: "Rock Slide", count: 12 }],
@@ -131,7 +135,7 @@ describe("championsInsightApi", () => {
   it("searches Pokemon by name", async () => {
     vi.spyOn(global, "fetch").mockResolvedValue({
       ok: true,
-      json: vi.fn().mockResolvedValue({
+      text: mockJson({
         query: "Aero",
         results: [{ name: "Aerodactyl" }],
       }),
@@ -150,7 +154,7 @@ describe("championsInsightApi", () => {
   it("fetches tournament archetype rule summaries", async () => {
     vi.spyOn(global, "fetch").mockResolvedValue({
       ok: true,
-      json: vi.fn().mockResolvedValue({
+      text: mockJson({
         totalTeamsAnalyzed: 25,
         archetypeSummaries: [{ archetype: "Rain", teamCount: 4 }],
       }),
@@ -169,7 +173,7 @@ describe("championsInsightApi", () => {
   it("fetches tournament archetype clusters", async () => {
     vi.spyOn(global, "fetch").mockResolvedValue({
       ok: true,
-      json: vi.fn().mockResolvedValue({
+      text: mockJson({
         totalTeamsAnalyzed: 25,
         totalClusters: 3,
         clustersByParentArchetype: { Rain: [{ clusterId: "rain-1" }] },
@@ -190,7 +194,7 @@ describe("championsInsightApi", () => {
   it("fetches team-level likely set probabilities", async () => {
     vi.spyOn(global, "fetch").mockResolvedValue({
       ok: true,
-      json: vi.fn().mockResolvedValue({
+      text: mockJson({
         team: ["Sneasler", "Indeedee"],
         predictions: {},
         teamExplanations: [],
@@ -213,7 +217,7 @@ describe("championsInsightApi", () => {
   it("throws matchup errors from the backend", async () => {
     vi.spyOn(global, "fetch").mockResolvedValue({
       ok: false,
-      json: vi.fn().mockResolvedValue({ error: "At least one team member is required." }),
+      text: mockJson({ error: "At least one team member is required." }),
     });
 
     await expect(analyzeTeamMatchup([], "Volt")).rejects.toThrow("At least one team member is required.");
@@ -222,7 +226,7 @@ describe("championsInsightApi", () => {
   it("uploads an opponent image file", async () => {
     vi.spyOn(global, "fetch").mockResolvedValue({
       ok: true,
-      json: vi.fn().mockResolvedValue({ status: "received", filename: "team-1234.jpg" }),
+      text: mockJson({ status: "received", filename: "team-1234.jpg" }),
     });
 
     const image = new File(["image"], "team.jpg", { type: "image/jpeg" });
@@ -232,6 +236,32 @@ describe("championsInsightApi", () => {
       filename: "team-1234.jpg",
     });
     expect(fetch).toHaveBeenCalledWith("/api/opponent/image", expect.objectContaining({ method: "POST" }));
+  });
+
+  it("detects opponent teams with MobileNetV3 by default", async () => {
+    const responseBody = {
+      predictionSource: "mobilenetv3_yolo",
+      detectedTeam: [{ pokemonName: "Garchomp" }],
+    };
+    vi.spyOn(global, "fetch").mockResolvedValue({
+      ok: true,
+      text: vi.fn().mockResolvedValue(JSON.stringify(responseBody)),
+    });
+
+    await expect(detectOpponentTeam("team.jpg")).resolves.toEqual(responseBody);
+    expect(fetch).toHaveBeenCalledWith(
+      "/api/opponent/detect-mobilenetv3",
+      expect.objectContaining({ method: "POST" }),
+    );
+  });
+
+  it("does not call the disabled embedding opponent detector", async () => {
+    const fetchSpy = vi.spyOn(global, "fetch");
+
+    await expect(detectOpponentTeamWithEmbedding("team.jpg")).rejects.toThrow(
+      "Embedding opponent detection is disabled.",
+    );
+    expect(fetchSpy).not.toHaveBeenCalled();
   });
 });
   it("resolves backend-relative media URLs", () => {

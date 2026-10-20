@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import os
+from functools import lru_cache
 from pathlib import Path
 
 os.environ.setdefault("TF_CPP_MIN_LOG_LEVEL", "3")
@@ -35,6 +36,7 @@ def get_local_model_path() -> Path | None:
     return snapshots[0] if snapshots else None
 
 
+@lru_cache(maxsize=1)
 def load_embedding_model() -> SentenceTransformer:
     """Load the embedding model locally when possible, otherwise download it."""
     try:

@@ -14,8 +14,13 @@ import csv
 import json
 import sys
 import time
+import threading
+import subprocess
+import os
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from typing import Any, Iterable
+from datetime import date
 from urllib.error import HTTPError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
@@ -29,7 +34,10 @@ from paths import COMPETITIVE_RAW_DIR
 
 API_ROOT = "https://play.limitlesstcg.com/api"
 GAME = "VGC"
-ALLOWED_FORMATS = {"M-A", "M-B"}
+ALLOWED_FORMATS = {"M-A", "M-B", "M-C"}
+_REQUEST_LOCK = threading.Lock()
+_NEXT_REQUEST_AT = 0.0
+_RATE_LOGGED = False
 
 TOURNAMENT_FIELDS = [
     "date",
@@ -162,6 +170,7 @@ def api_get(
     params: dict[str, Any] | None = None,
     max_retries: int = 5,
 ) -> Any:
+    global _NEXT_REQUEST_AT, _RATE_LOGGED
     query = f"?{urlencode(params)}" if params else ""
     request = Request(
         f"{API_ROOT}{path}{query}",
@@ -169,11 +178,21 @@ def api_get(
     )
 
     for attempt in range(max_retries + 1):
+        # Share pacing and Retry-After across download workers.
+        with _REQUEST_LOCK:
+            delay = max(0.0, _NEXT_REQUEST_AT - time.monotonic())
+            _NEXT_REQUEST_AT = max(_NEXT_REQUEST_AT, time.monotonic()) + 0.25
+        if delay:
+            time.sleep(delay)
         try:
             with urlopen(request, timeout=30) as response:
+                if not _RATE_LOGGED:
+                    headers = {key: value for key, value in response.headers.items() if 'ratelimit' in key.lower()}
+                    print(f"Limitless rate limits: {headers}", flush=True)
+                    _RATE_LOGGED = True
                 return json.loads(response.read().decode("utf-8"))
         except HTTPError as error:
-            if error.code != 429 or attempt == max_retries:
+            if error.code not in {429, 500, 502, 503, 504} or attempt == max_retries:
                 raise
 
             retry_after = error.headers.get("Retry-After")
@@ -183,6 +202,8 @@ def api_get(
                 wait_seconds = 2 ** attempt
 
             wait_seconds = max(wait_seconds, 1.0)
+            with _REQUEST_LOCK:
+                _NEXT_REQUEST_AT = max(_NEXT_REQUEST_AT, time.monotonic() + wait_seconds)
             print(
                 f"Rate limited on {path}; waiting {wait_seconds:.1f}s before retry "
                 f"{attempt + 1}/{max_retries}.",
@@ -194,7 +215,7 @@ def api_get(
 
 
 def fetch_tournament_page(limit: int, offset: int) -> list[dict[str, Any]]:
-    return api_get("/tournaments", {"game": GAME, "limit": limit, "offset": offset})
+    return api_get("/tournaments", {"game": GAME, "limit": limit, "page": offset // limit + 1})
 
 
 def fetch_tournament_details(tournament_id: str) -> dict[str, Any]:
@@ -320,21 +341,27 @@ def standing_rows(
         rows.append(
             {
                 "country": standing.get("country"),
-                "drop_round": standing.get("dropRound"),
+                "drop_round": standing.get("drop", standing.get("dropRound")),
                 "is_winner": standing.get("placing") == 1,
-                "losses": standing.get("losses"),
+                "losses": standing_record_value(standing, "losses"),
                 "placing": standing.get("placing"),
                 "player_id": standing.get("player"),
                 "player_name": standing.get("name"),
                 "players_in_tournament": tournament.get("players"),
-                "ties": standing.get("ties"),
+                "ties": standing_record_value(standing, "ties"),
                 "tournament_id": tournament.get("id"),
                 "tournament_name": tournament.get("name"),
                 "weighted_score": standing.get("score"),
-                "wins": standing.get("wins"),
+                "wins": standing_record_value(standing, "wins"),
             }
         )
     return rows
+
+
+def standing_record_value(standing, field):
+    """Use the documented nested record, preserving legacy flat exports."""
+    record = standing.get('record') or {}
+    return record[field] if field in record else standing.get(field)
 
 
 def teamlist_rows(
@@ -353,7 +380,7 @@ def teamlist_rows(
                 {
                     "ability": pokemon.get("ability"),
                     "item": pokemon.get("item"),
-                    "losses": standing.get("losses"),
+                    "losses": standing_record_value(standing, "losses"),
                     "move_1": attacks[0] if len(attacks) > 0 else None,
                     "move_2": attacks[1] if len(attacks) > 1 else None,
                     "move_3": attacks[2] if len(attacks) > 2 else None,
@@ -366,18 +393,22 @@ def teamlist_rows(
                     "raw": json.dumps(pokemon, ensure_ascii=False),
                     "team_slot": slot,
                     "tera_type": pokemon.get("tera"),
-                    "ties": standing.get("ties"),
+                    "ties": standing_record_value(standing, "ties"),
                     "tournament_id": tournament.get("id"),
                     "tournament_name": tournament.get("name"),
-                    "wins": standing.get("wins"),
+                    "wins": standing_record_value(standing, "wins"),
                 }
             )
     return rows
 
 
 def pairing_result(player_id: str | None, winner: Any) -> str:
-    if not player_id or winner in (None, -1, ""):
+    if not player_id or winner in (None, ""):
         return "tie/other"
+    if winner == -1:
+        return "loss"
+    if winner == 0:
+        return "tie"
     return "win" if player_id == winner else "loss"
 
 
@@ -431,6 +462,8 @@ def scrape_incremental(
     raw_dir: Path = COMPETITIVE_RAW_DIR,
     page_size: int = 100,
     sleep_seconds: float = 1.0,
+    through_date: str | None = None,
+    workers: int = 3,
 ) -> int:
     tournaments_path = raw_dir / "tournaments.csv"
     latest_existing_timestamp = load_latest_tournament_timestamp(tournaments_path)
@@ -438,56 +471,173 @@ def scrape_incremental(
 
     offset = 0
     new_tournament_count = 0
+    pending = []
+    seen_page_ids = set()
+    through_date = through_date or date.today().isoformat()
+    print(f"Latest saved: {latest_existing_timestamp}; checking through {through_date}", flush=True)
+    checkpoint_path = raw_dir / f"limitless_listing_{through_date}.json"
+    if checkpoint_path.exists():
+        checkpoint = json.loads(checkpoint_path.read_text(encoding='utf-8'))
+        pending = [t for t in checkpoint if str(t.get('id')) not in existing_ids]
+        print(f"Resuming saved listing: {len(pending)} missing events.", flush=True)
 
-    while True:
+    while not checkpoint_path.exists():
         page = fetch_tournament_page(limit=page_size, offset=offset)
         if not page:
             break
 
+        page_ids = tuple(str(t.get("id")) for t in page)
+        if page_ids in seen_page_ids:
+            raise RuntimeError("Limitless returned a repeated page; stopping to avoid an endless loop.")
+        seen_page_ids.add(page_ids)
+        print(f"Page {offset // page_size + 1}: {len(page)} events, "
+              f"dates {page[-1].get('date')} to {page[0].get('date')}; "
+              f"formats {sorted({str(t.get('format')) for t in page})}", flush=True)
+
         selected, stopped = select_new_tournaments(page, latest_existing_timestamp, existing_ids)
-        for listed_tournament in selected:
-            tournament_id = str(listed_tournament["id"])
-            details = fetch_tournament_details(tournament_id)
-            tournament = {**listed_tournament, **details}
-            standings = fetch_tournament_standings(tournament_id)
-            pairings = fetch_tournament_pairings(tournament_id)
-
-            append_rows(raw_dir / "tournaments.csv", TOURNAMENT_FIELDS, [tournament_row(tournament)])
-            append_rows(raw_dir / "standings.csv", STANDINGS_FIELDS, standing_rows(standings, tournament))
-            append_rows(raw_dir / "pokemon_teamlists.csv", TEAMLIST_FIELDS, teamlist_rows(standings, tournament))
-            append_rows(raw_dir / "matches.csv", MATCH_FIELDS, match_rows(pairings, tournament))
-
-            existing_ids.add(tournament_id)
-            new_tournament_count += 1
-            if sleep_seconds:
-                time.sleep(sleep_seconds)
+        pending.extend(t for t in selected if parse_iso_date(t.get('date')) <= through_date)
 
         if stopped or len(page) < page_size:
             break
-
         offset += page_size
+        if sleep_seconds:
+            time.sleep(sleep_seconds)
+
+    # Advance the timestamp only after finishing older missing tournaments.
+    # If the network fails, a rerun still includes every unprocessed event.
+    pending = sorted({str(t['id']): t for t in pending}.values(), key=lambda t: str(t.get('date', '')))
+    if not checkpoint_path.exists():
+        checkpoint_path.write_text(json.dumps(pending, indent=2, ensure_ascii=False), encoding='utf-8')
+    print(f"Found {len(pending)} new eligible tournaments.", flush=True)
+
+    def download(tournament):
+        identifier = str(tournament['id'])
+        details = fetch_tournament_details(identifier)
+        return ({**tournament, **details}, fetch_tournament_standings(identifier), fetch_tournament_pairings(identifier))
+
+    # Download a bounded window concurrently, but commit oldest first on one
+    # thread. This preserves restart safety without holding all results in RAM.
+    with ThreadPoolExecutor(max_workers=max(1, workers)) as pool:
+        for start in range(0, len(pending), max(1, workers)):
+            for tournament, standings, pairings in pool.map(download, pending[start:start + max(1, workers)]):
+                tournament_id = str(tournament["id"])
+                print(f"[{new_tournament_count + 1}/{len(pending)}] "
+                      f"{tournament.get('date')} {tournament.get('name')}", flush=True)
+
+                append_rows(raw_dir / "standings.csv", STANDINGS_FIELDS, standing_rows(standings, tournament))
+                append_rows(raw_dir / "pokemon_teamlists.csv", TEAMLIST_FIELDS, teamlist_rows(standings, tournament))
+                append_rows(raw_dir / "matches.csv", MATCH_FIELDS, match_rows(pairings, tournament))
+                append_rows(raw_dir / "tournaments.csv", TOURNAMENT_FIELDS, [tournament_row(tournament)])
+
+                existing_ids.add(tournament_id)
+                new_tournament_count += 1
+                if sleep_seconds:
+                    time.sleep(sleep_seconds)
 
     normalize_existing_tournament_rows(tournaments_path)
     update_summary(raw_dir)
     return new_tournament_count
 
 
+def repair_standings(raw_dir=COMPETITIVE_RAW_DIR, workers=3, through_date=None):
+    """Cache authoritative API standings, then replace only affected events."""
+    tournaments = {row['tournament_id']: row for row in csv.DictReader(
+        (raw_dir / 'tournaments.csv').open(encoding='utf-8', newline=''))}
+    with (raw_dir / 'standings.csv').open(encoding='utf-8', newline='') as file:
+        target_ids = {row['tournament_id'] for row in csv.DictReader(file)
+                      if not row.get('wins') or not row.get('losses') or not row.get('ties')}
+    through_date = through_date or date.today().isoformat()
+    baseline = raw_dir.parent / 'update_backups' / through_date.replace('-', '') / 'tournaments.csv'
+    if baseline.exists():
+        # Existing sparse legacy rows may belong to cancelled/unavailable
+        # events. This repair is for the newly imported records only.
+        target_ids -= load_existing_tournament_ids(baseline)
+    cache = raw_dir.parent / 'limitless_standings_cache'
+    cache.mkdir(exist_ok=True)
+    (cache / '.gitignore').write_text('*\n', encoding='utf-8')
+    targets = sorted(target_ids, key=lambda identifier: tournaments[identifier]['date'])
+    print(f'Repairing nested result fields for {len(targets)} tournaments.', flush=True)
+
+    def fetch(identifier):
+        path = cache / f'{identifier}.json'
+        if not path.exists():
+            payload = fetch_tournament_standings(identifier)
+            temporary = path.with_suffix('.tmp')
+            temporary.write_text(json.dumps(payload, ensure_ascii=False), encoding='utf-8')
+            temporary.replace(path)
+        return identifier
+
+    with ThreadPoolExecutor(max_workers=max(1, workers)) as pool:
+        for start in range(0, len(targets), max(1, workers)):
+            for identifier in pool.map(fetch, targets[start:start + max(1, workers)]):
+                completed = sum((cache / f'{target}.json').exists() for target in targets)
+                status = {'phase': 'repairing_standings', 'throughDate': through_date,
+                          'pid': os.getpid(), 'targetTournaments': len(targets),
+                          'cachedStandings': completed, 'remainingStandings': len(targets) - completed}
+                (raw_dir / 'limitless_update_status.json').write_text(json.dumps(status, indent=2), encoding='utf-8')
+                print(f'[{completed}/{len(targets)}] Standings cached: {identifier}', flush=True)
+
+    # Write full replacement files before replacing originals; source caches
+    # allow an interrupted rewrite to be retried without more API requests.
+    for filename, fields, convert in [('standings.csv', STANDINGS_FIELDS, standing_rows),
+                                      ('pokemon_teamlists.csv', TEAMLIST_FIELDS, teamlist_rows)]:
+        path = raw_dir / filename
+        temporary = path.with_suffix('.repair.tmp')
+        with temporary.open('w', newline='', encoding='utf-8') as output:
+            writer = csv.DictWriter(output, fieldnames=fields)
+            writer.writeheader()
+            with path.open(encoding='utf-8', newline='') as source:
+                writer.writerows(row for row in csv.DictReader(source) if row['tournament_id'] not in target_ids)
+            for identifier in targets:
+                payload = json.loads((cache / f'{identifier}.json').read_text(encoding='utf-8'))
+                tournament = {**tournaments[identifier], 'id': identifier}
+                writer.writerows(convert(payload, tournament))
+        temporary.replace(path)
+
+    path = raw_dir / 'matches.csv'
+    temporary = path.with_suffix('.repair.tmp')
+    with path.open(encoding='utf-8', newline='') as source, temporary.open('w', encoding='utf-8', newline='') as output:
+        writer = csv.DictWriter(output, fieldnames=MATCH_FIELDS)
+        writer.writeheader()
+        for row in csv.DictReader(source):
+            raw = json.loads(row['raw'])
+            row['player1_result'] = pairing_result(raw.get('player1'), raw.get('winner'))
+            row['player2_result'] = pairing_result(raw.get('player2'), raw.get('winner'))
+            writer.writerow(row)
+    temporary.replace(path)
+    update_summary(raw_dir)
+    print('Standings, team results and match-result labels repaired.', flush=True)
+    return len(targets)
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description=(
-            "Append only newer Limitless VGC Regulation Set M-A/M-B tournament data, "
+            "Append only newer Limitless VGC Regulation Set M-A/M-B/M-C tournament data, "
             "stopping at known dates."
         )
     )
     parser.add_argument("--page-size", type=int, default=100)
     parser.add_argument("--sleep-seconds", type=float, default=1.0)
+    parser.add_argument("--through-date", default=date.today().isoformat())
+    parser.add_argument("--workers", type=int, default=3)
+    parser.add_argument("--rebuild", action="store_true", help="Rebuild tournament-derived app data after download completes.")
+    parser.add_argument("--repair-standings", action="store_true")
     return parser.parse_args()
 
 
 def main() -> None:
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding='utf-8', errors='replace')
     args = parse_args()
-    added = scrape_incremental(page_size=args.page_size, sleep_seconds=args.sleep_seconds)
-    print(f"Added {added} new tournament(s).")
+    if args.repair_standings:
+        repair_standings(workers=args.workers, through_date=args.through_date)
+    else:
+        added = scrape_incremental(page_size=args.page_size, sleep_seconds=args.sleep_seconds, through_date=args.through_date, workers=args.workers)
+        print(f"Added {added} new tournament(s).")
+    if args.rebuild:
+        subprocess.run([sys.executable, str(BACKEND_DIR / 'scripts/build_all_data.py'), '--skip-ai-artifacts'], check=True)
+        print('Tournament import and derived-data rebuild complete.', flush=True)
 
 
 if __name__ == "__main__":

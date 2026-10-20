@@ -251,6 +251,14 @@ function buildImmediatePokemonDetail(pokemon) {
   };
 }
 
+function formatWholePercent(value) {
+  const number = Number(value || 0);
+  if (number <= 0) {
+    return "0%";
+  }
+  return `${Math.round(number * 100)}%`;
+}
+
 function PokedexPage({ onBack }) {
   const detailCacheRef = useRef(new Map());
   const detailRequestRef = useRef(0);
@@ -782,17 +790,23 @@ function PokemonDetailModal({
                       : ability.displayName || ability.name;
 
                   const isHidden = typeof ability === "object" && ability.isHidden;
+                  const description =
+                    typeof ability === "object"
+                      ? ability.shortEffect || ability.short_effect || ability.effect
+                      : "";
 
                   return (
                     <article key={name}>
                       <strong>{formatName(name)}</strong>
                       <span>{isHidden ? "Hidden Ability" : "Standard Ability"}</span>
+                      {description ? <p>{description}</p> : null}
                     </article>
                   );
                 })
               ) : (
                 <p>No ability data available.</p>
               )}
+              {isHydratingDetail ? <p>Loading ability descriptions...</p> : null}
             </div>
           )}
 
@@ -898,7 +912,10 @@ function PokemonDetailModal({
                     <article key={`${team.label}-${index}`}>
                       <header>
                         <strong>{team.label || `Recommended Team ${index + 1}`}</strong>
-                        <span>{team.sampleSize || 0} sample appearances</span>
+                        <span>
+                          {team.sampleSize || 0} lineup
+                          {Number(team.sampleSize || 0) === 1 ? "" : "s"} · {formatWholePercent(team.winRate)} win rate
+                        </span>
                       </header>
 
                       <div className="pokedex-team-sprites pokedex-team-sprites-centered">
@@ -920,6 +937,34 @@ function PokemonDetailModal({
                           );
                         })}
                       </div>
+
+                      {team.recommendedSet ? (
+                        <div className="pokedex-team-build-summary">
+                          {team.recommendedSet.item ? (
+                            <span>Item: {formatName(team.recommendedSet.item)}</span>
+                          ) : null}
+                          {team.recommendedSet.ability ? (
+                            <span>Ability: {formatName(team.recommendedSet.ability)}</span>
+                          ) : null}
+                          {team.recommendedSet.nature ? (
+                            <span>Nature: {formatName(team.recommendedSet.nature)}</span>
+                          ) : null}
+                        </div>
+                      ) : null}
+
+                      {(team.recommendedSet?.moves || []).length ? (
+                        <div className="pokedex-team-build-moves">
+                          {team.recommendedSet.moves.map((move) => (
+                            <span key={`${team.label}-${move}`}>
+                              {formatName(move)}
+                            </span>
+                          ))}
+                        </div>
+                      ) : null}
+
+                      {team.summary ? (
+                        <p className="pokedex-team-build-copy">{team.summary}</p>
+                      ) : null}
 
                       <div className="pokedex-team-recommendation-notes">
                         {(team.signals || []).slice(0, 3).map((signal) => (

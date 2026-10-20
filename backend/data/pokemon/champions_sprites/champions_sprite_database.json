@@ -17044,5 +17044,3901 @@
     "local_path": "D:\\SoftwareEng\\ChampionsInsight\\backend\\Pokemon_Data\\data\\champions_sprites\\shiny\\Menu_CP_1019_shiny.png",
     "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_CP_1019_shiny.png",
     "image_url": "https://archives.bulbagarden.net/media/upload/d/df/Menu_CP_1019_shiny.png"
+  },
+  {
+    "display_name": "Raichu Mega X",
+    "species_display_name": "Raichu",
+    "form_display_name": "Raichu Mega X",
+    "dex_number": "0026",
+    "sprite_form": "Mega X",
+    "form_api_name": "raichu-mega-x",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "electric"
+    ],
+    "base_stats": {
+      "hp": 60,
+      "attack": 135,
+      "defense": 95,
+      "special_attack": 90,
+      "special_defense": 95,
+      "speed": 110
+    },
+    "original_filename": "Menu Champs 0026-Mega X.png",
+    "local_filename": "Menu_CP_0026-Mega_X.png",
+    "local_path": "normal/Menu_CP_0026-Mega_X.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0026-Mega_X.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/b/b0/Menu_Champs_0026-Mega_X.png"
+  },
+  {
+    "display_name": "Raichu Mega Y",
+    "species_display_name": "Raichu",
+    "form_display_name": "Raichu Mega Y",
+    "dex_number": "0026",
+    "sprite_form": "Mega Y",
+    "form_api_name": "raichu-mega-y",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "electric"
+    ],
+    "base_stats": {
+      "hp": 60,
+      "attack": 100,
+      "defense": 55,
+      "special_attack": 160,
+      "special_defense": 80,
+      "speed": 130
+    },
+    "original_filename": "Menu Champs 0026-Mega Y.png",
+    "local_filename": "Menu_CP_0026-Mega_Y.png",
+    "local_path": "normal/Menu_CP_0026-Mega_Y.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0026-Mega_Y.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/d/dd/Menu_Champs_0026-Mega_Y.png"
+  },
+  {
+    "display_name": "Wigglytuff",
+    "species_display_name": "Wigglytuff",
+    "form_display_name": "Wigglytuff",
+    "dex_number": "0040",
+    "sprite_form": "",
+    "form_api_name": "wigglytuff",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "normal",
+      "fairy"
+    ],
+    "base_stats": {
+      "hp": 140,
+      "attack": 70,
+      "defense": 45,
+      "special_attack": 85,
+      "special_defense": 50,
+      "speed": 45
+    },
+    "original_filename": "Menu Champs 0040.png",
+    "local_filename": "Menu_CP_0040.png",
+    "local_path": "normal/Menu_CP_0040.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0040.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/2/21/Menu_Champs_0040.png"
+  },
+  {
+    "display_name": "Vileplume",
+    "species_display_name": "Vileplume",
+    "form_display_name": "Vileplume",
+    "dex_number": "0045",
+    "sprite_form": "",
+    "form_api_name": "vileplume",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "base_stats": {
+      "hp": 75,
+      "attack": 80,
+      "defense": 85,
+      "special_attack": 110,
+      "special_defense": 90,
+      "speed": 50
+    },
+    "original_filename": "Menu Champs 0045.png",
+    "local_filename": "Menu_CP_0045.png",
+    "local_path": "normal/Menu_CP_0045.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0045.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/e/ee/Menu_Champs_0045.png"
+  },
+  {
+    "display_name": "Persian Alola",
+    "species_display_name": "Persian",
+    "form_display_name": "Persian Alola",
+    "dex_number": "0053",
+    "sprite_form": "Alola",
+    "form_api_name": "persian-alola",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "dark"
+    ],
+    "base_stats": {
+      "hp": 65,
+      "attack": 60,
+      "defense": 60,
+      "special_attack": 75,
+      "special_defense": 65,
+      "speed": 115
+    },
+    "original_filename": "Menu Champs 0053-Alola.png",
+    "local_filename": "Menu_CP_0053-Alola.png",
+    "local_path": "normal/Menu_CP_0053-Alola.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0053-Alola.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/3/33/Menu_Champs_0053-Alola.png"
+  },
+  {
+    "display_name": "Persian",
+    "species_display_name": "Persian",
+    "form_display_name": "Persian",
+    "dex_number": "0053",
+    "sprite_form": "",
+    "form_api_name": "persian",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "normal"
+    ],
+    "base_stats": {
+      "hp": 65,
+      "attack": 70,
+      "defense": 60,
+      "special_attack": 65,
+      "special_defense": 65,
+      "speed": 115
+    },
+    "original_filename": "Menu Champs 0053.png",
+    "local_filename": "Menu_CP_0053.png",
+    "local_path": "normal/Menu_CP_0053.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0053.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/a/a0/Menu_Champs_0053.png"
+  },
+  {
+    "display_name": "Farfetch'd",
+    "species_display_name": "Farfetch'd",
+    "form_display_name": "Farfetch'd",
+    "dex_number": "0083",
+    "sprite_form": "",
+    "form_api_name": "farfetchd",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "base_stats": {
+      "hp": 52,
+      "attack": 90,
+      "defense": 55,
+      "special_attack": 58,
+      "special_defense": 62,
+      "speed": 60
+    },
+    "original_filename": "Menu Champs 0083.png",
+    "local_filename": "Menu_CP_0083.png",
+    "local_path": "normal/Menu_CP_0083.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0083.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/0/0c/Menu_Champs_0083.png"
+  },
+  {
+    "display_name": "Mr. Mime",
+    "species_display_name": "Mr. Mime",
+    "form_display_name": "Mr. Mime",
+    "dex_number": "0122",
+    "sprite_form": "",
+    "form_api_name": "mr-mime",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "psychic",
+      "fairy"
+    ],
+    "base_stats": {
+      "hp": 40,
+      "attack": 45,
+      "defense": 65,
+      "special_attack": 100,
+      "special_defense": 120,
+      "speed": 90
+    },
+    "original_filename": "Menu Champs 0122.png",
+    "local_filename": "Menu_CP_0122.png",
+    "local_path": "normal/Menu_CP_0122.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0122.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/8/85/Menu_Champs_0122.png"
+  },
+  {
+    "display_name": "Qwilfish",
+    "species_display_name": "Qwilfish",
+    "form_display_name": "Qwilfish",
+    "dex_number": "0211",
+    "sprite_form": "",
+    "form_api_name": "qwilfish",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "water",
+      "poison"
+    ],
+    "base_stats": {
+      "hp": 65,
+      "attack": 95,
+      "defense": 85,
+      "special_attack": 55,
+      "special_defense": 55,
+      "speed": 85
+    },
+    "original_filename": "Menu Champs 0211.png",
+    "local_filename": "Menu_CP_0211.png",
+    "local_path": "normal/Menu_CP_0211.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0211.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/3/3d/Menu_Champs_0211.png"
+  },
+  {
+    "display_name": "Sceptile Mega",
+    "species_display_name": "Sceptile",
+    "form_display_name": "Sceptile Mega",
+    "dex_number": "0254",
+    "sprite_form": "Mega",
+    "form_api_name": "sceptile-mega",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "grass",
+      "dragon"
+    ],
+    "base_stats": {
+      "hp": 70,
+      "attack": 110,
+      "defense": 75,
+      "special_attack": 145,
+      "special_defense": 85,
+      "speed": 145
+    },
+    "original_filename": "Menu Champs 0254-Mega.png",
+    "local_filename": "Menu_CP_0254-Mega.png",
+    "local_path": "normal/Menu_CP_0254-Mega.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0254-Mega.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/b/bd/Menu_Champs_0254-Mega.png"
+  },
+  {
+    "display_name": "Sceptile",
+    "species_display_name": "Sceptile",
+    "form_display_name": "Sceptile",
+    "dex_number": "0254",
+    "sprite_form": "",
+    "form_api_name": "sceptile",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "grass"
+    ],
+    "base_stats": {
+      "hp": 70,
+      "attack": 85,
+      "defense": 65,
+      "special_attack": 105,
+      "special_defense": 85,
+      "speed": 120
+    },
+    "original_filename": "Menu Champs 0254.png",
+    "local_filename": "Menu_CP_0254.png",
+    "local_path": "normal/Menu_CP_0254.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0254.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/a/a2/Menu_Champs_0254.png"
+  },
+  {
+    "display_name": "Blaziken Mega",
+    "species_display_name": "Blaziken",
+    "form_display_name": "Blaziken Mega",
+    "dex_number": "0257",
+    "sprite_form": "Mega",
+    "form_api_name": "blaziken-mega",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "fire",
+      "fighting"
+    ],
+    "base_stats": {
+      "hp": 80,
+      "attack": 160,
+      "defense": 80,
+      "special_attack": 130,
+      "special_defense": 80,
+      "speed": 100
+    },
+    "original_filename": "Menu Champs 0257-Mega.png",
+    "local_filename": "Menu_CP_0257-Mega.png",
+    "local_path": "normal/Menu_CP_0257-Mega.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0257-Mega.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/e/e8/Menu_Champs_0257-Mega.png"
+  },
+  {
+    "display_name": "Blaziken",
+    "species_display_name": "Blaziken",
+    "form_display_name": "Blaziken",
+    "dex_number": "0257",
+    "sprite_form": "",
+    "form_api_name": "blaziken",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "fire",
+      "fighting"
+    ],
+    "base_stats": {
+      "hp": 80,
+      "attack": 120,
+      "defense": 70,
+      "special_attack": 110,
+      "special_defense": 70,
+      "speed": 80
+    },
+    "original_filename": "Menu Champs 0257.png",
+    "local_filename": "Menu_CP_0257.png",
+    "local_path": "normal/Menu_CP_0257.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0257.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/c/c6/Menu_Champs_0257.png"
+  },
+  {
+    "display_name": "Swampert Mega",
+    "species_display_name": "Swampert",
+    "form_display_name": "Swampert Mega",
+    "dex_number": "0260",
+    "sprite_form": "Mega",
+    "form_api_name": "swampert-mega",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "water",
+      "ground"
+    ],
+    "base_stats": {
+      "hp": 100,
+      "attack": 150,
+      "defense": 110,
+      "special_attack": 95,
+      "special_defense": 110,
+      "speed": 70
+    },
+    "original_filename": "Menu Champs 0260-Mega.png",
+    "local_filename": "Menu_CP_0260-Mega.png",
+    "local_path": "normal/Menu_CP_0260-Mega.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0260-Mega.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/7/74/Menu_Champs_0260-Mega.png"
+  },
+  {
+    "display_name": "Swampert",
+    "species_display_name": "Swampert",
+    "form_display_name": "Swampert",
+    "dex_number": "0260",
+    "sprite_form": "",
+    "form_api_name": "swampert",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "water",
+      "ground"
+    ],
+    "base_stats": {
+      "hp": 100,
+      "attack": 110,
+      "defense": 90,
+      "special_attack": 85,
+      "special_defense": 90,
+      "speed": 60
+    },
+    "original_filename": "Menu Champs 0260.png",
+    "local_filename": "Menu_CP_0260.png",
+    "local_path": "normal/Menu_CP_0260.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0260.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/0/03/Menu_Champs_0260.png"
+  },
+  {
+    "display_name": "Mawile Mega",
+    "species_display_name": "Mawile",
+    "form_display_name": "Mawile Mega",
+    "dex_number": "0303",
+    "sprite_form": "Mega",
+    "form_api_name": "mawile-mega",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "steel",
+      "fairy"
+    ],
+    "base_stats": {
+      "hp": 50,
+      "attack": 105,
+      "defense": 125,
+      "special_attack": 55,
+      "special_defense": 95,
+      "speed": 50
+    },
+    "original_filename": "Menu Champs 0303-Mega.png",
+    "local_filename": "Menu_CP_0303-Mega.png",
+    "local_path": "normal/Menu_CP_0303-Mega.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0303-Mega.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/6/63/Menu_Champs_0303-Mega.png"
+  },
+  {
+    "display_name": "Mawile",
+    "species_display_name": "Mawile",
+    "form_display_name": "Mawile",
+    "dex_number": "0303",
+    "sprite_form": "",
+    "form_api_name": "mawile",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "steel",
+      "fairy"
+    ],
+    "base_stats": {
+      "hp": 50,
+      "attack": 85,
+      "defense": 85,
+      "special_attack": 55,
+      "special_defense": 55,
+      "speed": 50
+    },
+    "original_filename": "Menu Champs 0303.png",
+    "local_filename": "Menu_CP_0303.png",
+    "local_path": "normal/Menu_CP_0303.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0303.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/3/3c/Menu_Champs_0303.png"
+  },
+  {
+    "display_name": "Swalot",
+    "species_display_name": "Swalot",
+    "form_display_name": "Swalot",
+    "dex_number": "0317",
+    "sprite_form": "",
+    "form_api_name": "swalot",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "poison"
+    ],
+    "base_stats": {
+      "hp": 100,
+      "attack": 73,
+      "defense": 83,
+      "special_attack": 73,
+      "special_defense": 83,
+      "speed": 55
+    },
+    "original_filename": "Menu Champs 0317.png",
+    "local_filename": "Menu_CP_0317.png",
+    "local_path": "normal/Menu_CP_0317.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0317.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/c/c7/Menu_Champs_0317.png"
+  },
+  {
+    "display_name": "Absol Mega Z",
+    "species_display_name": "Absol",
+    "form_display_name": "Absol Mega Z",
+    "dex_number": "0359",
+    "sprite_form": "Mega Z",
+    "form_api_name": "absol-mega-z",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "dark",
+      "ghost"
+    ],
+    "base_stats": {
+      "hp": 65,
+      "attack": 154,
+      "defense": 60,
+      "special_attack": 75,
+      "special_defense": 60,
+      "speed": 151
+    },
+    "original_filename": "Menu Champs 0359-Mega Z.png",
+    "local_filename": "Menu_CP_0359-Mega_Z.png",
+    "local_path": "normal/Menu_CP_0359-Mega_Z.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0359-Mega_Z.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/3/39/Menu_Champs_0359-Mega_Z.png"
+  },
+  {
+    "display_name": "Salamence Mega",
+    "species_display_name": "Salamence",
+    "form_display_name": "Salamence Mega",
+    "dex_number": "0373",
+    "sprite_form": "Mega",
+    "form_api_name": "salamence-mega",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "dragon",
+      "flying"
+    ],
+    "base_stats": {
+      "hp": 95,
+      "attack": 145,
+      "defense": 130,
+      "special_attack": 120,
+      "special_defense": 90,
+      "speed": 120
+    },
+    "original_filename": "Menu Champs 0373-Mega.png",
+    "local_filename": "Menu_CP_0373-Mega.png",
+    "local_path": "normal/Menu_CP_0373-Mega.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0373-Mega.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/b/b3/Menu_Champs_0373-Mega.png"
+  },
+  {
+    "display_name": "Salamence",
+    "species_display_name": "Salamence",
+    "form_display_name": "Salamence",
+    "dex_number": "0373",
+    "sprite_form": "",
+    "form_api_name": "salamence",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "dragon",
+      "flying"
+    ],
+    "base_stats": {
+      "hp": 95,
+      "attack": 135,
+      "defense": 80,
+      "special_attack": 110,
+      "special_defense": 80,
+      "speed": 100
+    },
+    "original_filename": "Menu Champs 0373.png",
+    "local_filename": "Menu_CP_0373.png",
+    "local_path": "normal/Menu_CP_0373.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0373.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/d/d2/Menu_Champs_0373.png"
+  },
+  {
+    "display_name": "Metagross Mega",
+    "species_display_name": "Metagross",
+    "form_display_name": "Metagross Mega",
+    "dex_number": "0376",
+    "sprite_form": "Mega",
+    "form_api_name": "metagross-mega",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "steel",
+      "psychic"
+    ],
+    "base_stats": {
+      "hp": 80,
+      "attack": 145,
+      "defense": 150,
+      "special_attack": 105,
+      "special_defense": 110,
+      "speed": 110
+    },
+    "original_filename": "Menu Champs 0376-Mega.png",
+    "local_filename": "Menu_CP_0376-Mega.png",
+    "local_path": "normal/Menu_CP_0376-Mega.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0376-Mega.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/2/2f/Menu_Champs_0376-Mega.png"
+  },
+  {
+    "display_name": "Metagross",
+    "species_display_name": "Metagross",
+    "form_display_name": "Metagross",
+    "dex_number": "0376",
+    "sprite_form": "",
+    "form_api_name": "metagross",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "steel",
+      "psychic"
+    ],
+    "base_stats": {
+      "hp": 80,
+      "attack": 135,
+      "defense": 130,
+      "special_attack": 95,
+      "special_defense": 90,
+      "speed": 70
+    },
+    "original_filename": "Menu Champs 0376.png",
+    "local_filename": "Menu_CP_0376.png",
+    "local_path": "normal/Menu_CP_0376.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0376.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/3/30/Menu_Champs_0376.png"
+  },
+  {
+    "display_name": "Staraptor Mega",
+    "species_display_name": "Staraptor",
+    "form_display_name": "Staraptor Mega",
+    "dex_number": "0398",
+    "sprite_form": "Mega",
+    "form_api_name": "staraptor-mega",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "fighting",
+      "flying"
+    ],
+    "base_stats": {
+      "hp": 85,
+      "attack": 140,
+      "defense": 100,
+      "special_attack": 60,
+      "special_defense": 90,
+      "speed": 110
+    },
+    "original_filename": "Menu Champs 0398-Mega.png",
+    "local_filename": "Menu_CP_0398-Mega.png",
+    "local_path": "normal/Menu_CP_0398-Mega.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0398-Mega.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/2/2f/Menu_Champs_0398-Mega.png"
+  },
+  {
+    "display_name": "Staraptor",
+    "species_display_name": "Staraptor",
+    "form_display_name": "Staraptor",
+    "dex_number": "0398",
+    "sprite_form": "",
+    "form_api_name": "staraptor",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "base_stats": {
+      "hp": 85,
+      "attack": 120,
+      "defense": 70,
+      "special_attack": 50,
+      "special_defense": 60,
+      "speed": 100
+    },
+    "original_filename": "Menu Champs 0398.png",
+    "local_filename": "Menu_CP_0398.png",
+    "local_path": "normal/Menu_CP_0398.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0398.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/d/d3/Menu_Champs_0398.png"
+  },
+  {
+    "display_name": "Garchomp Mega Z",
+    "species_display_name": "Garchomp",
+    "form_display_name": "Garchomp Mega Z",
+    "dex_number": "0445",
+    "sprite_form": "Mega Z",
+    "form_api_name": "garchomp-mega-z",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "dragon"
+    ],
+    "base_stats": {
+      "hp": 108,
+      "attack": 130,
+      "defense": 85,
+      "special_attack": 141,
+      "special_defense": 85,
+      "speed": 151
+    },
+    "original_filename": "Menu Champs 0445-Mega Z.png",
+    "local_filename": "Menu_CP_0445-Mega_Z.png",
+    "local_path": "normal/Menu_CP_0445-Mega_Z.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0445-Mega_Z.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/4/4e/Menu_Champs_0445-Mega_Z.png"
+  },
+  {
+    "display_name": "Lucario Mega Z",
+    "species_display_name": "Lucario",
+    "form_display_name": "Lucario Mega Z",
+    "dex_number": "0448",
+    "sprite_form": "Mega Z",
+    "form_api_name": "lucario-mega-z",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "fighting",
+      "steel"
+    ],
+    "base_stats": {
+      "hp": 70,
+      "attack": 100,
+      "defense": 70,
+      "special_attack": 164,
+      "special_defense": 70,
+      "speed": 151
+    },
+    "original_filename": "Menu Champs 0448-Mega Z.png",
+    "local_filename": "Menu_CP_0448-Mega_Z.png",
+    "local_path": "normal/Menu_CP_0448-Mega_Z.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0448-Mega_Z.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/6/60/Menu_Champs_0448-Mega_Z.png"
+  },
+  {
+    "display_name": "Musharna",
+    "species_display_name": "Musharna",
+    "form_display_name": "Musharna",
+    "dex_number": "0518",
+    "sprite_form": "",
+    "form_api_name": "musharna",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "psychic"
+    ],
+    "base_stats": {
+      "hp": 116,
+      "attack": 55,
+      "defense": 85,
+      "special_attack": 107,
+      "special_defense": 95,
+      "speed": 29
+    },
+    "original_filename": "Menu Champs 0518.png",
+    "local_filename": "Menu_CP_0518.png",
+    "local_path": "normal/Menu_CP_0518.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0518.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/c/c1/Menu_Champs_0518.png"
+  },
+  {
+    "display_name": "Scolipede Mega",
+    "species_display_name": "Scolipede",
+    "form_display_name": "Scolipede Mega",
+    "dex_number": "0545",
+    "sprite_form": "Mega",
+    "form_api_name": "scolipede-mega",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "base_stats": {
+      "hp": 60,
+      "attack": 140,
+      "defense": 149,
+      "special_attack": 75,
+      "special_defense": 99,
+      "speed": 62
+    },
+    "original_filename": "Menu Champs 0545-Mega.png",
+    "local_filename": "Menu_CP_0545-Mega.png",
+    "local_path": "normal/Menu_CP_0545-Mega.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0545-Mega.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/c/c9/Menu_Champs_0545-Mega.png"
+  },
+  {
+    "display_name": "Scolipede",
+    "species_display_name": "Scolipede",
+    "form_display_name": "Scolipede",
+    "dex_number": "0545",
+    "sprite_form": "",
+    "form_api_name": "scolipede",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "base_stats": {
+      "hp": 60,
+      "attack": 100,
+      "defense": 89,
+      "special_attack": 55,
+      "special_defense": 69,
+      "speed": 112
+    },
+    "original_filename": "Menu Champs 0545.png",
+    "local_filename": "Menu_CP_0545.png",
+    "local_path": "normal/Menu_CP_0545.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0545.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/3/36/Menu_Champs_0545.png"
+  },
+  {
+    "display_name": "Scrafty Mega",
+    "species_display_name": "Scrafty",
+    "form_display_name": "Scrafty Mega",
+    "dex_number": "0560",
+    "sprite_form": "Mega",
+    "form_api_name": "scrafty-mega",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "dark",
+      "fighting"
+    ],
+    "base_stats": {
+      "hp": 65,
+      "attack": 130,
+      "defense": 135,
+      "special_attack": 55,
+      "special_defense": 135,
+      "speed": 68
+    },
+    "original_filename": "Menu Champs 0560-Mega.png",
+    "local_filename": "Menu_CP_0560-Mega.png",
+    "local_path": "normal/Menu_CP_0560-Mega.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0560-Mega.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/0/08/Menu_Champs_0560-Mega.png"
+  },
+  {
+    "display_name": "Scrafty",
+    "species_display_name": "Scrafty",
+    "form_display_name": "Scrafty",
+    "dex_number": "0560",
+    "sprite_form": "",
+    "form_api_name": "scrafty",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "dark",
+      "fighting"
+    ],
+    "base_stats": {
+      "hp": 65,
+      "attack": 90,
+      "defense": 115,
+      "special_attack": 45,
+      "special_defense": 115,
+      "speed": 58
+    },
+    "original_filename": "Menu Champs 0560.png",
+    "local_filename": "Menu_CP_0560.png",
+    "local_path": "normal/Menu_CP_0560.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0560.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/1/11/Menu_Champs_0560.png"
+  },
+  {
+    "display_name": "Eelektross Mega",
+    "species_display_name": "Eelektross",
+    "form_display_name": "Eelektross Mega",
+    "dex_number": "0604",
+    "sprite_form": "Mega",
+    "form_api_name": "eelektross-mega",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "electric"
+    ],
+    "base_stats": {
+      "hp": 85,
+      "attack": 145,
+      "defense": 80,
+      "special_attack": 135,
+      "special_defense": 90,
+      "speed": 80
+    },
+    "original_filename": "Menu Champs 0604-Mega.png",
+    "local_filename": "Menu_CP_0604-Mega.png",
+    "local_path": "normal/Menu_CP_0604-Mega.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0604-Mega.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/a/a6/Menu_Champs_0604-Mega.png"
+  },
+  {
+    "display_name": "Eelektross",
+    "species_display_name": "Eelektross",
+    "form_display_name": "Eelektross",
+    "dex_number": "0604",
+    "sprite_form": "",
+    "form_api_name": "eelektross",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "electric"
+    ],
+    "base_stats": {
+      "hp": 85,
+      "attack": 115,
+      "defense": 80,
+      "special_attack": 105,
+      "special_defense": 80,
+      "speed": 50
+    },
+    "original_filename": "Menu Champs 0604.png",
+    "local_filename": "Menu_CP_0604.png",
+    "local_path": "normal/Menu_CP_0604.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0604.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/2/2a/Menu_Champs_0604.png"
+  },
+  {
+    "display_name": "Pyroar Female",
+    "species_display_name": "Pyroar",
+    "form_display_name": "Pyroar Female",
+    "dex_number": "0668",
+    "sprite_form": "Female",
+    "form_api_name": "pyroar-female",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "fire",
+      "normal"
+    ],
+    "base_stats": {
+      "hp": 86,
+      "attack": 68,
+      "defense": 72,
+      "special_attack": 109,
+      "special_defense": 66,
+      "speed": 106
+    },
+    "original_filename": "Menu Champs 0668-Female.png",
+    "local_filename": "Menu_CP_0668-Female.png",
+    "local_path": "normal/Menu_CP_0668-Female.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0668-Female.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/4/49/Menu_Champs_0668-Female.png"
+  },
+  {
+    "display_name": "Pyroar Mega",
+    "species_display_name": "Pyroar",
+    "form_display_name": "Pyroar Mega",
+    "dex_number": "0668",
+    "sprite_form": "Mega",
+    "form_api_name": "pyroar-mega",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "fire",
+      "normal"
+    ],
+    "base_stats": {
+      "hp": 86,
+      "attack": 88,
+      "defense": 92,
+      "special_attack": 129,
+      "special_defense": 86,
+      "speed": 126
+    },
+    "original_filename": "Menu Champs 0668-Mega.png",
+    "local_filename": "Menu_CP_0668-Mega.png",
+    "local_path": "normal/Menu_CP_0668-Mega.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0668-Mega.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/b/b7/Menu_Champs_0668-Mega.png"
+  },
+  {
+    "display_name": "Pyroar Male",
+    "species_display_name": "Pyroar",
+    "form_display_name": "Pyroar Male",
+    "dex_number": "0668",
+    "sprite_form": "",
+    "form_api_name": "pyroar-male",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "fire",
+      "normal"
+    ],
+    "base_stats": {
+      "hp": 86,
+      "attack": 68,
+      "defense": 72,
+      "special_attack": 109,
+      "special_defense": 66,
+      "speed": 106
+    },
+    "original_filename": "Menu Champs 0668.png",
+    "local_filename": "Menu_CP_0668.png",
+    "local_path": "normal/Menu_CP_0668.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0668.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/c/c5/Menu_Champs_0668.png"
+  },
+  {
+    "display_name": "Gogoat",
+    "species_display_name": "Gogoat",
+    "form_display_name": "Gogoat",
+    "dex_number": "0673",
+    "sprite_form": "",
+    "form_api_name": "gogoat",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "grass"
+    ],
+    "base_stats": {
+      "hp": 123,
+      "attack": 100,
+      "defense": 62,
+      "special_attack": 97,
+      "special_defense": 81,
+      "speed": 68
+    },
+    "original_filename": "Menu Champs 0673.png",
+    "local_filename": "Menu_CP_0673.png",
+    "local_path": "normal/Menu_CP_0673.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0673.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/4/44/Menu_Champs_0673.png"
+  },
+  {
+    "display_name": "Malamar Mega",
+    "species_display_name": "Malamar",
+    "form_display_name": "Malamar Mega",
+    "dex_number": "0687",
+    "sprite_form": "Mega",
+    "form_api_name": "malamar-mega",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "dark",
+      "psychic"
+    ],
+    "base_stats": {
+      "hp": 86,
+      "attack": 102,
+      "defense": 88,
+      "special_attack": 98,
+      "special_defense": 120,
+      "speed": 88
+    },
+    "original_filename": "Menu Champs 0687-Mega.png",
+    "local_filename": "Menu_CP_0687-Mega.png",
+    "local_path": "normal/Menu_CP_0687-Mega.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0687-Mega.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/c/ca/Menu_Champs_0687-Mega.png"
+  },
+  {
+    "display_name": "Malamar",
+    "species_display_name": "Malamar",
+    "form_display_name": "Malamar",
+    "dex_number": "0687",
+    "sprite_form": "",
+    "form_api_name": "malamar",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "dark",
+      "psychic"
+    ],
+    "base_stats": {
+      "hp": 86,
+      "attack": 92,
+      "defense": 88,
+      "special_attack": 68,
+      "special_defense": 75,
+      "speed": 73
+    },
+    "original_filename": "Menu Champs 0687.png",
+    "local_filename": "Menu_CP_0687.png",
+    "local_path": "normal/Menu_CP_0687.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0687.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/4/4b/Menu_Champs_0687.png"
+  },
+  {
+    "display_name": "Barbaracle Mega",
+    "species_display_name": "Barbaracle",
+    "form_display_name": "Barbaracle Mega",
+    "dex_number": "0689",
+    "sprite_form": "Mega",
+    "form_api_name": "barbaracle-mega",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "rock",
+      "fighting"
+    ],
+    "base_stats": {
+      "hp": 72,
+      "attack": 140,
+      "defense": 130,
+      "special_attack": 64,
+      "special_defense": 106,
+      "speed": 88
+    },
+    "original_filename": "Menu Champs 0689-Mega.png",
+    "local_filename": "Menu_CP_0689-Mega.png",
+    "local_path": "normal/Menu_CP_0689-Mega.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0689-Mega.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/c/c1/Menu_Champs_0689-Mega.png"
+  },
+  {
+    "display_name": "Barbaracle",
+    "species_display_name": "Barbaracle",
+    "form_display_name": "Barbaracle",
+    "dex_number": "0689",
+    "sprite_form": "",
+    "form_api_name": "barbaracle",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "rock",
+      "water"
+    ],
+    "base_stats": {
+      "hp": 72,
+      "attack": 105,
+      "defense": 115,
+      "special_attack": 54,
+      "special_defense": 86,
+      "speed": 68
+    },
+    "original_filename": "Menu Champs 0689.png",
+    "local_filename": "Menu_CP_0689.png",
+    "local_path": "normal/Menu_CP_0689.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0689.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/e/ed/Menu_Champs_0689.png"
+  },
+  {
+    "display_name": "Dragalge Mega",
+    "species_display_name": "Dragalge",
+    "form_display_name": "Dragalge Mega",
+    "dex_number": "0691",
+    "sprite_form": "Mega",
+    "form_api_name": "dragalge-mega",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "poison",
+      "dragon"
+    ],
+    "base_stats": {
+      "hp": 65,
+      "attack": 85,
+      "defense": 105,
+      "special_attack": 132,
+      "special_defense": 163,
+      "speed": 44
+    },
+    "original_filename": "Menu Champs 0691-Mega.png",
+    "local_filename": "Menu_CP_0691-Mega.png",
+    "local_path": "normal/Menu_CP_0691-Mega.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0691-Mega.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/b/bc/Menu_Champs_0691-Mega.png"
+  },
+  {
+    "display_name": "Dragalge",
+    "species_display_name": "Dragalge",
+    "form_display_name": "Dragalge",
+    "dex_number": "0691",
+    "sprite_form": "",
+    "form_api_name": "dragalge",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "poison",
+      "dragon"
+    ],
+    "base_stats": {
+      "hp": 65,
+      "attack": 75,
+      "defense": 90,
+      "special_attack": 97,
+      "special_defense": 123,
+      "speed": 44
+    },
+    "original_filename": "Menu Champs 0691.png",
+    "local_filename": "Menu_CP_0691.png",
+    "local_path": "normal/Menu_CP_0691.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0691.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/f/f9/Menu_Champs_0691.png"
+  },
+  {
+    "display_name": "Golisopod Mega",
+    "species_display_name": "Golisopod",
+    "form_display_name": "Golisopod Mega",
+    "dex_number": "0768",
+    "sprite_form": "Mega",
+    "form_api_name": "golisopod-mega",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "bug",
+      "steel"
+    ],
+    "base_stats": {
+      "hp": 75,
+      "attack": 150,
+      "defense": 175,
+      "special_attack": 70,
+      "special_defense": 120,
+      "speed": 40
+    },
+    "original_filename": "Menu Champs 0768-Mega.png",
+    "local_filename": "Menu_CP_0768-Mega.png",
+    "local_path": "normal/Menu_CP_0768-Mega.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0768-Mega.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/6/6e/Menu_Champs_0768-Mega.png"
+  },
+  {
+    "display_name": "Golisopod",
+    "species_display_name": "Golisopod",
+    "form_display_name": "Golisopod",
+    "dex_number": "0768",
+    "sprite_form": "",
+    "form_api_name": "golisopod",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "bug",
+      "water"
+    ],
+    "base_stats": {
+      "hp": 75,
+      "attack": 125,
+      "defense": 140,
+      "special_attack": 60,
+      "special_defense": 90,
+      "speed": 40
+    },
+    "original_filename": "Menu Champs 0768.png",
+    "local_filename": "Menu_CP_0768.png",
+    "local_path": "normal/Menu_CP_0768.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0768.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/4/42/Menu_Champs_0768.png"
+  },
+  {
+    "display_name": "Rillaboom",
+    "species_display_name": "Rillaboom",
+    "form_display_name": "Rillaboom",
+    "dex_number": "0812",
+    "sprite_form": "",
+    "form_api_name": "rillaboom",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "grass"
+    ],
+    "base_stats": {
+      "hp": 100,
+      "attack": 125,
+      "defense": 90,
+      "special_attack": 60,
+      "special_defense": 70,
+      "speed": 85
+    },
+    "original_filename": "Menu Champs 0812.png",
+    "local_filename": "Menu_CP_0812.png",
+    "local_path": "normal/Menu_CP_0812.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0812.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/7/74/Menu_Champs_0812.png"
+  },
+  {
+    "display_name": "Cinderace",
+    "species_display_name": "Cinderace",
+    "form_display_name": "Cinderace",
+    "dex_number": "0815",
+    "sprite_form": "",
+    "form_api_name": "cinderace",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "fire"
+    ],
+    "base_stats": {
+      "hp": 80,
+      "attack": 116,
+      "defense": 75,
+      "special_attack": 65,
+      "special_defense": 75,
+      "speed": 119
+    },
+    "original_filename": "Menu Champs 0815.png",
+    "local_filename": "Menu_CP_0815.png",
+    "local_path": "normal/Menu_CP_0815.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0815.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/d/de/Menu_Champs_0815.png"
+  },
+  {
+    "display_name": "Inteleon",
+    "species_display_name": "Inteleon",
+    "form_display_name": "Inteleon",
+    "dex_number": "0818",
+    "sprite_form": "",
+    "form_api_name": "inteleon",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "water"
+    ],
+    "base_stats": {
+      "hp": 70,
+      "attack": 85,
+      "defense": 65,
+      "special_attack": 125,
+      "special_defense": 65,
+      "speed": 120
+    },
+    "original_filename": "Menu Champs 0818.png",
+    "local_filename": "Menu_CP_0818.png",
+    "local_path": "normal/Menu_CP_0818.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0818.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/a/a7/Menu_Champs_0818.png"
+  },
+  {
+    "display_name": "Thievul",
+    "species_display_name": "Thievul",
+    "form_display_name": "Thievul",
+    "dex_number": "0828",
+    "sprite_form": "",
+    "form_api_name": "thievul",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "dark"
+    ],
+    "base_stats": {
+      "hp": 70,
+      "attack": 58,
+      "defense": 58,
+      "special_attack": 87,
+      "special_defense": 92,
+      "speed": 90
+    },
+    "original_filename": "Menu Champs 0828.png",
+    "local_filename": "Menu_CP_0828.png",
+    "local_path": "normal/Menu_CP_0828.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0828.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/3/3a/Menu_Champs_0828.png"
+  },
+  {
+    "display_name": "Toxtricity Low Key",
+    "species_display_name": "Toxtricity",
+    "form_display_name": "Toxtricity Low Key",
+    "dex_number": "0849",
+    "sprite_form": "Low Key",
+    "form_api_name": "toxtricity-low-key",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "electric",
+      "poison"
+    ],
+    "base_stats": {
+      "hp": 75,
+      "attack": 98,
+      "defense": 70,
+      "special_attack": 114,
+      "special_defense": 70,
+      "speed": 75
+    },
+    "original_filename": "Menu Champs 0849-Low Key.png",
+    "local_filename": "Menu_CP_0849-Low_Key.png",
+    "local_path": "normal/Menu_CP_0849-Low_Key.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0849-Low_Key.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/c/cf/Menu_Champs_0849-Low_Key.png"
+  },
+  {
+    "display_name": "Toxtricity Amped",
+    "species_display_name": "Toxtricity",
+    "form_display_name": "Toxtricity Amped",
+    "dex_number": "0849",
+    "sprite_form": "",
+    "form_api_name": "toxtricity-amped",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "electric",
+      "poison"
+    ],
+    "base_stats": {
+      "hp": 75,
+      "attack": 98,
+      "defense": 70,
+      "special_attack": 114,
+      "special_defense": 70,
+      "speed": 75
+    },
+    "original_filename": "Menu Champs 0849.png",
+    "local_filename": "Menu_CP_0849.png",
+    "local_path": "normal/Menu_CP_0849.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0849.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/e/eb/Menu_Champs_0849.png"
+  },
+  {
+    "display_name": "Grapploct",
+    "species_display_name": "Grapploct",
+    "form_display_name": "Grapploct",
+    "dex_number": "0853",
+    "sprite_form": "",
+    "form_api_name": "grapploct",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "fighting"
+    ],
+    "base_stats": {
+      "hp": 80,
+      "attack": 118,
+      "defense": 90,
+      "special_attack": 70,
+      "special_defense": 80,
+      "speed": 42
+    },
+    "original_filename": "Menu Champs 0853.png",
+    "local_filename": "Menu_CP_0853.png",
+    "local_path": "normal/Menu_CP_0853.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0853.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/1/1c/Menu_Champs_0853.png"
+  },
+  {
+    "display_name": "Grimmsnarl",
+    "species_display_name": "Grimmsnarl",
+    "form_display_name": "Grimmsnarl",
+    "dex_number": "0861",
+    "sprite_form": "",
+    "form_api_name": "grimmsnarl",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "dark",
+      "fairy"
+    ],
+    "base_stats": {
+      "hp": 95,
+      "attack": 120,
+      "defense": 65,
+      "special_attack": 95,
+      "special_defense": 75,
+      "speed": 60
+    },
+    "original_filename": "Menu Champs 0861.png",
+    "local_filename": "Menu_CP_0861.png",
+    "local_path": "normal/Menu_CP_0861.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0861.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/3/3b/Menu_Champs_0861.png"
+  },
+  {
+    "display_name": "Perrserker",
+    "species_display_name": "Perrserker",
+    "form_display_name": "Perrserker",
+    "dex_number": "0863",
+    "sprite_form": "",
+    "form_api_name": "perrserker",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "steel"
+    ],
+    "base_stats": {
+      "hp": 70,
+      "attack": 110,
+      "defense": 100,
+      "special_attack": 50,
+      "special_defense": 60,
+      "speed": 50
+    },
+    "original_filename": "Menu Champs 0863.png",
+    "local_filename": "Menu_CP_0863.png",
+    "local_path": "normal/Menu_CP_0863.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0863.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/1/17/Menu_Champs_0863.png"
+  },
+  {
+    "display_name": "Sirfetch'd",
+    "species_display_name": "Sirfetch'd",
+    "form_display_name": "Sirfetch'd",
+    "dex_number": "0865",
+    "sprite_form": "",
+    "form_api_name": "sirfetchd",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "fighting"
+    ],
+    "base_stats": {
+      "hp": 62,
+      "attack": 135,
+      "defense": 95,
+      "special_attack": 68,
+      "special_defense": 82,
+      "speed": 65
+    },
+    "original_filename": "Menu Champs 0865.png",
+    "local_filename": "Menu_CP_0865.png",
+    "local_path": "normal/Menu_CP_0865.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0865.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/3/34/Menu_Champs_0865.png"
+  },
+  {
+    "display_name": "Falinks Mega",
+    "species_display_name": "Falinks",
+    "form_display_name": "Falinks Mega",
+    "dex_number": "0870",
+    "sprite_form": "Mega",
+    "form_api_name": "falinks-mega",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "fighting"
+    ],
+    "base_stats": {
+      "hp": 65,
+      "attack": 135,
+      "defense": 135,
+      "special_attack": 70,
+      "special_defense": 65,
+      "speed": 100
+    },
+    "original_filename": "Menu Champs 0870-Mega.png",
+    "local_filename": "Menu_CP_0870-Mega.png",
+    "local_path": "normal/Menu_CP_0870-Mega.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0870-Mega.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/9/9e/Menu_Champs_0870-Mega.png"
+  },
+  {
+    "display_name": "Falinks",
+    "species_display_name": "Falinks",
+    "form_display_name": "Falinks",
+    "dex_number": "0870",
+    "sprite_form": "",
+    "form_api_name": "falinks",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "fighting"
+    ],
+    "base_stats": {
+      "hp": 65,
+      "attack": 100,
+      "defense": 100,
+      "special_attack": 70,
+      "special_defense": 60,
+      "speed": 75
+    },
+    "original_filename": "Menu Champs 0870.png",
+    "local_filename": "Menu_CP_0870.png",
+    "local_path": "normal/Menu_CP_0870.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0870.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/e/e1/Menu_Champs_0870.png"
+  },
+  {
+    "display_name": "Pincurchin",
+    "species_display_name": "Pincurchin",
+    "form_display_name": "Pincurchin",
+    "dex_number": "0871",
+    "sprite_form": "",
+    "form_api_name": "pincurchin",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "electric"
+    ],
+    "base_stats": {
+      "hp": 48,
+      "attack": 101,
+      "defense": 95,
+      "special_attack": 91,
+      "special_defense": 85,
+      "speed": 15
+    },
+    "original_filename": "Menu Champs 0871.png",
+    "local_filename": "Menu_CP_0871.png",
+    "local_path": "normal/Menu_CP_0871.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0871.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/e/ee/Menu_Champs_0871.png"
+  },
+  {
+    "display_name": "Indeedee Female",
+    "species_display_name": "Indeedee",
+    "form_display_name": "Indeedee Female",
+    "dex_number": "0876",
+    "sprite_form": "Female",
+    "form_api_name": "indeedee-female",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "psychic",
+      "normal"
+    ],
+    "base_stats": {
+      "hp": 70,
+      "attack": 55,
+      "defense": 65,
+      "special_attack": 95,
+      "special_defense": 105,
+      "speed": 85
+    },
+    "original_filename": "Menu Champs 0876-Female.png",
+    "local_filename": "Menu_CP_0876-Female.png",
+    "local_path": "normal/Menu_CP_0876-Female.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0876-Female.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/7/76/Menu_Champs_0876-Female.png"
+  },
+  {
+    "display_name": "Indeedee Male",
+    "species_display_name": "Indeedee",
+    "form_display_name": "Indeedee Male",
+    "dex_number": "0876",
+    "sprite_form": "",
+    "form_api_name": "indeedee-male",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "psychic",
+      "normal"
+    ],
+    "base_stats": {
+      "hp": 60,
+      "attack": 65,
+      "defense": 55,
+      "special_attack": 105,
+      "special_defense": 95,
+      "speed": 95
+    },
+    "original_filename": "Menu Champs 0876.png",
+    "local_filename": "Menu_CP_0876.png",
+    "local_path": "normal/Menu_CP_0876.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0876.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/9/9f/Menu_Champs_0876.png"
+  },
+  {
+    "display_name": "Overqwil",
+    "species_display_name": "Overqwil",
+    "form_display_name": "Overqwil",
+    "dex_number": "0904",
+    "sprite_form": "",
+    "form_api_name": "overqwil",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "dark",
+      "poison"
+    ],
+    "base_stats": {
+      "hp": 85,
+      "attack": 115,
+      "defense": 95,
+      "special_attack": 65,
+      "special_defense": 65,
+      "speed": 85
+    },
+    "original_filename": "Menu Champs 0904.png",
+    "local_filename": "Menu_CP_0904.png",
+    "local_path": "normal/Menu_CP_0904.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0904.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/0/06/Menu_Champs_0904.png"
+  },
+  {
+    "display_name": "Arboliva",
+    "species_display_name": "Arboliva",
+    "form_display_name": "Arboliva",
+    "dex_number": "0930",
+    "sprite_form": "",
+    "form_api_name": "arboliva",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "grass",
+      "normal"
+    ],
+    "base_stats": {
+      "hp": 78,
+      "attack": 69,
+      "defense": 90,
+      "special_attack": 125,
+      "special_defense": 109,
+      "speed": 39
+    },
+    "original_filename": "Menu Champs 0930.png",
+    "local_filename": "Menu_CP_0930.png",
+    "local_path": "normal/Menu_CP_0930.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0930.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/a/a0/Menu_Champs_0930.png"
+  },
+  {
+    "display_name": "Squawkabilly Blue Plumage",
+    "species_display_name": "Squawkabilly",
+    "form_display_name": "Squawkabilly Blue Plumage",
+    "dex_number": "0931",
+    "sprite_form": "Blue",
+    "form_api_name": "squawkabilly-blue-plumage",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "base_stats": {
+      "hp": 82,
+      "attack": 96,
+      "defense": 51,
+      "special_attack": 45,
+      "special_defense": 51,
+      "speed": 92
+    },
+    "original_filename": "Menu Champs 0931-Blue.png",
+    "local_filename": "Menu_CP_0931-Blue.png",
+    "local_path": "normal/Menu_CP_0931-Blue.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0931-Blue.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/b/b5/Menu_Champs_0931-Blue.png"
+  },
+  {
+    "display_name": "Squawkabilly White Plumage",
+    "species_display_name": "Squawkabilly",
+    "form_display_name": "Squawkabilly White Plumage",
+    "dex_number": "0931",
+    "sprite_form": "White",
+    "form_api_name": "squawkabilly-white-plumage",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "base_stats": {
+      "hp": 82,
+      "attack": 96,
+      "defense": 51,
+      "special_attack": 45,
+      "special_defense": 51,
+      "speed": 92
+    },
+    "original_filename": "Menu Champs 0931-White.png",
+    "local_filename": "Menu_CP_0931-White.png",
+    "local_path": "normal/Menu_CP_0931-White.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0931-White.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/b/b7/Menu_Champs_0931-White.png"
+  },
+  {
+    "display_name": "Squawkabilly Yellow Plumage",
+    "species_display_name": "Squawkabilly",
+    "form_display_name": "Squawkabilly Yellow Plumage",
+    "dex_number": "0931",
+    "sprite_form": "Yellow",
+    "form_api_name": "squawkabilly-yellow-plumage",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "base_stats": {
+      "hp": 82,
+      "attack": 96,
+      "defense": 51,
+      "special_attack": 45,
+      "special_defense": 51,
+      "speed": 92
+    },
+    "original_filename": "Menu Champs 0931-Yellow.png",
+    "local_filename": "Menu_CP_0931-Yellow.png",
+    "local_path": "normal/Menu_CP_0931-Yellow.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0931-Yellow.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/f/f3/Menu_Champs_0931-Yellow.png"
+  },
+  {
+    "display_name": "Squawkabilly Green Plumage",
+    "species_display_name": "Squawkabilly",
+    "form_display_name": "Squawkabilly Green Plumage",
+    "dex_number": "0931",
+    "sprite_form": "",
+    "form_api_name": "squawkabilly-green-plumage",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "base_stats": {
+      "hp": 82,
+      "attack": 96,
+      "defense": 51,
+      "special_attack": 45,
+      "special_defense": 51,
+      "speed": 92
+    },
+    "original_filename": "Menu Champs 0931.png",
+    "local_filename": "Menu_CP_0931.png",
+    "local_path": "normal/Menu_CP_0931.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0931.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/3/31/Menu_Champs_0931.png"
+  },
+  {
+    "display_name": "Mabosstiff",
+    "species_display_name": "Mabosstiff",
+    "form_display_name": "Mabosstiff",
+    "dex_number": "0943",
+    "sprite_form": "",
+    "form_api_name": "mabosstiff",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "dark"
+    ],
+    "base_stats": {
+      "hp": 80,
+      "attack": 120,
+      "defense": 90,
+      "special_attack": 60,
+      "special_defense": 70,
+      "speed": 85
+    },
+    "original_filename": "Menu Champs 0943.png",
+    "local_filename": "Menu_CP_0943.png",
+    "local_path": "normal/Menu_CP_0943.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0943.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/a/a9/Menu_Champs_0943.png"
+  },
+  {
+    "display_name": "Houndstone",
+    "species_display_name": "Houndstone",
+    "form_display_name": "Houndstone",
+    "dex_number": "0972",
+    "sprite_form": "",
+    "form_api_name": "houndstone",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "ghost"
+    ],
+    "base_stats": {
+      "hp": 72,
+      "attack": 101,
+      "defense": 100,
+      "special_attack": 50,
+      "special_defense": 97,
+      "speed": 68
+    },
+    "original_filename": "Menu Champs 0972.png",
+    "local_filename": "Menu_CP_0972.png",
+    "local_path": "normal/Menu_CP_0972.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0972.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/5/59/Menu_Champs_0972.png"
+  },
+  {
+    "display_name": "Annihilape",
+    "species_display_name": "Annihilape",
+    "form_display_name": "Annihilape",
+    "dex_number": "0979",
+    "sprite_form": "",
+    "form_api_name": "annihilape",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "fighting",
+      "ghost"
+    ],
+    "base_stats": {
+      "hp": 110,
+      "attack": 115,
+      "defense": 80,
+      "special_attack": 50,
+      "special_defense": 90,
+      "speed": 90
+    },
+    "original_filename": "Menu Champs 0979.png",
+    "local_filename": "Menu_CP_0979.png",
+    "local_path": "normal/Menu_CP_0979.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0979.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/3/39/Menu_Champs_0979.png"
+  },
+  {
+    "display_name": "Baxcalibur Mega",
+    "species_display_name": "Baxcalibur",
+    "form_display_name": "Baxcalibur Mega",
+    "dex_number": "0998",
+    "sprite_form": "Mega",
+    "form_api_name": "baxcalibur-mega",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "dragon",
+      "ice"
+    ],
+    "base_stats": {
+      "hp": 115,
+      "attack": 175,
+      "defense": 117,
+      "special_attack": 105,
+      "special_defense": 101,
+      "speed": 87
+    },
+    "original_filename": "Menu Champs 0998-Mega.png",
+    "local_filename": "Menu_CP_0998-Mega.png",
+    "local_path": "normal/Menu_CP_0998-Mega.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0998-Mega.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/3/3e/Menu_Champs_0998-Mega.png"
+  },
+  {
+    "display_name": "Baxcalibur",
+    "species_display_name": "Baxcalibur",
+    "form_display_name": "Baxcalibur",
+    "dex_number": "0998",
+    "sprite_form": "",
+    "form_api_name": "baxcalibur",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "dragon",
+      "ice"
+    ],
+    "base_stats": {
+      "hp": 115,
+      "attack": 145,
+      "defense": 92,
+      "special_attack": 75,
+      "special_defense": 86,
+      "speed": 87
+    },
+    "original_filename": "Menu Champs 0998.png",
+    "local_filename": "Menu_CP_0998.png",
+    "local_path": "normal/Menu_CP_0998.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0998.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/e/e7/Menu_Champs_0998.png"
+  },
+  {
+    "display_name": "Gholdengo",
+    "species_display_name": "Gholdengo",
+    "form_display_name": "Gholdengo",
+    "dex_number": "1000",
+    "sprite_form": "",
+    "form_api_name": "gholdengo",
+    "is_shiny": false,
+    "sprite_type": "normal",
+    "types": [
+      "steel",
+      "ghost"
+    ],
+    "base_stats": {
+      "hp": 87,
+      "attack": 60,
+      "defense": 95,
+      "special_attack": 133,
+      "special_defense": 91,
+      "speed": 84
+    },
+    "original_filename": "Menu Champs 1000.png",
+    "local_filename": "Menu_CP_1000.png",
+    "local_path": "normal/Menu_CP_1000.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_1000.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/a/a7/Menu_Champs_1000.png"
+  },
+  {
+    "display_name": "Raichu Mega X",
+    "species_display_name": "Raichu",
+    "form_display_name": "Raichu Mega X",
+    "dex_number": "0026",
+    "sprite_form": "Mega X",
+    "form_api_name": "raichu-mega-x",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "electric"
+    ],
+    "base_stats": {
+      "hp": 60,
+      "attack": 135,
+      "defense": 95,
+      "special_attack": 90,
+      "special_defense": 95,
+      "speed": 110
+    },
+    "original_filename": "Menu Champs 0026-Mega X shiny.png",
+    "local_filename": "Menu_CP_0026-Mega_X_shiny.png",
+    "local_path": "shiny/Menu_CP_0026-Mega_X_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0026-Mega_X_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/5/5d/Menu_Champs_0026-Mega_X_shiny.png"
+  },
+  {
+    "display_name": "Raichu Mega Y",
+    "species_display_name": "Raichu",
+    "form_display_name": "Raichu Mega Y",
+    "dex_number": "0026",
+    "sprite_form": "Mega Y",
+    "form_api_name": "raichu-mega-y",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "electric"
+    ],
+    "base_stats": {
+      "hp": 60,
+      "attack": 100,
+      "defense": 55,
+      "special_attack": 160,
+      "special_defense": 80,
+      "speed": 130
+    },
+    "original_filename": "Menu Champs 0026-Mega Y shiny.png",
+    "local_filename": "Menu_CP_0026-Mega_Y_shiny.png",
+    "local_path": "shiny/Menu_CP_0026-Mega_Y_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0026-Mega_Y_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/e/ee/Menu_Champs_0026-Mega_Y_shiny.png"
+  },
+  {
+    "display_name": "Wigglytuff",
+    "species_display_name": "Wigglytuff",
+    "form_display_name": "Wigglytuff",
+    "dex_number": "0040",
+    "sprite_form": "",
+    "form_api_name": "wigglytuff",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "normal",
+      "fairy"
+    ],
+    "base_stats": {
+      "hp": 140,
+      "attack": 70,
+      "defense": 45,
+      "special_attack": 85,
+      "special_defense": 50,
+      "speed": 45
+    },
+    "original_filename": "Menu Champs 0040 shiny.png",
+    "local_filename": "Menu_CP_0040_shiny.png",
+    "local_path": "shiny/Menu_CP_0040_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0040_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/0/0b/Menu_Champs_0040_shiny.png"
+  },
+  {
+    "display_name": "Vileplume",
+    "species_display_name": "Vileplume",
+    "form_display_name": "Vileplume",
+    "dex_number": "0045",
+    "sprite_form": "",
+    "form_api_name": "vileplume",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "grass",
+      "poison"
+    ],
+    "base_stats": {
+      "hp": 75,
+      "attack": 80,
+      "defense": 85,
+      "special_attack": 110,
+      "special_defense": 90,
+      "speed": 50
+    },
+    "original_filename": "Menu Champs 0045 shiny.png",
+    "local_filename": "Menu_CP_0045_shiny.png",
+    "local_path": "shiny/Menu_CP_0045_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0045_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/8/88/Menu_Champs_0045_shiny.png"
+  },
+  {
+    "display_name": "Persian",
+    "species_display_name": "Persian",
+    "form_display_name": "Persian",
+    "dex_number": "0053",
+    "sprite_form": "",
+    "form_api_name": "persian",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "normal"
+    ],
+    "base_stats": {
+      "hp": 65,
+      "attack": 70,
+      "defense": 60,
+      "special_attack": 65,
+      "special_defense": 65,
+      "speed": 115
+    },
+    "original_filename": "Menu Champs 0053 shiny.png",
+    "local_filename": "Menu_CP_0053_shiny.png",
+    "local_path": "shiny/Menu_CP_0053_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0053_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/9/95/Menu_Champs_0053_shiny.png"
+  },
+  {
+    "display_name": "Persian Alola",
+    "species_display_name": "Persian",
+    "form_display_name": "Persian Alola",
+    "dex_number": "0053",
+    "sprite_form": "Alola",
+    "form_api_name": "persian-alola",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "dark"
+    ],
+    "base_stats": {
+      "hp": 65,
+      "attack": 60,
+      "defense": 60,
+      "special_attack": 75,
+      "special_defense": 65,
+      "speed": 115
+    },
+    "original_filename": "Menu Champs 0053-Alola shiny.png",
+    "local_filename": "Menu_CP_0053-Alola_shiny.png",
+    "local_path": "shiny/Menu_CP_0053-Alola_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0053-Alola_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/5/50/Menu_Champs_0053-Alola_shiny.png"
+  },
+  {
+    "display_name": "Farfetch'd",
+    "species_display_name": "Farfetch'd",
+    "form_display_name": "Farfetch'd",
+    "dex_number": "0083",
+    "sprite_form": "",
+    "form_api_name": "farfetchd",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "base_stats": {
+      "hp": 52,
+      "attack": 90,
+      "defense": 55,
+      "special_attack": 58,
+      "special_defense": 62,
+      "speed": 60
+    },
+    "original_filename": "Menu Champs 0083 shiny.png",
+    "local_filename": "Menu_CP_0083_shiny.png",
+    "local_path": "shiny/Menu_CP_0083_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0083_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/5/51/Menu_Champs_0083_shiny.png"
+  },
+  {
+    "display_name": "Mr. Mime",
+    "species_display_name": "Mr. Mime",
+    "form_display_name": "Mr. Mime",
+    "dex_number": "0122",
+    "sprite_form": "",
+    "form_api_name": "mr-mime",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "psychic",
+      "fairy"
+    ],
+    "base_stats": {
+      "hp": 40,
+      "attack": 45,
+      "defense": 65,
+      "special_attack": 100,
+      "special_defense": 120,
+      "speed": 90
+    },
+    "original_filename": "Menu Champs 0122 shiny.png",
+    "local_filename": "Menu_CP_0122_shiny.png",
+    "local_path": "shiny/Menu_CP_0122_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0122_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/0/04/Menu_Champs_0122_shiny.png"
+  },
+  {
+    "display_name": "Qwilfish",
+    "species_display_name": "Qwilfish",
+    "form_display_name": "Qwilfish",
+    "dex_number": "0211",
+    "sprite_form": "",
+    "form_api_name": "qwilfish",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "water",
+      "poison"
+    ],
+    "base_stats": {
+      "hp": 65,
+      "attack": 95,
+      "defense": 85,
+      "special_attack": 55,
+      "special_defense": 55,
+      "speed": 85
+    },
+    "original_filename": "Menu Champs 0211 shiny.png",
+    "local_filename": "Menu_CP_0211_shiny.png",
+    "local_path": "shiny/Menu_CP_0211_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0211_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/2/2d/Menu_Champs_0211_shiny.png"
+  },
+  {
+    "display_name": "Sceptile",
+    "species_display_name": "Sceptile",
+    "form_display_name": "Sceptile",
+    "dex_number": "0254",
+    "sprite_form": "",
+    "form_api_name": "sceptile",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "grass"
+    ],
+    "base_stats": {
+      "hp": 70,
+      "attack": 85,
+      "defense": 65,
+      "special_attack": 105,
+      "special_defense": 85,
+      "speed": 120
+    },
+    "original_filename": "Menu Champs 0254 shiny.png",
+    "local_filename": "Menu_CP_0254_shiny.png",
+    "local_path": "shiny/Menu_CP_0254_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0254_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/9/90/Menu_Champs_0254_shiny.png"
+  },
+  {
+    "display_name": "Sceptile Mega",
+    "species_display_name": "Sceptile",
+    "form_display_name": "Sceptile Mega",
+    "dex_number": "0254",
+    "sprite_form": "Mega",
+    "form_api_name": "sceptile-mega",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "grass",
+      "dragon"
+    ],
+    "base_stats": {
+      "hp": 70,
+      "attack": 110,
+      "defense": 75,
+      "special_attack": 145,
+      "special_defense": 85,
+      "speed": 145
+    },
+    "original_filename": "Menu Champs 0254-Mega shiny.png",
+    "local_filename": "Menu_CP_0254-Mega_shiny.png",
+    "local_path": "shiny/Menu_CP_0254-Mega_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0254-Mega_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/9/98/Menu_Champs_0254-Mega_shiny.png"
+  },
+  {
+    "display_name": "Blaziken",
+    "species_display_name": "Blaziken",
+    "form_display_name": "Blaziken",
+    "dex_number": "0257",
+    "sprite_form": "",
+    "form_api_name": "blaziken",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "fire",
+      "fighting"
+    ],
+    "base_stats": {
+      "hp": 80,
+      "attack": 120,
+      "defense": 70,
+      "special_attack": 110,
+      "special_defense": 70,
+      "speed": 80
+    },
+    "original_filename": "Menu Champs 0257 shiny.png",
+    "local_filename": "Menu_CP_0257_shiny.png",
+    "local_path": "shiny/Menu_CP_0257_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0257_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/7/77/Menu_Champs_0257_shiny.png"
+  },
+  {
+    "display_name": "Blaziken Mega",
+    "species_display_name": "Blaziken",
+    "form_display_name": "Blaziken Mega",
+    "dex_number": "0257",
+    "sprite_form": "Mega",
+    "form_api_name": "blaziken-mega",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "fire",
+      "fighting"
+    ],
+    "base_stats": {
+      "hp": 80,
+      "attack": 160,
+      "defense": 80,
+      "special_attack": 130,
+      "special_defense": 80,
+      "speed": 100
+    },
+    "original_filename": "Menu Champs 0257-Mega shiny.png",
+    "local_filename": "Menu_CP_0257-Mega_shiny.png",
+    "local_path": "shiny/Menu_CP_0257-Mega_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0257-Mega_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/b/bd/Menu_Champs_0257-Mega_shiny.png"
+  },
+  {
+    "display_name": "Swampert",
+    "species_display_name": "Swampert",
+    "form_display_name": "Swampert",
+    "dex_number": "0260",
+    "sprite_form": "",
+    "form_api_name": "swampert",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "water",
+      "ground"
+    ],
+    "base_stats": {
+      "hp": 100,
+      "attack": 110,
+      "defense": 90,
+      "special_attack": 85,
+      "special_defense": 90,
+      "speed": 60
+    },
+    "original_filename": "Menu Champs 0260 shiny.png",
+    "local_filename": "Menu_CP_0260_shiny.png",
+    "local_path": "shiny/Menu_CP_0260_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0260_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/a/af/Menu_Champs_0260_shiny.png"
+  },
+  {
+    "display_name": "Swampert Mega",
+    "species_display_name": "Swampert",
+    "form_display_name": "Swampert Mega",
+    "dex_number": "0260",
+    "sprite_form": "Mega",
+    "form_api_name": "swampert-mega",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "water",
+      "ground"
+    ],
+    "base_stats": {
+      "hp": 100,
+      "attack": 150,
+      "defense": 110,
+      "special_attack": 95,
+      "special_defense": 110,
+      "speed": 70
+    },
+    "original_filename": "Menu Champs 0260-Mega shiny.png",
+    "local_filename": "Menu_CP_0260-Mega_shiny.png",
+    "local_path": "shiny/Menu_CP_0260-Mega_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0260-Mega_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/c/c4/Menu_Champs_0260-Mega_shiny.png"
+  },
+  {
+    "display_name": "Mawile",
+    "species_display_name": "Mawile",
+    "form_display_name": "Mawile",
+    "dex_number": "0303",
+    "sprite_form": "",
+    "form_api_name": "mawile",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "steel",
+      "fairy"
+    ],
+    "base_stats": {
+      "hp": 50,
+      "attack": 85,
+      "defense": 85,
+      "special_attack": 55,
+      "special_defense": 55,
+      "speed": 50
+    },
+    "original_filename": "Menu Champs 0303 shiny.png",
+    "local_filename": "Menu_CP_0303_shiny.png",
+    "local_path": "shiny/Menu_CP_0303_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0303_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/c/c2/Menu_Champs_0303_shiny.png"
+  },
+  {
+    "display_name": "Mawile Mega",
+    "species_display_name": "Mawile",
+    "form_display_name": "Mawile Mega",
+    "dex_number": "0303",
+    "sprite_form": "Mega",
+    "form_api_name": "mawile-mega",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "steel",
+      "fairy"
+    ],
+    "base_stats": {
+      "hp": 50,
+      "attack": 105,
+      "defense": 125,
+      "special_attack": 55,
+      "special_defense": 95,
+      "speed": 50
+    },
+    "original_filename": "Menu Champs 0303-Mega shiny.png",
+    "local_filename": "Menu_CP_0303-Mega_shiny.png",
+    "local_path": "shiny/Menu_CP_0303-Mega_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0303-Mega_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/d/d4/Menu_Champs_0303-Mega_shiny.png"
+  },
+  {
+    "display_name": "Swalot",
+    "species_display_name": "Swalot",
+    "form_display_name": "Swalot",
+    "dex_number": "0317",
+    "sprite_form": "",
+    "form_api_name": "swalot",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "poison"
+    ],
+    "base_stats": {
+      "hp": 100,
+      "attack": 73,
+      "defense": 83,
+      "special_attack": 73,
+      "special_defense": 83,
+      "speed": 55
+    },
+    "original_filename": "Menu Champs 0317 shiny.png",
+    "local_filename": "Menu_CP_0317_shiny.png",
+    "local_path": "shiny/Menu_CP_0317_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0317_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/8/81/Menu_Champs_0317_shiny.png"
+  },
+  {
+    "display_name": "Absol Mega Z",
+    "species_display_name": "Absol",
+    "form_display_name": "Absol Mega Z",
+    "dex_number": "0359",
+    "sprite_form": "Mega Z",
+    "form_api_name": "absol-mega-z",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "dark",
+      "ghost"
+    ],
+    "base_stats": {
+      "hp": 65,
+      "attack": 154,
+      "defense": 60,
+      "special_attack": 75,
+      "special_defense": 60,
+      "speed": 151
+    },
+    "original_filename": "Menu Champs 0359-Mega Z shiny.png",
+    "local_filename": "Menu_CP_0359-Mega_Z_shiny.png",
+    "local_path": "shiny/Menu_CP_0359-Mega_Z_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0359-Mega_Z_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/f/f0/Menu_Champs_0359-Mega_Z_shiny.png"
+  },
+  {
+    "display_name": "Salamence",
+    "species_display_name": "Salamence",
+    "form_display_name": "Salamence",
+    "dex_number": "0373",
+    "sprite_form": "",
+    "form_api_name": "salamence",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "dragon",
+      "flying"
+    ],
+    "base_stats": {
+      "hp": 95,
+      "attack": 135,
+      "defense": 80,
+      "special_attack": 110,
+      "special_defense": 80,
+      "speed": 100
+    },
+    "original_filename": "Menu Champs 0373 shiny.png",
+    "local_filename": "Menu_CP_0373_shiny.png",
+    "local_path": "shiny/Menu_CP_0373_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0373_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/0/00/Menu_Champs_0373_shiny.png"
+  },
+  {
+    "display_name": "Salamence Mega",
+    "species_display_name": "Salamence",
+    "form_display_name": "Salamence Mega",
+    "dex_number": "0373",
+    "sprite_form": "Mega",
+    "form_api_name": "salamence-mega",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "dragon",
+      "flying"
+    ],
+    "base_stats": {
+      "hp": 95,
+      "attack": 145,
+      "defense": 130,
+      "special_attack": 120,
+      "special_defense": 90,
+      "speed": 120
+    },
+    "original_filename": "Menu Champs 0373-Mega shiny.png",
+    "local_filename": "Menu_CP_0373-Mega_shiny.png",
+    "local_path": "shiny/Menu_CP_0373-Mega_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0373-Mega_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/5/56/Menu_Champs_0373-Mega_shiny.png"
+  },
+  {
+    "display_name": "Metagross",
+    "species_display_name": "Metagross",
+    "form_display_name": "Metagross",
+    "dex_number": "0376",
+    "sprite_form": "",
+    "form_api_name": "metagross",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "steel",
+      "psychic"
+    ],
+    "base_stats": {
+      "hp": 80,
+      "attack": 135,
+      "defense": 130,
+      "special_attack": 95,
+      "special_defense": 90,
+      "speed": 70
+    },
+    "original_filename": "Menu Champs 0376 shiny.png",
+    "local_filename": "Menu_CP_0376_shiny.png",
+    "local_path": "shiny/Menu_CP_0376_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0376_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/1/11/Menu_Champs_0376_shiny.png"
+  },
+  {
+    "display_name": "Metagross Mega",
+    "species_display_name": "Metagross",
+    "form_display_name": "Metagross Mega",
+    "dex_number": "0376",
+    "sprite_form": "Mega",
+    "form_api_name": "metagross-mega",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "steel",
+      "psychic"
+    ],
+    "base_stats": {
+      "hp": 80,
+      "attack": 145,
+      "defense": 150,
+      "special_attack": 105,
+      "special_defense": 110,
+      "speed": 110
+    },
+    "original_filename": "Menu Champs 0376-Mega shiny.png",
+    "local_filename": "Menu_CP_0376-Mega_shiny.png",
+    "local_path": "shiny/Menu_CP_0376-Mega_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0376-Mega_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/0/0d/Menu_Champs_0376-Mega_shiny.png"
+  },
+  {
+    "display_name": "Staraptor",
+    "species_display_name": "Staraptor",
+    "form_display_name": "Staraptor",
+    "dex_number": "0398",
+    "sprite_form": "",
+    "form_api_name": "staraptor",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "base_stats": {
+      "hp": 85,
+      "attack": 120,
+      "defense": 70,
+      "special_attack": 50,
+      "special_defense": 60,
+      "speed": 100
+    },
+    "original_filename": "Menu Champs 0398 shiny.png",
+    "local_filename": "Menu_CP_0398_shiny.png",
+    "local_path": "shiny/Menu_CP_0398_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0398_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/a/a8/Menu_Champs_0398_shiny.png"
+  },
+  {
+    "display_name": "Staraptor Mega",
+    "species_display_name": "Staraptor",
+    "form_display_name": "Staraptor Mega",
+    "dex_number": "0398",
+    "sprite_form": "Mega",
+    "form_api_name": "staraptor-mega",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "fighting",
+      "flying"
+    ],
+    "base_stats": {
+      "hp": 85,
+      "attack": 140,
+      "defense": 100,
+      "special_attack": 60,
+      "special_defense": 90,
+      "speed": 110
+    },
+    "original_filename": "Menu Champs 0398-Mega shiny.png",
+    "local_filename": "Menu_CP_0398-Mega_shiny.png",
+    "local_path": "shiny/Menu_CP_0398-Mega_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0398-Mega_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/c/c2/Menu_Champs_0398-Mega_shiny.png"
+  },
+  {
+    "display_name": "Garchomp Mega Z",
+    "species_display_name": "Garchomp",
+    "form_display_name": "Garchomp Mega Z",
+    "dex_number": "0445",
+    "sprite_form": "Mega Z",
+    "form_api_name": "garchomp-mega-z",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "dragon"
+    ],
+    "base_stats": {
+      "hp": 108,
+      "attack": 130,
+      "defense": 85,
+      "special_attack": 141,
+      "special_defense": 85,
+      "speed": 151
+    },
+    "original_filename": "Menu Champs 0445-Mega Z shiny.png",
+    "local_filename": "Menu_CP_0445-Mega_Z_shiny.png",
+    "local_path": "shiny/Menu_CP_0445-Mega_Z_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0445-Mega_Z_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/2/2b/Menu_Champs_0445-Mega_Z_shiny.png"
+  },
+  {
+    "display_name": "Lucario Mega Z",
+    "species_display_name": "Lucario",
+    "form_display_name": "Lucario Mega Z",
+    "dex_number": "0448",
+    "sprite_form": "Mega Z",
+    "form_api_name": "lucario-mega-z",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "fighting",
+      "steel"
+    ],
+    "base_stats": {
+      "hp": 70,
+      "attack": 100,
+      "defense": 70,
+      "special_attack": 164,
+      "special_defense": 70,
+      "speed": 151
+    },
+    "original_filename": "Menu Champs 0448-Mega Z shiny.png",
+    "local_filename": "Menu_CP_0448-Mega_Z_shiny.png",
+    "local_path": "shiny/Menu_CP_0448-Mega_Z_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0448-Mega_Z_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/7/7f/Menu_Champs_0448-Mega_Z_shiny.png"
+  },
+  {
+    "display_name": "Musharna",
+    "species_display_name": "Musharna",
+    "form_display_name": "Musharna",
+    "dex_number": "0518",
+    "sprite_form": "",
+    "form_api_name": "musharna",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "psychic"
+    ],
+    "base_stats": {
+      "hp": 116,
+      "attack": 55,
+      "defense": 85,
+      "special_attack": 107,
+      "special_defense": 95,
+      "speed": 29
+    },
+    "original_filename": "Menu Champs 0518 shiny.png",
+    "local_filename": "Menu_CP_0518_shiny.png",
+    "local_path": "shiny/Menu_CP_0518_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0518_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/0/03/Menu_Champs_0518_shiny.png"
+  },
+  {
+    "display_name": "Scolipede",
+    "species_display_name": "Scolipede",
+    "form_display_name": "Scolipede",
+    "dex_number": "0545",
+    "sprite_form": "",
+    "form_api_name": "scolipede",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "base_stats": {
+      "hp": 60,
+      "attack": 100,
+      "defense": 89,
+      "special_attack": 55,
+      "special_defense": 69,
+      "speed": 112
+    },
+    "original_filename": "Menu Champs 0545 shiny.png",
+    "local_filename": "Menu_CP_0545_shiny.png",
+    "local_path": "shiny/Menu_CP_0545_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0545_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/c/cf/Menu_Champs_0545_shiny.png"
+  },
+  {
+    "display_name": "Scolipede Mega",
+    "species_display_name": "Scolipede",
+    "form_display_name": "Scolipede Mega",
+    "dex_number": "0545",
+    "sprite_form": "Mega",
+    "form_api_name": "scolipede-mega",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "bug",
+      "poison"
+    ],
+    "base_stats": {
+      "hp": 60,
+      "attack": 140,
+      "defense": 149,
+      "special_attack": 75,
+      "special_defense": 99,
+      "speed": 62
+    },
+    "original_filename": "Menu Champs 0545-Mega shiny.png",
+    "local_filename": "Menu_CP_0545-Mega_shiny.png",
+    "local_path": "shiny/Menu_CP_0545-Mega_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0545-Mega_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/a/a7/Menu_Champs_0545-Mega_shiny.png"
+  },
+  {
+    "display_name": "Scrafty",
+    "species_display_name": "Scrafty",
+    "form_display_name": "Scrafty",
+    "dex_number": "0560",
+    "sprite_form": "",
+    "form_api_name": "scrafty",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "dark",
+      "fighting"
+    ],
+    "base_stats": {
+      "hp": 65,
+      "attack": 90,
+      "defense": 115,
+      "special_attack": 45,
+      "special_defense": 115,
+      "speed": 58
+    },
+    "original_filename": "Menu Champs 0560 shiny.png",
+    "local_filename": "Menu_CP_0560_shiny.png",
+    "local_path": "shiny/Menu_CP_0560_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0560_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/9/91/Menu_Champs_0560_shiny.png"
+  },
+  {
+    "display_name": "Scrafty Mega",
+    "species_display_name": "Scrafty",
+    "form_display_name": "Scrafty Mega",
+    "dex_number": "0560",
+    "sprite_form": "Mega",
+    "form_api_name": "scrafty-mega",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "dark",
+      "fighting"
+    ],
+    "base_stats": {
+      "hp": 65,
+      "attack": 130,
+      "defense": 135,
+      "special_attack": 55,
+      "special_defense": 135,
+      "speed": 68
+    },
+    "original_filename": "Menu Champs 0560-Mega shiny.png",
+    "local_filename": "Menu_CP_0560-Mega_shiny.png",
+    "local_path": "shiny/Menu_CP_0560-Mega_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0560-Mega_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/f/f7/Menu_Champs_0560-Mega_shiny.png"
+  },
+  {
+    "display_name": "Eelektross",
+    "species_display_name": "Eelektross",
+    "form_display_name": "Eelektross",
+    "dex_number": "0604",
+    "sprite_form": "",
+    "form_api_name": "eelektross",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "electric"
+    ],
+    "base_stats": {
+      "hp": 85,
+      "attack": 115,
+      "defense": 80,
+      "special_attack": 105,
+      "special_defense": 80,
+      "speed": 50
+    },
+    "original_filename": "Menu Champs 0604 shiny.png",
+    "local_filename": "Menu_CP_0604_shiny.png",
+    "local_path": "shiny/Menu_CP_0604_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0604_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/b/bd/Menu_Champs_0604_shiny.png"
+  },
+  {
+    "display_name": "Eelektross Mega",
+    "species_display_name": "Eelektross",
+    "form_display_name": "Eelektross Mega",
+    "dex_number": "0604",
+    "sprite_form": "Mega",
+    "form_api_name": "eelektross-mega",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "electric"
+    ],
+    "base_stats": {
+      "hp": 85,
+      "attack": 145,
+      "defense": 80,
+      "special_attack": 135,
+      "special_defense": 90,
+      "speed": 80
+    },
+    "original_filename": "Menu Champs 0604-Mega shiny.png",
+    "local_filename": "Menu_CP_0604-Mega_shiny.png",
+    "local_path": "shiny/Menu_CP_0604-Mega_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0604-Mega_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/f/f7/Menu_Champs_0604-Mega_shiny.png"
+  },
+  {
+    "display_name": "Pyroar Male",
+    "species_display_name": "Pyroar",
+    "form_display_name": "Pyroar Male",
+    "dex_number": "0668",
+    "sprite_form": "",
+    "form_api_name": "pyroar-male",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "fire",
+      "normal"
+    ],
+    "base_stats": {
+      "hp": 86,
+      "attack": 68,
+      "defense": 72,
+      "special_attack": 109,
+      "special_defense": 66,
+      "speed": 106
+    },
+    "original_filename": "Menu Champs 0668 shiny.png",
+    "local_filename": "Menu_CP_0668_shiny.png",
+    "local_path": "shiny/Menu_CP_0668_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0668_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/3/3d/Menu_Champs_0668_shiny.png"
+  },
+  {
+    "display_name": "Pyroar Female",
+    "species_display_name": "Pyroar",
+    "form_display_name": "Pyroar Female",
+    "dex_number": "0668",
+    "sprite_form": "Female",
+    "form_api_name": "pyroar-female",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "fire",
+      "normal"
+    ],
+    "base_stats": {
+      "hp": 86,
+      "attack": 68,
+      "defense": 72,
+      "special_attack": 109,
+      "special_defense": 66,
+      "speed": 106
+    },
+    "original_filename": "Menu Champs 0668-Female shiny.png",
+    "local_filename": "Menu_CP_0668-Female_shiny.png",
+    "local_path": "shiny/Menu_CP_0668-Female_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0668-Female_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/a/a3/Menu_Champs_0668-Female_shiny.png"
+  },
+  {
+    "display_name": "Pyroar Mega",
+    "species_display_name": "Pyroar",
+    "form_display_name": "Pyroar Mega",
+    "dex_number": "0668",
+    "sprite_form": "Mega",
+    "form_api_name": "pyroar-mega",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "fire",
+      "normal"
+    ],
+    "base_stats": {
+      "hp": 86,
+      "attack": 88,
+      "defense": 92,
+      "special_attack": 129,
+      "special_defense": 86,
+      "speed": 126
+    },
+    "original_filename": "Menu Champs 0668-Mega shiny.png",
+    "local_filename": "Menu_CP_0668-Mega_shiny.png",
+    "local_path": "shiny/Menu_CP_0668-Mega_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0668-Mega_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/6/6e/Menu_Champs_0668-Mega_shiny.png"
+  },
+  {
+    "display_name": "Gogoat",
+    "species_display_name": "Gogoat",
+    "form_display_name": "Gogoat",
+    "dex_number": "0673",
+    "sprite_form": "",
+    "form_api_name": "gogoat",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "grass"
+    ],
+    "base_stats": {
+      "hp": 123,
+      "attack": 100,
+      "defense": 62,
+      "special_attack": 97,
+      "special_defense": 81,
+      "speed": 68
+    },
+    "original_filename": "Menu Champs 0673 shiny.png",
+    "local_filename": "Menu_CP_0673_shiny.png",
+    "local_path": "shiny/Menu_CP_0673_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0673_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/c/c0/Menu_Champs_0673_shiny.png"
+  },
+  {
+    "display_name": "Malamar",
+    "species_display_name": "Malamar",
+    "form_display_name": "Malamar",
+    "dex_number": "0687",
+    "sprite_form": "",
+    "form_api_name": "malamar",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "dark",
+      "psychic"
+    ],
+    "base_stats": {
+      "hp": 86,
+      "attack": 92,
+      "defense": 88,
+      "special_attack": 68,
+      "special_defense": 75,
+      "speed": 73
+    },
+    "original_filename": "Menu Champs 0687 shiny.png",
+    "local_filename": "Menu_CP_0687_shiny.png",
+    "local_path": "shiny/Menu_CP_0687_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0687_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/7/71/Menu_Champs_0687_shiny.png"
+  },
+  {
+    "display_name": "Malamar Mega",
+    "species_display_name": "Malamar",
+    "form_display_name": "Malamar Mega",
+    "dex_number": "0687",
+    "sprite_form": "Mega",
+    "form_api_name": "malamar-mega",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "dark",
+      "psychic"
+    ],
+    "base_stats": {
+      "hp": 86,
+      "attack": 102,
+      "defense": 88,
+      "special_attack": 98,
+      "special_defense": 120,
+      "speed": 88
+    },
+    "original_filename": "Menu Champs 0687-Mega shiny.png",
+    "local_filename": "Menu_CP_0687-Mega_shiny.png",
+    "local_path": "shiny/Menu_CP_0687-Mega_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0687-Mega_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/0/09/Menu_Champs_0687-Mega_shiny.png"
+  },
+  {
+    "display_name": "Barbaracle",
+    "species_display_name": "Barbaracle",
+    "form_display_name": "Barbaracle",
+    "dex_number": "0689",
+    "sprite_form": "",
+    "form_api_name": "barbaracle",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "rock",
+      "water"
+    ],
+    "base_stats": {
+      "hp": 72,
+      "attack": 105,
+      "defense": 115,
+      "special_attack": 54,
+      "special_defense": 86,
+      "speed": 68
+    },
+    "original_filename": "Menu Champs 0689 shiny.png",
+    "local_filename": "Menu_CP_0689_shiny.png",
+    "local_path": "shiny/Menu_CP_0689_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0689_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/b/b0/Menu_Champs_0689_shiny.png"
+  },
+  {
+    "display_name": "Barbaracle Mega",
+    "species_display_name": "Barbaracle",
+    "form_display_name": "Barbaracle Mega",
+    "dex_number": "0689",
+    "sprite_form": "Mega",
+    "form_api_name": "barbaracle-mega",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "rock",
+      "fighting"
+    ],
+    "base_stats": {
+      "hp": 72,
+      "attack": 140,
+      "defense": 130,
+      "special_attack": 64,
+      "special_defense": 106,
+      "speed": 88
+    },
+    "original_filename": "Menu Champs 0689-Mega shiny.png",
+    "local_filename": "Menu_CP_0689-Mega_shiny.png",
+    "local_path": "shiny/Menu_CP_0689-Mega_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0689-Mega_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/1/17/Menu_Champs_0689-Mega_shiny.png"
+  },
+  {
+    "display_name": "Dragalge",
+    "species_display_name": "Dragalge",
+    "form_display_name": "Dragalge",
+    "dex_number": "0691",
+    "sprite_form": "",
+    "form_api_name": "dragalge",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "poison",
+      "dragon"
+    ],
+    "base_stats": {
+      "hp": 65,
+      "attack": 75,
+      "defense": 90,
+      "special_attack": 97,
+      "special_defense": 123,
+      "speed": 44
+    },
+    "original_filename": "Menu Champs 0691 shiny.png",
+    "local_filename": "Menu_CP_0691_shiny.png",
+    "local_path": "shiny/Menu_CP_0691_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0691_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/c/c5/Menu_Champs_0691_shiny.png"
+  },
+  {
+    "display_name": "Dragalge Mega",
+    "species_display_name": "Dragalge",
+    "form_display_name": "Dragalge Mega",
+    "dex_number": "0691",
+    "sprite_form": "Mega",
+    "form_api_name": "dragalge-mega",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "poison",
+      "dragon"
+    ],
+    "base_stats": {
+      "hp": 65,
+      "attack": 85,
+      "defense": 105,
+      "special_attack": 132,
+      "special_defense": 163,
+      "speed": 44
+    },
+    "original_filename": "Menu Champs 0691-Mega shiny.png",
+    "local_filename": "Menu_CP_0691-Mega_shiny.png",
+    "local_path": "shiny/Menu_CP_0691-Mega_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0691-Mega_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/b/ba/Menu_Champs_0691-Mega_shiny.png"
+  },
+  {
+    "display_name": "Golisopod",
+    "species_display_name": "Golisopod",
+    "form_display_name": "Golisopod",
+    "dex_number": "0768",
+    "sprite_form": "",
+    "form_api_name": "golisopod",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "bug",
+      "water"
+    ],
+    "base_stats": {
+      "hp": 75,
+      "attack": 125,
+      "defense": 140,
+      "special_attack": 60,
+      "special_defense": 90,
+      "speed": 40
+    },
+    "original_filename": "Menu Champs 0768 shiny.png",
+    "local_filename": "Menu_CP_0768_shiny.png",
+    "local_path": "shiny/Menu_CP_0768_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0768_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/b/b0/Menu_Champs_0768_shiny.png"
+  },
+  {
+    "display_name": "Golisopod Mega",
+    "species_display_name": "Golisopod",
+    "form_display_name": "Golisopod Mega",
+    "dex_number": "0768",
+    "sprite_form": "Mega",
+    "form_api_name": "golisopod-mega",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "bug",
+      "steel"
+    ],
+    "base_stats": {
+      "hp": 75,
+      "attack": 150,
+      "defense": 175,
+      "special_attack": 70,
+      "special_defense": 120,
+      "speed": 40
+    },
+    "original_filename": "Menu Champs 0768-Mega shiny.png",
+    "local_filename": "Menu_CP_0768-Mega_shiny.png",
+    "local_path": "shiny/Menu_CP_0768-Mega_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0768-Mega_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/5/53/Menu_Champs_0768-Mega_shiny.png"
+  },
+  {
+    "display_name": "Rillaboom",
+    "species_display_name": "Rillaboom",
+    "form_display_name": "Rillaboom",
+    "dex_number": "0812",
+    "sprite_form": "",
+    "form_api_name": "rillaboom",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "grass"
+    ],
+    "base_stats": {
+      "hp": 100,
+      "attack": 125,
+      "defense": 90,
+      "special_attack": 60,
+      "special_defense": 70,
+      "speed": 85
+    },
+    "original_filename": "Menu Champs 0812 shiny.png",
+    "local_filename": "Menu_CP_0812_shiny.png",
+    "local_path": "shiny/Menu_CP_0812_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0812_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/c/c1/Menu_Champs_0812_shiny.png"
+  },
+  {
+    "display_name": "Cinderace",
+    "species_display_name": "Cinderace",
+    "form_display_name": "Cinderace",
+    "dex_number": "0815",
+    "sprite_form": "",
+    "form_api_name": "cinderace",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "fire"
+    ],
+    "base_stats": {
+      "hp": 80,
+      "attack": 116,
+      "defense": 75,
+      "special_attack": 65,
+      "special_defense": 75,
+      "speed": 119
+    },
+    "original_filename": "Menu Champs 0815 shiny.png",
+    "local_filename": "Menu_CP_0815_shiny.png",
+    "local_path": "shiny/Menu_CP_0815_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0815_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/e/e2/Menu_Champs_0815_shiny.png"
+  },
+  {
+    "display_name": "Inteleon",
+    "species_display_name": "Inteleon",
+    "form_display_name": "Inteleon",
+    "dex_number": "0818",
+    "sprite_form": "",
+    "form_api_name": "inteleon",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "water"
+    ],
+    "base_stats": {
+      "hp": 70,
+      "attack": 85,
+      "defense": 65,
+      "special_attack": 125,
+      "special_defense": 65,
+      "speed": 120
+    },
+    "original_filename": "Menu Champs 0818 shiny.png",
+    "local_filename": "Menu_CP_0818_shiny.png",
+    "local_path": "shiny/Menu_CP_0818_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0818_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/1/13/Menu_Champs_0818_shiny.png"
+  },
+  {
+    "display_name": "Thievul",
+    "species_display_name": "Thievul",
+    "form_display_name": "Thievul",
+    "dex_number": "0828",
+    "sprite_form": "",
+    "form_api_name": "thievul",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "dark"
+    ],
+    "base_stats": {
+      "hp": 70,
+      "attack": 58,
+      "defense": 58,
+      "special_attack": 87,
+      "special_defense": 92,
+      "speed": 90
+    },
+    "original_filename": "Menu Champs 0828 shiny.png",
+    "local_filename": "Menu_CP_0828_shiny.png",
+    "local_path": "shiny/Menu_CP_0828_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0828_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/1/19/Menu_Champs_0828_shiny.png"
+  },
+  {
+    "display_name": "Toxtricity Amped",
+    "species_display_name": "Toxtricity",
+    "form_display_name": "Toxtricity Amped",
+    "dex_number": "0849",
+    "sprite_form": "",
+    "form_api_name": "toxtricity-amped",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "electric",
+      "poison"
+    ],
+    "base_stats": {
+      "hp": 75,
+      "attack": 98,
+      "defense": 70,
+      "special_attack": 114,
+      "special_defense": 70,
+      "speed": 75
+    },
+    "original_filename": "Menu Champs 0849 shiny.png",
+    "local_filename": "Menu_CP_0849_shiny.png",
+    "local_path": "shiny/Menu_CP_0849_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0849_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/2/2f/Menu_Champs_0849_shiny.png"
+  },
+  {
+    "display_name": "Toxtricity Low Key",
+    "species_display_name": "Toxtricity",
+    "form_display_name": "Toxtricity Low Key",
+    "dex_number": "0849",
+    "sprite_form": "Low Key",
+    "form_api_name": "toxtricity-low-key",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "electric",
+      "poison"
+    ],
+    "base_stats": {
+      "hp": 75,
+      "attack": 98,
+      "defense": 70,
+      "special_attack": 114,
+      "special_defense": 70,
+      "speed": 75
+    },
+    "original_filename": "Menu Champs 0849-Low Key shiny.png",
+    "local_filename": "Menu_CP_0849-Low_Key_shiny.png",
+    "local_path": "shiny/Menu_CP_0849-Low_Key_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0849-Low_Key_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/7/78/Menu_Champs_0849-Low_Key_shiny.png"
+  },
+  {
+    "display_name": "Grapploct",
+    "species_display_name": "Grapploct",
+    "form_display_name": "Grapploct",
+    "dex_number": "0853",
+    "sprite_form": "",
+    "form_api_name": "grapploct",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "fighting"
+    ],
+    "base_stats": {
+      "hp": 80,
+      "attack": 118,
+      "defense": 90,
+      "special_attack": 70,
+      "special_defense": 80,
+      "speed": 42
+    },
+    "original_filename": "Menu Champs 0853 shiny.png",
+    "local_filename": "Menu_CP_0853_shiny.png",
+    "local_path": "shiny/Menu_CP_0853_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0853_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/a/a9/Menu_Champs_0853_shiny.png"
+  },
+  {
+    "display_name": "Grimmsnarl",
+    "species_display_name": "Grimmsnarl",
+    "form_display_name": "Grimmsnarl",
+    "dex_number": "0861",
+    "sprite_form": "",
+    "form_api_name": "grimmsnarl",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "dark",
+      "fairy"
+    ],
+    "base_stats": {
+      "hp": 95,
+      "attack": 120,
+      "defense": 65,
+      "special_attack": 95,
+      "special_defense": 75,
+      "speed": 60
+    },
+    "original_filename": "Menu Champs 0861 shiny.png",
+    "local_filename": "Menu_CP_0861_shiny.png",
+    "local_path": "shiny/Menu_CP_0861_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0861_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/e/e0/Menu_Champs_0861_shiny.png"
+  },
+  {
+    "display_name": "Perrserker",
+    "species_display_name": "Perrserker",
+    "form_display_name": "Perrserker",
+    "dex_number": "0863",
+    "sprite_form": "",
+    "form_api_name": "perrserker",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "steel"
+    ],
+    "base_stats": {
+      "hp": 70,
+      "attack": 110,
+      "defense": 100,
+      "special_attack": 50,
+      "special_defense": 60,
+      "speed": 50
+    },
+    "original_filename": "Menu Champs 0863 shiny.png",
+    "local_filename": "Menu_CP_0863_shiny.png",
+    "local_path": "shiny/Menu_CP_0863_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0863_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/c/c0/Menu_Champs_0863_shiny.png"
+  },
+  {
+    "display_name": "Sirfetch'd",
+    "species_display_name": "Sirfetch'd",
+    "form_display_name": "Sirfetch'd",
+    "dex_number": "0865",
+    "sprite_form": "",
+    "form_api_name": "sirfetchd",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "fighting"
+    ],
+    "base_stats": {
+      "hp": 62,
+      "attack": 135,
+      "defense": 95,
+      "special_attack": 68,
+      "special_defense": 82,
+      "speed": 65
+    },
+    "original_filename": "Menu Champs 0865 shiny.png",
+    "local_filename": "Menu_CP_0865_shiny.png",
+    "local_path": "shiny/Menu_CP_0865_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0865_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/8/82/Menu_Champs_0865_shiny.png"
+  },
+  {
+    "display_name": "Falinks",
+    "species_display_name": "Falinks",
+    "form_display_name": "Falinks",
+    "dex_number": "0870",
+    "sprite_form": "",
+    "form_api_name": "falinks",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "fighting"
+    ],
+    "base_stats": {
+      "hp": 65,
+      "attack": 100,
+      "defense": 100,
+      "special_attack": 70,
+      "special_defense": 60,
+      "speed": 75
+    },
+    "original_filename": "Menu Champs 0870 shiny.png",
+    "local_filename": "Menu_CP_0870_shiny.png",
+    "local_path": "shiny/Menu_CP_0870_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0870_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/b/bb/Menu_Champs_0870_shiny.png"
+  },
+  {
+    "display_name": "Falinks Mega",
+    "species_display_name": "Falinks",
+    "form_display_name": "Falinks Mega",
+    "dex_number": "0870",
+    "sprite_form": "Mega",
+    "form_api_name": "falinks-mega",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "fighting"
+    ],
+    "base_stats": {
+      "hp": 65,
+      "attack": 135,
+      "defense": 135,
+      "special_attack": 70,
+      "special_defense": 65,
+      "speed": 100
+    },
+    "original_filename": "Menu Champs 0870-Mega shiny.png",
+    "local_filename": "Menu_CP_0870-Mega_shiny.png",
+    "local_path": "shiny/Menu_CP_0870-Mega_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0870-Mega_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/9/92/Menu_Champs_0870-Mega_shiny.png"
+  },
+  {
+    "display_name": "Pincurchin",
+    "species_display_name": "Pincurchin",
+    "form_display_name": "Pincurchin",
+    "dex_number": "0871",
+    "sprite_form": "",
+    "form_api_name": "pincurchin",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "electric"
+    ],
+    "base_stats": {
+      "hp": 48,
+      "attack": 101,
+      "defense": 95,
+      "special_attack": 91,
+      "special_defense": 85,
+      "speed": 15
+    },
+    "original_filename": "Menu Champs 0871 shiny.png",
+    "local_filename": "Menu_CP_0871_shiny.png",
+    "local_path": "shiny/Menu_CP_0871_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0871_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/a/ae/Menu_Champs_0871_shiny.png"
+  },
+  {
+    "display_name": "Indeedee Male",
+    "species_display_name": "Indeedee",
+    "form_display_name": "Indeedee Male",
+    "dex_number": "0876",
+    "sprite_form": "",
+    "form_api_name": "indeedee-male",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "psychic",
+      "normal"
+    ],
+    "base_stats": {
+      "hp": 60,
+      "attack": 65,
+      "defense": 55,
+      "special_attack": 105,
+      "special_defense": 95,
+      "speed": 95
+    },
+    "original_filename": "Menu Champs 0876 shiny.png",
+    "local_filename": "Menu_CP_0876_shiny.png",
+    "local_path": "shiny/Menu_CP_0876_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0876_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/9/9c/Menu_Champs_0876_shiny.png"
+  },
+  {
+    "display_name": "Indeedee Female",
+    "species_display_name": "Indeedee",
+    "form_display_name": "Indeedee Female",
+    "dex_number": "0876",
+    "sprite_form": "Female",
+    "form_api_name": "indeedee-female",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "psychic",
+      "normal"
+    ],
+    "base_stats": {
+      "hp": 70,
+      "attack": 55,
+      "defense": 65,
+      "special_attack": 95,
+      "special_defense": 105,
+      "speed": 85
+    },
+    "original_filename": "Menu Champs 0876-Female shiny.png",
+    "local_filename": "Menu_CP_0876-Female_shiny.png",
+    "local_path": "shiny/Menu_CP_0876-Female_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0876-Female_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/0/00/Menu_Champs_0876-Female_shiny.png"
+  },
+  {
+    "display_name": "Overqwil",
+    "species_display_name": "Overqwil",
+    "form_display_name": "Overqwil",
+    "dex_number": "0904",
+    "sprite_form": "",
+    "form_api_name": "overqwil",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "dark",
+      "poison"
+    ],
+    "base_stats": {
+      "hp": 85,
+      "attack": 115,
+      "defense": 95,
+      "special_attack": 65,
+      "special_defense": 65,
+      "speed": 85
+    },
+    "original_filename": "Menu Champs 0904 shiny.png",
+    "local_filename": "Menu_CP_0904_shiny.png",
+    "local_path": "shiny/Menu_CP_0904_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0904_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/1/19/Menu_Champs_0904_shiny.png"
+  },
+  {
+    "display_name": "Arboliva",
+    "species_display_name": "Arboliva",
+    "form_display_name": "Arboliva",
+    "dex_number": "0930",
+    "sprite_form": "",
+    "form_api_name": "arboliva",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "grass",
+      "normal"
+    ],
+    "base_stats": {
+      "hp": 78,
+      "attack": 69,
+      "defense": 90,
+      "special_attack": 125,
+      "special_defense": 109,
+      "speed": 39
+    },
+    "original_filename": "Menu Champs 0930 shiny.png",
+    "local_filename": "Menu_CP_0930_shiny.png",
+    "local_path": "shiny/Menu_CP_0930_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0930_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/0/03/Menu_Champs_0930_shiny.png"
+  },
+  {
+    "display_name": "Squawkabilly Green Plumage",
+    "species_display_name": "Squawkabilly",
+    "form_display_name": "Squawkabilly Green Plumage",
+    "dex_number": "0931",
+    "sprite_form": "",
+    "form_api_name": "squawkabilly-green-plumage",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "base_stats": {
+      "hp": 82,
+      "attack": 96,
+      "defense": 51,
+      "special_attack": 45,
+      "special_defense": 51,
+      "speed": 92
+    },
+    "original_filename": "Menu Champs 0931 shiny.png",
+    "local_filename": "Menu_CP_0931_shiny.png",
+    "local_path": "shiny/Menu_CP_0931_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0931_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/d/d9/Menu_Champs_0931_shiny.png"
+  },
+  {
+    "display_name": "Squawkabilly Blue Plumage",
+    "species_display_name": "Squawkabilly",
+    "form_display_name": "Squawkabilly Blue Plumage",
+    "dex_number": "0931",
+    "sprite_form": "Blue",
+    "form_api_name": "squawkabilly-blue-plumage",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "base_stats": {
+      "hp": 82,
+      "attack": 96,
+      "defense": 51,
+      "special_attack": 45,
+      "special_defense": 51,
+      "speed": 92
+    },
+    "original_filename": "Menu Champs 0931-Blue shiny.png",
+    "local_filename": "Menu_CP_0931-Blue_shiny.png",
+    "local_path": "shiny/Menu_CP_0931-Blue_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0931-Blue_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/4/4e/Menu_Champs_0931-Blue_shiny.png"
+  },
+  {
+    "display_name": "Squawkabilly White Plumage",
+    "species_display_name": "Squawkabilly",
+    "form_display_name": "Squawkabilly White Plumage",
+    "dex_number": "0931",
+    "sprite_form": "White",
+    "form_api_name": "squawkabilly-white-plumage",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "base_stats": {
+      "hp": 82,
+      "attack": 96,
+      "defense": 51,
+      "special_attack": 45,
+      "special_defense": 51,
+      "speed": 92
+    },
+    "original_filename": "Menu Champs 0931-White shiny.png",
+    "local_filename": "Menu_CP_0931-White_shiny.png",
+    "local_path": "shiny/Menu_CP_0931-White_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0931-White_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/8/89/Menu_Champs_0931-White_shiny.png"
+  },
+  {
+    "display_name": "Squawkabilly Yellow Plumage",
+    "species_display_name": "Squawkabilly",
+    "form_display_name": "Squawkabilly Yellow Plumage",
+    "dex_number": "0931",
+    "sprite_form": "Yellow",
+    "form_api_name": "squawkabilly-yellow-plumage",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "normal",
+      "flying"
+    ],
+    "base_stats": {
+      "hp": 82,
+      "attack": 96,
+      "defense": 51,
+      "special_attack": 45,
+      "special_defense": 51,
+      "speed": 92
+    },
+    "original_filename": "Menu Champs 0931-Yellow shiny.png",
+    "local_filename": "Menu_CP_0931-Yellow_shiny.png",
+    "local_path": "shiny/Menu_CP_0931-Yellow_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0931-Yellow_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/6/6a/Menu_Champs_0931-Yellow_shiny.png"
+  },
+  {
+    "display_name": "Mabosstiff",
+    "species_display_name": "Mabosstiff",
+    "form_display_name": "Mabosstiff",
+    "dex_number": "0943",
+    "sprite_form": "",
+    "form_api_name": "mabosstiff",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "dark"
+    ],
+    "base_stats": {
+      "hp": 80,
+      "attack": 120,
+      "defense": 90,
+      "special_attack": 60,
+      "special_defense": 70,
+      "speed": 85
+    },
+    "original_filename": "Menu Champs 0943 shiny.png",
+    "local_filename": "Menu_CP_0943_shiny.png",
+    "local_path": "shiny/Menu_CP_0943_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0943_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/0/08/Menu_Champs_0943_shiny.png"
+  },
+  {
+    "display_name": "Houndstone",
+    "species_display_name": "Houndstone",
+    "form_display_name": "Houndstone",
+    "dex_number": "0972",
+    "sprite_form": "",
+    "form_api_name": "houndstone",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "ghost"
+    ],
+    "base_stats": {
+      "hp": 72,
+      "attack": 101,
+      "defense": 100,
+      "special_attack": 50,
+      "special_defense": 97,
+      "speed": 68
+    },
+    "original_filename": "Menu Champs 0972 shiny.png",
+    "local_filename": "Menu_CP_0972_shiny.png",
+    "local_path": "shiny/Menu_CP_0972_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0972_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/5/50/Menu_Champs_0972_shiny.png"
+  },
+  {
+    "display_name": "Annihilape",
+    "species_display_name": "Annihilape",
+    "form_display_name": "Annihilape",
+    "dex_number": "0979",
+    "sprite_form": "",
+    "form_api_name": "annihilape",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "fighting",
+      "ghost"
+    ],
+    "base_stats": {
+      "hp": 110,
+      "attack": 115,
+      "defense": 80,
+      "special_attack": 50,
+      "special_defense": 90,
+      "speed": 90
+    },
+    "original_filename": "Menu Champs 0979 shiny.png",
+    "local_filename": "Menu_CP_0979_shiny.png",
+    "local_path": "shiny/Menu_CP_0979_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0979_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/6/6a/Menu_Champs_0979_shiny.png"
+  },
+  {
+    "display_name": "Baxcalibur",
+    "species_display_name": "Baxcalibur",
+    "form_display_name": "Baxcalibur",
+    "dex_number": "0998",
+    "sprite_form": "",
+    "form_api_name": "baxcalibur",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "dragon",
+      "ice"
+    ],
+    "base_stats": {
+      "hp": 115,
+      "attack": 145,
+      "defense": 92,
+      "special_attack": 75,
+      "special_defense": 86,
+      "speed": 87
+    },
+    "original_filename": "Menu Champs 0998 shiny.png",
+    "local_filename": "Menu_CP_0998_shiny.png",
+    "local_path": "shiny/Menu_CP_0998_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0998_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/5/54/Menu_Champs_0998_shiny.png"
+  },
+  {
+    "display_name": "Baxcalibur Mega",
+    "species_display_name": "Baxcalibur",
+    "form_display_name": "Baxcalibur Mega",
+    "dex_number": "0998",
+    "sprite_form": "Mega",
+    "form_api_name": "baxcalibur-mega",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "dragon",
+      "ice"
+    ],
+    "base_stats": {
+      "hp": 115,
+      "attack": 175,
+      "defense": 117,
+      "special_attack": 105,
+      "special_defense": 101,
+      "speed": 87
+    },
+    "original_filename": "Menu Champs 0998-Mega shiny.png",
+    "local_filename": "Menu_CP_0998-Mega_shiny.png",
+    "local_path": "shiny/Menu_CP_0998-Mega_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_0998-Mega_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/e/ec/Menu_Champs_0998-Mega_shiny.png"
+  },
+  {
+    "display_name": "Gholdengo",
+    "species_display_name": "Gholdengo",
+    "form_display_name": "Gholdengo",
+    "dex_number": "1000",
+    "sprite_form": "",
+    "form_api_name": "gholdengo",
+    "is_shiny": true,
+    "sprite_type": "shiny",
+    "types": [
+      "steel",
+      "ghost"
+    ],
+    "base_stats": {
+      "hp": 87,
+      "attack": 60,
+      "defense": 95,
+      "special_attack": 133,
+      "special_defense": 91,
+      "speed": 84
+    },
+    "original_filename": "Menu Champs 1000 shiny.png",
+    "local_filename": "Menu_CP_1000_shiny.png",
+    "local_path": "shiny/Menu_CP_1000_shiny.png",
+    "source_page": "https://archives.bulbagarden.net/wiki/File:Menu_Champs_1000_shiny.png",
+    "image_url": "https://archives.bulbagarden.net/media/upload/b/b3/Menu_Champs_1000_shiny.png"
   }
 ]

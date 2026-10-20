@@ -121,6 +121,12 @@ def _parse_timestamp(record: dict[str, Any]) -> pd.Timestamp | None:
     value = record.get("date") or record.get("tournament_date")
     if not value:
         return None
+    return _parse_timestamp_value(str(value))
+
+
+@lru_cache(maxsize=8192)
+def _parse_timestamp_value(value: str) -> pd.Timestamp | None:
+    """Many team appearances share one event timestamp; parse it only once."""
     parsed = pd.to_datetime(value, errors="coerce", utc=True)
     if pd.isna(parsed):
         return None
@@ -431,7 +437,7 @@ def _build_core_sections(
     return common_cores, new_core_candidates[:5]
 
 
-def _compute_pokemon_meta_intelligence(pokemon_name: str) -> dict[str, Any]:
+def _compute_pokemon_meta_intelligence(pokemon_name: str, build_context=None) -> dict[str, Any]:
     pokemon = get_pokedex_entry_by_name(pokemon_name)
     if pokemon is None:
         raise ValueError(f"Pokemon not found: {pokemon_name}")
@@ -439,9 +445,20 @@ def _compute_pokemon_meta_intelligence(pokemon_name: str) -> dict[str, Any]:
     canonical_name = pokemon.get("speciesName") or pokemon.get("name") or pokemon_name
     result = _empty_result(canonical_name)
 
-    team_records = load_meta_team_records()
-    pokemon_team_records = _match_target_teams(canonical_name)
-    pokemon_set_records = _match_target_records(canonical_name)
+    if build_context is None:
+        team_records = load_meta_team_records()
+        pokemon_team_records = _match_target_teams(canonical_name)
+        pokemon_set_records = _match_target_records(canonical_name)
+    else:
+        aliases = _build_aliases(canonical_name)
+        pokemon_team_records = sorted(
+            {index for alias in aliases for index in build_context['team_index'].get(alias, [])}
+        )
+        pokemon_team_records = [build_context['teams'][index] for index in pokemon_team_records]
+        pokemon_set_records = sorted(
+            {index for alias in aliases for index in build_context['set_index'].get(alias, [])}
+        )
+        pokemon_set_records = [build_context['sets'][index] for index in pokemon_set_records]
 
     if not pokemon_team_records or not pokemon_set_records:
         result["dataQualityNotes"].append(
@@ -452,9 +469,13 @@ def _compute_pokemon_meta_intelligence(pokemon_name: str) -> dict[str, Any]:
         )
         return result
 
-    current_teams, previous_teams, period_mode = _split_periods(team_records)
-    current_team_ids = {team.get("team_id") for team in current_teams}
-    previous_team_ids = {team.get("team_id") for team in previous_teams}
+    if build_context is None:
+        current_teams, previous_teams, period_mode = _split_periods(team_records)
+        current_team_ids = {team.get("team_id") for team in current_teams}
+        previous_team_ids = {team.get("team_id") for team in previous_teams}
+    else:
+        current_teams, previous_teams, period_mode = build_context['periods']
+        current_team_ids, previous_team_ids = build_context['period_ids']
 
     current_pokemon_teams = [
         team for team in pokemon_team_records if team.get("team_id") in current_team_ids
@@ -541,6 +562,22 @@ def _compute_pokemon_meta_intelligence(pokemon_name: str) -> dict[str, Any]:
 def build_pokedex_meta_intelligence_cache() -> dict[str, dict[str, Any]]:
     meta_by_pokemon: dict[str, dict[str, Any]] = {}
     seen_species: set[str] = set()
+    teams = load_meta_team_records()
+    sets = load_pokemon_set_records()
+    team_index = {}
+    set_index = {}
+    for index, team in enumerate(teams):
+        for name in {normalize_name(member) for member in team.get('pokemon', [])}:
+            team_index.setdefault(name, []).append(index)
+    for index, record in enumerate(sets):
+        set_index.setdefault(normalize_name(record.get('pokemon')), []).append(index)
+    periods = _split_periods(teams)
+    context = {
+        'teams': teams, 'sets': sets, 'team_index': team_index, 'set_index': set_index,
+        'periods': periods,
+        'period_ids': ({team.get('team_id') for team in periods[0]},
+                       {team.get('team_id') for team in periods[1]}),
+    }
 
     for pokemon in get_pokedex_grid_entries():
         species_name = pokemon.get("speciesName") or pokemon.get("name") or ""
@@ -549,7 +586,7 @@ def build_pokedex_meta_intelligence_cache() -> dict[str, dict[str, Any]]:
             continue
 
         seen_species.add(normalized_species)
-        meta_by_pokemon[species_name] = _compute_pokemon_meta_intelligence(species_name)
+        meta_by_pokemon[species_name] = _compute_pokemon_meta_intelligence(species_name, build_context=context)
 
     return dict(sorted(meta_by_pokemon.items(), key=lambda item: _cache_key(item[0])))
 

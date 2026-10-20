@@ -37,19 +37,25 @@ from services.archetype_rule_service import (
 )
 from services.archetype_feature_service import load_pokemon_stat_lookup, normalize_name
 from pokemon_damage_calculator.old.calculator import analyze_battle
-from services.cv_detection_service import detect_opponent_team_types
-from services.cv_service import ComputerVisionError
-from services.dinov2_opponent_detection_service import (
-    assess_opponent_image_quality,
-    detect_opponent_team,
+from services.cv_service import ComputerVisionError, assess_opponent_image_quality, assess_opponent_image_quality_from_image
+from services.opponent_detection_service import (
+    detect_opponent_team_mobilenetv3,
+    detect_opponent_team_mobilenetv3_from_image,
 )
-from services.image_service import ImageValidationError, UPLOAD_DIR, save_opponent_image
+from services.image_service import ImageValidationError, UPLOAD_DIR, prepare_opponent_image_for_prediction, save_opponent_image
 from services.matchup_service import analyze_matchup
+from services.battle_advice_chat_service import (
+    answer_battle_question,
+    build_battle_context,
+    classify_battle_question,
+    generate_rule_based_answer,
+)
 from services.pokedex_service import (
     get_pokedex_entry_detail_by_name,
     get_pokedex_grid_entries,
     get_pokemon_recommended_teams_by_name,
 )
+from services.pokemon_mobilenetv3_classifier_service import predict_pokemon_crop
 from services.meta_trend_service import get_pokemon_meta_intelligence
 from services.pokemon_data_service import (
     SPRITE_ROOT,
@@ -60,6 +66,7 @@ from services.pokemon_moves_service import get_top_tournament_moves
 from services.pokemon_stats_service import get_level_50_stats
 from services.rag_service import answer_rag_question
 from services.user_team_service import load_user_team, save_user_team
+
 
 
 api_bp = Blueprint("api", __name__)

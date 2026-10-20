@@ -24,6 +24,8 @@ class TestPreprocess(unittest.TestCase):
         self.assertEqual(documents[0].metadata["filename"], "pokemon_types.txt")
         self.assertEqual(documents[0].metadata["stem"], "pokemon_types")
         self.assertTrue(documents[0].metadata["source"].endswith("pokemon_types.txt"))
+        self.assertEqual(documents[0].metadata["primary_topic"], "pokemon_types")
+        self.assertIn("pokemon_types", documents[0].metadata["topic_tags"])
 
     def test_split_text_uses_overlap(self) -> None:
         text = "A" * 60 + " " + "B" * 60 + " " + "C" * 60
@@ -44,6 +46,8 @@ class TestPreprocess(unittest.TestCase):
         self.assertEqual(chunks[0].metadata["filename"], "status_conditions.txt")
         self.assertEqual(chunks[0].metadata["chunk_index"], 1)
         self.assertEqual(chunks[0].metadata["chunk_size"], len(chunks[0].text))
+        self.assertEqual(chunks[0].metadata["primary_topic"], "status_conditions")
+        self.assertIn("status_conditions", chunks[0].metadata["topic_tags"])
 
 
 if __name__ == "__main__":

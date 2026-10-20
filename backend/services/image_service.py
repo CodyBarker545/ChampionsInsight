@@ -1,17 +1,17 @@
 """Validates and stores uploaded opponent team images."""
 
 import logging
+import tempfile
 from pathlib import Path
 from uuid import uuid4
 
+import numpy as np
+from PIL import Image, ImageOps
 from werkzeug.utils import secure_filename
 
 from paths import UPLOAD_DIR
-from services.cv_service import ComputerVisionError
-from services.dinov2_opponent_detection_service import (
-    assess_opponent_image_quality,
-    detect_opponent_team,
-)
+from services.cv_service import ComputerVisionError, assess_opponent_image_quality
+from services.opponent_detection_service import detect_opponent_team_mobilenetv3 as detect_opponent_team
 from services.pokemon_data_service import enrich_detected_team
 
 
@@ -55,8 +55,7 @@ def build_unique_filename(original_filename, mimetype):
     return original_name, f"{Path(original_name).stem or 'opponent'}-{uuid4().hex[:8]}{extension}"
 
 
-# Validates and stores an opponent team image.
-def save_opponent_image(image, run_detection=True):
+def validate_opponent_image_upload(image):
     if image is None or image.filename == "":
         raise ImageValidationError("Image file is required.")
 
@@ -70,15 +69,42 @@ def save_opponent_image(image, run_detection=True):
     if image_size < MIN_IMAGE_BYTES:
         raise ImageValidationError("The uploaded image is too small to be a phone photo.")
 
-    UPLOAD_DIR.mkdir(exist_ok=True)
     original_name, filename = build_unique_filename(image.filename, image.mimetype)
-    saved_path = UPLOAD_DIR / filename
-    print("UPLOAD_DIR =", UPLOAD_DIR.resolve())
-    print("SAVED ORIGINAL IMAGE =", saved_path.resolve())
+    return original_name, filename, image_size
+
+
+def prepare_opponent_image_for_prediction(image):
+    original_name, filename, image_size = validate_opponent_image_upload(image)
+
+    try:
+        with Image.open(image.stream) as pil_image:
+            rgb_image = ImageOps.exif_transpose(pil_image).convert("RGB")
+            image_array = np.array(rgb_image)[:, :, ::-1].copy()
+    except OSError as error:
+        raise ImageValidationError(f"Could not read uploaded image: {error}") from error
+
+    return {
+        "status": "received",
+        "filename": filename,
+        "originalFilename": original_name,
+        "contentType": image.mimetype,
+        "sizeBytes": image_size,
+        "image": image_array,
+    }
+
+
+# Validates and stores an opponent team image.
+def save_opponent_image(image, run_detection=True, persist=True):
+    original_name, filename, image_size = validate_opponent_image_upload(image)
+    if persist:
+        UPLOAD_DIR.mkdir(exist_ok=True)
+        saved_path = UPLOAD_DIR / filename
+    else:
+        temp_dir = Path(tempfile.gettempdir()) / "champions-insight-uploads"
+        temp_dir.mkdir(exist_ok=True)
+        saved_path = temp_dir / filename
 
     image.save(saved_path)
-
-    print("SAVED EXISTS =", saved_path.exists())
 
     try:
         quality = assess_opponent_image_quality(saved_path)
@@ -123,6 +149,7 @@ def save_opponent_image(image, run_detection=True):
     return {
         "status": "received",
         "filename": filename,
+        "savedPath": str(saved_path),
         "originalFilename": original_name,
         "contentType": image.mimetype,
         "sizeBytes": image_size,

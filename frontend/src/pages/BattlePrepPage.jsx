@@ -1,11 +1,11 @@
 // Defines the main battle preparation page and workflow state.
 import React, { useEffect, useRef, useState } from "react";
-import { Moon, Sun } from "lucide-react";
+import { Info, Moon, Sun } from "lucide-react";
 import {
   analyzeTeamMatchup,
-  askRagQuestion,
   calculateDamage,
   detectOpponentTeam,
+  fetchBattleAdviceChat,
   fetchHealthStatus,
   fetchLatestOpponentPrediction,
   fetchLatestOpponentUpload,
@@ -19,10 +19,11 @@ import {
   uploadOpponentImageFile,
 } from "../api/championsInsightApi.js";
 import MatchupStage from "../components/MatchupStage.jsx";
+import HeldItemInput from "../components/HeldItemInput.jsx";
 import ArchetypeInsightCard from "../components/ArchetypeInsightCard.jsx";
+import BattleAdviceChat from "../components/BattleAdviceChat.jsx";
 import LikelySetsCard from "../components/LikelySetsCard.jsx";
 import OpponentPanel from "../components/OpponentPanel.jsx";
-import RagPopup from "../components/RagPopup.jsx";
 import ResultsGrid from "../components/ResultsGrid.jsx";
 import StatusPill from "../components/StatusPill.jsx";
 import TeamForm from "../components/TeamForm.jsx";
@@ -306,7 +307,109 @@ function hasRealTeamMembers(teamMembers = []) {
   });
 }
 
+function normalizeBattleAdviceTeam(teamMembers = []) {
+  return (teamMembers ?? [])
+    .map((member) => ({
+      name: String(member?.name || member?.pokemonName || "").trim(),
+    }))
+    .filter((member) => {
+      const normalized = member.name.toLowerCase();
+      return (
+        normalized &&
+        !normalized.startsWith("pokemon ") &&
+        !normalized.startsWith("opponent")
+      );
+    });
+}
+
+function buildBattleAdvicePayload(question, opponentTeam, userTeam, analysis) {
+  return {
+    question,
+    opponentTeam: normalizeBattleAdviceTeam(opponentTeam),
+    userTeam: normalizeBattleAdviceTeam(userTeam),
+    damageContext: analysis?.damage
+      ? {
+          ...analysis.damage,
+          attacker: analysis.attacker,
+          defender: analysis.defender,
+          move: analysis.move,
+        }
+      : {},
+    speedContext: analysis?.speed
+      ? {
+          ...analysis.speed,
+          attacker: analysis.attacker,
+          defender: analysis.defender,
+          move: analysis.move,
+        }
+      : {},
+  };
+}
+
+function classifyBattleAdviceLoadingMessage(question, opponentTeam, userTeam) {
+  const text = String(question || "").trim().toLowerCase();
+  const hasOpponentTeam = normalizeBattleAdviceTeam(opponentTeam).length > 0;
+  const hasUserTeam = normalizeBattleAdviceTeam(userTeam).length > 0;
+
+  if (
+    text.includes("what does") ||
+    text.includes("how does") ||
+    text.includes("trick room") ||
+    text.includes("tailwind") ||
+    text.includes("burn") ||
+    text.includes("terrain") ||
+    text.includes("weather")
+  ) {
+    return "Checking mechanics notes and battle rules...";
+  }
+
+  if (
+    text.includes("item") ||
+    text.includes("move") ||
+    text.includes("ability") ||
+    text.includes("likely")
+  ) {
+    return "Checking tournament set trends and likely options...";
+  }
+
+  if (
+    text.includes("lead") ||
+    text.includes("beat") ||
+    text.includes("counter") ||
+    text.includes("threat") ||
+    text.includes("watch out")
+  ) {
+    if (hasOpponentTeam && hasUserTeam) {
+      return "Comparing both teams and looking for practical lines...";
+    }
+    return "Reviewing matchup pressure and counterplay ideas...";
+  }
+
+  if (hasOpponentTeam) {
+    return "Reading team context, archetypes, and tournament patterns...";
+  }
+
+  return "Pulling together battle advice...";
+}
+
 // Builds a frontend opponent slot from backend detection data.
+export function buildDetectedOpponentMembers(detectedTeam = []) {
+  // Missing cards remain editable slots; never compact a later card into a gap.
+  return Array.from({ length: 6 }, (_, index) => {
+    const slot = detectedTeam.find((member, memberIndex) =>
+      (member.position ?? member.slot ?? memberIndex + 1) === index + 1);
+    return buildOpponentMember(slot ?? { position: index + 1, name: "unknown" }, index);
+  });
+}
+
+function detectionStatus(result, message) {
+  const unresolved = result.unresolvedPositions ?? [];
+  if (!unresolved.length) return message;
+  return `${message} Unresolved card positions: ${unresolved.join(", ")}. ` +
+    (result.positionsAreRelative ? "Positions are relative to the first visible card. " : "") +
+    "Use the slot search to correct the team.";
+}
+
 function buildOpponentMember(slot, index) {
   const pokemon = slot.pokemon ?? {};
 
@@ -328,7 +431,7 @@ function buildOpponentMember(slot, index) {
     image: slot.image ?? pokemon.image ?? "",
     spriteUrl: slot.spriteUrl ?? pokemon.spriteUrl ?? "",
 
-    types: [],
+    types: slot.types ?? pokemon.types ?? [],
 
     ability: slot.abilities?.[0] ?? pokemon.abilities?.[0] ?? "",
     abilities: slot.abilities ?? pokemon.abilities ?? [],
@@ -463,13 +566,11 @@ function BattlePrepPage({
   const [isSavingUserTeam, setIsSavingUserTeam] = useState(false);
   const [focusedUserMoveIndex, setFocusedUserMoveIndex] = useState(null);
 
-  const [isRagOpen, setIsRagOpen] = useState(false);
-  const [ragQuestion, setRagQuestion] = useState("");
-  const [ragSubmittedQuestion, setRagSubmittedQuestion] = useState("");
-  const [ragAnswer, setRagAnswer] = useState("");
-  const [ragSource, setRagSource] = useState("");
-  const [ragError, setRagError] = useState("");
-  const [isAskingRag, setIsAskingRag] = useState(false);
+  const [isBattleAdviceOpen, setIsBattleAdviceOpen] = useState(false);
+  const [battleAdviceQuestion, setBattleAdviceQuestion] = useState("");
+  const [battleAdviceMessages, setBattleAdviceMessages] = useState([]);
+  const [battleAdviceError, setBattleAdviceError] = useState("");
+  const [isAskingBattleAdvice, setIsAskingBattleAdvice] = useState(false);
 
   const [analysis, setAnalysis] = useState(null);
   const [error, setError] = useState("");
@@ -546,11 +647,17 @@ function BattlePrepPage({
   }, []);
 
   useEffect(() => {
-    const intervalId = window.setInterval(() => {
-      void refreshLatestOpponentPrediction();
-    }, 3000);
-
-    return () => window.clearInterval(intervalId);
+    let cancelled = false;
+    let timeoutId;
+    async function poll() {
+      await refreshLatestOpponentPrediction();
+      if (!cancelled) timeoutId = window.setTimeout(poll, 1000);
+    }
+    timeoutId = window.setTimeout(poll, 1000);
+    return () => {
+      cancelled = true;
+      window.clearTimeout(timeoutId);
+    };
   }, []);
 
   useEffect(() => {
@@ -1152,7 +1259,7 @@ function BattlePrepPage({
     opponentDetailsRequestRef.current = requestId;
 
     try {
-      const [details, level50Stats, topMoves] = await Promise.all([
+      const results = await Promise.allSettled([
         fetchPokemonDetails(selectedName),
         fetchPokemonLevel50Stats(
           selectedName,
@@ -1160,6 +1267,13 @@ function BattlePrepPage({
         ),
         fetchPokemonTopMoves(selectedName, 4),
       ]);
+
+      const [details, level50Stats, topMoves] = results.map((result) =>
+        result.status === "fulfilled" ? result.value : null,
+      );
+      if (results.every((result) => result.status === "rejected")) {
+        throw results[0].reason;
+      }
 
       if (opponentDetailsRequestRef.current !== requestId) {
         return;
@@ -1171,7 +1285,7 @@ function BattlePrepPage({
             return member;
           }
 
-          return mergePokemonDetails(member, details, level50Stats, topMoves);
+          return mergePokemonDetails(member, details ?? {}, level50Stats, topMoves);
         }),
       );
     } catch (requestError) {
@@ -1199,46 +1313,37 @@ function BattlePrepPage({
     const requestId = opponentSpriteHydrationRequestRef.current + 1;
     opponentSpriteHydrationRequestRef.current = requestId;
 
-    const hydratedSprites = await Promise.all(
+    await Promise.all(
       missingSpriteMembers.map(async ({ member, index }) => {
-        try {
-          const details = await fetchPokemonDetails(member.name);
-          return { details, id: member.id, index, name: member.name };
-        } catch {
-          return null;
+        let details;
+        // A cold backend can outlast the first request timeout. Retry once,
+        // and publish each sprite as it arrives instead of waiting for all six.
+        for (let attempt = 0; attempt < 2; attempt += 1) {
+          if (opponentSpriteHydrationRequestRef.current !== requestId) return;
+          try {
+            details = await fetchPokemonDetails(member.name);
+            break;
+          } catch {
+            if (attempt === 1) return;
+          }
         }
-      }),
-    );
-
-    if (opponentSpriteHydrationRequestRef.current !== requestId) {
-      return;
-    }
-
-    setOpponentTeam((currentTeam) =>
-      currentTeam.map((member, index) => {
-        const hydratedSprite = hydratedSprites.find(
-          (result) =>
-            result &&
-            result.index === index &&
-            result.id === member.id &&
-            normalizeLookupName(result.name) ===
-              normalizeLookupName(member.name),
-        );
-
-        if (!hydratedSprite || member.spriteUrl || member.image) {
-          return member;
-        }
-
-        const details = hydratedSprite.details;
-        return {
-          ...member,
-          species: details.species ?? member.species ?? "",
-          form: details.form ?? member.form ?? "",
-          formOptions: details.formOptions ?? member.formOptions ?? [],
-          image: details.image || member.image || "",
-          spriteUrl: details.spriteUrl || member.spriteUrl || "",
-          types: member.types?.length ? member.types : (details.types ?? []),
-        };
+        if (opponentSpriteHydrationRequestRef.current !== requestId) return;
+        setOpponentTeam((currentTeam) => currentTeam.map((current, currentIndex) => {
+          if (
+            currentIndex !== index || current.id !== member.id ||
+            normalizeLookupName(current.name) !== normalizeLookupName(member.name) ||
+            current.spriteUrl || current.image
+          ) return current;
+          return {
+            ...current,
+            species: details.species ?? current.species ?? "",
+            form: details.form ?? current.form ?? "",
+            formOptions: details.formOptions ?? current.formOptions ?? [],
+            image: details.image || "",
+            spriteUrl: details.spriteUrl || "",
+            types: current.types?.length ? current.types : (details.types ?? []),
+          };
+        }));
       }),
     );
   }
@@ -1572,8 +1677,8 @@ function BattlePrepPage({
     try {
       const prediction = await fetchLatestOpponentPrediction();
 
-      if (prediction.detectedTeam?.length) {
-        const detectedMembers = prediction.detectedTeam.map(buildOpponentMember);
+      if (prediction.hasPrediction || prediction.detectedTeam?.length) {
+        const detectedMembers = buildDetectedOpponentMembers(prediction.detectedTeam);
         latestOpponentPredictionSavedAtRef.current = Number(prediction.savedAt ?? 0);
         latestOpponentPredictionRef.current =
           prediction.filename ?? latestOpponentPredictionRef.current;
@@ -1582,7 +1687,7 @@ function BattlePrepPage({
         setOpponentTeam(detectedMembers);
         setSelectedOpponentIndex(0);
         void hydrateDetectedOpponentSprites(detectedMembers);
-        setImageStatus(messages.successMessage ?? "Latest opponent prediction loaded.");
+        setImageStatus(detectionStatus(prediction, messages.successMessage ?? "Latest opponent prediction loaded."));
       } else {
         setImageStatus("No latest opponent prediction is ready yet.");
       }
@@ -1598,11 +1703,11 @@ function BattlePrepPage({
       const prediction = await fetchLatestOpponentPrediction();
       const savedAt = Number(prediction.savedAt ?? 0);
 
-      if (!prediction.detectedTeam?.length || savedAt <= latestOpponentPredictionSavedAtRef.current) {
+      if ((!prediction.hasPrediction && !prediction.detectedTeam?.length) || savedAt <= latestOpponentPredictionSavedAtRef.current) {
         return;
       }
 
-      const detectedMembers = prediction.detectedTeam.map(buildOpponentMember);
+      const detectedMembers = buildDetectedOpponentMembers(prediction.detectedTeam);
       latestOpponentPredictionSavedAtRef.current = savedAt;
       latestOpponentPredictionRef.current =
         prediction.filename ?? latestOpponentPredictionRef.current;
@@ -1611,7 +1716,7 @@ function BattlePrepPage({
       setOpponentTeam(detectedMembers);
       setSelectedOpponentIndex(0);
       void hydrateDetectedOpponentSprites(detectedMembers);
-      setImageStatus("Phone camera opponent team loaded.");
+      setImageStatus(detectionStatus(prediction, "Phone camera opponent team loaded."));
     } catch (_error) {
       // Polling is best-effort so normal battle prep work is not interrupted.
     }
@@ -1625,9 +1730,9 @@ function BattlePrepPage({
     try {
       const detectResult = await detectOpponentTeam(filename);
 
-      if (detectResult.detectedTeam?.length) {
+      if (detectResult.detectedTeam?.length || detectResult.unresolvedPositions) {
         const detectedMembers =
-          detectResult.detectedTeam.map(buildOpponentMember);
+          buildDetectedOpponentMembers(detectResult.detectedTeam);
         latestOpponentPredictionRef.current =
           detectResult.filename ??
           filename ??
@@ -1638,7 +1743,7 @@ function BattlePrepPage({
         setSelectedOpponentIndex(0);
         void hydrateDetectedOpponentSprites(detectedMembers);
 
-        setImageStatus(messages.successMessage ?? "Opponent team loaded.");
+        setImageStatus(detectionStatus(detectResult, messages.successMessage ?? "Opponent team loaded."));
       } else {
         setImageStatus(
           messages.emptyMessage ??
@@ -1786,30 +1891,26 @@ function BattlePrepPage({
     setIsUploadingImage(true);
 
     try {
-      const uploadResult = await uploadOpponentImageFile(imageToUpload);
+      const uploadResult = await uploadOpponentImageFile(imageToUpload, {
+        skipDetection: true,
+      });
 
       latestOpponentUploadRef.current =
         uploadResult.filename ?? latestOpponentUploadRef.current;
       latestOpponentPredictionRef.current =
         uploadResult.filename ?? latestOpponentPredictionRef.current;
 
-      if (uploadResult.detectedTeam?.length) {
-        const detectedMembers =
-          uploadResult.detectedTeam.map(buildOpponentMember);
-        setOpponentTeam(detectedMembers);
-        setSelectedOpponentIndex(0);
-        void hydrateDetectedOpponentSprites(detectedMembers);
+      setImageStatus(
+        `Saved as ${uploadResult.filename} (${formatBytes(
+          uploadResult.sizeBytes,
+        )}). Running MobileNetV3 detection...`,
+      );
 
-        setImageStatus(
-          `Saved as ${uploadResult.filename} (${formatBytes(
-            uploadResult.sizeBytes,
-          )}). Detection complete.`,
-        );
-      } else {
-        setImageStatus(
-          `Detection finished for ${uploadResult.filename}, but no Pokemon were found.`,
-        );
-      }
+      await loadDetectedOpponentTeam(uploadResult.filename, {
+        loadingMessage: `Running MobileNetV3 detection for ${uploadResult.filename}...`,
+        successMessage: "MobileNetV3 opponent team loaded.",
+        emptyMessage: "MobileNetV3 detection finished, but no Pokemon were found.",
+      });
     } catch (requestError) {
       setError(requestError.message || "Opponent image upload failed.");
     } finally {
@@ -1818,30 +1919,90 @@ function BattlePrepPage({
   }
 
   // Sends a user question to the RAG explanation system.
-  async function askRag(event) {
-    event.preventDefault();
-
-    if (!ragQuestion.trim()) {
+  async function submitBattleAdviceQuestion(nextQuestion) {
+    const trimmedQuestion = String(nextQuestion || "").trim();
+    if (!trimmedQuestion) {
       return;
     }
 
-    setIsRagOpen(true);
-    setRagError("");
-    setRagAnswer("");
-    setRagSource("");
-    setIsAskingRag(true);
+    setIsBattleAdviceOpen(true);
+    setBattleAdviceError("");
+    setBattleAdviceQuestion("");
+    setIsAskingBattleAdvice(true);
+    const pendingId = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+    const loadingLabel = classifyBattleAdviceLoadingMessage(
+      trimmedQuestion,
+      opponentTeam,
+      team,
+    );
+
+    setBattleAdviceMessages((current) => [
+      ...current,
+      {
+        id: pendingId,
+        question: trimmedQuestion,
+        pending: true,
+        loadingLabel,
+        result: null,
+      },
+    ]);
 
     try {
-      const result = await askRagQuestion(ragQuestion);
+      const payload = buildBattleAdvicePayload(
+        trimmedQuestion,
+        opponentTeam,
+        team,
+        analysis,
+      );
+      const result = await fetchBattleAdviceChat(payload);
 
-      setRagSubmittedQuestion(result.question);
-      setRagAnswer(result.answer);
-      setRagSource(result.source);
+      setBattleAdviceMessages((current) =>
+        current.map((message) =>
+          message.id === pendingId
+            ? {
+                ...message,
+                pending: false,
+                loadingLabel: "",
+                result,
+              }
+            : message,
+        ),
+      );
     } catch (requestError) {
-      setRagError(requestError.message);
+      setBattleAdviceMessages((current) =>
+        current.map((message) =>
+          message.id === pendingId
+            ? {
+                ...message,
+                pending: false,
+                loadingLabel: "",
+                result: {
+                  answer: "I couldn't finish that answer right now.",
+                  keyPoints: [],
+                  recommendedActions: [],
+                  uncertaintyNotes: [],
+                  source: "rule_based",
+                },
+              }
+            : message,
+        ),
+      );
+      setBattleAdviceError(
+        requestError.message || "Could not load battle advice.",
+      );
     } finally {
-      setIsAskingRag(false);
+      setIsAskingBattleAdvice(false);
     }
+  }
+
+  function askBattleAdvice(event) {
+    event.preventDefault();
+    void submitBattleAdviceQuestion(battleAdviceQuestion);
+  }
+
+  function useBattleAdviceSuggestion(suggestion) {
+    setBattleAdviceQuestion(suggestion);
+    void submitBattleAdviceQuestion(suggestion);
   }
 
   const selectedUserMember = team[selectedUserIndex] ?? emptyMember;
@@ -1878,13 +2039,27 @@ function BattlePrepPage({
             </button>
           </div>
 
-          <form className="rag-top-form" onSubmit={askRag}>
+          <form className="ask-questions-form" onSubmit={askBattleAdvice}>
             <input
-              aria-label="Ask Questions to RAG"
-              value={ragQuestion}
-              placeholder="Ask Questions to RAG"
-              onChange={(event) => setRagQuestion(event.target.value)}
+              aria-label="Ask Questions"
+              value={battleAdviceQuestion}
+              placeholder="Ask Questions"
+              onChange={(event) => setBattleAdviceQuestion(event.target.value)}
             />
+            <button
+              type="submit"
+              disabled={isAskingBattleAdvice || !battleAdviceQuestion.trim()}
+            >
+              {isAskingBattleAdvice ? "Thinking" : "Ask"}
+            </button>
+            <button
+              type="button"
+              className="ask-questions-info"
+              aria-label="Open Ask Questions details"
+              onClick={() => setIsBattleAdviceOpen(true)}
+            >
+              <Info size={16} aria-hidden="true" />
+            </button>
           </form>
           <div className="topbar-actions">
             {onToggleTheme && (
@@ -2241,7 +2416,7 @@ function BattlePrepPage({
 
                   <label className="team-editor-field">
                     <span>Item</span>
-                    <input
+                    <HeldItemInput
                       value={selectedUserMember.item ?? ""}
                       disabled={!selectedUserMember.name}
                       placeholder="Item"
@@ -2312,19 +2487,23 @@ function BattlePrepPage({
         </div>
       )}
 
-      {isRagOpen && (
-        <RagPopup
-          answer={ragAnswer}
-          error={ragError}
-          isAsking={isAskingRag}
-          onAsk={askRag}
-          onClose={() => setIsRagOpen(false)}
-          question={ragQuestion}
-          setQuestion={setRagQuestion}
-          source={ragSource}
-          submittedQuestion={ragSubmittedQuestion}
-        />
-      )}
+      <BattleAdviceChat
+        draftQuestion={battleAdviceQuestion}
+        hasTeamContext={
+          normalizeBattleAdviceTeam(opponentTeam).length > 0 ||
+          normalizeBattleAdviceTeam(team).length > 0
+        }
+        isLoading={isAskingBattleAdvice}
+        isOpen={isBattleAdviceOpen}
+        messages={battleAdviceMessages}
+        onClose={() => setIsBattleAdviceOpen(false)}
+        onDraftQuestionChange={setBattleAdviceQuestion}
+        onSubmitQuestion={(question) => {
+          void submitBattleAdviceQuestion(question);
+        }}
+        onUseSuggestion={useBattleAdviceSuggestion}
+      />
+      {battleAdviceError ? <div className="battle-advice-toast">{battleAdviceError}</div> : null}
     </main>
   );
 }

@@ -4,7 +4,7 @@ from functools import lru_cache
 from pathlib import Path
 
 from paths import POKEMON_DATA_DIR
-from services.set_probability_service import calculate_basic_probabilities
+from services.pokemon_recommended_build_service import get_pokemon_recommended_builds_by_name
 from services.tournament_usage_service import get_pokemon_usage_summary
 
 
@@ -14,6 +14,7 @@ CHAMPIONS_SPRITES_DIR = DATA_DIR / "champions_sprites" / "normal"
 POKEMON_LOOKUP_BY_DEX_PATH = DATA_DIR / "pokemon_lookup_by_dex.json"
 LEARNSET_PATH = DATA_DIR / "learnset.json"
 MOVE_DICTIONARY_PATH = DATA_DIR / "move_dictionary.json"
+ABILITY_DICTIONARY_PATH = DATA_DIR / "ability_dictionary.json"
 
 
 STAT_KEY_MAP = {
@@ -38,6 +39,16 @@ def load_json_file(path: Path):
 
     with open(path, "r", encoding="utf-8") as file:
         return json.load(file)
+
+
+@lru_cache(maxsize=1)
+def get_ability_dictionary():
+    data = load_json_file(ABILITY_DICTIONARY_PATH)
+    return data if isinstance(data, dict) else {}
+
+
+def normalize_ability_key(value: str):
+    return re.sub(r"[^a-z0-9]+", "-", str(value or "").strip().lower()).strip("-")
 
 
 def normalize_stats(stats):
@@ -268,22 +279,31 @@ def normalize_abilities(abilities):
         return []
 
     normalized = []
+    ability_dictionary = get_ability_dictionary()
 
     for ability in abilities:
         if isinstance(ability, dict):
+            ability_name = ability.get("name", "")
+            ability_details = ability_dictionary.get(normalize_ability_key(ability_name), {})
             normalized.append(
                 {
-                    "name": ability.get("name", ""),
+                    "name": ability_name,
                     "displayName": ability.get("display_name", ability.get("name", "")),
                     "isHidden": bool(ability.get("is_hidden", False)),
+                    "shortEffect": ability_details.get("short_effect", ""),
+                    "effect": ability_details.get("effect", ""),
                 }
             )
         else:
+            ability_name = str(ability)
+            ability_details = ability_dictionary.get(normalize_ability_key(ability_name), {})
             normalized.append(
                 {
-                    "name": str(ability),
-                    "displayName": str(ability),
+                    "name": ability_name,
+                    "displayName": ability_name,
                     "isHidden": False,
+                    "shortEffect": ability_details.get("short_effect", ""),
+                    "effect": ability_details.get("effect", ""),
                 }
             )
 
@@ -416,39 +436,7 @@ def get_form_entry_for_pokemon(pokemon):
 
 @lru_cache(maxsize=256)
 def build_recommended_teams_for_pokemon(pokemon_name: str):
-    if not pokemon_name:
-        return []
-
-    probability_summary = calculate_basic_probabilities(pokemon_name, limit=18)
-    teammates = probability_summary.get("commonTeammates") or []
-    if not teammates:
-        return []
-
-    recommended_teams = []
-    for start_index in range(0, min(len(teammates), 15), 5):
-        chunk = teammates[start_index:start_index + 5]
-        if len(chunk) < 3:
-            continue
-
-        recommended_teams.append({
-            "label": f"Recommended Core {len(recommended_teams) + 1}",
-            "pokemon": [
-                pokemon_name,
-                *[entry.get("name") for entry in chunk if entry.get("name")],
-            ][:6],
-            "signals": [
-                {
-                    "name": entry.get("name"),
-                    "count": entry.get("count", 0),
-                    "percentage": entry.get("percentage", 0),
-                }
-                for entry in chunk
-                if entry.get("name")
-            ],
-            "sampleSize": probability_summary.get("sampleSize", 0),
-        })
-
-    return recommended_teams[:3]
+    return get_pokemon_recommended_builds_by_name(pokemon_name).get("recommendedTeams", [])
 
 
 def get_pokemon_recommended_teams_by_name(name: str):
@@ -458,10 +446,7 @@ def get_pokemon_recommended_teams_by_name(name: str):
         return None
 
     usage_name = pokemon.get("speciesName") or pokemon["name"]
-    return {
-        "pokemon": usage_name,
-        "recommendedTeams": build_recommended_teams_for_pokemon(usage_name),
-    }
+    return get_pokemon_recommended_builds_by_name(usage_name)
 
 
 def get_pokedex_entry_detail_by_name(name: str):
@@ -481,6 +466,6 @@ def get_pokedex_entry_detail_by_name(name: str):
 
     usage_name = pokemon_detail.get("speciesName") or pokemon_detail["name"]
     pokemon_detail["usage"] = get_pokemon_usage_summary(usage_name)
-    pokemon_detail["recommendedTeams"] = []
+    pokemon_detail["recommendedTeams"] = build_recommended_teams_for_pokemon(usage_name)
 
     return pokemon_detail

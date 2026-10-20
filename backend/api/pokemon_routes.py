@@ -4,9 +4,15 @@ from flask import Blueprint, jsonify, request, send_from_directory
 from werkzeug.utils import secure_filename
 
 from api.common import route_deps
+from services.held_item_service import get_champions_held_items
 
 
 pokemon_bp = Blueprint("pokemon_routes", __name__)
+
+
+@pokemon_bp.get("/items")
+def held_items():
+    return jsonify({"items": get_champions_held_items()})
 
 
 @pokemon_bp.get("/pokemon/<pokemon_name>")

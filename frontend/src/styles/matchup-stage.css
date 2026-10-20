@@ -571,3 +571,83 @@
   font-weight: 900;
 }
 
+html[data-theme="light"] .combatant-card {
+  border-color: rgba(64, 108, 172, 0.16);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(244, 250, 255, 0.94)),
+    linear-gradient(135deg, rgba(47, 125, 246, 0.09), transparent 42%, rgba(0, 181, 159, 0.08));
+  box-shadow:
+    0 20px 46px rgba(60, 90, 130, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96);
+}
+
+html[data-theme="light"] .combatant-card:hover {
+  border-color: rgba(47, 125, 246, 0.38);
+  box-shadow:
+    0 24px 52px rgba(60, 90, 130, 0.16),
+    0 0 0 3px rgba(47, 125, 246, 0.10);
+}
+
+html[data-theme="light"] .combatant-card > span {
+  color: #2f7df6;
+}
+
+html[data-theme="light"] .combatant-sprite-frame {
+  border-color: rgba(47, 125, 246, 0.14);
+  background:
+    linear-gradient(var(--ci-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--ci-grid) 1px, transparent 1px),
+    linear-gradient(135deg, rgba(144, 213, 255, 0.24), transparent 50%, rgba(0, 181, 159, 0.10)),
+    #f7fbff;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    0 10px 24px rgba(64, 88, 122, 0.08);
+}
+
+html[data-theme="light"] .status-controls,
+html[data-theme="light"] .ability-effect-list .effect-toggle,
+html[data-theme="light"] .combatant-card input,
+html[data-theme="light"] .combatant-card select,
+html[data-theme="light"] .meta-row small,
+html[data-theme="light"] .type-row span,
+html[data-theme="light"] .meta-control,
+html[data-theme="light"] .stat-grid,
+html[data-theme="light"] .move-button,
+html[data-theme="light"] .move-search-slot input,
+html[data-theme="light"] .stage-controls,
+html[data-theme="light"] .stage-control select,
+html[data-theme="light"] .stat-cell .stat-ev-input {
+  border-color: rgba(64, 108, 172, 0.16);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(238, 247, 255, 0.92));
+  box-shadow: 0 8px 18px rgba(64, 88, 122, 0.08);
+}
+
+html[data-theme="light"] .form-toggle {
+  border-color: rgba(0, 181, 159, 0.32);
+  color: #007c70;
+  background: linear-gradient(180deg, rgba(226, 255, 250, 0.96), rgba(255, 255, 255, 0.92));
+}
+
+html[data-theme="light"] .form-toggle.active {
+  color: white;
+  background: linear-gradient(135deg, #00b59f, #18c9b4);
+  box-shadow: 0 0 0 3px rgba(0, 181, 159, 0.16);
+}
+
+html[data-theme="light"] .type-row span {
+  color: #ffffff;
+  border-color: rgba(47, 125, 246, 0.10);
+  background: linear-gradient(135deg, #3b82f6, #5aa8ff);
+}
+
+html[data-theme="light"] .move-button:hover {
+  box-shadow: 0 12px 24px rgba(64, 88, 122, 0.13);
+}
+
+html[data-theme="light"] .move-edit-slot.selected .move-button,
+html[data-theme="light"] .move-button.selected {
+  border-color: rgba(47, 125, 246, 0.58);
+  background: linear-gradient(180deg, rgba(220, 239, 255, 0.98), rgba(255, 255, 255, 0.96));
+}
+

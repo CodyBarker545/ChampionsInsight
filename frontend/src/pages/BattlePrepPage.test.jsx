@@ -3,12 +3,12 @@ import "@testing-library/jest-dom/vitest";
 import { cleanup, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import BattlePrepPage from "./BattlePrepPage.jsx";
+import BattlePrepPage, { buildDetectedOpponentMembers } from "./BattlePrepPage.jsx";
 import {
   analyzeTeamMatchup,
-  askRagQuestion,
   calculateDamage,
   detectOpponentTeam,
+  fetchBattleAdviceChat,
   fetchHealthStatus,
   fetchLatestOpponentPrediction,
   fetchLatestOpponentUpload,
@@ -24,9 +24,9 @@ import {
 
 vi.mock("../api/championsInsightApi.js", () => ({
   analyzeTeamMatchup: vi.fn(),
-  askRagQuestion: vi.fn(),
   calculateDamage: vi.fn(),
   detectOpponentTeam: vi.fn(),
+  fetchBattleAdviceChat: vi.fn(),
   fetchHealthStatus: vi.fn(),
   fetchLatestOpponentPrediction: vi.fn(),
   fetchLatestOpponentUpload: vi.fn(),
@@ -42,6 +42,22 @@ vi.mock("../api/championsInsightApi.js", () => ({
 }));
 
 
+describe("partial opponent detection slots", () => {
+  it("keeps missing positions editable and preserves later positions", () => {
+    const team = buildDetectedOpponentMembers([
+      {position: 1, name: "Pikachu"}, {position: 3, name: "Raichu"},
+    ]);
+    expect(team).toHaveLength(6);
+    expect(team.map((member) => member.name)).toEqual(["Pikachu", "", "Raichu", "", "", ""]);
+    expect(team[2].id).toBe("opponent-3");
+  });
+  it("retains all six manual correction slots when no cards are validated", () => {
+    const team = buildDetectedOpponentMembers([]);
+    expect(team).toHaveLength(6);
+    expect(team.every((member) => member.name === "")).toBe(true);
+  });
+});
+
 describe("BattlePrepPage", () => {
   afterEach(() => {
     cleanup();
@@ -51,6 +67,14 @@ describe("BattlePrepPage", () => {
     vi.clearAllMocks();
     window.history.pushState({}, "", "/");
     fetchHealthStatus.mockResolvedValue({ status: "ok" });
+    fetchBattleAdviceChat.mockResolvedValue({
+      answer: "Lead Milotic and respect Sneasler pressure.",
+      keyPoints: ["Milotic checks sand pressure."],
+      recommendedActions: ["Keep Dragonite healthy for speed control turns."],
+      uncertaintyNotes: ["Sample size is still limited."],
+      source: "rule_based",
+      questionType: ["counterplay"],
+    });
     fetchLatestOpponentPrediction.mockResolvedValue({
       hasPrediction: false,
       detectedTeam: [],
@@ -163,11 +187,6 @@ describe("BattlePrepPage", () => {
           finalStats: { hp: 153, attack: 104, defense: 98, specialAttack: 129, specialDefense: 105, speed: 120 },
         },
       ],
-    });
-    askRagQuestion.mockResolvedValue({
-      question: "What does this ability do?",
-      answer: "The RAG system retrieves relevant battle-mechanics context.",
-      source: "Local RAG Knowledge Base",
     });
   });
 
@@ -392,6 +411,46 @@ describe("BattlePrepPage", () => {
     );
   });
 
+  it("renders an available roster sprite while another details request is still pending", async () => {
+    window.history.pushState({}, "", "/?opponentPrediction=1");
+    fetchLatestOpponentPrediction.mockResolvedValue({
+      hasPrediction: true,
+      detectedTeam: [{ name: "Charizard" }, { name: "Venusaur" }],
+    });
+    fetchPokemonDetails.mockImplementation((name) => name === "Charizard"
+      ? new Promise(() => {})
+      : Promise.resolve({ name, image: "/venusaur.png", types: ["Grass"] }));
+    render(<BattlePrepPage />);
+    expect(await screen.findByAltText("Venusaur sprite")).toHaveAttribute("src", "/venusaur.png");
+  });
+
+  it("retries missing roster sprites after a details timeout without slot clicks", async () => {
+    window.history.pushState({}, "", "/?opponentPrediction=1");
+    fetchLatestOpponentPrediction.mockResolvedValue({
+      hasPrediction: true,
+      detectedTeam: [{ name: "Charizard", image: "/charizard.png" }, { name: "Venusaur" }],
+    });
+    let venusaurRequests = 0;
+    fetchPokemonDetails.mockImplementation((name) => {
+      if (name === "Venusaur" && venusaurRequests++ === 0) return Promise.reject(new Error("timeout"));
+      return Promise.resolve({ name, image: `/${name.toLowerCase()}.png`, abilities: [], moves: [] });
+    });
+    render(<BattlePrepPage />);
+    expect(await screen.findByAltText("Venusaur sprite")).toHaveAttribute("src", "/venusaur.png");
+    expect(venusaurRequests).toBe(2);
+  });
+
+  it("keeps opponent details and sprites when tournament moves fail", async () => {
+    window.history.pushState({}, "", "/?opponentPrediction=1");
+    fetchLatestOpponentPrediction.mockResolvedValue({
+      hasPrediction: true, detectedTeam: [{ name: "Charizard", image: "/charizard.png" }],
+    });
+    fetchPokemonTopMoves.mockRejectedValue(new Error("moves timeout"));
+    render(<BattlePrepPage />);
+    await waitFor(() => expect(screen.getByLabelText("Opponent ability").tagName).toBe("SELECT"));
+    expect(screen.getByRole("button", { name: "Flamethrower" })).toBeInTheDocument();
+  });
+
   it("shows a likely sets trigger for detected opponents", async () => {
     const user = userEvent.setup();
     render(<BattlePrepPage />);
@@ -408,16 +467,143 @@ describe("BattlePrepPage", () => {
     expect(screen.getByRole("button", { name: "Phone QR Camera" })).toBeInTheDocument();
   });
 
-  it("asks a RAG question and displays the popup answer", async () => {
+  it("asks a question from the top bar and shows it in the shared chat modal", async () => {
     const user = userEvent.setup();
     render(<BattlePrepPage />);
 
-    await user.type(screen.getByLabelText("Ask Questions to RAG"), "What does this ability do?{enter}");
+    let resolveAdvice;
+    fetchBattleAdviceChat.mockImplementation(
+      () =>
+        new Promise((resolve) => {
+          resolveAdvice = resolve;
+        }),
+    );
+
+    await user.type(screen.getByLabelText("Ask Questions"), "What does this ability do?{enter}");
 
     await waitFor(() => {
-      expect(askRagQuestion).toHaveBeenCalledWith("What does this ability do?");
+      expect(fetchBattleAdviceChat).toHaveBeenCalled();
     });
-    expect(await screen.findByRole("dialog", { name: "RAG Response" })).toBeInTheDocument();
-    expect(await screen.findByText("The RAG system retrieves relevant battle-mechanics context.")).toBeInTheDocument();
+    expect(await screen.findByRole("dialog", { name: "Ask Questions" })).toBeInTheDocument();
+    expect(screen.getByText("Checking mechanics notes and battle rules...")).toBeInTheDocument();
+
+    resolveAdvice({
+      answer: "Lead Milotic and respect Sneasler pressure.",
+      keyPoints: ["Milotic checks sand pressure."],
+      recommendedActions: ["Keep Dragonite healthy for speed control turns."],
+      uncertaintyNotes: ["Sample size is still limited."],
+      source: "rule_based",
+      questionType: ["counterplay"],
+    });
+
+    expect(await screen.findByText("Lead Milotic and respect Sneasler pressure.")).toBeInTheDocument();
+  });
+
+  it("opens the ask questions details from the info button", async () => {
+    const user = userEvent.setup();
+    render(<BattlePrepPage />);
+
+    await user.click(screen.getByRole("button", { name: "Open Ask Questions details" }));
+
+    expect(await screen.findByRole("dialog", { name: "Ask Questions" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Explain Trick Room" })).toBeInTheDocument();
+  });
+
+  it("labels factual lookups as Battle Info and shows their source", async () => {
+    const user = userEvent.setup();
+    fetchBattleAdviceChat.mockResolvedValueOnce({
+      intent: "battle_info",
+      answer: "Sitrus Berry restores 25% of maximum HP at half HP or less.",
+      mechanicsUsed: ["berry.txt"],
+      source: "rule_based",
+    });
+    render(<BattlePrepPage />);
+    await user.type(screen.getByLabelText("Ask Questions"), "sitrus berry{enter}");
+    expect(await screen.findByText("Battle Info")).toBeInTheDocument();
+    expect(screen.getByText("berry.txt")).toBeInTheDocument();
+  });
+
+  it("submits suggestion buttons directly into the chat thread", async () => {
+    const user = userEvent.setup();
+    let resolveAdvice;
+    fetchBattleAdviceChat.mockImplementation(
+      () =>
+        new Promise((resolve) => {
+          resolveAdvice = resolve;
+        }),
+    );
+
+    render(<BattlePrepPage />);
+
+    await user.click(screen.getByRole("button", { name: "Open Ask Questions details" }));
+    await user.click(screen.getByRole("button", { name: "Explain Trick Room" }));
+
+    await waitFor(() => {
+      expect(fetchBattleAdviceChat).toHaveBeenCalled();
+    });
+    expect(screen.getByText("Checking mechanics notes and battle rules...")).toBeInTheDocument();
+
+    resolveAdvice({
+      answer: "Trick Room reverses normal move order for five turns.",
+      keyPoints: [],
+      recommendedActions: [],
+      uncertaintyNotes: [],
+      source: "rule_based",
+      questionType: ["gameplay_mechanic"],
+    });
+
+    expect(await screen.findByText("Trick Room reverses normal move order for five turns.")).toBeInTheDocument();
+  });
+
+  it("lets the user type and submit from inside the chat modal", async () => {
+    const user = userEvent.setup();
+    let resolveAdvice;
+    fetchBattleAdviceChat.mockImplementation(
+      () =>
+        new Promise((resolve) => {
+          resolveAdvice = resolve;
+        }),
+    );
+
+    render(<BattlePrepPage />);
+
+    await user.click(screen.getByRole("button", { name: "Open Ask Questions details" }));
+    await user.type(screen.getByLabelText("Ask Questions in chat"), "What should I lead?");
+    await user.click(screen.getByRole("button", { name: "Send battle question" }));
+
+    await waitFor(() => {
+      expect(fetchBattleAdviceChat).toHaveBeenCalled();
+    });
+    expect(screen.getByText("Reviewing matchup pressure and counterplay ideas...")).toBeInTheDocument();
+
+    resolveAdvice({
+      answer: "Lead Milotic into their sand core.",
+      keyPoints: [],
+      recommendedActions: [],
+      uncertaintyNotes: [],
+      source: "rule_based",
+      questionType: ["team_recommendation"],
+    });
+
+    expect(await screen.findByText("Lead Milotic into their sand core.")).toBeInTheDocument();
+  });
+
+  it("clears the chat question input even when battle advice fails", async () => {
+    const user = userEvent.setup();
+    fetchBattleAdviceChat.mockRejectedValueOnce(new Error("RAG timeout"));
+
+    render(<BattlePrepPage />);
+
+    await user.click(screen.getByRole("button", { name: "Open Ask Questions details" }));
+    const input = screen.getByLabelText("Ask Questions in chat");
+    await user.type(input, "what does sleep do");
+    await user.click(screen.getByRole("button", { name: "Send battle question" }));
+
+    await waitFor(() => {
+      expect(fetchBattleAdviceChat).toHaveBeenCalled();
+    });
+
+    expect(input).toHaveValue("");
+    expect(await screen.findByText("I couldn't finish that answer right now.")).toBeInTheDocument();
   });
 });

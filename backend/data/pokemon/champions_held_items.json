@@ -1,0 +1,1487 @@
+{
+  "electric-seed": {
+    "name": "electric-seed",
+    "display_name": "Electric Seed",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/7/73/Bag_Electric_Seed_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Consumed on Electric Terrain and raises the holder’s Defense by one stage."
+  },
+  "psychic-seed": {
+    "name": "psychic-seed",
+    "display_name": "Psychic Seed",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/a/af/Bag_Psychic_Seed_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Consumed on Psychic Terrain and raises the holder’s Special Defense by one stage."
+  },
+  "misty-seed": {
+    "name": "misty-seed",
+    "display_name": "Misty Seed",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/2/25/Bag_Misty_Seed_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Consumed on Misty Terrain and raises the holder’s Special Defense by one stage."
+  },
+  "grassy-seed": {
+    "name": "grassy-seed",
+    "display_name": "Grassy Seed",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/c/c4/Bag_Grassy_Seed_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Consumed on Grassy Terrain and raises the holder’s Defense by one stage."
+  },
+  "normal-gem": {
+    "name": "normal-gem",
+    "display_name": "Normal Gem",
+    "vp_cost": 1000,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/f/f5/Bag_Normal_Gem_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: When the holder uses a damaging Normal-type move, the move has 1.5× power and this item is consumed."
+  },
+  "binding-band": {
+    "name": "binding-band",
+    "display_name": "Binding Band",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/4/46/Bag_Binding_Band_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Doubles the per-turn damage of multi-turn trapping moves."
+  },
+  "terrain-extender": {
+    "name": "terrain-extender",
+    "display_name": "Terrain Extender",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/5/5d/Bag_Terrain_Extender_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Extends the holder’s Terrain effects to 8 turns."
+  },
+  "rocky-helmet": {
+    "name": "rocky-helmet",
+    "display_name": "Rocky Helmet",
+    "vp_cost": 1000,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/7/7a/Bag_Rocky_Helmet_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: When the holder is hit by a contact move, the attacking Pokémon takes 1/6 its max HP in damage."
+  },
+  "air-balloon": {
+    "name": "air-balloon",
+    "display_name": "Air Balloon",
+    "vp_cost": 1000,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/9/95/Bag_Air_Balloon_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Grants immunity to Ground-type moves, Spikes, and Toxic Spikes. Consumed when the holder takes damage from a move."
+  },
+  "red-card": {
+    "name": "red-card",
+    "display_name": "Red Card",
+    "vp_cost": 1000,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/e/e7/Bag_Red_Card_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: When the holder takes damage from a move, the opponent switches out for another random party Pokémon. Consumed after use."
+  },
+  "eject-button": {
+    "name": "eject-button",
+    "display_name": "Eject Button",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/7/76/Bag_Eject_Button_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: When the holder takes damage from a move, it switches out for a party Pokémon of the Trainer’s choice."
+  },
+  "leek": {
+    "name": "leek",
+    "display_name": "Leek",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/2/21/Bag_Leek_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Raises the critical-hit ratio of Farfetch'd or Sirfetch'd by two stages."
+  },
+  "muscle-band": {
+    "name": "muscle-band",
+    "display_name": "Muscle Band",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/4/49/Bag_Muscle_Band_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Boosts the damage of physical moves used by the holder by 10%."
+  },
+  "wise-glasses": {
+    "name": "wise-glasses",
+    "display_name": "Wise Glasses",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/c/c7/Bag_Wise_Glasses_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Boosts the damage of special moves used by the holder by 1/10 (10%)."
+  },
+  "expert-belt": {
+    "name": "expert-belt",
+    "display_name": "Expert Belt",
+    "vp_cost": 1000,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/8/81/Bag_Expert_Belt_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Holder’s Super Effective moves do 20% extra damage."
+  },
+  "life-orb": {
+    "name": "life-orb",
+    "display_name": "Life Orb",
+    "vp_cost": 1000,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/c/c2/Bag_Life_Orb_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Holder’s moves inflict 30% extra damage, but cost 10% max HP."
+  },
+  "metronome": {
+    "name": "metronome",
+    "display_name": "Metronome",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/a/aa/Bag_Metronome_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Consectutive uses of the same attack have a cumulative damage boost of 10%. Maximum 100% boost."
+  },
+  "big-root": {
+    "name": "big-root",
+    "display_name": "Big Root",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/e/e7/Bag_Big_Root_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Increases HP recovered from draining moves, Ingrain, and Aqua Ring by 3/10 (30%)."
+  },
+  "light-clay": {
+    "name": "light-clay",
+    "display_name": "Light Clay",
+    "vp_cost": 1000,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/5/50/Bag_Light_Clay_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Light Screen and Reflect used by the holder last 8 rounds instead of 5."
+  },
+  "heat-rock": {
+    "name": "heat-rock",
+    "display_name": "Heat Rock",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/5/5a/Bag_Heat_Rock_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Sunny Day by the holder lasts 8 rounds instead of 5."
+  },
+  "icy-rock": {
+    "name": "icy-rock",
+    "display_name": "Icy Rock",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/9/9b/Bag_Icy_Rock_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Hail by the holder lasts 8 rounds instead of 5."
+  },
+  "smooth-rock": {
+    "name": "smooth-rock",
+    "display_name": "Smooth Rock",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/e/e3/Bag_Smooth_Rock_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Sandstorm by the holder lasts 8 rounds instead of 5."
+  },
+  "damp-rock": {
+    "name": "damp-rock",
+    "display_name": "Damp Rock",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/1/11/Bag_Damp_Rock_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Rain Dance by the holder lasts 8 rounds instead of 5."
+  },
+  "wide-lens": {
+    "name": "wide-lens",
+    "display_name": "Wide Lens",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/9/9e/Bag_Wide_Lens_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Provides a 1/10 (10%) boost in accuracy to the holder."
+  },
+  "zoom-lens": {
+    "name": "zoom-lens",
+    "display_name": "Zoom Lens",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/6/67/Bag_Zoom_Lens_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Provides a 1/5 (20%) boost in accuracy if the holder moves after the target."
+  },
+  "iron-ball": {
+    "name": "iron-ball",
+    "display_name": "Iron Ball",
+    "vp_cost": 1000,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/5/5b/Bag_Iron_Ball_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Holder’s Speed is halved. Negates all Ground-type immunities, and makes Flying-types take neutral damage from Ground-type moves. Arena Trap. Spikes, and Toxic Spikes affect the holder."
+  },
+  "shed-shell": {
+    "name": "shed-shell",
+    "display_name": "Shed Shell",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/e/e6/Bag_Shed_Shell_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Holder can bypass all trapping effects and switch out. Multi-turn moves still cannot be switched out of."
+  },
+  "silk-scarf": {
+    "name": "silk-scarf",
+    "display_name": "Silk Scarf",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/6/67/Bag_Silk_Scarf_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Normal-Type moves from holder do 20% more damage."
+  },
+  "miracle-seed": {
+    "name": "miracle-seed",
+    "display_name": "Miracle Seed",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/4/41/Bag_Miracle_Seed_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Grass-Type moves from holder do 20% more damage."
+  },
+  "charcoal": {
+    "name": "charcoal",
+    "display_name": "Charcoal",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/e/e6/Bag_Charcoal_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Fire-Type moves from holder do 20% more damage."
+  },
+  "mystic-water": {
+    "name": "mystic-water",
+    "display_name": "Mystic Water",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/0/00/Bag_Mystic_Water_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Water-Type moves from holder do 20% more damage."
+  },
+  "magnet": {
+    "name": "magnet",
+    "display_name": "Magnet",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/f/fd/Bag_Magnet_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Electric-Type moves from holder do 20% more damage."
+  },
+  "silver-powder": {
+    "name": "silver-powder",
+    "display_name": "Silver Powder",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/1/10/Bag_Silver_Powder_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Bug-Type moves from holder do 20% more damage."
+  },
+  "sharp-beak": {
+    "name": "sharp-beak",
+    "display_name": "Sharp Beak",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/7/7e/Bag_Sharp_Beak_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Flying-Type moves from holder do 20% more damage."
+  },
+  "hard-stone": {
+    "name": "hard-stone",
+    "display_name": "Hard Stone",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/d/d7/Bag_Hard_Stone_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Rock-Type moves from holder do 20% more damage."
+  },
+  "poison-barb": {
+    "name": "poison-barb",
+    "display_name": "Poison Barb",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/6/6b/Bag_Poison_Barb_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Poison-Type moves from holder do 20% more damage."
+  },
+  "soft-sand": {
+    "name": "soft-sand",
+    "display_name": "Soft Sand",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/9/91/Bag_Soft_Sand_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Ground-Type moves from holder do 20% more damage."
+  },
+  "never-melt-ice": {
+    "name": "never-melt-ice",
+    "display_name": "Never-Melt Ice",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/1/14/Bag_Never-Melt_Ice_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Ice-Type moves from holder do 20% more damage."
+  },
+  "black-belt": {
+    "name": "black-belt",
+    "display_name": "Black Belt",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/4/4f/Bag_Black_Belt_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Fighting-Type moves from holder do 20% more damage."
+  },
+  "twisted-spoon": {
+    "name": "twisted-spoon",
+    "display_name": "Twisted Spoon",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/7/7f/Bag_Twisted_Spoon_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Psychic-Type moves from holder do 20% more damage."
+  },
+  "spell-tag": {
+    "name": "spell-tag",
+    "display_name": "Spell Tag",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/6/61/Bag_Spell_Tag_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Ghost-Type moves from holder do 20% more damage."
+  },
+  "dragon-fang": {
+    "name": "dragon-fang",
+    "display_name": "Dragon Fang",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/3/3e/Bag_Dragon_Fang_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Dragon-Type moves from holder do 20% more damage."
+  },
+  "black-glasses": {
+    "name": "black-glasses",
+    "display_name": "Black Glasses",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/2/2e/Bag_Black_Glasses_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Dark-Type moves from holder do 20% more damage."
+  },
+  "metal-coat": {
+    "name": "metal-coat",
+    "display_name": "Metal Coat",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/5/5b/Bag_Metal_Coat_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Steel-Type moves from holder do 20% more damage."
+  },
+  "fairy-feather": {
+    "name": "fairy-feather",
+    "display_name": "Fairy Feather",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/e/eb/Bag_Fairy_Feather_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": ""
+  },
+  "mental-herb": {
+    "name": "mental-herb",
+    "display_name": "Mental Herb",
+    "vp_cost": 1000,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/6/62/Bag_Mental_Herb_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Consumed to cure infatuation. Gen V: Also removes Taunt, Encore, Torment, Disable, and Cursed Body."
+  },
+  "shell-bell": {
+    "name": "shell-bell",
+    "display_name": "Shell Bell",
+    "vp_cost": 700,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/6/6a/Bag_Shell_Bell_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Holder receives 1/8 of the damage it deals when attacking."
+  },
+  "cheri-berry": {
+    "name": "cheri-berry",
+    "display_name": "Cheri Berry",
+    "vp_cost": 400,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/1/1b/Bag_Cheri_Berry_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Consumed when paralyzed to cure paralysis."
+  },
+  "chesto-berry": {
+    "name": "chesto-berry",
+    "display_name": "Chesto Berry",
+    "vp_cost": 400,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/a/a1/Bag_Chesto_Berry_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Consumed when asleep to cure sleep."
+  },
+  "pecha-berry": {
+    "name": "pecha-berry",
+    "display_name": "Pecha Berry",
+    "vp_cost": 400,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/9/92/Bag_Pecha_Berry_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Consumed when poisoned to cure poison."
+  },
+  "rawst-berry": {
+    "name": "rawst-berry",
+    "display_name": "Rawst Berry",
+    "vp_cost": 400,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/8/81/Bag_Rawst_Berry_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Consumed when burned to cure a burn."
+  },
+  "aspear-berry": {
+    "name": "aspear-berry",
+    "display_name": "Aspear Berry",
+    "vp_cost": 400,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/3/32/Bag_Aspear_Berry_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Consumed when frozen to cure frozen."
+  },
+  "persim-berry": {
+    "name": "persim-berry",
+    "display_name": "Persim Berry",
+    "vp_cost": 400,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/5/55/Bag_Persim_Berry_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Consumed when confused to cure confusion."
+  },
+  "leppa-berry": {
+    "name": "leppa-berry",
+    "display_name": "Leppa Berry",
+    "vp_cost": 400,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/e/ec/Bag_Leppa_Berry_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Consumed when a move runs out of PP to restore its PP by 10."
+  },
+  "oran-berry": {
+    "name": "oran-berry",
+    "display_name": "Oran Berry",
+    "vp_cost": 400,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/5/5b/Bag_Oran_Berry_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Consumed at 1/2 max HP to recover 10 HP."
+  },
+  "chilan-berry": {
+    "name": "chilan-berry",
+    "display_name": "Chilan Berry",
+    "vp_cost": 400,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/7/73/Bag_Chilan_Berry_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Consumed when struck by a Normal-type attack to halve the damage."
+  },
+  "rindo-berry": {
+    "name": "rindo-berry",
+    "display_name": "Rindo Berry",
+    "vp_cost": 400,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/6/67/Bag_Rindo_Berry_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Consumed when struck by a super-effective Grass-type attack to halve the damage."
+  },
+  "occa-berry": {
+    "name": "occa-berry",
+    "display_name": "Occa Berry",
+    "vp_cost": 400,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/5/59/Bag_Occa_Berry_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Consumed when struck by a super-effective Fire-type attack to halve the damage."
+  },
+  "passho-berry": {
+    "name": "passho-berry",
+    "display_name": "Passho Berry",
+    "vp_cost": 400,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/a/a6/Bag_Passho_Berry_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Consumed when struck by a super-effective Water-type attack to halve the damage."
+  },
+  "wacan-berry": {
+    "name": "wacan-berry",
+    "display_name": "Wacan Berry",
+    "vp_cost": 400,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/9/91/Bag_Wacan_Berry_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Consumed when struck by a super-effective Electric-type attack to halve the damage."
+  },
+  "tanga-berry": {
+    "name": "tanga-berry",
+    "display_name": "Tanga Berry",
+    "vp_cost": 400,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/9/9f/Bag_Tanga_Berry_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Consumed when struck by a super-effective Bug-type attack to halve the damage."
+  },
+  "coba-berry": {
+    "name": "coba-berry",
+    "display_name": "Coba Berry",
+    "vp_cost": 400,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/d/d6/Bag_Coba_Berry_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Consumed when struck by a super-effective Flying-type attack to halve the damage."
+  },
+  "charti-berry": {
+    "name": "charti-berry",
+    "display_name": "Charti Berry",
+    "vp_cost": 400,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/2/23/Bag_Charti_Berry_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Consumed when struck by a super-effective Rock-type attack to halve the damage."
+  },
+  "kebia-berry": {
+    "name": "kebia-berry",
+    "display_name": "Kebia Berry",
+    "vp_cost": 400,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/6/6e/Bag_Kebia_Berry_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Consumed when struck by a super-effective Poison-type attack to halve the damage."
+  },
+  "shuca-berry": {
+    "name": "shuca-berry",
+    "display_name": "Shuca Berry",
+    "vp_cost": 400,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/9/9b/Bag_Shuca_Berry_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Consumed when struck by a super-effective Ground-type attack to halve the damage."
+  },
+  "yache-berry": {
+    "name": "yache-berry",
+    "display_name": "Yache Berry",
+    "vp_cost": 400,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/9/98/Bag_Yache_Berry_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Consumed when struck by a super-effective Ice-type attack to halve the damage."
+  },
+  "chople-berry": {
+    "name": "chople-berry",
+    "display_name": "Chople Berry",
+    "vp_cost": 400,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/e/e7/Bag_Chople_Berry_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Consumed when struck by a super-effective Fighting-type attack to halve the damage."
+  },
+  "payapa-berry": {
+    "name": "payapa-berry",
+    "display_name": "Payapa Berry",
+    "vp_cost": 400,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/4/4e/Bag_Payapa_Berry_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Consumed when struck by a super-effective Psychic-type attack to halve the damage."
+  },
+  "kasib-berry": {
+    "name": "kasib-berry",
+    "display_name": "Kasib Berry",
+    "vp_cost": 400,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/7/73/Bag_Kasib_Berry_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Consumed when struck by a super-effective Ghost-type attack to halve the damage."
+  },
+  "haban-berry": {
+    "name": "haban-berry",
+    "display_name": "Haban Berry",
+    "vp_cost": 400,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/9/9c/Bag_Haban_Berry_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Consumed when struck by a super-effective Dragon-type attack to halve the damage."
+  },
+  "colbur-berry": {
+    "name": "colbur-berry",
+    "display_name": "Colbur Berry",
+    "vp_cost": 400,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/d/d2/Bag_Colbur_Berry_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Consumed when struck by a super-effective Dark-type attack to halve the damage."
+  },
+  "babiri-berry": {
+    "name": "babiri-berry",
+    "display_name": "Babiri Berry",
+    "vp_cost": 400,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/9/96/Bag_Babiri_Berry_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Consumed when struck by a super-effective Steel-type attack to halve the damage."
+  },
+  "roseli-berry": {
+    "name": "roseli-berry",
+    "display_name": "Roseli Berry",
+    "vp_cost": 400,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/e/e5/Bag_Roseli_Berry_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Consumed when struck by a super-effective Fairy-type attack to halve the damage."
+  },
+  "scope-lens": {
+    "name": "scope-lens",
+    "display_name": "Scope Lens",
+    "vp_cost": 1000,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/a/a0/Bag_Scope_Lens_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Raises the holder’s critical hit ratio by one stage."
+  },
+  "light-ball": {
+    "name": "light-ball",
+    "display_name": "Light Ball",
+    "vp_cost": 1000,
+    "is_mega_stone": false,
+    "sprite": "https://archives.bulbagarden.net/media/upload/b/b6/Bag_Light_Ball_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Doubles Pikachu’s Attack and Special Attack. Breed on Pikachu or Raichu: Pichu Egg will have Volt Tackle."
+  },
+  "absolite-z": {
+    "name": "absolite-z",
+    "display_name": "Absolite Z",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/5/58/Bag_Absolite_Z_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "salamencite": {
+    "name": "salamencite",
+    "display_name": "Salamencite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/9/93/Bag_Salamencite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Salamence to Mega Evolve into Mega Salamence."
+  },
+  "garchompite-z": {
+    "name": "garchompite-z",
+    "display_name": "Garchompite Z",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/e/e7/Bag_Garchompite_Z_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "lucarionite-z": {
+    "name": "lucarionite-z",
+    "display_name": "Lucarionite Z",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/a/a7/Bag_Lucarionite_Z_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "golisopite": {
+    "name": "golisopite",
+    "display_name": "Golisopite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/f/f5/Bag_Golisopite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "baxcalibrite": {
+    "name": "baxcalibrite",
+    "display_name": "Baxcalibrite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/5/5e/Bag_Baxcalibrite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "raichunite-x": {
+    "name": "raichunite-x",
+    "display_name": "Raichunite X",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/c/ca/Bag_Raichunite_X_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "raichunite-y": {
+    "name": "raichunite-y",
+    "display_name": "Raichunite Y",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/6/6e/Bag_Raichunite_Y_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "sceptilite": {
+    "name": "sceptilite",
+    "display_name": "Sceptilite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/2/2c/Bag_Sceptilite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Sceptile to Mega Evolve into Mega Sceptile."
+  },
+  "blazikenite": {
+    "name": "blazikenite",
+    "display_name": "Blazikenite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/9/9e/Bag_Blazikenite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Blaziken to Mega Evolve into Mega Blaziken."
+  },
+  "swampertite": {
+    "name": "swampertite",
+    "display_name": "Swampertite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/f/f9/Bag_Swampertite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Swampert to Mega Evolve into Mega Swampert."
+  },
+  "mawilite": {
+    "name": "mawilite",
+    "display_name": "Mawilite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/8/87/Bag_Mawilite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Mawile to Mega Evolve into Mega Mawile."
+  },
+  "metagrossite": {
+    "name": "metagrossite",
+    "display_name": "Metagrossite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/9/9b/Bag_Metagrossite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Metagross to Mega Evolve into Mega Metagross."
+  },
+  "staraptite": {
+    "name": "staraptite",
+    "display_name": "Staraptite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/1/13/Bag_Staraptite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "scolipite": {
+    "name": "scolipite",
+    "display_name": "Scolipite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/e/ed/Bag_Scolipite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "scraftinite": {
+    "name": "scraftinite",
+    "display_name": "Scraftinite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/7/7b/Bag_Scraftinite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "eelektrossite": {
+    "name": "eelektrossite",
+    "display_name": "Eelektrossite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/b/bc/Bag_Eelektrossite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "chesnaughtite": {
+    "name": "chesnaughtite",
+    "display_name": "Chesnaughtite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/6/6b/Bag_Chesnaughtite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "delphoxite": {
+    "name": "delphoxite",
+    "display_name": "Delphoxite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/2/23/Bag_Delphoxite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "greninjite": {
+    "name": "greninjite",
+    "display_name": "Greninjite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/c/ca/Bag_Greninjite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "pyroarite": {
+    "name": "pyroarite",
+    "display_name": "Pyroarite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/c/c3/Bag_Pyroarite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "malamarite": {
+    "name": "malamarite",
+    "display_name": "Malamarite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/e/ec/Bag_Malamarite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "barbaracite": {
+    "name": "barbaracite",
+    "display_name": "Barbaracite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/f/f2/Bag_Barbaracite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "dragalgite": {
+    "name": "dragalgite",
+    "display_name": "Dragalgite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/7/75/Bag_Dragalgite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "falinksite": {
+    "name": "falinksite",
+    "display_name": "Falinksite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/e/e2/Bag_Falinksite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "venusaurite": {
+    "name": "venusaurite",
+    "display_name": "Venusaurite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/f/f3/Bag_Venusaurite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Venusaur to Mega Evolve into Mega Venusaur."
+  },
+  "charizardite-x": {
+    "name": "charizardite-x",
+    "display_name": "Charizardite X",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/5/51/Bag_Charizardite_X_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Charizard to Mega Evolve into Mega Charizard X."
+  },
+  "charizardite-y": {
+    "name": "charizardite-y",
+    "display_name": "Charizardite Y",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/1/1d/Bag_Charizardite_Y_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Charizard to Mega Evolve into Mega Charizard Y."
+  },
+  "blastoisinite": {
+    "name": "blastoisinite",
+    "display_name": "Blastoisinite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/2/20/Bag_Blastoisinite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Blastoise to Mega Evolve into Mega Blastoise."
+  },
+  "pidgeotite": {
+    "name": "pidgeotite",
+    "display_name": "Pidgeotite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/4/41/Bag_Pidgeotite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Pidgeot to Mega Evolve into Mega Pidgeot."
+  },
+  "clefablite": {
+    "name": "clefablite",
+    "display_name": "Clefablite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/2/2b/Bag_Clefablite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "alakazite": {
+    "name": "alakazite",
+    "display_name": "Alakazite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/6/67/Bag_Alakazite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Alakazam to Mega Evolve into Mega Alakazam."
+  },
+  "victreebelite": {
+    "name": "victreebelite",
+    "display_name": "Victreebelite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/b/b0/Bag_Victreebelite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "slowbronite": {
+    "name": "slowbronite",
+    "display_name": "Slowbronite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/9/93/Bag_Slowbronite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Slowbro to Mega Evolve into Mega Slowbro."
+  },
+  "gengarite": {
+    "name": "gengarite",
+    "display_name": "Gengarite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/4/44/Bag_Gengarite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Gengar to Mega Evolve into Mega Gengar."
+  },
+  "kangaskhanite": {
+    "name": "kangaskhanite",
+    "display_name": "Kangaskhanite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/2/28/Bag_Kangaskhanite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Kangaskhan to Mega Evolve into Mega Kangaskhan."
+  },
+  "starminite": {
+    "name": "starminite",
+    "display_name": "Starminite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/d/d4/Bag_Starminite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "pinsirite": {
+    "name": "pinsirite",
+    "display_name": "Pinsirite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/e/e1/Bag_Pinsirite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Pinsir to Mega Evolve into Mega Pinsir."
+  },
+  "aerodactylite": {
+    "name": "aerodactylite",
+    "display_name": "Aerodactylite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/8/8e/Bag_Aerodactylite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Aerodactyl to Mega Evolve into Mega Aerodactyl."
+  },
+  "dragoninite": {
+    "name": "dragoninite",
+    "display_name": "Dragoninite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/9/91/Bag_Dragoninite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "meganiumite": {
+    "name": "meganiumite",
+    "display_name": "Meganiumite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/9/95/Bag_Meganiumite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "feraligite": {
+    "name": "feraligite",
+    "display_name": "Feraligite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/5/5e/Bag_Feraligite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "ampharosite": {
+    "name": "ampharosite",
+    "display_name": "Ampharosite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/e/e4/Bag_Ampharosite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Ampharos to Mega Evolve into Mega Ampharos."
+  },
+  "scizorite": {
+    "name": "scizorite",
+    "display_name": "Scizorite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/f/fa/Bag_Scizorite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Scizor to Mega Evolve into Mega Scizor."
+  },
+  "skarmorite": {
+    "name": "skarmorite",
+    "display_name": "Skarmorite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/f/f5/Bag_Skarmorite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "houndoominite": {
+    "name": "houndoominite",
+    "display_name": "Houndoominite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/b/bb/Bag_Houndoominite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Houndoom to Mega Evolve into Mega Houndoom."
+  },
+  "tyranitarite": {
+    "name": "tyranitarite",
+    "display_name": "Tyranitarite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/1/1c/Bag_Tyranitarite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Tyranitar to Mega Evolve into Mega Tyranitar."
+  },
+  "gardevoirite": {
+    "name": "gardevoirite",
+    "display_name": "Gardevoirite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/1/1c/Bag_Gardevoirite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Gardevoir to Mega Evolve into Mega Gardevoir."
+  },
+  "sablenite": {
+    "name": "sablenite",
+    "display_name": "Sablenite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/4/43/Bag_Sablenite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Sableye to Mega Evolve into Mega Sableye."
+  },
+  "medichamite": {
+    "name": "medichamite",
+    "display_name": "Medichamite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/5/53/Bag_Medichamite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Medicham to Mega Evolve into Mega Medicham."
+  },
+  "sharpedonite": {
+    "name": "sharpedonite",
+    "display_name": "Sharpedonite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/d/db/Bag_Sharpedonite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Sharpedo to Mega Evolve into Mega Sharpedo."
+  },
+  "cameruptite": {
+    "name": "cameruptite",
+    "display_name": "Cameruptite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/1/1b/Bag_Cameruptite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Camerupt to Mega Evolve into Mega Camerupt."
+  },
+  "altarianite": {
+    "name": "altarianite",
+    "display_name": "Altarianite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/5/59/Bag_Altarianite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Altaria to Mega Evolve into Mega Altaria."
+  },
+  "banettite": {
+    "name": "banettite",
+    "display_name": "Banettite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/1/13/Bag_Banettite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Banette to Mega Evolve into Mega Banette."
+  },
+  "chimechite": {
+    "name": "chimechite",
+    "display_name": "Chimechite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/d/d0/Bag_Chimechite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "absolite": {
+    "name": "absolite",
+    "display_name": "Absolite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/8/81/Bag_Absolite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Absol to Mega Evolve into Mega Absol."
+  },
+  "glalitite": {
+    "name": "glalitite",
+    "display_name": "Glalitite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/1/13/Bag_Glalitite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Glalie to Mega Evolve into Mega Glalie."
+  },
+  "lopunnite": {
+    "name": "lopunnite",
+    "display_name": "Lopunnite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/4/4c/Bag_Lopunnite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Lopunny to Mega Evolve into Mega Lopunny."
+  },
+  "lucarionite": {
+    "name": "lucarionite",
+    "display_name": "Lucarionite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/8/87/Bag_Lucarionite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Lucario to Mega Evolve into Mega Lucario."
+  },
+  "galladite": {
+    "name": "galladite",
+    "display_name": "Galladite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/4/48/Bag_Galladite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Gallade to Mega Evolve into Mega Gallade."
+  },
+  "froslassite": {
+    "name": "froslassite",
+    "display_name": "Froslassite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/f/f6/Bag_Froslassite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "emboarite": {
+    "name": "emboarite",
+    "display_name": "Emboarite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/0/08/Bag_Emboarite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "excadrite": {
+    "name": "excadrite",
+    "display_name": "Excadrite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/d/d2/Bag_Excadrite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "audinite": {
+    "name": "audinite",
+    "display_name": "Audinite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/8/8a/Bag_Audinite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Held: Allows Audino to Mega Evolve into Mega Audino."
+  },
+  "chandelurite": {
+    "name": "chandelurite",
+    "display_name": "Chandelurite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/8/87/Bag_Chandelurite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "golurkite": {
+    "name": "golurkite",
+    "display_name": "Golurkite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/6/6b/Bag_Golurkite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "meowsticite": {
+    "name": "meowsticite",
+    "display_name": "Meowsticite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/8/83/Bag_Meowsticite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "hawluchanite": {
+    "name": "hawluchanite",
+    "display_name": "Hawluchanite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/2/28/Bag_Hawluchanite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "crabominite": {
+    "name": "crabominite",
+    "display_name": "Crabominite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/0/0d/Bag_Crabominite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "drampanite": {
+    "name": "drampanite",
+    "display_name": "Drampanite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/5/5f/Bag_Drampanite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "scovillainite": {
+    "name": "scovillainite",
+    "display_name": "Scovillainite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/8/8c/Bag_Scovillainite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "glimmoranite": {
+    "name": "glimmoranite",
+    "display_name": "Glimmoranite",
+    "vp_cost": 2000,
+    "is_mega_stone": true,
+    "sprite": "https://archives.bulbagarden.net/media/upload/8/87/Bag_Glimmoranite_Champs_Sprite.png",
+    "source": "https://bulbapedia.bulbagarden.net/wiki/Shop_(Champions)",
+    "short_effect": "Allows the corresponding Pokemon to Mega Evolve when held in battle."
+  },
+  "bright-powder": {
+    "name": "bright-powder",
+    "display_name": "Bright Powder",
+    "vp_cost": null,
+    "is_mega_stone": false,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/bright-powder.png",
+    "source": "https://www.serebii.net/pokemonchampions/items.shtml",
+    "short_effect": "Held: Increases the holder’s evasion by 1/9 (11 1/9%)."
+  },
+  "choice-scarf": {
+    "name": "choice-scarf",
+    "display_name": "Choice Scarf",
+    "vp_cost": null,
+    "is_mega_stone": false,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/choice-scarf.png",
+    "source": "https://www.serebii.net/pokemonchampions/items.shtml",
+    "short_effect": "Held: Increases Speed by 50%, but restricts the holder to only one move."
+  },
+  "focus-band": {
+    "name": "focus-band",
+    "display_name": "Focus Band",
+    "vp_cost": null,
+    "is_mega_stone": false,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/focus-band.png",
+    "source": "https://www.serebii.net/pokemonchampions/items.shtml",
+    "short_effect": "Held: Holder has 10% chance to survive attacks or self-inflicted damage at 1 HP."
+  },
+  "focus-sash": {
+    "name": "focus-sash",
+    "display_name": "Focus Sash",
+    "vp_cost": null,
+    "is_mega_stone": false,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/focus-sash.png",
+    "source": "https://www.serebii.net/pokemonchampions/items.shtml",
+    "short_effect": "Held: Holder survives any single-hit attack at 1 HP if at max HP, then the item is consumed."
+  },
+  "kings-rock": {
+    "name": "kings-rock",
+    "display_name": "King's Rock",
+    "vp_cost": null,
+    "is_mega_stone": false,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kings-rock.png",
+    "source": "https://www.serebii.net/pokemonchampions/items.shtml",
+    "short_effect": "Held: Damaging moves gain a 10% chance to make their target flinch. Traded on a Poliwhirl: Holder evolves into Politoed. Traded on a Slowpoke: Holder evolves into Slowking."
+  },
+  "leftovers": {
+    "name": "leftovers",
+    "display_name": "Leftovers",
+    "vp_cost": null,
+    "is_mega_stone": false,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/leftovers.png",
+    "source": "https://www.serebii.net/pokemonchampions/items.shtml",
+    "short_effect": "Held: Restores 1/16 (6.25%) holder’s max HP at the end of each turn."
+  },
+  "quick-claw": {
+    "name": "quick-claw",
+    "display_name": "Quick Claw",
+    "vp_cost": null,
+    "is_mega_stone": false,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/quick-claw.png",
+    "source": "https://www.serebii.net/pokemonchampions/items.shtml",
+    "short_effect": "Held: Holder has a 3/16 (18.75%) chance to move first."
+  },
+  "white-herb": {
+    "name": "white-herb",
+    "display_name": "White Herb",
+    "vp_cost": null,
+    "is_mega_stone": false,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/white-herb.png",
+    "source": "https://www.serebii.net/pokemonchampions/items.shtml",
+    "short_effect": "Held: Resets all lowered stats to normal at end of turn. Consumed after use."
+  },
+  "abomasite": {
+    "name": "abomasite",
+    "display_name": "Abomasite",
+    "vp_cost": null,
+    "is_mega_stone": true,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/abomasite.png",
+    "source": "https://www.serebii.net/pokemonchampions/items.shtml",
+    "short_effect": "Held: Allows Abomasnow to Mega Evolve into Mega Abomasnow."
+  },
+  "aggronite": {
+    "name": "aggronite",
+    "display_name": "Aggronite",
+    "vp_cost": null,
+    "is_mega_stone": true,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/aggronite.png",
+    "source": "https://www.serebii.net/pokemonchampions/items.shtml",
+    "short_effect": "Held: Allows Aggron to Mega Evolve into Mega Aggron."
+  },
+  "beedrillite": {
+    "name": "beedrillite",
+    "display_name": "Beedrillite",
+    "vp_cost": null,
+    "is_mega_stone": true,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/beedrillite.png",
+    "source": "https://www.serebii.net/pokemonchampions/items.shtml",
+    "short_effect": "Held: Allows Beedrill to Mega Evolve into Mega Beedrill."
+  },
+  "garchompite": {
+    "name": "garchompite",
+    "display_name": "Garchompite",
+    "vp_cost": null,
+    "is_mega_stone": true,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/garchompite.png",
+    "source": "https://www.serebii.net/pokemonchampions/items.shtml",
+    "short_effect": "Held: Allows Garchomp to Mega Evolve into Mega Garchomp."
+  },
+  "gyaradosite": {
+    "name": "gyaradosite",
+    "display_name": "Gyaradosite",
+    "vp_cost": null,
+    "is_mega_stone": true,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/gyaradosite.png",
+    "source": "https://www.serebii.net/pokemonchampions/items.shtml",
+    "short_effect": "Held: Allows Gyarados to Mega Evolve into Mega Gyarados."
+  },
+  "heracronite": {
+    "name": "heracronite",
+    "display_name": "Heracronite",
+    "vp_cost": null,
+    "is_mega_stone": true,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heracronite.png",
+    "source": "https://www.serebii.net/pokemonchampions/items.shtml",
+    "short_effect": "Held: Allows Heracross to Mega Evolve into Mega Heracross."
+  },
+  "manectite": {
+    "name": "manectite",
+    "display_name": "Manectite",
+    "vp_cost": null,
+    "is_mega_stone": true,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/manectite.png",
+    "source": "https://www.serebii.net/pokemonchampions/items.shtml",
+    "short_effect": "Held: Allows Manectric to Mega Evolve into Mega Manectric."
+  },
+  "steelixite": {
+    "name": "steelixite",
+    "display_name": "Steelixite",
+    "vp_cost": null,
+    "is_mega_stone": true,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/steelixite.png",
+    "source": "https://www.serebii.net/pokemonchampions/items.shtml",
+    "short_effect": "Held: Allows Steelix to Mega Evolve into Mega Steelix."
+  },
+  "lum-berry": {
+    "name": "lum-berry",
+    "display_name": "Lum Berry",
+    "vp_cost": null,
+    "is_mega_stone": false,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lum-berry.png",
+    "source": "https://www.serebii.net/pokemonchampions/items.shtml",
+    "short_effect": "Held: Consumed to cure any status condition or confusion."
+  },
+  "sitrus-berry": {
+    "name": "sitrus-berry",
+    "display_name": "Sitrus Berry",
+    "vp_cost": null,
+    "is_mega_stone": false,
+    "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sitrus-berry.png",
+    "source": "https://www.serebii.net/pokemonchampions/items.shtml",
+    "short_effect": "Held: Consumed at 1/2 max HP to recover 1/4 max HP."
+  }
+}
